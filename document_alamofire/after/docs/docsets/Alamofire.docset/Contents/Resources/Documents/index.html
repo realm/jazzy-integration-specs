@@ -258,8 +258,8 @@
 <a href='#parameters' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='parameters'>Parameters</h3>
 <a href='#get_request_with_url_encoded_parameters' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='get_request_with_url_encoded_parameters'>GET Request With URL-Encoded Parameters</h4>
 <pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="kt">GET</span><span class="p">,</span> <span class="s">"http://httpbin.org/get"</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="p">[</span><span class="s">"foo"</span><span class="p">:</span> <span class="s">"bar"</span><span class="p">])</span>
-<span class="c1">// http://httpbin.org/get?foo=bar
-</span></code></pre>
+<span class="c1">// http://httpbin.org/get?foo=bar</span>
+</code></pre>
 <a href='#post_request_with_url_encoded_parameters' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='post_request_with_url_encoded_parameters'>POST Request With URL-Encoded Parameters</h4>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">parameters</span> <span class="o">=</span> <span class="p">[</span>
     <span class="s">"foo"</span><span class="p">:</span> <span class="s">"bar"</span><span class="p">,</span>
@@ -272,8 +272,8 @@
 <span class="p">]</span>
 
 <span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="kt">POST</span><span class="p">,</span> <span class="s">"http://httpbin.org/post"</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="n">parameters</span><span class="p">)</span>
-<span class="c1">// HTTP body: foo=bar&amp;baz[]=a&amp;baz[]=1&amp;qux[x]=1&amp;qux[y]=2&amp;qux[z]=3
-</span></code></pre>
+<span class="c1">// HTTP body: foo=bar&amp;baz[]=a&amp;baz[]=1&amp;qux[x]=1&amp;qux[y]=2&amp;qux[z]=3</span>
+</code></pre>
 <a href='#parameter_encoding' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='parameter_encoding'>Parameter Encoding</h3>
 <p class="para">Parameters can also be encoded as JSON, Property List, or any custom format, using the <code>ParameterEncoding</code> enum:</p><pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">ParameterEncoding</span> <span class="p">{</span>
     <span class="k">case</span> <span class="kt">URL</span>
@@ -311,8 +311,8 @@
 <span class="p">]</span>
 
 <span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="kt">POST</span><span class="p">,</span> <span class="s">"http://httpbin.org/post"</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="n">parameters</span><span class="p">,</span> <span class="nv">encoding</span><span class="p">:</span> <span class="o">.</span><span class="kt">JSON</span><span class="p">)</span>
-<span class="c1">// HTTP body: {"foo": [1, 2, 3], "bar": {"baz": "qux"}}
-</span></code></pre>
+<span class="c1">// HTTP body: {"foo": [1, 2, 3], "bar": {"baz": "qux"}}</span>
+</code></pre>
 <a href='#caching' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='caching'>Caching</h3>
 <p class="para">Caching is handled on the system framework level by <a href="https://developer.apple.com/library/mac/documentation/Cocoa/Reference/Foundation/Classes/NSURLCache_Class/Reference/Reference.html#//apple_ref/occ/cl/NSURLCache"><code>NSURLCache</code></a>.</p><a href='#uploading' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='uploading'>Uploading</h3>
 <p class="para"><strong>Supported Upload Types</strong></p>
@@ -421,8 +421,8 @@
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">request</span> <span class="o">=</span> <span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="kt">GET</span><span class="p">,</span> <span class="s">"http://httpbin.org/ip"</span><span class="p">)</span>
 
 <span class="nf">println</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
-<span class="c1">// GET http://httpbin.org/ip (200)
-</span></code></pre>
+<span class="c1">// GET http://httpbin.org/ip (200)</span>
+</code></pre>
 <a href='#debugprintable' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='debugprintable'>DebugPrintable</h3>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">request</span> <span class="o">=</span> <span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="kt">GET</span><span class="p">,</span> <span class="s">"http://httpbin.org/get"</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="p">[</span><span class="s">"foo"</span><span class="p">:</span> <span class="s">"bar"</span><span class="p">])</span>
 
@@ -578,8 +578,8 @@ this framework, it is recommended that you be familiar with the concepts and cap
     <span class="k">case</span> <span class="kt">User</span><span class="p">(</span><span class="kt">String</span><span class="p">)</span>
     <span class="k">case</span> <span class="kt">Post</span><span class="p">(</span><span class="kt">Int</span><span class="p">,</span> <span class="kt">Int</span><span class="p">,</span> <span class="kt">String</span><span class="p">)</span>
 
-    <span class="c1">// MARK: URLStringConvertible
-</span>
+    <span class="c1">// MARK: URLStringConvertible</span>
+
     <span class="k">var</span> <span class="nv">URLString</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span>
         <span class="k">let</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="p">{</span>
             <span class="k">switch</span> <span class="k">self</span> <span class="p">{</span>
@@ -607,8 +607,8 @@ this framework, it is recommended that you be familiar with the concepts and cap
 
     <span class="k">case</span> <span class="kt">Search</span><span class="p">(</span><span class="nv">query</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">page</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span>
 
-    <span class="c1">// MARK: URLRequestConvertible
-</span>
+    <span class="c1">// MARK: URLRequestConvertible</span>
+
     <span class="k">var</span> <span class="nv">URLRequest</span><span class="p">:</span> <span class="kt">NSURLRequest</span> <span class="p">{</span>
         <span class="nf">let</span> <span class="p">(</span><span class="nv">path</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">]?)</span> <span class="o">=</span> <span class="p">{</span>
             <span class="k">switch</span> <span class="k">self</span> <span class="p">{</span>
@@ -627,8 +627,8 @@ this framework, it is recommended that you be familiar with the concepts and cap
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
-<pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="kt">Router</span><span class="o">.</span><span class="kt">Search</span><span class="p">(</span><span class="nv">query</span><span class="p">:</span> <span class="s">"foo bar"</span><span class="p">,</span> <span class="nv">page</span><span class="p">:</span> <span class="mi">1</span><span class="p">))</span> <span class="c1">// ?q=foo+bar&amp;offset=50
-</span></code></pre>
+<pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="kt">Router</span><span class="o">.</span><span class="kt">Search</span><span class="p">(</span><span class="nv">query</span><span class="p">:</span> <span class="s">"foo bar"</span><span class="p">,</span> <span class="nv">page</span><span class="p">:</span> <span class="mi">1</span><span class="p">))</span> <span class="c1">// ?q=foo+bar&amp;offset=50</span>
+</code></pre>
 <a href='#crud_amp_authorization' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='crud_amp_authorization'>CRUD &amp; Authorization</h4>
 <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">Router</span><span class="p">:</span> <span class="kt">URLRequestConvertible</span> <span class="p">{</span>
     <span class="kd">static</span> <span class="k">let</span> <span class="nv">baseURLString</span> <span class="o">=</span> <span class="s">"http://example.com"</span>
@@ -665,8 +665,8 @@ this framework, it is recommended that you be familiar with the concepts and cap
         <span class="p">}</span>
     <span class="p">}</span>
 
-    <span class="c1">// MARK: URLRequestConvertible
-</span>
+    <span class="c1">// MARK: URLRequestConvertible</span>
+
     <span class="k">var</span> <span class="nv">URLRequest</span><span class="p">:</span> <span class="kt">NSURLRequest</span> <span class="p">{</span>
         <span class="k">let</span> <span class="nv">URL</span> <span class="o">=</span> <span class="kt">NSURL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="kt">Router</span><span class="o">.</span><span class="n">baseURLString</span><span class="p">)</span>
         <span class="k">let</span> <span class="nv">mutableURLRequest</span> <span class="o">=</span> <span class="kt">NSMutableURLRequest</span><span class="p">(</span><span class="kt">URL</span><span class="p">:</span> <span class="kt">URL</span><span class="o">.</span><span class="kt">URLByAppendingPathComponent</span><span class="p">(</span><span class="n">path</span><span class="p">))</span>
@@ -687,8 +687,8 @@ this framework, it is recommended that you be familiar with the concepts and cap
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
-<pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="kt">Router</span><span class="o">.</span><span class="kt">ReadUser</span><span class="p">(</span><span class="s">"mattt"</span><span class="p">))</span> <span class="c1">// GET /users/mattt
-</span></code></pre>
+<pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="kt">Router</span><span class="o">.</span><span class="kt">ReadUser</span><span class="p">(</span><span class="s">"mattt"</span><span class="p">))</span> <span class="c1">// GET /users/mattt</span>
+</code></pre>
 
 <hr>
 <a href='#faq' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='faq'>FAQ</h2>

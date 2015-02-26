@@ -225,16 +225,16 @@ whatever you want. Say you want to test errors, too.</p><pre class="highlight sw
 </code></pre>
 <p class="para">Notice that returning sample data is <em>required</em>. One of the key benefits of Moya
 is that it makes testing the app or running the app using stubbed responses for
-API calls really easy.</p><p class="para">Great, now we&rsquo;re all set. Just need to create our provider.</p><pre class="highlight swift"><code><span class="c1">// Tuck this away somewhere where it'll be visible to anyone who wants to use it
-</span><span class="k">var</span> <span class="nv">provider</span><span class="p">:</span> <span class="kt">MoyaProvider</span><span class="o">&lt;</span><span class="kt">GitHub</span><span class="o">&gt;!</span>
+API calls really easy.</p><p class="para">Great, now we&rsquo;re all set. Just need to create our provider.</p><pre class="highlight swift"><code><span class="c1">// Tuck this away somewhere where it'll be visible to anyone who wants to use it</span>
+<span class="k">var</span> <span class="nv">provider</span><span class="p">:</span> <span class="kt">MoyaProvider</span><span class="o">&lt;</span><span class="kt">GitHub</span><span class="o">&gt;!</span>
 
-<span class="c1">// Create this instance at app launch
-</span><span class="k">let</span> <span class="nv">provider</span> <span class="o">=</span> <span class="kt">MoyaProvider</span><span class="p">(</span><span class="nv">endpointsClosure</span><span class="p">:</span> <span class="n">endpointsClosure</span><span class="p">)</span>
+<span class="c1">// Create this instance at app launch</span>
+<span class="k">let</span> <span class="nv">provider</span> <span class="o">=</span> <span class="kt">MoyaProvider</span><span class="p">(</span><span class="nv">endpointsClosure</span><span class="p">:</span> <span class="n">endpointsClosure</span><span class="p">)</span>
 </code></pre>
 <p class="para">Neato. Now how do we make a request?</p><pre class="highlight swift"><code><span class="n">provider</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="kt">Zen</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
     <span class="k">if</span> <span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="n">data</span> <span class="p">{</span>
-        <span class="c1">// do something with the data
-</span>    <span class="p">}</span>
+        <span class="c1">// do something with the data</span>
+    <span class="p">}</span>
 <span class="p">})</span>
 </code></pre>
 <p class="para">The <code>request</code> method is given a <code>GitHub</code> value and, optionally, an HTTP method
