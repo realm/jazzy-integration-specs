@@ -24,6 +24,10 @@ class ImplicitlyInternalTopLevelClass {
     class NestedClass {}
 }
 
+/// :nodoc:
+/// Documented, but should be ignored
+public class ExplicitlyNoDocClass {}
+
 /// SUPPORTED: explicitly internal top-level class
 internal class ExplicitlyInternalTopLevelClass {}
 
