@@ -49,6 +49,18 @@ class TopLevelSwiftSubclass: ImplicitlyInternalTopLevelClass {}
 // SUPPORTED: undocumented top-level class
 class UndocumentedTopLevelClass {}
 
+/// Class with initializers
+class ClassWithInitializers {
+    /// Empty init
+    init() {}
+
+    /// Parameterized init
+    init(a: Void) {}
+
+    // Undocumented init
+    init(b: Void) {}
+}
+
 // MARK: Enums
 
 /// SUPPORTED: documented enum
