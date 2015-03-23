@@ -5,7 +5,6 @@ Endpoint.swift
 	public let parameters: [String: AnyObject]
 	public let parameterEncoding: Moya.ParameterEncoding
 	public let httpHeaderFields: [String: AnyObject]
-	public init(URL: String, sampleResponse: EndpointSampleResponse, method: Moya.Method = Moya.Method.GET, parameters: [String: AnyObject] = [String: AnyObject](), parameterEncoding: Moya.ParameterEncoding = .URL, httpHeaderFields: [String: AnyObject] = [String: AnyObject]())
 	public var urlRequest: NSURLRequest
 	public let URL: String
 	public let method: Moya.Method
@@ -13,7 +12,6 @@ Endpoint.swift
 	public let parameters: [String: AnyObject]
 	public let parameterEncoding: Moya.ParameterEncoding
 	public let httpHeaderFields: [String: AnyObject]
-	public init(URL: String, sampleResponse: EndpointSampleResponse, method: Moya.Method = Moya.Method.GET, parameters: [String: AnyObject] = [String: AnyObject](), parameterEncoding: Moya.ParameterEncoding = .URL, httpHeaderFields: [String: AnyObject] = [String: AnyObject]())
 	public var urlRequest: NSURLRequest
 	public let URL: String
 	public let method: Moya.Method
@@ -21,7 +19,6 @@ Endpoint.swift
 	public let parameters: [String: AnyObject]
 	public let parameterEncoding: Moya.ParameterEncoding
 	public let httpHeaderFields: [String: AnyObject]
-	public init(URL: String, sampleResponse: EndpointSampleResponse, method: Moya.Method = Moya.Method.GET, parameters: [String: AnyObject] = [String: AnyObject](), parameterEncoding: Moya.ParameterEncoding = .URL, httpHeaderFields: [String: AnyObject] = [String: AnyObject]())
 	public var urlRequest: NSURLRequest
 Moya.swift
 	func method() -> Alamofire.Method
@@ -32,7 +29,6 @@ Moya.swift
 	public let endpointsClosure: MoyaEndpointsClosure
 	public let endpointResolver: MoyaEndpointResolution
 	public let stubResponses: Bool
-	public init(endpointsClosure: MoyaEndpointsClosure, endpointResolver: MoyaEndpointResolution = MoyaProvider.DefaultEnpointResolution(), stubResponses: Bool  = false)
 	public func request(token: T, parameters: [String: AnyObject], completion: MoyaCompletion)
 	public func request(token: T, method: Moya.Method, completion: MoyaCompletion)
 	public func request(token: T, completion: MoyaCompletion)
@@ -45,7 +41,6 @@ Moya.swift
 	public let endpointsClosure: MoyaEndpointsClosure
 	public let endpointResolver: MoyaEndpointResolution
 	public let stubResponses: Bool
-	public init(endpointsClosure: MoyaEndpointsClosure, endpointResolver: MoyaEndpointResolution = MoyaProvider.DefaultEnpointResolution(), stubResponses: Bool  = false)
 	public func request(token: T, parameters: [String: AnyObject], completion: MoyaCompletion)
 	public func request(token: T, method: Moya.Method, completion: MoyaCompletion)
 	public func request(token: T, completion: MoyaCompletion)
@@ -58,7 +53,6 @@ Moya.swift
 	public let endpointsClosure: MoyaEndpointsClosure
 	public let endpointResolver: MoyaEndpointResolution
 	public let stubResponses: Bool
-	public init(endpointsClosure: MoyaEndpointsClosure, endpointResolver: MoyaEndpointResolution = MoyaProvider.DefaultEnpointResolution(), stubResponses: Bool  = false)
 	public func request(token: T, parameters: [String: AnyObject], completion: MoyaCompletion)
 	public func request(token: T, method: Moya.Method, completion: MoyaCompletion)
 	public func request(token: T, completion: MoyaCompletion)
@@ -72,7 +66,6 @@ Moya+ReactiveCocoa.swift
 	public class MoyaResponse
 	public var description: String
 	public var debugDescription: String
-	override public init(endpointsClosure: MoyaEndpointsClosure, endpointResolver: MoyaEndpointResolution = MoyaProvider.DefaultEnpointResolution(), stubResponses: Bool = false)
 	public func request(token: T, parameters: [String: AnyObject]) -> RACSignal
 	public func request(token: T, method: Moya.Method) -> RACSignal
 	public func request(token: T) -> RACSignal
