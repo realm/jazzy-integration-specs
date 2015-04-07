@@ -23,9 +23,9 @@ Endpoint.swift
 Moya.swift
 	func method() -> Alamofire.Method
 	func parameterEncoding() -> Alamofire.ParameterEncoding
-	var path: String
-	var baseURL: NSURL
-	var sampleData: NSData
+	var path: String { get }
+	var baseURL: NSURL { get }
+	var sampleData: NSData { get }
 	public let endpointsClosure: MoyaEndpointsClosure
 	public let endpointResolver: MoyaEndpointResolution
 	public let stubResponses: Bool
@@ -35,9 +35,9 @@ Moya.swift
 	public class func DefaultEnpointResolution() -> MoyaEndpointResolution
 	func method() -> Alamofire.Method
 	func parameterEncoding() -> Alamofire.ParameterEncoding
-	var path: String
-	var baseURL: NSURL
-	var sampleData: NSData
+	var path: String { get }
+	var baseURL: NSURL { get }
+	var sampleData: NSData { get }
 	public let endpointsClosure: MoyaEndpointsClosure
 	public let endpointResolver: MoyaEndpointResolution
 	public let stubResponses: Bool
@@ -47,9 +47,9 @@ Moya.swift
 	public class func DefaultEnpointResolution() -> MoyaEndpointResolution
 	func method() -> Alamofire.Method
 	func parameterEncoding() -> Alamofire.ParameterEncoding
-	var path: String
-	var baseURL: NSURL
-	var sampleData: NSData
+	var path: String { get }
+	var baseURL: NSURL { get }
+	var sampleData: NSData { get }
 	public let endpointsClosure: MoyaEndpointsClosure
 	public let endpointResolver: MoyaEndpointResolution
 	public let stubResponses: Bool
