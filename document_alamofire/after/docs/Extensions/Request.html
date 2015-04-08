@@ -149,7 +149,9 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Validates the request, using the specified closure.If validation fails, subsequent calls to response handlers will have an associated error.</p>
+                        <p>Validates the request, using the specified closure.</p>
+
+<p>If validation fails, subsequent calls to response handlers will have an associated error.</p>
 
                       </div>
                       <div class="declaration">
@@ -215,7 +217,9 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Validates that the response has a status code in the specified range.If validation fails, subsequent calls to response handlers will have an associated error.</p>
+                        <p>Validates that the response has a status code in the specified range.</p>
+
+<p>If validation fails, subsequent calls to response handlers will have an associated error.</p>
 
                       </div>
                       <div class="declaration">
@@ -270,7 +274,9 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Validates that the response has a status code in the specified array.If validation fails, subsequent calls to response handlers will have an associated error.</p>
+                        <p>Validates that the response has a status code in the specified array.</p>
+
+<p>If validation fails, subsequent calls to response handlers will have an associated error.</p>
 
                       </div>
                       <div class="declaration">
@@ -336,7 +342,9 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Validates that the response has a content type in the specified array.If validation fails, subsequent calls to response handlers will have an associated error.</p>
+                        <p>Validates that the response has a content type in the specified array.</p>
+
+<p>If validation fails, subsequent calls to response handlers will have an associated error.</p>
 
                       </div>
                       <div class="declaration">
@@ -402,7 +410,9 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Validates that the response has a status code in the default acceptable range of 200&hellip;299, and that the content type matches any specified in the Accept HTTP header field.If validation fails, subsequent calls to response handlers will have an associated error.</p>
+                        <p>Validates that the response has a status code in the default acceptable range of 200&hellip;299, and that the content type matches any specified in the Accept HTTP header field.</p>
+
+<p>If validation fails, subsequent calls to response handlers will have an associated error.</p>
 
                       </div>
                       <div class="declaration">
@@ -636,7 +646,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <blockquote>Adds a handler to be called once the request has finished.</blockquote>
+                        <pre class="highlight plaintext"><code>Adds a handler to be called once the request has finished.
+</code></pre>
 
                       </div>
                       <div class="declaration">
@@ -659,7 +670,8 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>A closure to be executed once the request has finished. The closure takes 4 arguments: the URL request, the URL response, if one was received, the string, if one could be created from the URL response and data, and any error produced while creating the string.<dl><dt>returns</dt><dd>The request.</dd></dl></p>
+                                  <p>A closure to be executed once the request has finished. The closure takes 4 arguments: the URL request, the URL response, if one was received, the string, if one could be created from the URL response and data, and any error produced while creating the string.</p>
+<dl><dt>returns</dt><dd>The request.</dd></dl>
 
                                 </div>
                               </td>

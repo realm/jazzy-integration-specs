@@ -46,7 +46,7 @@ pre, code {
 
 p code, li code {
   background-color: #eee;
-  padding: 4px;
+  padding: 2px 4px;
   border-radius: 4px; }
 
 a {
@@ -149,16 +149,20 @@ header {
     margin-bottom: 1em; }
   .main-content p {
     line-height: 1.8em; }
-  .main-content section .section :first-child {
+  .main-content section .section:first-child {
     margin-top: 0;
     padding-top: 0; }
+  .main-content section .task-group-section .task-group:first-of-type {
+    padding-top: 10px; }
+    .main-content section .task-group-section .task-group:first-of-type .section-name {
+      padding-top: 15px; }
 
 .section {
-  padding: 25px 25px 0; }
+  padding: 0 25px; }
 
 .highlight {
   background-color: #eee;
-  padding: 7px;
+  padding: 10px 12px;
   border: 1px solid #e2e2e2;
   border-radius: 4px;
   overflow-x: auto; }
@@ -185,7 +189,7 @@ header {
   border-top: 1px solid #e2e2e2; }
 
 .task-group {
-  padding-top: 10px; }
+  padding-top: 0px; }
 
 .item {
   padding-top: 8px;
