@@ -12,7 +12,7 @@
     <a title="Alamofire  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">Alamofire Docs</a> (86% documented)</p>
+        <p><a href="index.html">Alamofire Docs</a> (84% documented)</p>
         <p class="header-right"><a href="https://github.com/Alamofire/Alamofire"><img src="img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://http%3A%2F%2Fstatic%2Erealm%2Eio%2Fjazzy_demo%2FAlamofire%2Fdocsets%2FAlamofire%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -131,6 +131,8 @@
             
             <p><img src="https://raw.githubusercontent.com/Alamofire/Alamofire/assets/alamofire.png" alt="Alamofire: Elegant Networking in Swift"></p>
 
+<p><a href="https://travis-ci.org/Alamofire/Alamofire"><img src="https://travis-ci.org/Alamofire/Alamofire.svg" alt="Build Status"></a></p>
+
 <p>Alamofire is an HTTP networking library written in Swift, from the <a href="https://github.com/mattt">creator</a> of <a href="https://github.com/afnetworking/afnetworking">AFNetworking</a>.</p>
 <a href='#features' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='features'>Features</h2>
 
@@ -150,7 +152,7 @@
 
 <ul>
 <li>iOS 7.0+ / Mac OS X 10.9+</li>
-<li>Xcode 6.1</li>
+<li>Xcode 6.3</li>
 </ul>
 <a href='#communication' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='communication'>Communication</h2>
 
@@ -164,20 +166,63 @@
 <a href='#installation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='installation'>Installation</h2>
 
 <blockquote>
-<p>For application targets that do not support embedded frameworks, such as iOS 7, Alamofire can be integrated by including the <code>Alamofire.swift</code> source file directly, and making the appropriate changes to calling semantics.</p>
+<p><strong>Embedded frameworks require a minimum deployment target of iOS 8 or OS X Mavericks.</strong></p>
+
+<p>To use Alamofire with a project targeting iOS 7, you must include the <code>Alamofire.swift</code> source file directly in your project. See the <a href="#source-file">&#39;Source File&rsquo;</a> section for instructions.</p>
 </blockquote>
+<a href='#cocoapods' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='cocoapods'>CocoaPods</h3>
 
-<p><em>Due to the current lack of <a href="http://cocoapods.org">proper infrastructure</a> for Swift dependency management, using Alamofire in your project requires the following steps:</em></p>
+<p><a href="http://cocoapods.org">CocoaPods</a> is a dependency manager for Cocoa projects.</p>
 
-<ol>
-<li>Add Alamofire as a <a href="http://git-scm.com/docs/git-submodule">submodule</a> by opening the Terminal, <code>cd</code>-ing into your top-level project directory, and entering the command <code>git submodule add https://github.com/Alamofire/Alamofire.git</code></li>
+<p>CocoaPods 0.36 adds supports for Swift and embedded frameworks. You can install it with the following command:</p>
+<pre class="highlight shell"><code><span class="gp">$ </span>gem install cocoapods
+</code></pre>
+
+<p>To integrate Alamofire into your Xcode project using CocoaPods, specify it in your <code>Podfile</code>:</p>
+<pre class="highlight ruby"><code><span class="n">source</span> <span class="s1">'https://github.com/CocoaPods/Specs.git'</span>
+<span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span> <span class="s1">'8.0'</span>
+<span class="n">use_frameworks!</span>
+
+<span class="n">pod</span> <span class="s1">'Alamofire'</span><span class="p">,</span> <span class="s1">'~&gt; 1.2'</span>
+</code></pre>
+
+<p>Then, run the following command:</p>
+<pre class="highlight shell"><code><span class="gp">$ </span>pod install
+</code></pre>
+<a href='#carthage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='carthage'>Carthage</h3>
+
+<p>Carthage is a decentralized dependency manager that automates the process of adding frameworks to your Cocoa application.</p>
+
+<p>You can install Carthage with <a href="http://brew.sh/">Homebrew</a> using the following command:</p>
+<pre class="highlight shell"><code><span class="gp">$ </span>brew update
+<span class="gp">$ </span>brew install carthage
+</code></pre>
+
+<p>To integrate Alamofire into your Xcode project using Carthage, specify it in your <code>Cartfile</code>:</p>
+<pre class="highlight plaintext"><code>github "Alamofire/Alamofire" &gt;= 1.2
+</code></pre>
+<a href='#manually' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='manually'>Manually</h3>
+
+<p>If you prefer not to use either of the aforementioned dependency managers, you can integrate Alamofire into your project manually.</p>
+<a href='#embedded_framework' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='embedded_framework'>Embedded Framework</h3>
+
+<ul>
+<li>Add Alamofire as a <a href="http://git-scm.com/docs/git-submodule">submodule</a> by opening the Terminal, <code>cd</code>-ing into your top-level project directory, and entering the following command:</li>
+</ul>
+<pre class="highlight shell"><code><span class="gp">$ </span>git submodule add https://github.com/Alamofire/Alamofire.git
+</code></pre>
+
+<ul>
 <li>Open the <code>Alamofire</code> folder, and drag <code>Alamofire.xcodeproj</code> into the file navigator of your app project.</li>
 <li>In Xcode, navigate to the target configuration window by clicking on the blue project icon, and selecting the application target under the <q>Targets</q> heading in the sidebar.</li>
 <li>Ensure that the deployment target of Alamofire.framework matches that of the application target.</li>
 <li>In the tab bar at the top of that window, open the <q>Build Phases</q> panel.</li>
 <li>Expand the <q>Target Dependencies</q> group, and add <code>Alamofire.framework</code>.</li>
 <li>Click on the <code>+</code> button at the top left of the panel and select <q>New Copy Files Phase</q>. Rename this new phase to <q>Copy Frameworks</q>, set the <q>Destination</q> to <q>Frameworks</q>, and add <code>Alamofire.framework</code>.</li>
-</ol>
+</ul>
+<a href='#source_file' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='source_file'>Source File</h4>
+
+<p>For application targets that do not support embedded frameworks, such as iOS 7, Alamofire can be integrated by adding the <code>Alamofire.swift</code> source file directly into your project. Note that any calling conventions described in the <a href="#usage">&#39;Usage&rsquo;</a> section with the <code>Alamofire</code> prefix would instead omit it (for example, <code>Alamofire.request</code> becomes <code>request</code>), since this functionality is incorporated into the top-level namespace.</p>
 
 <hr>
 <a href='#usage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='usage'>Usage</h2>
@@ -292,18 +337,18 @@
 </code></pre>
 
 <ul>
-<li><code>URL</code>: A query string to be set as or appended to any existing URL query for <code>GET</code>, <code>HEAD</code>, and <code>DELETE</code> requests, or set as the body for requests with any other HTTP method. The <code>Content-Type</code> HTTP header field of an encoded request with HTTP body is set to <code>application/x-www-form-urlencoded</code>. <em>Since there is no published specification for how to encode collection types, the convention of appending <code>[]</code> to the key for array values (<code>foo[]=1&amp;foo[]=2</code>), and appending the key surrounded by square brackets for nested dictionary values (<code>foo[bar]=baz</code>).</em></li>
+<li><code>URL</code>: A query string to be set as or appended to any existing URL query for <code>GET</code>, <code>HEAD</code>, and <code>DELETE</code> requests, or set as the body for requests with any other HTTP method. The <code>Content-Type</code> HTTP header field of an encoded request with HTTP body is set to <code>application/x-www-form-urlencoded</code>. <em>Since there is no published specification for how to encode collection types, Alamofire follows the convention of appending <code>[]</code> to the key for array values (<code>foo[]=1&amp;foo[]=2</code>), and appending the key surrounded by square brackets for nested dictionary values (<code>foo[bar]=baz</code>).</em></li>
 <li><code>JSON</code>: Uses <code>NSJSONSerialization</code> to create a JSON representation of the parameters object, which is set as the body of the request. The <code>Content-Type</code> HTTP header field of an encoded request is set to <code>application/json</code>.</li>
 <li><code>PropertyList</code>: Uses <code>NSPropertyListSerialization</code> to create a plist representation of the parameters object, according to the associated format and write options values, which is set as the body of the request. The <code>Content-Type</code> HTTP header field of an encoded request is set to <code>application/x-plist</code>.</li>
 <li><code>Custom</code>: Uses the associated closure value to construct a new request given an existing request and parameters.</li>
 </ul>
 <a href='#manual_parameter_encoding_of_an_nsurlrequest' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='manual_parameter_encoding_of_an_nsurlrequest'>Manual Parameter Encoding of an NSURLRequest</h4>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">URL</span> <span class="o">=</span> <span class="kt">NSURL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"http://httpbin.org/get"</span><span class="p">)</span>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">URL</span> <span class="o">=</span> <span class="kt">NSURL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"http://httpbin.org/get"</span><span class="p">)</span><span class="o">!</span>
 <span class="k">var</span> <span class="nv">request</span> <span class="o">=</span> <span class="kt">NSURLRequest</span><span class="p">(</span><span class="kt">URL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">)</span>
 
 <span class="k">let</span> <span class="nv">parameters</span> <span class="o">=</span> <span class="p">[</span><span class="s">"foo"</span><span class="p">:</span> <span class="s">"bar"</span><span class="p">]</span>
 <span class="k">let</span> <span class="nv">encoding</span> <span class="o">=</span> <span class="kt">Alamofire</span><span class="o">.</span><span class="kt">ParameterEncoding</span><span class="o">.</span><span class="kt">URL</span>
-<span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">_</span><span class="p">)</span> <span class="o">=</span> <span class="n">encoding</span><span class="o">.</span><span class="nf">encode</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">parameters</span><span class="p">)</span>
+<span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">_</span><span class="p">)</span> <span class="o">=</span> <span class="n">encoding</span><span class="o">.</span><span class="nf">encode</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="n">parameters</span><span class="p">)</span>
 </code></pre>
 <a href='#post_request_with_json_encoded_parameters' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='post_request_with_json_encoded_parameters'>POST Request with JSON-encoded Parameters</h4>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">parameters</span> <span class="o">=</span> <span class="p">[</span>
@@ -446,11 +491,11 @@
 <span class="nf">debugPrintln</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
 </code></pre>
 <a href='#output_curl' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='output_curl'>Output (cURL)</h4>
-<pre class="highlight plaintext"><code>$ curl -i \
-    -H "User-Agent: Alamofire" \
-    -H "Accept-Encoding: Accept-Encoding: gzip;q=1.0,compress;q=0.5" \
-    -H "Accept-Language: en;q=1.0,fr;q=0.9,de;q=0.8,zh-Hans;q=0.7,zh-Hant;q=0.6,ja;q=0.5" \
-    "http://httpbin.org/get?foo=bar"
+<pre class="highlight shell"><code><span class="gp">$ </span>curl -i <span class="se">\</span>
+    -H <span class="s2">"User-Agent: Alamofire"</span> <span class="se">\</span>
+    -H <span class="s2">"Accept-Encoding: Accept-Encoding: gzip;q=1.0,compress;q=0.5"</span> <span class="se">\</span>
+    -H <span class="s2">"Accept-Language: en;q=1.0,fr;q=0.9,de;q=0.8,zh-Hans;q=0.7,zh-Hant;q=0.6,ja;q=0.5"</span> <span class="se">\</span>
+    <span class="s2">"http://httpbin.org/get?foo=bar"</span>
 </code></pre>
 
 <hr>
@@ -533,15 +578,15 @@ this framework, it is recommended that you be familiar with the concepts and cap
             <span class="p">}</span>
 
             <span class="k">var</span> <span class="nv">XMLSerializationError</span><span class="p">:</span> <span class="kt">NSError</span><span class="p">?</span>
-            <span class="k">let</span> <span class="nv">XML</span> <span class="o">=</span> <span class="kt">ONOXMLDocument</span><span class="o">.</span><span class="kt">XMLDocumentWithData</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="o">&amp;</span><span class="kt">XMLSerializationError</span><span class="p">)</span>
+            <span class="k">let</span> <span class="nv">XML</span> <span class="o">=</span> <span class="kt">ONOXMLDocument</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="n">data</span><span class="p">,</span> <span class="o">&amp;</span><span class="kt">XMLSerializationError</span><span class="p">)</span>
 
             <span class="nf">return</span> <span class="p">(</span><span class="kt">XML</span><span class="p">,</span> <span class="kt">XMLSerializationError</span><span class="p">)</span>
         <span class="p">}</span>
     <span class="p">}</span>
 
-    <span class="kd">func</span> <span class="nf">responseXMLDocument</span><span class="p">(</span><span class="nv">completionHandler</span><span class="p">:</span> <span class="p">(</span><span class="kt">NSURLRequest</span><span class="p">,</span> <span class="kt">NSHTTPURLResponse</span><span class="p">?,</span> <span class="kt">OnoXMLDocument</span><span class="p">?,</span> <span class="kt">NSError</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">responseXMLDocument</span><span class="p">(</span><span class="nv">completionHandler</span><span class="p">:</span> <span class="p">(</span><span class="kt">NSURLRequest</span><span class="p">,</span> <span class="kt">NSHTTPURLResponse</span><span class="p">?,</span> <span class="kt">ONOXMLDocument</span><span class="p">?,</span> <span class="kt">NSError</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span> <span class="p">{</span>
         <span class="k">return</span> <span class="nf">response</span><span class="p">(</span><span class="nv">serializer</span><span class="p">:</span> <span class="kt">Request</span><span class="o">.</span><span class="kt">XMLResponseSerializer</span><span class="p">(),</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="kt">XML</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
-            <span class="nf">completionHandler</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="kt">XML</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
+            <span class="nf">completionHandler</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="kt">XML</span> <span class="k">as</span><span class="p">?</span> <span class="kt">ONOXMLDocument</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
         <span class="p">})</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -550,7 +595,7 @@ this framework, it is recommended that you be familiar with the concepts and cap
 
 <p>Generics can be used to provide automatic, type-safe response object serialization.</p>
 <pre class="highlight swift"><code><span class="k">@objc</span> <span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ResponseObjectSerializable</span> <span class="p">{</span>
-    <span class="nf">init</span><span class="p">(</span><span class="nv">response</span><span class="p">:</span> <span class="kt">NSHTTPURLResponse</span><span class="p">,</span> <span class="nv">representation</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">)</span>
+    <span class="nf">init</span><span class="p">?(</span><span class="nv">response</span><span class="p">:</span> <span class="kt">NSHTTPURLResponse</span><span class="p">,</span> <span class="nv">representation</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">)</span>
 <span class="p">}</span>
 
 <span class="kd">extension</span> <span class="kt">Alamofire</span><span class="o">.</span><span class="kt">Request</span> <span class="p">{</span>
@@ -575,7 +620,7 @@ this framework, it is recommended that you be familiar with the concepts and cap
     <span class="k">let</span> <span class="nv">username</span><span class="p">:</span> <span class="kt">String</span>
     <span class="k">let</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span>
 
-    <span class="kd">required</span> <span class="nf">init</span><span class="p">(</span><span class="nv">response</span><span class="p">:</span> <span class="kt">NSHTTPURLResponse</span><span class="p">,</span> <span class="nv">representation</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">required</span> <span class="nf">init</span><span class="p">?(</span><span class="nv">response</span><span class="p">:</span> <span class="kt">NSHTTPURLResponse</span><span class="p">,</span> <span class="nv">representation</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">self</span><span class="o">.</span><span class="n">username</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="kt">URL</span><span class="o">!.</span><span class="n">lastPathComponent</span>
         <span class="k">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">representation</span><span class="o">.</span><span class="nf">valueForKeyPath</span><span class="p">(</span><span class="s">"name"</span><span class="p">)</span> <span class="k">as</span> <span class="kt">String</span>
     <span class="p">}</span>
@@ -612,43 +657,49 @@ this framework, it is recommended that you be familiar with the concepts and cap
 </code></pre>
 <a href='#urlstringconvertible' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='urlstringconvertible'>URLStringConvertible</h3>
 
-<p>Types adopting the <code>URLStringConvertible</code> protocol can be used to construct URL strings, which are then used to construct URL requests. Top-level convenience methods taking a <code>URLStringConvertible</code> argument are provided to allow for type-safe routing behavior.</p>
+<p>Types adopting the <code>URLStringConvertible</code> protocol can be used to construct URL strings, which are then used to construct URL requests. <code>NSString</code>, <code>NSURL</code>, <code>NSURLComponents</code>, and <code>NSURLRequest</code> conform to <code>URLStringConvertible</code> by default, allowing any of them to be passed as <code>URLString</code> parameters to the <code>request</code>, <code>upload</code>, and <code>download</code> methods:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">string</span> <span class="o">=</span> <span class="kt">NSString</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"http://httpbin.org/post"</span><span class="p">)</span>
+<span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="kt">POST</span><span class="p">,</span> <span class="n">string</span><span class="p">)</span>
 
-<p>Applications interacting with web applications in a significant manner are encouraged to adopt either <code>URLStringConvertible</code> or <code>URLRequestConvertible</code> as a way to ensure consistency of requested endpoints.</p>
+<span class="k">let</span> <span class="nv">URL</span> <span class="o">=</span> <span class="kt">NSURL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="n">string</span><span class="p">)</span><span class="o">!</span>
+<span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="kt">POST</span><span class="p">,</span> <span class="kt">URL</span><span class="p">)</span>
+
+<span class="k">let</span> <span class="nv">URLRequest</span> <span class="o">=</span> <span class="kt">NSURLRequest</span><span class="p">(</span><span class="kt">URL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">)</span>
+<span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="kt">POST</span><span class="p">,</span> <span class="kt">URLRequest</span><span class="p">)</span> <span class="c1">// overrides `HTTPMethod` of `URLRequest`</span>
+
+<span class="k">let</span> <span class="nv">URLComponents</span> <span class="o">=</span> <span class="kt">NSURLComponents</span><span class="p">(</span><span class="kt">URL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="nv">resolvingAgainstBaseURL</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span>
+<span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="kt">POST</span><span class="p">,</span> <span class="kt">URLComponents</span><span class="p">)</span>
+</code></pre>
+
+<p>Applications interacting with web applications in a significant manner are encouraged to have custom types conform to <code>URLStringConvertible</code> as a convenient way to map domain-specific models to server resources.</p>
 <a href='#type_safe_routing' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='type_safe_routing'>Type-Safe Routing</h4>
-<pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">Router</span><span class="p">:</span> <span class="kt">URLStringConvertible</span> <span class="p">{</span>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">User</span><span class="p">:</span> <span class="kt">URLStringConvertible</span> <span class="p">{</span>
     <span class="kd">static</span> <span class="k">let</span> <span class="nv">baseURLString</span> <span class="o">=</span> <span class="s">"http://example.com"</span>
 
-    <span class="k">case</span> <span class="kt">Root</span>
-    <span class="k">case</span> <span class="kt">User</span><span class="p">(</span><span class="kt">String</span><span class="p">)</span>
-    <span class="k">case</span> <span class="kt">Post</span><span class="p">(</span><span class="kt">Int</span><span class="p">,</span> <span class="kt">Int</span><span class="p">,</span> <span class="kt">String</span><span class="p">)</span>
-
-    <span class="c1">// MARK: URLStringConvertible</span>
-
     <span class="k">var</span> <span class="nv">URLString</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span>
-        <span class="k">let</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="k">switch</span> <span class="k">self</span> <span class="p">{</span>
-            <span class="k">case</span> <span class="o">.</span><span class="kt">Root</span><span class="p">:</span>
-                <span class="k">return</span> <span class="s">"/"</span>
-            <span class="k">case</span> <span class="o">.</span><span class="kt">User</span><span class="p">(</span><span class="k">let</span> <span class="nv">username</span><span class="p">):</span>
-                <span class="k">return</span> <span class="s">"/users/</span><span class="se">\(</span><span class="n">username</span><span class="se">)</span><span class="s">"</span>
-            <span class="k">case</span> <span class="o">.</span><span class="kt">Post</span><span class="p">(</span><span class="k">let</span> <span class="nv">year</span><span class="p">,</span> <span class="k">let</span> <span class="nv">month</span><span class="p">,</span> <span class="k">let</span> <span class="nv">title</span><span class="p">):</span>
-                <span class="k">let</span> <span class="nv">slug</span> <span class="o">=</span> <span class="n">title</span><span class="o">.</span><span class="nf">stringByReplacingOccurrencesOfString</span><span class="p">(</span><span class="s">" "</span><span class="p">,</span> <span class="nv">withString</span><span class="p">:</span> <span class="s">"-"</span><span class="p">)</span><span class="o">.</span><span class="n">lowercaseString</span>
-                <span class="k">return</span> <span class="s">"/</span><span class="se">\(</span><span class="n">year</span><span class="se">)</span><span class="s">/</span><span class="se">\(</span><span class="n">month</span><span class="se">)</span><span class="s">/</span><span class="se">\(</span><span class="n">slug</span><span class="se">)</span><span class="s">"</span>
-            <span class="p">}</span>
-        <span class="p">}()</span>
-
-        <span class="k">return</span> <span class="kt">Router</span><span class="o">.</span><span class="n">baseURLString</span> <span class="o">+</span> <span class="n">path</span>
+        <span class="k">return</span> <span class="kt">User</span><span class="o">.</span><span class="n">baseURLString</span> <span class="o">+</span> <span class="s">"/users/</span><span class="se">\(</span><span class="n">username</span><span class="se">)</span><span class="s">/"</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
-<pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="kt">GET</span><span class="p">,</span> <span class="kt">Router</span><span class="o">.</span><span class="kt">User</span><span class="p">(</span><span class="s">"mattt"</span><span class="p">))</span>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">user</span> <span class="o">=</span> <span class="kt">User</span><span class="p">(</span><span class="nv">username</span><span class="p">:</span> <span class="s">"mattt"</span><span class="p">)</span>
+<span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="kt">GET</span><span class="p">,</span> <span class="n">user</span><span class="p">)</span> <span class="c1">// http://example.com/users/mattt</span>
 </code></pre>
 <a href='#urlrequestconvertible' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='urlrequestconvertible'>URLRequestConvertible</h3>
 
-<p>Types adopting the <code>URLRequestConvertible</code> protocol can be used to construct URL requests. Like <code>URLStringConvertible</code>, this is recommended for applications with any significant interactions between client and server.</p>
+<p>Types adopting the <code>URLRequestConvertible</code> protocol can be used to construct URL requests. <code>NSURLRequest</code> conforms to <code>URLRequestConvertible</code> by default, allowing it to be passed into <code>request</code>, <code>upload</code>, and <code>download</code> methods directly (this is the recommended way to specify custom HTTP header fields or HTTP body for individual requests):</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">URL</span> <span class="o">=</span> <span class="kt">NSURL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"http://httpbin.org/post"</span><span class="p">)</span><span class="o">!</span>
+<span class="k">let</span> <span class="nv">mutableURLRequest</span> <span class="o">=</span> <span class="kt">NSMutableURLRequest</span><span class="p">(</span><span class="kt">URL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">)</span>
+<span class="n">mutableURLRequest</span><span class="o">.</span><span class="kt">HTTPMethod</span> <span class="o">=</span> <span class="s">"POST"</span>
 
-<p>Top-level and instance methods on <code>Manager</code> taking <code>URLRequestConvertible</code> arguments are provided as a way to provide type-safe routing. Such an approach can be used to abstract away server-side inconsistencies, as well as manage authentication credentials and other state.</p>
+<span class="k">let</span> <span class="nv">parameters</span> <span class="o">=</span> <span class="p">[</span><span class="s">"foo"</span><span class="p">:</span> <span class="s">"bar"</span><span class="p">]</span>
+<span class="k">var</span> <span class="nv">JSONSerializationError</span><span class="p">:</span> <span class="kt">NSError</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span>
+<span class="n">mutableURLRequest</span><span class="o">.</span><span class="kt">HTTPBody</span> <span class="o">=</span> <span class="kt">NSJSONSerialization</span><span class="o">.</span><span class="nf">dataWithJSONObject</span><span class="p">(</span><span class="n">parameters</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">error</span><span class="p">:</span> <span class="o">&amp;</span><span class="kt">JSONSerializationError</span><span class="p">)</span>
+<span class="n">mutableURLRequest</span><span class="o">.</span><span class="nf">setValue</span><span class="p">(</span><span class="s">"application/json"</span><span class="p">,</span> <span class="nv">forHTTPHeaderField</span><span class="p">:</span> <span class="s">"Content-Type"</span><span class="p">)</span>
+
+<span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="n">mutableURLRequest</span><span class="p">)</span>
+</code></pre>
+
+<p>Applications interacting with web applications in a significant manner are encouraged to have custom types conform to <code>URLRequestConvertible</code> as a way to ensure consistency of requested endpoints. Such an approach can be used to abstract away server-side inconsistencies and provide type-safe routing, as well as manage authentication credentials and other state.</p>
 <a href='#api_parameter_abstraction' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='api_parameter_abstraction'>API Parameter Abstraction</h4>
 <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">Router</span><span class="p">:</span> <span class="kt">URLRequestConvertible</span> <span class="p">{</span>
     <span class="kd">static</span> <span class="k">let</span> <span class="nv">baseURLString</span> <span class="o">=</span> <span class="s">"http://example.com"</span>
@@ -668,7 +719,7 @@ this framework, it is recommended that you be familiar with the concepts and cap
             <span class="p">}</span>
         <span class="p">}()</span>
 
-        <span class="k">let</span> <span class="nv">URL</span> <span class="o">=</span> <span class="kt">NSURL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="kt">Router</span><span class="o">.</span><span class="n">baseURLString</span><span class="p">)</span>
+        <span class="k">let</span> <span class="nv">URL</span> <span class="o">=</span> <span class="kt">NSURL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="kt">Router</span><span class="o">.</span><span class="n">baseURLString</span><span class="p">)</span><span class="o">!</span>
         <span class="k">let</span> <span class="nv">URLRequest</span> <span class="o">=</span> <span class="kt">NSURLRequest</span><span class="p">(</span><span class="kt">URL</span><span class="p">:</span> <span class="kt">URL</span><span class="o">.</span><span class="kt">URLByAppendingPathComponent</span><span class="p">(</span><span class="n">path</span><span class="p">))</span>
         <span class="k">let</span> <span class="nv">encoding</span> <span class="o">=</span> <span class="kt">Alamofire</span><span class="o">.</span><span class="kt">ParameterEncoding</span><span class="o">.</span><span class="kt">URL</span>
 
@@ -717,9 +768,9 @@ this framework, it is recommended that you be familiar with the concepts and cap
     <span class="c1">// MARK: URLRequestConvertible</span>
 
     <span class="k">var</span> <span class="nv">URLRequest</span><span class="p">:</span> <span class="kt">NSURLRequest</span> <span class="p">{</span>
-        <span class="k">let</span> <span class="nv">URL</span> <span class="o">=</span> <span class="kt">NSURL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="kt">Router</span><span class="o">.</span><span class="n">baseURLString</span><span class="p">)</span>
+        <span class="k">let</span> <span class="nv">URL</span> <span class="o">=</span> <span class="kt">NSURL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="kt">Router</span><span class="o">.</span><span class="n">baseURLString</span><span class="p">)</span><span class="o">!</span>
         <span class="k">let</span> <span class="nv">mutableURLRequest</span> <span class="o">=</span> <span class="kt">NSMutableURLRequest</span><span class="p">(</span><span class="kt">URL</span><span class="p">:</span> <span class="kt">URL</span><span class="o">.</span><span class="kt">URLByAppendingPathComponent</span><span class="p">(</span><span class="n">path</span><span class="p">))</span>
-        <span class="n">mutableURLRequest</span><span class="o">.</span><span class="kt">HTTPMethod</span> <span class="o">=</span> <span class="n">method</span><span class="o">.</span><span class="nf">toRaw</span><span class="p">()</span>
+        <span class="n">mutableURLRequest</span><span class="o">.</span><span class="kt">HTTPMethod</span> <span class="o">=</span> <span class="n">method</span><span class="o">.</span><span class="n">rawValue</span>
 
         <span class="k">if</span> <span class="k">let</span> <span class="nv">token</span> <span class="o">=</span> <span class="kt">Router</span><span class="o">.</span><span class="kt">OAuthToken</span> <span class="p">{</span>
             <span class="n">mutableURLRequest</span><span class="o">.</span><span class="nf">setValue</span><span class="p">(</span><span class="s">"Bearer </span><span class="se">\(</span><span class="n">token</span><span class="se">)</span><span class="s">"</span><span class="p">,</span> <span class="nv">forHTTPHeaderField</span><span class="p">:</span> <span class="s">"Authorization"</span><span class="p">)</span>

@@ -13,7 +13,7 @@
     <a title="Manager Extension Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Alamofire Docs</a> (86% documented)</p>
+        <p><a href="../index.html">Alamofire Docs</a> (84% documented)</p>
         <p class="header-right"><a href="https://github.com/Alamofire/Alamofire"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://http%3A%2F%2Fstatic%2Erealm%2Eio%2Fjazzy_demo%2FAlamofire%2Fdocsets%2FAlamofire%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -132,6 +132,8 @@
             <h1>Manager</h1>
             <p>Responsible for creating and managing <code>Request</code> objects, as well as their underlying <code>NSURLSession</code>.</p>
 
+<p>When finished with a manager, be sure to call either <code>session.finishTasksAndInvalidate()</code> or <code>session.invalidateAndCancel()</code> before deinitialization.</p>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -208,7 +210,90 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L1020-L1022">Show on GitHub</a>
+                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L1055-L1057">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire7Manager6uploadFS0_FTOS_6MethodPS_20URLStringConvertible_4fileCSo5NSURL_CS_7Request"></a>
+                    <a name="//apple_ref/swift/Method/upload(_:_:file:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire7Manager6uploadFS0_FTOS_6MethodPS_20URLStringConvertible_4fileCSo5NSURL_CS_7Request">upload(_:_:file:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a request for uploading a file to the specified URL request.</p>
+
+<p>If <code>startRequestsImmediately</code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="Swift">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">upload</span><span class="p">(</span><span class="nv">method</span><span class="p">:</span> <span class="kt">Method</span><span class="p">,</span> <span class="n">_</span> <span class="kt">URLString</span><span class="p">:</span> <span class="kt">URLStringConvertible</span><span class="p">,</span> <span class="nv">file</span><span class="p">:</span> <span class="kt">NSURL</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Request</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>method</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The HTTP method.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>URLString</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The URL string.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>file</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The file to upload</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The created upload request.</p>
+
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L1070-L1072">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -289,7 +374,90 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L1036-L1038">Show on GitHub</a>
+                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L1086-L1088">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire7Manager6uploadFS0_FTOS_6MethodPS_20URLStringConvertible_4dataCSo6NSData_CS_7Request"></a>
+                    <a name="//apple_ref/swift/Method/upload(_:_:data:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire7Manager6uploadFS0_FTOS_6MethodPS_20URLStringConvertible_4dataCSo6NSData_CS_7Request">upload(_:_:data:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a request for uploading data to the specified URL request.</p>
+
+<p>If <code>startRequestsImmediately</code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="Swift">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">upload</span><span class="p">(</span><span class="nv">method</span><span class="p">:</span> <span class="kt">Method</span><span class="p">,</span> <span class="n">_</span> <span class="kt">URLString</span><span class="p">:</span> <span class="kt">URLStringConvertible</span><span class="p">,</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">NSData</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Request</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>method</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The HTTP method.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>URLString</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The URL string.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The data to upload</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The created upload request.</p>
+
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L1101-L1103">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -370,7 +538,90 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L1052-L1054">Show on GitHub</a>
+                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L1117-L1119">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire7Manager6uploadFS0_FTOS_6MethodPS_20URLStringConvertible_6streamCSo13NSInputStream_CS_7Request"></a>
+                    <a name="//apple_ref/swift/Method/upload(_:_:stream:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire7Manager6uploadFS0_FTOS_6MethodPS_20URLStringConvertible_6streamCSo13NSInputStream_CS_7Request">upload(_:_:stream:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a request for uploading a stream to the specified URL request.</p>
+
+<p>If <code>startRequestsImmediately</code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="Swift">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">upload</span><span class="p">(</span><span class="nv">method</span><span class="p">:</span> <span class="kt">Method</span><span class="p">,</span> <span class="n">_</span> <span class="kt">URLString</span><span class="p">:</span> <span class="kt">URLStringConvertible</span><span class="p">,</span> <span class="nv">stream</span><span class="p">:</span> <span class="kt">NSInputStream</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Request</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>method</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The HTTP method.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>URLString</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The URL string.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>stream</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The stream to upload.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The created upload request.</p>
+
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L1132-L1134">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -386,6 +637,87 @@
                   </a>
                 </div>
               <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire7Manager8downloadFS0_FTOS_6MethodPS_20URLStringConvertible_11destinationFTCSo5NSURLCSo17NSHTTPURLResponse_S3__CS_7Request"></a>
+                    <a name="//apple_ref/swift/Method/download(_:_:destination:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire7Manager8downloadFS0_FTOS_6MethodPS_20URLStringConvertible_11destinationFTCSo5NSURLCSo17NSHTTPURLResponse_S3__CS_7Request">download(_:_:destination:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a download request using the shared manager instance for the specified method and URL string.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="Swift">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">download</span><span class="p">(</span><span class="nv">method</span><span class="p">:</span> <span class="kt">Method</span><span class="p">,</span> <span class="n">_</span> <span class="kt">URLString</span><span class="p">:</span> <span class="kt">URLStringConvertible</span><span class="p">,</span> <span class="nv">destination</span><span class="p">:</span> <span class="kt">Request</span><span class="o">.</span><span class="kt">DownloadFileDestination</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Request</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>method</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The HTTP method.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>URLString</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The URL string.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>destination</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure used to determine the destination of the downloaded file.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The created download request.</p>
+
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L1201-L1203">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -408,7 +740,7 @@
                         <h4>Declaration</h4>
                         <div class="Swift">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">download</span><span class="p">(</span><span class="kt">URLRequest</span><span class="p">:</span> <span class="kt">URLRequestConvertible</span><span class="p">,</span> <span class="nv">destination</span><span class="p">:</span> <span class="p">(</span><span class="kt">NSURL</span><span class="p">,</span> <span class="kt">NSHTTPURLResponse</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">NSURL</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="kt">Request</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">download</span><span class="p">(</span><span class="kt">URLRequest</span><span class="p">:</span> <span class="kt">URLRequestConvertible</span><span class="p">,</span> <span class="nv">destination</span><span class="p">:</span> <span class="kt">Request</span><span class="o">.</span><span class="kt">DownloadFileDestination</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Request</span></code></pre>
 
                         </div>
                       </div>
@@ -451,7 +783,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L1120-L1122">Show on GitHub</a>
+                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L1215-L1217">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -532,7 +864,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L1136-L1138">Show on GitHub</a>
+                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L1231-L1233">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

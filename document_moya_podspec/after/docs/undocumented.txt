@@ -21,56 +21,61 @@ Endpoint.swift
 	public let httpHeaderFields: [String: AnyObject]
 	public var urlRequest: NSURLRequest
 Moya.swift
-	func method() -> Alamofire.Method
-	func parameterEncoding() -> Alamofire.ParameterEncoding
+	public enum StubbedBehavior
 	var path: String { get }
 	var baseURL: NSURL { get }
 	var sampleData: NSData { get }
 	public let endpointsClosure: MoyaEndpointsClosure
 	public let endpointResolver: MoyaEndpointResolution
 	public let stubResponses: Bool
+	public let stubBehavior: MoyaStubbedBehavior
 	public func request(token: T, parameters: [String: AnyObject], completion: MoyaCompletion)
 	public func request(token: T, method: Moya.Method, completion: MoyaCompletion)
 	public func request(token: T, completion: MoyaCompletion)
 	public class func DefaultEnpointResolution() -> MoyaEndpointResolution
-	func method() -> Alamofire.Method
-	func parameterEncoding() -> Alamofire.ParameterEncoding
+	public class func DefaultStubBehavior(_: T) -> Moya.StubbedBehavior
+	public enum StubbedBehavior
 	var path: String { get }
 	var baseURL: NSURL { get }
 	var sampleData: NSData { get }
 	public let endpointsClosure: MoyaEndpointsClosure
 	public let endpointResolver: MoyaEndpointResolution
 	public let stubResponses: Bool
+	public let stubBehavior: MoyaStubbedBehavior
 	public func request(token: T, parameters: [String: AnyObject], completion: MoyaCompletion)
 	public func request(token: T, method: Moya.Method, completion: MoyaCompletion)
 	public func request(token: T, completion: MoyaCompletion)
 	public class func DefaultEnpointResolution() -> MoyaEndpointResolution
-	func method() -> Alamofire.Method
-	func parameterEncoding() -> Alamofire.ParameterEncoding
+	public class func DefaultStubBehavior(_: T) -> Moya.StubbedBehavior
+	public enum StubbedBehavior
 	var path: String { get }
 	var baseURL: NSURL { get }
 	var sampleData: NSData { get }
 	public let endpointsClosure: MoyaEndpointsClosure
 	public let endpointResolver: MoyaEndpointResolution
 	public let stubResponses: Bool
+	public let stubBehavior: MoyaStubbedBehavior
 	public func request(token: T, parameters: [String: AnyObject], completion: MoyaCompletion)
 	public func request(token: T, method: Moya.Method, completion: MoyaCompletion)
 	public func request(token: T, completion: MoyaCompletion)
 	public class func DefaultEnpointResolution() -> MoyaEndpointResolution
+	public class func DefaultStubBehavior(_: T) -> Moya.StubbedBehavior
 Moya+ReactiveCocoa.swift
-	public class MoyaResponse
+	public class MoyaResponse: NSObject
 	public let statusCode: Int
 	public let data: NSData
 	public let response: NSURLResponse?
 	public init(statusCode: Int, data: NSData, response: NSURLResponse?)
-	public class MoyaResponse
-	public var description: String
-	public var debugDescription: String
+	public class MoyaResponse : NSObject
+	override public var description: String
+	override public var debugDescription: String
 	public func request(token: T, parameters: [String: AnyObject]) -> RACSignal
 	public func request(token: T, method: Moya.Method) -> RACSignal
 	public func request(token: T) -> RACSignal
 	public var hashValue: Int
 RACSignal+Moya.swift
+	public let MoyaErrorDomain = "Moya"
 	public enum MoyaErrorCode: Int
 	public func filterStatusCode(code: Int) -> RACSignal
 	public func filterSuccessfulStatusCodes() -> RACSignal
+	public func filterSuccessfulStatusAndRedirectCodes() -> RACSignal
