@@ -13,7 +13,7 @@
     <a title="Request Extension Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Alamofire Docs</a> (86% documented)</p>
+        <p><a href="../index.html">Alamofire Docs</a> (84% documented)</p>
         <p class="header-right"><a href="https://github.com/Alamofire/Alamofire"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://http%3A%2F%2Fstatic%2Erealm%2Eio%2Fjazzy_demo%2FAlamofire%2Fdocsets%2FAlamofire%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -188,7 +188,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L849-L859">Show on GitHub</a>
+                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L891-L901">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -207,9 +207,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC9Alamofire7Request8validateFDS0_FT10statusCodeGVSs5RangeSi__DS0_"></a>
+                    <a name="/s:FC9Alamofire7Request8validateFDS0_USs12SequenceType_USs13GeneratorType__FT10statusCodeQ__DS0_"></a>
                     <a name="//apple_ref/swift/Method/validate(statusCode:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC9Alamofire7Request8validateFDS0_FT10statusCodeGVSs5RangeSi__DS0_">validate(statusCode:)</a>
+                    <a class="token" href="#/s:FC9Alamofire7Request8validateFDS0_USs12SequenceType_USs13GeneratorType__FT10statusCodeQ__DS0_">validate(statusCode:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -226,7 +226,7 @@
                         <h4>Declaration</h4>
                         <div class="Swift">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">validate</span><span class="p">(</span><span class="n">statusCode</span> <span class="nv">range</span><span class="p">:</span> <span class="kt">Range</span><span class="o">&lt;</span><span class="kt">Int</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">validate</span><span class="o">&lt;</span><span class="kt">S</span> <span class="p">:</span> <span class="kt">SequenceType</span> <span class="k">where</span> <span class="kt">S</span><span class="o">.</span><span class="kt">Generator</span><span class="o">.</span><span class="kt">Element</span> <span class="o">==</span> <span class="kt">Int</span><span class="o">&gt;</span><span class="p">(</span><span class="n">statusCode</span> <span class="nv">acceptableStatusCode</span><span class="p">:</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -256,64 +256,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L876-L880">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:FC9Alamofire7Request8validateFDS0_FT10statusCodeGSaSi__DS0_"></a>
-                    <a name="//apple_ref/swift/Method/validate(statusCode:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC9Alamofire7Request8validateFDS0_FT10statusCodeGSaSi__DS0_">validate(statusCode:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Validates that the response has a status code in the specified array.</p>
-
-<p>If validation fails, subsequent calls to response handlers will have an associated error.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="Swift">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">validate</span><span class="p">(</span><span class="n">statusCode</span> <span class="nv">array</span><span class="p">:</span> <span class="p">[</span><span class="kt">Int</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>array</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The acceptable status codes.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>The request.</p>
-
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L891-L895">Show on GitHub</a>
+                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L914-L918">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -332,9 +275,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC9Alamofire7Request8validateFDS0_FT11contentTypeGSaSS__DS0_"></a>
+                    <a name="/s:FC9Alamofire7Request8validateFDS0_USs12SequenceType_USs13GeneratorType__FT11contentTypeQ__DS0_"></a>
                     <a name="//apple_ref/swift/Method/validate(contentType:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC9Alamofire7Request8validateFDS0_FT11contentTypeGSaSS__DS0_">validate(contentType:)</a>
+                    <a class="token" href="#/s:FC9Alamofire7Request8validateFDS0_USs12SequenceType_USs13GeneratorType__FT11contentTypeQ__DS0_">validate(contentType:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -351,7 +294,7 @@
                         <h4>Declaration</h4>
                         <div class="Swift">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">validate</span><span class="p">(</span><span class="n">contentType</span> <span class="nv">array</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">validate</span><span class="o">&lt;</span><span class="kt">S</span> <span class="p">:</span> <span class="kt">SequenceType</span> <span class="k">where</span> <span class="kt">S</span><span class="o">.</span><span class="kt">Generator</span><span class="o">.</span><span class="kt">Element</span> <span class="o">==</span> <span class="kt">String</span><span class="o">&gt;</span><span class="p">(</span><span class="n">contentType</span> <span class="nv">acceptableContentTypes</span><span class="p">:</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -381,7 +324,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L942-L946">Show on GitHub</a>
+                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L958-L974">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -429,7 +372,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L957-L968">Show on GitHub</a>
+                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L985-L996">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -441,9 +384,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC9Alamofire7Request28suggestedDownloadDestinationFMS0_FT9directoryOSC21NSSearchPathDirectory6domainVSC22NSSearchPathDomainMask_FTCSo5NSURLCSo17NSHTTPURLResponse_S3_"></a>
+                    <a name="/s:ZFC9Alamofire7Request28suggestedDownloadDestinationFMS0_FT9directoryOSC21NSSearchPathDirectory6domainVSC22NSSearchPathDomainMask_FTCSo5NSURLCSo17NSHTTPURLResponse_S3_"></a>
                     <a name="//apple_ref/swift/Method/suggestedDownloadDestination(directory:domain:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC9Alamofire7Request28suggestedDownloadDestinationFMS0_FT9directoryOSC21NSSearchPathDirectory6domainVSC22NSSearchPathDomainMask_FTCSo5NSURLCSo17NSHTTPURLResponse_S3_">suggestedDownloadDestination(directory:domain:)</a>
+                    <a class="token" href="#/s:ZFC9Alamofire7Request28suggestedDownloadDestinationFMS0_FT9directoryOSC21NSSearchPathDirectory6domainVSC22NSSearchPathDomainMask_FTCSo5NSURLCSo17NSHTTPURLResponse_S3_">suggestedDownloadDestination(directory:domain:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -501,7 +444,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L1155-L1164">Show on GitHub</a>
+                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L1250-L1259">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -535,7 +478,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L1213-L1226">Show on GitHub</a>
+                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L1308-L1321">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -569,7 +512,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L1291-L1293">Show on GitHub</a>
+                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L1393-L1395">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -581,9 +524,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC9Alamofire7Request24stringResponseSerializerFMS0_FT8encodingSu_FTCSo12NSURLRequestGSqCSo17NSHTTPURLResponse_GSqCSo6NSData__TGSqPSs9AnyObject__GSqCSo7NSError__"></a>
+                    <a name="/s:ZFC9Alamofire7Request24stringResponseSerializerFMS0_FT8encodingGSqSu__FTCSo12NSURLRequestGSqCSo17NSHTTPURLResponse_GSqCSo6NSData__TGSqPSs9AnyObject__GSqCSo7NSError__"></a>
                     <a name="//apple_ref/swift/Method/stringResponseSerializer(encoding:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC9Alamofire7Request24stringResponseSerializerFMS0_FT8encodingSu_FTCSo12NSURLRequestGSqCSo17NSHTTPURLResponse_GSqCSo6NSData__TGSqPSs9AnyObject__GSqCSo7NSError__">stringResponseSerializer(encoding:)</a>
+                    <a class="token" href="#/s:ZFC9Alamofire7Request24stringResponseSerializerFMS0_FT8encodingGSqSu__FTCSo12NSURLRequestGSqCSo17NSHTTPURLResponse_GSqCSo6NSData__TGSqPSs9AnyObject__GSqCSo7NSError__">stringResponseSerializer(encoding:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -598,7 +541,7 @@
                         <h4>Declaration</h4>
                         <div class="Swift">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">stringResponseSerializer</span><span class="p">(</span><span class="nv">encoding</span><span class="p">:</span> <span class="kt">NSStringEncoding</span> <span class="o">=</span> <span class="kt">NSUTF8StringEncoding</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Serializer</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">stringResponseSerializer</span><span class="p">(</span><span class="k">var</span> <span class="nv">encoding</span><span class="p">:</span> <span class="kt">NSStringEncoding</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Serializer</span></code></pre>
 
                         </div>
                       </div>
@@ -614,7 +557,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The string encoding. <code>NSUTF8StringEncoding</code> by default.</p>
+                                  <p>The string encoding. If <code>nil</code>, the string encoding will be determined from the server response, falling back to the default HTTP default character set, ISO-8859-1.</p>
 
                                 </div>
                               </td>
@@ -628,7 +571,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L1308-L1314">Show on GitHub</a>
+                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L1410-L1426">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -636,61 +579,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC9Alamofire7Request14responseStringFDS0_FFTCSo12NSURLRequestGSqCSo17NSHTTPURLResponse_GSqSS_GSqCSo7NSError__T_DS0_"></a>
-                    <a name="//apple_ref/swift/Method/responseString(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC9Alamofire7Request14responseStringFDS0_FFTCSo12NSURLRequestGSqCSo17NSHTTPURLResponse_GSqSS_GSqCSo7NSError__T_DS0_">responseString(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <pre class="highlight plaintext"><code>Adds a handler to be called once the request has finished.
-</code></pre>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="Swift">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">responseString</span><span class="p">(</span><span class="nv">completionHandler</span><span class="p">:</span> <span class="p">(</span><span class="kt">NSURLRequest</span><span class="p">,</span> <span class="kt">NSHTTPURLResponse</span><span class="p">?,</span> <span class="kt">String</span><span class="p">?,</span> <span class="kt">NSError</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>completionHandler</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>A closure to be executed once the request has finished. The closure takes 4 arguments: the URL request, the URL response, if one was received, the string, if one could be created from the URL response and data, and any error produced while creating the string.</p>
-<dl><dt>returns</dt><dd>The request.</dd></dl>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L1323-L1325">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:FC9Alamofire7Request14responseStringFDS0_FT8encodingSu17completionHandlerFTCSo12NSURLRequestGSqCSo17NSHTTPURLResponse_GSqSS_GSqCSo7NSError__T__DS0_"></a>
+                    <a name="/s:FC9Alamofire7Request14responseStringFDS0_FT8encodingGSqSu_17completionHandlerFTCSo12NSURLRequestGSqCSo17NSHTTPURLResponse_GSqSS_GSqCSo7NSError__T__DS0_"></a>
                     <a name="//apple_ref/swift/Method/responseString(encoding:completionHandler:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC9Alamofire7Request14responseStringFDS0_FT8encodingSu17completionHandlerFTCSo12NSURLRequestGSqCSo17NSHTTPURLResponse_GSqSS_GSqCSo7NSError__T__DS0_">responseString(encoding:completionHandler:)</a>
+                    <a class="token" href="#/s:FC9Alamofire7Request14responseStringFDS0_FT8encodingGSqSu_17completionHandlerFTCSo12NSURLRequestGSqCSo17NSHTTPURLResponse_GSqSS_GSqCSo7NSError__T__DS0_">responseString(encoding:completionHandler:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -705,7 +596,7 @@
                         <h4>Declaration</h4>
                         <div class="Swift">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">responseString</span><span class="p">(</span><span class="nv">encoding</span><span class="p">:</span> <span class="kt">NSStringEncoding</span> <span class="o">=</span> <span class="kt">NSUTF8StringEncoding</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="p">(</span><span class="kt">NSURLRequest</span><span class="p">,</span> <span class="kt">NSHTTPURLResponse</span><span class="p">?,</span> <span class="kt">String</span><span class="p">?,</span> <span class="kt">NSError</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">responseString</span><span class="p">(</span><span class="nv">encoding</span><span class="p">:</span> <span class="kt">NSStringEncoding</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="p">(</span><span class="kt">NSURLRequest</span><span class="p">,</span> <span class="kt">NSHTTPURLResponse</span><span class="p">?,</span> <span class="kt">String</span><span class="p">?,</span> <span class="kt">NSError</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -721,7 +612,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The string encoding. <code>NSUTF8StringEncoding</code> by default.</p>
+                                  <p>The string encoding. If <code>nil</code>, the string encoding will be determined from the server response, falling back to the default HTTP default character set, ISO-8859-1.</p>
 
                                 </div>
                               </td>
@@ -748,7 +639,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L1335-L1339">Show on GitHub</a>
+                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L1436-L1440">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -760,9 +651,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC9Alamofire7Request22JSONResponseSerializerFMS0_FT7optionsVSC20NSJSONReadingOptions_FTCSo12NSURLRequestGSqCSo17NSHTTPURLResponse_GSqCSo6NSData__TGSqPSs9AnyObject__GSqCSo7NSError__"></a>
+                    <a name="/s:ZFC9Alamofire7Request22JSONResponseSerializerFMS0_FT7optionsVSC20NSJSONReadingOptions_FTCSo12NSURLRequestGSqCSo17NSHTTPURLResponse_GSqCSo6NSData__TGSqPSs9AnyObject__GSqCSo7NSError__"></a>
                     <a name="//apple_ref/swift/Method/JSONResponseSerializer(options:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC9Alamofire7Request22JSONResponseSerializerFMS0_FT7optionsVSC20NSJSONReadingOptions_FTCSo12NSURLRequestGSqCSo17NSHTTPURLResponse_GSqCSo6NSData__TGSqPSs9AnyObject__GSqCSo7NSError__">JSONResponseSerializer(options:)</a>
+                    <a class="token" href="#/s:ZFC9Alamofire7Request22JSONResponseSerializerFMS0_FT7optionsVSC20NSJSONReadingOptions_FTCSo12NSURLRequestGSqCSo17NSHTTPURLResponse_GSqCSo6NSData__TGSqPSs9AnyObject__GSqCSo7NSError__">JSONResponseSerializer(options:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -807,62 +698,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L1352-L1363">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:FC9Alamofire7Request12responseJSONFDS0_FFTCSo12NSURLRequestGSqCSo17NSHTTPURLResponse_GSqPSs9AnyObject__GSqCSo7NSError__T_DS0_"></a>
-                    <a name="//apple_ref/swift/Method/responseJSON(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC9Alamofire7Request12responseJSONFDS0_FFTCSo12NSURLRequestGSqCSo17NSHTTPURLResponse_GSqPSs9AnyObject__GSqCSo7NSError__T_DS0_">responseJSON(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Adds a handler to be called once the request has finished.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="Swift">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">responseJSON</span><span class="p">(</span><span class="nv">completionHandler</span><span class="p">:</span> <span class="p">(</span><span class="kt">NSURLRequest</span><span class="p">,</span> <span class="kt">NSHTTPURLResponse</span><span class="p">?,</span> <span class="kt">AnyObject</span><span class="p">?,</span> <span class="kt">NSError</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>completionHandler</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>A closure to be executed once the request has finished. The closure takes 4 arguments: the URL request, the URL response, if one was received, the JSON object, if one could be created from the URL response and data, and any error produced while creating the JSON object.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>The request.</p>
-
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L1372-L1374">Show on GitHub</a>
+                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L1453-L1464">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -930,7 +766,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L1384-L1388">Show on GitHub</a>
+                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L1474-L1478">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -942,9 +778,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC9Alamofire7Request30propertyListResponseSerializerFMS0_FT7optionsSi_FTCSo12NSURLRequestGSqCSo17NSHTTPURLResponse_GSqCSo6NSData__TGSqPSs9AnyObject__GSqCSo7NSError__"></a>
+                    <a name="/s:ZFC9Alamofire7Request30propertyListResponseSerializerFMS0_FT7optionsSi_FTCSo12NSURLRequestGSqCSo17NSHTTPURLResponse_GSqCSo6NSData__TGSqPSs9AnyObject__GSqCSo7NSError__"></a>
                     <a name="//apple_ref/swift/Method/propertyListResponseSerializer(options:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC9Alamofire7Request30propertyListResponseSerializerFMS0_FT7optionsSi_FTCSo12NSURLRequestGSqCSo17NSHTTPURLResponse_GSqCSo6NSData__TGSqPSs9AnyObject__GSqCSo7NSError__">propertyListResponseSerializer(options:)</a>
+                    <a class="token" href="#/s:ZFC9Alamofire7Request30propertyListResponseSerializerFMS0_FT7optionsSi_FTCSo12NSURLRequestGSqCSo17NSHTTPURLResponse_GSqCSo6NSData__TGSqPSs9AnyObject__GSqCSo7NSError__">propertyListResponseSerializer(options:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -989,62 +825,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L1401-L1412">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:FC9Alamofire7Request20responsePropertyListFDS0_FFTCSo12NSURLRequestGSqCSo17NSHTTPURLResponse_GSqPSs9AnyObject__GSqCSo7NSError__T_DS0_"></a>
-                    <a name="//apple_ref/swift/Method/responsePropertyList(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC9Alamofire7Request20responsePropertyListFDS0_FFTCSo12NSURLRequestGSqCSo17NSHTTPURLResponse_GSqPSs9AnyObject__GSqCSo7NSError__T_DS0_">responsePropertyList(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Adds a handler to be called once the request has finished.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="Swift">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">responsePropertyList</span><span class="p">(</span><span class="nv">completionHandler</span><span class="p">:</span> <span class="p">(</span><span class="kt">NSURLRequest</span><span class="p">,</span> <span class="kt">NSHTTPURLResponse</span><span class="p">?,</span> <span class="kt">AnyObject</span><span class="p">?,</span> <span class="kt">NSError</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>completionHandler</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>A closure to be executed once the request has finished. The closure takes 4 arguments: the URL request, the URL response, if one was received, the property list, if one could be created from the URL response and data, and any error produced while creating the property list.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div>
-                        <h4>Return Value</h4>
-                        <p>The request.</p>
-
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L1421-L1423">Show on GitHub</a>
+                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L1491-L1502">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1112,7 +893,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L1433-L1437">Show on GitHub</a>
+                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L1512-L1516">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

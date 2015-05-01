@@ -13,7 +13,7 @@
     <a title="Manager Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Alamofire Docs</a> (86% documented)</p>
+        <p><a href="../index.html">Alamofire Docs</a> (84% documented)</p>
         <p class="header-right"><a href="https://github.com/Alamofire/Alamofire"><img src="../img/gh.png"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://http%3A%2F%2Fstatic%2Erealm%2Eio%2Fjazzy_demo%2FAlamofire%2Fdocsets%2FAlamofire%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
@@ -132,6 +132,8 @@
             <h1>Manager</h1>
             <p>Responsible for creating and managing <code>Request</code> objects, as well as their underlying <code>NSURLSession</code>.</p>
 
+<p>When finished with a manager, be sure to call either <code>session.finishTasksAndInvalidate()</code> or <code>session.invalidateAndCancel()</code> before deinitialization.</p>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -139,9 +141,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC9Alamofire7Manager14sharedInstanceS0_"></a>
-                    <a name="//apple_ref/swift/Property/sharedInstance" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC9Alamofire7Manager14sharedInstanceS0_">sharedInstance</a>
+                    <a name="/s:ZvC9Alamofire7Manager14sharedInstanceS0_"></a>
+                    <a name="//apple_ref/swift/Variable/sharedInstance" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC9Alamofire7Manager14sharedInstanceS0_">sharedInstance</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -156,12 +158,47 @@
                         <h4>Declaration</h4>
                         <div class="Swift">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="k">var</span> <span class="nv">sharedInstance</span><span class="p">:</span> <span class="kt">Manager</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">sharedInstance</span><span class="p">:</span> <span class="kt">Manager</span> <span class="o">=</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L220-L272">Show on GitHub</a>
+                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L222">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC9Alamofire7Manager18defaultHTTPHeadersGVSs10DictionarySSSS_"></a>
+                    <a name="//apple_ref/swift/Variable/defaultHTTPHeaders" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC9Alamofire7Manager18defaultHTTPHeadersGVSs10DictionarySSSS_">defaultHTTPHeaders</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates default values for the <q>Accept-Encoding</q>, <q>Accept-Language</q> and <q>User-Agent</q> headers.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="Swift">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">defaultHTTPHeaders</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]</span> <span class="o">=</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The default header values.</p>
+
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L234">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -191,7 +228,37 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L279">Show on GitHub</a>
+                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L278">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9Alamofire7Manager8delegateCS0_15SessionDelegate"></a>
+                    <a name="//apple_ref/swift/Property/delegate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9Alamofire7Manager8delegateCS0_15SessionDelegate">delegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The session delegate handling all the task and session delegate callbacks.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="Swift">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt">SessionDelegate</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L281">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -221,7 +288,37 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L282">Show on GitHub</a>
+                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L284">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9Alamofire7Manager27backgroundCompletionHandlerGSqFT_T__"></a>
+                    <a name="//apple_ref/swift/Property/backgroundCompletionHandler" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9Alamofire7Manager27backgroundCompletionHandlerGSqFT_T__">backgroundCompletionHandler</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The background completion handler closure provided by the UIApplicationDelegate <code>application:handleEventsForBackgroundURLSession:completionHandler:</code> method. By setting the background completion handler, the SessionDelegate <code>sessionDidFinishEventsForBackgroundURLSession</code> closure implementation will automatically call the handler. If you need to handle your own events before the handler is called, then you need to override the SessionDelegate <code>sessionDidFinishEventsForBackgroundURLSession</code> and manually call the handler when finished. <code>nil</code> by default.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="Swift">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">backgroundCompletionHandler</span><span class="p">:</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L287">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -270,7 +367,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L287-L290">Show on GitHub</a>
+                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L292-L301">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -368,7 +465,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L308-L310">Show on GitHub</a>
+                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L315-L317">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -425,7 +522,38 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L322-L336">Show on GitHub</a>
+                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L329-L343">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:CC9Alamofire7Manager15SessionDelegate"></a>
+                    <a name="//apple_ref/swift/Class/SessionDelegate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:CC9Alamofire7Manager15SessionDelegate">SessionDelegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Responsible for handling all delegate callbacks for the underlying session.</p>
+
+                        <a href="../Classes/Manager/SessionDelegate.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="Swift">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">SessionDelegate</span><span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">NSURLSessionDelegate</span><span class="p">,</span> <span class="kt">NSURLSessionTaskDelegate</span><span class="p">,</span> <span class="kt">NSURLSessionDataDelegate</span><span class="p">,</span> <span class="kt">NSURLSessionDownloadDelegate</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/1.1.0/Source/Alamofire.swift#L348-L564">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

@@ -13,7 +13,7 @@ import Foundation
 /// SUPPORTED: documented global
 let documentedGlobal = true
 
-// UNSUPPORTED: undocumented global
+// SUPPORTED: undocumented global
 let undocumentedGlobal = false
 
 // MARK: Classes

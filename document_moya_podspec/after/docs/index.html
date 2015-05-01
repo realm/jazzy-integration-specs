@@ -12,7 +12,7 @@
     <a title="Moya  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">Moya Docs</a> (49% documented)</p>
+        <p><a href="index.html">Moya Docs</a> (47% documented)</p>
         <p class="header-right"><a href=""><img src="img/gh.png"/>View on GitHub</a></p>
       </div>
     </header>
@@ -47,6 +47,14 @@
             </ul>
           </li>
           <li class="nav-group-name">
+          <a href="Global Variables.html">Global Variables</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Global Variables.html#/s:v4Moya15MoyaErrorDomainSS">MoyaErrorDomain</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
           <a href="Enums.html">Enums</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -75,7 +83,7 @@
           <a href="Functions.html">Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Functions.html#/s:F4Moyaoi2eeU__FTGCS_8EndpointQ__GS0_Q___Sb">==(_:_:)</a>
+                <a href="Functions.html#/s:ZF4Moyaoi2eeU__FTGCS_8EndpointQ__GS0_Q___Sb">==(_:_:)</a>
               </li>
             </ul>
           </li>
@@ -141,12 +149,11 @@ new auction app</a>.</p>
 
 <p>This project has some dependencies, which are currently managed by a pre-release
 version of CocoaPods (0.36 Beta 1). Add the following lines to your Podfile:</p>
-<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'Moya'</span><span class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s2">"https://github.com/AshFurrow/Moya"</span>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'Moya'</span>
 
 <span class="c1"># Include the following only if you want to use ReactiveCocoa extensions with Moya</span>
-<span class="n">pod</span> <span class="s1">'LlamaKit'</span><span class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s2">"https://github.com/AshFurrow/LlamaKit"</span><span class="p">,</span> <span class="ss">:branch</span> <span class="o">=&gt;</span> <span class="s2">"rac_podspec"</span>
-<span class="n">pod</span> <span class="s1">'ReactiveCocoa'</span><span class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s2">"https://github.com/AshFurrow/ReactiveCocoa"</span><span class="p">,</span> <span class="ss">:branch</span> <span class="o">=&gt;</span> <span class="s2">"podspec"</span>
-<span class="n">pod</span> <span class="s1">'Moya/Reactive'</span><span class="p">,</span> <span class="ss">:git</span> <span class="o">=&gt;</span> <span class="s2">"https://github.com/AshFurrow/Moya"</span>
+<span class="n">pod</span> <span class="s1">'ReactiveCocoa'</span><span class="p">,</span> <span class="s1">'3.0.0-alpha.1'</span>
+<span class="n">pod</span> <span class="s1">'Moya/Reactive'</span>
 </code></pre>
 
 <p>Then run <code>pod install</code>. In any file you&rsquo;d like to use Moya in, don&rsquo;t forget to
@@ -252,7 +259,7 @@ API calls really easy.</p>
 </code></pre>
 
 <p>Neato. Now how do we make a request?</p>
-<pre class="highlight swift"><code><span class="n">provider</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="kt">Zen</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
+<pre class="highlight swift"><code><span class="n">provider</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="kt">Zen</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">statusCode</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
     <span class="k">if</span> <span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="n">data</span> <span class="p">{</span>
         <span class="c1">// do something with the data</span>
     <span class="p">}</span>
