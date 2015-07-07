@@ -274,7 +274,7 @@ and parameters for the endpoint closure.</p>
 <code>RACSignal</code> that you can subscribe to or bind or map or whatever you want to
 do. To handle errors, for instance, we could do the following:</p>
 <pre class="highlight swift"><code><span class="n">provider</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="kt">UserProfile</span><span class="p">(</span><span class="s">"ashfurrow"</span><span class="p">))</span><span class="o">.</span><span class="nf">subscribeNext</span><span class="p">({</span> <span class="p">(</span><span class="n">object</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span> <span class="k">in</span>
-    <span class="n">image</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="n">object</span> <span class="k">as</span><span class="p">?</span> <span class="kt">NSData</span><span class="p">)</span>
+    <span class="n">image</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="n">object</span> <span class="k">as?</span> <span class="kt">NSData</span><span class="p">)</span>
 <span class="p">},</span> <span class="nv">error</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">error</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span> <span class="k">in</span>
     <span class="nf">println</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
 <span class="p">})</span>

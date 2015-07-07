@@ -402,7 +402,7 @@
     <span class="k">if</span> <span class="k">let</span> <span class="nv">directoryURL</span> <span class="o">=</span> <span class="kt">NSFileManager</span><span class="o">.</span><span class="nf">defaultManager</span><span class="p">()</span>
                           <span class="o">.</span><span class="kt">URLsForDirectory</span><span class="p">(</span><span class="o">.</span><span class="kt">DocumentDirectory</span><span class="p">,</span>
                                             <span class="nv">inDomains</span><span class="p">:</span> <span class="o">.</span><span class="kt">UserDomainMask</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
-                          <span class="k">as</span><span class="p">?</span> <span class="kt">NSURL</span> <span class="p">{</span>
+                          <span class="k">as?</span> <span class="kt">NSURL</span> <span class="p">{</span>
         <span class="k">let</span> <span class="nv">pathComponent</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">suggestedFilename</span>
 
         <span class="k">return</span> <span class="n">directoryURL</span><span class="o">.</span><span class="kt">URLByAppendingPathComponent</span><span class="p">(</span><span class="n">pathComponent</span><span class="o">!</span><span class="p">)</span>
@@ -586,7 +586,7 @@ this framework, it is recommended that you be familiar with the concepts and cap
 
     <span class="kd">func</span> <span class="nf">responseXMLDocument</span><span class="p">(</span><span class="nv">completionHandler</span><span class="p">:</span> <span class="p">(</span><span class="kt">NSURLRequest</span><span class="p">,</span> <span class="kt">NSHTTPURLResponse</span><span class="p">?,</span> <span class="kt">ONOXMLDocument</span><span class="p">?,</span> <span class="kt">NSError</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span> <span class="p">{</span>
         <span class="k">return</span> <span class="nf">response</span><span class="p">(</span><span class="nv">serializer</span><span class="p">:</span> <span class="kt">Request</span><span class="o">.</span><span class="kt">XMLResponseSerializer</span><span class="p">(),</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="kt">XML</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
-            <span class="nf">completionHandler</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="kt">XML</span> <span class="k">as</span><span class="p">?</span> <span class="kt">ONOXMLDocument</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
+            <span class="nf">completionHandler</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="kt">XML</span> <span class="k">as?</span> <span class="kt">ONOXMLDocument</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
         <span class="p">})</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -611,7 +611,7 @@ this framework, it is recommended that you be familiar with the concepts and cap
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="nf">response</span><span class="p">(</span><span class="nv">serializer</span><span class="p">:</span> <span class="n">serializer</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">object</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
-            <span class="nf">completionHandler</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">object</span> <span class="k">as</span><span class="p">?</span> <span class="kt">T</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
+            <span class="nf">completionHandler</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">object</span> <span class="k">as?</span> <span class="kt">T</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
         <span class="p">})</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -650,7 +650,7 @@ this framework, it is recommended that you be familiar with the concepts and cap
         <span class="p">}</span>
 
         <span class="k">return</span> <span class="nf">response</span><span class="p">(</span><span class="nv">serializer</span><span class="p">:</span> <span class="n">serializer</span><span class="p">,</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="p">{</span> <span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">object</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
-            <span class="nf">completionHandler</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">object</span> <span class="k">as</span><span class="p">?</span> <span class="p">[</span><span class="kt">T</span><span class="p">],</span> <span class="n">error</span><span class="p">)</span>
+            <span class="nf">completionHandler</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">object</span> <span class="k">as?</span> <span class="p">[</span><span class="kt">T</span><span class="p">],</span> <span class="n">error</span><span class="p">)</span>
         <span class="p">})</span>
     <span class="p">}</span>
 <span class="p">}</span>
