@@ -1,9 +1,0 @@
-Migration.swift
-	public func setDefaultRealmSchemaVersion(schemaVersion: UInt64, migrationBlock: MigrationBlock)
-	public func setSchemaVersion(schemaVersion: UInt64, realmPath: String, migrationBlock: MigrationBlock)
-	public func migrateRealm(path: String, encryptionKey: NSData? = nil) -> NSError?
-Realm.swift
-	public class var defaultPath: String
-	public convenience init(path: String, readOnly: Bool, encryptionKey: NSData? = nil) throws
-	public convenience init(inMemoryIdentifier: String) throws
-	public class func setEncryptionKey(encryptionKey: NSData?, forPath path: String = Realm.defaultPath)
