@@ -705,16 +705,16 @@ this framework, it is recommended that you be familiar with the concepts and cap
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">Request</span> <span class="p">{</span>
     <span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="kt">XMLResponseSerializer</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">GenericResponseSerializer</span><span class="o">&lt;</span><span class="kt">ONOXMLDocument</span><span class="o">&gt;</span> <span class="p">{</span>
         <span class="k">return</span> <span class="kt">GenericResponseSerializer</span> <span class="p">{</span> <span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">data</span> <span class="k">in</span>
-            <span class="n">guard</span> <span class="k">let</span> <span class="nv">validData</span> <span class="o">=</span> <span class="n">data</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">guard</span> <span class="k">let</span> <span class="nv">validData</span> <span class="o">=</span> <span class="n">data</span> <span class="k">else</span> <span class="p">{</span>
                 <span class="k">let</span> <span class="nv">failureReason</span> <span class="o">=</span> <span class="s">"Data could not be serialized. Input data was nil."</span>
                 <span class="k">let</span> <span class="nv">error</span> <span class="o">=</span> <span class="kt">Error</span><span class="o">.</span><span class="nf">errorWithCode</span><span class="p">(</span><span class="o">.</span><span class="kt">DataSerializationFailed</span><span class="p">,</span> <span class="nv">failureReason</span><span class="p">:</span> <span class="n">failureReason</span><span class="p">)</span>
                 <span class="k">return</span> <span class="o">.</span><span class="kt">Failure</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span>
             <span class="p">}</span>
 
             <span class="k">do</span> <span class="p">{</span>
-                <span class="k">let</span> <span class="nv">XML</span> <span class="o">=</span> <span class="n">try</span> <span class="kt">ONOXMLDocument</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="n">validData</span><span class="p">)</span>
+                <span class="k">let</span> <span class="nv">XML</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">ONOXMLDocument</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="n">validData</span><span class="p">)</span>
                 <span class="k">return</span> <span class="o">.</span><span class="kt">Success</span><span class="p">(</span><span class="kt">XML</span><span class="p">)</span>
-            <span class="p">}</span> <span class="n">catch</span> <span class="p">{</span>
+            <span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>
                 <span class="k">return</span> <span class="o">.</span><span class="kt">Failure</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">error</span> <span class="k">as</span> <span class="kt">NSError</span><span class="p">)</span>
             <span class="p">}</span>
         <span class="p">}</span>
@@ -872,8 +872,8 @@ this framework, it is recommended that you be familiar with the concepts and cap
 <span class="k">let</span> <span class="nv">parameters</span> <span class="o">=</span> <span class="p">[</span><span class="s">"foo"</span><span class="p">:</span> <span class="s">"bar"</span><span class="p">]</span>
 
 <span class="k">do</span> <span class="p">{</span>
-    <span class="n">mutableURLRequest</span><span class="o">.</span><span class="kt">HTTPBody</span> <span class="o">=</span> <span class="n">try</span> <span class="kt">NSJSONSerialization</span><span class="o">.</span><span class="nf">dataWithJSONObject</span><span class="p">(</span><span class="n">parameters</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt">NSJSONWritingOptions</span><span class="p">())</span>
-<span class="p">}</span> <span class="n">catch</span> <span class="p">{</span>
+    <span class="n">mutableURLRequest</span><span class="o">.</span><span class="kt">HTTPBody</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">NSJSONSerialization</span><span class="o">.</span><span class="nf">dataWithJSONObject</span><span class="p">(</span><span class="n">parameters</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt">NSJSONWritingOptions</span><span class="p">())</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>
     <span class="c1">// No-op</span>
 <span class="p">}</span>
 
