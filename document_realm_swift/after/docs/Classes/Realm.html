@@ -206,6 +206,16 @@ then possibly delete the realm file and re-open it), place the code which uses
 the realm within an <code>autoreleasepool {}</code> and ensure you have no other
 strong references to it.</p>
 
+<div class="warning">
+          <p class="aside-title">warning</p>
+          Realm instances are not thread safe and can not be shared across
+       threads or dispatch queues. You must construct a new instance on each thread you want
+       to interact with the realm on. For dispatch queues, this means that you must
+       call it in each block which is dispatched, as a queue is not guaranteed to run
+       on a consistent thread.
+
+        </div>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -506,6 +516,16 @@ options.</p>
 
 <p>Like <code>init(path:)</code>, but with the ability to open read-only realms and
 encrypted realms.</p>
+
+<div class="warning">
+          <p class="aside-title">warning</p>
+          <p>Read-only Realms do not support changes made to the file while the
+       <code>Realm</code> exists. This means that you cannot open a Realm as both read-only
+       and read-write at the same time. Read-only Realms should normally only be used
+       on files which cannot be opened in read-write mode, and not just for enforcing
+       correctness in code that should not need to write to the Realm.</p>
+
+        </div>
 
                       </div>
                       <div class="declaration">
@@ -837,6 +857,15 @@ the valid object.</p>
                       <div class="abstract">
                         <p>Indicates if this Realm is currently in a write transaction.</p>
 
+<div class="warning">
+          <p class="aside-title">warning</p>
+          Wrapping mutating operations in a write transaction if this property returns <code>false</code>
+       may cause a large number of write transactions to be created, which could negatively
+       impact Realm&rsquo;s performance. Always prefer performing multiple mutations in a single
+       transaction when possible.
+
+        </div>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -953,6 +982,12 @@ from a Realm (i.e. <code>invalidated</code> must be false).</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Adds or updates objects in the given sequence to be persisted it in this Realm.</p>
+
+<div class="see">
+          <p class="aside-title">see</p>
+          <p>add(object:update:)</p>
+
+        </div>
 
                       </div>
                       <div class="declaration">
@@ -1315,6 +1350,12 @@ the existing object is updated with any changed values.</p>
 <p>Returns <code>nil</code> if no object exists with the given primary key.</p>
 
 <p>This method requires that <code>primaryKey()</code> be overridden on the given subclass.</p>
+
+<div class="see">
+          <p class="aside-title">see</p>
+          <p>Object.primaryKey()</p>
+
+        </div>
 
                       </div>
                       <div class="declaration">

@@ -226,6 +226,12 @@
                         <p>Returns the object at the given <code>index</code> on get.
 Replaces the object at the given <code>index</code> on set.</p>
 
+<div class="warning">
+          <p class="aside-title">warning</p>
+          <p>You can only set an object during a write transaction.</p>
+
+        </div>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -728,6 +734,12 @@ or <code>nil</code> if no objects match.</p>
                       <div class="abstract">
                         <p>Invokes <code>setValue:forKey:</code> on each of the collection&rsquo;s objects using the specified value and key.</p>
 
+<div class="warning">
+          <p class="aside-title">warning</p>
+          <p>This method can only be called during a write transaction.</p>
+
+        </div>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1057,6 +1069,12 @@ or <code>nil</code> if no objects match.</p>
                       <div class="abstract">
                         <p>Returns the minimum value of the given property.</p>
 
+<div class="warning">
+          <p class="aside-title">warning</p>
+          <p>Only names of properties of a type conforming to the <code>MinMaxType</code> protocol can be used.</p>
+
+        </div>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1111,6 +1129,12 @@ or <code>nil</code> if no objects match.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the maximum value of the given property.</p>
+
+<div class="warning">
+          <p class="aside-title">warning</p>
+          <p>Only names of properties of a type conforming to the <code>MinMaxType</code> protocol can be used.</p>
+
+        </div>
 
                       </div>
                       <div class="declaration">
@@ -1167,6 +1191,12 @@ or <code>nil</code> if no objects match.</p>
                       <div class="abstract">
                         <p>Returns the sum of the given property for objects in the List.</p>
 
+<div class="warning">
+          <p class="aside-title">warning</p>
+          <p>Only names of properties of a type conforming to the <code>AddableType</code> protocol can be used.</p>
+
+        </div>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1221,6 +1251,12 @@ or <code>nil</code> if no objects match.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the average of the given property for objects in the List.</p>
+
+<div class="warning">
+          <p class="aside-title">warning</p>
+          <p>Only names of properties of a type conforming to the <code>AddableType</code> protocol can be used.</p>
+
+        </div>
 
                       </div>
                       <div class="declaration">
@@ -1289,6 +1325,12 @@ or <code>nil</code> if no objects match.</p>
                         <p>Appends the given object to the end of the list. If the object is from a
 different Realm it is copied to the List&rsquo;s Realm.</p>
 
+<div class="warning">
+          <p class="aside-title">warning</p>
+          <p>This method can only be called during a write transaction.</p>
+
+        </div>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1339,6 +1381,12 @@ different Realm it is copied to the List&rsquo;s Realm.</p>
                       <div class="abstract">
                         <p>Appends the objects in the given sequence to the end of the list.</p>
 
+<div class="warning">
+          <p class="aside-title">warning</p>
+          <p>This method can only be called during a write transaction.</p>
+
+        </div>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1388,6 +1436,17 @@ different Realm it is copied to the List&rsquo;s Realm.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Inserts the given object at the given index.</p>
+
+<div class="warning">
+          <p class="aside-title">warning</p>
+          This method can only be called during a write transaction.
+
+        </div><div class="warning">
+          <p class="aside-title">warning</p>
+          <p>Throws an exception when called with an index smaller than zero
+       or greater than or equal to the number of objects in the list.</p>
+
+        </div>
 
                       </div>
                       <div class="declaration">
@@ -1452,6 +1511,17 @@ different Realm it is copied to the List&rsquo;s Realm.</p>
                       <div class="abstract">
                         <p>Removes the object at the given index from the list. Does not remove the object from the Realm.</p>
 
+<div class="warning">
+          <p class="aside-title">warning</p>
+          This method can only be called during a write transaction.
+
+        </div><div class="warning">
+          <p class="aside-title">warning</p>
+          <p>Throws an exception when called with an index smaller than zero
+       or greater than or equal to the number of objects in the list.</p>
+
+        </div>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1502,6 +1572,12 @@ different Realm it is copied to the List&rsquo;s Realm.</p>
                       <div class="abstract">
                         <p>Removes the last object in the list. Does not remove the object from the Realm.</p>
 
+<div class="warning">
+          <p class="aside-title">warning</p>
+          This method can only be called during a write transaction.
+
+        </div>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1532,6 +1608,12 @@ different Realm it is copied to the List&rsquo;s Realm.</p>
                       <div class="abstract">
                         <p>Removes all objects from the List. Does not remove the objects from the Realm.</p>
 
+<div class="warning">
+          <p class="aside-title">warning</p>
+          This method can only be called during a write transaction.
+
+        </div>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1561,6 +1643,17 @@ different Realm it is copied to the List&rsquo;s Realm.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Replaces an object at the given index with a new object.</p>
+
+<div class="warning">
+          <p class="aside-title">warning</p>
+          This method can only be called during a write transaction.
+
+        </div><div class="warning">
+          <p class="aside-title">warning</p>
+          <p>Throws an exception when called with an index smaller than zero
+       or greater than or equal to the number of objects in the list.</p>
+
+        </div>
 
                       </div>
                       <div class="declaration">
@@ -1625,6 +1718,17 @@ different Realm it is copied to the List&rsquo;s Realm.</p>
                       <div class="abstract">
                         <p>Moves the object at the given source index to the given destination index.</p>
 
+<div class="warning">
+          <p class="aside-title">warning</p>
+          This method can only be called during a write transaction.
+
+        </div><div class="warning">
+          <p class="aside-title">warning</p>
+          <p>Throws an exception when called with an index smaller than zero or greater than
+       or equal to the number of objects in the list.</p>
+
+        </div>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1687,6 +1791,16 @@ different Realm it is copied to the List&rsquo;s Realm.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Exchanges the objects in the list at given indexes.</p>
+
+<div class="warning">
+          <p class="aside-title">warning</p>
+          Throws an exception when either index exceeds the bounds of the list.
+
+        </div><div class="warning">
+          <p class="aside-title">warning</p>
+          <p>This method can only be called during a write transaction.</p>
+
+        </div>
 
                       </div>
                       <div class="declaration">
