@@ -209,13 +209,13 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p><code>List&lt;T&gt;</code> is the container type in Realm used to define to-many relationships.</p>
+                        <p><code>List&lt;T&gt;</code> is the container type in <a href="Classes/Realm.html">Realm</a> used to define to-many relationships.</p>
 
-<p>Lists hold a single <code>Object</code> subclass (<code>T</code>) which defines the <q>type</q> of the list.</p>
+<p>Lists hold a single <code><a href="Classes/Object.html">Object</a></code> subclass (<code>T</code>) which defines the <q>type</q> of the list.</p>
 
-<p>Lists can be filtered and sorted with the same predicates as <code>Results&lt;T&gt;</code>.</p>
+<p>Lists can be filtered and sorted with the same predicates as <code><a href="Classes/Results.html">Results</a>&lt;T&gt;</code>.</p>
 
-<p>When added as a property on <code>Object</code> models, the property must be declared as <code>let</code> and cannot be <code>dynamic</code>.</p>
+<p>When added as a property on <code><a href="Classes/Object.html">Object</a></code> models, the property must be declared as <code>let</code> and cannot be <code>dynamic</code>.</p>
 
                         <a href="Classes/List.html" class="slightly-smaller">See more</a>
                       </div>
@@ -250,10 +250,10 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p><code>Migration</code> is the object passed into a user-defined <code>MigrationBlock</code> when updating the version
-of a <code>Realm</code> instance.</p>
+                        <p><code>Migration</code> is the object passed into a user-defined <code><a href="Typealiases.html#/s:10RealmSwift14MigrationBlock">MigrationBlock</a></code> when updating the version
+of a <code><a href="Classes/Realm.html">Realm</a></code> instance.</p>
 
-<p>This object provides access to the previous and current <code>Schema</code>s for this migration.</p>
+<p>This object provides access to the previous and current <code><a href="Classes/Schema.html">Schema</a></code>s for this migration.</p>
 
                         <a href="Classes/Migration.html" class="slightly-smaller">See more</a>
                       </div>
@@ -289,7 +289,7 @@ of a <code>Realm</code> instance.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Encapsulates iteration state and interface for iteration over a
-<code>RealmCollectionType</code>.</p>
+<code><a href="Protocols/RealmCollectionType.html">RealmCollectionType</a></code>.</p>
 
                         <a href="Classes/RLMGenerator.html" class="slightly-smaller">See more</a>
                       </div>
@@ -320,10 +320,10 @@ of a <code>Realm</code> instance.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A type-erased <code>RealmCollectionType</code>.</p>
+                        <p>A type-erased <code><a href="Protocols/RealmCollectionType.html">RealmCollectionType</a></code>.</p>
 
 <p>Forwards operations to an arbitrary underlying collection having the same
-Element type, hiding the specifics of the underlying <code>RealmCollectionType</code>.</p>
+Element type, hiding the specifics of the underlying <code><a href="Protocols/RealmCollectionType.html">RealmCollectionType</a></code>.</p>
 
                         <a href="Classes/AnyRealmCollection.html" class="slightly-smaller">See more</a>
                       </div>
@@ -358,13 +358,13 @@ Element type, hiding the specifics of the underlying <code>RealmCollectionType</
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>In Realm you define your model classes by subclassing <code>Object</code> and adding properties to be persisted.
+                        <p>In <a href="Classes/Realm.html">Realm</a> you define your model classes by subclassing <code>Object</code> and adding properties to be persisted.
 You then instantiate and use your custom subclasses instead of using the Object class directly.</p>
 
 <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">Dog</span><span class="p">:</span> <span class="kt">Object</span> <span class="p">{</span>
     <span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span>
     <span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">adopted</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span>
-    <span class="k">let</span> <span class="nv">siblings</span> <span class="o">=</span> <span class="kt">List</span><span class="o">&lt;</span><span class="kt">Dog</span><span class="o">&gt;</span>
+    <span class="k">let</span> <span class="nv">siblings</span> <span class="o">=</span> <span class="kt"><a href="Classes/List.html">List</a></span><span class="o">&lt;</span><span class="kt">Dog</span><span class="o">&gt;</span>
 <span class="p">}</span>
 </code></pre>
 
@@ -379,13 +379,13 @@ You then instantiate and use your custom subclasses instead of using the Object 
 <li><code>NSDate</code></li>
 <li><code>NSData</code></li>
 <li><code>Object</code> subclasses for to-one relationships</li>
-<li><code>List&lt;T: Object&gt;</code> for to-many relationships</li>
+<li><code><a href="Classes/List.html">List</a>&lt;T: Object&gt;</code> for to-many relationships</li>
 </ul>
 
 <p><a href='#querying' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='querying'>Querying</h3></p>
 
-<p>You can gets <code>Results</code> of an Object subclass via tha <code>objects(_:)</code> free function or
-the <code>objects(_:)</code> instance method on <code>Realm</code>.</p>
+<p>You can gets <code><a href="Classes/Results.html">Results</a></code> of an Object subclass via tha <code>objects(_:)</code> free function or
+the <code>objects(_:)</code> instance method on <code><a href="Classes/Realm.html">Realm</a></code>.</p>
 
 <p><a href='#relationships' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='relationships'>Relationships</h3></p>
 
@@ -424,12 +424,12 @@ the <code>objects(_:)</code> instance method on <code>Realm</code>.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This class represents Realm model object schemas persisted to Realm in a Schema.</p>
+                        <p>This class represents <a href="Classes/Realm.html">Realm</a> model object schemas persisted to <a href="Classes/Realm.html">Realm</a> in a <a href="Classes/Schema.html">Schema</a>.</p>
 
-<p>When using Realm, ObjectSchema objects allow performing migrations and
+<p>When using <a href="Classes/Realm.html">Realm</a>, ObjectSchema objects allow performing migrations and
 introspecting the database&rsquo;s schema.</p>
 
-<p>Object schemas map to tables in the core database.</p>
+<p><a href="Classes/Object.html">Object</a> schemas map to tables in the core database.</p>
 
                         <a href="Classes/ObjectSchema.html" class="slightly-smaller">See more</a>
                       </div>
@@ -464,9 +464,9 @@ introspecting the database&rsquo;s schema.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This class represents properties persisted to Realm in an ObjectSchema.</p>
+                        <p>This class represents properties persisted to <a href="Classes/Realm.html">Realm</a> in an <a href="Classes/ObjectSchema.html">ObjectSchema</a>.</p>
 
-<p>When using Realm, Property objects allow performing migrations and
+<p>When using <a href="Classes/Realm.html">Realm</a>, Property objects allow performing migrations and
 introspecting the database&rsquo;s schema.</p>
 
 <p>These properties map to columns in the core database.</p>
@@ -569,10 +569,10 @@ strong references to it.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p><code>Results</code> is an auto-updating container type in Realm returned from object
+                        <p><code>Results</code> is an auto-updating container type in <a href="Classes/Realm.html">Realm</a> returned from object
 queries.</p>
 
-<p>Results can be queried with the same predicates as <code>List&lt;T&gt;</code> and you can chain queries to further
+<p>Results can be queried with the same predicates as <code><a href="Classes/List.html">List</a>&lt;T&gt;</code> and you can chain queries to further
 filter query results.</p>
 
 <p>Results cannot be created directly.</p>
@@ -610,9 +610,9 @@ filter query results.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This class represents the collection of model object schemas persisted to Realm.</p>
+                        <p>This class represents the collection of model object schemas persisted to <a href="Classes/Realm.html">Realm</a>.</p>
 
-<p>When using Realm, <code>Schema</code> objects allow performing migrations and
+<p>When using <a href="Classes/Realm.html">Realm</a>, <code>Schema</code> objects allow performing migrations and
 introspecting the database&rsquo;s schema.</p>
 
 <p>Schemas map to collections of tables in the core database.</p>

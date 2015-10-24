@@ -249,13 +249,13 @@ an autorefresh occurs, <code>refresh()</code> is called, after an implicit refre
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Posted when a write transaction has been committed to a realm on a different thread for the same
-file. This is not posted if <code>autorefresh</code> is enabled or if the Realm is refreshed before the
+file. This is not posted if <code>autorefresh</code> is enabled or if the <a href="../Classes/Realm.html">Realm</a> is refreshed before the
 notifcation has a chance to run.</p>
 
 <p>Realms with autorefresh disabled should normally have a handler for this notification which
 calls <code>refresh()</code> after doing some work.
-While not refreshing is allowed, it may lead to large Realm files as Realm has to keep an extra
-copy of the data for the un-refreshed Realm.</p>
+While not refreshing is allowed, it may lead to large <a href="../Classes/Realm.html">Realm</a> files as <a href="../Classes/Realm.html">Realm</a> has to keep an extra
+copy of the data for the un-refreshed <a href="../Classes/Realm.html">Realm</a>.</p>
 
                       </div>
                       <div class="declaration">

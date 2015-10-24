@@ -355,7 +355,7 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns whether both objects are equal.
-Objects are considered equal when they are both from the same Realm
+Objects are considered equal when they are both from the same <a href="Classes/Realm.html">Realm</a>
 and point to the same underlying object in the database.</p>
 
                       </div>
@@ -432,17 +432,17 @@ and point to the same underlying object in the database.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Specify a schema version and an associated migration block which is applied when
-opening the default Realm with an old schema version.</p>
+opening the default <a href="Classes/Realm.html">Realm</a> with an old schema version.</p>
 
-<p>Before you can open an existing <code>Realm</code> which has a different on-disk schema
+<p>Before you can open an existing <code><a href="Classes/Realm.html">Realm</a></code> which has a different on-disk schema
 from the schema defined in your object interfaces, you must provide a migration
 block which converts from the disk schema to your current object schema. At the
 minimum your migration block must initialize any properties which were added to
 existing objects without defaults and ensure uniqueness if a primary key
 property is added to an existing object.</p>
 
-<p>You should call this method before accessing any <code>Realm</code> instances which
-require migration. After registering your migration block, Realm will call your
+<p>You should call this method before accessing any <code><a href="Classes/Realm.html">Realm</a></code> instances which
+require migration. After registering your migration block, <a href="Classes/Realm.html">Realm</a> will call your
 block automatically as needed.</p>
 
                       </div>
@@ -507,17 +507,17 @@ block automatically as needed.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Specify a schema version and an associated migration block which is applied when
-opening a Realm at the specified path with an old schema version.</p>
+opening a <a href="Classes/Realm.html">Realm</a> at the specified path with an old schema version.</p>
 
-<p>Before you can open an existing <code>Realm</code> which has a different on-disk schema
+<p>Before you can open an existing <code><a href="Classes/Realm.html">Realm</a></code> which has a different on-disk schema
 from the schema defined in your object interfaces, you must provide a migration
 block which converts from the disk schema to your current object schema. At the
 minimum your migration block must initialize any properties which were added to
 existing objects without defaults and ensure uniqueness if a primary key
 property is added to an existing object.</p>
 
-<p>You should call this method before accessing any <code>Realm</code> instances which
-require migration. After registering your migration block, Realm will call your
+<p>You should call this method before accessing any <code><a href="Classes/Realm.html">Realm</a></code> instances which
+require migration. After registering your migration block, <a href="Classes/Realm.html">Realm</a> will call your
 block automatically as needed.</p>
 
                       </div>
@@ -594,7 +594,7 @@ block automatically as needed.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Get the schema version for a Realm at a given path.</p>
+                        <p>Get the schema version for a <a href="Classes/Realm.html">Realm</a> at a given path.</p>
 
                       </div>
                       <div class="declaration">
@@ -607,7 +607,7 @@ block automatically as needed.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The version of the Realm at <code>realmPath</code> or <code>nil</code> if the version cannot be read.</p>
+                        <p>The version of the <a href="Classes/Realm.html">Realm</a> at <code>realmPath</code> or <code>nil</code> if the version cannot be read.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -629,9 +629,9 @@ block automatically as needed.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Performs the registered migration block on a Realm at the given path.</p>
+                        <p>Performs the registered migration block on a <a href="Classes/Realm.html">Realm</a> at the given path.</p>
 
-<p>This method is called automatically when opening a Realm for the first time and does
+<p>This method is called automatically when opening a <a href="Classes/Realm.html">Realm</a> for the first time and does
 not need to be called explicitly. You can choose to call this method to control
 exactly when and how migrations are performed.</p>
 

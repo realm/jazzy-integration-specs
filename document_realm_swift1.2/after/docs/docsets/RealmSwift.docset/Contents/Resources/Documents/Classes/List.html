@@ -171,13 +171,13 @@
 
                 </div>
               </div>
-            <p><code>List&lt;T&gt;</code> is the container type in Realm used to define to-many relationships.</p>
+            <p><code>List&lt;T&gt;</code> is the container type in <a href="../Classes/Realm.html">Realm</a> used to define to-many relationships.</p>
 
-<p>Lists hold a single <code>Object</code> subclass (<code>T</code>) which defines the <q>type</q> of the list.</p>
+<p>Lists hold a single <code><a href="../Classes/Object.html">Object</a></code> subclass (<code>T</code>) which defines the <q>type</q> of the list.</p>
 
-<p>Lists can be filtered and sorted with the same predicates as <code>Results&lt;T&gt;</code>.</p>
+<p>Lists can be filtered and sorted with the same predicates as <code><a href="../Classes/Results.html">Results</a>&lt;T&gt;</code>.</p>
 
-<p>When added as a property on <code>Object</code> models, the property must be declared as <code>let</code> and cannot be <code>dynamic</code>.</p>
+<p>When added as a property on <code><a href="../Classes/Object.html">Object</a></code> models, the property must be declared as <code>let</code> and cannot be <code>dynamic</code>.</p>
 
           </section>
           <section class="section task-group-section">
@@ -259,7 +259,7 @@ Replaces the object at the given <code>index</code> on set.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The Realm the objects in this list belong to, or <code>nil</code> if the list&rsquo;s owning
+                        <p>The <a href="../Classes/Realm.html">Realm</a> the objects in this list belong to, or <code>nil</code> if the list&rsquo;s owning
 object does not belong to a realm (the list is standalone).</p>
 
                       </div>
@@ -331,7 +331,7 @@ object does not belong to a realm (the list is standalone).</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Creates a <code>List</code> that holds objects of type <code>T</code>.</p>
+                        <p>Creates a <code><a href="../Classes/List.html">List</a></code> that holds objects of type <code>T</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -751,7 +751,7 @@ of arguments.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns <code>Results</code> containing list elements that match the given predicate.</p>
+                        <p>Returns <code><a href="../Classes/Results.html">Results</a></code> containing list elements that match the given predicate.</p>
 
                       </div>
                       <div class="declaration">
@@ -784,7 +784,7 @@ of arguments.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p><code>Results</code> containing list elements that match the given predicate.</p>
+                        <p><code><a href="../Classes/Results.html">Results</a></code> containing list elements that match the given predicate.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -806,7 +806,7 @@ of arguments.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns <code>Results</code> containing list elements that match the given predicate.</p>
+                        <p>Returns <code><a href="../Classes/Results.html">Results</a></code> containing list elements that match the given predicate.</p>
 
                       </div>
                       <div class="declaration">
@@ -839,7 +839,7 @@ of arguments.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p><code>Results</code> containing list elements that match the given predicate.</p>
+                        <p><code><a href="../Classes/Results.html">Results</a></code> containing list elements that match the given predicate.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -872,7 +872,7 @@ of arguments.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns <code>Results</code> containing list elements sorted by the given property.</p>
+                        <p>Returns <code><a href="../Classes/Results.html">Results</a></code> containing list elements sorted by the given property.</p>
 
                       </div>
                       <div class="declaration">
@@ -918,7 +918,7 @@ of arguments.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p><code>Results</code> containing list elements sorted by the given property.</p>
+                        <p><code><a href="../Classes/Results.html">Results</a></code> containing list elements sorted by the given property.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -940,7 +940,7 @@ of arguments.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns <code>Results</code> with elements sorted by the given sort descriptors.</p>
+                        <p>Returns <code><a href="../Classes/Results.html">Results</a></code> with elements sorted by the given sort descriptors.</p>
 
                       </div>
                       <div class="declaration">
@@ -973,7 +973,7 @@ of arguments.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p><code>Results</code> with elements sorted by the given sort descriptors.</p>
+                        <p><code><a href="../Classes/Results.html">Results</a></code> with elements sorted by the given sort descriptors.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -1007,7 +1007,7 @@ of arguments.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Appends the given object to the end of the list. If the object is from a
-different Realm it is copied to the List&rsquo;s Realm.</p>
+different <a href="../Classes/Realm.html">Realm</a> it is copied to the <a href="../Classes/List.html">List</a>&rsquo;s <a href="../Classes/Realm.html">Realm</a>.</p>
 
                       </div>
                       <div class="declaration">
@@ -1170,7 +1170,7 @@ different Realm it is copied to the List&rsquo;s Realm.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Removes the object at the given index from the list. Does not remove the object from the Realm.</p>
+                        <p>Removes the object at the given index from the list. Does not remove the object from the <a href="../Classes/Realm.html">Realm</a>.</p>
 
                       </div>
                       <div class="declaration">
@@ -1220,7 +1220,7 @@ different Realm it is copied to the List&rsquo;s Realm.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Removes the last object in the list. Does not remove the object from the Realm.</p>
+                        <p>Removes the last object in the list. Does not remove the object from the <a href="../Classes/Realm.html">Realm</a>.</p>
 
                       </div>
                       <div class="declaration">
@@ -1250,7 +1250,7 @@ different Realm it is copied to the List&rsquo;s Realm.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Removes all objects from the List. Does not remove the objects from the Realm.</p>
+                        <p>Removes all objects from the <a href="../Classes/List.html">List</a>. Does not remove the objects from the <a href="../Classes/Realm.html">Realm</a>.</p>
 
                       </div>
                       <div class="declaration">

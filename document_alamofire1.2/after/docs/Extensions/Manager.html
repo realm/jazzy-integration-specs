@@ -729,7 +729,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Default memory threshold used when encoding <code>MultipartFormData</code>.</p>
+                        <p>Default memory threshold used when encoding <code><a href="../Classes/MultipartFormData.html">MultipartFormData</a></code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -759,13 +759,13 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Defines whether the <code>MultipartFormData</code> encoding was successful and contains result of the encoding as 
+                        <p>Defines whether the <code><a href="../Classes/MultipartFormData.html">MultipartFormData</a></code> encoding was successful and contains result of the encoding as 
 associated values.</p>
 
 <ul>
-<li>Success: Represents a successful <code>MultipartFormData</code> encoding and contains the new <code>Request</code> along with 
+<li>Success: Represents a successful <code><a href="../Classes/MultipartFormData.html">MultipartFormData</a></code> encoding and contains the new <code><a href="../Classes/Request.html">Request</a></code> along with 
        streaming information.</li>
-<li>Failure: Used to represent a failure in the <code>MultipartFormData</code> encoding and also contains the encoding 
+<li>Failure: Used to represent a failure in the <code><a href="../Classes/MultipartFormData.html">MultipartFormData</a></code> encoding and also contains the encoding 
        error.</li>
 </ul>
 
@@ -797,9 +797,9 @@ associated values.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Encodes the <code>MultipartFormData</code> and creates a request to upload the result to the specified URL request.</p>
+                        <p>Encodes the <code><a href="../Classes/MultipartFormData.html">MultipartFormData</a></code> and creates a request to upload the result to the specified URL request.</p>
 
-<p>It is important to understand the memory implications of uploading <code>MultipartFormData</code>. If the cummulative 
+<p>It is important to understand the memory implications of uploading <code><a href="../Classes/MultipartFormData.html">MultipartFormData</a></code>. If the cummulative 
 payload is small, encoding the data in-memory and directly uploading to a server is the by far the most 
 efficient approach. However, if the payload is too large, encoding the data in-memory could cause your app to 
 be terminated. Larger payloads must first be written to disk using input and output streams to keep the memory 
@@ -807,7 +807,7 @@ footprint low, then the data can be uploaded as a stream from the resulting file
 used for larger payloads such as video content.</p>
 
 <p>The <code>encodingMemoryThreshold</code> parameter allows Alamofire to automatically determine whether to encode in-memory 
-or stream from disk. If the content length of the <code>MultipartFormData</code> is below the <code>encodingMemoryThreshold</code>,
+or stream from disk. If the content length of the <code><a href="../Classes/MultipartFormData.html">MultipartFormData</a></code> is below the <code>encodingMemoryThreshold</code>,
 encoding takes place in-memory. If the content length exceeds the threshold, the data is streamed to disk 
 during the encoding process. Then the result is uploaded as data or as a stream depending on which encoding 
 technique was used.</p>
@@ -934,9 +934,9 @@ by default.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Encodes the <code>MultipartFormData</code> and creates a request to upload the result to the specified URL request.</p>
+                        <p>Encodes the <code><a href="../Classes/MultipartFormData.html">MultipartFormData</a></code> and creates a request to upload the result to the specified URL request.</p>
 
-<p>It is important to understand the memory implications of uploading <code>MultipartFormData</code>. If the cummulative
+<p>It is important to understand the memory implications of uploading <code><a href="../Classes/MultipartFormData.html">MultipartFormData</a></code>. If the cummulative
 payload is small, encoding the data in-memory and directly uploading to a server is the by far the most
 efficient approach. However, if the payload is too large, encoding the data in-memory could cause your app to
 be terminated. Larger payloads must first be written to disk using input and output streams to keep the memory
@@ -944,7 +944,7 @@ footprint low, then the data can be uploaded as a stream from the resulting file
 used for larger payloads such as video content.</p>
 
 <p>The <code>encodingMemoryThreshold</code> parameter allows Alamofire to automatically determine whether to encode in-memory
-or stream from disk. If the content length of the <code>MultipartFormData</code> is below the <code>encodingMemoryThreshold</code>,
+or stream from disk. If the content length of the <code><a href="../Classes/MultipartFormData.html">MultipartFormData</a></code> is below the <code>encodingMemoryThreshold</code>,
 encoding takes place in-memory. If the content length exceeds the threshold, the data is streamed to disk
 during the encoding process. Then the result is uploaded as data or as a stream depending on which encoding
 technique was used.</p>

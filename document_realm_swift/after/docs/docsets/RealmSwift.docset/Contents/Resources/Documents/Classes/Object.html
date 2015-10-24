@@ -191,13 +191,13 @@
         <section>
           <section class="section">
             <h1>Object</h1>
-            <p>In Realm you define your model classes by subclassing <code>Object</code> and adding properties to be persisted.
+            <p>In <a href="../Classes/Realm.html">Realm</a> you define your model classes by subclassing <code>Object</code> and adding properties to be persisted.
 You then instantiate and use your custom subclasses instead of using the Object class directly.</p>
 
 <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">Dog</span><span class="p">:</span> <span class="kt">Object</span> <span class="p">{</span>
     <span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span>
     <span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">adopted</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span>
-    <span class="k">let</span> <span class="nv">siblings</span> <span class="o">=</span> <span class="kt">List</span><span class="o">&lt;</span><span class="kt">Dog</span><span class="o">&gt;</span>
+    <span class="k">let</span> <span class="nv">siblings</span> <span class="o">=</span> <span class="kt"><a href="../Classes/List.html">List</a></span><span class="o">&lt;</span><span class="kt">Dog</span><span class="o">&gt;</span>
 <span class="p">}</span>
 </code></pre>
 
@@ -212,13 +212,13 @@ You then instantiate and use your custom subclasses instead of using the Object 
 <li><code>NSDate</code></li>
 <li><code>NSData</code></li>
 <li><code>Object</code> subclasses for to-one relationships</li>
-<li><code>List&lt;T: Object&gt;</code> for to-many relationships</li>
+<li><code><a href="../Classes/List.html">List</a>&lt;T: Object&gt;</code> for to-many relationships</li>
 </ul>
 
 <p><a href='#querying' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='querying'>Querying</h3></p>
 
-<p>You can gets <code>Results</code> of an Object subclass via tha <code>objects(_:)</code> free function or
-the <code>objects(_:)</code> instance method on <code>Realm</code>.</p>
+<p>You can gets <code><a href="../Classes/Results.html">Results</a></code> of an Object subclass via tha <code>objects(_:)</code> free function or
+the <code>objects(_:)</code> instance method on <code><a href="../Classes/Realm.html">Realm</a></code>.</p>
 
 <p><a href='#relationships' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='relationships'>Relationships</h3></p>
 
@@ -278,12 +278,12 @@ the <code>objects(_:)</code> instance method on <code>Realm</code>.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Initialize a standalone (unpersisted) Object.
-Call <code>add(_:)</code> on a <code>Realm</code> to add standalone objects to a realm.</p>
+                        <p>Initialize a standalone (unpersisted) <a href="../Classes/Object.html">Object</a>.
+Call <code>add(_:)</code> on a <code><a href="../Classes/Realm.html">Realm</a></code> to add standalone objects to a realm.</p>
 
 <div class="see">
           <p class="aside-title">see</p>
-          Realm().add(_:)
+          <a href="../Classes/Realm.html">Realm</a>().add(_:)
 
         </div>
 
@@ -315,8 +315,8 @@ Call <code>add(_:)</code> on a <code>Realm</code> to add standalone objects to a
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Initialize a standalone (unpersisted) <code>Object</code> with values from an <code>Array&lt;AnyObject&gt;</code> or <code>Dictionary&lt;String, AnyObject&gt;</code>.
-Call <code>add(_:)</code> on a <code>Realm</code> to add standalone objects to a realm.</p>
+                        <p>Initialize a standalone (unpersisted) <code><a href="../Classes/Object.html">Object</a></code> with values from an <code>Array&lt;AnyObject&gt;</code> or <code>Dictionary&lt;String, AnyObject&gt;</code>.
+Call <code>add(_:)</code> on a <code><a href="../Classes/Realm.html">Realm</a></code> to add standalone objects to a realm.</p>
 
                       </div>
                       <div class="declaration">
@@ -377,7 +377,7 @@ Call <code>add(_:)</code> on a <code>Realm</code> to add standalone objects to a
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The <code>Realm</code> this object belongs to, or <code>nil</code> if the object
+                        <p>The <code><a href="../Classes/Realm.html">Realm</a></code> this object belongs to, or <code>nil</code> if the object
 does not belong to a realm (the object is standalone).</p>
 
                       </div>
@@ -408,7 +408,7 @@ does not belong to a realm (the object is standalone).</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The <code>ObjectSchema</code> which lists the persisted properties for this object.</p>
+                        <p>The <code><a href="../Classes/ObjectSchema.html">ObjectSchema</a></code> which lists the persisted properties for this object.</p>
 
                       </div>
                       <div class="declaration">
@@ -498,7 +498,7 @@ does not belong to a realm (the object is standalone).</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Helper to return the class name for an Object subclass.</p>
+                        <p>Helper to return the class name for an <a href="../Classes/Object.html">Object</a> subclass.</p>
 
                       </div>
                       <div class="declaration">
@@ -566,7 +566,7 @@ does not belong to a realm (the object is standalone).</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Override to designate a property as the primary key for an <code>Object</code> subclass. Only properties of
+                        <p>Override to designate a property as the primary key for an <code><a href="../Classes/Object.html">Object</a></code> subclass. Only properties of
 type String and Int can be designated as the primary key. Primary key
 properties enforce uniqueness for each value whenever the property is set which incurs some overhead.
 Indexes are created automatically for primary key properties.</p>
@@ -688,7 +688,7 @@ for string and int properties.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Get an <code>Array</code> of objects of type <code>className</code> which have this object as the given property value. This can
-be used to get the inverse relationship value for <code>Object</code> and <code>List</code> properties.</p>
+be used to get the inverse relationship value for <code><a href="../Classes/Object.html">Object</a></code> and <code><a href="../Classes/List.html">List</a></code> properties.</p>
 
                       </div>
                       <div class="declaration">
@@ -768,7 +768,7 @@ be used to get the inverse relationship value for <code>Object</code> and <code>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns whether both objects are equal.
-Objects are considered equal when they are both from the same Realm
+Objects are considered equal when they are both from the same <a href="../Classes/Realm.html">Realm</a>
 and point to the same underlying object in the database.</p>
 
                       </div>
