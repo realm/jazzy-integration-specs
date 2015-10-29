@@ -206,8 +206,8 @@ then possibly delete the realm file and re-open it), place the code which uses
 the realm within an <code>autoreleasepool {}</code> and ensure you have no other
 strong references to it.</p>
 
-<div class="warning">
-          <p class="aside-title">warning</p>
+<div class="aside aside-warning">
+          <p class="aside-title">Warning</p>
           Realm instances are not thread safe and can not be shared across
        threads or dispatch queues. You must construct a new instance on each thread you want
        to interact with the realm on. For dispatch queues, this means that you must
@@ -517,8 +517,8 @@ options.</p>
 <p>Like <code>init(path:)</code>, but with the ability to open read-only realms and
 encrypted realms.</p>
 
-<div class="warning">
-          <p class="aside-title">warning</p>
+<div class="aside aside-warning">
+          <p class="aside-title">Warning</p>
           <p>Read-only Realms do not support changes made to the file while the
        <code><a href="../Classes/Realm.html">Realm</a></code> exists. This means that you cannot open a <a href="../Classes/Realm.html">Realm</a> as both read-only
        and read-write at the same time. Read-only Realms should normally only be used
@@ -857,8 +857,8 @@ the valid object.</p>
                       <div class="abstract">
                         <p>Indicates if this <a href="../Classes/Realm.html">Realm</a> is currently in a write transaction.</p>
 
-<div class="warning">
-          <p class="aside-title">warning</p>
+<div class="aside aside-warning">
+          <p class="aside-title">Warning</p>
           Wrapping mutating operations in a write transaction if this property returns <code>false</code>
        may cause a large number of write transactions to be created, which could negatively
        impact <a href="../Classes/Realm.html">Realm</a>&rsquo;s performance. Always prefer performing multiple mutations in a single
@@ -983,8 +983,8 @@ from a <a href="../Classes/Realm.html">Realm</a> (i.e. <code>invalidated</code> 
                       <div class="abstract">
                         <p>Adds or updates objects in the given sequence to be persisted it in this <a href="../Classes/Realm.html">Realm</a>.</p>
 
-<div class="see">
-          <p class="aside-title">see</p>
+<div class="aside aside-see">
+          <p class="aside-title">See</p>
           <p>add(object:update:)</p>
 
         </div>
@@ -1351,8 +1351,8 @@ the existing object is updated with any changed values.</p>
 
 <p>This method requires that <code>primaryKey()</code> be overridden on the given subclass.</p>
 
-<div class="see">
-          <p class="aside-title">see</p>
+<div class="aside aside-see">
+          <p class="aside-title">See</p>
           <p><a href="../Classes/Object.html">Object</a>.primaryKey()</p>
 
         </div>

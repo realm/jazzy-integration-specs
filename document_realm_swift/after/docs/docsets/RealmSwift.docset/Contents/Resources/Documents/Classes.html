@@ -519,8 +519,8 @@ then possibly delete the realm file and re-open it), place the code which uses
 the realm within an <code>autoreleasepool {}</code> and ensure you have no other
 strong references to it.</p>
 
-<div class="warning">
-          <p class="aside-title">warning</p>
+<div class="aside aside-warning">
+          <p class="aside-title">Warning</p>
           Realm instances are not thread safe and can not be shared across
        threads or dispatch queues. You must construct a new instance on each thread you want
        to interact with the realm on. For dispatch queues, this means that you must
