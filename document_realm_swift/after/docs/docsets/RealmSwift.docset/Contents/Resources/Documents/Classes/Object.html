@@ -32,7 +32,7 @@
       <div class="content-wrapper">
         <p><a href="../index.html">RealmSwift Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F0%2E95%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F0%2E96%2E2%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -71,6 +71,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/Realm.html">Realm</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RealmOptional.html">RealmOptional</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/Results.html">Results</a>
@@ -152,6 +155,9 @@
               <li class="nav-group-task">
                 <a href="../Protocols/RealmCollectionType.html">RealmCollectionType</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:P10RealmSwift17RealmOptionalType">RealmOptionalType</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -197,23 +203,34 @@ You then instantiate and use your custom subclasses instead of using the Object 
 <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">Dog</span><span class="p">:</span> <span class="kt">Object</span> <span class="p">{</span>
     <span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span>
     <span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">adopted</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span>
-    <span class="k">let</span> <span class="nv">siblings</span> <span class="o">=</span> <span class="kt"><a href="../Classes/List.html">List</a></span><span class="o">&lt;</span><span class="kt">Dog</span><span class="o">&gt;</span>
+    <span class="k">let</span> <span class="nv">siblings</span> <span class="o">=</span> <span class="kt"><a href="../Classes/List.html">List</a></span><span class="o">&lt;</span><span class="kt">Dog</span><span class="o">&gt;</span><span class="p">()</span>
 <span class="p">}</span>
 </code></pre>
 
 <p><a href='#supported_property_types' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='supported_property_types'>Supported property types</h3></p>
 
 <ul>
-<li><code>String</code></li>
+<li><code>String</code>, <code>NSString</code></li>
 <li><code>Int</code></li>
 <li><code>Float</code></li>
 <li><code>Double</code></li>
 <li><code>Bool</code></li>
 <li><code>NSDate</code></li>
 <li><code>NSData</code></li>
+<li><code><a href="../Classes/RealmOptional.html">RealmOptional</a>&lt;T&gt;</code> for optional numeric properties</li>
 <li><code>Object</code> subclasses for to-one relationships</li>
 <li><code><a href="../Classes/List.html">List</a>&lt;T: Object&gt;</code> for to-many relationships</li>
 </ul>
+
+<p><code>String</code>, <code>NSString</code>, <code>NSDate</code>, <code>NSData</code> and <code>Object</code> subclass properties can be
+optional. <code>Int</code>, <code>Float</code>, <code>Double</code>, <code>Bool</code> and <code><a href="../Classes/List.html">List</a></code> properties cannot. To store
+an optional number, instead use <code><a href="../Classes/RealmOptional.html">RealmOptional</a>&lt;Int&gt;</code>, <code><a href="../Classes/RealmOptional.html">RealmOptional</a>&lt;Float&gt;</code>,
+<code><a href="../Classes/RealmOptional.html">RealmOptional</a>&lt;Double&gt;</code>, or <code><a href="../Classes/RealmOptional.html">RealmOptional</a>&lt;Bool&gt;</code> instead, which wraps an optional
+value of the generic type.</p>
+
+<p>All property types except for <code><a href="../Classes/List.html">List</a></code> and <code><a href="../Classes/RealmOptional.html">RealmOptional</a></code> <em>must</em> be declared as
+<code>dynamic var</code>. <code><a href="../Classes/List.html">List</a></code> and <code><a href="../Classes/RealmOptional.html">RealmOptional</a></code> properties must be declared as
+non-dynamic <code>let</code> properties.</p>
 
 <p><a href='#querying' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='querying'>Querying</h3></p>
 
@@ -260,7 +277,7 @@ the <code>objects(_:)</code> instance method on <code><a href="../Classes/Realm.
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.95.0/RealmSwift-swift2.0/Object.swift#L163">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/Object.swift#L177">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -297,7 +314,7 @@ Call <code>add(_:)</code> on a <code><a href="../Classes/Realm.html">Realm</a></
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.95.0/RealmSwift-swift2.0/Object.swift#L66-L68">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/Object.swift#L77-L79">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -348,7 +365,7 @@ Call <code>add(_:)</code> on a <code><a href="../Classes/Realm.html">Realm</a></
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.95.0/RealmSwift-swift2.0/Object.swift#L79-L82">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/Object.swift#L90-L93">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -390,7 +407,7 @@ does not belong to a realm (the object is standalone).</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.95.0/RealmSwift-swift2.0/Object.swift#L89-L94">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/Object.swift#L100-L105">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -420,7 +437,7 @@ does not belong to a realm (the object is standalone).</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.95.0/RealmSwift-swift2.0/Object.swift#L97-L99">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/Object.swift#L108-L110">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -440,6 +457,9 @@ does not belong to a realm (the object is standalone).</p>
                       <div class="abstract">
                         <p>Indicates if an object can no longer be accessed.</p>
 
+<p>An object can no longer be accessed if the object has been deleted from the containing
+<code>realm</code> or if <code>invalidate</code> is called on the containing <code>realm</code>.</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -450,7 +470,7 @@ does not belong to a realm (the object is standalone).</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.95.0/RealmSwift-swift2.0/Object.swift#L102">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/Object.swift#L116">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -480,7 +500,7 @@ does not belong to a realm (the object is standalone).</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.95.0/RealmSwift-swift2.0/Object.swift#L105">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/Object.swift#L119">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -510,7 +530,7 @@ does not belong to a realm (the object is standalone).</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.95.0/RealmSwift-swift2.0/Object.swift#L109">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/Object.swift#L123">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -586,7 +606,7 @@ Indexes are created automatically for primary key properties.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.95.0/RealmSwift-swift2.0/Object.swift#L125">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/Object.swift#L139">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -622,7 +642,7 @@ and are treated as transient.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.95.0/RealmSwift-swift2.0/Object.swift#L133">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/Object.swift#L147">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -658,7 +678,7 @@ for string and int properties.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.95.0/RealmSwift-swift2.0/Object.swift#L141">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/Object.swift#L155">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -738,7 +758,7 @@ be used to get the inverse relationship value for <code><a href="../Classes/Obje
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.95.0/RealmSwift-swift2.0/Object.swift#L155-L158">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/Object.swift#L169-L172">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -781,7 +801,7 @@ and point to the same underlying object in the database.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.95.0/RealmSwift-swift2.0/Object.swift#L189-L191">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/Object.swift#L224-L226">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
