@@ -92,23 +92,6 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Extensions.html">Extensions</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Extensions/List.html">List</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/Realm.html">Realm</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/Results.html">Results</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/SortDescriptor.html">SortDescriptor</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
             <a href="../Functions.html">Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
@@ -194,7 +177,7 @@
 
                 </div>
               </div>
-            <p>A <code><a href="../Extensions/SortDescriptor.html">SortDescriptor</a></code> stores a property name and a sort order for use with
+            <p>A <code>SortDescriptor</code> stores a property name and a sort order for use with
 <code>sorted(sortDescriptors:)</code>. It is similar to <code>NSSortDescriptor</code>, but supports
 only the subset of functionality which can be efficiently run by <a href="../Classes/Realm.html">Realm</a>&rsquo;s query
 engine.</p>
@@ -294,7 +277,7 @@ engine.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Creates a <code><a href="../Extensions/SortDescriptor.html">SortDescriptor</a></code> with the given property and ascending values.</p>
+                        <p>Creates a <code><a href="../Structs/SortDescriptor.html">SortDescriptor</a></code> with the given property and ascending values.</p>
 
                       </div>
                       <div class="declaration">
@@ -381,6 +364,194 @@ engine.</p>
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/SortDescriptor.swift#L59-L61">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vV10RealmSwift14SortDescriptor11descriptionSS"></a>
+                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vV10RealmSwift14SortDescriptor11descriptionSS">description</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a human-readable description of the sort descriptor.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/SortDescriptor.swift#L68-L71">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FV10RealmSwift14SortDescriptorcFMS0_FT20unicodeScalarLiteralSS_S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(unicodeScalarLiteral:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FV10RealmSwift14SortDescriptorcFMS0_FT20unicodeScalarLiteralSS_S0_">init(unicodeScalarLiteral:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a <code><a href="../Structs/SortDescriptor.html">SortDescriptor</a></code> from a <code>UnicodeScalarLiteralType</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">unicodeScalarLiteral</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">UnicodeScalarLiteralType</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>unicodeScalarLiteral</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Property name literal.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/SortDescriptor.swift#L99-L101">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FV10RealmSwift14SortDescriptorcFMS0_FT30extendedGraphemeClusterLiteralSS_S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(extendedGraphemeClusterLiteral:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FV10RealmSwift14SortDescriptorcFMS0_FT30extendedGraphemeClusterLiteralSS_S0_">init(extendedGraphemeClusterLiteral:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a <code><a href="../Structs/SortDescriptor.html">SortDescriptor</a></code> from an <code>ExtendedGraphemeClusterLiteralType</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">extendedGraphemeClusterLiteral</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">ExtendedGraphemeClusterLiteralType</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>extendedGraphemeClusterLiteral</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Property name literal.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/SortDescriptor.swift#L108-L110">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FV10RealmSwift14SortDescriptorcFMS0_FT13stringLiteralSS_S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(stringLiteral:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FV10RealmSwift14SortDescriptorcFMS0_FT13stringLiteralSS_S0_">init(stringLiteral:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a <code><a href="../Structs/SortDescriptor.html">SortDescriptor</a></code> from a <code>StringLiteralType</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">stringLiteral</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">StringLiteralType</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>stringLiteral</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Property name literal.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/SortDescriptor.swift#L117-L119">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

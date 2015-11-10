@@ -65,16 +65,7 @@
             <a href="Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Extensions/Manager.html">Manager</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Extensions.html#/c:objc(cs)NSURLRequest">NSURLRequest</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/Request.html">Request</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions.html#/s:O9Alamofire6Result">Result</a>
               </li>
               <li class="nav-group-task">
                 <a href="Extensions.html#/s:SS">String</a>
@@ -172,74 +163,6 @@
           </section>
           <section class="section task-group-section">
             <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:C9Alamofire7Manager"></a>
-                    <a name="//apple_ref/swift/Extension/Manager" class="dashAnchor"></a>
-                    <a class="token" href="#/s:C9Alamofire7Manager">Manager</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                        <a href="Extensions/Manager.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Manager</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/3.1.1/Source/Manager.swift#L28">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:C9Alamofire7Request"></a>
-                    <a name="//apple_ref/swift/Extension/Request" class="dashAnchor"></a>
-                    <a class="token" href="#/s:C9Alamofire7Request">Request</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                        <a href="Extensions/Request.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Request</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/3.1.1/Source/Request.swift#L29">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
               <div class="task-name-container">
                 <a name="/URLStringConvertible"></a>
                 <a name="//apple_ref/swift/Section/URLStringConvertible" class="dashAnchor"></a>
@@ -303,54 +226,6 @@ See <a href="https://tools.ietf.org/html/rfc1808">https://tools.ietf.org/html/rf
                           <pre class="highlight"><code><span class="kd">class</span> <span class="kt">NSURLRequest</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt">NSSecureCoding</span><span class="p">,</span> <span class="kt">NSCopying</span><span class="p">,</span> <span class="kt">NSMutableCopying</span></code></pre>
 
                         </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/CustomStringConvertible"></a>
-                <a name="//apple_ref/swift/Section/CustomStringConvertible" class="dashAnchor"></a>
-                <a href="#/CustomStringConvertible">
-                  <h3 class="section-name">CustomStringConvertible</h3>
-                </a>
-              </div>
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:O9Alamofire6Result"></a>
-                    <a name="//apple_ref/swift/Extension/Result" class="dashAnchor"></a>
-                    <a class="token" href="#/s:O9Alamofire6Result">Result</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Used to represent whether a request was successful or encountered an error.</p>
-
-<ul>
-<li>Success: The request and all post processing operations were successful resulting in the serialization of the 
-       provided associated value.</li>
-<li>Failure: The request encountered an error resulting in a failure. The associated values are the original data 
-       provided by the server as well as the error that caused the failure.</li>
-</ul>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Result</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/3.1.1/Source/Result.swift#L33">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
