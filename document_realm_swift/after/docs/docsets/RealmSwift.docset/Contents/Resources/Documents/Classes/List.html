@@ -46,7 +46,7 @@
       <nav class="sidebar">
         <ul class="nav-groups">
           <li class="nav-group-name">
-          <a href="../Classes.html">Classes</a>
+            <a href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Classes/AnyRealmCollection.html">AnyRealmCollection</a>
@@ -84,7 +84,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-          <a href="../Enums.html">Enums</a>
+            <a href="../Enums.html">Enums</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Enums/Notification.html">Notification</a>
@@ -92,24 +92,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-          <a href="../Extensions.html">Extensions</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Extensions/List.html">List</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/Realm.html">Realm</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/Results.html">Results</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/SortDescriptor.html">SortDescriptor</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-          <a href="../Functions.html">Functions</a>
+            <a href="../Functions.html">Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Functions.html#/s:ZF10RealmSwiftoi2eeFTVS_14SortDescriptorS0__Sb">==(_:_:)</a>
@@ -118,33 +101,24 @@
                 <a href="../Functions.html#/s:ZF10RealmSwiftoi2eeFTCS_6SchemaS0__Sb">==(_:_:)</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Functions.html#/s:ZF10RealmSwiftoi2eeFTCS_12ObjectSchemaS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Functions.html#/s:ZF10RealmSwiftoi2eeFTCS_5RealmS0__Sb">==(_:_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Functions.html#/s:ZF10RealmSwiftoi2eeFTCS_8PropertyS0__Sb">==(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:ZF10RealmSwiftoi2eeFTCS_12ObjectSchemaS0__Sb">==(_:_:)</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Functions.html#/s:F10RealmSwift12migrateRealmFTVCS_5Realm13Configuration_GSqCSo7NSError_">migrateRealm(_:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Functions.html#/s:F10RealmSwift12migrateRealmFTSS13encryptionKeyGSqCSo6NSData__GSqCSo7NSError_">migrateRealm(_:encryptionKey:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Functions.html#/s:F10RealmSwift19schemaVersionAtPathFTSS13encryptionKeyGSqCSo6NSData_5errorGVSs33AutoreleasingUnsafeMutablePointerGSqCSo7NSError___GSqVSs6UInt64_">schemaVersionAtPath(_:encryptionKey:error:)</a>
               </li>
-              <li class="nav-group-task">
-                <a href="../Functions.html#/s:F10RealmSwift28setDefaultRealmSchemaVersionFTVSs6UInt6414migrationBlockFT9migrationCS_9Migration16oldSchemaVersionS0__T__T_">setDefaultRealmSchemaVersion(_:migrationBlock:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Functions.html#/s:F10RealmSwift16setSchemaVersionFTVSs6UInt649realmPathSS14migrationBlockFT9migrationCS_9Migration16oldSchemaVersionS0__T__T_">setSchemaVersion(_:realmPath:migrationBlock:)</a>
-              </li>
             </ul>
           </li>
           <li class="nav-group-name">
-          <a href="../Protocols.html">Protocols</a>
+            <a href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Protocols.html#/s:P10RealmSwift11AddableType">AddableType</a>
@@ -161,7 +135,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-          <a href="../Structs.html">Structs</a>
+            <a href="../Structs.html">Structs</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Structs/SortDescriptor.html">SortDescriptor</a>
@@ -169,7 +143,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-          <a href="../Typealiases.html">Typealiases</a>
+            <a href="../Typealiases.html">Typealiases</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:10RealmSwift14MigrationBlock">MigrationBlock</a>
@@ -197,9 +171,15 @@
         <section>
           <section class="section">
             <h1>List</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">List</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt">Object</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">ListBase</span></code></pre>
+
+                </div>
+              </div>
             <p><code>List&lt;T&gt;</code> is the container type in <a href="../Classes/Realm.html">Realm</a> used to define to-many relationships.</p>
 
-<p>Lists hold a single <code><a href="../Classes/Object.html">Object</a></code> subclass (<code>T</code>) which defines the <q>type</q> of the list.</p>
+<p>Lists hold a single <code><a href="../Classes/Object.html">Object</a></code> subclass (<code>T</code>) which defines the <q>type</q> of the List.</p>
 
 <p>Lists can be filtered and sorted with the same predicates as <code><a href="../Classes/Results.html">Results</a>&lt;T&gt;</code>.</p>
 
@@ -208,13 +188,13 @@
           </section>
           <section class="section task-group-section">
             <div class="task-group">
-                <div class="task-name-container">
-                  <a name="/Properties"></a>
-                  <a name="//apple_ref/swift/Section/Properties" class="dashAnchor"></a>
-                  <a href="#/Properties">
-                    <h3 class="section-name">Properties</h3>
-                  </a>
-                </div>
+              <div class="task-name-container">
+                <a name="/Properties"></a>
+                <a name="//apple_ref/swift/Section/Properties" class="dashAnchor"></a>
+                <a href="#/Properties">
+                  <h3 class="section-name">Properties</h3>
+                </a>
+              </div>
               <ul>
                 <li class="item">
                   <div>
@@ -241,7 +221,7 @@ Replaces the object at the given <code>index</code> on set.</p>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="nf">subscript</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span></code></pre>
 
@@ -296,7 +276,7 @@ Replaces the object at the given <code>index</code> on set.</p>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Element</span> <span class="o">=</span> <span class="kt">T</span></code></pre>
 
@@ -321,13 +301,13 @@ Replaces the object at the given <code>index</code> on set.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The <a href="../Classes/Realm.html">Realm</a> the objects in this list belong to, or <code>nil</code> if the list&rsquo;s
-owning object does not belong to a realm (the list is standalone).</p>
+                        <p>The <a href="../Classes/Realm.html">Realm</a> the objects in this <a href="../Classes/List.html">List</a> belong to, or <code>nil</code> if the <a href="../Classes/List.html">List</a>&rsquo;s
+owning object does not belong to a <a href="../Classes/Realm.html">Realm</a> (the <a href="../Classes/List.html">List</a> is standalone).</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">realm</span><span class="p">:</span> <span class="kt">Realm</span><span class="p">?</span></code></pre>
 
@@ -352,12 +332,12 @@ owning object does not belong to a realm (the list is standalone).</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Indicates if the list can no longer be accessed.</p>
+                        <p>Indicates if the <a href="../Classes/List.html">List</a> can no longer be accessed.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">invalidated</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">return</span> <span class="n">_rlmArray</span><span class="o">.</span><span class="n">invalidated</span> <span class="p">}</span></code></pre>
 
@@ -372,13 +352,13 @@ owning object does not belong to a realm (the list is standalone).</p>
               </ul>
             </div>
             <div class="task-group">
-                <div class="task-name-container">
-                  <a name="/Initializers"></a>
-                  <a name="//apple_ref/swift/Section/Initializers" class="dashAnchor"></a>
-                  <a href="#/Initializers">
-                    <h3 class="section-name">Initializers</h3>
-                  </a>
-                </div>
+              <div class="task-name-container">
+                <a name="/Initializers"></a>
+                <a name="//apple_ref/swift/Section/Initializers" class="dashAnchor"></a>
+                <a href="#/Initializers">
+                  <h3 class="section-name">Initializers</h3>
+                </a>
+              </div>
               <ul>
                 <li class="item">
                   <div>
@@ -398,7 +378,7 @@ owning object does not belong to a realm (the list is standalone).</p>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="k">override</span> <span class="nf">init</span><span class="p">()</span></code></pre>
 
@@ -413,13 +393,13 @@ owning object does not belong to a realm (the list is standalone).</p>
               </ul>
             </div>
             <div class="task-group">
-                <div class="task-name-container">
-                  <a name="/Index%20Retrieval"></a>
-                  <a name="//apple_ref/swift/Section/Index Retrieval" class="dashAnchor"></a>
-                  <a href="#/Index%20Retrieval">
-                    <h3 class="section-name">Index Retrieval</h3>
-                  </a>
-                </div>
+              <div class="task-name-container">
+                <a name="/Index%20Retrieval"></a>
+                <a name="//apple_ref/swift/Section/Index Retrieval" class="dashAnchor"></a>
+                <a href="#/Index%20Retrieval">
+                  <h3 class="section-name">Index Retrieval</h3>
+                </a>
+              </div>
               <ul>
                 <li class="item">
                   <div>
@@ -434,12 +414,12 @@ owning object does not belong to a realm (the list is standalone).</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the index of the given object, or <code>nil</code> if the object is not in the list.</p>
+                        <p>Returns the index of the given object, or <code>nil</code> if the object is not in the <a href="../Classes/List.html">List</a>.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">indexOf</span><span class="p">(</span><span class="nv">object</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
 
@@ -467,7 +447,7 @@ owning object does not belong to a realm (the list is standalone).</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The index of the given object, or <code>nil</code> if the object is not in the list.</p>
+                        <p>The index of the given object, or <code>nil</code> if the object is not in the <a href="../Classes/List.html">List</a>.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -495,7 +475,7 @@ or <code>nil</code> no objects match.</p>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">indexOf</span><span class="p">(</span><span class="nv">predicate</span><span class="p">:</span> <span class="kt">NSPredicate</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
 
@@ -523,7 +503,7 @@ or <code>nil</code> no objects match.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The index of the given object, or <code>nil</code> if no objects match.</p>
+                        <p>The index of the first matching object, or <code>nil</code> if no objects match.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -551,7 +531,7 @@ or <code>nil</code> if no objects match.</p>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">indexOf</span><span class="p">(</span><span class="nv">predicateFormat</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">args</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="o">...</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Int</span><span class="p">?</span></code></pre>
 
@@ -579,7 +559,7 @@ or <code>nil</code> if no objects match.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The index of the given object, or <code>nil</code> if no objects match.</p>
+                        <p>The index of the first matching object, or <code>nil</code> if no objects match.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -591,13 +571,13 @@ or <code>nil</code> if no objects match.</p>
               </ul>
             </div>
             <div class="task-group">
-                <div class="task-name-container">
-                  <a name="/Object%20Retrieval"></a>
-                  <a name="//apple_ref/swift/Section/Object Retrieval" class="dashAnchor"></a>
-                  <a href="#/Object%20Retrieval">
-                    <h3 class="section-name">Object Retrieval</h3>
-                  </a>
-                </div>
+              <div class="task-name-container">
+                <a name="/Object%20Retrieval"></a>
+                <a name="//apple_ref/swift/Section/Object Retrieval" class="dashAnchor"></a>
+                <a href="#/Object%20Retrieval">
+                  <h3 class="section-name">Object Retrieval</h3>
+                </a>
+              </div>
               <ul>
                 <li class="item">
                   <div>
@@ -612,12 +592,12 @@ or <code>nil</code> if no objects match.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the first object in the list, or <code>nil</code> if empty.</p>
+                        <p>Returns the first object in the <a href="../Classes/List.html">List</a>, or <code>nil</code> if empty.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">first</span><span class="p">:</span> <span class="kt">T</span><span class="p">?</span> <span class="p">{</span> <span class="k">return</span> <span class="n">_rlmArray</span><span class="o">.</span><span class="nf">firstObject</span><span class="p">()</span> <span class="k">as!</span> <span class="kt">T</span><span class="p">?</span> <span class="p">}</span></code></pre>
 
@@ -642,12 +622,12 @@ or <code>nil</code> if no objects match.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the last object in the list, or <code>nil</code> if empty.</p>
+                        <p>Returns the last object in the <a href="../Classes/List.html">List</a>, or <code>nil</code> if empty.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">last</span><span class="p">:</span> <span class="kt">T</span><span class="p">?</span> <span class="p">{</span> <span class="k">return</span> <span class="n">_rlmArray</span><span class="o">.</span><span class="nf">lastObject</span><span class="p">()</span> <span class="k">as!</span> <span class="kt">T</span><span class="p">?</span> <span class="p">}</span></code></pre>
 
@@ -662,13 +642,13 @@ or <code>nil</code> if no objects match.</p>
               </ul>
             </div>
             <div class="task-group">
-                <div class="task-name-container">
-                  <a name="/KVC"></a>
-                  <a name="//apple_ref/swift/Section/KVC" class="dashAnchor"></a>
-                  <a href="#/KVC">
-                    <h3 class="section-name">KVC</h3>
-                  </a>
-                </div>
+              <div class="task-name-container">
+                <a name="/KVC"></a>
+                <a name="//apple_ref/swift/Section/KVC" class="dashAnchor"></a>
+                <a href="#/KVC">
+                  <h3 class="section-name">KVC</h3>
+                </a>
+              </div>
               <ul>
                 <li class="item">
                   <div>
@@ -683,12 +663,12 @@ or <code>nil</code> if no objects match.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns an Array containing the results of invoking <code>valueForKey:</code> using key on each of the collection&rsquo;s objects.</p>
+                        <p>Returns an Array containing the results of invoking <code>valueForKey(_:)</code> using key on each of the collection&rsquo;s objects.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">valueForKey</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AnyObject</span><span class="p">?</span></code></pre>
 
@@ -716,7 +696,7 @@ or <code>nil</code> if no objects match.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>Array containing the results of invoking <code>valueForKey:</code> using key on each of the collection&rsquo;s objects.</p>
+                        <p>Array containing the results of invoking <code>valueForKey(_:)</code> using key on each of the collection&rsquo;s objects.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -738,7 +718,7 @@ or <code>nil</code> if no objects match.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Invokes <code>setValue:forKey:</code> on each of the collection&rsquo;s objects using the specified value and key.</p>
+                        <p>Invokes <code>setValue(_:forKey:)</code> on each of the collection&rsquo;s objects using the specified value and key.</p>
 
 <div class="aside aside-warning">
           <p class="aside-title">Warning</p>
@@ -749,7 +729,7 @@ or <code>nil</code> if no objects match.</p>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">setValue</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">?,</span> <span class="n">forKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
 
@@ -797,13 +777,13 @@ or <code>nil</code> if no objects match.</p>
               </ul>
             </div>
             <div class="task-group">
-                <div class="task-name-container">
-                  <a name="/Filtering"></a>
-                  <a name="//apple_ref/swift/Section/Filtering" class="dashAnchor"></a>
-                  <a href="#/Filtering">
-                    <h3 class="section-name">Filtering</h3>
-                  </a>
-                </div>
+              <div class="task-name-container">
+                <a name="/Filtering"></a>
+                <a name="//apple_ref/swift/Section/Filtering" class="dashAnchor"></a>
+                <a href="#/Filtering">
+                  <h3 class="section-name">Filtering</h3>
+                </a>
+              </div>
               <ul>
                 <li class="item">
                   <div>
@@ -818,12 +798,12 @@ or <code>nil</code> if no objects match.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns <code><a href="../Classes/Results.html">Results</a></code> containing list elements that match the given predicate.</p>
+                        <p>Returns <code><a href="../Classes/Results.html">Results</a></code> containing elements that match the given predicate.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">filter</span><span class="p">(</span><span class="nv">predicateFormat</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">args</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="o">...</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Results</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
 
@@ -851,7 +831,7 @@ or <code>nil</code> if no objects match.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p><code><a href="../Classes/Results.html">Results</a></code> containing list elements that match the given predicate.</p>
+                        <p><code><a href="../Classes/Results.html">Results</a></code> containing elements that match the given predicate.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -873,12 +853,12 @@ or <code>nil</code> if no objects match.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns <code><a href="../Classes/Results.html">Results</a></code> containing list elements that match the given predicate.</p>
+                        <p>Returns <code><a href="../Classes/Results.html">Results</a></code> containing elements that match the given predicate.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">filter</span><span class="p">(</span><span class="nv">predicate</span><span class="p">:</span> <span class="kt">NSPredicate</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Results</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
 
@@ -906,7 +886,7 @@ or <code>nil</code> if no objects match.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p><code><a href="../Classes/Results.html">Results</a></code> containing list elements that match the given predicate.</p>
+                        <p><code><a href="../Classes/Results.html">Results</a></code> containing elements that match the given predicate.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -918,13 +898,13 @@ or <code>nil</code> if no objects match.</p>
               </ul>
             </div>
             <div class="task-group">
-                <div class="task-name-container">
-                  <a name="/Sorting"></a>
-                  <a name="//apple_ref/swift/Section/Sorting" class="dashAnchor"></a>
-                  <a href="#/Sorting">
-                    <h3 class="section-name">Sorting</h3>
-                  </a>
-                </div>
+              <div class="task-name-container">
+                <a name="/Sorting"></a>
+                <a name="//apple_ref/swift/Section/Sorting" class="dashAnchor"></a>
+                <a href="#/Sorting">
+                  <h3 class="section-name">Sorting</h3>
+                </a>
+              </div>
               <ul>
                 <li class="item">
                   <div>
@@ -939,12 +919,12 @@ or <code>nil</code> if no objects match.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns <code><a href="../Classes/Results.html">Results</a></code> containing list elements sorted by the given property.</p>
+                        <p>Returns <code><a href="../Classes/Results.html">Results</a></code> containing elements sorted by the given property.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">sorted</span><span class="p">(</span><span class="nv">property</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="k">as</span><span class="nv">cending</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Results</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
 
@@ -985,7 +965,7 @@ or <code>nil</code> if no objects match.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p><code><a href="../Classes/Results.html">Results</a></code> containing list elements sorted by the given property.</p>
+                        <p><code><a href="../Classes/Results.html">Results</a></code> containing elements sorted by the given property.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -1012,7 +992,7 @@ or <code>nil</code> if no objects match.</p>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">sorted</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">:</span> <span class="kt">SequenceType</span> <span class="k">where</span> <span class="kt">S</span><span class="o">.</span><span class="kt">Generator</span><span class="o">.</span><span class="kt">Element</span> <span class="o">==</span> <span class="kt">SortDescriptor</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">sortDescriptors</span><span class="p">:</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Results</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
 
@@ -1052,13 +1032,13 @@ or <code>nil</code> if no objects match.</p>
               </ul>
             </div>
             <div class="task-group">
-                <div class="task-name-container">
-                  <a name="/Aggregate%20Operations"></a>
-                  <a name="//apple_ref/swift/Section/Aggregate Operations" class="dashAnchor"></a>
-                  <a href="#/Aggregate%20Operations">
-                    <h3 class="section-name">Aggregate Operations</h3>
-                  </a>
-                </div>
+              <div class="task-name-container">
+                <a name="/Aggregate%20Operations"></a>
+                <a name="//apple_ref/swift/Section/Aggregate Operations" class="dashAnchor"></a>
+                <a href="#/Aggregate%20Operations">
+                  <h3 class="section-name">Aggregate Operations</h3>
+                </a>
+              </div>
               <ul>
                 <li class="item">
                   <div>
@@ -1084,7 +1064,7 @@ or <code>nil</code> if no objects match.</p>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">min</span><span class="o">&lt;</span><span class="kt">U</span><span class="p">:</span> <span class="kt">MinMaxType</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">property</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">U</span><span class="p">?</span></code></pre>
 
@@ -1145,7 +1125,7 @@ or <code>nil</code> if no objects match.</p>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">max</span><span class="o">&lt;</span><span class="kt">U</span><span class="p">:</span> <span class="kt">MinMaxType</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">property</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">U</span><span class="p">?</span></code></pre>
 
@@ -1206,7 +1186,7 @@ or <code>nil</code> if no objects match.</p>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">sum</span><span class="o">&lt;</span><span class="kt">U</span><span class="p">:</span> <span class="kt">AddableType</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">property</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">U</span></code></pre>
 
@@ -1267,7 +1247,7 @@ or <code>nil</code> if no objects match.</p>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">average</span><span class="o">&lt;</span><span class="kt">U</span><span class="p">:</span> <span class="kt">AddableType</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">property</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">U</span><span class="p">?</span></code></pre>
 
@@ -1307,13 +1287,13 @@ or <code>nil</code> if no objects match.</p>
               </ul>
             </div>
             <div class="task-group">
-                <div class="task-name-container">
-                  <a name="/Mutation"></a>
-                  <a name="//apple_ref/swift/Section/Mutation" class="dashAnchor"></a>
-                  <a href="#/Mutation">
-                    <h3 class="section-name">Mutation</h3>
-                  </a>
-                </div>
+              <div class="task-name-container">
+                <a name="/Mutation"></a>
+                <a name="//apple_ref/swift/Section/Mutation" class="dashAnchor"></a>
+                <a href="#/Mutation">
+                  <h3 class="section-name">Mutation</h3>
+                </a>
+              </div>
               <ul>
                 <li class="item">
                   <div>
@@ -1328,7 +1308,7 @@ or <code>nil</code> if no objects match.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Appends the given object to the end of the list. If the object is from a
+                        <p>Appends the given object to the end of the <a href="../Classes/List.html">List</a>. If the object is from a
 different <a href="../Classes/Realm.html">Realm</a> it is copied to the <a href="../Classes/List.html">List</a>&rsquo;s <a href="../Classes/Realm.html">Realm</a>.</p>
 
 <div class="aside aside-warning">
@@ -1340,7 +1320,7 @@ different <a href="../Classes/Realm.html">Realm</a> it is copied to the <a href=
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">append</span><span class="p">(</span><span class="nv">object</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span></code></pre>
 
@@ -1385,7 +1365,7 @@ different <a href="../Classes/Realm.html">Realm</a> it is copied to the <a href=
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Appends the objects in the given sequence to the end of the list.</p>
+                        <p>Appends the objects in the given sequence to the end of the <a href="../Classes/List.html">List</a>.</p>
 
 <div class="aside aside-warning">
           <p class="aside-title">Warning</p>
@@ -1396,7 +1376,7 @@ different <a href="../Classes/Realm.html">Realm</a> it is copied to the <a href=
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">appendContentsOf</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">:</span> <span class="kt">SequenceType</span> <span class="k">where</span> <span class="kt">S</span><span class="o">.</span><span class="kt">Generator</span><span class="o">.</span><span class="kt">Element</span> <span class="o">==</span> <span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">objects</span><span class="p">:</span> <span class="kt">S</span><span class="p">)</span></code></pre>
 
@@ -1450,14 +1430,14 @@ different <a href="../Classes/Realm.html">Realm</a> it is copied to the <a href=
         </div><div class="aside aside-warning">
           <p class="aside-title">Warning</p>
           <p>Throws an exception when called with an index smaller than zero
-       or greater than or equal to the number of objects in the list.</p>
+       or greater than or equal to the number of objects in the <a href="../Classes/List.html">List</a>.</p>
 
         </div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">insert</span><span class="p">(</span><span class="nv">object</span><span class="p">:</span> <span class="kt">T</span><span class="p">,</span> <span class="n">atIndex</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
 
@@ -1515,7 +1495,7 @@ different <a href="../Classes/Realm.html">Realm</a> it is copied to the <a href=
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Removes the object at the given index from the list. Does not remove the object from the <a href="../Classes/Realm.html">Realm</a>.</p>
+                        <p>Removes the object at the given index from the <a href="../Classes/List.html">List</a>. Does not remove the object from the <a href="../Classes/Realm.html">Realm</a>.</p>
 
 <div class="aside aside-warning">
           <p class="aside-title">Warning</p>
@@ -1524,14 +1504,14 @@ different <a href="../Classes/Realm.html">Realm</a> it is copied to the <a href=
         </div><div class="aside aside-warning">
           <p class="aside-title">Warning</p>
           <p>Throws an exception when called with an index smaller than zero
-       or greater than or equal to the number of objects in the list.</p>
+       or greater than or equal to the number of objects in the <a href="../Classes/List.html">List</a>.</p>
 
         </div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">removeAtIndex</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
 
@@ -1576,7 +1556,7 @@ different <a href="../Classes/Realm.html">Realm</a> it is copied to the <a href=
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Removes the last object in the list. Does not remove the object from the <a href="../Classes/Realm.html">Realm</a>.</p>
+                        <p>Removes the last object in the <a href="../Classes/List.html">List</a>. Does not remove the object from the <a href="../Classes/Realm.html">Realm</a>.</p>
 
 <div class="aside aside-warning">
           <p class="aside-title">Warning</p>
@@ -1587,7 +1567,7 @@ different <a href="../Classes/Realm.html">Realm</a> it is copied to the <a href=
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">removeLast</span><span class="p">()</span></code></pre>
 
@@ -1623,7 +1603,7 @@ different <a href="../Classes/Realm.html">Realm</a> it is copied to the <a href=
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">removeAll</span><span class="p">()</span></code></pre>
 
@@ -1657,14 +1637,14 @@ different <a href="../Classes/Realm.html">Realm</a> it is copied to the <a href=
         </div><div class="aside aside-warning">
           <p class="aside-title">Warning</p>
           <p>Throws an exception when called with an index smaller than zero
-       or greater than or equal to the number of objects in the list.</p>
+       or greater than or equal to the number of objects in the <a href="../Classes/List.html">List</a>.</p>
 
         </div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">replace</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">object</span><span class="p">:</span> <span class="kt">T</span><span class="p">)</span></code></pre>
 
@@ -1682,7 +1662,7 @@ different <a href="../Classes/Realm.html">Realm</a> it is copied to the <a href=
                               </td>
                               <td>
                                 <div>
-                                  <p>The list index of the object to be replaced.</p>
+                                  <p>The index of the object to be replaced.</p>
 
                                 </div>
                               </td>
@@ -1731,14 +1711,14 @@ different <a href="../Classes/Realm.html">Realm</a> it is copied to the <a href=
         </div><div class="aside aside-warning">
           <p class="aside-title">Warning</p>
           <p>Throws an exception when called with an index smaller than zero or greater than
-       or equal to the number of objects in the list.</p>
+       or equal to the number of objects in the <a href="../Classes/List.html">List</a>.</p>
 
         </div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">move</span><span class="p">(</span><span class="n">from</span> <span class="nv">from</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="nv">to</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
 
@@ -1796,11 +1776,11 @@ different <a href="../Classes/Realm.html">Realm</a> it is copied to the <a href=
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Exchanges the objects in the list at given indexes.</p>
+                        <p>Exchanges the objects in the <a href="../Classes/List.html">List</a> at given indexes.</p>
 
 <div class="aside aside-warning">
           <p class="aside-title">Warning</p>
-          Throws an exception when either index exceeds the bounds of the list.
+          Throws an exception when either index exceeds the bounds of the <a href="../Classes/List.html">List</a>.
 
         </div><div class="aside aside-warning">
           <p class="aside-title">Warning</p>
@@ -1811,7 +1791,7 @@ different <a href="../Classes/Realm.html">Realm</a> it is copied to the <a href=
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">swap</span><span class="p">(</span><span class="nv">index1</span><span class="p">:</span> <span class="kt">Int</span><span class="p">,</span> <span class="n">_</span> <span class="nv">index2</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span></code></pre>
 
@@ -1852,6 +1832,183 @@ different <a href="../Classes/Realm.html">Realm</a> it is copied to the <a href=
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/List.swift#L385-L389">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Sequence%20Support"></a>
+                <a name="//apple_ref/swift/Section/Sequence Support" class="dashAnchor"></a>
+                <a href="#/Sequence%20Support">
+                  <h3 class="section-name">Sequence Support</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC10RealmSwift4List8generateuRdq_CS_6Object_FGS0_q__FT_GCS_12RLMGeneratorq__"></a>
+                    <a name="//apple_ref/swift/Method/generate()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC10RealmSwift4List8generateuRdq_CS_6Object_FGS0_q__FT_GCS_12RLMGeneratorq__">generate()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a <code>GeneratorOf&lt;T&gt;</code> that yields successive elements in the <a href="../Classes/List.html">List</a>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">generate</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">RLMGenerator</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/List.swift#L396-L398">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/RangeReplaceableCollection%20Support"></a>
+                <a name="//apple_ref/swift/Section/RangeReplaceableCollection Support" class="dashAnchor"></a>
+                <a href="#/RangeReplaceableCollection%20Support">
+                  <h3 class="section-name">RangeReplaceableCollection Support</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC10RealmSwift4List12replaceRangeu__Rdq_CS_6Objectqd__Ss14CollectionTypezq_qqqd__S2_9GeneratorSs13GeneratorType7Element_FGS0_q__FTGVSs5RangeSi_4withqd___T_"></a>
+                    <a name="//apple_ref/swift/Method/replaceRange(_:with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC10RealmSwift4List12replaceRangeu__Rdq_CS_6Objectqd__Ss14CollectionTypezq_qqqd__S2_9GeneratorSs13GeneratorType7Element_FGS0_q__FTGVSs5RangeSi_4withqd___T_">replaceRange(_:with:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Replace the given <code>subRange</code> of elements with <code>newElements</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">replaceRange</span><span class="o">&lt;</span><span class="kt">C</span><span class="p">:</span> <span class="kt">CollectionType</span> <span class="k">where</span> <span class="kt">C</span><span class="o">.</span><span class="kt">Generator</span><span class="o">.</span><span class="kt">Element</span> <span class="o">==</span> <span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">subRange</span><span class="p">:</span> <span class="kt">Range</span><span class="o">&lt;</span><span class="kt">Int</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">with</span> <span class="nv">newElements</span><span class="p">:</span> <span class="kt">C</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>subRange</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The range of elements to be replaced.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>newElements</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The new elements to be inserted into the List.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/List.swift#L408-L415">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC10RealmSwift4List10startIndexSi"></a>
+                    <a name="//apple_ref/swift/Property/startIndex" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC10RealmSwift4List10startIndexSi">startIndex</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The position of the first element in a non-empty collection.
+Identical to endIndex in an empty collection.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">startIndex</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">return</span> <span class="mi">0</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/List.swift#L419">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC10RealmSwift4List8endIndexSi"></a>
+                    <a name="//apple_ref/swift/Property/endIndex" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC10RealmSwift4List8endIndexSi">endIndex</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The collection&rsquo;s <q>past the end</q> position.
+endIndex is not a valid argument to subscript, and is always reachable from startIndex by zero or more applications of successor().</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">endIndex</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">return</span> <span class="n">count</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/List.swift#L423">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
