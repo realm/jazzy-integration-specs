@@ -642,8 +642,8 @@ the transaction.</p>
 <p>This rolls back all objects in the <a href="../Classes/Realm.html">Realm</a> to the state they were in at the
 beginning of the write transaction, and then ends the transaction.</p>
 
-<p>This restores the data for deleted objects, but does not reinstate deleted
-accessor objects. Any <code><a href="../Classes/Object.html">Object</a></code>s which were added to the <a href="../Classes/Realm.html">Realm</a> will be
+<p>This restores the data for deleted objects, but does not revive invalidated
+object instances. Any <code><a href="../Classes/Object.html">Object</a></code>s which were added to the <a href="../Classes/Realm.html">Realm</a> will be
 invalidated rather than switching back to standalone objects.
 Given the following code:</p>
 
