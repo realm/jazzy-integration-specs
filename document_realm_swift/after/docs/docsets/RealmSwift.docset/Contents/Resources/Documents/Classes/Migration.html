@@ -296,7 +296,7 @@ each object. <a href="../Classes/Object.html">Object</a> properties can be acces
                             <tr>
                               <td>
                                 <code>
-                                <em>className</em>
+                                <em>objectClassName</em>
                                 </code>
                               </td>
                               <td>
@@ -372,12 +372,12 @@ each object. <a href="../Classes/Object.html">Object</a> properties can be acces
                             <tr>
                               <td>
                                 <code>
-                                <em>object</em>
+                                <em>value</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>The object used to populate the object. This can be any key/value coding compliant object, or a JSON object such as those returned from the methods in <code>NSJSONSerialization</code>, or an <code>Array</code> with one object for each persisted property. An exception will be thrown if any required properties are not present and no default is set.</p>
+                                  <p>The object used to populate the new <code>Object</code>. This can be any key/value coding compliant object, or a JSON object such as those returned from the methods in <code>NSJSONSerialization</code>, or an <code>Array</code> with one object for each persisted property. An exception will be thrown if any required properties are not present and no default is set.</p>
 
                                 </div>
                               </td>
@@ -480,7 +480,7 @@ cleans up any remaining metadata for the class in the <a href="../Classes/Realm.
                             <tr>
                               <td>
                                 <code>
-                                <em>name</em>
+                                <em>objectClassName</em>
                                 </code>
                               </td>
                               <td>
@@ -495,7 +495,7 @@ cleans up any remaining metadata for the class in the <a href="../Classes/Realm.
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>whether there was any data to delete.</p>
+                        <p><code>true</code> if there was any data to delete.</p>
 
                       </div>
                       <div class="slightly-smaller">

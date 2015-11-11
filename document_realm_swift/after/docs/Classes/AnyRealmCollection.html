@@ -189,6 +189,36 @@ Element type, hiding the specifics of the underlying <code><a href="../Protocols
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:C10RealmSwift18AnyRealmCollection7Element"></a>
+                    <a name="//apple_ref/swift/Alias/Element" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C10RealmSwift18AnyRealmCollection7Element">Element</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Element type contained in this collection.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Element</span> <span class="o">=</span> <span class="kt">T</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/RealmCollectionType.swift#L436">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:sC10RealmSwift18AnyRealmCollection9subscriptFSiq_"></a>
                     <a name="//apple_ref/swift/Method/subscript(_:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:sC10RealmSwift18AnyRealmCollection9subscriptFSiq_">subscript(_:)</a>
@@ -237,36 +267,6 @@ Element type, hiding the specifics of the underlying <code><a href="../Protocols
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/RealmCollectionType.swift#L589">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:C10RealmSwift18AnyRealmCollection7Element"></a>
-                    <a name="//apple_ref/swift/Alias/Element" class="dashAnchor"></a>
-                    <a class="token" href="#/s:C10RealmSwift18AnyRealmCollection7Element">Element</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Element type contained in this collection.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Element</span> <span class="o">=</span> <span class="kt">T</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/RealmCollectionType.swift#L436">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -517,7 +517,7 @@ or <code>nil</code> no objects match.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The index of the given object, or <code>nil</code> if no objects match.</p>
+                        <p>The index of the first matching object, or <code>nil</code> if no objects match.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -573,7 +573,7 @@ or <code>nil</code> if no objects match.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The index of the given object, or <code>nil</code> if no objects match.</p>
+                        <p>The index of the first matching object, or <code>nil</code> if no objects match.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -1230,7 +1230,7 @@ endIndex is not a valid argument to subscript, and is always reachable from star
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns an Array containing the results of invoking <code>valueForKey:</code> using key on each of the collection&rsquo;s objects.</p>
+                        <p>Returns an Array containing the results of invoking <code>valueForKey(_:)</code> using key on each of the collection&rsquo;s objects.</p>
 
                       </div>
                       <div class="declaration">
@@ -1263,7 +1263,7 @@ endIndex is not a valid argument to subscript, and is always reachable from star
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>Array containing the results of invoking <code>valueForKey:</code> using key on each of the collection&rsquo;s objects.</p>
+                        <p>Array containing the results of invoking <code>valueForKey(_:)</code> using key on each of the collection&rsquo;s objects.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -1285,9 +1285,13 @@ endIndex is not a valid argument to subscript, and is always reachable from star
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Invokes <code>setValue:forKey:</code> on each of the collection&rsquo;s objects using the specified value and key.</p>
+                        <p>Invokes <code>setValue(_:forKey:)</code> on each of the collection&rsquo;s objects using the specified value and key.</p>
 
-<p>:warning: This method can only be called during a write transaction.</p>
+<div class="aside aside-warning">
+          <p class="aside-title">Warning</p>
+          <p>This method can only be called during a write transaction.</p>
+
+        </div>
 
                       </div>
                       <div class="declaration">

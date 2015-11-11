@@ -191,7 +191,7 @@
                       <div class="abstract">
                         <p><code>List&lt;T&gt;</code> is the container type in <a href="Classes/Realm.html">Realm</a> used to define to-many relationships.</p>
 
-<p>Lists hold a single <code><a href="Classes/Object.html">Object</a></code> subclass (<code>T</code>) which defines the <q>type</q> of the list.</p>
+<p>Lists hold a single <code><a href="Classes/Object.html">Object</a></code> subclass (<code>T</code>) which defines the <q>type</q> of the List.</p>
 
 <p>Lists can be filtered and sorted with the same predicates as <code><a href="Classes/Results.html">Results</a>&lt;T&gt;</code>.</p>
 
@@ -283,6 +283,7 @@ You then instantiate and use your custom subclasses instead of using the Object 
 <ul>
 <li><code>String</code>, <code>NSString</code></li>
 <li><code>Int</code></li>
+<li><code>Int8</code>, <code>Int16</code>, <code>Int32</code>, <code>Int64</code></li>
 <li><code>Float</code></li>
 <li><code>Double</code></li>
 <li><code>Bool</code></li>
@@ -294,10 +295,10 @@ You then instantiate and use your custom subclasses instead of using the Object 
 </ul>
 
 <p><code>String</code>, <code>NSString</code>, <code>NSDate</code>, <code>NSData</code> and <code>Object</code> subclass properties can be
-optional. <code>Int</code>, <code>Float</code>, <code>Double</code>, <code>Bool</code> and <code><a href="Classes/List.html">List</a></code> properties cannot. To store
-an optional number, instead use <code><a href="Classes/RealmOptional.html">RealmOptional</a>&lt;Int&gt;</code>, <code><a href="Classes/RealmOptional.html">RealmOptional</a>&lt;Float&gt;</code>,
-<code><a href="Classes/RealmOptional.html">RealmOptional</a>&lt;Double&gt;</code>, or <code><a href="Classes/RealmOptional.html">RealmOptional</a>&lt;Bool&gt;</code> instead, which wraps an optional
-value of the generic type.</p>
+optional. <code>Int</code>, <code>Int8</code>, Int16<code>, Int32</code>, <code>Int64</code>, <code>Float</code>, <code>Double</code>, <code>Bool</code> 
+and <code><a href="Classes/List.html">List</a></code> properties cannot. To store an optional number, instead use 
+<code><a href="Classes/RealmOptional.html">RealmOptional</a>&lt;Int&gt;</code>, <code><a href="Classes/RealmOptional.html">RealmOptional</a>&lt;Float&gt;</code>, <code><a href="Classes/RealmOptional.html">RealmOptional</a>&lt;Double&gt;</code>, or 
+<code><a href="Classes/RealmOptional.html">RealmOptional</a>&lt;Bool&gt;</code> instead, which wraps an optional value of the generic type.</p>
 
 <p>All property types except for <code><a href="Classes/List.html">List</a></code> and <code><a href="Classes/RealmOptional.html">RealmOptional</a></code> <em>must</em> be declared as
 <code>dynamic var</code>. <code><a href="Classes/List.html">List</a></code> and <code><a href="Classes/RealmOptional.html">RealmOptional</a></code> properties must be declared as
@@ -305,8 +306,8 @@ non-dynamic <code>let</code> properties.</p>
 
 <p><a href='#querying' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='querying'>Querying</h3></p>
 
-<p>You can gets <code><a href="Classes/Results.html">Results</a></code> of an Object subclass via tha <code>objects(_:)</code> free function or
-the <code>objects(_:)</code> instance method on <code><a href="Classes/Realm.html">Realm</a></code>.</p>
+<p>You can gets <code><a href="Classes/Results.html">Results</a></code> of an Object subclass via the <code>objects(_:)</code> instance 
+method on <code><a href="Classes/Realm.html">Realm</a></code>.</p>
 
 <p><a href='#relationships' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='relationships'>Relationships</h3></p>
 
@@ -323,7 +324,7 @@ the <code>objects(_:)</code> instance method on <code><a href="Classes/Realm.htm
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/Object.swift#L67-L252">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/Object.swift#L68-L253">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -345,12 +346,12 @@ the <code>objects(_:)</code> instance method on <code><a href="Classes/Realm.htm
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This class represents <a href="Classes/Realm.html">Realm</a> model object schemas persisted to <a href="Classes/Realm.html">Realm</a> in a <a href="Classes/Schema.html">Schema</a>.</p>
+                        <p>This class represents <a href="Classes/Realm.html">Realm</a> model object schemas.</p>
 
-<p>When using <a href="Classes/Realm.html">Realm</a>, ObjectSchema objects allow performing migrations and
+<p>When using <a href="Classes/Realm.html">Realm</a>, <code>ObjectSchema</code> objects allow performing migrations and
 introspecting the database&rsquo;s schema.</p>
 
-<p><a href="Classes/Object.html">Object</a> schemas map to tables in the core database.</p>
+<p><code>ObjectSchema</code>s map to tables in the core database.</p>
 
                         <a href="Classes/ObjectSchema.html" class="slightly-smaller">See more</a>
                       </div>
@@ -402,7 +403,7 @@ a <code>RealmOptional</code> property on an <code><a href="Classes/Object.html">
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/Optional.swift#L64-L84">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/Optional.swift#L69-L89">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -424,9 +425,9 @@ a <code>RealmOptional</code> property on an <code><a href="Classes/Object.html">
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This class represents properties persisted to <a href="Classes/Realm.html">Realm</a> in an <a href="Classes/ObjectSchema.html">ObjectSchema</a>.</p>
+                        <p>This class represents properties persisted to <a href="Classes/Realm.html">Realm</a> in an <code><a href="Classes/ObjectSchema.html">ObjectSchema</a></code>.</p>
 
-<p>When using <a href="Classes/Realm.html">Realm</a>, Property objects allow performing migrations and
+<p>When using <a href="Classes/Realm.html">Realm</a>, <code>Property</code> objects allow performing migrations and
 introspecting the database&rsquo;s schema.</p>
 
 <p>These properties map to columns in the core database.</p>
@@ -468,7 +469,7 @@ introspecting the database&rsquo;s schema.</p>
 database.</p>
 
 <p>Realms can either be stored on disk (see <code>init(path:)</code>) or in
-memory (see <code>init(inMemoryIdentifier:)</code>).</p>
+memory (see <code>Configuration</code>).</p>
 
 <p>Realm instances are cached internally, and constructing equivalent Realm
 objects (with the same path or identifier) produces limited overhead.</p>
@@ -500,7 +501,7 @@ strong references to it.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/Realm.swift#L45-L540">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/Realm.swift#L45-L568">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -618,7 +619,7 @@ filter query results.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/Results.swift#L78-L286">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/Results.swift#L80-L288">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -645,7 +646,7 @@ filter query results.</p>
 <p>When using <a href="Classes/Realm.html">Realm</a>, <code>Schema</code> objects allow performing migrations and
 introspecting the database&rsquo;s schema.</p>
 
-<p>Schemas map to collections of tables in the core database.</p>
+<p><code>Schema</code>s map to collections of tables in the core database.</p>
 
                         <a href="Classes/Schema.html" class="slightly-smaller">See more</a>
                       </div>

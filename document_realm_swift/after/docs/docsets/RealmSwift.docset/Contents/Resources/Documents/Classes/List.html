@@ -179,7 +179,7 @@
               </div>
             <p><code>List&lt;T&gt;</code> is the container type in <a href="../Classes/Realm.html">Realm</a> used to define to-many relationships.</p>
 
-<p>Lists hold a single <code><a href="../Classes/Object.html">Object</a></code> subclass (<code>T</code>) which defines the <q>type</q> of the list.</p>
+<p>Lists hold a single <code><a href="../Classes/Object.html">Object</a></code> subclass (<code>T</code>) which defines the <q>type</q> of the List.</p>
 
 <p>Lists can be filtered and sorted with the same predicates as <code><a href="../Classes/Results.html">Results</a>&lt;T&gt;</code>.</p>
 
@@ -301,8 +301,8 @@ Replaces the object at the given <code>index</code> on set.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The <a href="../Classes/Realm.html">Realm</a> the objects in this list belong to, or <code>nil</code> if the list&rsquo;s
-owning object does not belong to a realm (the list is standalone).</p>
+                        <p>The <a href="../Classes/Realm.html">Realm</a> the objects in this <a href="../Classes/List.html">List</a> belong to, or <code>nil</code> if the <a href="../Classes/List.html">List</a>&rsquo;s
+owning object does not belong to a <a href="../Classes/Realm.html">Realm</a> (the <a href="../Classes/List.html">List</a> is standalone).</p>
 
                       </div>
                       <div class="declaration">
@@ -332,7 +332,7 @@ owning object does not belong to a realm (the list is standalone).</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Indicates if the list can no longer be accessed.</p>
+                        <p>Indicates if the <a href="../Classes/List.html">List</a> can no longer be accessed.</p>
 
                       </div>
                       <div class="declaration">
@@ -414,7 +414,7 @@ owning object does not belong to a realm (the list is standalone).</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the index of the given object, or <code>nil</code> if the object is not in the list.</p>
+                        <p>Returns the index of the given object, or <code>nil</code> if the object is not in the <a href="../Classes/List.html">List</a>.</p>
 
                       </div>
                       <div class="declaration">
@@ -447,7 +447,7 @@ owning object does not belong to a realm (the list is standalone).</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The index of the given object, or <code>nil</code> if the object is not in the list.</p>
+                        <p>The index of the given object, or <code>nil</code> if the object is not in the <a href="../Classes/List.html">List</a>.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -503,7 +503,7 @@ or <code>nil</code> no objects match.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The index of the given object, or <code>nil</code> if no objects match.</p>
+                        <p>The index of the first matching object, or <code>nil</code> if no objects match.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -559,7 +559,7 @@ or <code>nil</code> if no objects match.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The index of the given object, or <code>nil</code> if no objects match.</p>
+                        <p>The index of the first matching object, or <code>nil</code> if no objects match.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -592,7 +592,7 @@ or <code>nil</code> if no objects match.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the first object in the list, or <code>nil</code> if empty.</p>
+                        <p>Returns the first object in the <a href="../Classes/List.html">List</a>, or <code>nil</code> if empty.</p>
 
                       </div>
                       <div class="declaration">
@@ -622,7 +622,7 @@ or <code>nil</code> if no objects match.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the last object in the list, or <code>nil</code> if empty.</p>
+                        <p>Returns the last object in the <a href="../Classes/List.html">List</a>, or <code>nil</code> if empty.</p>
 
                       </div>
                       <div class="declaration">
@@ -663,7 +663,7 @@ or <code>nil</code> if no objects match.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns an Array containing the results of invoking <code>valueForKey:</code> using key on each of the collection&rsquo;s objects.</p>
+                        <p>Returns an Array containing the results of invoking <code>valueForKey(_:)</code> using key on each of the collection&rsquo;s objects.</p>
 
                       </div>
                       <div class="declaration">
@@ -696,7 +696,7 @@ or <code>nil</code> if no objects match.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>Array containing the results of invoking <code>valueForKey:</code> using key on each of the collection&rsquo;s objects.</p>
+                        <p>Array containing the results of invoking <code>valueForKey(_:)</code> using key on each of the collection&rsquo;s objects.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -718,7 +718,7 @@ or <code>nil</code> if no objects match.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Invokes <code>setValue:forKey:</code> on each of the collection&rsquo;s objects using the specified value and key.</p>
+                        <p>Invokes <code>setValue(_:forKey:)</code> on each of the collection&rsquo;s objects using the specified value and key.</p>
 
 <div class="aside aside-warning">
           <p class="aside-title">Warning</p>
@@ -798,7 +798,7 @@ or <code>nil</code> if no objects match.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns <code><a href="../Classes/Results.html">Results</a></code> containing list elements that match the given predicate.</p>
+                        <p>Returns <code><a href="../Classes/Results.html">Results</a></code> containing elements that match the given predicate.</p>
 
                       </div>
                       <div class="declaration">
@@ -831,7 +831,7 @@ or <code>nil</code> if no objects match.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p><code><a href="../Classes/Results.html">Results</a></code> containing list elements that match the given predicate.</p>
+                        <p><code><a href="../Classes/Results.html">Results</a></code> containing elements that match the given predicate.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -853,7 +853,7 @@ or <code>nil</code> if no objects match.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns <code><a href="../Classes/Results.html">Results</a></code> containing list elements that match the given predicate.</p>
+                        <p>Returns <code><a href="../Classes/Results.html">Results</a></code> containing elements that match the given predicate.</p>
 
                       </div>
                       <div class="declaration">
@@ -886,7 +886,7 @@ or <code>nil</code> if no objects match.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p><code><a href="../Classes/Results.html">Results</a></code> containing list elements that match the given predicate.</p>
+                        <p><code><a href="../Classes/Results.html">Results</a></code> containing elements that match the given predicate.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -919,7 +919,7 @@ or <code>nil</code> if no objects match.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns <code><a href="../Classes/Results.html">Results</a></code> containing list elements sorted by the given property.</p>
+                        <p>Returns <code><a href="../Classes/Results.html">Results</a></code> containing elements sorted by the given property.</p>
 
                       </div>
                       <div class="declaration">
@@ -965,7 +965,7 @@ or <code>nil</code> if no objects match.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p><code><a href="../Classes/Results.html">Results</a></code> containing list elements sorted by the given property.</p>
+                        <p><code><a href="../Classes/Results.html">Results</a></code> containing elements sorted by the given property.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -1308,7 +1308,7 @@ or <code>nil</code> if no objects match.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Appends the given object to the end of the list. If the object is from a
+                        <p>Appends the given object to the end of the <a href="../Classes/List.html">List</a>. If the object is from a
 different <a href="../Classes/Realm.html">Realm</a> it is copied to the <a href="../Classes/List.html">List</a>&rsquo;s <a href="../Classes/Realm.html">Realm</a>.</p>
 
 <div class="aside aside-warning">
@@ -1365,7 +1365,7 @@ different <a href="../Classes/Realm.html">Realm</a> it is copied to the <a href=
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Appends the objects in the given sequence to the end of the list.</p>
+                        <p>Appends the objects in the given sequence to the end of the <a href="../Classes/List.html">List</a>.</p>
 
 <div class="aside aside-warning">
           <p class="aside-title">Warning</p>
@@ -1430,7 +1430,7 @@ different <a href="../Classes/Realm.html">Realm</a> it is copied to the <a href=
         </div><div class="aside aside-warning">
           <p class="aside-title">Warning</p>
           <p>Throws an exception when called with an index smaller than zero
-       or greater than or equal to the number of objects in the list.</p>
+       or greater than or equal to the number of objects in the <a href="../Classes/List.html">List</a>.</p>
 
         </div>
 
@@ -1495,7 +1495,7 @@ different <a href="../Classes/Realm.html">Realm</a> it is copied to the <a href=
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Removes the object at the given index from the list. Does not remove the object from the <a href="../Classes/Realm.html">Realm</a>.</p>
+                        <p>Removes the object at the given index from the <a href="../Classes/List.html">List</a>. Does not remove the object from the <a href="../Classes/Realm.html">Realm</a>.</p>
 
 <div class="aside aside-warning">
           <p class="aside-title">Warning</p>
@@ -1504,7 +1504,7 @@ different <a href="../Classes/Realm.html">Realm</a> it is copied to the <a href=
         </div><div class="aside aside-warning">
           <p class="aside-title">Warning</p>
           <p>Throws an exception when called with an index smaller than zero
-       or greater than or equal to the number of objects in the list.</p>
+       or greater than or equal to the number of objects in the <a href="../Classes/List.html">List</a>.</p>
 
         </div>
 
@@ -1556,7 +1556,7 @@ different <a href="../Classes/Realm.html">Realm</a> it is copied to the <a href=
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Removes the last object in the list. Does not remove the object from the <a href="../Classes/Realm.html">Realm</a>.</p>
+                        <p>Removes the last object in the <a href="../Classes/List.html">List</a>. Does not remove the object from the <a href="../Classes/Realm.html">Realm</a>.</p>
 
 <div class="aside aside-warning">
           <p class="aside-title">Warning</p>
@@ -1637,7 +1637,7 @@ different <a href="../Classes/Realm.html">Realm</a> it is copied to the <a href=
         </div><div class="aside aside-warning">
           <p class="aside-title">Warning</p>
           <p>Throws an exception when called with an index smaller than zero
-       or greater than or equal to the number of objects in the list.</p>
+       or greater than or equal to the number of objects in the <a href="../Classes/List.html">List</a>.</p>
 
         </div>
 
@@ -1662,7 +1662,7 @@ different <a href="../Classes/Realm.html">Realm</a> it is copied to the <a href=
                               </td>
                               <td>
                                 <div>
-                                  <p>The list index of the object to be replaced.</p>
+                                  <p>The index of the object to be replaced.</p>
 
                                 </div>
                               </td>
@@ -1711,7 +1711,7 @@ different <a href="../Classes/Realm.html">Realm</a> it is copied to the <a href=
         </div><div class="aside aside-warning">
           <p class="aside-title">Warning</p>
           <p>Throws an exception when called with an index smaller than zero or greater than
-       or equal to the number of objects in the list.</p>
+       or equal to the number of objects in the <a href="../Classes/List.html">List</a>.</p>
 
         </div>
 
@@ -1776,11 +1776,11 @@ different <a href="../Classes/Realm.html">Realm</a> it is copied to the <a href=
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Exchanges the objects in the list at given indexes.</p>
+                        <p>Exchanges the objects in the <a href="../Classes/List.html">List</a> at given indexes.</p>
 
 <div class="aside aside-warning">
           <p class="aside-title">Warning</p>
-          Throws an exception when either index exceeds the bounds of the list.
+          Throws an exception when either index exceeds the bounds of the <a href="../Classes/List.html">List</a>.
 
         </div><div class="aside aside-warning">
           <p class="aside-title">Warning</p>
@@ -1860,7 +1860,7 @@ different <a href="../Classes/Realm.html">Realm</a> it is copied to the <a href=
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns a <code>GeneratorOf&lt;T&gt;</code> that yields successive elements in the list.</p>
+                        <p>Returns a <code>GeneratorOf&lt;T&gt;</code> that yields successive elements in the <a href="../Classes/List.html">List</a>.</p>
 
                       </div>
                       <div class="declaration">
@@ -1937,7 +1937,7 @@ different <a href="../Classes/Realm.html">Realm</a> it is copied to the <a href=
                               </td>
                               <td>
                                 <div>
-                                  <p>The new elements to be inserted into the list.</p>
+                                  <p>The new elements to be inserted into the List.</p>
 
                                 </div>
                               </td>

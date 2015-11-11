@@ -426,7 +426,7 @@ or <code>nil</code> no objects match.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The index of the given object, or <code>nil</code> if no objects match.</p>
+                        <p>The index of the first matching object, or <code>nil</code> if no objects match.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -482,7 +482,7 @@ or <code>nil</code> if no objects match.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The index of the given object, or <code>nil</code> if no objects match.</p>
+                        <p>The index of the first matching object, or <code>nil</code> if no objects match.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -1025,7 +1025,7 @@ or <code>nil</code> if no objects match.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns an Array containing the results of invoking <code>valueForKey:</code> using key on each of the collection&rsquo;s objects.</p>
+                        <p>Returns an Array containing the results of invoking <code>valueForKey(_:)</code> using key on each of the collection&rsquo;s objects.</p>
 
                       </div>
                       <div class="declaration">
@@ -1058,7 +1058,7 @@ or <code>nil</code> if no objects match.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>Array containing the results of invoking <code>valueForKey:</code> using key on each of the collection&rsquo;s objects.</p>
+                        <p>Array containing the results of invoking <code>valueForKey(_:)</code> using key on each of the collection&rsquo;s objects.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -1080,9 +1080,13 @@ or <code>nil</code> if no objects match.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Invokes <code>setValue:forKey:</code> on each of the collection&rsquo;s objects using the specified value and key.</p>
+                        <p>Invokes <code>setValue(_:forKey:)</code> on each of the collection&rsquo;s objects using the specified value and key.</p>
 
-<p>:warning: This method can only be called during a write transaction.</p>
+<div class="aside aside-warning">
+          <p class="aside-title">Warning</p>
+          <p>This method can only be called during a write transaction.</p>
+
+        </div>
 
                       </div>
                       <div class="declaration">
