@@ -177,13 +177,13 @@
 
                 </div>
               </div>
-            <p>In <a href="../Classes/Realm.html">Realm</a> you define your model classes by subclassing <code>Object</code> and adding properties to be persisted.
+            <p>In Realm you define your model classes by subclassing <code>Object</code> and adding properties to be persisted.
 You then instantiate and use your custom subclasses instead of using the Object class directly.</p>
 
 <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">Dog</span><span class="p">:</span> <span class="kt">Object</span> <span class="p">{</span>
     <span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span>
     <span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">adopted</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span>
-    <span class="k">let</span> <span class="nv">siblings</span> <span class="o">=</span> <span class="kt"><a href="../Classes/List.html">List</a></span><span class="o">&lt;</span><span class="kt">Dog</span><span class="o">&gt;</span><span class="p">()</span>
+    <span class="k">let</span> <span class="nv">siblings</span> <span class="o">=</span> <span class="kt">List</span><span class="o">&lt;</span><span class="kt">Dog</span><span class="o">&gt;</span><span class="p">()</span>
 <span class="p">}</span>
 </code></pre>
 
@@ -198,16 +198,16 @@ You then instantiate and use your custom subclasses instead of using the Object 
 <li><code>Bool</code></li>
 <li><code>NSDate</code></li>
 <li><code>NSData</code></li>
-<li><code><a href="../Classes/RealmOptional.html">RealmOptional</a>&lt;T&gt;</code> for optional numeric properties</li>
+<li><code><a href="../Classes/RealmOptional.html">RealmOptional&lt;T&gt;</a></code> for optional numeric properties</li>
 <li><code>Object</code> subclasses for to-one relationships</li>
-<li><code><a href="../Classes/List.html">List</a>&lt;T: Object&gt;</code> for to-many relationships</li>
+<li><code>List&lt;T: Object&gt;</code> for to-many relationships</li>
 </ul>
 
 <p><code>String</code>, <code>NSString</code>, <code>NSDate</code>, <code>NSData</code> and <code>Object</code> subclass properties can be
 optional. <code>Int</code>, <code>Int8</code>, Int16<code>, Int32</code>, <code>Int64</code>, <code>Float</code>, <code>Double</code>, <code>Bool</code> 
 and <code><a href="../Classes/List.html">List</a></code> properties cannot. To store an optional number, instead use 
-<code><a href="../Classes/RealmOptional.html">RealmOptional</a>&lt;Int&gt;</code>, <code><a href="../Classes/RealmOptional.html">RealmOptional</a>&lt;Float&gt;</code>, <code><a href="../Classes/RealmOptional.html">RealmOptional</a>&lt;Double&gt;</code>, or 
-<code><a href="../Classes/RealmOptional.html">RealmOptional</a>&lt;Bool&gt;</code> instead, which wraps an optional value of the generic type.</p>
+<code><a href="../Classes/RealmOptional.html">RealmOptional&lt;Int&gt;</a></code>, <code><a href="../Classes/RealmOptional.html">RealmOptional&lt;Float&gt;</a></code>, <code><a href="../Classes/RealmOptional.html">RealmOptional&lt;Double&gt;</a></code>, or 
+<code><a href="../Classes/RealmOptional.html">RealmOptional&lt;Bool&gt;</a></code> instead, which wraps an optional value of the generic type.</p>
 
 <p>All property types except for <code><a href="../Classes/List.html">List</a></code> and <code><a href="../Classes/RealmOptional.html">RealmOptional</a></code> <em>must</em> be declared as
 <code>dynamic var</code>. <code><a href="../Classes/List.html">List</a></code> and <code><a href="../Classes/RealmOptional.html">RealmOptional</a></code> properties must be declared as
@@ -281,7 +281,7 @@ Call <code>add(_:)</code> on a <code><a href="../Classes/Realm.html">Realm</a></
 
 <div class="aside aside-see">
           <p class="aside-title">See</p>
-          <a href="../Classes/Realm.html">Realm</a>().add(_:)
+          Realm().add(_:)
 
         </div>
 
@@ -439,7 +439,7 @@ does not belong to a realm (the object is standalone).</p>
                         <p>Indicates if an object can no longer be accessed.</p>
 
 <p>An object can no longer be accessed if the object has been deleted from the containing
-<code>realm</code> or if <code>invalidate</code> is called on the containing <code>realm</code>.</p>
+<code><a href="../Classes/Object.html#/s:vC10RealmSwift6Object5realmGSqCS_5Realm_">realm</a></code> or if <code>invalidate</code> is called on the containing <code><a href="../Classes/Object.html#/s:vC10RealmSwift6Object5realmGSqCS_5Realm_">realm</a></code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -499,7 +499,7 @@ does not belong to a realm (the object is standalone).</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Helper to return the class name for an <a href="../Classes/Object.html">Object</a> subclass.</p>
+                        <p>Helper to return the class name for an Object subclass.</p>
 
                       </div>
                       <div class="declaration">
@@ -769,7 +769,7 @@ be used to get the inverse relationship value for <code><a href="../Classes/Obje
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns whether both objects are equal.
-Objects are considered equal when they are both from the same <a href="../Classes/Realm.html">Realm</a>
+Objects are considered equal when they are both from the same Realm
 and point to the same underlying object in the database.</p>
 
                       </div>

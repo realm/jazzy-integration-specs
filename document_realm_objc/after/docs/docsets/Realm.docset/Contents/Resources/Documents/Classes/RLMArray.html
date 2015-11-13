@@ -172,17 +172,17 @@ if available. For example:</p>
 <span class="k">@property</span> <span class="n">RLMArray</span><span class="o">&lt;</span><span class="n">ObjectType</span> <span class="o">*&gt;&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="n">arrayOfObjectTypes</span><span class="p">;</span>
 </code></pre>
 
-<p>RLMArrays can be queried with the same predicates as <a href="../Classes/RLMObject.html">RLMObject</a> and <a href="../Classes/RLMResults.html">RLMResults</a>.</p>
+<p>RLMArrays can be queried with the same predicates as RLMObject and RLMResults.</p>
 
 <p>RLMArrays cannot be created directly. RLMArray properties on RLMObjects are
 lazily created when accessed, or can be obtained by querying a Realm.</p>
 
 <p><a href='#key_value_observing' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='key_value_observing'>Key-Value Observing</h3></p>
 
-<p>RLMArray supports array key-value observing on RLMArray properties on <a href="../Classes/RLMObject.html">RLMObject</a>
+<p>RLMArray supports array key-value observing on RLMArray properties on RLMObject
 subclasses, and the <code>invalidated</code> property on RLMArray instances themselves is
 key-value observing compliant when the RLMArray is attached to a persisted
-<a href="../Classes/RLMObject.html">RLMObject</a> (RLMArrays on standalone RLMObjects will never become invalidated).</p>
+RLMObject (RLMArrays on standalone RLMObjects will never become invalidated).</p>
 
 <p>Because RLMArrays are attached to the object which they are a property of, they
 do not require using the mutable collection proxy objects from
@@ -243,7 +243,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The class name (i.e. type) of the RLMObjects contained in this <a href="../Classes/RLMArray.html">RLMArray</a>.</p>
+                        <p>The class name (i.e. type) of the RLMObjects contained in this RLMArray.</p>
 
                       </div>
                       <div class="declaration">
@@ -377,7 +377,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An <a href="../Classes/RLMObject.html">RLMObject</a> of the class contained by this <a href="../Classes/RLMArray.html">RLMArray</a>.</p>
+                        <p>An RLMObject of the class contained by this RLMArray.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -401,7 +401,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                       <div class="abstract">
                         <p>Returns the first object in the array.</p>
 
-<p>Returns <code>nil</code> if called on an empty <a href="../Classes/RLMArray.html">RLMArray</a>.</p>
+<p>Returns <code>nil</code> if called on an empty RLMArray.</p>
 
                       </div>
                       <div class="declaration">
@@ -414,7 +414,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An <a href="../Classes/RLMObject.html">RLMObject</a> of the class contained by this <a href="../Classes/RLMArray.html">RLMArray</a>.</p>
+                        <p>An RLMObject of the class contained by this RLMArray.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -438,7 +438,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                       <div class="abstract">
                         <p>Returns the last object in the array.</p>
 
-<p>Returns <code>nil</code> if called on an empty <a href="../Classes/RLMArray.html">RLMArray</a>.</p>
+<p>Returns <code>nil</code> if called on an empty RLMArray.</p>
 
                       </div>
                       <div class="declaration">
@@ -451,7 +451,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An <a href="../Classes/RLMObject.html">RLMObject</a> of the class contained by this <a href="../Classes/RLMArray.html">RLMArray</a>.</p>
+                        <p>An RLMObject of the class contained by this RLMArray.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -599,7 +599,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                       <div class="abstract">
                         <p>Inserts an object at the given index.</p>
 
-<p>Throws an exception when called with an index greater than the number of objects in this <a href="../Classes/RLMArray.html">RLMArray</a>.</p>
+<p>Throws an exception when called with an index greater than the number of objects in this RLMArray.</p>
 
 <div class="aside aside-warning">
           <p class="aside-title">Warning</p>
@@ -670,7 +670,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                       <div class="abstract">
                         <p>Removes an object at a given index.</p>
 
-<p>Throws an exception when called with an index greater than the number of objects in this <a href="../Classes/RLMArray.html">RLMArray</a>.</p>
+<p>Throws an exception when called with an index greater than the number of objects in this RLMArray.</p>
 
 <div class="aside aside-warning">
           <p class="aside-title">Warning</p>
@@ -726,7 +726,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Removes the last object in an <a href="../Classes/RLMArray.html">RLMArray</a>.</p>
+                        <p>Removes the last object in an RLMArray.</p>
 
 <div class="aside aside-warning">
           <p class="aside-title">Warning</p>
@@ -762,7 +762,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Removes all objects from an <a href="../Classes/RLMArray.html">RLMArray</a>.</p>
+                        <p>Removes all objects from an RLMArray.</p>
 
 <div class="aside aside-warning">
           <p class="aside-title">Warning</p>
@@ -800,7 +800,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                       <div class="abstract">
                         <p>Replaces an object at the given index with a new object.</p>
 
-<p>Throws an exception when called with an index greater than the number of objects in this <a href="../Classes/RLMArray.html">RLMArray</a>.</p>
+<p>Throws an exception when called with an index greater than the number of objects in this RLMArray.</p>
 
 <div class="aside aside-warning">
           <p class="aside-title">Warning</p>
@@ -873,7 +873,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                         <p>Moves the object at the given source index to the given destination index.</p>
 
 <p>Throws an exception when called with an index greater than or equal to the
-number of objects in this <a href="../Classes/RLMArray.html">RLMArray</a>.</p>
+number of objects in this RLMArray.</p>
 
 <div class="aside aside-warning">
           <p class="aside-title">Warning</p>
@@ -945,7 +945,7 @@ number of objects in this <a href="../Classes/RLMArray.html">RLMArray</a>.</p>
                       <div class="abstract">
                         <p>Exchanges the objects in the array at given indexes.</p>
 
-<p>Throws an exception when either index exceeds the bounds of this <a href="../Classes/RLMArray.html">RLMArray</a>.</p>
+<p>Throws an exception when either index exceeds the bounds of this RLMArray.</p>
 
 <div class="aside aside-warning">
           <p class="aside-title">Warning</p>
@@ -1028,7 +1028,7 @@ number of objects in this <a href="../Classes/RLMArray.html">RLMArray</a>.</p>
                       <div class="abstract">
                         <p>Gets the index of an object.</p>
 
-<p>Returns NSNotFound if the object is not found in this <a href="../Classes/RLMArray.html">RLMArray</a>.</p>
+<p>Returns NSNotFound if the object is not found in this RLMArray.</p>
 
                       </div>
                       <div class="declaration">
@@ -1111,7 +1111,7 @@ number of objects in this <a href="../Classes/RLMArray.html">RLMArray</a>.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>Index of object or NSNotFound if the object is not found in this <a href="../Classes/RLMArray.html">RLMArray</a>.</p>
+                        <p>Index of object or NSNotFound if the object is not found in this RLMArray.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -1166,7 +1166,7 @@ number of objects in this <a href="../Classes/RLMArray.html">RLMArray</a>.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>Index of object or NSNotFound if the object is not found in this <a href="../Classes/RLMArray.html">RLMArray</a>.</p>
+                        <p>Index of object or NSNotFound if the object is not found in this RLMArray.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -1188,7 +1188,7 @@ number of objects in this <a href="../Classes/RLMArray.html">RLMArray</a>.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Get objects matching the given predicate in the <a href="../Classes/RLMArray.html">RLMArray</a>.</p>
+                        <p>Get objects matching the given predicate in the RLMArray.</p>
 
                       </div>
                       <div class="declaration">
@@ -1222,7 +1222,7 @@ number of objects in this <a href="../Classes/RLMArray.html">RLMArray</a>.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An <a href="../Classes/RLMResults.html">RLMResults</a> of objects that match the given predicate</p>
+                        <p>An RLMResults of objects that match the given predicate</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -1244,7 +1244,7 @@ number of objects in this <a href="../Classes/RLMArray.html">RLMArray</a>.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Get objects matching the given predicate in the <a href="../Classes/RLMArray.html">RLMArray</a>.</p>
+                        <p>Get objects matching the given predicate in the RLMArray.</p>
 
                       </div>
                       <div class="declaration">
@@ -1278,7 +1278,7 @@ number of objects in this <a href="../Classes/RLMArray.html">RLMArray</a>.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An <a href="../Classes/RLMResults.html">RLMResults</a> of objects that match the given predicate</p>
+                        <p>An RLMResults of objects that match the given predicate</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -1300,7 +1300,7 @@ number of objects in this <a href="../Classes/RLMArray.html">RLMArray</a>.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Get a sorted <a href="../Classes/RLMResults.html">RLMResults</a> from an <a href="../Classes/RLMArray.html">RLMArray</a></p>
+                        <p>Get a sorted RLMResults from an RLMArray</p>
 
                       </div>
                       <div class="declaration">
@@ -1348,7 +1348,7 @@ number of objects in this <a href="../Classes/RLMArray.html">RLMArray</a>.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An <a href="../Classes/RLMResults.html">RLMResults</a> sorted by the specified property.</p>
+                        <p>An RLMResults sorted by the specified property.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -1370,7 +1370,7 @@ number of objects in this <a href="../Classes/RLMArray.html">RLMArray</a>.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Get a sorted <a href="../Classes/RLMResults.html">RLMResults</a> from an <a href="../Classes/RLMArray.html">RLMArray</a></p>
+                        <p>Get a sorted RLMResults from an RLMArray</p>
 
                       </div>
                       <div class="declaration">
@@ -1404,7 +1404,7 @@ number of objects in this <a href="../Classes/RLMArray.html">RLMArray</a>.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An <a href="../Classes/RLMResults.html">RLMResults</a> sorted by the specified properties.</p>
+                        <p>An RLMResults sorted by the specified properties.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -1437,8 +1437,8 @@ number of objects in this <a href="../Classes/RLMArray.html">RLMArray</a>.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>-[<a href="../Classes/RLMArray.html">RLMArray</a> init] is not available because RLMArrays cannot be created directly.
-<a href="../Classes/RLMArray.html">RLMArray</a> properties on RLMObjects are lazily created when accessed, or can be obtained by querying a Realm.</p>
+                        <p>-[RLMArray init] is not available because RLMArrays cannot be created directly.
+RLMArray properties on RLMObjects are lazily created when accessed, or can be obtained by querying a Realm.</p>
 
                       </div>
                       <div class="declaration">
@@ -1468,8 +1468,8 @@ number of objects in this <a href="../Classes/RLMArray.html">RLMArray</a>.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>+[<a href="../Classes/RLMArray.html">RLMArray</a> new] is not available because RLMArrays cannot be created directly.
-<a href="../Classes/RLMArray.html">RLMArray</a> properties on RLMObjects are lazily created when accessed, or can be obtained by querying a Realm.</p>
+                        <p>+[RLMArray new] is not available because RLMArrays cannot be created directly.
+RLMArray properties on RLMObjects are lazily created when accessed, or can be obtained by querying a Realm.</p>
 
                       </div>
                       <div class="declaration">

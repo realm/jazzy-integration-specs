@@ -176,11 +176,11 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Posted by <a href="Classes/RLMRealm.html">RLMRealm</a> when the data in the realm has changed.</p>
+                        <p>Posted by RLMRealm when the data in the realm has changed.</p>
 
 <p>DidChange are posted after a realm has been refreshed to reflect a write
-transaction, i.e. when an autorefresh occurs, <code>[<a href="Classes/RLMRealm.html">RLMRealm</a> refresh]</code> is
-called, after an implicit refresh from <code>[<a href="Classes/RLMRealm.html">RLMRealm</a> beginWriteTransaction]</code>,
+transaction, i.e. when an autorefresh occurs, <code>[RLMRealm refresh]</code> is
+called, after an implicit refresh from <code>[RLMRealm beginWriteTransaction]</code>,
 and after a local write transaction is committed.</p>
 
                       </div>
@@ -211,15 +211,15 @@ and after a local write transaction is committed.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Posted by <a href="Classes/RLMRealm.html">RLMRealm</a> when a write transaction has been committed to an <a href="Classes/RLMRealm.html">RLMRealm</a> on
+                        <p>Posted by RLMRealm when a write transaction has been committed to an RLMRealm on
 a different thread for the same file. This is not posted if
-<code>[<a href="Classes/RLMRealm.html">RLMRealm</a> autorefresh]</code> is enabled or if the <a href="Classes/RLMRealm.html">RLMRealm</a> is
+<code>[RLMRealm autorefresh]</code> is enabled or if the RLMRealm is
 refreshed before the notifcation has a chance to run.</p>
 
 <p>Realms with autorefresh disabled should normally have a handler for this
-notification which calls <code>[<a href="Classes/RLMRealm.html">RLMRealm</a> refresh]</code> after doing some work.
+notification which calls <code>[RLMRealm refresh]</code> after doing some work.
 While not refreshing is allowed, it may lead to large Realm files as Realm has
-to keep an extra copy of the data for the un-refreshed <a href="Classes/RLMRealm.html">RLMRealm</a>.</p>
+to keep an extra copy of the data for the un-refreshed RLMRealm.</p>
 
                       </div>
                       <div class="declaration">

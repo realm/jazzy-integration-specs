@@ -226,7 +226,7 @@ strong references to it.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Path to the file where this <a href="../Classes/Realm.html">Realm</a> is persisted.</p>
+                        <p>Path to the file where this Realm is persisted.</p>
 
                       </div>
                       <div class="declaration">
@@ -256,7 +256,7 @@ strong references to it.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Indicates if this <a href="../Classes/Realm.html">Realm</a> was opened in read-only mode.</p>
+                        <p>Indicates if this Realm was opened in read-only mode.</p>
 
                       </div>
                       <div class="declaration">
@@ -286,7 +286,7 @@ strong references to it.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The <a href="../Classes/Schema.html">Schema</a> used by this realm.</p>
+                        <p>The Schema used by this realm.</p>
 
                       </div>
                       <div class="declaration">
@@ -316,7 +316,7 @@ strong references to it.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the <code>Configuration</code> that was used to create this <code><a href="../Classes/Realm.html">Realm</a></code> instance.</p>
+                        <p>Returns the <code><a href="../Classes/Realm/Configuration.html">Configuration</a></code> that was used to create this <code><a href="../Classes/Realm.html">Realm</a></code> instance.</p>
 
                       </div>
                       <div class="declaration">
@@ -346,7 +346,7 @@ strong references to it.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Indicates if this <a href="../Classes/Realm.html">Realm</a> contains any objects.</p>
+                        <p>Indicates if this Realm contains any objects.</p>
 
                       </div>
                       <div class="declaration">
@@ -387,8 +387,8 @@ strong references to it.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Obtains a <a href="../Classes/Realm.html">Realm</a> instance with the given configuration. Defaults to the default <a href="../Classes/Realm.html">Realm</a> configuration,
-which can be changed by setting <code><a href="../Classes/Realm.html">Realm</a>.Configuration.defaultConfiguration</code>.</p>
+                        <p>Obtains a Realm instance with the given configuration. Defaults to the default Realm configuration,
+which can be changed by setting <code><a href="../Classes/Realm/Configuration.html#/s:ZvVC10RealmSwift5Realm13Configuration20defaultConfigurationS1_">Realm.Configuration.defaultConfiguration</a></code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -438,7 +438,7 @@ which can be changed by setting <code><a href="../Classes/Realm.html">Realm</a>.
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Obtains a <a href="../Classes/Realm.html">Realm</a> instance persisted at the specified file path.</p>
+                        <p>Obtains a Realm instance persisted at the specified file path.</p>
 
                       </div>
                       <div class="declaration">
@@ -507,7 +507,7 @@ Calls to <code>write</code> from <code><a href="../Classes/Realm.html">Realm</a>
    until the current write transaction completes.</p>
 
 <p>Before executing the write transaction, <code>write</code> updates the <code><a href="../Classes/Realm.html">Realm</a></code> to the 
-latest <a href="../Classes/Realm.html">Realm</a> version, as if <code>refresh()</code> was called, and generates notifications 
+latest Realm version, as if <code><a href="../Classes/Realm.html#/s:FC10RealmSwift5Realm7refreshFS0_FT_Sb">refresh()</a></code> was called, and generates notifications 
 if applicable. This has no effect if the <code><a href="../Classes/Realm.html">Realm</a></code> was already up to date.</p>
 
                       </div>
@@ -567,7 +567,7 @@ already in a write transaction will throw an exception. Calls to
 until the current write transaction completes.</p>
 
 <p>Before beginning the write transaction, <code>beginWrite</code> updates the
-<code><a href="../Classes/Realm.html">Realm</a></code> to the latest <a href="../Classes/Realm.html">Realm</a> version, as if <code>refresh()</code> was called, and
+<code><a href="../Classes/Realm.html">Realm</a></code> to the latest Realm version, as if <code><a href="../Classes/Realm.html#/s:FC10RealmSwift5Realm7refreshFS0_FT_Sb">refresh()</a></code> was called, and
 generates notifications if applicable. This has no effect if the <code><a href="../Classes/Realm.html">Realm</a></code>
 was already up to date.</p>
 
@@ -639,11 +639,11 @@ the transaction.</p>
                       <div class="abstract">
                         <p>Revert all writes made in the current write transaction and end the transaction.</p>
 
-<p>This rolls back all objects in the <a href="../Classes/Realm.html">Realm</a> to the state they were in at the
+<p>This rolls back all objects in the Realm to the state they were in at the
 beginning of the write transaction, and then ends the transaction.</p>
 
 <p>This restores the data for deleted objects, but does not revive invalidated
-object instances. Any <code><a href="../Classes/Object.html">Object</a></code>s which were added to the <a href="../Classes/Realm.html">Realm</a> will be
+object instances. Any <code><a href="../Classes/Object.html">Object</a></code>s which were added to the Realm will be
 invalidated rather than switching back to standalone objects.
 Given the following code:</p>
 
@@ -690,13 +690,13 @@ the valid object.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Indicates if this <a href="../Classes/Realm.html">Realm</a> is currently in a write transaction.</p>
+                        <p>Indicates if this Realm is currently in a write transaction.</p>
 
 <div class="aside aside-warning">
           <p class="aside-title">Warning</p>
           Wrapping mutating operations in a write transaction if this property returns <code>false</code>
        may cause a large number of write transactions to be created, which could negatively
-       impact <a href="../Classes/Realm.html">Realm</a>&rsquo;s performance. Always prefer performing multiple mutations in a single
+       impact Realm&rsquo;s performance. Always prefer performing multiple mutations in a single
        transaction when possible.
 
         </div>
@@ -740,20 +740,20 @@ the valid object.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Adds or updates an object to be persisted it in this <a href="../Classes/Realm.html">Realm</a>.</p>
+                        <p>Adds or updates an object to be persisted it in this Realm.</p>
 
 <p>When &lsquo;update&rsquo; is &lsquo;true&rsquo;, the object must have a primary key. If no objects exist in
-the <a href="../Classes/Realm.html">Realm</a> instance with the same primary key value, the object is inserted. Otherwise,
+the Realm instance with the same primary key value, the object is inserted. Otherwise,
 the existing object is updated with any changed values.</p>
 
 <p>When added, all (child) relationships referenced by this object will also be
-added to the <a href="../Classes/Realm.html">Realm</a> if they are not already in it. If the object or any related
-objects already belong to a different <a href="../Classes/Realm.html">Realm</a> an exception will be thrown. Use one
+added to the Realm if they are not already in it. If the object or any related
+objects already belong to a different Realm an exception will be thrown. Use one
 of the <code>create</code> functions to insert a copy of a persisted object into a different
-<a href="../Classes/Realm.html">Realm</a>.</p>
+Realm.</p>
 
 <p>The object to be added must be valid and cannot have been previously deleted
-from a <a href="../Classes/Realm.html">Realm</a> (i.e. <code>invalidated</code> must be false).</p>
+from a Realm (i.e. <code>invalidated</code> must be false).</p>
 
                       </div>
                       <div class="declaration">
@@ -816,7 +816,7 @@ from a <a href="../Classes/Realm.html">Realm</a> (i.e. <code>invalidated</code> 
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Adds or updates objects in the given sequence to be persisted it in this <a href="../Classes/Realm.html">Realm</a>.</p>
+                        <p>Adds or updates objects in the given sequence to be persisted it in this Realm.</p>
 
 <div class="aside aside-see">
           <p class="aside-title">See</p>
@@ -895,7 +895,7 @@ from a <a href="../Classes/Realm.html">Realm</a> (i.e. <code>invalidated</code> 
 the object with the given value.</p>
 
 <p>When &lsquo;update&rsquo; is &lsquo;true&rsquo;, the object must have a primary key. If no objects exist in
-the <a href="../Classes/Realm.html">Realm</a> instance with the same primary key value, the object is inserted. Otherwise,
+the Realm instance with the same primary key value, the object is inserted. Otherwise,
 the existing object is updated with any changed values.</p>
 
 <div class="aside aside-warning">
@@ -994,7 +994,7 @@ the existing object is updated with any changed values.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Deletes the given object from this <a href="../Classes/Realm.html">Realm</a>.</p>
+                        <p>Deletes the given object from this Realm.</p>
 
 <div class="aside aside-warning">
           <p class="aside-title">Warning</p>
@@ -1050,7 +1050,7 @@ the existing object is updated with any changed values.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Deletes the given objects from this <a href="../Classes/Realm.html">Realm</a>.</p>
+                        <p>Deletes the given objects from this Realm.</p>
 
 <div class="aside aside-warning">
           <p class="aside-title">Warning</p>
@@ -1106,7 +1106,7 @@ the existing object is updated with any changed values.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Deletes all objects from this <a href="../Classes/Realm.html">Realm</a>.</p>
+                        <p>Deletes all objects from this Realm.</p>
 
 <div class="aside aside-warning">
           <p class="aside-title">Warning</p>
@@ -1153,7 +1153,7 @@ the existing object is updated with any changed values.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns all objects of the given type in the <a href="../Classes/Realm.html">Realm</a>.</p>
+                        <p>Returns all objects of the given type in the Realm.</p>
 
                       </div>
                       <div class="declaration">
@@ -1186,7 +1186,7 @@ the existing object is updated with any changed values.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>All objects of the given type in <a href="../Classes/Realm.html">Realm</a>.</p>
+                        <p>All objects of the given type in Realm.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -1216,7 +1216,7 @@ the existing object is updated with any changed values.</p>
 
 <div class="aside aside-see">
           <p class="aside-title">See</p>
-          <p><a href="../Classes/Object.html">Object</a>.primaryKey()</p>
+          <p>Object.primaryKey()</p>
 
         </div>
 
@@ -1297,7 +1297,7 @@ the existing object is updated with any changed values.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Add a notification handler for changes in this <a href="../Classes/Realm.html">Realm</a>.</p>
+                        <p>Add a notification handler for changes in this Realm.</p>
 
                       </div>
                       <div class="declaration">
@@ -1331,7 +1331,7 @@ the existing object is updated with any changed values.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>A notification token which can later be passed to <code>removeNotification(_:)</code> to remove this notification.</p>
+                        <p>A notification token which can later be passed to <code><a href="../Classes/Realm.html#/s:FC10RealmSwift5Realm18removeNotificationFS0_FCSo20RLMNotificationTokenT_">removeNotification(_:)</a></code> to remove this notification.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -1354,7 +1354,7 @@ the existing object is updated with any changed values.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Remove a previously registered notification handler using the token returned
-from <code>addNotificationBlock(_:)</code></p>
+from <code><a href="../Classes/Realm.html#/s:FC10RealmSwift5Realm20addNotificationBlockFS0_FFT12notificationOS_12Notification5realmS0__T_CSo20RLMNotificationToken">addNotificationBlock(_:)</a></code></p>
 
                       </div>
                       <div class="declaration">
@@ -1415,19 +1415,19 @@ from <code>addNotificationBlock(_:)</code></p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Whether this <a href="../Classes/Realm.html">Realm</a> automatically updates when changes happen in other threads.</p>
+                        <p>Whether this Realm automatically updates when changes happen in other threads.</p>
 
 <p>If set to <code>true</code> (the default), changes made on other threads will be reflected
-   in this <a href="../Classes/Realm.html">Realm</a> on the next cycle of the run loop after the changes are
-   committed.  If set to <code>false</code>, you must manually call <code>refresh()</code> on the <a href="../Classes/Realm.html">Realm</a> to
+   in this Realm on the next cycle of the run loop after the changes are
+   committed.  If set to <code>false</code>, you must manually call <code><a href="../Classes/Realm.html#/s:FC10RealmSwift5Realm7refreshFS0_FT_Sb">refresh()</a></code> on the Realm to
    update it to get the latest version.</p>
 
 <p>Note that on background threads, the run loop is not run by default and you will 
-will need to manually call <code>refresh()</code> in order to update to the latest version,
+will need to manually call <code><a href="../Classes/Realm.html#/s:FC10RealmSwift5Realm7refreshFS0_FT_Sb">refresh()</a></code> in order to update to the latest version,
 even if <code>autorefresh</code> is set to <code>true</code>.</p>
 
-<p>Even with this enabled, you can still call <code>refresh()</code> at any time to update the
-   <a href="../Classes/Realm.html">Realm</a> before the automatic refresh would occur.</p>
+<p>Even with this enabled, you can still call <code><a href="../Classes/Realm.html#/s:FC10RealmSwift5Realm7refreshFS0_FT_Sb">refresh()</a></code> at any time to update the
+   Realm before the automatic refresh would occur.</p>
 
 <p>Notifications are sent when a write transaction is committed whether or not
    this is enabled.</p>
@@ -1437,8 +1437,8 @@ even if <code>autorefresh</code> is set to <code>true</code>.</p>
    object is created. This is normally irrelevant as it means that there is
    nothing to refresh (as persisted <code><a href="../Classes/Object.html">Object</a></code>s, <code><a href="../Classes/List.html">List</a></code>s, and <code><a href="../Classes/Results.html">Results</a></code> have strong
    references to the containing <code><a href="../Classes/Realm.html">Realm</a></code>), but it means that setting
-   <code><a href="../Classes/Realm.html">Realm</a>().autorefresh = false</code> in
-   <code>application(_:didFinishLaunchingWithOptions:)</code> and only later storing <a href="../Classes/Realm.html">Realm</a>
+   <code>Realm().autorefresh = false</code> in
+   <code>application(_:didFinishLaunchingWithOptions:)</code> and only later storing Realm
    objects will not work.</p>
 
 <p>Defaults to true.</p>
@@ -1518,24 +1518,24 @@ data for this <code><a href="../Classes/Realm.html">Realm</a></code>.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Invalidate all <code><a href="../Classes/Object.html">Object</a></code>s and <code><a href="../Classes/Results.html">Results</a></code> read from this <a href="../Classes/Realm.html">Realm</a>.</p>
+                        <p>Invalidate all <code><a href="../Classes/Object.html">Object</a></code>s and <code><a href="../Classes/Results.html">Results</a></code> read from this Realm.</p>
 
-<p>A <a href="../Classes/Realm.html">Realm</a> holds a read lock on the version of the data accessed by it, so
-that changes made to the <a href="../Classes/Realm.html">Realm</a> on different threads do not modify or delete the
-data seen by this <a href="../Classes/Realm.html">Realm</a>. Calling this method releases the read lock,
+<p>A Realm holds a read lock on the version of the data accessed by it, so
+that changes made to the Realm on different threads do not modify or delete the
+data seen by this Realm. Calling this method releases the read lock,
 allowing the space used on disk to be reused by later write transactions rather
 than growing the file. This method should be called before performing long
 blocking operations on a background thread on which you previously read data
-from the <a href="../Classes/Realm.html">Realm</a> which you no longer need.</p>
+from the Realm which you no longer need.</p>
 
 <p>All <code><a href="../Classes/Object.html">Object</a></code>, <code><a href="../Classes/Results.html">Results</a></code> and <code><a href="../Classes/List.html">List</a></code> instances obtained from this
 <code><a href="../Classes/Realm.html">Realm</a></code> on the current thread are invalidated, and can not longer be used.
 The <code><a href="../Classes/Realm.html">Realm</a></code> itself remains valid, and a new read transaction is implicitly
-begun the next time data is read from the <a href="../Classes/Realm.html">Realm</a>.</p>
+begun the next time data is read from the Realm.</p>
 
 <p>Calling this method multiple times in a row without reading any data from the
-<a href="../Classes/Realm.html">Realm</a>, or before ever reading any data from the <a href="../Classes/Realm.html">Realm</a> is a no-op. This method
-cannot be called on a read-only <a href="../Classes/Realm.html">Realm</a>.</p>
+Realm, or before ever reading any data from the Realm is a no-op. This method
+cannot be called on a read-only Realm.</p>
 
                       </div>
                       <div class="declaration">
@@ -1576,7 +1576,7 @@ cannot be called on a read-only <a href="../Classes/Realm.html">Realm</a>.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Write an encrypted and compacted copy of the <a href="../Classes/Realm.html">Realm</a> to the given path.</p>
+                        <p>Write an encrypted and compacted copy of the Realm to the given path.</p>
 
 <p>The destination file cannot already exist.</p>
 
@@ -1648,7 +1648,7 @@ cannot be called on a read-only <a href="../Classes/Realm.html">Realm</a>.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A <code><a href="../Classes/Realm.html">Realm</a>.Configuration</code> is used to describe the different options used to
+                        <p>A <code>Realm.Configuration</code> is used to describe the different options used to
 create a <code><a href="../Classes/Realm.html">Realm</a></code> instance.</p>
 
                         <a href="../Classes/Realm/Configuration.html" class="slightly-smaller">See more</a>

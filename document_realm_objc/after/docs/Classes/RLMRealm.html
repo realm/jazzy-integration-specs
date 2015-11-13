@@ -215,7 +215,7 @@ your Application on iOS, and in your application&rsquo;s Application Support
 directory on OS X.</p>
 
 <p>The default Realm is created using the default <code><a href="../Classes/RLMRealmConfiguration.html">RLMRealmConfiguration</a></code>, which
-can be changed via <code>+[<a href="../Classes/RLMRealmConfiguration.html">RLMRealmConfiguration</a> setDefaultConfiguration:]</code>.</p>
+can be changed via <code>+[RLMRealmConfiguration setDefaultConfiguration:]</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -437,7 +437,7 @@ can be changed via <code>+[<a href="../Classes/RLMRealmConfiguration.html">RLMRe
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The <a href="../Classes/RLMSchema.html">RLMSchema</a> used by this <a href="../Classes/RLMRealm.html">RLMRealm</a>.</p>
+                        <p>The RLMSchema used by this RLMRealm.</p>
 
                       </div>
                       <div class="declaration">
@@ -577,11 +577,11 @@ can be changed via <code>+[<a href="../Classes/RLMRealmConfiguration.html">RLMRe
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Add a notification handler for changes in this <a href="../Classes/RLMRealm.html">RLMRealm</a>.</p>
+                        <p>Add a notification handler for changes in this RLMRealm.</p>
 
 <p>The block has the following definition:</p>
 
-<pre class="highlight plaintext"><code>typedef void(^<a href="../Type Definitions.html#/c:RLMRealm.h@T@RLMNotificationBlock">RLMNotificationBlock</a>)(NSString *notification, <a href="../Classes/RLMRealm.html">RLMRealm</a> *realm);
+<pre class="highlight plaintext"><code>typedef void(^RLMNotificationBlock)(NSString *notification, RLMRealm *realm);
 </code></pre>
 
 <p>It receives the following parameters:</p>
@@ -625,7 +625,7 @@ can be changed via <code>+[<a href="../Classes/RLMRealmConfiguration.html">RLMRe
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>A token object which can later be passed to <code>-removeNotification:</code>
+                        <p>A token object which can later be passed to <code><a href="../Classes/RLMRealm.html#/c:objc(cs)RLMRealm(im)removeNotification:">-removeNotification:</a></code>
         to remove this notification.</p>
 
                       </div>
@@ -649,7 +649,7 @@ can be changed via <code>+[<a href="../Classes/RLMRealmConfiguration.html">RLMRe
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Remove a previously registered notification handler using the token returned
-from <code>-addNotificationBlock:</code></p>
+from <code><a href="../Classes/RLMRealm.html#/c:objc(cs)RLMRealm(im)addNotificationBlock:">-addNotificationBlock:</a></code></p>
 
                       </div>
                       <div class="declaration">
@@ -1059,7 +1059,7 @@ have any effect, and it will switch back to YES the next time the <code><a href=
 object is created. This is normally irrelevant as it means that there is
 nothing to refresh (as persisted <code><a href="../Classes/RLMObject.html">RLMObject</a></code>s, <code><a href="../Classes/RLMArray.html">RLMArray</a></code>s, and <code><a href="../Classes/RLMResults.html">RLMResults</a></code> have strong
 references to the containing <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code>), but it means that setting
-<code><a href="../Classes/RLMRealm.html">RLMRealm</a>.defaultRealm.autorefresh = NO</code> in
+<code>RLMRealm.defaultRealm.autorefresh = NO</code> in
 <code>application:didFinishLaunchingWithOptions:</code> and only later storing Realm
 objects will not work.</p>
 
@@ -1093,7 +1093,7 @@ objects will not work.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Write a compacted copy of the <a href="../Classes/RLMRealm.html">RLMRealm</a> to the given path.</p>
+                        <p>Write a compacted copy of the RLMRealm to the given path.</p>
 
 <p>The destination file cannot already exist.</p>
 
@@ -1167,7 +1167,7 @@ objects will not work.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Write an encrypted and compacted copy of the <a href="../Classes/RLMRealm.html">RLMRealm</a> to the given path.</p>
+                        <p>Write an encrypted and compacted copy of the RLMRealm to the given path.</p>
 
 <p>The destination file cannot already exist.</p>
 
@@ -1255,11 +1255,11 @@ objects will not work.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Invalidate all RLMObjects and <a href="../Classes/RLMResults.html">RLMResults</a> read from this Realm.</p>
+                        <p>Invalidate all RLMObjects and RLMResults read from this Realm.</p>
 
-<p>An <a href="../Classes/RLMRealm.html">RLMRealm</a> holds a read lock on the version of the data accessed by it, so
+<p>An RLMRealm holds a read lock on the version of the data accessed by it, so
 that changes made to the Realm on different threads do not modify or delete the
-data seen by this <a href="../Classes/RLMRealm.html">RLMRealm</a>. Calling this method releases the read lock,
+data seen by this RLMRealm. Calling this method releases the read lock,
 allowing the space used on disk to be reused by later write transactions rather
 than growing the file. This method should be called before performing long
 blocking operations on a background thread on which you previously read data
@@ -1320,7 +1320,7 @@ on <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> and on subclasse
 objects referenced by this object will also be added to the Realm if they are
 not already in it. If the object or any linked objects already belong to a
 different Realm an exception will be thrown. Use
-<code>-[<a href="../Classes/RLMObject.html">RLMObject</a> createInRealm:withObject]</code> to insert a copy of a persisted object
+<code>-[RLMObject createInRealm:withObject]</code> to insert a copy of a persisted object
 into a different Realm.</p>
 
 <p>The object to be added must be valid and cannot have been previously deleted
@@ -1434,11 +1434,11 @@ from a Realm (i.e. <code>isInvalidated</code>) must be false.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Adds or updates an object to be persisted it in this Realm. The object provided must have a designated
-primary key. If no objects exist in the <a href="../Classes/RLMRealm.html">RLMRealm</a> instance with the same primary key value, the object is
+primary key. If no objects exist in the RLMRealm instance with the same primary key value, the object is
 inserted. Otherwise, the existing object is updated with any changed values.</p>
 
 <p>As with <code>addObject:</code>, the object cannot already be persisted in a different
-Realm. Use <code>-[<a href="../Classes/RLMObject.html">RLMObject</a> createOrUpdateInRealm:withValue:]</code> to copy values to
+Realm. Use <code>-[RLMObject createOrUpdateInRealm:withValue:]</code> to copy values to
 a different Realm.</p>
 
                       </div>
@@ -1737,7 +1737,7 @@ a different Realm.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The version of the Realm at <code>realmPath</code> or <a href="../Constants.html#/c:@RLMNotVersioned">RLMNotVersioned</a> if the version cannot be read.</p>
+                        <p>The version of the Realm at <code>realmPath</code> or RLMNotVersioned if the version cannot be read.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -1822,7 +1822,7 @@ a different Realm.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The version of the Realm at <code>realmPath</code> or <a href="../Constants.html#/c:@RLMNotVersioned">RLMNotVersioned</a> if the version cannot be read.</p>
+                        <p>The version of the Realm at <code>realmPath</code> or RLMNotVersioned if the version cannot be read.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -1852,7 +1852,7 @@ exactly when and how migrations are performed.</p>
 
 <div class="aside aside-see">
           <p class="aside-title">See</p>
-          <p><a href="../Classes/RLMMigration.html">RLMMigration</a></p>
+          <p>RLMMigration</p>
 
         </div>
 
