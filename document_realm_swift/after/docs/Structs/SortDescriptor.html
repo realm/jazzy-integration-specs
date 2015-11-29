@@ -46,7 +46,7 @@
       <nav class="sidebar">
         <ul class="nav-groups">
           <li class="nav-group-name">
-          <a href="../Classes.html">Classes</a>
+            <a href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Classes/AnyRealmCollection.html">AnyRealmCollection</a>
@@ -84,7 +84,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-          <a href="../Enums.html">Enums</a>
+            <a href="../Enums.html">Enums</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Enums/Notification.html">Notification</a>
@@ -92,24 +92,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-          <a href="../Extensions.html">Extensions</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Extensions/List.html">List</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/Realm.html">Realm</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/Results.html">Results</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/SortDescriptor.html">SortDescriptor</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-          <a href="../Functions.html">Functions</a>
+            <a href="../Functions.html">Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Functions.html#/s:ZF10RealmSwiftoi2eeFTVS_14SortDescriptorS0__Sb">==(_:_:)</a>
@@ -118,33 +101,24 @@
                 <a href="../Functions.html#/s:ZF10RealmSwiftoi2eeFTCS_6SchemaS0__Sb">==(_:_:)</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Functions.html#/s:ZF10RealmSwiftoi2eeFTCS_12ObjectSchemaS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Functions.html#/s:ZF10RealmSwiftoi2eeFTCS_5RealmS0__Sb">==(_:_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Functions.html#/s:ZF10RealmSwiftoi2eeFTCS_8PropertyS0__Sb">==(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:ZF10RealmSwiftoi2eeFTCS_12ObjectSchemaS0__Sb">==(_:_:)</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Functions.html#/s:F10RealmSwift12migrateRealmFTVCS_5Realm13Configuration_GSqCSo7NSError_">migrateRealm(_:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Functions.html#/s:F10RealmSwift12migrateRealmFTSS13encryptionKeyGSqCSo6NSData__GSqCSo7NSError_">migrateRealm(_:encryptionKey:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Functions.html#/s:F10RealmSwift19schemaVersionAtPathFTSS13encryptionKeyGSqCSo6NSData_5errorGVSs33AutoreleasingUnsafeMutablePointerGSqCSo7NSError___GSqVSs6UInt64_">schemaVersionAtPath(_:encryptionKey:error:)</a>
               </li>
-              <li class="nav-group-task">
-                <a href="../Functions.html#/s:F10RealmSwift28setDefaultRealmSchemaVersionFTVSs6UInt6414migrationBlockFT9migrationCS_9Migration16oldSchemaVersionS0__T__T_">setDefaultRealmSchemaVersion(_:migrationBlock:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Functions.html#/s:F10RealmSwift16setSchemaVersionFTVSs6UInt649realmPathSS14migrationBlockFT9migrationCS_9Migration16oldSchemaVersionS0__T__T_">setSchemaVersion(_:realmPath:migrationBlock:)</a>
-              </li>
             </ul>
           </li>
           <li class="nav-group-name">
-          <a href="../Protocols.html">Protocols</a>
+            <a href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Protocols.html#/s:P10RealmSwift11AddableType">AddableType</a>
@@ -161,7 +135,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-          <a href="../Structs.html">Structs</a>
+            <a href="../Structs.html">Structs</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Structs/SortDescriptor.html">SortDescriptor</a>
@@ -169,7 +143,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-          <a href="../Typealiases.html">Typealiases</a>
+            <a href="../Typealiases.html">Typealiases</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:10RealmSwift14MigrationBlock">MigrationBlock</a>
@@ -197,21 +171,27 @@
         <section>
           <section class="section">
             <h1>SortDescriptor</h1>
-            <p>A <code><a href="../Extensions/SortDescriptor.html">SortDescriptor</a></code> stores a property name and a sort order for use with
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">SortDescriptor</span></code></pre>
+
+                </div>
+              </div>
+            <p>A <code>SortDescriptor</code> stores a property name and a sort order for use with
 <code>sorted(sortDescriptors:)</code>. It is similar to <code>NSSortDescriptor</code>, but supports
-only the subset of functionality which can be efficiently run by <a href="../Classes/Realm.html">Realm</a>&rsquo;s query
+only the subset of functionality which can be efficiently run by Realm&rsquo;s query
 engine.</p>
 
           </section>
           <section class="section task-group-section">
             <div class="task-group">
-                <div class="task-name-container">
-                  <a name="/Properties"></a>
-                  <a name="//apple_ref/swift/Section/Properties" class="dashAnchor"></a>
-                  <a href="#/Properties">
-                    <h3 class="section-name">Properties</h3>
-                  </a>
-                </div>
+              <div class="task-name-container">
+                <a name="/Properties"></a>
+                <a name="//apple_ref/swift/Section/Properties" class="dashAnchor"></a>
+                <a href="#/Properties">
+                  <h3 class="section-name">Properties</h3>
+                </a>
+              </div>
               <ul>
                 <li class="item">
                   <div>
@@ -231,7 +211,7 @@ engine.</p>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">property</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
@@ -261,7 +241,7 @@ engine.</p>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">ascending</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
 
@@ -276,13 +256,13 @@ engine.</p>
               </ul>
             </div>
             <div class="task-group">
-                <div class="task-name-container">
-                  <a name="/Initializers"></a>
-                  <a name="//apple_ref/swift/Section/Initializers" class="dashAnchor"></a>
-                  <a href="#/Initializers">
-                    <h3 class="section-name">Initializers</h3>
-                  </a>
-                </div>
+              <div class="task-name-container">
+                <a name="/Initializers"></a>
+                <a name="//apple_ref/swift/Section/Initializers" class="dashAnchor"></a>
+                <a href="#/Initializers">
+                  <h3 class="section-name">Initializers</h3>
+                </a>
+              </div>
               <ul>
                 <li class="item">
                   <div>
@@ -297,12 +277,12 @@ engine.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Creates a <code><a href="../Extensions/SortDescriptor.html">SortDescriptor</a></code> with the given property and ascending values.</p>
+                        <p>Creates a <code><a href="../Structs/SortDescriptor.html">SortDescriptor</a></code> with the given property and ascending values.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">property</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="k">as</span><span class="nv">cending</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span></code></pre>
 
@@ -350,13 +330,13 @@ engine.</p>
               </ul>
             </div>
             <div class="task-group">
-                <div class="task-name-container">
-                  <a name="/Functions"></a>
-                  <a name="//apple_ref/swift/Section/Functions" class="dashAnchor"></a>
-                  <a href="#/Functions">
-                    <h3 class="section-name">Functions</h3>
-                  </a>
-                </div>
+              <div class="task-name-container">
+                <a name="/Functions"></a>
+                <a name="//apple_ref/swift/Section/Functions" class="dashAnchor"></a>
+                <a href="#/Functions">
+                  <h3 class="section-name">Functions</h3>
+                </a>
+              </div>
               <ul>
                 <li class="item">
                   <div>
@@ -371,12 +351,12 @@ engine.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns a copy of the receiver with the sort order reversed.</p>
+                        <p>Returns a copy of the <code><a href="../Structs/SortDescriptor.html">SortDescriptor</a></code> with the sort order reversed.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">reversed</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">SortDescriptor</span></code></pre>
 
@@ -384,6 +364,194 @@ engine.</p>
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/SortDescriptor.swift#L59-L61">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vV10RealmSwift14SortDescriptor11descriptionSS"></a>
+                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vV10RealmSwift14SortDescriptor11descriptionSS">description</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a human-readable description of the sort descriptor.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/SortDescriptor.swift#L68-L71">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FV10RealmSwift14SortDescriptorcFMS0_FT20unicodeScalarLiteralSS_S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(unicodeScalarLiteral:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FV10RealmSwift14SortDescriptorcFMS0_FT20unicodeScalarLiteralSS_S0_">init(unicodeScalarLiteral:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a <code><a href="../Structs/SortDescriptor.html">SortDescriptor</a></code> from a <code>UnicodeScalarLiteralType</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">unicodeScalarLiteral</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">UnicodeScalarLiteralType</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>unicodeScalarLiteral</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Property name literal.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/SortDescriptor.swift#L99-L101">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FV10RealmSwift14SortDescriptorcFMS0_FT30extendedGraphemeClusterLiteralSS_S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(extendedGraphemeClusterLiteral:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FV10RealmSwift14SortDescriptorcFMS0_FT30extendedGraphemeClusterLiteralSS_S0_">init(extendedGraphemeClusterLiteral:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a <code><a href="../Structs/SortDescriptor.html">SortDescriptor</a></code> from an <code>ExtendedGraphemeClusterLiteralType</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">extendedGraphemeClusterLiteral</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">ExtendedGraphemeClusterLiteralType</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>extendedGraphemeClusterLiteral</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Property name literal.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/SortDescriptor.swift#L108-L110">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FV10RealmSwift14SortDescriptorcFMS0_FT13stringLiteralSS_S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(stringLiteral:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FV10RealmSwift14SortDescriptorcFMS0_FT13stringLiteralSS_S0_">init(stringLiteral:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a <code><a href="../Structs/SortDescriptor.html">SortDescriptor</a></code> from a <code>StringLiteralType</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">stringLiteral</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">StringLiteralType</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>stringLiteral</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Property name literal.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/SortDescriptor.swift#L117-L119">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

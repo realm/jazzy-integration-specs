@@ -46,7 +46,7 @@
       <nav class="sidebar">
         <ul class="nav-groups">
           <li class="nav-group-name">
-          <a href="../Classes.html">Classes</a>
+            <a href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Classes/AnyRealmCollection.html">AnyRealmCollection</a>
@@ -84,7 +84,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-          <a href="../Enums.html">Enums</a>
+            <a href="../Enums.html">Enums</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Enums/Notification.html">Notification</a>
@@ -92,24 +92,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-          <a href="../Extensions.html">Extensions</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Extensions/List.html">List</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/Realm.html">Realm</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/Results.html">Results</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/SortDescriptor.html">SortDescriptor</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-          <a href="../Functions.html">Functions</a>
+            <a href="../Functions.html">Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Functions.html#/s:ZF10RealmSwiftoi2eeFTVS_14SortDescriptorS0__Sb">==(_:_:)</a>
@@ -118,33 +101,24 @@
                 <a href="../Functions.html#/s:ZF10RealmSwiftoi2eeFTCS_6SchemaS0__Sb">==(_:_:)</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Functions.html#/s:ZF10RealmSwiftoi2eeFTCS_12ObjectSchemaS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Functions.html#/s:ZF10RealmSwiftoi2eeFTCS_5RealmS0__Sb">==(_:_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Functions.html#/s:ZF10RealmSwiftoi2eeFTCS_8PropertyS0__Sb">==(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:ZF10RealmSwiftoi2eeFTCS_12ObjectSchemaS0__Sb">==(_:_:)</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Functions.html#/s:F10RealmSwift12migrateRealmFTVCS_5Realm13Configuration_GSqCSo7NSError_">migrateRealm(_:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Functions.html#/s:F10RealmSwift12migrateRealmFTSS13encryptionKeyGSqCSo6NSData__GSqCSo7NSError_">migrateRealm(_:encryptionKey:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Functions.html#/s:F10RealmSwift19schemaVersionAtPathFTSS13encryptionKeyGSqCSo6NSData_5errorGVSs33AutoreleasingUnsafeMutablePointerGSqCSo7NSError___GSqVSs6UInt64_">schemaVersionAtPath(_:encryptionKey:error:)</a>
               </li>
-              <li class="nav-group-task">
-                <a href="../Functions.html#/s:F10RealmSwift28setDefaultRealmSchemaVersionFTVSs6UInt6414migrationBlockFT9migrationCS_9Migration16oldSchemaVersionS0__T__T_">setDefaultRealmSchemaVersion(_:migrationBlock:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Functions.html#/s:F10RealmSwift16setSchemaVersionFTVSs6UInt649realmPathSS14migrationBlockFT9migrationCS_9Migration16oldSchemaVersionS0__T__T_">setSchemaVersion(_:realmPath:migrationBlock:)</a>
-              </li>
             </ul>
           </li>
           <li class="nav-group-name">
-          <a href="../Protocols.html">Protocols</a>
+            <a href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Protocols.html#/s:P10RealmSwift11AddableType">AddableType</a>
@@ -161,7 +135,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-          <a href="../Structs.html">Structs</a>
+            <a href="../Structs.html">Structs</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Structs/SortDescriptor.html">SortDescriptor</a>
@@ -169,7 +143,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-          <a href="../Typealiases.html">Typealiases</a>
+            <a href="../Typealiases.html">Typealiases</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:10RealmSwift14MigrationBlock">MigrationBlock</a>
@@ -197,6 +171,12 @@
         <section>
           <section class="section">
             <h1>Notification</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Notification</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                </div>
+              </div>
             <p>A notification due to changes to a realm.</p>
 
           </section>
@@ -218,21 +198,21 @@
                       <div class="abstract">
                         <p>Posted when the data in a realm has changed.</p>
 
-<p>DidChange are posted after a realm has been refreshed to reflect a write transaction, i.e. when
+<p>DidChange is posted after a realm has been refreshed to reflect a write transaction, i.e. when
 an autorefresh occurs, <code>refresh()</code> is called, after an implicit refresh from
-<code>beginWriteTransaction()</code>, and after a local write transaction is committed.</p>
+<code>write(_:)</code>/<code>beginWrite()</code>, and after a local write transaction is committed.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="k">case</span> <span class="kt">DidChange</span> <span class="o">=</span> <span class="s">"RLMRealmDidChangeNotification"</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/Realm.swift#L649">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/Realm.swift#L590">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -254,26 +234,26 @@ an autorefresh occurs, <code>refresh()</code> is called, after an implicit refre
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Posted when a write transaction has been committed to a realm on a different thread for the same
-file. This is not posted if <code>autorefresh</code> is enabled or if the <a href="../Classes/Realm.html">Realm</a> is refreshed before the
-notifcation has a chance to run.</p>
+                        <p>Posted when a write transaction has been committed to a Realm on a different thread for the same
+file. This is not posted if <code>autorefresh</code> is enabled or if the Realm is refreshed before the
+notification has a chance to run.</p>
 
 <p>Realms with autorefresh disabled should normally have a handler for this notification which
 calls <code>refresh()</code> after doing some work.
-While not refreshing is allowed, it may lead to large <a href="../Classes/Realm.html">Realm</a> files as <a href="../Classes/Realm.html">Realm</a> has to keep an extra
-copy of the data for the un-refreshed <a href="../Classes/Realm.html">Realm</a>.</p>
+While not refreshing is allowed, it may lead to large Realm files as Realm has to keep an extra
+copy of the data for the un-refreshed Realm.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
-                        <div class="Swift">
+                        <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="k">case</span> <span class="kt">RefreshRequired</span> <span class="o">=</span> <span class="s">"RLMRealmRefreshRequiredNotification"</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/Realm.swift#L661">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/RealmSwift-swift2.0/Realm.swift#L602">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
