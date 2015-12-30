@@ -1,81 +1,359 @@
+CredentialsPlugin.swift
+	public init(credentialsClosure: CredentialClosure)
+	public func willSendRequest(request: RequestType, target: TargetType)
+	public func didReceiveResponse(result: Result<Moya.Response, Moya.Error>, target: TargetType)
+	public init(credentialsClosure: CredentialClosure)
+	public func willSendRequest(request: RequestType, target: TargetType)
+	public func didReceiveResponse(result: Result<Moya.Response, Moya.Error>, target: TargetType)
+	public init(credentialsClosure: CredentialClosure)
+	public func willSendRequest(request: RequestType, target: TargetType)
+	public func didReceiveResponse(result: Result<Moya.Response, Moya.Error>, target: TargetType)
+	public init(credentialsClosure: CredentialClosure)
+	public func willSendRequest(request: RequestType, target: TargetType)
+	public func didReceiveResponse(result: Result<Moya.Response, Moya.Error>, target: TargetType)
 Endpoint.swift
 	public let URL: String
 	public let method: Moya.Method
-	public let sampleResponse: EndpointSampleResponse
-	public let parameters: [String: AnyObject]
+	public let sampleResponseClosure: SampleResponseClosure
+	public let parameters: [String: AnyObject]?
 	public let parameterEncoding: Moya.ParameterEncoding
-	public let httpHeaderFields: [String: AnyObject]
+	public let httpHeaderFields: [String: String]?
 	public var urlRequest: NSURLRequest
+	public func ==<T>(lhs: Endpoint<T>, rhs: Endpoint<T>) -> Bool
+	public var hashValue: Int
 	public let URL: String
 	public let method: Moya.Method
-	public let sampleResponse: EndpointSampleResponse
-	public let parameters: [String: AnyObject]
+	public let sampleResponseClosure: SampleResponseClosure
+	public let parameters: [String: AnyObject]?
 	public let parameterEncoding: Moya.ParameterEncoding
-	public let httpHeaderFields: [String: AnyObject]
+	public let httpHeaderFields: [String: String]?
 	public var urlRequest: NSURLRequest
+	public func ==<T>(lhs: Endpoint<T>, rhs: Endpoint<T>) -> Bool
+	public var hashValue: Int
 	public let URL: String
 	public let method: Moya.Method
-	public let sampleResponse: EndpointSampleResponse
-	public let parameters: [String: AnyObject]
+	public let sampleResponseClosure: SampleResponseClosure
+	public let parameters: [String: AnyObject]?
 	public let parameterEncoding: Moya.ParameterEncoding
-	public let httpHeaderFields: [String: AnyObject]
+	public let httpHeaderFields: [String: String]?
 	public var urlRequest: NSURLRequest
+	public func ==<T>(lhs: Endpoint<T>, rhs: Endpoint<T>) -> Bool
+	public var hashValue: Int
+	public let URL: String
+	public let method: Moya.Method
+	public let sampleResponseClosure: SampleResponseClosure
+	public let parameters: [String: AnyObject]?
+	public let parameterEncoding: Moya.ParameterEncoding
+	public let httpHeaderFields: [String: String]?
+	public var urlRequest: NSURLRequest
+	public func ==<T>(lhs: Endpoint<T>, rhs: Endpoint<T>) -> Bool
+	public var hashValue: Int
+Error.swift
+	public enum Error: ErrorType
+	case ImageMapping(Response)
+	case JSONMapping(Response)
+	case StringMapping(Response)
+	case StatusCode(Response)
+	case Data(Response)
+	case Underlying(ErrorType)
+	public let MoyaErrorDomain = "Moya"
+	public enum MoyaErrorCode: Int
+	case ImageMapping = 0
+	case JSONMapping
+	case StringMapping
+	case StatusCode
+	case Data
+	public enum Error : ErrorType
+	var nsError: NSError
+	public enum Error: ErrorType
+	case ImageMapping(Response)
+	case JSONMapping(Response)
+	case StringMapping(Response)
+	case StatusCode(Response)
+	case Data(Response)
+	case Underlying(ErrorType)
+	public let MoyaErrorDomain = "Moya"
+	public enum MoyaErrorCode: Int
+	case ImageMapping = 0
+	case JSONMapping
+	case StringMapping
+	case StatusCode
+	case Data
+	public enum Error : ErrorType
+	var nsError: NSError
+	public enum Error: ErrorType
+	case ImageMapping(Response)
+	case JSONMapping(Response)
+	case StringMapping(Response)
+	case StatusCode(Response)
+	case Data(Response)
+	case Underlying(ErrorType)
+	public let MoyaErrorDomain = "Moya"
+	public enum MoyaErrorCode: Int
+	case ImageMapping = 0
+	case JSONMapping
+	case StringMapping
+	case StatusCode
+	case Data
+	public enum Error : ErrorType
+	var nsError: NSError
+	public enum Error: ErrorType
+	case ImageMapping(Response)
+	case JSONMapping(Response)
+	case StringMapping(Response)
+	case StatusCode(Response)
+	case Data(Response)
+	case Underlying(ErrorType)
+	public let MoyaErrorDomain = "Moya"
+	public enum MoyaErrorCode: Int
+	case ImageMapping = 0
+	case JSONMapping
+	case StringMapping
+	case StatusCode
+	case Data
+	public enum Error : ErrorType
+	var nsError: NSError
 Moya.swift
-	public enum StubbedBehavior
-	var path: String { get }
+	case GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH, TRACE, CONNECT
+	case GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH, TRACE, CONNECT
+	case GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH, TRACE, CONNECT
+	case GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH, TRACE, CONNECT
+	case GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH, TRACE, CONNECT
+	case GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH, TRACE, CONNECT
+	case GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH, TRACE, CONNECT
+	case GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH, TRACE, CONNECT
+	case GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH, TRACE, CONNECT
+	case URL
+	case JSON
+	case PropertyList(NSPropertyListFormat, NSPropertyListWriteOptions)
+	case Custom((URLRequestConvertible, [String: AnyObject]?) -> (NSMutableURLRequest, NSError?))
+	public enum StubBehavior
+	case Never
+	case Immediate
+	case Delayed(seconds: NSTimeInterval)
 	var baseURL: NSURL { get }
-	var sampleData: NSData { get }
-	public let endpointsClosure: MoyaEndpointsClosure
-	public let endpointResolver: MoyaEndpointResolution
-	public let stubResponses: Bool
-	public let stubBehavior: MoyaStubbedBehavior
-	public func request(token: T, parameters: [String: AnyObject], completion: MoyaCompletion)
-	public func request(token: T, method: Moya.Method, completion: MoyaCompletion)
-	public func request(token: T, completion: MoyaCompletion)
-	public class func DefaultEnpointResolution() -> MoyaEndpointResolution
-	public class func DefaultStubBehavior(_: T) -> Moya.StubbedBehavior
-	public enum StubbedBehavior
 	var path: String { get }
-	var baseURL: NSURL { get }
+	var method: Moya.Method { get }
+	var parameters: [String: AnyObject]? { get }
 	var sampleData: NSData { get }
-	public let endpointsClosure: MoyaEndpointsClosure
-	public let endpointResolver: MoyaEndpointResolution
-	public let stubResponses: Bool
-	public let stubBehavior: MoyaStubbedBehavior
-	public func request(token: T, parameters: [String: AnyObject], completion: MoyaCompletion)
-	public func request(token: T, method: Moya.Method, completion: MoyaCompletion)
-	public func request(token: T, completion: MoyaCompletion)
-	public class func DefaultEnpointResolution() -> MoyaEndpointResolution
-	public class func DefaultStubBehavior(_: T) -> Moya.StubbedBehavior
-	public enum StubbedBehavior
+	func cancel()
+	public let endpointClosure: EndpointClosure
+	public let requestClosure: RequestClosure
+	public let stubClosure: StubClosure
+	public let manager: Manager
+	public final class func DefaultEndpointMapping(target: Target) -> Endpoint<Target>
+	public final class func DefaultRequestMapping(endpoint: Endpoint<Target>, closure: NSURLRequest -> Void)
+	public final class func NeverStub(_: Target) -> Moya.StubBehavior
+	public final class func ImmediatelyStub(_: Target) -> Moya.StubBehavior
+	public final class func DelayedStub(seconds: NSTimeInterval)(_: Target) -> Moya.StubBehavior
+	case GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH, TRACE, CONNECT
+	case GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH, TRACE, CONNECT
+	case GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH, TRACE, CONNECT
+	case GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH, TRACE, CONNECT
+	case GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH, TRACE, CONNECT
+	case GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH, TRACE, CONNECT
+	case GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH, TRACE, CONNECT
+	case GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH, TRACE, CONNECT
+	case GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH, TRACE, CONNECT
+	case URL
+	case JSON
+	case PropertyList(NSPropertyListFormat, NSPropertyListWriteOptions)
+	case Custom((URLRequestConvertible, [String: AnyObject]?) -> (NSMutableURLRequest, NSError?))
+	public enum StubBehavior
+	case Never
+	case Immediate
+	case Delayed(seconds: NSTimeInterval)
+	var baseURL: NSURL { get }
 	var path: String { get }
-	var baseURL: NSURL { get }
+	var method: Moya.Method { get }
+	var parameters: [String: AnyObject]? { get }
 	var sampleData: NSData { get }
-	public let endpointsClosure: MoyaEndpointsClosure
-	public let endpointResolver: MoyaEndpointResolution
-	public let stubResponses: Bool
-	public let stubBehavior: MoyaStubbedBehavior
-	public func request(token: T, parameters: [String: AnyObject], completion: MoyaCompletion)
-	public func request(token: T, method: Moya.Method, completion: MoyaCompletion)
-	public func request(token: T, completion: MoyaCompletion)
-	public class func DefaultEnpointResolution() -> MoyaEndpointResolution
-	public class func DefaultStubBehavior(_: T) -> Moya.StubbedBehavior
-Moya+ReactiveCocoa.swift
-	public class MoyaResponse: NSObject
+	func cancel()
+	public let endpointClosure: EndpointClosure
+	public let requestClosure: RequestClosure
+	public let stubClosure: StubClosure
+	public let manager: Manager
+	public final class func DefaultEndpointMapping(target: Target) -> Endpoint<Target>
+	public final class func DefaultRequestMapping(endpoint: Endpoint<Target>, closure: NSURLRequest -> Void)
+	public final class func NeverStub(_: Target) -> Moya.StubBehavior
+	public final class func ImmediatelyStub(_: Target) -> Moya.StubBehavior
+	public final class func DelayedStub(seconds: NSTimeInterval)(_: Target) -> Moya.StubBehavior
+	case GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH, TRACE, CONNECT
+	case GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH, TRACE, CONNECT
+	case GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH, TRACE, CONNECT
+	case GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH, TRACE, CONNECT
+	case GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH, TRACE, CONNECT
+	case GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH, TRACE, CONNECT
+	case GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH, TRACE, CONNECT
+	case GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH, TRACE, CONNECT
+	case GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH, TRACE, CONNECT
+	case URL
+	case JSON
+	case PropertyList(NSPropertyListFormat, NSPropertyListWriteOptions)
+	case Custom((URLRequestConvertible, [String: AnyObject]?) -> (NSMutableURLRequest, NSError?))
+	public enum StubBehavior
+	case Never
+	case Immediate
+	case Delayed(seconds: NSTimeInterval)
+	var baseURL: NSURL { get }
+	var path: String { get }
+	var method: Moya.Method { get }
+	var parameters: [String: AnyObject]? { get }
+	var sampleData: NSData { get }
+	func cancel()
+	public let endpointClosure: EndpointClosure
+	public let requestClosure: RequestClosure
+	public let stubClosure: StubClosure
+	public let manager: Manager
+	public final class func DefaultEndpointMapping(target: Target) -> Endpoint<Target>
+	public final class func DefaultRequestMapping(endpoint: Endpoint<Target>, closure: NSURLRequest -> Void)
+	public final class func NeverStub(_: Target) -> Moya.StubBehavior
+	public final class func ImmediatelyStub(_: Target) -> Moya.StubBehavior
+	public final class func DelayedStub(seconds: NSTimeInterval)(_: Target) -> Moya.StubBehavior
+	case GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH, TRACE, CONNECT
+	case GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH, TRACE, CONNECT
+	case GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH, TRACE, CONNECT
+	case GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH, TRACE, CONNECT
+	case GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH, TRACE, CONNECT
+	case GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH, TRACE, CONNECT
+	case GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH, TRACE, CONNECT
+	case GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH, TRACE, CONNECT
+	case GET, POST, PUT, DELETE, OPTIONS, HEAD, PATCH, TRACE, CONNECT
+	case URL
+	case JSON
+	case PropertyList(NSPropertyListFormat, NSPropertyListWriteOptions)
+	case Custom((URLRequestConvertible, [String: AnyObject]?) -> (NSMutableURLRequest, NSError?))
+	public enum StubBehavior
+	case Never
+	case Immediate
+	case Delayed(seconds: NSTimeInterval)
+	var baseURL: NSURL { get }
+	var path: String { get }
+	var method: Moya.Method { get }
+	var parameters: [String: AnyObject]? { get }
+	var sampleData: NSData { get }
+	func cancel()
+	public let endpointClosure: EndpointClosure
+	public let requestClosure: RequestClosure
+	public let stubClosure: StubClosure
+	public let manager: Manager
+	public final class func DefaultEndpointMapping(target: Target) -> Endpoint<Target>
+	public final class func DefaultRequestMapping(endpoint: Endpoint<Target>, closure: NSURLRequest -> Void)
+	public final class func NeverStub(_: Target) -> Moya.StubBehavior
+	public final class func ImmediatelyStub(_: Target) -> Moya.StubBehavior
+	public final class func DelayedStub(seconds: NSTimeInterval)(_: Target) -> Moya.StubBehavior
+NetworkActivityPlugin.swift
+	case Began, Ended
+	case Began, Ended
+	public init(networkActivityClosure: NetworkActivityClosure)
+	case Began, Ended
+	case Began, Ended
+	public init(networkActivityClosure: NetworkActivityClosure)
+	case Began, Ended
+	case Began, Ended
+	public init(networkActivityClosure: NetworkActivityClosure)
+	case Began, Ended
+	case Began, Ended
+	public init(networkActivityClosure: NetworkActivityClosure)
+NetworkLoggerPlugin.swift
+	public init(verbose: Bool = false, output: (items: Any..., separator: String, terminator: String) -> Void = print)
+	public func willSendRequest(request: RequestType, target: TargetType)
+	public func didReceiveResponse(result: Result<Moya.Response, Moya.Error>, target: TargetType)
+	public init(verbose: Bool = false, output: (items: Any..., separator: String, terminator: String) -> Void = print)
+	public func willSendRequest(request: RequestType, target: TargetType)
+	public func didReceiveResponse(result: Result<Moya.Response, Moya.Error>, target: TargetType)
+	public init(verbose: Bool = false, output: (items: Any..., separator: String, terminator: String) -> Void = print)
+	public func willSendRequest(request: RequestType, target: TargetType)
+	public func didReceiveResponse(result: Result<Moya.Response, Moya.Error>, target: TargetType)
+	public init(verbose: Bool = false, output: (items: Any..., separator: String, terminator: String) -> Void = print)
+	public func willSendRequest(request: RequestType, target: TargetType)
+	public func didReceiveResponse(result: Result<Moya.Response, Moya.Error>, target: TargetType)
+Plugin.swift
+	func didReceiveResponse(result: Result<Moya.Response, Moya.Error>, target: TargetType)
+	func didReceiveResponse(result: Result<Moya.Response, Moya.Error>, target: TargetType)
+	func didReceiveResponse(result: Result<Moya.Response, Moya.Error>, target: TargetType)
+	func didReceiveResponse(result: Result<Moya.Response, Moya.Error>, target: TargetType)
+Response.swift
+	public final class Response: CustomDebugStringConvertible, Equatable
 	public let statusCode: Int
 	public let data: NSData
 	public let response: NSURLResponse?
-	public init(statusCode: Int, data: NSData, response: NSURLResponse?)
-	public class MoyaResponse : NSObject
-	override public var description: String
-	override public var debugDescription: String
-	public func request(token: T, parameters: [String: AnyObject]) -> RACSignal
-	public func request(token: T, method: Moya.Method) -> RACSignal
-	public func request(token: T) -> RACSignal
-	public var hashValue: Int
+	public init(statusCode: Int, data: NSData, response: NSURLResponse? = nil)
+	public var description: String
+	public var debugDescription: String
+	public func ==(lhs: Response, rhs: Response) -> Bool
+	public final class Response : CustomDebugStringConvertible, Equatable
+	public func filterStatusCode(code: Int) throws -> Response
+	public func filterSuccessfulStatusCodes() throws -> Response
+	public func filterSuccessfulStatusAndRedirectCodes() throws -> Response
+	public final class Response: CustomDebugStringConvertible, Equatable
+	public let statusCode: Int
+	public let data: NSData
+	public let response: NSURLResponse?
+	public init(statusCode: Int, data: NSData, response: NSURLResponse? = nil)
+	public var description: String
+	public var debugDescription: String
+	public func ==(lhs: Response, rhs: Response) -> Bool
+	public final class Response : CustomDebugStringConvertible, Equatable
+	public func filterStatusCode(code: Int) throws -> Response
+	public func filterSuccessfulStatusCodes() throws -> Response
+	public func filterSuccessfulStatusAndRedirectCodes() throws -> Response
+	public final class Response: CustomDebugStringConvertible, Equatable
+	public let statusCode: Int
+	public let data: NSData
+	public let response: NSURLResponse?
+	public init(statusCode: Int, data: NSData, response: NSURLResponse? = nil)
+	public var description: String
+	public var debugDescription: String
+	public func ==(lhs: Response, rhs: Response) -> Bool
+	public final class Response : CustomDebugStringConvertible, Equatable
+	public func filterStatusCode(code: Int) throws -> Response
+	public func filterSuccessfulStatusCodes() throws -> Response
+	public func filterSuccessfulStatusAndRedirectCodes() throws -> Response
+	public final class Response: CustomDebugStringConvertible, Equatable
+	public let statusCode: Int
+	public let data: NSData
+	public let response: NSURLResponse?
+	public init(statusCode: Int, data: NSData, response: NSURLResponse? = nil)
+	public var description: String
+	public var debugDescription: String
+	public func ==(lhs: Response, rhs: Response) -> Bool
+	public final class Response : CustomDebugStringConvertible, Equatable
+	public func filterStatusCode(code: Int) throws -> Response
+	public func filterSuccessfulStatusCodes() throws -> Response
+	public func filterSuccessfulStatusAndRedirectCodes() throws -> Response
+Result.swift
+	public enum Result<T, Error: ErrorType>
+	case Success(T)
+	case Failure(Error)
+	public init(success: T)
+	public init(failure: Error)
+	public enum Result<T, Error: ErrorType>
+	case Success(T)
+	case Failure(Error)
+	public init(success: T)
+	public init(failure: Error)
+	public enum Result<T, Error: ErrorType>
+	case Success(T)
+	case Failure(Error)
+	public init(success: T)
+	public init(failure: Error)
+	public enum Result<T, Error: ErrorType>
+	case Success(T)
+	case Failure(Error)
+	public init(success: T)
+	public init(failure: Error)
+Moya+ReactiveCocoa.swift
+	public func request(token: Target) -> RACSignal
 RACSignal+Moya.swift
-	public let MoyaErrorDomain = "Moya"
-	public enum MoyaErrorCode: Int
 	public func filterStatusCode(code: Int) -> RACSignal
 	public func filterSuccessfulStatusCodes() -> RACSignal
 	public func filterSuccessfulStatusAndRedirectCodes() -> RACSignal
+SignalProducer+Moya.swift
+	public func filterStatusCode(code: Int) -> SignalProducer<Value, Error>
+	public func filterSuccessfulStatusCodes() -> SignalProducer<Value, Error>
+	public func filterSuccessfulStatusAndRedirectCodes() -> SignalProducer<Value, Error>
+Observable+Moya.swift
+	public func filterStatusCode(code: Int) -> Observable<E>
+	public func filterSuccessfulStatusCodes() -> Observable<E>
+	public func filterSuccessfulStatusAndRedirectCodes() -> Observable<E>
