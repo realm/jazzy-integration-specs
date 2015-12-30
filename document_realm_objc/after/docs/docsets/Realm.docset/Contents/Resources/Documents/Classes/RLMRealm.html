@@ -173,14 +173,14 @@ the realm within an <code>@autoreleasepool {}</code> and ensure you have no othe
 strong references to it.</p>
 
 <div class="aside aside-warning">
-          <p class="aside-title">Warning</p>
-          RLMRealm instances are not thread safe and can not be shared across
+    <p class="aside-title">Warning</p>
+    RLMRealm instances are not thread safe and can not be shared across
 threads or dispatch queues. You must call this method on each thread you want
 to interact with the realm on. For dispatch queues, this means that you must
 call it in each block which is dispatched, as a queue is not guaranteed to run
 on a consistent thread.
 
-        </div>
+</div>
 
           </section>
           <section class="section task-group-section">
@@ -470,13 +470,13 @@ can be changed via <code>+[RLMRealmConfiguration setDefaultConfiguration:]</code
                         <p>Indicates if this Realm is currently in a write transaction.</p>
 
 <div class="aside aside-warning">
-          <p class="aside-title">Warning</p>
-          Wrapping mutating operations in a write transaction if this property returns <code>NO</code>
+    <p class="aside-title">Warning</p>
+    Wrapping mutating operations in a write transaction if this property returns <code>NO</code>
      may cause a large number of write transactions to be created, which could negatively
      impact Realm&rsquo;s performance. Always prefer performing multiple mutations in a single
      transaction when possible.
 
-        </div>
+</div>
 
                       </div>
                       <div class="declaration">
@@ -1379,10 +1379,10 @@ from a Realm (i.e. <code>isInvalidated</code>) must be false.</p>
 <p>This is the equivalent of <code>addObject:</code> except for an array of objects.</p>
 
 <div class="aside aside-see">
-          <p class="aside-title">See</p>
-          <p>addObject:</p>
+    <p class="aside-title">See</p>
+    <p>addObject:</p>
 
-        </div>
+</div>
 
                       </div>
                       <div class="declaration">
@@ -1494,10 +1494,10 @@ a different Realm.</p>
 <p>This is the equivalent of <code>addOrUpdateObject:</code> except for an array of objects.</p>
 
 <div class="aside aside-see">
-          <p class="aside-title">See</p>
-          <p>addOrUpdateObject:</p>
+    <p class="aside-title">See</p>
+    <p>addOrUpdateObject:</p>
 
-        </div>
+</div>
 
                       </div>
                       <div class="declaration">
@@ -1851,10 +1851,10 @@ not need to be called explicitly. You can choose to call this method to control
 exactly when and how migrations are performed.</p>
 
 <div class="aside aside-see">
-          <p class="aside-title">See</p>
-          <p>RLMMigration</p>
+    <p class="aside-title">See</p>
+    <p>RLMMigration</p>
 
-        </div>
+</div>
 
                       </div>
                       <div class="declaration">

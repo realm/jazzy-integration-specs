@@ -193,14 +193,14 @@ the realm within an <code>autoreleasepool {}</code> and ensure you have no other
 strong references to it.</p>
 
 <div class="aside aside-warning">
-          <p class="aside-title">Warning</p>
-          Realm instances are not thread safe and can not be shared across
+    <p class="aside-title">Warning</p>
+    Realm instances are not thread safe and can not be shared across
        threads or dispatch queues. You must construct a new instance on each thread you want
        to interact with the realm on. For dispatch queues, this means that you must
        call it in each block which is dispatched, as a queue is not guaranteed to run
        on a consistent thread.
 
-        </div>
+</div>
 
           </section>
           <section class="section task-group-section">
@@ -693,13 +693,13 @@ the valid object.</p>
                         <p>Indicates if this Realm is currently in a write transaction.</p>
 
 <div class="aside aside-warning">
-          <p class="aside-title">Warning</p>
-          Wrapping mutating operations in a write transaction if this property returns <code>false</code>
+    <p class="aside-title">Warning</p>
+    Wrapping mutating operations in a write transaction if this property returns <code>false</code>
        may cause a large number of write transactions to be created, which could negatively
        impact Realm&rsquo;s performance. Always prefer performing multiple mutations in a single
        transaction when possible.
 
-        </div>
+</div>
 
                       </div>
                       <div class="declaration">
@@ -819,14 +819,16 @@ from a Realm (i.e. <code>invalidated</code> must be false).</p>
                         <p>Adds or updates objects in the given sequence to be persisted it in this Realm.</p>
 
 <div class="aside aside-see">
-          <p class="aside-title">See</p>
-          <p>add(_:update:)</p>
+    <p class="aside-title">See</p>
+    <p>add(_:update:)</p>
 
-        </div><div class="aside aside-warning">
-          <p class="aside-title">Warning</p>
-          <p>This method can only be called during a write transaction.</p>
+</div>
 
-        </div>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>This method can only be called during a write transaction.</p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -899,10 +901,10 @@ the Realm instance with the same primary key value, the object is inserted. Othe
 the existing object is updated with any changed values.</p>
 
 <div class="aside aside-warning">
-          <p class="aside-title">Warning</p>
-          <p>This method can only be called during a write transaction.</p>
+    <p class="aside-title">Warning</p>
+    <p>This method can only be called during a write transaction.</p>
 
-        </div>
+</div>
 
                       </div>
                       <div class="declaration">
@@ -997,10 +999,10 @@ the existing object is updated with any changed values.</p>
                         <p>Deletes the given object from this Realm.</p>
 
 <div class="aside aside-warning">
-          <p class="aside-title">Warning</p>
-          <p>This method can only be called during a write transaction.</p>
+    <p class="aside-title">Warning</p>
+    <p>This method can only be called during a write transaction.</p>
 
-        </div>
+</div>
 
                       </div>
                       <div class="declaration">
@@ -1053,10 +1055,10 @@ the existing object is updated with any changed values.</p>
                         <p>Deletes the given objects from this Realm.</p>
 
 <div class="aside aside-warning">
-          <p class="aside-title">Warning</p>
-          <p>This method can only be called during a write transaction.</p>
+    <p class="aside-title">Warning</p>
+    <p>This method can only be called during a write transaction.</p>
 
-        </div>
+</div>
 
                       </div>
                       <div class="declaration">
@@ -1109,10 +1111,10 @@ the existing object is updated with any changed values.</p>
                         <p>Deletes all objects from this Realm.</p>
 
 <div class="aside aside-warning">
-          <p class="aside-title">Warning</p>
-          This method can only be called during a write transaction.
+    <p class="aside-title">Warning</p>
+    This method can only be called during a write transaction.
 
-        </div>
+</div>
 
                       </div>
                       <div class="declaration">
@@ -1215,10 +1217,10 @@ the existing object is updated with any changed values.</p>
 <p>This method requires that <code>primaryKey()</code> be overridden on the given subclass.</p>
 
 <div class="aside aside-see">
-          <p class="aside-title">See</p>
-          <p>Object.primaryKey()</p>
+    <p class="aside-title">See</p>
+    <p>Object.primaryKey()</p>
 
-        </div>
+</div>
 
                       </div>
                       <div class="declaration">
