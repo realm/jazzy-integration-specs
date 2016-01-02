@@ -32,7 +32,7 @@
       <div class="content-wrapper">
         <p><a href="index.html">Realm Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fobjc%2F0%2E96%2E2%2Fapi%2Fdocsets%2FRealm%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fobjc%2F0%2E97%2E0%2Fapi%2Fdocsets%2FRealm%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -213,7 +213,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/Realm/RLMArray.h#L62-L298">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/Realm/RLMArray.h#L62-L297">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -247,7 +247,7 @@ engine. RLMSortDescriptor instances are immutable.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/Realm/RLMArray.h#L306-L332">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/Realm/RLMArray.h#L305-L331">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -285,7 +285,7 @@ of an RLMRealm instance.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/Realm/RLMMigration.h#L43-L105">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/Realm/RLMMigration.h#L43-L105">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -378,7 +378,7 @@ times when you <em>cannot</em> begin a write transaction.</li>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/Realm/RLMObject.h#L87-L402">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/Realm/RLMObject.h#L87-L402">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -400,7 +400,7 @@ times when you <em>cannot</em> begin a write transaction.</li>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This class represents Realm model object schemas persisted to Realm in an RLMSchema.</p>
+                        <p>This class represents Realm model object schemas.</p>
 
 <p>When using Realm, RLMObjectSchema objects allow performing migrations and
 introspecting the database&rsquo;s schema.</p>
@@ -418,7 +418,7 @@ introspecting the database&rsquo;s schema.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/Realm/RLMObjectSchema.h#L34-L71">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/Realm/RLMObjectSchema.h#L34-L71">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -458,7 +458,7 @@ introspecting the database&rsquo;s schema.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/Realm/RLMProperty.h#L53-L93">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/Realm/RLMProperty.h#L53-L93">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -484,7 +484,7 @@ introspecting the database&rsquo;s schema.</p>
 database.</p>
 
 <p>Realms can either be stored on disk (see +[RLMRealm realmWithPath:]) or in
-memory (see +[RLMRealm inMemoryRealmWithIdentifier:]).</p>
+memory (see RLMRealmConfiguration).</p>
 
 <p>RLMRealm instances are cached internally, and constructing equivalent RLMRealm
 objects (with the same path or identifier) multiple times on a single thread
@@ -516,7 +516,7 @@ on a consistent thread.
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/Realm/RLMRealm.h#L49-L473">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/Realm/RLMRealm.h#L49-L505">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -546,7 +546,7 @@ on a consistent thread.
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/Realm/RLMRealm.h#L478-L479">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/Realm/RLMRealm.h#L510-L511">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -571,6 +571,13 @@ on a consistent thread.
                         <p>An <code>RLMRealmConfiguration</code> is used to describe the different options used to
 create an <code><a href="Classes/RLMRealm.html">RLMRealm</a></code> instance.</p>
 
+<p><code>RLMRealmConfiguration</code> instances are just plain NSObjects, and unlike RLMRealm
+and RLMObjects can be freely shared between threads as long as you do not
+mutate them. Creating configuration objects for class subsets (by setting the
+<code>objectClasses</code> property) can be expensive, and so you will normally want to
+cache and reuse a single configuration object for each distinct configuration
+that you are using rather than creating a new one each time you open a Realm.</p>
+
                         <a href="Classes/RLMRealmConfiguration.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -582,7 +589,7 @@ create an <code><a href="Classes/RLMRealm.html">RLMRealm</a></code> instance.</p
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/Realm/RLMRealmConfiguration.h#L28-L70">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/Realm/RLMRealmConfiguration.h#L35-L77">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -623,7 +630,7 @@ and you can chain queries to further filter query results.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/Realm/RLMResults.h#L36-L226">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/Realm/RLMResults.h#L36-L226">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -663,7 +670,7 @@ introspecting the database&rsquo;s schema.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/Realm/RLMSchema.h#L34-L74">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/Realm/RLMSchema.h#L34-L74">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

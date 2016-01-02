@@ -33,7 +33,7 @@
       <div class="content-wrapper">
         <p><a href="../index.html">Realm Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fobjc%2F0%2E96%2E2%2Fapi%2Fdocsets%2FRealm%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fobjc%2F0%2E97%2E0%2Fapi%2Fdocsets%2FRealm%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -161,6 +161,13 @@
             <p>An <code>RLMRealmConfiguration</code> is used to describe the different options used to
 create an <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> instance.</p>
 
+<p><code>RLMRealmConfiguration</code> instances are just plain NSObjects, and unlike RLMRealm
+and RLMObjects can be freely shared between threads as long as you do not
+mutate them. Creating configuration objects for class subsets (by setting the
+<code>objectClasses</code> property) can be expensive, and so you will normally want to
+cache and reuse a single configuration object for each distinct configuration
+that you are using rather than creating a new one each time you open a Realm.</p>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -203,7 +210,7 @@ configuration is explicitly specified (i.e. <code>+[RLMRealm defaultRealm]</code
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/Realm/RLMRealmConfiguration.h#L38">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/Realm/RLMRealmConfiguration.h#L45">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -253,7 +260,7 @@ configuration is explicitly specified (i.e. <code>+[RLMRealm defaultRealm]</code
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/Realm/RLMRealmConfiguration.h#L45">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/Realm/RLMRealmConfiguration.h#L52">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -294,7 +301,7 @@ configuration is explicitly specified (i.e. <code>+[RLMRealm defaultRealm]</code
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/Realm/RLMRealmConfiguration.h#L50">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/Realm/RLMRealmConfiguration.h#L57">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -324,7 +331,7 @@ configuration is explicitly specified (i.e. <code>+[RLMRealm defaultRealm]</code
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/Realm/RLMRealmConfiguration.h#L53">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/Realm/RLMRealmConfiguration.h#L60">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -354,7 +361,7 @@ configuration is explicitly specified (i.e. <code>+[RLMRealm defaultRealm]</code
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/Realm/RLMRealmConfiguration.h#L56">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/Realm/RLMRealmConfiguration.h#L63">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -384,7 +391,7 @@ configuration is explicitly specified (i.e. <code>+[RLMRealm defaultRealm]</code
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/Realm/RLMRealmConfiguration.h#L59">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/Realm/RLMRealmConfiguration.h#L66">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -414,7 +421,7 @@ configuration is explicitly specified (i.e. <code>+[RLMRealm defaultRealm]</code
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/Realm/RLMRealmConfiguration.h#L62">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/Realm/RLMRealmConfiguration.h#L69">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -445,7 +452,7 @@ configuration is explicitly specified (i.e. <code>+[RLMRealm defaultRealm]</code
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/Realm/RLMRealmConfiguration.h#L65">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/Realm/RLMRealmConfiguration.h#L72">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -475,7 +482,7 @@ configuration is explicitly specified (i.e. <code>+[RLMRealm defaultRealm]</code
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.96.2/Realm/RLMRealmConfiguration.h#L68">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/Realm/RLMRealmConfiguration.h#L75">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
