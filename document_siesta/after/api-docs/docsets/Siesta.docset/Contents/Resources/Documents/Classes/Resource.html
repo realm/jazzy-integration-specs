@@ -1,0 +1,1539 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Resource Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/Resource" class="dashAnchor"></a>
+    <a title="Resource Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Siesta Docs</a> (96% documented)</p>
+        <p class="header-right"><a href="https://github.com/bustoutsolutions/siesta"><img src="../img/gh.png"/>View on GitHub</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Siesta Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        Resource Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Resources.html">Resources</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/Service.html">Service</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Resource.html">Resource</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Entity.html">Entity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Error.html">Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Configuration.html">Configuration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ConfigurationPatternConvertible.html">ConfigurationPatternConvertible</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/TypedContentAccessors.html">TypedContentAccessors</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Observering Resources.html">Observering Resources</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/ResourceObserver.html">ResourceObserver</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Observering Resources.html#/s:6Siesta23ResourceObserverClosure">ResourceObserverClosure</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ResourceEvent.html">ResourceEvent</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Requests.html">Requests</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/Request.html">Request</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RequestMethod.html">RequestMethod</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Response Parsing.html">Response Parsing</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/Response.html">Response</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ResponseTransformer.html">ResponseTransformer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/TransformerSequence.html">TransformerSequence</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ResponseContentTransformer.html">ResponseContentTransformer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Response Parsing.html#/s:F6Siesta23JSONResponseTransformerFTSb_PS_19ResponseTransformer_">JSONResponseTransformer(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Response Parsing.html#/s:F6Siesta23TextResponseTransformerFTSb_PS_19ResponseTransformer_">TextResponseTransformer(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Response Parsing.html#/s:F6Siesta24ImageResponseTransformerFTSb_PS_19ResponseTransformer_">ImageResponseTransformer(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../UI Helpers.html">UI Helpers</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/ResourceStatusOverlay.html">ResourceStatusOverlay</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RemoteImageView.html">RemoteImageView</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Network Layer.html">Network Layer</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/NetworkingProvider.html">NetworkingProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/NetworkingProviderConvertible.html">NetworkingProviderConvertible</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/RequestNetworking.html">RequestNetworking</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Network Layer.html#/s:6Siesta35RequestNetworkingCompletionCallback">RequestNetworkingCompletionCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/RequestTransferMetrics.html">RequestTransferMetrics</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/NSURLSessionProvider.html">NSURLSessionProvider</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Caching.html">Caching</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/EntityCache.html">EntityCache</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/EntityEncoder.html">EntityEncoder</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/JSONEntityEncoder.html">JSONEntityEncoder</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Logging.html">Logging</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Logging.html#/s:v6Siesta20enabledLogCategoriesGVSs3SetOS_11LogCategory_">enabledLogCategories</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/LogCategory.html">LogCategory</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Logging.html#/s:v6Siesta6loggerFTOS_11LogCategorySS_T_">logger</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Extensions.html">Other Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/NSURLSession.html">NSURLSession</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/NSURLSessionConfiguration.html">NSURLSessionConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Other Protocols.html">Other Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Other Protocols.html#/s:P6Siesta17NSJSONConvertible">NSJSONConvertible</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/SessionTaskContainer.html">SessionTaskContainer</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Resource</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Resource</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Essentials"></a>
+                <a name="//apple_ref/swift/Section/Essentials" class="dashAnchor"></a>
+                <a href="#/Essentials">
+                  <h3 class="section-name">Essentials</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC6Siesta8Resource7serviceCS_7Service"></a>
+                    <a name="//apple_ref/swift/Property/service" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC6Siesta8Resource7serviceCS_7Service">service</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The API to which this resource belongs. Provides configuration defaults and instance uniqueness.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">service</span><span class="p">:</span> <span class="kt">Service</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC6Siesta8Resource3urlCSo5NSURL"></a>
+                    <a name="//apple_ref/swift/Property/url" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC6Siesta8Resource3urlCSo5NSURL">url</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The canoncial URL of this resource.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">NSURL</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Configuration"></a>
+                <a name="//apple_ref/swift/Section/Configuration" class="dashAnchor"></a>
+                <a href="#/Configuration">
+                  <h3 class="section-name">Configuration</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC6Siesta8Resource6configVS_13Configuration"></a>
+                    <a name="//apple_ref/swift/Property/config" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC6Siesta8Resource6configVS_13Configuration">config</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Configuration options for this resource.</p>
+
+<p>Note that this is a read-only computed property. You cannot directly change an individual resource&rsquo;s configuration.
+The reason for this is that resource instances are created on demand, and can disappear under memory pressure when
+not in use. Any configuration applied a particular resource instance would therefore be transient.</p>
+
+<p>Instead, you must use the <code><a href="../Classes/Service.html#/s:FC6Siesta7Service9configureFS0_FT11descriptionSS10configurerFCVS_13Configuration7BuilderT__T_">Service.configure(...)</a></code> methods. This sets up configuration to be applied to resources
+according to their URL, whenever they are created or recreated.</p>
+
+<div class="aside aside-complexity">
+    <p class="aside-title">Complexity</p>
+    <ul>
+<li>O(<em>n</em>) on first call after creation, or after invalidation (via <code><a href="../Classes/Service.html#/s:FC6Siesta7Service23invalidateConfigurationFS0_FT_T_">Service.invalidateConfiguration()</a></code>),
+where <em>n</em> is the number of past calls to <code><a href="../Classes/Service.html#/s:FC6Siesta7Service9configureFS0_FT11descriptionSS10configurerFCVS_13Configuration7BuilderT__T_">Service.configure(...)</a></code> for this resource’s Service.</li>
+<li>O(1) on subsequent invocations.</li>
+</ul>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">config</span><span class="p">:</span> <span class="kt">Configuration</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Resource%20state"></a>
+                <a name="//apple_ref/swift/Section/Resource state" class="dashAnchor"></a>
+                <a href="#/Resource%20state">
+                  <h3 class="section-name">Resource state</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC6Siesta8Resource10latestDataGSqVS_6Entity_"></a>
+                    <a name="//apple_ref/swift/Property/latestData" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC6Siesta8Resource10latestDataGSqVS_6Entity_">latestData</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The latest valid data we have for this resource. May come from a server response, a cache,
+or a local override.</p>
+
+<p>Note that this property represents the <strong>full state</strong> of the resource. It therefore only holds entities fetched
+with <code><a href="../Classes/Resource.html#/s:FC6Siesta8Resource4loadFS0_FT_PS_7Request_">load()</a></code> and <code><a href="../Classes/Resource.html#/s:FC6Siesta8Resource12loadIfNeededFS0_FT_GSqPS_7Request__">loadIfNeeded()</a></code>, not any of the various flavors of <code><a href="../Classes/Resource.html#/s:FC6Siesta8Resource7requestFS0_FTOS_13RequestMethod15requestMutationFCSo19NSMutableURLRequestT__PS_7Request_">request(...)</a></code>.</p>
+
+<p>Note that <code>latestData</code> will be present as long as there has <em>ever</em> been a succesful request since the resource
+was created or wiped. If an error occurs, <code>latestData</code> will still hold the latest (now stale) valid data.</p>
+
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../Protocols/TypedContentAccessors.html">TypedContentAccessors</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">latestData</span><span class="p">:</span> <span class="kt">Entity</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC6Siesta8Resource11latestErrorGSqVS_5Error_"></a>
+                    <a name="//apple_ref/swift/Property/latestError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC6Siesta8Resource11latestErrorGSqVS_5Error_">latestError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Details if the last attempt to load this resource resulted in an error. Becomes nil as soon
+as a request is successful.</p>
+
+<p>Note that this only reports error from <code><a href="../Classes/Resource.html#/s:FC6Siesta8Resource4loadFS0_FT_PS_7Request_">load()</a></code> and <code><a href="../Classes/Resource.html#/s:FC6Siesta8Resource12loadIfNeededFS0_FT_GSqPS_7Request__">loadIfNeeded()</a></code>, not any of the various
+flavors of <code><a href="../Classes/Resource.html#/s:FC6Siesta8Resource7requestFS0_FTOS_13RequestMethod15requestMutationFCSo19NSMutableURLRequestT__PS_7Request_">request(...)</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">latestError</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC6Siesta8Resource9timestampSd"></a>
+                    <a name="//apple_ref/swift/Property/timestamp" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC6Siesta8Resource9timestampSd">timestamp</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The time of the most recent update to either <code><a href="../Classes/Resource.html#/s:vC6Siesta8Resource10latestDataGSqVS_6Entity_">latestData</a></code> or <code><a href="../Classes/Resource.html#/s:vC6Siesta8Resource11latestErrorGSqVS_5Error_">latestError</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">timestamp</span><span class="p">:</span> <span class="kt">NSTimeInterval</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Request%20management"></a>
+                <a name="//apple_ref/swift/Section/Request management" class="dashAnchor"></a>
+                <a href="#/Request%20management">
+                  <h3 class="section-name">Request management</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC6Siesta8Resource9isLoadingSb"></a>
+                    <a name="//apple_ref/swift/Property/isLoading" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC6Siesta8Resource9isLoadingSb">isLoading</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>True if any load requests  (i.e. from calls to <code><a href="../Classes/Resource.html#/s:FC6Siesta8Resource4loadFS0_FT_PS_7Request_">load(...)</a></code> and <code><a href="../Classes/Resource.html#/s:FC6Siesta8Resource12loadIfNeededFS0_FT_GSqPS_7Request__">loadIfNeeded()</a></code>)
+for this resource are in progress.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isLoading</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC6Siesta8Resource12isRequestingSb"></a>
+                    <a name="//apple_ref/swift/Property/isRequesting" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC6Siesta8Resource12isRequestingSb">isRequesting</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>True if any requests for this resource are in progress.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isRequesting</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC6Siesta8Resource12loadRequestsGSaPS_7Request__"></a>
+                    <a name="//apple_ref/swift/Property/loadRequests" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC6Siesta8Resource12loadRequestsGSaPS_7Request__">loadRequests</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>All load requests in progress, in the order they were initiated.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">loadRequests</span> <span class="o">=</span> <span class="p">[</span><span class="kt">Request</span><span class="p">]()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC6Siesta8Resource11allRequestsGSaPS_7Request__"></a>
+                    <a name="//apple_ref/swift/Property/allRequests" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC6Siesta8Resource11allRequestsGSaPS_7Request__">allRequests</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>All requests in progress related to this resource, in the order they were initiated.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">private(set)</span> <span class="k">var</span> <span class="nv">allRequests</span> <span class="o">=</span> <span class="p">[</span><span class="kt">Request</span><span class="p">]()</span>  <span class="c1">// TOOD: Any special handling for concurrent POST &amp; GET?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/URL%20navigation"></a>
+                <a name="//apple_ref/swift/Section/URL navigation" class="dashAnchor"></a>
+                <a href="#/URL%20navigation">
+                  <h3 class="section-name">URL navigation</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6Siesta8Resource5childFS0_FSSS0_"></a>
+                    <a name="//apple_ref/swift/Method/child(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6Siesta8Resource5childFS0_FSSS0_">child(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">child</span><span class="p">(</span><span class="nv">subpath</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Resource</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6Siesta8Resource8relativeFS0_FSSS0_"></a>
+                    <a name="//apple_ref/swift/Method/relative(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6Siesta8Resource8relativeFS0_FSSS0_">relative(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">relative</span><span class="p">(</span><span class="nv">href</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Resource</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6Siesta8Resource16optionalRelativeFS0_FGSqSS_GSqS0__"></a>
+                    <a name="//apple_ref/swift/Method/optionalRelative(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6Siesta8Resource16optionalRelativeFS0_FGSqSS_GSqS0__">optionalRelative(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">optionalRelative</span><span class="p">(</span><span class="nv">href</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Resource</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6Siesta8Resource9withParamFS0_FTSSGSqSS__S0_"></a>
+                    <a name="//apple_ref/swift/Method/withParam(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6Siesta8Resource9withParamFS0_FTSSGSqSS__S0_">withParam(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">withParam</span><span class="p">(</span><span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Resource</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Requests"></a>
+                <a name="//apple_ref/swift/Section/Requests" class="dashAnchor"></a>
+                <a href="#/Requests">
+                  <h3 class="section-name">Requests</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6Siesta8Resource7requestFS0_FTOS_13RequestMethod15requestMutationFCSo19NSMutableURLRequestT__PS_7Request_"></a>
+                    <a name="//apple_ref/swift/Method/request(_:requestMutation:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6Siesta8Resource7requestFS0_FTOS_13RequestMethod15requestMutationFCSo19NSMutableURLRequestT__PS_7Request_">request(_:requestMutation:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">request</span><span class="p">(</span>
+            <span class="nv">method</span><span class="p">:</span>          <span class="kt">RequestMethod</span><span class="p">,</span>
+            <span class="nv">requestMutation</span><span class="p">:</span> <span class="kt">NSMutableURLRequest</span> <span class="o">-&gt;</span> <span class="p">()</span> <span class="o">=</span> <span class="p">{</span> <span class="n">_</span> <span class="k">in</span> <span class="p">})</span>
+        <span class="o">-&gt;</span> <span class="kt">Request</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>method</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The HTTP verb to use for the request</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>requestMutation</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An optional callback to change details of the request before it is sent. For example:</p>
+<pre class="highlight plaintext"><code></code></pre>
+<p>Does nothing by default.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6Siesta8Resource7requestFS0_FTOS_13RequestMethod4dataCSo6NSData11contentTypeSS15requestMutationFCSo19NSMutableURLRequestT__PS_7Request_"></a>
+                    <a name="//apple_ref/swift/Method/request(_:data:contentType:requestMutation:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6Siesta8Resource7requestFS0_FTOS_13RequestMethod4dataCSo6NSData11contentTypeSS15requestMutationFCSo19NSMutableURLRequestT__PS_7Request_">request(_:data:contentType:requestMutation:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">request</span><span class="p">(</span>
+            <span class="nv">method</span><span class="p">:</span>          <span class="kt">RequestMethod</span><span class="p">,</span>
+            <span class="nv">data</span><span class="p">:</span>            <span class="kt">NSData</span><span class="p">,</span>
+            <span class="nv">contentType</span><span class="p">:</span>     <span class="kt">String</span><span class="p">,</span>
+            <span class="nv">requestMutation</span><span class="p">:</span> <span class="kt">NSMutableURLRequest</span> <span class="o">-&gt;</span> <span class="p">()</span> <span class="o">=</span> <span class="p">{</span> <span class="n">_</span> <span class="k">in</span> <span class="p">})</span>
+        <span class="o">-&gt;</span> <span class="kt">Request</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6Siesta8Resource7requestFS0_FTOS_13RequestMethod4textSS11contentTypeSS8encodingSu15requestMutationFCSo19NSMutableURLRequestT__PS_7Request_"></a>
+                    <a name="//apple_ref/swift/Method/request(_:text:contentType:encoding:requestMutation:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6Siesta8Resource7requestFS0_FTOS_13RequestMethod4textSS11contentTypeSS8encodingSu15requestMutationFCSo19NSMutableURLRequestT__PS_7Request_">request(_:text:contentType:encoding:requestMutation:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">request</span><span class="p">(</span>
+            <span class="nv">method</span><span class="p">:</span>          <span class="kt">RequestMethod</span><span class="p">,</span>
+            <span class="nv">text</span><span class="p">:</span>            <span class="kt">String</span><span class="p">,</span>
+            <span class="nv">contentType</span><span class="p">:</span>     <span class="kt">String</span> <span class="o">=</span> <span class="s">"text/plain"</span><span class="p">,</span>
+            <span class="nv">encoding</span><span class="p">:</span>        <span class="kt">NSStringEncoding</span> <span class="o">=</span> <span class="kt">NSUTF8StringEncoding</span><span class="p">,</span>
+            <span class="nv">requestMutation</span><span class="p">:</span> <span class="kt">NSMutableURLRequest</span> <span class="o">-&gt;</span> <span class="p">()</span> <span class="o">=</span> <span class="p">{</span> <span class="n">_</span> <span class="k">in</span> <span class="p">})</span>
+        <span class="o">-&gt;</span> <span class="kt">Request</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>contentType</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>text/plain</code> by default.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>encoding</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>UTF-8 (<code>NSUTF8StringEncoding</code>) by default.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6Siesta8Resource7requestFS0_FTOS_13RequestMethod4jsonPS_17NSJSONConvertible_11contentTypeSS15requestMutationFCSo19NSMutableURLRequestT__PS_7Request_"></a>
+                    <a name="//apple_ref/swift/Method/request(_:json:contentType:requestMutation:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6Siesta8Resource7requestFS0_FTOS_13RequestMethod4jsonPS_17NSJSONConvertible_11contentTypeSS15requestMutationFCSo19NSMutableURLRequestT__PS_7Request_">request(_:json:contentType:requestMutation:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">request</span><span class="p">(</span>
+            <span class="nv">method</span><span class="p">:</span>          <span class="kt">RequestMethod</span><span class="p">,</span>
+            <span class="nv">json</span><span class="p">:</span>            <span class="kt">NSJSONConvertible</span><span class="p">,</span>
+            <span class="nv">contentType</span><span class="p">:</span>     <span class="kt">String</span> <span class="o">=</span> <span class="s">"application/json"</span><span class="p">,</span>
+            <span class="nv">requestMutation</span><span class="p">:</span> <span class="kt">NSMutableURLRequest</span> <span class="o">-&gt;</span> <span class="p">()</span> <span class="o">=</span> <span class="p">{</span> <span class="n">_</span> <span class="k">in</span> <span class="p">})</span>
+        <span class="o">-&gt;</span> <span class="kt">Request</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>contentType</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>application/json</code> by default.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6Siesta8Resource7requestFS0_FTOS_13RequestMethod10urlEncodedGVSs10DictionarySSSS_15requestMutationFCSo19NSMutableURLRequestT__PS_7Request_"></a>
+                    <a name="//apple_ref/swift/Method/request(_:urlEncoded:requestMutation:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6Siesta8Resource7requestFS0_FTOS_13RequestMethod10urlEncodedGVSs10DictionarySSSS_15requestMutationFCSo19NSMutableURLRequestT__PS_7Request_">request(_:urlEncoded:requestMutation:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">request</span><span class="p">(</span>
+            <span class="nv">method</span><span class="p">:</span>            <span class="kt">RequestMethod</span><span class="p">,</span>
+            <span class="n">urlEncoded</span> <span class="nv">params</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span><span class="kt">String</span><span class="p">],</span>
+            <span class="nv">requestMutation</span><span class="p">:</span>   <span class="kt">NSMutableURLRequest</span> <span class="o">-&gt;</span> <span class="p">()</span> <span class="o">=</span> <span class="p">{</span> <span class="n">_</span> <span class="k">in</span> <span class="p">})</span>
+        <span class="o">-&gt;</span> <span class="kt">Request</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC6Siesta8Resource10isUpToDateSb"></a>
+                    <a name="//apple_ref/swift/Property/isUpToDate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC6Siesta8Resource10isUpToDateSb">isUpToDate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>True if the resource’s local state is up to date according to staleness configuration.</p>
+
+<p>“Up to date” means that either:</p>
+
+<ul>
+<li>the resource has data (i.e. <code><a href="../Classes/Resource.html#/s:vC6Siesta8Resource10latestDataGSqVS_6Entity_">latestData</a></code> is not nil),</li>
+<li>the last request succeeded (i.e. <code><a href="../Classes/Resource.html#/s:vC6Siesta8Resource11latestErrorGSqVS_5Error_">latestError</a></code> <em>is</em> nil), and</li>
+<li>the timestamp on <code><a href="../Classes/Resource.html#/s:vC6Siesta8Resource10latestDataGSqVS_6Entity_">latestData</a></code> is more recent than <code>expirationTime</code> seconds ago,</li>
+</ul>
+
+<p>…or:</p>
+
+<ul>
+<li>the last request failed (i.e. <code><a href="../Classes/Resource.html#/s:vC6Siesta8Resource11latestErrorGSqVS_5Error_">latestError</a></code> is not nil), and</li>
+<li>the timestamp on <code><a href="../Classes/Resource.html#/s:vC6Siesta8Resource11latestErrorGSqVS_5Error_">latestError</a></code> is more recent than <code>retryTime</code> seconds ago.</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isUpToDate</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6Siesta8Resource12loadIfNeededFS0_FT_GSqPS_7Request__"></a>
+                    <a name="//apple_ref/swift/Method/loadIfNeeded()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6Siesta8Resource12loadIfNeededFS0_FT_GSqPS_7Request__">loadIfNeeded()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Ensures that there is a load request in progress for this resource, unless the resource is already up to date.</p>
+
+<p>If the resource is not up to date and there is no load request already in progress, this method calls <code><a href="../Classes/Resource.html#/s:FC6Siesta8Resource4loadFS0_FT_PS_7Request_">load()</a></code>.</p>
+
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <ul>
+<li><code><a href="../Classes/Resource.html#/s:vC6Siesta8Resource10isUpToDateSb">isUpToDate</a></code></li>
+<li><code><a href="../Classes/Resource.html#/s:FC6Siesta8Resource4loadFS0_FT_PS_7Request_">load()</a></code></li>
+</ul>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">loadIfNeeded</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Request</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6Siesta8Resource4loadFS0_FT_PS_7Request_"></a>
+                    <a name="//apple_ref/swift/Method/load()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6Siesta8Resource4loadFS0_FT_PS_7Request_">load()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initiates a GET request to update the state of this resource.</p>
+
+<p>Sequence of events:</p>
+
+<ol>
+<li>This resource’s <code><a href="../Classes/Resource.html#/s:vC6Siesta8Resource9isLoadingSb">isLoading</a></code> property becomes true, and remains true until the request either succeeds or fails.
+Observers immedately receive <code><a href="../Enums/ResourceEvent.html#/s:FO6Siesta13ResourceEvent9RequestedFMS0_S0_">ResourceEvent.Requested</a></code>.</li>
+<li>If the request is cancelled before completion, observers receive <code><a href="../Enums/ResourceEvent.html#/s:FO6Siesta13ResourceEvent16RequestCancelledFMS0_S0_">ResourceEvent.RequestCancelled</a></code>.</li>
+<li>If the server returns a success response, that goes in <code><a href="../Classes/Resource.html#/s:vC6Siesta8Resource10latestDataGSqVS_6Entity_">latestData</a></code>, and <code><a href="../Classes/Resource.html#/s:vC6Siesta8Resource11latestErrorGSqVS_5Error_">latestError</a></code> becomes nil.
+Observers receive <code><a href="../Enums/ResourceEvent.html#/s:FO6Siesta13ResourceEvent7NewDataFMS0_FOS0_13NewDataSourceS0_">ResourceEvent.NewData</a></code>.</li>
+<li>If the server returns a 304, <code><a href="../Classes/Resource.html#/s:vC6Siesta8Resource10latestDataGSqVS_6Entity_">latestData</a></code>’s timestamp is updated but the entity is otherwise untouched.
+<code><a href="../Classes/Resource.html#/s:vC6Siesta8Resource11latestErrorGSqVS_5Error_">latestError</a></code> becomes nil. Observers receive <code><a href="../Enums/ResourceEvent.html#/s:FO6Siesta13ResourceEvent11NotModifiedFMS0_S0_">ResourceEvent.NotModified</a></code>.</li>
+<li>If the request fails for any reason, whether client-, server-, or network-related, observers receive
+<code><a href="../Enums/ResourceEvent.html#/s:FO6Siesta13ResourceEvent5ErrorFMS0_S0_">ResourceEvent.Error</a></code>. Note that <code><a href="../Classes/Resource.html#/s:vC6Siesta8Resource10latestDataGSqVS_6Entity_">latestData</a></code> does <em>not</em> become nil; the last valid response always sticks
+around until another valid response arrives.</li>
+</ol>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">load</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Request</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6Siesta8Resource4loadFS0_FT12usingRequestPS_7Request__PS1__"></a>
+                    <a name="//apple_ref/swift/Method/load(usingRequest:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6Siesta8Resource4loadFS0_FT12usingRequestPS_7Request__PS1__">load(usingRequest:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Updates the state of this resource using the result of the given request. Use this method when you want a request
+to update <code><a href="../Classes/Resource.html#/s:vC6Siesta8Resource10latestDataGSqVS_6Entity_">latestData</a></code> or <code><a href="../Classes/Resource.html#/s:vC6Siesta8Resource11latestErrorGSqVS_5Error_">latestError</a></code> and notify observers just as <code><a href="../Classes/Resource.html#/s:FC6Siesta8Resource4loadFS0_FT_PS_7Request_">load()</a></code> would, but:</p>
+
+<ul>
+<li>you need to use a request method other than GET,</li>
+<li>you need to set headers or other request options, but just for this one request (so that <code>Service.configure</code>
+won’t work), or</li>
+<li>for some arcane reason, you want a request for a <em>different</em> resource to update the state of this one.</li>
+</ul>
+
+<p>For example, an authentication resource might return its state only in response to a POST:</p>
+
+<pre class="highlight plaintext"><code>let auth = MyAPI.authentication
+auth.load(usingRequest:
+  auth.request(
+      .POST, json: ["user": user, "password": pass]))
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">load</span><span class="p">(</span><span class="n">usingRequest</span> <span class="nv">req</span><span class="p">:</span> <span class="kt">Request</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Request</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6Siesta8Resource22cancelLoadIfUnobservedFS0_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/cancelLoadIfUnobserved()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6Siesta8Resource22cancelLoadIfUnobservedFS0_FT_T_">cancelLoadIfUnobserved()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>If this resource has no observers, cancels all <code><a href="../Classes/Resource.html#/s:vC6Siesta8Resource12loadRequestsGSaPS_7Request__">loadRequests</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">cancelLoadIfUnobserved</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6Siesta8Resource22cancelLoadIfUnobservedFS0_FT10afterDelaySd8callbackFT_T__T_"></a>
+                    <a name="//apple_ref/swift/Method/cancelLoadIfUnobserved(afterDelay:callback:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6Siesta8Resource22cancelLoadIfUnobservedFS0_FT10afterDelaySd8callbackFT_T__T_">cancelLoadIfUnobserved(afterDelay:callback:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Convenience to call <code><a href="../Classes/Resource.html#/s:FC6Siesta8Resource22cancelLoadIfUnobservedFS0_FT_T_">cancelLoadIfUnobserved()</a></code> after a delay. Useful for situations such as table view scrolling
+where views are being rapidly discarded and recreated, and you no longer need the resource, but want to give other
+views a chance to express interest in it before canceling any requests.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">cancelLoadIfUnobserved</span><span class="p">(</span><span class="n">afterDelay</span> <span class="nv">delay</span><span class="p">:</span> <span class="kt">NSTimeInterval</span><span class="p">,</span> <span class="nv">callback</span><span class="p">:</span> <span class="kt">Void</span> <span class="o">-&gt;</span> <span class="kt">Void</span> <span class="o">=</span> <span class="p">{})</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Local%20state%20changes"></a>
+                <a name="//apple_ref/swift/Section/Local state changes" class="dashAnchor"></a>
+                <a href="#/Local%20state%20changes">
+                  <h3 class="section-name">Local state changes</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6Siesta8Resource17overrideLocalDataFS0_FVS_6EntityT_"></a>
+                    <a name="//apple_ref/swift/Method/overrideLocalData(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6Siesta8Resource17overrideLocalDataFS0_FVS_6EntityT_">overrideLocalData(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Directly updates <code><a href="../Classes/Resource.html#/s:vC6Siesta8Resource10latestDataGSqVS_6Entity_">latestData</a></code> without touching the network. Clears <code><a href="../Classes/Resource.html#/s:vC6Siesta8Resource11latestErrorGSqVS_5Error_">latestError</a></code> and broadcasts
+<code><a href="../Enums/ResourceEvent.html#/s:FO6Siesta13ResourceEvent7NewDataFMS0_FOS0_13NewDataSourceS0_">ResourceEvent.NewData</a></code> to observers.</p>
+
+<p>This method is useful for incremental and optimistic updates.</p>
+
+<p>You may send a request which does <em>not</em> return the complete state of the resource in the response body,
+but which still changes the state of the resource. You could handle this by initiating a refresh immedately
+after success:</p>
+
+<pre class="highlight plaintext"><code>resource.request(method: .POST, json: ["name": "Fred"])
+  .success { _ in resource.load() }
+</code></pre>
+
+<p>However, if you already <em>know</em> the resulting state of the resource given a success response, you can avoid the
+second network call by updating the entity yourself:</p>
+
+<pre class="highlight plaintext"><code>resource.request(method: .POST, json: ["name": "Fred"])
+  .success { partialEntity in
+
+      // Make a mutable copy of the current content
+      var updatedContent = resource.jsonDict
+
+      // Do the incremental update
+      updatedContent["name"] = parialEntity["newName"]
+
+      // Make that the resource’s new entity
+      resource.overrideLocalContent(updatedEntity)
+  }
+</code></pre>
+
+<p>Use this technique with caution!</p>
+
+<p>Note that the data you pass does <em>not</em> go through the standard <code><a href="../Protocols/ResponseTransformer.html">ResponseTransformer</a></code> chain. You should pass data
+as if it was already parsed, not in its raw form as the server would return it. For example, in the code above,
+<code>updatedContent</code> is a <code>Dictionary</code>, not <code>NSData</code> containing encoded JSON.</p>
+
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../Classes/Resource.html#/s:FC6Siesta8Resource20overrideLocalContentFS0_FPSs9AnyObject_T_">overrideLocalContent(_:)</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">overrideLocalData</span><span class="p">(</span><span class="nv">entity</span><span class="p">:</span> <span class="kt">Entity</span><span class="p">)</span>
+        <span class="p">{</span> <span class="nf">receiveNewData</span><span class="p">(</span><span class="n">entity</span><span class="p">,</span> <span class="nv">source</span><span class="p">:</span> <span class="o">.</span><span class="kt">LocalOverride</span><span class="p">)</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6Siesta8Resource20overrideLocalContentFS0_FPSs9AnyObject_T_"></a>
+                    <a name="//apple_ref/swift/Method/overrideLocalContent(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6Siesta8Resource20overrideLocalContentFS0_FPSs9AnyObject_T_">overrideLocalContent(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Convenience method to replace the <code>content</code> of <code><a href="../Classes/Resource.html#/s:vC6Siesta8Resource10latestDataGSqVS_6Entity_">latestData</a></code> without altering the content type or other headers.</p>
+
+<p>If this resource has no content, this method sets the content type to <code>application/binary</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">overrideLocalContent</span><span class="p">(</span><span class="nv">content</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6Siesta8Resource10invalidateFS0_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/invalidate()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6Siesta8Resource10invalidateFS0_FT_T_">invalidate()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Forces the next call to <code><a href="../Classes/Resource.html#/s:FC6Siesta8Resource12loadIfNeededFS0_FT_GSqPS_7Request__">loadIfNeeded()</a></code> to trigger a request, even if the current content is fresh.
+Leaves the current values of <code><a href="../Classes/Resource.html#/s:vC6Siesta8Resource10latestDataGSqVS_6Entity_">latestData</a></code> and <code><a href="../Classes/Resource.html#/s:vC6Siesta8Resource11latestErrorGSqVS_5Error_">latestError</a></code> intact (including their timestamps).</p>
+
+<p>Use this if you know the current content is stale, but don’t want to trigger a network request right away.</p>
+
+<p>Any update to <code><a href="../Classes/Resource.html#/s:vC6Siesta8Resource10latestDataGSqVS_6Entity_">latestData</a></code> or <code><a href="../Classes/Resource.html#/s:vC6Siesta8Resource11latestErrorGSqVS_5Error_">latestError</a></code> — including a call to <code>overrideLocalData()</code> or
+<code>overrideLocalContent()</code> — clears the invalidation.</p>
+
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../Classes/Resource.html#/s:FC6Siesta8Resource4wipeFS0_FT_T_">wipe()</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">invalidate</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6Siesta8Resource4wipeFS0_FT_T_"></a>
+                    <a name="//apple_ref/swift/Method/wipe()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6Siesta8Resource4wipeFS0_FT_T_">wipe()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Resets this resource to its pristine state, as if newly created.</p>
+
+<ul>
+<li>Sets <code><a href="../Classes/Resource.html#/s:vC6Siesta8Resource10latestDataGSqVS_6Entity_">latestData</a></code> to nil.</li>
+<li>Sets <code><a href="../Classes/Resource.html#/s:vC6Siesta8Resource11latestErrorGSqVS_5Error_">latestError</a></code> to nil.</li>
+<li>Cancels all resource requests in progress.</li>
+</ul>
+
+<p>Observers receive a <code>NewData</code> event. Requests in progress call completion hooks with a cancellation error.</p>
+
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../Classes/Resource.html#/s:FC6Siesta8Resource10invalidateFS0_FT_T_">invalidate()</a></code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">wipe</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Observing%20Resources"></a>
+                <a name="//apple_ref/swift/Section/Observing Resources" class="dashAnchor"></a>
+                <a href="#/Observing%20Resources">
+                  <h3 class="section-name">Observing Resources</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6Siesta8Resource11addObserverFS0_FPS_16ResourceObserverSs9AnyObject_DS0_"></a>
+                    <a name="//apple_ref/swift/Method/addObserver(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6Siesta8Resource11addObserverFS0_FPS_16ResourceObserverSs9AnyObject_DS0_">addObserver(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds an self-owned observer to this resource, which will receive notifications of changes to resource state.</p>
+
+<p>The resource holds a weak reference to the observer. If there are no strong references to the observer, it is
+automatically removed.</p>
+
+<p>Use this method for objects such as <code>UIViewController</code>s which already have a lifecycle of their own, are retained
+elsewhere, and also happen to act as observers.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addObserver</span><span class="p">(</span><span class="nv">observerAndOwner</span><span class="p">:</span> <span class="kd">protocol</span><span class="o">&lt;</span><span class="kt">ResourceObserver</span><span class="p">,</span> <span class="kt">AnyObject</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6Siesta8Resource11addObserverFS0_FTPS_16ResourceObserver_5ownerPSs9AnyObject__DS0_"></a>
+                    <a name="//apple_ref/swift/Method/addObserver(_:owner:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6Siesta8Resource11addObserverFS0_FTPS_16ResourceObserver_5ownerPSs9AnyObject__DS0_">addObserver(_:owner:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds an observer to this resource, holding a strong reference to it as long as <code>owner</code> still exists.</p>
+
+<p>The resource holds only a weak reference to <code>owner</code>, and as soon as the owner goes away, the observer is removed.</p>
+
+<p>The typical use for this method is for glue objects whose only purpose is to act as an observer, and which would
+not normally be retained by anything else.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addObserver</span><span class="p">(</span><span class="nv">observer</span><span class="p">:</span> <span class="kt">ResourceObserver</span><span class="p">,</span> <span class="nv">owner</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6Siesta8Resource11addObserverFS0_FT5ownerPSs9AnyObject_7closureFT8resourceS0_5eventOS_13ResourceEvent_T__DS0_"></a>
+                    <a name="//apple_ref/swift/Method/addObserver(owner:closure:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6Siesta8Resource11addObserverFS0_FT5ownerPSs9AnyObject_7closureFT8resourceS0_5eventOS_13ResourceEvent_T__DS0_">addObserver(owner:closure:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a closure observer to this resource.</p>
+
+<p>The resource holds a weak reference to <code>owner</code>, and the closure will receive events only as long as <code>owner</code>
+still exists.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addObserver</span><span class="p">(</span><span class="n">owner</span> <span class="nv">owner</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">,</span> <span class="nv">closure</span><span class="p">:</span> <span class="kt">ResourceObserverClosure</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6Siesta8Resource15removeObserversFS0_FT7ownedByGSqPSs9AnyObject___T_"></a>
+                    <a name="//apple_ref/swift/Method/removeObservers(ownedBy:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6Siesta8Resource15removeObserversFS0_FT7ownedByGSqPSs9AnyObject___T_">removeObservers(ownedBy:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">removeObservers</span><span class="p">(</span><span class="n">ownedBy</span> <span class="nv">owner</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC6Siesta8Resource20configurationPatternFS0_FCS_7ServiceFCSo5NSURLSb"></a>
+                    <a name="//apple_ref/swift/Method/configurationPattern(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC6Siesta8Resource20configurationPatternFS0_FCS_7ServiceFCSo5NSURLSb">configurationPattern(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Matches this specific resource when passed as a pattern to <code><a href="../Classes/Service.html#/s:FC6Siesta7Service9configureFS0_FT11descriptionSS10configurerFCVS_13Configuration7BuilderT__T_">Service.configure(...)</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configurationPattern</span><span class="p">(</span><span class="nv">service</span><span class="p">:</span> <span class="kt">Service</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSURL</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC6Siesta8Resource30entityForTypedContentAccessorsGSqVS_6Entity_"></a>
+                    <a name="//apple_ref/swift/Property/entityForTypedContentAccessors" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC6Siesta8Resource30entityForTypedContentAccessorsGSqVS_6Entity_">entityForTypedContentAccessors</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Typed content accessors such as <code>.text</code> and <code>.jsonDict</code> apply to <code>latestData?.content</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">entityForTypedContentAccessors</span><span class="p">:</span> <span class="kt">Entity</span><span class="p">?</span> <span class="p">{</span> <span class="k">return</span> <span class="n">latestData</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>© 2016 <a class="link" href="http://bustoutsolutions.com" target="_blank" rel="external">Bust Out Solutions</a> under <a class="link" href="https://github.com/bustoutsolutions/siesta/blob/master/LICENSE" target="_blank" rel="external">open source license</a>.</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
