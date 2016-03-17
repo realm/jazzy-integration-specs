@@ -215,7 +215,10 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>A set of logically connected RESTful resources, grouped under a base URL.</p>
+
+<p>You will typically create a separate subclass of <code>Service</code> for each REST API you use.</p>
+
                         <a href="Classes/Service.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -295,7 +298,19 @@ one specific resource).</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>An in-memory cache of a RESTful resource, plus information about the status of network requests related to it.</p>
+
+<p>This class answers three basic questions about a resource:</p>
+
+<ul>
+<li>What is the latest data for the resource this device has retrieved, if any?</li>
+<li>Did the last attempt to load it result in an error?</li>
+<li>Is there a request in progress?</li>
+</ul>
+
+<p>…and allows multiple observer to register to be notified whenever the answers to any of these
+questions changes.</p>
+
                         <a href="Classes/Resource.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">

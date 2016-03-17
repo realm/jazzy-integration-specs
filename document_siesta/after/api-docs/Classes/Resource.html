@@ -204,7 +204,19 @@
 
                 </div>
               </div>
-            
+            <p>An in-memory cache of a RESTful resource, plus information about the status of network requests related to it.</p>
+
+<p>This class answers three basic questions about a resource:</p>
+
+<ul>
+<li>What is the latest data for the resource this device has retrieved, if any?</li>
+<li>Did the last attempt to load it result in an error?</li>
+<li>Is there a request in progress?</li>
+</ul>
+
+<p>…and allows multiple observer to register to be notified whenever the answers to any of these
+questions changes.</p>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -578,7 +590,29 @@ for this resource are in progress.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Returns the resource with the given string appended to the path of this resource’s URL, with a joining slash
+inserted if necessary.</p>
+
+<p>Use this method for hierarchical resource navigation. The typical use case is constructing a resource URL from
+path components and IDs:</p>
+
+<pre class="highlight plaintext"><code>let resource = service.resource("/widgets")
+resource.child("123").child("details")
+  //→ /widgets/123/details
+</code></pre>
+
+<p>This method <em>always</em> returns a subpath of the receiving resource. It does not apply any special
+interpretation to strings such <code>./</code>, <code>//</code> or <code>?</code> that have significance in other URL-related
+situations. Special characters are escaped when necessary, and otherwise ignored. See
+<a href="https://bustoutsolutions.github.io/siesta/specs/#ResourcePathsSpec"><code>ResourcePathsSpec</code></a>
+for details.</p>
+
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../Classes/Resource.html#/s:FC6Siesta8Resource8relativeFS0_FSSS0_">relative(_:)</a></code>
+
+</div>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -604,7 +638,22 @@ for this resource are in progress.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Returns the resource with the given URL, using this resource’s URL as the base if it is a relative URL.</p>
+
+<p>This method interprets strings such as <code>.</code>, <code>..</code>, and a leading <code>/</code> or <code>//</code> as relative URLs. It resolves its
+parameter much like an <code>href</code> attribute in an HTML document. Refer to
+<a href="https://bustoutsolutions.github.io/siesta/specs/#ResourcePathsSpec"><code>ResourcePathsSpec</code></a>
+for details.</p>
+
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <ul>
+<li><code><a href="../Classes/Resource.html#/s:FC6Siesta8Resource16optionalRelativeFS0_FGSqSS_GSqS0__">optionalRelative(_:)</a></code></li>
+<li><code><a href="../Classes/Resource.html#/s:FC6Siesta8Resource5childFS0_FSSS0_">child(_:)</a></code></li>
+</ul>
+
+</div>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -630,7 +679,16 @@ for this resource are in progress.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Returns <code>relative(href)</code> if <code>href</code> is present, and nil if <code>href</code> is nil.</p>
+
+<p>This convenience method is useful for resolving URLs returned as part of a JSON response body:</p>
+
+<pre class="highlight plaintext"><code>let href = resource.jsonDict["owner"] as? String  // href is an optional
+if let ownerResource = resource.optionalRelative(href) {
+  // ...
+}
+</code></pre>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -656,7 +714,22 @@ for this resource are in progress.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Returns this resource with the given parameter added or changed in the query string.</p>
+
+<p>If <code>value</code> is an empty string, the parameter goes in the query string with no value (e.g. <code>?foo</code>).
+If <code>value</code> is nil, the parameter is removed.</p>
+
+<p>There is no support for parameters with an equal sign but an empty value (e.g. <code>?foo=</code>).
+There is also no support for repeated keys in the query string (e.g. <code>?foo=1&amp;foo=2</code>).
+If you need to circumvent either of these restrictions, you can create the query string yourself and pass
+it to <code><a href="../Classes/Resource.html#/s:FC6Siesta8Resource8relativeFS0_FSSS0_">relative(_:)</a></code> instead of using <code>withParam(_:_:)</code>.</p>
+
+<p>Note that <code><a href="../Classes/Service.html">Service</a></code> gives out unique <code><a href="../Classes/Resource.html">Resource</a></code> instances according to the full URL in string form, and thus
+considers query string parameter order significant. Therefore, to ensure that you get the same <code><a href="../Classes/Resource.html">Resource</a></code>
+instance no matter the order in which you specify parameters, <code>withParam(_:_:)</code> sorts all parameters by name.
+Note that <em>only</em> <code>withParam(_:_:)</code> does this sorting; if you use other methods to create query strings, it is
+up to you to canonicalize your parameter order.</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -693,7 +766,67 @@ for this resource are in progress.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Initiates a network request for the given resource.</p>
+
+<p>Handle the result of the request by attaching response handlers:</p>
+
+<pre class="highlight plaintext"><code>resource.request(.GET)
+    .success { ... }
+    .failure { ... }
+</code></pre>
+
+<p>See <code><a href="../Protocols/Request.html">Request</a></code> for a complete list of hooks.</p>
+
+<p>Note that, unlike load() and loadIfNeeded(), this method does <em>not</em> update latestData or latestError,
+and does not notify resource observers about the result.</p>
+
+<div class="aside aside-parameter">
+    <p class="aside-title">Parameter</p>
+    Parameter method: The HTTP verb to use for the request
+
+</div>
+
+<div class="aside aside-parameter">
+    <p class="aside-title">Parameter</p>
+    <p>Parameter requestMutation:
+An optional callback to change details of the request before it is sent. For example:</p>
+<pre class="highlight plaintext"><code>request(.POST) { nsreq in
+  nsreq.HTTPBody = imageData
+  nsreq.addValue(
+    "image/png",
+    forHTTPHeaderField:
+      "Content-Type")
+}
+</code></pre>
+
+<p>Does nothing by default.</p>
+
+</div>
+
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p>SeeAlso:</p>
+
+<ul>
+<li><code><a href="../Classes/Resource.html#/s:FC6Siesta8Resource4loadFS0_FT_PS_7Request_">load()</a></code></li>
+<li><code><a href="../Classes/Resource.html#/s:FC6Siesta8Resource12loadIfNeededFS0_FT_GSqPS_7Request__">loadIfNeeded()</a></code></li>
+</ul>
+
+</div>
+
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p>SeeAlso:</p>
+
+<ul>
+<li><code><a href="../Classes/Resource.html#/s:FC6Siesta8Resource7requestFS0_FTOS_13RequestMethod4dataCSo6NSData11contentTypeSS15requestMutationFCSo19NSMutableURLRequestT__PS_7Request_">request(_:data:contentType:requestMutation:)</a></code></li>
+<li><code>request(_:text:encoding:requestMutation:)</code></li>
+<li><code>request(_:json:requestMutation:)</code></li>
+<li><code><a href="../Classes/Resource.html#/s:FC6Siesta8Resource7requestFS0_FTOS_13RequestMethod10urlEncodedGVSs10DictionarySSSS_15requestMutationFCSo19NSMutableURLRequestT__PS_7Request_">request(_:urlEncoded:requestMutation:)</a></code></li>
+</ul>
+
+</div>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -757,7 +890,8 @@ for this resource are in progress.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Convenience method to initiate a request with a body.</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -788,7 +922,23 @@ for this resource are in progress.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Convenience method to initiate a request with a text body.</p>
+
+<p>If the string cannot be encoded using the given encoding, this methods triggers the <code>onFailure(_:)</code> request hook
+immediately, without touching the network.</p>
+
+<div class="aside aside-parameter">
+    <p class="aside-title">Parameter</p>
+    Parameter contentType: <code>text/plain</code> by default.
+
+</div>
+
+<div class="aside aside-parameter">
+    <p class="aside-title">Parameter</p>
+    Parameter encoding: UTF-8 (<code>NSUTF8StringEncoding</code>) by default.
+
+</div>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -853,7 +1003,17 @@ for this resource are in progress.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Convenience method to initiate a request with a JSON body.</p>
+
+<p>If the <code>json</code> cannot be encoded as JSON, e.g. if it is a dictionary with non-JSON-convertible data, this methods
+triggers the <code>onFailure(_:)</code> request hook immediately, without touching the network.</p>
+
+<div class="aside aside-parameter">
+    <p class="aside-title">Parameter</p>
+    Parameter contentType: <code>application/json</code> by default.
+
+</div>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -904,7 +1064,12 @@ for this resource are in progress.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Convenience method to initiate a request with URL-encoded parameters in the meesage body.</p>
+
+<p>This method performs all necessary escaping, and has full Unicode support in both keys and values.</p>
+
+<p>The content type is <code>application/x-www-form-urlencoded</code>.</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1449,7 +1614,8 @@ still exists.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
+                        <p>Removes all observers owned by the given object.</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
