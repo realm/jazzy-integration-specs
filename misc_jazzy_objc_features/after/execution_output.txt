@@ -1,4 +1,10 @@
 COCOAPODS_SKIP_UPDATE_MESSAGE=TRUE JAZZY_FAKE_DATE=YYYY-MM-DD JAZZY_FAKE_VERSION=X.X.X JAZZY_INTEGRATION_SPECS=TRUE ruby ROOT/bin/jazzy --theme fullwidth 2>&1
 Using config file ROOT/tmp/misc_jazzy_objc_features/.jazzy.yaml
-building site
-jam out ♪♫ to your fresh new docs in `docs`
+2016-04-04 20:23:13.946 xcodebuild[79240:41670378] [MT] PluginLoading: Required plug-in compatibility UUID ACA8656B-FEA8-4B6D-8E4A-93F4C95C362C for plug-in at path '~/Library/Application Support/Developer/Shared/Xcode/Plug-ins/SuperFixer.xcplugin' not present in DVTPlugInCompatibilityUUIDs
+2016-04-04 20:23:13.947 xcodebuild[79240:41670378] [MT] PluginLoading: Required plug-in compatibility UUID ACA8656B-FEA8-4B6D-8E4A-93F4C95C362C for plug-in at path '~/Library/Application Support/Developer/Shared/Xcode/Plug-ins/OMQuickHelp.xcplugin' not present in DVTPlugInCompatibilityUUIDs
+2016-04-04 20:23:13.947 xcodebuild[79240:41670378] [MT] PluginLoading: Required plug-in compatibility UUID ACA8656B-FEA8-4B6D-8E4A-93F4C95C362C for plug-in at path '~/Library/Application Support/Developer/Shared/Xcode/Plug-ins/Alcatraz.xcplugin' not present in DVTPlugInCompatibilityUUIDs
+ROOT/lib/jazzy/sourcekitten.rb:139:in `run_sourcekitten': Unable to find an Xcode with swift version 2.1.1. (RuntimeError)
+	from ROOT/lib/jazzy/doc_builder.rb:56:in `block in build'
+	from ROOT/lib/jazzy/doc_builder.rb:54:in `chdir'
+	from ROOT/lib/jazzy/doc_builder.rb:54:in `build'
+	from ROOT/bin/jazzy:15:in `<main>'
