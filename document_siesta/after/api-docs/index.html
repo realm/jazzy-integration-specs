@@ -156,7 +156,7 @@
             <a href="Logging.html">Logging</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Logging.html#/s:v6Siesta20enabledLogCategoriesGVSs3SetOS_11LogCategory_">enabledLogCategories</a>
+                <a href="Logging.html#/s:v6Siesta20enabledLogCategoriesGVs3SetOS_11LogCategory_">enabledLogCategories</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/LogCategory.html">LogCategory</a>
@@ -391,7 +391,7 @@ git submodule update --init
 </code></pre>
 
 <p>Or if you don’t like delegates, Siesta supports closure observers:</p>
-<pre class="highlight swift"><code><span class="kt">MyAPI</span><span class="o">.</span><span class="nf">resource</span><span class="p">(</span><span class="s">"/profile"</span><span class="p">)</span><span class="o">.</span><span class="nf">addObserver</span><span class="p">(</span><span class="k">self</span><span class="p">)</span> <span class="p">{</span>
+<pre class="highlight swift"><code><span class="kt">MyAPI</span><span class="o">.</span><span class="nf">resource</span><span class="p">(</span><span class="s">"/profile"</span><span class="p">)</span><span class="o">.</span><span class="nf">addObserver</span><span class="p">(</span><span class="nv">owner</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span> <span class="p">{</span>
     <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="n">resource</span><span class="p">,</span> <span class="n">_</span> <span class="k">in</span>
 
     <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="n">nameLabel</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">resource</span><span class="o">.</span><span class="n">jsonDict</span><span class="p">[</span><span class="s">"name"</span><span class="p">]</span> <span class="k">as?</span> <span class="kt">String</span>
@@ -410,12 +410,12 @@ git submodule update --init
 </code></pre>
 
 <p>…and now your observers see models instead of JSON:</p>
-<pre class="highlight swift"><code><span class="kt">MyAPI</span><span class="o">.</span><span class="nf">resource</span><span class="p">(</span><span class="s">"/profile"</span><span class="p">)</span><span class="o">.</span><span class="nf">addObserver</span><span class="p">(</span><span class="k">self</span><span class="p">)</span> <span class="p">{</span>
-    <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="k">in</span>
-    <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="nf">showProfile</span><span class="p">(</span><span class="nv">$0</span><span class="o">.</span><span class="nf">typedContent</span><span class="p">())</span>  <span class="c1">// Response now contains UserProfile instead of JSON</span>
+<pre class="highlight swift"><code><span class="kt">MyAPI</span><span class="o">.</span><span class="nf">resource</span><span class="p">(</span><span class="s">"/profile"</span><span class="p">)</span><span class="o">.</span><span class="nf">addObserver</span><span class="p">(</span><span class="nv">owner</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span> <span class="p">{</span>
+    <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="n">resource</span><span class="p">,</span> <span class="n">_</span> <span class="k">in</span>
+    <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="nf">showProfile</span><span class="p">(</span><span class="n">resource</span><span class="o">.</span><span class="nf">typedContent</span><span class="p">())</span>  <span class="c1">// Response now contains UserProfile instead of JSON</span>
 <span class="p">}</span>
 
-<span class="kd">func</span> <span class="nf">showProfile</span><span class="p">(</span><span class="nv">profile</span><span class="p">:</span> <span class="kt">UserProfile</span><span class="p">)</span> <span class="p">{</span>
+<span class="kd">func</span> <span class="nf">showProfile</span><span class="p">(</span><span class="nv">profile</span><span class="p">:</span> <span class="kt">UserProfile</span><span class="p">?)</span> <span class="p">{</span>
     <span class="o">...</span>
 <span class="p">}</span>
 </code></pre>
@@ -429,7 +429,7 @@ git submodule update --init
 <p>…and you have a networked UI.</p>
 
 <p>Add a loading indicator:</p>
-<pre class="highlight swift"><code><span class="kt">MyAPI</span><span class="o">.</span><span class="nf">resource</span><span class="p">(</span><span class="s">"/profile"</span><span class="p">)</span><span class="o">.</span><span class="nf">addObserver</span><span class="p">(</span><span class="k">self</span><span class="p">)</span> <span class="p">{</span>
+<pre class="highlight swift"><code><span class="kt">MyAPI</span><span class="o">.</span><span class="nf">resource</span><span class="p">(</span><span class="s">"/profile"</span><span class="p">)</span><span class="o">.</span><span class="nf">addObserver</span><span class="p">(</span><span class="nv">owner</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span> <span class="p">{</span>
     <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="n">resource</span><span class="p">,</span> <span class="n">event</span> <span class="k">in</span>
 
     <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="n">activityIndicator</span><span class="o">.</span><span class="n">hidden</span> <span class="o">=</span> <span class="o">!</span><span class="n">resource</span><span class="o">.</span><span class="n">loading</span>
@@ -653,7 +653,7 @@ git submodule update --init
 <td style="text-align: center"></td>
 </tr>
 <tr>
-<td style="text-align: left">Primary langauge</td>
+<td style="text-align: left">Primary language</td>
 <td style="text-align: center">Swift</td>
 <td style="text-align: center">Swift</td>
 <td style="text-align: center">Obj-C</td>

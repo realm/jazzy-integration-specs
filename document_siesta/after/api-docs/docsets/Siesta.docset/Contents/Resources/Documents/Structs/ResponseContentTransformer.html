@@ -157,7 +157,7 @@
             <a href="../Logging.html">Logging</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Logging.html#/s:v6Siesta20enabledLogCategoriesGVSs3SetOS_11LogCategory_">enabledLogCategories</a>
+                <a href="../Logging.html#/s:v6Siesta20enabledLogCategoriesGVs3SetOS_11LogCategory_">enabledLogCategories</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/LogCategory.html">LogCategory</a>
@@ -207,8 +207,9 @@
             <p>A simplified <code><a href="../Protocols/ResponseTransformer.html">ResponseTransformer</a></code> that deals only with the content of the response entity, and does not touch the
 surrounding metadata.</p>
 
-<p>If the input entity’s content does not match the <code>InputContentType</code>, the response is an error.
-If <code>processContent(_:)</code> throws, the response is transformed to an error.</p>
+<p>If <code>processContent(_:)</code> throws or returns nil, the output is an error.</p>
+
+<p>If the input entity’s content does not match the <code>InputContentType</code>, the response is an error.</p>
 
           </section>
           <section class="section task-group-section">
@@ -237,7 +238,7 @@ error is passed on to the resource as is. Other failures are wrapped in a <code>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Processor</span> <span class="o">=</span> <span class="p">(</span><span class="nv">content</span><span class="p">:</span> <span class="kt">InputContentType</span><span class="p">,</span> <span class="nv">entity</span><span class="p">:</span> <span class="kt">Entity</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">OutputContentType</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Processor</span> <span class="o">=</span> <span class="p">(</span><span class="nv">content</span><span class="p">:</span> <span class="kt">InputContentType</span><span class="p">,</span> <span class="nv">entity</span><span class="p">:</span> <span class="kt">Entity</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">OutputContentType</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -247,9 +248,9 @@ error is passed on to the resource as is. Other failures are wrapped in a <code>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FV6Siesta26ResponseContentTransformercu0_rFMGS0_q_q0__FT31skipWhenEntityMatchesOutputTypeSb15transformErrorsSb9processorFzT7contentq_6entityVS_6Entity_q0__GS0_q_q0__"></a>
+                    <a name="/s:FV6Siesta26ResponseContentTransformercFT31skipWhenEntityMatchesOutputTypeSb15transformErrorsSb9processorFzT7contentx6entityVS_6Entity_GSqq___GS0_xq__"></a>
                     <a name="//apple_ref/swift/Method/init(skipWhenEntityMatchesOutputType:transformErrors:processor:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FV6Siesta26ResponseContentTransformercu0_rFMGS0_q_q0__FT31skipWhenEntityMatchesOutputTypeSb15transformErrorsSb9processorFzT7contentq_6entityVS_6Entity_q0__GS0_q_q0__">init(skipWhenEntityMatchesOutputType:transformErrors:processor:)</a>
+                    <a class="token" href="#/s:FV6Siesta26ResponseContentTransformercFT31skipWhenEntityMatchesOutputTypeSb15transformErrorsSb9processorFzT7contentx6entityVS_6Entity_GSqq___GS0_xq__">init(skipWhenEntityMatchesOutputType:transformErrors:processor:)</a>
                     </code>
                   </div>
                   <div class="height-container">

@@ -33,7 +33,7 @@
       <div class="content-wrapper">
         <p><a href="../index.html">RealmSwift Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F0%2E97%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F0%2E98%2E6%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -88,6 +88,9 @@
             <a href="../Enums.html">Enums</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Enums/Error.html">Error</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/Notification.html">Notification</a>
               </li>
             </ul>
@@ -96,13 +99,13 @@
             <a href="../Functions.html">Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Functions.html#/s:ZF10RealmSwiftoi2eeFTPs9ErrorType_PS0___Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Functions.html#/s:ZF10RealmSwiftoi2eeFTVS_14SortDescriptorS0__Sb">==(_:_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Functions.html#/s:ZF10RealmSwiftoi2eeFTCS_6SchemaS0__Sb">==(_:_:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Functions.html#/s:ZF10RealmSwiftoi2eeFTCS_12ObjectSchemaS0__Sb">==(_:_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Functions.html#/s:ZF10RealmSwiftoi2eeFTCS_5RealmS0__Sb">==(_:_:)</a>
@@ -111,10 +114,16 @@
                 <a href="../Functions.html#/s:ZF10RealmSwiftoi2eeFTCS_8PropertyS0__Sb">==(_:_:)</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Functions.html#/s:ZF10RealmSwiftoi2eeFTCS_12ObjectSchemaS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Functions.html#/s:F10RealmSwift12migrateRealmFTVCS_5Realm13Configuration_GSqCSo7NSError_">migrateRealm(_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:F10RealmSwift19schemaVersionAtPathFTSS13encryptionKeyGSqCSo6NSData_5errorGVSs33AutoreleasingUnsafeMutablePointerGSqCSo7NSError___GSqVSs6UInt64_">schemaVersionAtPath(_:encryptionKey:error:)</a>
+                <a href="../Functions.html#/s:F10RealmSwift19schemaVersionAtPathFTSS13encryptionKeyGSqCSo6NSData_5errorGVs33AutoreleasingUnsafeMutablePointerGSqCSo7NSError___GSqVs6UInt64_">schemaVersionAtPath(_:encryptionKey:error:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:ZF10RealmSwiftoi2teFTOS_5ErrorPs9ErrorType__Sb">~=(_:_:)</a>
               </li>
             </ul>
           </li>
@@ -178,11 +187,26 @@
 
                 </div>
               </div>
-            <p><code>Results</code> is an auto-updating container type in Realm returned from object
-queries.</p>
+            <p>Results is an auto-updating container type in Realm returned from object queries.</p>
 
-<p>Results can be queried with the same predicates as <code><a href="../Classes/List.html">List&lt;T&gt;</a></code> and you can chain queries to further
-filter query results.</p>
+<p>Results can be queried with the same predicates as <code><a href="../Classes/List.html">List&lt;T&gt;</a></code> and you can chain
+queries to further filter query results.</p>
+
+<p>Results always reflect the current state of the Realm on the current thread,
+including during write transactions on the current thread. The one exception to
+this is when using <code>for...in</code> enumeration, which will always enumerate over the
+ objects which matched the query when the enumeration is begun, even if
+some of them are deleted or modified to be excluded by the filter during the
+enumeration.</p>
+
+<p>Results are initially lazily evaluated, and only run queries when the result
+of the query is requested. This means that chaining several temporary
+Results to sort and filter your data does not perform any extra work
+processing the intermediate state.</p>
+
+<p>Once the results have been evaluated or a notification block has been added,
+the results are eagerly kept up-to-date, with the work done to keep them
+up-to-date done on a background thread whenever possible.</p>
 
 <p>Results cannot be created directly.</p>
 
@@ -200,9 +224,39 @@ filter query results.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:sC10RealmSwift7Results9subscriptFSiq_"></a>
+                    <a name="/s:C10RealmSwift7Results7Element"></a>
+                    <a name="//apple_ref/swift/Alias/Element" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C10RealmSwift7Results7Element">Element</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Element type contained in this collection.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Element</span> <span class="o">=</span> <span class="kt">T</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Results.swift#L102">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:iC10RealmSwift7Results9subscriptFSix"></a>
                     <a name="//apple_ref/swift/Method/subscript(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:sC10RealmSwift7Results9subscriptFSiq_">subscript(_:)</a>
+                    <a class="token" href="#/s:iC10RealmSwift7Results9subscriptFSix">subscript(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -247,37 +301,7 @@ filter query results.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/RealmSwift-swift2.0/Results.swift#L153">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:C10RealmSwift7Results7Element"></a>
-                    <a name="//apple_ref/swift/Alias/Element" class="dashAnchor"></a>
-                    <a class="token" href="#/s:C10RealmSwift7Results7Element">Element</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Element type contained in this collection.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Element</span> <span class="o">=</span> <span class="kt">T</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/RealmSwift-swift2.0/Results.swift#L87">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Results.swift#L168">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -310,7 +334,7 @@ cannot exist independently from a <code><a href="../Classes/Realm.html">Realm</a
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/RealmSwift-swift2.0/Results.swift#L95">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Results.swift#L110">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -340,7 +364,7 @@ cannot exist independently from a <code><a href="../Classes/Realm.html">Realm</a
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/RealmSwift-swift2.0/Results.swift#L98">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Results.swift#L113">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -359,9 +383,9 @@ cannot exist independently from a <code><a href="../Classes/Realm.html">Realm</a
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC10RealmSwift7Results7indexOfuRdq_CS_6Object_FGS0_q__Fq_GSqSi_"></a>
+                    <a name="/s:FC10RealmSwift7Results7indexOfFxGSqSi_"></a>
                     <a name="//apple_ref/swift/Method/indexOf(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC10RealmSwift7Results7indexOfuRdq_CS_6Object_FGS0_q__Fq_GSqSi_">indexOf(_:)</a>
+                    <a class="token" href="#/s:FC10RealmSwift7Results7indexOfFxGSqSi_">indexOf(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -406,7 +430,7 @@ cannot exist independently from a <code><a href="../Classes/Realm.html">Realm</a
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/RealmSwift-swift2.0/Results.swift#L115-L117">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Results.swift#L130-L132">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -414,9 +438,9 @@ cannot exist independently from a <code><a href="../Classes/Realm.html">Realm</a
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC10RealmSwift7Results7indexOfuRdq_CS_6Object_FGS0_q__FCSo11NSPredicateGSqSi_"></a>
+                    <a name="/s:FC10RealmSwift7Results7indexOfFCSo11NSPredicateGSqSi_"></a>
                     <a name="//apple_ref/swift/Method/indexOf(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC10RealmSwift7Results7indexOfuRdq_CS_6Object_FGS0_q__FCSo11NSPredicateGSqSi_">indexOf(_:)</a>
+                    <a class="token" href="#/s:FC10RealmSwift7Results7indexOfFCSo11NSPredicateGSqSi_">indexOf(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -462,7 +486,7 @@ or <code>nil</code> if no objects match.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/RealmSwift-swift2.0/Results.swift#L127-L129">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Results.swift#L142-L144">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -470,9 +494,9 @@ or <code>nil</code> if no objects match.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC10RealmSwift7Results7indexOfuRdq_CS_6Object_FGS0_q__FtSSGSaPSs9AnyObject___GSqSi_"></a>
+                    <a name="/s:FC10RealmSwift7Results7indexOfFtSSGSaPs9AnyObject___GSqSi_"></a>
                     <a name="//apple_ref/swift/Method/indexOf(_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC10RealmSwift7Results7indexOfuRdq_CS_6Object_FGS0_q__FtSSGSaPSs9AnyObject___GSqSi_">indexOf(_:_:)</a>
+                    <a class="token" href="#/s:FC10RealmSwift7Results7indexOfFtSSGSaPs9AnyObject___GSqSi_">indexOf(_:_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -518,7 +542,7 @@ or <code>nil</code> if no objects match.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/RealmSwift-swift2.0/Results.swift#L139-L142">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Results.swift#L154-L157">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -537,9 +561,9 @@ or <code>nil</code> if no objects match.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC10RealmSwift7Results5firstGSqq__"></a>
+                    <a name="/s:vC10RealmSwift7Results5firstGSqx_"></a>
                     <a name="//apple_ref/swift/Property/first" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC10RealmSwift7Results5firstGSqq__">first</a>
+                    <a class="token" href="#/s:vC10RealmSwift7Results5firstGSqx_">first</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -559,7 +583,7 @@ or <code>nil</code> if no objects match.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/RealmSwift-swift2.0/Results.swift#L161">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Results.swift#L176">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -567,9 +591,9 @@ or <code>nil</code> if no objects match.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC10RealmSwift7Results4lastGSqq__"></a>
+                    <a name="/s:vC10RealmSwift7Results4lastGSqx_"></a>
                     <a name="//apple_ref/swift/Property/last" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC10RealmSwift7Results4lastGSqq__">last</a>
+                    <a class="token" href="#/s:vC10RealmSwift7Results4lastGSqx_">last</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -589,7 +613,7 @@ or <code>nil</code> if no objects match.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/RealmSwift-swift2.0/Results.swift#L164">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Results.swift#L179">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -608,9 +632,9 @@ or <code>nil</code> if no objects match.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC10RealmSwift7Results11valueForKeyuRdq_CS_6Object_FGS0_q__FSSGSqPSs9AnyObject__"></a>
+                    <a name="/s:FC10RealmSwift7Results11valueForKeyFSSGSqPs9AnyObject__"></a>
                     <a name="//apple_ref/swift/Method/valueForKey(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC10RealmSwift7Results11valueForKeyuRdq_CS_6Object_FGS0_q__FSSGSqPSs9AnyObject__">valueForKey(_:)</a>
+                    <a class="token" href="#/s:FC10RealmSwift7Results11valueForKeyFSSGSqPs9AnyObject__">valueForKey(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -655,7 +679,7 @@ or <code>nil</code> if no objects match.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/RealmSwift-swift2.0/Results.swift#L175-L177">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Results.swift#L190-L192">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -663,9 +687,65 @@ or <code>nil</code> if no objects match.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC10RealmSwift7Results8setValueuRdq_CS_6Object_FGS0_q__FTGSqPSs9AnyObject__6forKeySS_T_"></a>
+                    <a name="/s:FC10RealmSwift7Results15valueForKeyPathFSSGSqPs9AnyObject__"></a>
+                    <a name="//apple_ref/swift/Method/valueForKeyPath(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC10RealmSwift7Results15valueForKeyPathFSSGSqPs9AnyObject__">valueForKeyPath(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns an Array containing the results of invoking <code>valueForKeyPath(_:)</code> using keyPath on each of the
+collection&rsquo;s objects.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">valueForKeyPath</span><span class="p">(</span><span class="nv">keyPath</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AnyObject</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>keyPath</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The key path to the property.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Array containing the results of invoking <code>valueForKeyPath(_:)</code> using keyPath on each of the collection&rsquo;s objects.</p>
+
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Results.swift#L203-L205">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC10RealmSwift7Results8setValueFTGSqPs9AnyObject__6forKeySS_T_"></a>
                     <a name="//apple_ref/swift/Method/setValue(_:forKey:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC10RealmSwift7Results8setValueuRdq_CS_6Object_FGS0_q__FTGSqPSs9AnyObject__6forKeySS_T_">setValue(_:forKey:)</a>
+                    <a class="token" href="#/s:FC10RealmSwift7Results8setValueFTGSqPs9AnyObject__6forKeySS_T_">setValue(_:forKey:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -724,7 +804,7 @@ or <code>nil</code> if no objects match.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/RealmSwift-swift2.0/Results.swift#L187-L189">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Results.swift#L215-L217">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -743,9 +823,9 @@ or <code>nil</code> if no objects match.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC10RealmSwift7Results6filteruRdq_CS_6Object_FGS0_q__FtSSGSaPSs9AnyObject___GS0_q__"></a>
+                    <a name="/s:FC10RealmSwift7Results6filterFtSSGSaPs9AnyObject___GS0_x_"></a>
                     <a name="//apple_ref/swift/Method/filter(_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC10RealmSwift7Results6filteruRdq_CS_6Object_FGS0_q__FtSSGSaPSs9AnyObject___GS0_q__">filter(_:_:)</a>
+                    <a class="token" href="#/s:FC10RealmSwift7Results6filterFtSSGSaPs9AnyObject___GS0_x_">filter(_:_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -790,7 +870,7 @@ or <code>nil</code> if no objects match.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/RealmSwift-swift2.0/Results.swift#L200-L202">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Results.swift#L228-L230">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -798,9 +878,9 @@ or <code>nil</code> if no objects match.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC10RealmSwift7Results6filteruRdq_CS_6Object_FGS0_q__FCSo11NSPredicateGS0_q__"></a>
+                    <a name="/s:FC10RealmSwift7Results6filterFCSo11NSPredicateGS0_x_"></a>
                     <a name="//apple_ref/swift/Method/filter(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC10RealmSwift7Results6filteruRdq_CS_6Object_FGS0_q__FCSo11NSPredicateGS0_q__">filter(_:)</a>
+                    <a class="token" href="#/s:FC10RealmSwift7Results6filterFCSo11NSPredicateGS0_x_">filter(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -845,7 +925,7 @@ or <code>nil</code> if no objects match.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/RealmSwift-swift2.0/Results.swift#L211-L213">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Results.swift#L239-L241">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -864,9 +944,9 @@ or <code>nil</code> if no objects match.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC10RealmSwift7Results6sorteduRdq_CS_6Object_FGS0_q__FTSS9ascendingSb_GS0_q__"></a>
+                    <a name="/s:FC10RealmSwift7Results6sortedFTSS9ascendingSb_GS0_x_"></a>
                     <a name="//apple_ref/swift/Method/sorted(_:ascending:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC10RealmSwift7Results6sorteduRdq_CS_6Object_FGS0_q__FTSS9ascendingSb_GS0_q__">sorted(_:ascending:)</a>
+                    <a class="token" href="#/s:FC10RealmSwift7Results6sortedFTSS9ascendingSb_GS0_x_">sorted(_:ascending:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -924,7 +1004,7 @@ or <code>nil</code> if no objects match.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/RealmSwift-swift2.0/Results.swift#L225-L227">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Results.swift#L253-L255">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -932,9 +1012,9 @@ or <code>nil</code> if no objects match.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC10RealmSwift7Results6sortedu__Rdq_CS_6Objectqd__Ss12SequenceTypezqqqd__S2_9GeneratorSs13GeneratorType7ElementVS_14SortDescriptor_FGS0_q__Fqd__GS0_q__"></a>
+                    <a name="/s:FC10RealmSwift7Results6sorteduRd__s12SequenceTypeWd__9Generator7Element_zVS_14SortDescriptorrFqd__GS0_x_"></a>
                     <a name="//apple_ref/swift/Method/sorted(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC10RealmSwift7Results6sortedu__Rdq_CS_6Objectqd__Ss12SequenceTypezqqqd__S2_9GeneratorSs13GeneratorType7ElementVS_14SortDescriptor_FGS0_q__Fqd__GS0_q__">sorted(_:)</a>
+                    <a class="token" href="#/s:FC10RealmSwift7Results6sorteduRd__s12SequenceTypeWd__9Generator7Element_zVS_14SortDescriptorrFqd__GS0_x_">sorted(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -979,7 +1059,7 @@ or <code>nil</code> if no objects match.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/RealmSwift-swift2.0/Results.swift#L236-L238">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Results.swift#L264-L266">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -998,9 +1078,9 @@ or <code>nil</code> if no objects match.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC10RealmSwift7Results3minu__Rdq_CS_6Objectqd__S_10MinMaxType_FGS0_q__FSSGSqqd___"></a>
+                    <a name="/s:FC10RealmSwift7Results3minuRd__S_10MinMaxTyperFSSGSqqd___"></a>
                     <a name="//apple_ref/swift/Method/min(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC10RealmSwift7Results3minu__Rdq_CS_6Objectqd__S_10MinMaxType_FGS0_q__FSSGSqqd___">min(_:)</a>
+                    <a class="token" href="#/s:FC10RealmSwift7Results3minuRd__S_10MinMaxTyperFSSGSqqd___">min(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1051,7 +1131,7 @@ or <code>nil</code> if no objects match.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/RealmSwift-swift2.0/Results.swift#L251-L253">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Results.swift#L279-L281">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1059,9 +1139,9 @@ or <code>nil</code> if no objects match.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC10RealmSwift7Results3maxu__Rdq_CS_6Objectqd__S_10MinMaxType_FGS0_q__FSSGSqqd___"></a>
+                    <a name="/s:FC10RealmSwift7Results3maxuRd__S_10MinMaxTyperFSSGSqqd___"></a>
                     <a name="//apple_ref/swift/Method/max(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC10RealmSwift7Results3maxu__Rdq_CS_6Objectqd__S_10MinMaxType_FGS0_q__FSSGSqqd___">max(_:)</a>
+                    <a class="token" href="#/s:FC10RealmSwift7Results3maxuRd__S_10MinMaxTyperFSSGSqqd___">max(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1112,7 +1192,7 @@ or <code>nil</code> if no objects match.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/RealmSwift-swift2.0/Results.swift#L264-L266">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Results.swift#L292-L294">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1120,9 +1200,9 @@ or <code>nil</code> if no objects match.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC10RealmSwift7Results3sumu__Rdq_CS_6Objectqd__S_11AddableType_FGS0_q__FSSqd__"></a>
+                    <a name="/s:FC10RealmSwift7Results3sumuRd__S_11AddableTyperFSSqd__"></a>
                     <a name="//apple_ref/swift/Method/sum(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC10RealmSwift7Results3sumu__Rdq_CS_6Objectqd__S_11AddableType_FGS0_q__FSSqd__">sum(_:)</a>
+                    <a class="token" href="#/s:FC10RealmSwift7Results3sumuRd__S_11AddableTyperFSSqd__">sum(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1173,7 +1253,7 @@ or <code>nil</code> if no objects match.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/RealmSwift-swift2.0/Results.swift#L277-L279">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Results.swift#L305-L307">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1181,9 +1261,9 @@ or <code>nil</code> if no objects match.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC10RealmSwift7Results7averageu__Rdq_CS_6Objectqd__S_11AddableType_FGS0_q__FSSGSqqd___"></a>
+                    <a name="/s:FC10RealmSwift7Results7averageuRd__S_11AddableTyperFSSGSqqd___"></a>
                     <a name="//apple_ref/swift/Method/average(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC10RealmSwift7Results7averageu__Rdq_CS_6Objectqd__S_11AddableType_FGS0_q__FSSGSqqd___">average(_:)</a>
+                    <a class="token" href="#/s:FC10RealmSwift7Results7averageuRd__S_11AddableTyperFSSGSqqd___">average(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1234,7 +1314,101 @@ or <code>nil</code> if no objects match.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/RealmSwift-swift2.0/Results.swift#L290-L292">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Results.swift#L318-L320">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Notifications"></a>
+                <a name="//apple_ref/swift/Section/Notifications" class="dashAnchor"></a>
+                <a href="#/Notifications">
+                  <h3 class="section-name">Notifications</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC10RealmSwift7Results20addNotificationBlockFFTGSqGS0_x__GSqCSo7NSError__T_CSo20RLMNotificationToken"></a>
+                    <a name="//apple_ref/swift/Method/addNotificationBlock(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC10RealmSwift7Results20addNotificationBlockFFTGSqGS0_x__GSqCSo7NSError__T_CSo20RLMNotificationToken">addNotificationBlock(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Register a block to be called each time the Results changes.</p>
+
+<p>The block will be asynchronously called with the initial results, and then
+called again after each write transaction which causes the results to change.
+You must retain the returned token for as long as you want the results to
+continue to be sent to the block. To stop receiving updates, call stop() on the
+token.</p>
+
+<p>The determination for whether or not a write transaction has changed the
+results is currently very coarse, and the block may be called even if no
+changes occurred. The opposite (not being called despite changes) will not
+happen. This will become more precise in future versions.</p>
+
+<p>If an error occurs the block will be called with <code>nil</code> for the results
+parameter and a non-<code>nil</code> error. Currently the only errors that can occur are
+when opening the Realm on the background worker thread or the destination
+queue fails.</p>
+
+<p>At the time when the block is called, the Results object will be fully
+evaluated and up-to-date, and as long as you do not perform a write transaction
+on the same thread or explicitly call realm.refresh(), accessing it will never
+perform blocking work.</p>
+
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>This method cannot be called during a write transaction, or when
+       the source realm is read-only.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addNotificationBlock</span><span class="p">(</span><span class="nv">block</span><span class="p">:</span> <span class="p">(</span><span class="kt">Results</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">?,</span> <span class="kt">NSError</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="p">())</span> <span class="o">-&gt;</span> <span class="kt">NotificationToken</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>block</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The block to be called with the evaluated results.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A token which must be held for as long as you want query results to be delivered.</p>
+
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Results.swift#L355-L363">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1253,9 +1427,9 @@ or <code>nil</code> if no objects match.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC10RealmSwift7Results8generateuRdq_CS_6Object_FGS0_q__FT_GCS_12RLMGeneratorq__"></a>
+                    <a name="/s:FC10RealmSwift7Results8generateFT_GCS_12RLMGeneratorx_"></a>
                     <a name="//apple_ref/swift/Method/generate()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC10RealmSwift7Results8generateuRdq_CS_6Object_FGS0_q__FT_GCS_12RLMGeneratorq__">generate()</a>
+                    <a class="token" href="#/s:FC10RealmSwift7Results8generateFT_GCS_12RLMGeneratorx_">generate()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1275,7 +1449,7 @@ or <code>nil</code> if no objects match.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/RealmSwift-swift2.0/Results.swift#L299-L301">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Results.swift#L370-L372">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1317,7 +1491,7 @@ Identical to endIndex in an empty collection.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/RealmSwift-swift2.0/Results.swift#L307">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Results.swift#L378">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1349,7 +1523,7 @@ zero or more applications of successor().</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/RealmSwift-swift2.0/Results.swift#L312">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Results.swift#L383">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

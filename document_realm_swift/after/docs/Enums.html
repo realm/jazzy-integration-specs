@@ -32,7 +32,7 @@
       <div class="content-wrapper">
         <p><a href="index.html">RealmSwift Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F0%2E97%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F0%2E98%2E6%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -87,6 +87,9 @@
             <a href="Enums.html">Enums</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="Enums/Error.html">Error</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Enums/Notification.html">Notification</a>
               </li>
             </ul>
@@ -95,13 +98,13 @@
             <a href="Functions.html">Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="Functions.html#/s:ZF10RealmSwiftoi2eeFTPs9ErrorType_PS0___Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Functions.html#/s:ZF10RealmSwiftoi2eeFTVS_14SortDescriptorS0__Sb">==(_:_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="Functions.html#/s:ZF10RealmSwiftoi2eeFTCS_6SchemaS0__Sb">==(_:_:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Functions.html#/s:ZF10RealmSwiftoi2eeFTCS_12ObjectSchemaS0__Sb">==(_:_:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="Functions.html#/s:ZF10RealmSwiftoi2eeFTCS_5RealmS0__Sb">==(_:_:)</a>
@@ -110,10 +113,16 @@
                 <a href="Functions.html#/s:ZF10RealmSwiftoi2eeFTCS_8PropertyS0__Sb">==(_:_:)</a>
               </li>
               <li class="nav-group-task">
+                <a href="Functions.html#/s:ZF10RealmSwiftoi2eeFTCS_12ObjectSchemaS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Functions.html#/s:F10RealmSwift12migrateRealmFTVCS_5Realm13Configuration_GSqCSo7NSError_">migrateRealm(_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:F10RealmSwift19schemaVersionAtPathFTSS13encryptionKeyGSqCSo6NSData_5errorGVSs33AutoreleasingUnsafeMutablePointerGSqCSo7NSError___GSqVSs6UInt64_">schemaVersionAtPath(_:encryptionKey:error:)</a>
+                <a href="Functions.html#/s:F10RealmSwift19schemaVersionAtPathFTSS13encryptionKeyGSqCSo6NSData_5errorGVs33AutoreleasingUnsafeMutablePointerGSqCSo7NSError___GSqVs6UInt64_">schemaVersionAtPath(_:encryptionKey:error:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:ZF10RealmSwiftoi2teFTOS_5ErrorPs9ErrorType__Sb">~=(_:_:)</a>
               </li>
             </ul>
           </li>
@@ -176,6 +185,51 @@
           </section>
           <section class="section task-group-section">
             <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:O10RealmSwift5Error"></a>
+                    <a name="//apple_ref/swift/Enum/Error" class="dashAnchor"></a>
+                    <a class="token" href="#/s:O10RealmSwift5Error">Error</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Enumeration that describes the error codes within the Realm error domain.
+The values can be used to catch a variety of <em>recoverable</em> errors, especially those
+happening when initializing a Realm instance.</p>
+
+<pre class="highlight plaintext"><code>let realm: Realm?
+do {
+    realm = Realm()
+} catch RealmSwift.Error.IncompatibleLockFile() {
+    print("Realm Browser app may be attached to Realm on device?")
+}
+</code></pre>
+
+                        <a href="Enums/Error.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Error</span><span class="p">:</span> <span class="kt">ErrorType</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Error.swift#L35-L93">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
               <div class="task-name-container">
                 <a name="/Notifications"></a>
                 <a name="//apple_ref/swift/Section/Notifications" class="dashAnchor"></a>
@@ -210,7 +264,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.97.0/RealmSwift-swift2.0/Realm.swift#L586-L607">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Realm.swift#L598-L619">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

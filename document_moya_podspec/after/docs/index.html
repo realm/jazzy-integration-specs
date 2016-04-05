@@ -13,7 +13,7 @@
     <a title="Moya  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">Moya Docs</a> (35% documented)</p>
+        <p><a href="index.html">Moya Docs</a> (36% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -82,10 +82,7 @@
                 <a href="Enums/NetworkActivityChangeType.html">NetworkActivityChangeType</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums/ParameterEncoding.html">ParameterEncoding</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/Result.html">Result</a>
+                <a href="Enums/StructTarget.html">StructTarget</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/StubBehavior.html">StubBehavior</a>
@@ -95,6 +92,9 @@
           <li class="nav-group-name">
             <a href="Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/Moya.html">Moya</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Extensions/ObservableType.html">ObservableType</a>
               </li>
@@ -114,6 +114,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Functions.html#/s:ZF4Moyaoi2eeFTCS_8ResponseS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:F4Moya23convertResponseToResultFTGSqCSo17NSHTTPURLResponse_4dataGSqCSo6NSData_5errorGSqCSo7NSError__GO6Result6ResultCS_8ResponseOS_5Error_">convertResponseToResult(_:data:error:)</a>
               </li>
             </ul>
           </li>
@@ -139,6 +142,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Typealiases.html#/s:4Moya10Completion">Completion</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:4Moya17ParameterEncoding">ParameterEncoding</a>
               </li>
             </ul>
           </li>
@@ -219,22 +225,28 @@ importing more than one framework in a single file will result in
 ambiguous lookups at compile time.</p>
 <pre class="highlight plaintext"><code>github "Moya/Moya"
 </code></pre>
-<a href='#use' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='use'>Use</h2>
+<a href='#usage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='usage'>Usage</h2>
 
 <p>After <a href="docs/Examples.md">some setup</a>, using Moya is really simple. You can access an API like this:</p>
-<pre class="highlight swift"><code><span class="n">provider</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="kt">Zen</span><span class="p">)</span> <span class="p">{</span> <span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">statusCode</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
-    <span class="k">if</span> <span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="n">data</span> <span class="p">{</span>
-        <span class="c1">// do something with the data</span>
+<pre class="highlight swift"><code><span class="n">provider</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="kt">Zen</span><span class="p">)</span> <span class="p">{</span> <span class="n">result</span> <span class="k">in</span>
+    <span class="k">switch</span> <span class="n">result</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="kd">let</span> <span class="o">.</span><span class="kt">Success</span><span class="p">(</span><span class="n">moyaResponse</span><span class="p">):</span>
+        <span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="n">moyaResponse</span><span class="o">.</span><span class="n">data</span>
+        <span class="k">let</span> <span class="nv">statusCode</span> <span class="o">=</span> <span class="n">moyaResponse</span><span class="o">.</span><span class="n">statusCode</span>
+        <span class="c1">// do something with the response data or statusCode</span>
+    <span class="k">case</span> <span class="o">.</span><span class="kt">Failure</span><span class="p">(</span><span class="n">error</span><span class="p">):</span>
+        <span class="c1">// this means there was a network failure - either the request</span>
+        <span class="c1">// wasn't sent (connectivity), or no response was received (server</span>
+        <span class="c1">// timed out).  If the server responds with a 4xx or 5xx error, that</span>
+        <span class="c1">// will be sent as a ".Success"-ful response.</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
 
 <p>That&rsquo;s a basic example. Many API requests need parameters. Moya encodes these
 into the enum you use to access the endpoint, like this:</p>
-<pre class="highlight swift"><code><span class="n">provider</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="kt">UserProfile</span><span class="p">(</span><span class="s">"ashfurrow"</span><span class="p">))</span> <span class="p">{</span> <span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">statusCode</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">error</span><span class="p">)</span> <span class="k">in</span>
-    <span class="k">if</span> <span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="n">data</span> <span class="p">{</span>
-        <span class="c1">// do something with the data</span>
-    <span class="p">}</span>
+<pre class="highlight swift"><code><span class="n">provider</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="kt">UserProfile</span><span class="p">(</span><span class="s">"ashfurrow"</span><span class="p">))</span> <span class="p">{</span> <span class="n">result</span> <span class="k">in</span>
+    <span class="c1">// do something with the result</span>
 <span class="p">}</span>
 </code></pre>
 
@@ -294,6 +306,9 @@ responses.</p>
 
 <ul>
 <li><a href="https://github.com/ivanbruel/Moya-ObjectMapper">Moya-ObjectMapper</a> - ObjectMapper bindings for Moya for easier JSON serialization</li>
+<li><a href="https://github.com/AvdLee/Moya-SwiftyJSONMapper">Moya-SwiftyJSONMapper</a> - SwiftyJSON bindings for Moya for easier JSON serialization</li>
+<li><a href="https://github.com/wattson12/Moya-Argo">Moya-Argo</a> - Argo bindings for Moya for easier JSON serialization</li>
+<li><a href="https://github.com/sunshinejr/Moya-ModelMapper">Moya-ModelMapper</a> - ModelMapper bindings for Moya for easier JSON serialization</li>
 </ul>
 
 <p>We appreciate all the work being done by the community around Moya. If you would like to have your extension featured in the list above, simply create a pull request adding your extensions to the list.</p>

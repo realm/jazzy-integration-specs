@@ -14,7 +14,7 @@
     <a title="MoyaProvider Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Moya Docs</a> (35% documented)</p>
+        <p><a href="../index.html">Moya Docs</a> (36% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -83,10 +83,7 @@
                 <a href="../Enums/NetworkActivityChangeType.html">NetworkActivityChangeType</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/ParameterEncoding.html">ParameterEncoding</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/Result.html">Result</a>
+                <a href="../Enums/StructTarget.html">StructTarget</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/StubBehavior.html">StubBehavior</a>
@@ -96,6 +93,9 @@
           <li class="nav-group-name">
             <a href="../Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Moya.html">Moya</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Extensions/ObservableType.html">ObservableType</a>
               </li>
@@ -115,6 +115,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Functions.html#/s:ZF4Moyaoi2eeFTCS_8ResponseS0__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F4Moya23convertResponseToResultFTGSqCSo17NSHTTPURLResponse_4dataGSqCSo6NSData_5errorGSqCSo7NSError__GO6Result6ResultCS_8ResponseOS_5Error_">convertResponseToResult(_:data:error:)</a>
               </li>
             </ul>
           </li>
@@ -141,6 +144,9 @@
               <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:4Moya10Completion">Completion</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:4Moya17ParameterEncoding">ParameterEncoding</a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -164,9 +170,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC4Moya12MoyaProvider15endpointClosureFq_GCS_8Endpointq__"></a>
+                    <a name="/s:vC4Moya12MoyaProvider15endpointClosureFxGCS_8Endpointx_"></a>
                     <a name="//apple_ref/swift/Property/endpointClosure" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC4Moya12MoyaProvider15endpointClosureFq_GCS_8Endpointq__">endpointClosure</a>
+                    <a class="token" href="#/s:vC4Moya12MoyaProvider15endpointClosureFxGCS_8Endpointx_">endpointClosure</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -182,60 +188,6 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">MoyaProvider</span><span class="o">&lt;</span><span class="kt">Target</span><span class="p">:</span> <span class="kt">TargetType</span><span class="o">&gt;</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:C4Moya12MoyaProvider14RequestClosure"></a>
-                    <a name="//apple_ref/swift/Alias/RequestClosure" class="dashAnchor"></a>
-                    <a class="token" href="#/s:C4Moya12MoyaProvider14RequestClosure">RequestClosure</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Closure that resolves an Endpoint into an NSURLRequest.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">RequestClosure</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Endpoint</span><span class="o">&lt;</span><span class="kt">Target</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">NSURLRequest</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:C4Moya12MoyaProvider11StubClosure"></a>
-                    <a name="//apple_ref/swift/Alias/StubClosure" class="dashAnchor"></a>
-                    <a class="token" href="#/s:C4Moya12MoyaProvider11StubClosure">StubClosure</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Closure that decides if/how a request should be stubbed.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">StubClosure</span> <span class="o">=</span> <span class="kt">Target</span> <span class="o">-&gt;</span> <span class="kt">Moya</span><span class="o">.</span><span class="kt">StubBehavior</span></code></pre>
 
                         </div>
                       </div>
@@ -272,9 +224,63 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC4Moya12MoyaProvider14requestClosureFTGCS_8Endpointq__FCSo12NSURLRequestT__T_"></a>
+                    <a name="/s:C4Moya12MoyaProvider11StubClosure"></a>
+                    <a name="//apple_ref/swift/Alias/StubClosure" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C4Moya12MoyaProvider11StubClosure">StubClosure</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Closure that decides if/how a request should be stubbed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">StubClosure</span> <span class="o">=</span> <span class="kt">Target</span> <span class="o">-&gt;</span> <span class="kt">Moya</span><span class="o">.</span><span class="kt">StubBehavior</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:C4Moya12MoyaProvider14RequestClosure"></a>
+                    <a name="//apple_ref/swift/Alias/RequestClosure" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C4Moya12MoyaProvider14RequestClosure">RequestClosure</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Closure that resolves an Endpoint into an NSURLRequest.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">RequestClosure</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Endpoint</span><span class="o">&lt;</span><span class="kt">Target</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">NSURLRequest</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC4Moya12MoyaProvider14requestClosureFTGCS_8Endpointx_FCSo12NSURLRequestT__T_"></a>
                     <a name="//apple_ref/swift/Property/requestClosure" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC4Moya12MoyaProvider14requestClosureFTGCS_8Endpointq__FCSo12NSURLRequestT__T_">requestClosure</a>
+                    <a class="token" href="#/s:vC4Moya12MoyaProvider14requestClosureFTGCS_8Endpointx_FCSo12NSURLRequestT__T_">requestClosure</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -299,9 +305,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC4Moya12MoyaProvider11stubClosureFq_OS_12StubBehavior"></a>
+                    <a name="/s:vC4Moya12MoyaProvider11stubClosureFxOS_12StubBehavior"></a>
                     <a name="//apple_ref/swift/Property/stubClosure" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC4Moya12MoyaProvider11stubClosureFq_OS_12StubBehavior">stubClosure</a>
+                    <a class="token" href="#/s:vC4Moya12MoyaProvider11stubClosureFxOS_12StubBehavior">stubClosure</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -381,9 +387,9 @@ e.g. for logging, network activity indicator or credentials</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC4Moya12MoyaProvidercuRq_S_10TargetType_FMGS0_q__FT15endpointClosureFq_GCS_8Endpointq__14requestClosureFTGS2_q__FCSo12NSURLRequestT__T_11stubClosureFq_OS_12StubBehavior7managerC9Alamofire7Manager7pluginsGSaPS_10PluginType___GS0_q__"></a>
+                    <a name="/s:FC4Moya12MoyaProvidercFT15endpointClosureFxGCS_8Endpointx_14requestClosureFTGS1_x_FCSo12NSURLRequestT__T_11stubClosureFxOS_12StubBehavior7managerC9Alamofire7Manager7pluginsGSaPS_10PluginType___GS0_x_"></a>
                     <a name="//apple_ref/swift/Method/init(endpointClosure:requestClosure:stubClosure:manager:plugins:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC4Moya12MoyaProvidercuRq_S_10TargetType_FMGS0_q__FT15endpointClosureFq_GCS_8Endpointq__14requestClosureFTGS2_q__FCSo12NSURLRequestT__T_11stubClosureFq_OS_12StubBehavior7managerC9Alamofire7Manager7pluginsGSaPS_10PluginType___GS0_q__">init(endpointClosure:requestClosure:stubClosure:manager:plugins:)</a>
+                    <a class="token" href="#/s:FC4Moya12MoyaProvidercFT15endpointClosureFxGCS_8Endpointx_14requestClosureFTGS1_x_FCSo12NSURLRequestT__T_11stubClosureFxOS_12StubBehavior7managerC9Alamofire7Manager7pluginsGSaPS_10PluginType___GS0_x_">init(endpointClosure:requestClosure:stubClosure:manager:plugins:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -401,7 +407,7 @@ e.g. for logging, network activity indicator or credentials</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">endpointClosure</span><span class="p">:</span> <span class="kt">EndpointClosure</span> <span class="o">=</span> <span class="kt">MoyaProvider</span><span class="o">.</span><span class="kt">DefaultEndpointMapping</span><span class="p">,</span>
         <span class="nv">requestClosure</span><span class="p">:</span> <span class="kt">RequestClosure</span> <span class="o">=</span> <span class="kt">MoyaProvider</span><span class="o">.</span><span class="kt">DefaultRequestMapping</span><span class="p">,</span>
         <span class="nv">stubClosure</span><span class="p">:</span> <span class="kt">StubClosure</span> <span class="o">=</span> <span class="kt">MoyaProvider</span><span class="o">.</span><span class="kt">NeverStub</span><span class="p">,</span>
-        <span class="nv">manager</span><span class="p">:</span> <span class="kt">Manager</span> <span class="o">=</span> <span class="kt">Alamofire</span><span class="o">.</span><span class="kt">Manager</span><span class="o">.</span><span class="n">sharedInstance</span><span class="p">,</span>
+        <span class="nv">manager</span><span class="p">:</span> <span class="kt">Manager</span> <span class="o">=</span> <span class="kt">MoyaProvider</span><span class="o">&lt;</span><span class="kt">Target</span><span class="o">&gt;.</span><span class="kt">DefaultAlamofireManager</span><span class="p">(),</span>
         <span class="nv">plugins</span><span class="p">:</span> <span class="p">[</span><span class="kt">PluginType</span><span class="p">]</span> <span class="o">=</span> <span class="p">[])</span></code></pre>
 
                         </div>
@@ -412,9 +418,9 @@ e.g. for logging, network activity indicator or credentials</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC4Moya12MoyaProvider8endpointuRq_S_10TargetType_FGS0_q__Fq_GCS_8Endpointq__"></a>
+                    <a name="/s:FC4Moya12MoyaProvider8endpointFxGCS_8Endpointx_"></a>
                     <a name="//apple_ref/swift/Method/endpoint(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC4Moya12MoyaProvider8endpointuRq_S_10TargetType_FGS0_q__Fq_GCS_8Endpointq__">endpoint(_:)</a>
+                    <a class="token" href="#/s:FC4Moya12MoyaProvider8endpointFxGCS_8Endpointx_">endpoint(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -439,9 +445,9 @@ e.g. for logging, network activity indicator or credentials</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC4Moya12MoyaProvider7requestuRq_S_10TargetType_FGS0_q__FTq_10completionFT6resultGOS_6ResultCS_8ResponseOS_5Error__T__PS_11Cancellable_"></a>
+                    <a name="/s:FC4Moya12MoyaProvider7requestFTx10completionFT6resultGO6Result6ResultCS_8ResponseOS_5Error__T__PS_11Cancellable_"></a>
                     <a name="//apple_ref/swift/Method/request(_:completion:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC4Moya12MoyaProvider7requestuRq_S_10TargetType_FGS0_q__FTq_10completionFT6resultGOS_6ResultCS_8ResponseOS_5Error__T__PS_11Cancellable_">request(_:completion:)</a>
+                    <a class="token" href="#/s:FC4Moya12MoyaProvider7requestFTx10completionFT6resultGO6Result6ResultCS_8ResponseOS_5Error__T__PS_11Cancellable_">request(_:completion:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -470,9 +476,9 @@ e.g. for logging, network activity indicator or credentials</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:ZFC4Moya12MoyaProvider22DefaultEndpointMappinguRq_S_10TargetType_FMGS0_q__Fq_GCS_8Endpointq__"></a>
+                    <a name="/s:ZFC4Moya12MoyaProvider22DefaultEndpointMappingFxGCS_8Endpointx_"></a>
                     <a name="//apple_ref/swift/Method/DefaultEndpointMapping(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:ZFC4Moya12MoyaProvider22DefaultEndpointMappinguRq_S_10TargetType_FMGS0_q__Fq_GCS_8Endpointq__">DefaultEndpointMapping(_:)</a>
+                    <a class="token" href="#/s:ZFC4Moya12MoyaProvider22DefaultEndpointMappingFxGCS_8Endpointx_">DefaultEndpointMapping(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -497,9 +503,36 @@ e.g. for logging, network activity indicator or credentials</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:ZFC4Moya12MoyaProvider21DefaultRequestMappinguRq_S_10TargetType_FMGS0_q__FTGCS_8Endpointq__7closureFCSo12NSURLRequestT__T_"></a>
+                    <a name="/s:ZFC4Moya12MoyaProvider21DefaultRequestMappingFTGCS_8Endpointx_7closureFCSo12NSURLRequestT__T_"></a>
                     <a name="//apple_ref/swift/Method/DefaultRequestMapping(_:closure:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:ZFC4Moya12MoyaProvider21DefaultRequestMappinguRq_S_10TargetType_FMGS0_q__FTGCS_8Endpointq__7closureFCSo12NSURLRequestT__T_">DefaultRequestMapping(_:closure:)</a>
+                    <a class="token" href="#/s:ZFC4Moya12MoyaProvider21DefaultRequestMappingFTGCS_8Endpointx_7closureFCSo12NSURLRequestT__T_">DefaultRequestMapping(_:closure:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">MoyaProvider</span><span class="o">&lt;</span><span class="kt">Target</span><span class="p">:</span> <span class="kt">TargetType</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZFC4Moya12MoyaProvider23DefaultAlamofireManagerFT_C9Alamofire7Manager"></a>
+                    <a name="//apple_ref/swift/Method/DefaultAlamofireManager()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZFC4Moya12MoyaProvider23DefaultAlamofireManagerFT_C9Alamofire7Manager">DefaultAlamofireManager()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -528,9 +561,9 @@ e.g. for logging, network activity indicator or credentials</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:ZFC4Moya12MoyaProvider9NeverStubuRq_S_10TargetType_FMGS0_q__Fq_OS_12StubBehavior"></a>
+                    <a name="/s:ZFC4Moya12MoyaProvider9NeverStubFxOS_12StubBehavior"></a>
                     <a name="//apple_ref/swift/Method/NeverStub(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:ZFC4Moya12MoyaProvider9NeverStubuRq_S_10TargetType_FMGS0_q__Fq_OS_12StubBehavior">NeverStub(_:)</a>
+                    <a class="token" href="#/s:ZFC4Moya12MoyaProvider9NeverStubFxOS_12StubBehavior">NeverStub(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -555,9 +588,9 @@ e.g. for logging, network activity indicator or credentials</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:ZFC4Moya12MoyaProvider15ImmediatelyStubuRq_S_10TargetType_FMGS0_q__Fq_OS_12StubBehavior"></a>
+                    <a name="/s:ZFC4Moya12MoyaProvider15ImmediatelyStubFxOS_12StubBehavior"></a>
                     <a name="//apple_ref/swift/Method/ImmediatelyStub(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:ZFC4Moya12MoyaProvider15ImmediatelyStubuRq_S_10TargetType_FMGS0_q__Fq_OS_12StubBehavior">ImmediatelyStub(_:)</a>
+                    <a class="token" href="#/s:ZFC4Moya12MoyaProvider15ImmediatelyStubFxOS_12StubBehavior">ImmediatelyStub(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -582,9 +615,9 @@ e.g. for logging, network activity indicator or credentials</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:ZFC4Moya12MoyaProvider11DelayedStubuRq_S_10TargetType_FMGS0_q__FSdFq_OS_12StubBehavior"></a>
+                    <a name="/s:ZFC4Moya12MoyaProvider11DelayedStubFSdFxOS_12StubBehavior"></a>
                     <a name="//apple_ref/swift/Method/DelayedStub(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:ZFC4Moya12MoyaProvider11DelayedStubuRq_S_10TargetType_FMGS0_q__FSdFq_OS_12StubBehavior">DelayedStub(_:)</a>
+                    <a class="token" href="#/s:ZFC4Moya12MoyaProvider11DelayedStubFSdFxOS_12StubBehavior">DelayedStub(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">

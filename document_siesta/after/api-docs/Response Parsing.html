@@ -156,7 +156,7 @@
             <a href="Logging.html">Logging</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Logging.html#/s:v6Siesta20enabledLogCategoriesGVSs3SetOS_11LogCategory_">enabledLogCategories</a>
+                <a href="Logging.html#/s:v6Siesta20enabledLogCategoriesGVs3SetOS_11LogCategory_">enabledLogCategories</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/LogCategory.html">LogCategory</a>
@@ -345,8 +345,9 @@ next. Transformers in the sequence can be limited by content type.</p>
                         <p>A simplified <code><a href="Protocols/ResponseTransformer.html">ResponseTransformer</a></code> that deals only with the content of the response entity, and does not touch the
 surrounding metadata.</p>
 
-<p>If the input entity’s content does not match the <code>InputContentType</code>, the response is an error.
-If <code>processContent(_:)</code> throws, the response is transformed to an error.</p>
+<p>If <code>processContent(_:)</code> throws or returns nil, the output is an error.</p>
+
+<p>If the input entity’s content does not match the <code>InputContentType</code>, the response is an error.</p>
 
                         <a href="Structs/ResponseContentTransformer.html" class="slightly-smaller">See more</a>
                       </div>

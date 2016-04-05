@@ -157,7 +157,7 @@
             <a href="../Logging.html">Logging</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Logging.html#/s:v6Siesta20enabledLogCategoriesGVSs3SetOS_11LogCategory_">enabledLogCategories</a>
+                <a href="../Logging.html#/s:v6Siesta20enabledLogCategoriesGVs3SetOS_11LogCategory_">enabledLogCategories</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/LogCategory.html">LogCategory</a>
@@ -204,7 +204,8 @@
 
                 </div>
               </div>
-            <p>A set of logically connected RESTful resources, grouped under a base URL.</p>
+            <p>A set of logically connected RESTful resources, grouped under a base URL. Resources within a service share caching,
+configuration, and a “same URL → same resource” uniqueness guarantee.</p>
 
 <p>You will typically create a separate subclass of <code>Service</code> for each REST API you use.</p>
 
@@ -225,7 +226,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The root URL of the API. If nil, then <code><a href="../Classes/Service.html#/s:FC6Siesta7Service8resourceFS0_FSSCS_8Resource">resource(_:)</a></code> will only accept absolute URLs.</p>
+                        <p>The root URL of the API. If nil, then <code><a href="../Classes/Service.html#/s:FC6Siesta7Service8resourceFSSCS_8Resource">resource(_:)</a></code> will only accept absolute URLs.</p>
 
                       </div>
                       <div class="declaration">
@@ -242,9 +243,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC6Siesta7ServicecFMS0_FT7baseURLGSqSS_22useDefaultTransformersSb10networkingPS_29NetworkingProviderConvertible__S0_"></a>
+                    <a name="/s:FC6Siesta7ServicecFT7baseURLGSqSS_22useDefaultTransformersSb10networkingPS_29NetworkingProviderConvertible__S0_"></a>
                     <a name="//apple_ref/swift/Method/init(baseURL:useDefaultTransformers:networking:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC6Siesta7ServicecFMS0_FT7baseURLGSqSS_22useDefaultTransformersSb10networkingPS_29NetworkingProviderConvertible__S0_">init(baseURL:useDefaultTransformers:networking:)</a>
+                    <a class="token" href="#/s:FC6Siesta7ServicecFT7baseURLGSqSS_22useDefaultTransformersSb10networkingPS_29NetworkingProviderConvertible__S0_">init(baseURL:useDefaultTransformers:networking:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -258,7 +259,7 @@
     <p class="aside-title">Parameter</p>
     Parameter baseURL:
 The URL underneath which the API exposes its endpoints. If nil, there is no base URL, and thus you must use
-only <code><a href="../Classes/Service.html#/s:FC6Siesta7Service8resourceFS0_FT11absoluteURLGSqCSo5NSURL__CS_8Resource">resource(absoluteURL:)</a></code> to acquire resources.
+only <code><a href="../Classes/Service.html#/s:FC6Siesta7Service8resourceFT11absoluteURLGSqCSo5NSURL__CS_8Resource">resource(absoluteURL:)</a></code> to acquire resources.
 
 </div>
 
@@ -266,14 +267,14 @@ only <code><a href="../Classes/Service.html#/s:FC6Siesta7Service8resourceFS0_FT1
     <p class="aside-title">Parameter</p>
     Parameter useDefaultTransformers:
 If true, include handling for JSON, text, and images. If false, leave all responses as <code>NSData</code> (unless you
-add your own <code><a href="../Protocols/ResponseTransformer.html">ResponseTransformer</a></code> using <code><a href="../Classes/Service.html#/s:FC6Siesta7Service9configureFS0_FT11descriptionSS10configurerFCVS_13Configuration7BuilderT__T_">configure(...)</a></code>).
+add your own <code><a href="../Protocols/ResponseTransformer.html">ResponseTransformer</a></code> using <code><a href="../Classes/Service.html#/s:FC6Siesta7Service9configureFT11descriptionSS10configurerFCVS_13Configuration7BuilderT__T_">configure(...)</a></code>).
 
 </div>
 
 <div class="aside aside-parameter">
     <p class="aside-title">Parameter</p>
     Parameter networking:
-The handler to use for networking. The default is an NSURLSession with its default configuration. You can
+The handler to use for networking. The default is <code><a href="../Extensions/NSURLSession.html">NSURLSession</a></code> with ephemeral session configuration. You can
 pass an <code><a href="../Extensions/NSURLSession.html">NSURLSession</a></code>, <code><a href="../Extensions/NSURLSessionConfiguration.html">NSURLSessionConfiguration</a></code>, or <code>Alamofire.Manager</code> to use an existing provider with
 custom configuration. You can also use your own networking library of choice by implementing <code><a href="../Protocols/NetworkingProvider.html">NetworkingProvider</a></code>.
 
@@ -329,7 +330,7 @@ custom configuration. You can also use your own networking library of choice by 
                               </td>
                               <td>
                                 <div>
-                                  <p>The handler to use for networking. The default is an NSURLSession with its default configuration. You can pass an <code>NSURLSession</code>, <code>NSURLSessionConfiguration</code>, or <code>Alamofire.Manager</code> to use an existing provider with custom configuration. You can also use your own networking library of choice by implementing <code>NetworkingProvider</code>.</p>
+                                  <p>The handler to use for networking. The default is <code>NSURLSession</code> with ephemeral session configuration. You can pass an <code>NSURLSession</code>, <code>NSURLSessionConfiguration</code>, or <code>Alamofire.Manager</code> to use an existing provider with custom configuration. You can also use your own networking library of choice by implementing <code>NetworkingProvider</code>.</p>
 
                                 </div>
                               </td>
@@ -343,9 +344,9 @@ custom configuration. You can also use your own networking library of choice by 
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC6Siesta7Service8resourceFS0_FSSCS_8Resource"></a>
+                    <a name="/s:FC6Siesta7Service8resourceFSSCS_8Resource"></a>
                     <a name="//apple_ref/swift/Method/resource(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC6Siesta7Service8resourceFS0_FSSCS_8Resource">resource(_:)</a>
+                    <a class="token" href="#/s:FC6Siesta7Service8resourceFSSCS_8Resource">resource(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -353,7 +354,7 @@ custom configuration. You can also use your own networking library of choice by 
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Return the unique resource with the given path appended to the path component of <code><a href="../Classes/Service.html#/s:vC6Siesta7Service7baseURLGSqCSo5NSURL_">baseURL</a></code>.</p>
+                        <p>Returns the unique resource with the given path appended to the path component of <code><a href="../Classes/Service.html#/s:vC6Siesta7Service7baseURLGSqCSo5NSURL_">baseURL</a></code>.</p>
 
 <p>A leading slash is optional, and has no effect:</p>
 
@@ -365,9 +366,9 @@ service.resource("/users")  // thing
     <p class="aside-title">Note</p>
     <p>The <code>path</code> parameter is simply appended to <code><a href="../Classes/Service.html#/s:vC6Siesta7Service7baseURLGSqCSo5NSURL_">baseURL</a></code>’s path, and is <em>never</em> interpreted as a URL. Strings
 such as <code>..</code>, <code>//</code>, <code>?</code>, and <code>https:</code> have no special meaning; they go directly into the resulting
-resource’s path.</p>
+resource’s path, with escaping if necessary.</p>
 
-<p>If you want to pass an absolute URL, use <code><a href="../Classes/Service.html#/s:FC6Siesta7Service8resourceFS0_FT11absoluteURLGSqCSo5NSURL__CS_8Resource">resource(absoluteURL:)</a></code>.</p>
+<p>If you want to pass an absolute URL, use <code><a href="../Classes/Service.html#/s:FC6Siesta7Service8resourceFT11absoluteURLGSqCSo5NSURL__CS_8Resource">resource(absoluteURL:)</a></code>.</p>
 
 <p>If you want to pass a relative URL to be resolved against <code><a href="../Classes/Service.html#/s:vC6Siesta7Service7baseURLGSqCSo5NSURL_">baseURL</a></code>, use <code>resource(&quot;/&quot;).relative(relativeURL)</code>.</p>
 
@@ -388,9 +389,9 @@ resource’s path.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC6Siesta7Service8resourceFS0_FT11absoluteURLGSqCSo5NSURL__CS_8Resource"></a>
+                    <a name="/s:FC6Siesta7Service8resourceFT11absoluteURLGSqCSo5NSURL__CS_8Resource"></a>
                     <a name="//apple_ref/swift/Method/resource(absoluteURL:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC6Siesta7Service8resourceFS0_FT11absoluteURLGSqCSo5NSURL__CS_8Resource">resource(absoluteURL:)</a>
+                    <a class="token" href="#/s:FC6Siesta7Service8resourceFT11absoluteURLGSqCSo5NSURL__CS_8Resource">resource(absoluteURL:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -427,9 +428,9 @@ occurs, at which point they are summarily evicted.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC6Siesta7Service8resourceFS0_FT11absoluteURLGSqSS__CS_8Resource"></a>
+                    <a name="/s:FC6Siesta7Service8resourceFT11absoluteURLGSqSS__CS_8Resource"></a>
                     <a name="//apple_ref/swift/Method/resource(absoluteURL:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC6Siesta7Service8resourceFS0_FT11absoluteURLGSqSS__CS_8Resource">resource(absoluteURL:)</a>
+                    <a class="token" href="#/s:FC6Siesta7Service8resourceFT11absoluteURLGSqSS__CS_8Resource">resource(absoluteURL:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -441,7 +442,7 @@ occurs, at which point they are summarily evicted.</p>
 
 <div class="aside aside-see-also">
     <p class="aside-title">See also</p>
-    <code><a href="../Classes/Service.html#/s:FC6Siesta7Service8resourceFS0_FT11absoluteURLGSqCSo5NSURL__CS_8Resource">resource(absoluteURL:)</a></code>
+    <code><a href="../Classes/Service.html#/s:FC6Siesta7Service8resourceFT11absoluteURLGSqCSo5NSURL__CS_8Resource">resource(absoluteURL:)</a></code>
 
 </div>
 
@@ -471,9 +472,9 @@ occurs, at which point they are summarily evicted.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC6Siesta7Service9configureFS0_FT11descriptionSS10configurerFCVS_13Configuration7BuilderT__T_"></a>
+                    <a name="/s:FC6Siesta7Service9configureFT11descriptionSS10configurerFCVS_13Configuration7BuilderT__T_"></a>
                     <a name="//apple_ref/swift/Method/configure(description:configurer:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC6Siesta7Service9configureFS0_FT11descriptionSS10configurerFCVS_13Configuration7BuilderT__T_">configure(description:configurer:)</a>
+                    <a class="token" href="#/s:FC6Siesta7Service9configureFT11descriptionSS10configurerFCVS_13Configuration7BuilderT__T_">configure(description:configurer:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -498,13 +499,13 @@ means that you will usually want to add your global configuration first, then re
 
 <div class="aside aside-see-also">
     <p class="aside-title">See also</p>
-    <code><a href="../Classes/Service.html#/s:FC6Siesta7Service9configureFS0_FTPS_31ConfigurationPatternConvertible_11descriptionGSqSS_10configurerFCVS_13Configuration7BuilderT__T_">configure(_:description:configurer:)</a></code>
+    <code><a href="../Classes/Service.html#/s:FC6Siesta7Service9configureFTPS_31ConfigurationPatternConvertible_11descriptionGSqSS_10configurerFCVS_13Configuration7BuilderT__T_">configure(_:description:configurer:)</a></code>
 
 </div>
 
 <div class="aside aside-see-also">
     <p class="aside-title">See also</p>
-    <code><a href="../Classes/Service.html#/s:FC6Siesta7Service23invalidateConfigurationFS0_FT_T_">invalidateConfiguration()</a></code>
+    <code><a href="../Classes/Service.html#/s:FC6Siesta7Service23invalidateConfigurationFT_T_">invalidateConfiguration()</a></code>
 
 </div>
 
@@ -525,9 +526,9 @@ means that you will usually want to add your global configuration first, then re
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC6Siesta7Service9configureFS0_FTPS_31ConfigurationPatternConvertible_11descriptionGSqSS_10configurerFCVS_13Configuration7BuilderT__T_"></a>
+                    <a name="/s:FC6Siesta7Service9configureFTPS_31ConfigurationPatternConvertible_11descriptionGSqSS_10configurerFCVS_13Configuration7BuilderT__T_"></a>
                     <a name="//apple_ref/swift/Method/configure(_:description:configurer:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC6Siesta7Service9configureFS0_FTPS_31ConfigurationPatternConvertible_11descriptionGSqSS_10configurerFCVS_13Configuration7BuilderT__T_">configure(_:description:configurer:)</a>
+                    <a class="token" href="#/s:FC6Siesta7Service9configureFTPS_31ConfigurationPatternConvertible_11descriptionGSqSS_10configurerFCVS_13Configuration7BuilderT__T_">configure(_:description:configurer:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -552,13 +553,13 @@ configure(user) { $0.config.persistentCache = userProfileCache }
 
 <div class="aside aside-see-also">
     <p class="aside-title">See also</p>
-    <code><a href="../Classes/Service.html#/s:FC6Siesta7Service9configureFS0_FT11descriptionSS10configurerFCVS_13Configuration7BuilderT__T_">configure(description:configurer:)</a></code> for global config
+    <code><a href="../Classes/Service.html#/s:FC6Siesta7Service9configureFT11descriptionSS10configurerFCVS_13Configuration7BuilderT__T_">configure(description:configurer:)</a></code> for global config
 
 </div>
 
 <div class="aside aside-see-also">
     <p class="aside-title">See also</p>
-    <code><a href="../Classes/Service.html#/s:FC6Siesta7Service23invalidateConfigurationFS0_FT_T_">invalidateConfiguration()</a></code>
+    <code><a href="../Classes/Service.html#/s:FC6Siesta7Service23invalidateConfigurationFT_T_">invalidateConfiguration()</a></code>
 
 </div>
 
@@ -580,9 +581,9 @@ configure(user) { $0.config.persistentCache = userProfileCache }
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC6Siesta7Service9configureFS0_FTFCSo5NSURLSb11descriptionGSqSS_10configurerFCVS_13Configuration7BuilderT__T_"></a>
+                    <a name="/s:FC6Siesta7Service9configureFTFCSo5NSURLSb11descriptionGSqSS_10configurerFCVS_13Configuration7BuilderT__T_"></a>
                     <a name="//apple_ref/swift/Method/configure(_:description:configurer:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC6Siesta7Service9configureFS0_FTFCSo5NSURLSb11descriptionGSqSS_10configurerFCVS_13Configuration7BuilderT__T_">configure(_:description:configurer:)</a>
+                    <a class="token" href="#/s:FC6Siesta7Service9configureFTFCSo5NSURLSb11descriptionGSqSS_10configurerFCVS_13Configuration7BuilderT__T_">configure(_:description:configurer:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -590,8 +591,8 @@ configure(user) { $0.config.persistentCache = userProfileCache }
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Accepts an arbitrary URL matching predicate if the wildcards in the <code>urlPattern</code> flavor of <code>configure()</code>
-aren’t robust enough.</p>
+                        <p>Applies configuration ro resources whose URL matches an arbitrary predicate. Use this if the wildcards in the
+<code>urlPattern</code> flavor of <code>configure()</code> aren’t robust enough.</p>
 
                       </div>
                       <div class="declaration">
@@ -611,9 +612,9 @@ aren’t robust enough.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC6Siesta7Service20configureTransformeru0_rFS0_FTPS_31ConfigurationPatternConvertible_11descriptionGSqSS_16contentTransformFzT7contentq_6entityVS_6Entity_q0__T_"></a>
+                    <a name="/s:FC6Siesta7Service20configureTransformeru0_rFTPS_31ConfigurationPatternConvertible_11descriptionGSqSS_16contentTransformFzT7contentx6entityVS_6Entity_GSqq___T_"></a>
                     <a name="//apple_ref/swift/Method/configureTransformer(_:description:contentTransform:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC6Siesta7Service20configureTransformeru0_rFS0_FTPS_31ConfigurationPatternConvertible_11descriptionGSqSS_16contentTransformFzT7contentq_6entityVS_6Entity_q0__T_">configureTransformer(_:description:contentTransform:)</a>
+                    <a class="token" href="#/s:FC6Siesta7Service20configureTransformeru0_rFTPS_31ConfigurationPatternConvertible_11descriptionGSqSS_16contentTransformFzT7contentx6entityVS_6Entity_GSqq___T_">configureTransformer(_:description:contentTransform:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -621,11 +622,26 @@ aren’t robust enough.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A convenience to add a one-off content transformer.</p>
+                        <p>Transforms responses by passing their content through the given closure. This is a shortcut for adding a
+<code><a href="../Structs/ResponseContentTransformer.html">ResponseContentTransformer</a></code> to the <code><a href="../Structs/Configuration.html#/s:vV6Siesta13Configuration20responseTransformersVS_19TransformerSequence">Configuration.responseTransformers</a></code>.</p>
 
 <p>Useful for transformers that create model objects. For example:</p>
 
-<pre class="highlight plaintext"><code>configureTransformer("/foo/​*") { FooModel(json: $0) }
+<pre class="highlight plaintext"><code>configureTransformer("/foo/​*") {
+  FooModel(json: $0.content)
+}
+</code></pre>
+
+<p>Siesta checks that the incoming <code><a href="../Structs/Entity.html#/s:vV6Siesta6Entity7contentP_">Entity.content</a></code> matches the type of the closure’s <code>content</code> parameter. In the
+example code above, if the <code>json</code> parameter of <code>FooModel.init</code> takes a <code>Dictionary</code>, but the transformer pipeline
+at that point has produced a <code><a href="../Extensions/String.html">String</a></code>, then the transformer outputs a failure response.</p>
+
+<p>You can use this behavior to configure a service to refuse all server responses not of a specific type by passing
+a transformer that passes the content through unmodified, but requires a specific type:</p>
+
+<pre class="highlight plaintext"><code>service.configureTransformer("**") {
+  $0.content as NSJSONConvertible
+}
 </code></pre>
 
 <div class="aside aside-see-also">
@@ -652,9 +668,9 @@ aren’t robust enough.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC6Siesta7Service23invalidateConfigurationFS0_FT_T_"></a>
+                    <a name="/s:FC6Siesta7Service23invalidateConfigurationFT_T_"></a>
                     <a name="//apple_ref/swift/Method/invalidateConfiguration()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC6Siesta7Service23invalidateConfigurationFS0_FT_T_">invalidateConfiguration()</a>
+                    <a class="token" href="#/s:FC6Siesta7Service23invalidateConfigurationFT_T_">invalidateConfiguration()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -664,14 +680,14 @@ aren’t robust enough.</p>
                       <div class="abstract">
                         <p>Signals that all resources need to recompute their configuration next time they need it.</p>
 
-<p>Because the <code><a href="../Classes/Service.html#/s:FC6Siesta7Service9configureFS0_FT11descriptionSS10configurerFCVS_13Configuration7BuilderT__T_">configure(...)</a></code> methods accept an arbitrary closure, it is possible that the results of
+<p>Because the <code><a href="../Classes/Service.html#/s:FC6Siesta7Service9configureFT11descriptionSS10configurerFCVS_13Configuration7BuilderT__T_">configure(...)</a></code> methods accept an arbitrary closure, it is possible that the results of
 that closure could change over time. However, resources cache their configuration after it is computed. Therefore,
 if you do anything that would change the result of a configuration closure, you must call
 <code>invalidateConfiguration()</code> in order for the changes to take effect.</p>
 
 <p><em>《insert your functional programming purist rant here if you so desire》</em></p>
 
-<p>Note that you do <em>not</em> need to call this method after calling any of the <code><a href="../Classes/Service.html#/s:FC6Siesta7Service9configureFS0_FT11descriptionSS10configurerFCVS_13Configuration7BuilderT__T_">configure(...)</a></code> methods.
+<p>Note that you do <em>not</em> need to call this method after calling any of the <code><a href="../Classes/Service.html#/s:FC6Siesta7Service9configureFT11descriptionSS10configurerFCVS_13Configuration7BuilderT__T_">configure(...)</a></code> methods.
 You only need to call it if one of the previously passed closures will now behave differently.</p>
 
 <p>For example, to make a header track the value of a modifiable property:</p>
@@ -718,9 +734,9 @@ over subsequent resource interactions.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC6Siesta7Service13wipeResourcesFS0_FTFCS_8ResourceSb_T_"></a>
+                    <a name="/s:FC6Siesta7Service13wipeResourcesFTFCS_8ResourceSb_T_"></a>
                     <a name="//apple_ref/swift/Method/wipeResources(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC6Siesta7Service13wipeResourcesFS0_FTFCS_8ResourceSb_T_">wipeResources(_:)</a>
+                    <a class="token" href="#/s:FC6Siesta7Service13wipeResourcesFTFCS_8ResourceSb_T_">wipeResources(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -728,7 +744,7 @@ over subsequent resource interactions.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Wipes the state of this service’s resources. Typically used to handle logout.</p>
+                        <p>Wipes the state of all this service’s resources. Typically used to handle logout.</p>
 
 <p>Applies to resources matching the predicate, or all resources by default.</p>
 
@@ -747,9 +763,9 @@ over subsequent resource interactions.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC6Siesta7Service13wipeResourcesFS0_FPS_31ConfigurationPatternConvertible_T_"></a>
+                    <a name="/s:FC6Siesta7Service13wipeResourcesFPS_31ConfigurationPatternConvertible_T_"></a>
                     <a name="//apple_ref/swift/Method/wipeResources(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC6Siesta7Service13wipeResourcesFS0_FPS_31ConfigurationPatternConvertible_T_">wipeResources(_:)</a>
+                    <a class="token" href="#/s:FC6Siesta7Service13wipeResourcesFPS_31ConfigurationPatternConvertible_T_">wipeResources(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -778,9 +794,9 @@ service.wipeResources(profileResource)
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC6Siesta7Service24wipeResourcesMatchingURLFS0_FFCSo5NSURLSbT_"></a>
+                    <a name="/s:FC6Siesta7Service24wipeResourcesMatchingURLFFCSo5NSURLSbT_"></a>
                     <a name="//apple_ref/swift/Method/wipeResourcesMatchingURL(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC6Siesta7Service24wipeResourcesMatchingURLFS0_FFCSo5NSURLSbT_">wipeResourcesMatchingURL(_:)</a>
+                    <a class="token" href="#/s:FC6Siesta7Service24wipeResourcesMatchingURLFFCSo5NSURLSbT_">wipeResourcesMatchingURL(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -790,7 +806,7 @@ service.wipeResources(profileResource)
                       <div class="abstract">
                         <p>Wipes the state of a subset of this service’s resources, matching based on URLs (instead of <code><a href="../Classes/Resource.html">Resource</a></code> instances).</p>
 
-<p>Useful for making shared predicates that you can pass to both <code><a href="../Classes/Service.html#/s:FC6Siesta7Service9configureFS0_FT11descriptionSS10configurerFCVS_13Configuration7BuilderT__T_">configure(...)</a></code> and this method.</p>
+<p>Useful for making shared predicates that you can pass to both <code><a href="../Classes/Service.html#/s:FC6Siesta7Service9configureFT11descriptionSS10configurerFCVS_13Configuration7BuilderT__T_">configure(...)</a></code> and this method.</p>
 
                       </div>
                       <div class="declaration">
