@@ -1,19 +1,38 @@
-COCOAPODS_SKIP_UPDATE_MESSAGE=TRUE JAZZY_FAKE_DATE=YYYY-MM-DD JAZZY_FAKE_VERSION=X.X.X ruby ROOT/bin/jazzy --author Realm --author_url "https://realm.io" --github_url https://github.com/realm/realm-cocoa --github-file-prefix https://github.com/realm/realm-cocoa/tree/v0.96.2 --module RealmSwift --module-version 0.96.2 --root-url https://realm.io/docs/swift/0.96.2/api/ --xcodebuild-arguments -scheme,RealmSwift --template-directory docs/templates 2>&1
+COCOAPODS_SKIP_UPDATE_MESSAGE=TRUE JAZZY_FAKE_DATE=YYYY-MM-DD JAZZY_FAKE_VERSION=X.X.X JAZZY_INTEGRATION_SPECS=TRUE ruby ROOT/bin/jazzy --author Realm --author_url "https://realm.io" --github_url https://github.com/realm/realm-cocoa --github-file-prefix https://github.com/realm/realm-cocoa/tree/v0.98.6 --module RealmSwift --module-version 0.98.6 --root-url https://realm.io/docs/swift/0.98.6/api/ --xcodebuild-arguments -scheme,RealmSwift --head \<link\ rel\=\"icon\"\ href\=\"https://realm.io/img/favicon.ico\"\>'
+'\<link\ rel\=\"apple-touch-icon-precomposed\"\ sizes\=\"57x57\"\ href\=\"https://realm.io/img/favicon-57x57.png\"\ /\>'
+'\<link\ rel\=\"apple-touch-icon-precomposed\"\ sizes\=\"114x114\"\ href\=\"https://realm.io/img/favicon-114x114.png\"\ /\>'
+'\<link\ rel\=\"apple-touch-icon-precomposed\"\ sizes\=\"72x72\"\ href\=\"https://realm.io/img/favicon-72x72.png\"\ /\>'
+'\<link\ rel\=\"apple-touch-icon-precomposed\"\ sizes\=\"144x144\"\ href\=\"https://realm.io/img/favicon-144x144.png\"\ /\>'
+'\<link\ rel\=\"apple-touch-icon-precomposed\"\ sizes\=\"120x120\"\ href\=\"https://realm.io/img/favicon-120x120.png\"\ /\>'
+'\<link\ rel\=\"apple-touch-icon-precomposed\"\ sizes\=\"152x152\"\ href\=\"https://realm.io/img/favicon-152x152.png\"\ /\>'
+'\<link\ rel\=\"icon\"\ type\=\"image/png\"\ href\=\"https://realm.io/img/favicon-32x32.png\"\ sizes\=\"32x32\"\ /\>'
+'\<link\ rel\=\"icon\"\ type\=\"image/png\"\ href\=\"https://realm.io/img/favicon-16x16.png\"\ sizes\=\"16x16\"\ /\>'
+'\<script\ defer\>'
+'\ \ \(function\(i,s,o,g,r,a,m\)\{i\[\'GoogleAnalyticsObject\'\]\=r\;i\[r\]\=i\[r\]\|\|function\(\)\{'
+'\ \ \ \ \(i\[r\].q\=i\[r\].q\|\|\[\]\).push\(arguments\)\},i\[r\].l\=1\*new\ Date\(\)\;a\=s.createElement\(o\),'
+'\ \ \ \ m\=s.getElementsByTagName\(o\)\[0\]\;a.async\=1\;a.src\=g\;m.parentNode.insertBefore\(a,m\)'
+'\ \ \}\)\(window,document,\'script\',\'https://www.google-analytics.com/analytics.js\',\'ga\'\)\;'
+'\ \ ga\(\'create\',\ \'UA-50247013-1\',\ \'realm.io\'\)\;'
+'\ \ ga\(\'send\',\ \'pageview\'\)\;'
+'\</script\>'
+' 2>&1
 Running xcodebuild
-Parsing Aliases.swift (1/14)
-Parsing List.swift (2/14)
-Parsing Migration.swift (3/14)
-Parsing Object.swift (4/14)
-Parsing ObjectSchema.swift (5/14)
-Parsing Optional.swift (6/14)
-Parsing Property.swift (7/14)
-Parsing Realm.swift (8/14)
-Parsing RealmCollectionType.swift (9/14)
-Parsing RealmConfiguration.swift (10/14)
-Parsing Results.swift (11/14)
-Parsing Schema.swift (12/14)
-Parsing SortDescriptor.swift (13/14)
-Parsing Util.swift (14/14)
-building site
+Parsing Aliases.swift (1/16)
+Parsing Error.swift (2/16)
+Parsing List.swift (3/16)
+Parsing Migration.swift (4/16)
+Parsing Object.swift (5/16)
+Parsing ObjectSchema.swift (6/16)
+Parsing Optional.swift (7/16)
+Parsing Property.swift (8/16)
+Parsing Realm.swift (9/16)
+Parsing RealmCollectionType.swift (10/16)
+Parsing RealmConfiguration.swift (11/16)
+Parsing Results.swift (12/16)
+Parsing Schema.swift (13/16)
+Parsing SortDescriptor.swift (14/16)
+Parsing SwiftVersion.swift (15/16)
+Parsing Util.swift (16/16)
 `className` has no USR. First make sure all modules used in your project have been imported. If all used modules are imported, please report this problem by filing an issue at https://github.com/realm/jazzy/issues along with your Xcode project. If this token is declared in an `#if` block, please ignore this message.
+building site
 jam out ♪♫ to your fresh new docs in `docs`
