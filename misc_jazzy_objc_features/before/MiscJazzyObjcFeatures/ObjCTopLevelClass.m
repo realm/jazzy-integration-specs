@@ -10,12 +10,12 @@
 
 @interface ObjCTopLevelClass()
 /// Documented, but private
-- (void)classExtensionMethod();
+- (void)classExtensionMethod;
 @end
 
 @implementation ObjCTopLevelClass
 - (void)categoryMethod:(NSString*)argument {}
 - (void)markedCategoryMethod:(NSString*)argument {}
-- (void)classExtensionMethod() {}
+- (void)classExtensionMethod {}
 @end
 
