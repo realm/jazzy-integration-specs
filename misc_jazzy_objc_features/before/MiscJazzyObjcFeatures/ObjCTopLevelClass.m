@@ -17,5 +17,8 @@
 - (void)categoryMethod:(NSString*)argument {}
 - (void)markedCategoryMethod:(NSString*)argument {}
 - (void)classExtensionMethod {}
+- (SomeEnum)methodReturningEnum:(NSString*)param {
+    return SomeEnumFoo;
+}
 @end
 
