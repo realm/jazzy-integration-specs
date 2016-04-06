@@ -8,7 +8,12 @@
 
 #import <Foundation/Foundation.h>
 
+#import "SomeEnum.h"
+
+/// A dummy top level Objective-C class. Doesn't do much.
 @interface ObjCTopLevelClass : NSObject
+/// Always returns `SomeEnumFoo`
+- (SomeEnum)methodReturningEnum:(NSString*)param;
 @end
 
 @interface ObjCTopLevelClass (SomeCategory)
