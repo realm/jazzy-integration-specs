@@ -197,7 +197,7 @@
         <section>
           <section class="section">
             
-            <a href='#img_alt_siesta_src_https_bustoutsolutions_github_io_siesta_images_logo_2x_png_width_256_height_88' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='img_alt_siesta_src_https_bustoutsolutions_github_io_siesta_images_logo_2x_png_width_256_height_88'><img alt="Siesta" src="https://bustoutsolutions.github.io/siesta/images/logo@2x.png" width=256 height=88></h1>
+            <a href='#img-alt-siesta-src-https-bustoutsolutions-github-io-siesta-images-logo-2x-png-width-256-height-88' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='img-alt-siesta-src-https-bustoutsolutions-github-io-siesta-images-logo-2x-png-width-256-height-88'><img alt="Siesta" src="https://bustoutsolutions.github.io/siesta/images/logo@2x.png" width=256 height=88></h1>
 
 <p><strong>iOS REST Client Framework</strong></p>
 
@@ -236,8 +236,8 @@
 <li><a href="#examples">Examples</a></li>
 <li><a href="#contributing-and-getting-help">Contributing and Getting Help</a></li>
 </ul>
-<a href='#what_s_it_for' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='what_s_it_for'>What’s It For?</h2>
-<a href='#the_problem' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='the_problem'>The Problem</h3>
+<a href='#what-s-it-for' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='what-s-it-for'>What’s It For?</h2>
+<a href='#the-problem' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='the-problem'>The Problem</h3>
 
 <p>Want your app to talk to a remote API? Welcome to your state nightmare!</p>
 
@@ -250,7 +250,7 @@
 <p>Naturally you’ll want to rewrite all of this from scratch in a slightly different ad hoc way for every project you create.</p>
 
 <p>What could possibly go wrong?</p>
-<a href='#the_solution' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='the_solution'>The Solution</h3>
+<a href='#the-solution' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='the-solution'>The Solution</h3>
 
 <p>Siesta ends this headache by providing a <strong>resource-centric</strong> alternative to the familiar <strong>request-centric</strong> approach.</p>
 
@@ -285,7 +285,7 @@
 <li><a href="https://bustoutsolutions.github.io/siesta/specs/">Robust regression tests</a></li>
 <li><a href="https://bustoutsolutions.github.io/siesta/guide/">Documentation</a> and <a href="http://bustoutsolutions.github.io/siesta/api/">more documentation</a></li>
 </ul>
-<a href='#what_it_doesn_t_do' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='what_it_doesn_t_do'>What it doesn’t do</h3>
+<a href='#what-it-doesn-t-do' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='what-it-doesn-t-do'>What it doesn’t do</h3>
 
 <ul>
 <li>It <strong>doesn’t reinvent networking.</strong> Siesta delegates network operations to your library of choice (<code>NSURLSession</code> by default, or <a href="https://github.com/Alamofire/Alamofire">Alamofire</a>, or inject your own <a href="http://bustoutsolutions.github.io/siesta/api/Protocols/NetworkingProvider.html">custom adapter</a>).</li>
@@ -299,7 +299,7 @@
 <p>For the open source transition, we took the time to rewrite our code in Swift — and <em>rethink</em> it in Swift, embracing the language to make the API as clean as the concepts.</p>
 
 <p>Siesta’s code is therefore both old and new: battle-tasted on the App Store, then reincarnated in a Swifty green field.</p>
-<a href='#design_philosophy' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='design_philosophy'>Design Philosophy</h2>
+<a href='#design-philosophy' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='design-philosophy'>Design Philosophy</h2>
 
 <p>Make the default thing the right thing most of the time.</p>
 
@@ -350,7 +350,7 @@
 <p>(In-depth discussion of Carthage on XC7 is <a href="https://github.com/Carthage/Carthage/issues/536">here</a>.)</p>
 
 <p>The code in <code>Extensions/</code> is <em>not</em> part of the <code>Siesta.framework</code> that Carthage builds. (This currently includes only Alamofire support.) You will need to include those source files in your project manually if you want to use them.</p>
-<a href='#git_submodule' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='git_submodule'>Git Submodule</h3>
+<a href='#git-submodule' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='git-submodule'>Git Submodule</h3>
 
 <p>Clone Siesta as a submodule into the directory of your choice, in this case Libraries/Siesta:
 <code>
@@ -367,7 +367,7 @@ git submodule update --init
 <p>Click the + button in the top left corner to add a Copy Files build phase. Set the directory to Frameworks. Click the + button and add Siesta.</p>
 
 <hr>
-<a href='#basic_usage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='basic_usage'>Basic Usage</h2>
+<a href='#basic-usage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='basic-usage'>Basic Usage</h2>
 
 <p>Make a shared service instance for the REST API you want to use:</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">MyAPI</span> <span class="o">=</span> <span class="kt">Service</span><span class="p">(</span><span class="nv">baseURL</span><span class="p">:</span> <span class="s">"https://api.example.com"</span><span class="p">)</span>
@@ -463,7 +463,7 @@ git submodule update --init
 </code></pre>
 
 <p>Note that this example is not toy code. Together with its storyboard, <strong>this small class is a fully armed and operational REST-backed user interface</strong>.</p>
-<a href='#your_socks_still_on' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='your_socks_still_on'>Your socks still on?</h3>
+<a href='#your-socks-still-on' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='your-socks-still-on'>Your socks still on?</h3>
 
 <p>Take a look at AFNetworking’s venerable <code>UIImageView</code> extension for asynchronously loading and caching remote images on demand. Seriously, go <a href="https://github.com/AFNetworking/AFNetworking/blob/master/UIKit%2BAFNetworking/UIImageView%2BAFNetworking.m">skim that code</a> and digest all the cool things it does. Take a few minutes. I’ll wait. I’m a README. I’m not going anywhere.</p>
 
@@ -505,7 +505,7 @@ git submodule update --init
 <p><small>(Well, OK, they’re not <em>exactly</em> identical. The Siesta version has more robust caching behavior, and will transparently update an image everywhere it is displayed if it’s refreshed.)</small></p>
 
 <p>There’s a more featureful version of <code>RemoteImageView</code> <a href="http://bustoutsolutions.github.io/siesta/api/Classes/RemoteImageView.html">already included with Siesta</a> — but the UI freebies aren’t the point. “Less code” isn’t even the point. The point is that Siesta gives you an <strong>elegant abstraction</strong> that <strong>solves problems you actually have</strong>, making your code <strong>simpler and less brittle</strong>.</p>
-<a href='#comparison_with_other_frameworks' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='comparison_with_other_frameworks'>Comparison With Other Frameworks</h2>
+<a href='#comparison-with-other-frameworks' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='comparison-with-other-frameworks'>Comparison With Other Frameworks</h2>
 
 <p>Popular REST / networking frameworks have different primary goals:</p>
 
@@ -686,7 +686,7 @@ git submodule update --init
 <small>2. “Trivial” means lines containing only whitespace, comments, parens, semicolons, and braces.</small></p>
 
 <p>Despite this capabilities list, Siesta is a relatively small codebase — about the same size as Alamofire, and 5.5x smaller than RestKit.</p>
-<a href='#what_sets_siesta_apart' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='what_sets_siesta_apart'>What sets Siesta apart?</h3>
+<a href='#what-sets-siesta-apart' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='what-sets-siesta-apart'>What sets Siesta apart?</h3>
 
 <p>It’s not just the features. Siesta <strong>solves a different problem</strong> than other REST frameworks.</p>
 
@@ -707,7 +707,7 @@ git submodule update --init
 <a href='#examples' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='examples'>Examples</h2>
 
 <p>This repo includes a <a href="https://github.com/bustoutsolutions/siesta/tree/master/Examples/GithubBrowser">simple example project</a>. Use Carthage to build its dependencies.</p>
-<a href='#contributing_and_getting_help' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='contributing_and_getting_help'>Contributing and Getting Help</h2>
+<a href='#contributing-and-getting-help' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='contributing-and-getting-help'>Contributing and Getting Help</h2>
 
 <p>To report a bug, <a href="https://github.com/bustoutsolutions/siesta/issues/new">file an issue</a>.</p>
 
@@ -716,7 +716,7 @@ git submodule update --init
 <p>To submit a feature request / cool idea, <a href="https://github.com/bustoutsolutions/siesta/issues/new">file an issue</a>.</p>
 
 <p>To get help, post your question to <a href="https://stackoverflow.com">Stack Overflow</a> and tag it with <strong>siesta-swift</strong>. (Be sure to include the tag. It triggers a notification.)</p>
-<a href='#pull_requests' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='pull_requests'>Pull Requests</h3>
+<a href='#pull-requests' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='pull-requests'>Pull Requests</h3>
 
 <p>Want to <em>do</em> something instead of just talking about it? Fantastic! Be bold.</p>
 
