@@ -261,6 +261,11 @@ Call addObject: on an RLMRealm to add standalone object to a realm.</p>
                           <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="n">init</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="nf">init</span><span class="o">!</span><span class="p">()</span></code></pre>
+
+                        </div>
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/Realm/RLMObject.h#L99">Show on GitHub</a>
@@ -300,6 +305,11 @@ Call addObject: on an RLMRealm to add standalone object to a realm.</p>
                           <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">initWithValue</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">id</span><span class="p">)</span><span class="nv">value</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="nf">init</span><span class="o">!</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/Realm/RLMObject.h#L110">Show on GitHub</a>
@@ -335,6 +345,11 @@ Call addObject: on an RLMRealm to add standalone object to a realm.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">className</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">className</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="o">!</span></code></pre>
 
                         </div>
                       </div>
@@ -384,6 +399,11 @@ on them.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">createInDefaultRealmWithValue</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">id</span><span class="p">)</span><span class="nv">value</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">createInDefaultRealmWithValue</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span><span class="o">!</span></code></pre>
 
                         </div>
                       </div>
@@ -450,6 +470,11 @@ on them.</p>
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">createInRealm</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">RLMRealm</span> <span class="o">*</span><span class="p">)</span><span class="nv">realm</span>
                             <span class="nf">withValue</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">id</span><span class="p">)</span><span class="nv">value</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">createInRealm</span><span class="p">(</span><span class="nv">realm</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="o">!</span><span class="p">,</span> <span class="n">withValue</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span><span class="o">!</span></code></pre>
 
                         </div>
                       </div>
@@ -535,6 +560,11 @@ called on them if have a primary key (<code>createInDefaultRealmWithValue:</code
                           <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">createOrUpdateInDefaultRealmWithValue</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">id</span><span class="p">)</span><span class="nv">value</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">createOrUpdateInDefaultRealmWithValue</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span><span class="o">!</span></code></pre>
+
+                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -604,6 +634,11 @@ called on them if have a primary key (<code>createInRealm:withValue:</code> othe
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">createOrUpdateInRealm</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">RLMRealm</span> <span class="o">*</span><span class="p">)</span><span class="nv">realm</span>
                                     <span class="nf">withValue</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">id</span><span class="p">)</span><span class="nv">value</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">createOrUpdateInRealm</span><span class="p">(</span><span class="nv">realm</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="o">!</span><span class="p">,</span> <span class="n">withValue</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span><span class="o">!</span></code></pre>
 
                         </div>
                       </div>
@@ -683,6 +718,11 @@ called on them if have a primary key (<code>createInRealm:withValue:</code> othe
                           <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">RLMRealm</span> <span class="o">*</span><span class="n">realm</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">realm</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span></code></pre>
+
+                        </div>
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/Realm/RLMObject.h#L216">Show on GitHub</a>
@@ -711,6 +751,11 @@ called on them if have a primary key (<code>createInRealm:withValue:</code> othe
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">RLMObjectSchema</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">objectSchema</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">objectSchema</span><span class="p">:</span> <span class="kt">RLMObjectSchema</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -744,6 +789,11 @@ if <code>invalidate</code> is called on the containing <code><a href="../Classes
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">getter</span><span class="o">=</span><span class="n">isInvalidated</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">invalidated</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">invalidated</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -824,6 +874,11 @@ for string and int properties.
                           <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">NSDictionary</span> <span class="o">*</span><span class="p">)</span><span class="n">defaultPropertyValues</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">defaultPropertyValues</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">NSObject</span> <span class="p">:</span> <span class="kt">AnyObject</span><span class="p">]?</span></code></pre>
+
+                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -860,6 +915,11 @@ Indexes are created automatically for primary key properties.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="n">primaryKey</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">primaryKey</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -987,6 +1047,11 @@ if you want a non-optional number you should instead use the primitive type.</p>
                           <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">RLMResults</span> <span class="o">*</span><span class="p">)</span><span class="n">allObjects</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">allObjects</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">RLMResults</span><span class="o">!</span></code></pre>
+
+                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -1077,6 +1142,11 @@ if you want a non-optional number you should instead use the primitive type.</p>
                           <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">RLMResults</span> <span class="o">*</span><span class="p">)</span><span class="nf">objectsWithPredicate</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSPredicate</span> <span class="o">*</span><span class="p">)</span><span class="nv">predicate</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">objectsWithPredicate</span><span class="p">(</span><span class="nv">predicate</span><span class="p">:</span> <span class="kt">NSPredicate</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">RLMResults</span><span class="o">!</span></code></pre>
+
+                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -1144,6 +1214,11 @@ equivalent <code>[[SubclassName objectsWhere:@&quot;primaryKeyPropertyName = %@&
                           <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">objectForPrimaryKey</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">id</span><span class="p">)</span><span class="nv">primaryKey</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">convenience</span> <span class="nf">init</span><span class="p">?(</span><span class="n">forPrimaryKey</span> <span class="nv">primaryKey</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">?)</span></code></pre>
+
+                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -1188,6 +1263,11 @@ equivalent <code>[[SubclassName objectsWhere:@&quot;primaryKeyPropertyName = %@&
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">RLMResults</span> <span class="o">*</span><span class="p">)</span><span class="nf">allObjectsInRealm</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">RLMRealm</span> <span class="o">*</span><span class="p">)</span><span class="nv">realm</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">allObjectsInRealm</span><span class="p">(</span><span class="nv">realm</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">RLMResults</span><span class="o">!</span></code></pre>
 
                         </div>
                       </div>
@@ -1315,6 +1395,11 @@ equivalent <code>[[SubclassName objectsWhere:@&quot;primaryKeyPropertyName = %@&
                          <span class="nf">withPredicate</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSPredicate</span> <span class="o">*</span><span class="p">)</span><span class="nv">predicate</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">objectsInRealm</span><span class="p">(</span><span class="nv">realm</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="o">!</span><span class="p">,</span> <span class="n">withPredicate</span> <span class="nv">predicate</span><span class="p">:</span> <span class="kt">NSPredicate</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">RLMResults</span><span class="o">!</span></code></pre>
+
+                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -1396,6 +1481,11 @@ equivalent <code>[[SubclassName objectsInRealm:realm where:@&quot;primaryKeyProp
                          <span class="nf">forPrimaryKey</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">id</span><span class="p">)</span><span class="nv">primaryKey</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">convenience</span> <span class="nf">init</span><span class="p">?(</span><span class="n">inRealm</span> <span class="nv">realm</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="o">!</span><span class="p">,</span> <span class="n">forPrimaryKey</span> <span class="nv">primaryKey</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">?)</span></code></pre>
+
+                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -1442,6 +1532,11 @@ be used to get the inverse relationship value for <code><a href="../Classes/RLMO
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nf">linkingObjectsOfClass</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">className</span>
                                <span class="nf">forProperty</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">property</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">linkingObjectsOfClass</span><span class="p">(</span><span class="nv">className</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">,</span> <span class="n">forProperty</span> <span class="nv">property</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">AnyObject</span><span class="p">]</span><span class="o">!</span></code></pre>
 
                         </div>
                       </div>
@@ -1512,6 +1607,11 @@ implementation for <code>hash</code>.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">isEqualToObject</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">RLMObject</span> <span class="o">*</span><span class="p">)</span><span class="nv">object</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">isEqualToObject</span><span class="p">(</span><span class="nv">object</span><span class="p">:</span> <span class="kt">RLMObject</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>

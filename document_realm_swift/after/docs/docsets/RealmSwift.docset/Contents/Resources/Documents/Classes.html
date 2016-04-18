@@ -64,6 +64,9 @@
                 <a href="Classes/ObjectSchema.html">ObjectSchema</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes.html#/s:C10RealmSwift10ObjectUtil">ObjectUtil</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/Property.html">Property</a>
               </li>
               <li class="nav-group-task">
@@ -278,51 +281,7 @@ of a <code><a href="Classes/Realm.html">Realm</a></code> instance.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>In Realm you define your model classes by subclassing <code>Object</code> and adding properties to be persisted.
-You then instantiate and use your custom subclasses instead of using the Object class directly.</p>
-
-<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">Dog</span><span class="p">:</span> <span class="kt">Object</span> <span class="p">{</span>
-    <span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span>
-    <span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">adopted</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span>
-    <span class="k">let</span> <span class="nv">siblings</span> <span class="o">=</span> <span class="kt">List</span><span class="o">&lt;</span><span class="kt">Dog</span><span class="o">&gt;</span><span class="p">()</span>
-<span class="p">}</span>
-</code></pre>
-
-<p><a href='#supported-property-types' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='supported-property-types'>Supported property types</h3></p>
-
-<ul>
-<li><code>String</code>, <code>NSString</code></li>
-<li><code>Int</code></li>
-<li><code>Int8</code>, <code>Int16</code>, <code>Int32</code>, <code>Int64</code></li>
-<li><code>Float</code></li>
-<li><code>Double</code></li>
-<li><code>Bool</code></li>
-<li><code>NSDate</code></li>
-<li><code>NSData</code></li>
-<li><code><a href="Classes/RealmOptional.html">RealmOptional&lt;T&gt;</a></code> for optional numeric properties</li>
-<li><code>Object</code> subclasses for to-one relationships</li>
-<li><code>List&lt;T: Object&gt;</code> for to-many relationships</li>
-</ul>
-
-<p><code>String</code>, <code>NSString</code>, <code>NSDate</code>, <code>NSData</code> and <code>Object</code> subclass properties can be
-optional. <code>Int</code>, <code>Int8</code>, Int16<code>, Int32</code>, <code>Int64</code>, <code>Float</code>, <code>Double</code>, <code>Bool</code>
-and <code><a href="Classes/List.html">List</a></code> properties cannot. To store an optional number, instead use
-<code><a href="Classes/RealmOptional.html">RealmOptional&lt;Int&gt;</a></code>, <code><a href="Classes/RealmOptional.html">RealmOptional&lt;Float&gt;</a></code>, <code><a href="Classes/RealmOptional.html">RealmOptional&lt;Double&gt;</a></code>, or
-<code><a href="Classes/RealmOptional.html">RealmOptional&lt;Bool&gt;</a></code> instead, which wraps an optional value of the generic type.</p>
-
-<p>All property types except for <code><a href="Classes/List.html">List</a></code> and <code><a href="Classes/RealmOptional.html">RealmOptional</a></code> <em>must</em> be declared as
-<code>dynamic var</code>. <code><a href="Classes/List.html">List</a></code> and <code><a href="Classes/RealmOptional.html">RealmOptional</a></code> properties must be declared as
-non-dynamic <code>let</code> properties.</p>
-
-<p><a href='#querying' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='querying'>Querying</h3></p>
-
-<p>You can gets <code><a href="Classes/Results.html">Results</a></code> of an Object subclass via the <code>objects(_:)</code> instance
-method on <code><a href="Classes/Realm.html">Realm</a></code>.</p>
-
-<p><a href='#relationships' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='relationships'>Relationships</h3></p>
-
-<p>See our <a href="http://realm.io/docs/cocoa">Cocoa guide</a> for more details.</p>
-
+                        
                         <a href="Classes/Object.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -335,6 +294,35 @@ method on <code><a href="Classes/Realm.html">Realm</a></code>.</p>
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Object.swift#L69-L274">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:C10RealmSwift10ObjectUtil"></a>
+                    <a name="//apple_ref/swift/Class/ObjectUtil" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C10RealmSwift10ObjectUtil">ObjectUtil</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ObjectUtil</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Object.swift#L324-L402">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

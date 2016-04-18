@@ -204,11 +204,7 @@
 
                 </div>
               </div>
-            <p>A set of logically connected RESTful resources, grouped under a base URL. Resources within a service share caching,
-configuration, and a “same URL → same resource” uniqueness guarantee.</p>
-
-<p>You will typically create a separate subclass of <code>Service</code> for each REST API you use.</p>
-
+            
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -354,26 +350,7 @@ custom configuration. You can also use your own networking library of choice by 
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the unique resource with the given path appended to the path component of <code><a href="../Classes/Service.html#/s:vC6Siesta7Service7baseURLGSqCSo5NSURL_">baseURL</a></code>.</p>
-
-<p>A leading slash is optional, and has no effect:</p>
-
-<pre class="highlight plaintext"><code>service.resource("users")   // same
-service.resource("/users")  // thing
-</code></pre>
-
-<div class="aside aside-note">
-    <p class="aside-title">Note</p>
-    <p>The <code>path</code> parameter is simply appended to <code><a href="../Classes/Service.html#/s:vC6Siesta7Service7baseURLGSqCSo5NSURL_">baseURL</a></code>’s path, and is <em>never</em> interpreted as a URL. Strings
-such as <code>..</code>, <code>//</code>, <code>?</code>, and <code>https:</code> have no special meaning; they go directly into the resulting
-resource’s path, with escaping if necessary.</p>
-
-<p>If you want to pass an absolute URL, use <code><a href="../Classes/Service.html#/s:FC6Siesta7Service8resourceFT11absoluteURLGSqCSo5NSURL__CS_8Resource">resource(absoluteURL:)</a></code>.</p>
-
-<p>If you want to pass a relative URL to be resolved against <code><a href="../Classes/Service.html#/s:vC6Siesta7Service7baseURLGSqCSo5NSURL_">baseURL</a></code>, use <code>resource(&quot;/&quot;).relative(relativeURL)</code>.</p>
-
-</div>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -399,20 +376,7 @@ resource’s path, with escaping if necessary.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the unique resource with the given URL, ignoring <code><a href="../Classes/Service.html#/s:vC6Siesta7Service7baseURLGSqCSo5NSURL_">baseURL</a></code>.</p>
-
-<p>This method will <em>always</em> return the same instance of <code><a href="../Classes/Resource.html">Resource</a></code> for the same URL within
-the context of a <code><a href="../Classes/Service.html">Service</a></code> as long as anyone retains a reference to that resource.
-Unreferenced resources remain in memory (with their cached data) until a low memory event
-occurs, at which point they are summarily evicted.</p>
-
-<div class="aside aside-note">
-    <p class="aside-title">Note</p>
-    This method always returns a <code><a href="../Classes/Resource.html">Resource</a></code>, and does not throw errors. If <code>url</code> is nil (likely because it
-    came from a malformed URL string), this method returns a resource whose requests always fail.
-
-</div>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -438,14 +402,7 @@ occurs, at which point they are summarily evicted.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the unique resource with the given URL string, ignoring <code><a href="../Classes/Service.html#/s:vC6Siesta7Service7baseURLGSqCSo5NSURL_">baseURL</a></code>.</p>
-
-<div class="aside aside-see-also">
-    <p class="aside-title">See also</p>
-    <code><a href="../Classes/Service.html#/s:FC6Siesta7Service8resourceFT11absoluteURLGSqCSo5NSURL__CS_8Resource">resource(absoluteURL:)</a></code>
-
-</div>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>

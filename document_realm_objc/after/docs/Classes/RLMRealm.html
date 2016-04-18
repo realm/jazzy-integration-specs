@@ -226,6 +226,11 @@ can be changed via <code>+[RLMRealmConfiguration setDefaultConfiguration:]</code
                           <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="n">defaultRealm</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">defaultRealm</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="k">Self</span><span class="o">!</span></code></pre>
+
+                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -261,6 +266,11 @@ can be changed via <code>+[RLMRealmConfiguration setDefaultConfiguration:]</code
                           <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span>
 <span class="nf">realmWithConfiguration</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">RLMRealmConfiguration</span> <span class="o">*</span><span class="p">)</span><span class="nv">configuration</span>
                  <span class="nf">error</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="kt">RLMRealmConfiguration</span><span class="o">!</span><span class="p">)</span> <span class="k">throws</span></code></pre>
 
                         </div>
                       </div>
@@ -333,6 +343,11 @@ can be changed via <code>+[RLMRealmConfiguration setDefaultConfiguration:]</code
                           <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">realmWithPath</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">path</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">convenience</span> <span class="nf">init</span><span class="o">!</span><span class="p">(</span><span class="nv">path</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -388,6 +403,11 @@ can be changed via <code>+[RLMRealmConfiguration setDefaultConfiguration:]</code
                           <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">path</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/Realm/RLMRealm.h#L93">Show on GitHub</a>
@@ -418,6 +438,11 @@ can be changed via <code>+[RLMRealmConfiguration setDefaultConfiguration:]</code
                           <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">getter</span><span class="o">=</span><span class="n">isReadOnly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">readOnly</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">readOnly</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/Realm/RLMRealm.h#L98">Show on GitHub</a>
@@ -446,6 +471,11 @@ can be changed via <code>+[RLMRealmConfiguration setDefaultConfiguration:]</code
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">null_unspecified</span><span class="p">)</span> <span class="n">RLMSchema</span> <span class="o">*</span><span class="n">schema</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">schema</span><span class="p">:</span> <span class="kt">RLMSchema</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -487,6 +517,11 @@ can be changed via <code>+[RLMRealmConfiguration setDefaultConfiguration:]</code
                           <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">inWriteTransaction</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">inWriteTransaction</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/Realm/RLMRealm.h#L113">Show on GitHub</a>
@@ -517,6 +552,11 @@ can be changed via <code>+[RLMRealmConfiguration setDefaultConfiguration:]</code
                           <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">RLMRealmConfiguration</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">configuration</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">configuration</span><span class="p">:</span> <span class="kt">RLMRealmConfiguration</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/Realm/RLMRealm.h#L118">Show on GitHub</a>
@@ -545,6 +585,11 @@ can be changed via <code>+[RLMRealmConfiguration setDefaultConfiguration:]</code
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">isEmpty</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">isEmpty</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -609,6 +654,11 @@ run loop on a background thread, this normally will only be the main thread.</p>
     <span class="p">(</span><span class="n">nonnull</span> <span class="n">RLMNotificationBlock</span><span class="p">)</span><span class="nv">block</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">addNotificationBlock</span><span class="p">(</span><span class="nv">block</span><span class="p">:</span> <span class="kt">RLMNotificationBlock</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">RLMNotificationToken</span><span class="o">!</span></code></pre>
+
+                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -664,6 +714,11 @@ from <code><a href="../Classes/RLMRealm.html#/c:objc(cs)RLMRealm(im)addNotificat
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">removeNotification</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">RLMNotificationToken</span> <span class="o">*</span><span class="p">)</span><span class="nv">notificationToken</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">removeNotification</span><span class="p">(</span><span class="nv">notificationToken</span><span class="p">:</span> <span class="kt">RLMNotificationToken</span><span class="o">!</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -744,6 +799,11 @@ is committed.</p>
                           <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">beginWriteTransaction</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">beginWriteTransaction</span><span class="p">()</span></code></pre>
+
+                        </div>
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/Realm/RLMRealm.h#L192">Show on GitHub</a>
@@ -781,6 +841,11 @@ transaction.</p>
                           <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">commitWriteTransaction</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">commitWriteTransaction</span><span class="p">()</span></code></pre>
+
+                        </div>
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/Realm/RLMRealm.h#L200">Show on GitHub</a>
@@ -816,6 +881,11 @@ transaction.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">commitWriteTransaction</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">commitWriteTransaction</span><span class="p">(</span><span class="nv">error</span><span class="p">:</span> <span class="kt">NSErrorPointer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -902,6 +972,11 @@ the valid object.</p>
                           <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">cancelWriteTransaction</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">cancelWriteTransaction</span><span class="p">()</span></code></pre>
+
+                        </div>
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/Realm/RLMRealm.h#L241">Show on GitHub</a>
@@ -930,6 +1005,11 @@ the valid object.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">transactionWithBlock</span><span class="p">:(</span><span class="n">nonnull</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="kt">void</span><span class="p">))</span><span class="nv">block</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">transactionWithBlock</span><span class="p">(</span><span class="nv">block</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="o">!</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -971,6 +1051,11 @@ was already up to date.</p>
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">transactionWithBlock</span><span class="p">:(</span><span class="n">nonnull</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="kt">void</span><span class="p">))</span><span class="nv">block</span>
                        <span class="nf">error</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">transactionWithBlock</span><span class="p">(</span><span class="nv">block</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="o">!</span><span class="p">,</span> <span class="nv">error</span><span class="p">:</span> <span class="p">())</span> <span class="k">throws</span></code></pre>
 
                         </div>
                       </div>
@@ -1043,6 +1128,11 @@ was already up to date.</p>
                           <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">refresh</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">refresh</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
                       </div>
                       <div>
                         <h4>Return Value</h4>
@@ -1104,6 +1194,11 @@ objects will not work.</p>
                           <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">assign</span><span class="p">,</span> <span class="n">readwrite</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">autorefresh</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">autorefresh</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+
+                        </div>
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/Realm/RLMRealm.h#L306">Show on GitHub</a>
@@ -1138,6 +1233,11 @@ objects will not work.</p>
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">writeCopyToPath</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">path</span>
                   <span class="nf">error</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">writeCopyToPath</span><span class="p">(</span><span class="nv">path</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">)</span> <span class="k">throws</span></code></pre>
 
                         </div>
                       </div>
@@ -1213,6 +1313,11 @@ objects will not work.</p>
                           <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">writeCopyToPath</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">path</span>
           <span class="nf">encryptionKey</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nv">key</span>
                   <span class="nf">error</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">writeCopyToPath</span><span class="p">(</span><span class="nv">path</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">,</span> <span class="n">encryptionKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">NSData</span><span class="o">!</span><span class="p">)</span> <span class="k">throws</span></code></pre>
 
                         </div>
                       </div>
@@ -1313,6 +1418,11 @@ cannot be called on a read-only Realm.</p>
                           <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">invalidate</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">invalidate</span><span class="p">()</span></code></pre>
+
+                        </div>
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/Realm/RLMRealm.h#L357">Show on GitHub</a>
@@ -1369,6 +1479,11 @@ from a Realm (i.e. <code>isInvalidated</code>) must be false.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">addObject</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">RLMObject</span> <span class="o">*</span><span class="p">)</span><span class="nv">object</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">addObject</span><span class="p">(</span><span class="nv">object</span><span class="p">:</span> <span class="kt">RLMObject</span><span class="o">!</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1435,6 +1550,11 @@ from a Realm (i.e. <code>isInvalidated</code>) must be false.</p>
                           <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">addObjects</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">id</span><span class="o">&lt;</span><span class="n">NSFastEnumeration</span><span class="o">&gt;</span><span class="p">)</span><span class="nv">array</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">addObjects</span><span class="p">(</span><span class="nv">array</span><span class="p">:</span> <span class="kt">NSFastEnumeration</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -1496,6 +1616,11 @@ a different Realm.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">addOrUpdateObject</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">RLMObject</span> <span class="o">*</span><span class="p">)</span><span class="nv">object</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">addOrUpdateObject</span><span class="p">(</span><span class="nv">object</span><span class="p">:</span> <span class="kt">RLMObject</span><span class="o">!</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1562,6 +1687,11 @@ a different Realm.</p>
                           <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">addOrUpdateObjectsFromArray</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">id</span><span class="p">)</span><span class="nv">array</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">addOrUpdateObjectsFromArray</span><span class="p">(</span><span class="nv">array</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -1616,6 +1746,11 @@ a different Realm.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">deleteObject</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">RLMObject</span> <span class="o">*</span><span class="p">)</span><span class="nv">object</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">deleteObject</span><span class="p">(</span><span class="nv">object</span><span class="p">:</span> <span class="kt">RLMObject</span><span class="o">!</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1674,6 +1809,11 @@ a different Realm.</p>
                           <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">deleteObjects</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">id</span><span class="p">)</span><span class="nv">array</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">deleteObjects</span><span class="p">(</span><span class="nv">array</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="o">!</span><span class="p">)</span></code></pre>
+
+                        </div>
                       </div>
                       <div>
                         <h4>Parameters</h4>
@@ -1730,6 +1870,11 @@ a different Realm.</p>
                           <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">deleteAllObjects</span><span class="p">;</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">deleteAllObjects</span><span class="p">()</span></code></pre>
+
+                        </div>
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/Realm/RLMRealm.h#L449">Show on GitHub</a>
@@ -1770,6 +1915,11 @@ a different Realm.</p>
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="kt">uint64_t</span><span class="p">)</span><span class="nf">schemaVersionAtPath</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">realmPath</span>
                           <span class="nf">error</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">schemaVersionAtPath</span><span class="p">(</span><span class="nv">realmPath</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">NSErrorPointer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UInt64</span></code></pre>
 
                         </div>
                       </div>
@@ -1842,6 +1992,11 @@ a different Realm.</p>
                           <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="kt">uint64_t</span><span class="p">)</span><span class="nf">schemaVersionAtPath</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">realmPath</span>
                   <span class="nf">encryptionKey</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSData</span> <span class="o">*</span><span class="p">)</span><span class="nv">key</span>
                           <span class="nf">error</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">schemaVersionAtPath</span><span class="p">(</span><span class="nv">realmPath</span><span class="p">:</span> <span class="kt">String</span><span class="o">!</span><span class="p">,</span> <span class="n">encryptionKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">NSData</span><span class="p">?,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">NSErrorPointer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UInt64</span></code></pre>
 
                         </div>
                       </div>
@@ -1936,6 +2091,11 @@ exactly when and how migrations are performed.</p>
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSError</span> <span class="o">*</span><span class="p">)</span><span class="nf">migrateRealm</span><span class="p">:</span>
     <span class="p">(</span><span class="n">nonnull</span> <span class="n">RLMRealmConfiguration</span> <span class="o">*</span><span class="p">)</span><span class="nv">configuration</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">migrateRealm</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="kt">RLMRealmConfiguration</span><span class="o">!</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSError</span><span class="o">!</span></code></pre>
 
                         </div>
                       </div>

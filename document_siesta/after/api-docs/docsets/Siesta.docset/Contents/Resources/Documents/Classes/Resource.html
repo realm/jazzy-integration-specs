@@ -204,19 +204,7 @@
 
                 </div>
               </div>
-            <p>An in-memory cache of a RESTful resource, plus information about the status of network requests related to it.</p>
-
-<p>This class answers three basic questions about a resource:</p>
-
-<ul>
-<li>What is the latest data for the resource this device has retrieved, if any?</li>
-<li>Did the last attempt to load it result in an error?</li>
-<li>Is there a request in progress?</li>
-</ul>
-
-<p>…and allows multiple observer to register to be notified whenever the answers to any of these
-questions changes.</p>
-
+            
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -714,22 +702,7 @@ if let ownerResource = resource.optionalRelative(href) {
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns this resource with the given parameter added or changed in the query string.</p>
-
-<p>If <code>value</code> is an empty string, the parameter goes in the query string with no value (e.g. <code>?foo</code>).
-If <code>value</code> is nil, the parameter is removed.</p>
-
-<p>There is no support for parameters with an equal sign but an empty value (e.g. <code>?foo=</code>).
-There is also no support for repeated keys in the query string (e.g. <code>?foo=1&amp;foo=2</code>).
-If you need to circumvent either of these restrictions, you can create the query string yourself and pass
-it to <code><a href="../Classes/Resource.html#/s:FC6Siesta8Resource8relativeFSSS0_">relative(_:)</a></code> instead of using <code>withParam(_:_:)</code>.</p>
-
-<p>Note that <code><a href="../Classes/Service.html">Service</a></code> gives out unique <code><a href="../Classes/Resource.html">Resource</a></code> instances according to the full URL in string form, and thus
-considers query string parameter order significant. Therefore, to ensure that you get the same <code><a href="../Classes/Resource.html">Resource</a></code>
-instance no matter the order in which you specify parameters, <code>withParam(_:_:)</code> sorts all parameters by name.
-Note that <em>only</em> <code>withParam(_:_:)</code> does this sorting; if you use other methods to create query strings, it is
-up to you to canonicalize your parameter order.</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1640,8 +1613,7 @@ still exists.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Removes all observers owned by the given object.</p>
-
+                        
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
