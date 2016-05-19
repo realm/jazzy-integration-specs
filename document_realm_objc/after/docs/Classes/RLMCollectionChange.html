@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>RLMProperty Class Reference</title>
+    <title>RLMCollectionChange Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -27,8 +27,8 @@
 
   </head>
   <body>
-    <a name="//apple_ref/objc/Class/RLMProperty" class="dashAnchor"></a>
-    <a title="RLMProperty Class Reference"></a>
+    <a name="//apple_ref/objc/Class/RLMCollectionChange" class="dashAnchor"></a>
+    <a title="RLMCollectionChange Class Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">Realm Docs</a> (100% documented)</p>
@@ -40,7 +40,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">Realm Reference</a>
         <img id="carat" src="../img/carat.png" />
-        RLMProperty Class Reference
+        RLMCollectionChange Class Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -163,37 +163,41 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>RLMProperty</h1>
+            <h1>RLMCollectionChange</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">RLMProperty</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">RLMCollectionChange</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
 
                 </div>
               </div>
-            <p>This class models properties persisted to Realm in an RLMObjectSchema.</p>
+            <p>RLMCollectionChange is passed to the notification blocks registered with
+-addNotificationBlock on RLMArray and RLMResults, and reports what rows in the
+collection changed since the last time the notification block was called.</p>
 
-<p>When using Realm, RLMProperty objects allow performing migrations and 
-introspecting the database&rsquo;s schema.</p>
+<p>The change information is available in two formats: a simple array of row
+indices in the collection for each type of change, and an array of index paths
+in a requested section suitable for passing directly to UITableView&rsquo;s batch
+update methods. A complete example of updating a <code>UITableView</code> named <code>tv</code>:</p>
 
-<p>These properties map to columns in the core database.</p>
+<pre class="highlight plaintext"><code>[tv beginUpdates];
+[tv deleteRowsAtIndexPaths:[changes deletionsInSection:0] withRowAnimation:UITableViewRowAnimationAutomatic];
+[tv insertRowsAtIndexPaths:[changes insertionsInSection:0] withRowAnimation:UITableViewRowAnimationAutomatic];
+[tv reloadRowsAtIndexPaths:[changes modificationsInSection:0] withRowAnimation:UITableViewRowAnimationAutomatic];
+[tv endUpdates];
+</code></pre>
+
+<p>All of the arrays in an RLMCollectionChange are always sorted in ascending order.</p>
 
           </section>
           <section class="section task-group-section">
             <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Properties"></a>
-                <a name="//apple_ref/objc/Section/Properties" class="dashAnchor"></a>
-                <a href="#/Properties">
-                  <h3 class="section-name">Properties</h3>
-                </a>
-              </div>
               <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)RLMProperty(py)name"></a>
-                    <a name="//apple_ref/objc/Property/name" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)RLMProperty(py)name">name</a>
+                    <a name="/c:objc(cs)RLMCollectionChange(py)deletions"></a>
+                    <a name="//apple_ref/objc/Property/deletions" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMCollectionChange(py)deletions">deletions</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -201,24 +205,25 @@ introspecting the database&rsquo;s schema.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Property name.</p>
+                        <p>The indices of objects in the previous version of the collection which have
+been removed from this one.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">name</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSNumber</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">deletions</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">deletions</span><span class="p">:</span> <span class="p">[</span><span class="kt">NSNumber</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMProperty.h#L59">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMCollection.h#L291">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -226,9 +231,9 @@ introspecting the database&rsquo;s schema.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)RLMProperty(py)type"></a>
-                    <a name="//apple_ref/objc/Property/type" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)RLMProperty(py)type">type</a>
+                    <a name="/c:objc(cs)RLMCollectionChange(py)insertions"></a>
+                    <a name="//apple_ref/objc/Property/insertions" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMCollectionChange(py)insertions">insertions</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -236,30 +241,24 @@ introspecting the database&rsquo;s schema.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Property type.</p>
-
-<div class="aside aside-see">
-    <p class="aside-title">See</p>
-    RLMPropertyType
-
-</div>
+                        <p>The indices in the new version of the collection which were newly inserted.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">RLMPropertyType</span> <span class="n">type</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSNumber</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">insertions</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">LAPropertyType</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">insertions</span><span class="p">:</span> <span class="p">[</span><span class="kt">NSNumber</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMProperty.h#L66">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMCollection.h#L294">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -267,9 +266,9 @@ introspecting the database&rsquo;s schema.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)RLMProperty(py)indexed"></a>
-                    <a name="//apple_ref/objc/Property/indexed" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)RLMProperty(py)indexed">indexed</a>
+                    <a name="/c:objc(cs)RLMCollectionChange(py)modifications"></a>
+                    <a name="//apple_ref/objc/Property/modifications" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMCollectionChange(py)modifications">modifications</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -277,30 +276,28 @@ introspecting the database&rsquo;s schema.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Indicates if this property is indexed.</p>
-
-<div class="aside aside-see">
-    <p class="aside-title">See</p>
-    RLMObject
-
-</div>
+                        <p>The indices in the new version of the collection which were modified. For
+RLMResults, this means that one or more of the properties of the object at
+that index were modified (or an object linked to by that object was
+modified). For RLMArray, the array itself being modified to contain a
+different object at that index will also be reported as a modification.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">indexed</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSNumber</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">modifications</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">indexed</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">modifications</span><span class="p">:</span> <span class="p">[</span><span class="kt">NSNumber</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMProperty.h#L73">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMCollection.h#L301">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -308,9 +305,9 @@ introspecting the database&rsquo;s schema.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)RLMProperty(py)objectClassName"></a>
-                    <a name="//apple_ref/objc/Property/objectClassName" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)RLMProperty(py)objectClassName">objectClassName</a>
+                    <a name="/c:objc(cs)RLMCollectionChange(im)deletionsInSection:"></a>
+                    <a name="//apple_ref/objc/Method/-deletionsInSection:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMCollectionChange(im)deletionsInSection:">-deletionsInSection:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -318,24 +315,24 @@ introspecting the database&rsquo;s schema.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Object class name - specify object types for RLMObject and RLMArray properties.</p>
+                        <p>Returns index paths of the deletion indices in the given section.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">objectClassName</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSIndexPath</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nf">deletionsInSection</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">section</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">objectClassName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">deletionsInSection</span><span class="p">(</span><span class="nv">section</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">NSIndexPath</span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMProperty.h#L78">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMCollection.h#L304">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -343,9 +340,9 @@ introspecting the database&rsquo;s schema.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)RLMProperty(py)linkOriginPropertyName"></a>
-                    <a name="//apple_ref/objc/Property/linkOriginPropertyName" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)RLMProperty(py)linkOriginPropertyName">linkOriginPropertyName</a>
+                    <a name="/c:objc(cs)RLMCollectionChange(im)insertionsInSection:"></a>
+                    <a name="//apple_ref/objc/Method/-insertionsInSection:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMCollectionChange(im)insertionsInSection:">-insertionsInSection:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -353,24 +350,24 @@ introspecting the database&rsquo;s schema.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Property name of the origin of a link. Specified for linking objects properties.</p>
+                        <p>Returns index paths of the insertion indices in the given section.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">linkOriginPropertyName</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSIndexPath</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nf">insertionsInSection</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">section</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">linkOriginPropertyName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">insertionsInSection</span><span class="p">(</span><span class="nv">section</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">NSIndexPath</span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMProperty.h#L83">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMCollection.h#L307">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -378,9 +375,9 @@ introspecting the database&rsquo;s schema.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)RLMProperty(py)optional"></a>
-                    <a name="//apple_ref/objc/Property/optional" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)RLMProperty(py)optional">optional</a>
+                    <a name="/c:objc(cs)RLMCollectionChange(im)modificationsInSection:"></a>
+                    <a name="//apple_ref/objc/Method/-modificationsInSection:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMCollectionChange(im)modificationsInSection:">-modificationsInSection:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -388,70 +385,24 @@ introspecting the database&rsquo;s schema.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Whether this property is optional.</p>
+                        <p>Returns index paths of the modification indices in the given section.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">optional</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSIndexPath</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nf">modificationsInSection</span><span class="p">:(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nv">section</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">optional</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">modificationsInSection</span><span class="p">(</span><span class="nv">section</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">NSIndexPath</span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMProperty.h#L88">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Methods"></a>
-                <a name="//apple_ref/objc/Section/Methods" class="dashAnchor"></a>
-                <a href="#/Methods">
-                  <h3 class="section-name">Methods</h3>
-                </a>
-              </div>
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)RLMProperty(im)isEqualToProperty:"></a>
-                    <a name="//apple_ref/objc/Method/-isEqualToProperty:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)RLMProperty(im)isEqualToProperty:">-isEqualToProperty:</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns YES if property objects are equal.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="nf">isEqualToProperty</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">RLMProperty</span> <span class="o">*</span><span class="p">)</span><span class="nv">property</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">isEqualToProperty</span><span class="p">(</span><span class="nv">property</span><span class="p">:</span> <span class="kt">RLMProperty</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMProperty.h#L95">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMCollection.h#L310">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

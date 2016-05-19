@@ -32,7 +32,7 @@
       <div class="content-wrapper">
         <p><a href="index.html">Realm Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fobjc%2F0%2E98%2E6%2Fapi%2Fdocsets%2FRealm%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fobjc%2F0%2E103%2E0%2Fapi%2Fdocsets%2FRealm%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -52,6 +52,12 @@
                 <a href="Classes/RLMArray.html">RLMArray</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/RLMCollectionChange.html">RLMCollectionChange</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes.html#/c:objc(cs)RLMLinkingObjects">RLMLinkingObjects</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/RLMMigration.html">RLMMigration</a>
               </li>
               <li class="nav-group-task">
@@ -65,6 +71,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/RLMProperty.html">RLMProperty</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMPropertyDescriptor.html">RLMPropertyDescriptor</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/RLMRealm.html">RLMRealm</a>
@@ -110,6 +119,9 @@
               <li class="nav-group-task">
                 <a href="Constants.html#/c:@RLMRealmVersionKey">RLMRealmVersionKey</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@RLMUnknownSystemErrorDomain">RLMUnknownSystemErrorDomain</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -154,12 +166,12 @@
             <p><img src="https://github.com/realm/realm-cocoa/raw/master/logo.png" alt="Realm"></p>
 
 <p>Realm is a mobile database that runs directly inside phones, tablets or wearables.
-This repository holds the source code for the iOS &amp; OSX versions of Realm, for both Swift &amp; Objective-C.</p>
+This repository holds the source code for the iOS, OS X, watchOS &amp; tvOS versions of Realm Swift &amp; Realm Objective-C.</p>
 <a href='#features' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='features'>Features</h2>
 
 <ul>
 <li><strong>Mobile-first:</strong> Realm is the first database built from the ground up to run directly inside phones, tablets and wearables.</li>
-<li><strong>Simple:</strong> Data is directly <a href="https://realm.io/docs/objc/latest/#models">exposed as objects</a> and <a href="https://realm.io/docs/objc/latest/#queries">queryable by code</a>, removing the need for ORM&rsquo;s riddled with performance &amp; maintenance issues. Plus, we&rsquo;ve worked hard to <a href="https://realm.io/docs/objc/latest/api/">keep our API down to just 4 common classes</a> (Object, Array, Results and Realms) and 1 utility class (Migrations): most of our users pick it up intuitively, getting simple apps up &amp; running in minutes.</li>
+<li><strong>Simple:</strong> Data is directly <a href="https://realm.io/docs/objc/latest/#models">exposed as objects</a> and <a href="https://realm.io/docs/objc/latest/#queries">queryable by code</a>, removing the need for ORM&rsquo;s riddled with performance &amp; maintenance issues. Most of our users pick it up intuitively, getting simple apps up &amp; running in minutes.</li>
 <li><strong>Modern:</strong> Realm supports relationships, generics, vectorization and even Swift.</li>
 <li><strong>Fast:</strong> Realm is faster than even raw SQLite on common operations, while maintaining an extremely rich feature set.</li>
 </ul>
@@ -178,7 +190,7 @@ The API reference is located at <a href="https://realm.io/docs/swift/latest/api"
 <a href='#getting-help' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='getting-help'>Getting Help</h2>
 
 <ul>
-<li><strong>Need help with your code?</strong>: Look for previous questions on the  <a href="https://stackoverflow.com/questions/tagged/realm?sort=newest">#realm tag</a> — or <a href="https://stackoverflow.com/questions/ask?tags=realm">ask a new question</a>. We activtely monitor &amp; answer questions on SO!</li>
+<li><strong>Need help with your code?</strong>: Look for previous questions on the  <a href="https://stackoverflow.com/questions/tagged/realm?sort=newest">#realm tag</a> — or <a href="https://stackoverflow.com/questions/ask?tags=realm">ask a new question</a>. We actively monitor &amp; answer questions on SO!</li>
 <li><strong>Have a bug to report?</strong> <a href="https://github.com/realm/realm-cocoa/issues/new">Open an issue</a>. If possible, include the version of Realm, a full log, the Realm file, and a project that shows the issue.</li>
 <li><strong>Have a feature request?</strong> <a href="https://github.com/realm/realm-cocoa/issues/new">Open an issue</a>. Tell us what the feature should do, and why you want the feature.</li>
 <li>Sign up for our <a href="http://eepurl.com/VEKCn"><strong>Community Newsletter</strong></a> to get regular tips, learn about other use-cases and get alerted of blogposts and tutorials about Realm.</li>
@@ -190,15 +202,13 @@ The API reference is located at <a href="https://realm.io/docs/swift/latest/api"
 <p>Prerequisites:</p>
 
 <ul>
-<li>Building Realm requires Xcode 6.4-7.2.</li>
+<li>Building Realm requires Xcode 7.3.</li>
 <li>Building Realm documentation requires <a href="https://github.com/realm/jazzy">jazzy</a></li>
 </ul>
 
 <p>Once you have all the necessary prerequisites, building Realm.framework just takes a single command: <code>sh build.sh build</code>. You&rsquo;ll need an internet connection the first time you build Realm to download the core binary.</p>
 
 <p>Run <code>sh build.sh help</code> to see all the actions you can perform (build ios/osx, generate docs, test, etc.).</p>
-
-<p>Executing the examples under the <code>examples/</code> folder, requires that you have built the <code>Realm.framework</code>.</p>
 <a href='#contributing' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='contributing'>Contributing</h2>
 
 <p>See <a href="CONTRIBUTING.md">CONTRIBUTING.md</a> for more details!</p>
@@ -212,7 +222,7 @@ North Korea, Sudan, Syria or the Crimea region, or to any other person that is
 not eligible to receive the product under U.S. law.</strong></p>
 <a href='#feedback' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='feedback'>Feedback</h2>
 
-<p><strong><em>If you use Realm and are happy with it, all we ask is that you please consider sending out a tweet mentioning <a href="https://twitter.com/realm">@realm</a>, announce your app on <a href="https://groups.google.com/forum/#!forum/realm-cocoa">our mailing-list</a>, or email <a href="mailto:help@realm.io">help@realm.io</a> to let us know about it!</em></strong></p>
+<p><strong><em>If you use Realm and are happy with it, all we ask is that you please consider sending out a tweet mentioning <a href="https://twitter.com/realm">@realm</a> or email <a href="mailto:help@realm.io">help@realm.io</a> to share your thoughts!</em></strong></p>
 
 <p><strong><em>And if you don&rsquo;t like it, please let us know what you would like improved, so we can fix it!</em></strong></p>
 

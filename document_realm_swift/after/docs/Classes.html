@@ -32,7 +32,7 @@
       <div class="content-wrapper">
         <p><a href="index.html">RealmSwift Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F0%2E98%2E6%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F0%2E103%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -50,6 +50,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Classes/AnyRealmCollection.html">AnyRealmCollection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/LinkingObjects.html">LinkingObjects</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/List.html">List</a>
@@ -92,6 +95,9 @@
               <li class="nav-group-task">
                 <a href="Enums/Notification.html">Notification</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Enums/RealmCollectionChange.html">RealmCollectionChange</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -119,7 +125,7 @@
                 <a href="Functions.html#/s:F10RealmSwift12migrateRealmFTVCS_5Realm13Configuration_GSqCSo7NSError_">migrateRealm(_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:F10RealmSwift19schemaVersionAtPathFTSS13encryptionKeyGSqCSo6NSData_5errorGVs33AutoreleasingUnsafeMutablePointerGSqCSo7NSError___GSqVs6UInt64_">schemaVersionAtPath(_:encryptionKey:error:)</a>
+                <a href="Functions.html#/s:F10RealmSwift18schemaVersionAtURLFzTCSo5NSURL13encryptionKeyGSqCSo6NSData__Vs6UInt64">schemaVersionAtURL(_:encryptionKey:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="Functions.html#/s:ZF10RealmSwiftoi2teFTOS_5ErrorPs9ErrorType__Sb">~=(_:_:)</a>
@@ -189,6 +195,53 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:C10RealmSwift14LinkingObjects"></a>
+                    <a name="//apple_ref/swift/Class/LinkingObjects" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C10RealmSwift14LinkingObjects">LinkingObjects</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>LinkingObjects is an auto-updating container type that represents a collection of objects that
+link to a given object.</p>
+
+<p>LinkingObjects can be queried with the same predicates as <code><a href="Classes/List.html">List&lt;T&gt;</a></code> and <code><a href="Classes/Results.html">Results&lt;T&gt;</a></code>.</p>
+
+<p>LinkingObjects always reflect the current state of the Realm on the current thread,
+including during write transactions on the current thread. The one exception to
+this is when using <code>for...in</code> enumeration, which will always enumerate over the
+linking objects when the enumeration is begun, even if some of them are deleted or
+modified to no longer link to the target object during the enumeration.</p>
+
+<p>LinkingObjects can only be used as a property on <code><a href="Classes/Object.html">Object</a></code> models. The property must
+be declared as <code>let</code> and cannot be <code>dynamic</code>.</p>
+
+                        <a href="Classes/LinkingObjects.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">LinkingObjects</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt">Object</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">LinkingObjectsBase</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/LinkingObjects.swift#L81-L391">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:C10RealmSwift4List"></a>
                     <a name="//apple_ref/swift/Class/List" class="dashAnchor"></a>
                     <a class="token" href="#/s:C10RealmSwift4List">List</a>
@@ -218,7 +271,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/List.swift#L52-L421">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/List.swift#L52-L471">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -256,7 +309,7 @@ of a <code><a href="Classes/Realm.html">Realm</a></code> instance.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Migration.swift#L90-L160">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Migration.swift#L90-L174">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -334,7 +387,7 @@ method on <code><a href="Classes/Realm.html">Realm</a></code>.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Object.swift#L69-L274">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Object.swift#L69-L264">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -374,7 +427,7 @@ introspecting the database&rsquo;s schema.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/ObjectSchema.swift#L30-L70">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/ObjectSchema.swift#L30-L70">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -413,7 +466,7 @@ a <code>RealmOptional</code> property on an <code><a href="Classes/Object.html">
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Optional.swift#L69-L89">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Optional.swift#L69-L89">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -453,7 +506,7 @@ introspecting the database&rsquo;s schema.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Property.swift#L30-L59">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Property.swift#L30-L59">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -511,7 +564,7 @@ strong references to it.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Realm.swift#L45-L584">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L45-L586">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -547,7 +600,7 @@ strong references to it.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/RealmCollectionType.swift#L26-L41">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/RealmCollectionType.swift#L26-L41">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -581,7 +634,7 @@ Element type, hiding the specifics of the underlying <code><a href="Protocols/Re
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/RealmCollectionType.swift#L500-L741">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/RealmCollectionType.swift#L638-L922">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -644,7 +697,7 @@ up-to-date done on a background thread whenever possible.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Results.swift#L99-L364">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Results.swift#L99-L394">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -684,7 +737,7 @@ introspecting the database&rsquo;s schema.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Schema.swift#L30-L60">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Schema.swift#L30-L60">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

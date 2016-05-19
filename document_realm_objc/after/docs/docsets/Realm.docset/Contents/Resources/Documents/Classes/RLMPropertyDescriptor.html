@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>RLMNotificationToken Class Reference</title>
+    <title>RLMPropertyDescriptor Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -27,8 +27,8 @@
 
   </head>
   <body>
-    <a name="//apple_ref/objc/Class/RLMNotificationToken" class="dashAnchor"></a>
-    <a title="RLMNotificationToken Class Reference"></a>
+    <a name="//apple_ref/objc/Class/RLMPropertyDescriptor" class="dashAnchor"></a>
+    <a title="RLMPropertyDescriptor Class Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">Realm Docs</a> (100% documented)</p>
@@ -40,7 +40,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">Realm Reference</a>
         <img id="carat" src="../img/carat.png" />
-        RLMNotificationToken Class Reference
+        RLMPropertyDescriptor Class Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -163,19 +163,14 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>RLMNotificationToken</h1>
+            <h1>RLMPropertyDescriptor</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">RLMNotificationToken</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">RLMPropertyDescriptor</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
 
                 </div>
               </div>
-            <p>A token which is returned from methods which subscribe to changes to a Realm.</p>
-
-<p>Change subscriptions in Realm return an RLMNotificationToken which can be used
-to unsubscribe from the changes. You must store a strong reference to the token
-for as long as you want to continue to receive notifications. When you wish to
-stop, call the <code>-stop</code> method.</p>
+            <p>This class describes a specific property on a given class.</p>
 
           </section>
           <section class="section task-group-section">
@@ -184,9 +179,9 @@ stop, call the <code>-stop</code> method.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)RLMNotificationToken(im)stop"></a>
-                    <a name="//apple_ref/objc/Method/-stop" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)RLMNotificationToken(im)stop">-stop</a>
+                    <a name="/c:objc(cs)RLMPropertyDescriptor(cm)descriptorWithClass:propertyName:"></a>
+                    <a name="//apple_ref/objc/Method/+descriptorWithClass:propertyName:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMPropertyDescriptor(cm)descriptorWithClass:propertyName:">+descriptorWithClass:propertyName:</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -194,24 +189,128 @@ stop, call the <code>-stop</code> method.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Stop receiving notifications for the subcription that returned this token.</p>
+                        <p>Creates a property descriptor.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">stop</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="nf">descriptorWithClass</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">Class</span><span class="p">)</span><span class="nv">objectClass</span>
+                               <span class="nf">propertyName</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">propertyName</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">stop</span><span class="p">()</span></code></pre>
+                          <pre class="highlight"><code><span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="n">withClass</span> <span class="nv">objectClass</span><span class="p">:</span> <span class="kt">AnyClass</span><span class="p">,</span> <span class="nv">propertyName</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>objectClass</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The class of this property descriptor.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>propertyName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of this property descriptor.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMProperty.h#L111">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RLMPropertyDescriptor(py)objectClass"></a>
+                    <a name="//apple_ref/objc/Property/objectClass" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMPropertyDescriptor(py)objectClass">objectClass</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The class of the property.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">Class</span> <span class="n">_Nonnull</span> <span class="n">objectClass</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">objectClass</span><span class="p">:</span> <span class="kt">AnyClass</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealm.h#L475">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMProperty.h#L114">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RLMPropertyDescriptor(py)propertyName"></a>
+                    <a name="//apple_ref/objc/Property/propertyName" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMPropertyDescriptor(py)propertyName">propertyName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of the property.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">propertyName</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">propertyName</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMProperty.h#L117">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

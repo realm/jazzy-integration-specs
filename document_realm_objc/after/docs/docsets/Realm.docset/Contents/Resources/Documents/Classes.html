@@ -32,7 +32,7 @@
       <div class="content-wrapper">
         <p><a href="index.html">Realm Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fobjc%2F0%2E98%2E6%2Fapi%2Fdocsets%2FRealm%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fobjc%2F0%2E103%2E0%2Fapi%2Fdocsets%2FRealm%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -52,6 +52,12 @@
                 <a href="Classes/RLMArray.html">RLMArray</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/RLMCollectionChange.html">RLMCollectionChange</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes.html#/c:objc(cs)RLMLinkingObjects">RLMLinkingObjects</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/RLMMigration.html">RLMMigration</a>
               </li>
               <li class="nav-group-task">
@@ -65,6 +71,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/RLMProperty.html">RLMProperty</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMPropertyDescriptor.html">RLMPropertyDescriptor</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/RLMRealm.html">RLMRealm</a>
@@ -109,6 +118,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Constants.html#/c:@RLMRealmVersionKey">RLMRealmVersionKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@RLMUnknownSystemErrorDomain">RLMUnknownSystemErrorDomain</a>
               </li>
             </ul>
           </li>
@@ -213,16 +225,20 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">RLMArray</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">RLMArray</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/Realm/RLMArray.h#L62-L322">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMArray.h#L61-L363">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
                 <li class="item">
                   <div>
                     <code>
@@ -257,7 +273,59 @@ engine. RLMSortDescriptor instances are immutable.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/Realm/RLMArray.h#L330-L356">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMCollection.h#L242-L268">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RLMCollectionChange"></a>
+                    <a name="//apple_ref/objc/Class/RLMCollectionChange" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMCollectionChange">RLMCollectionChange</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>RLMCollectionChange is passed to the notification blocks registered with
+-addNotificationBlock on RLMArray and RLMResults, and reports what rows in the
+collection changed since the last time the notification block was called.</p>
+
+<p>The change information is available in two formats: a simple array of row
+indices in the collection for each type of change, and an array of index paths
+in a requested section suitable for passing directly to UITableView&rsquo;s batch
+update methods. A complete example of updating a <code>UITableView</code> named <code>tv</code>:</p>
+
+<pre class="highlight plaintext"><code>[tv beginUpdates];
+[tv deleteRowsAtIndexPaths:[changes deletionsInSection:0] withRowAnimation:UITableViewRowAnimationAutomatic];
+[tv insertRowsAtIndexPaths:[changes insertionsInSection:0] withRowAnimation:UITableViewRowAnimationAutomatic];
+[tv reloadRowsAtIndexPaths:[changes modificationsInSection:0] withRowAnimation:UITableViewRowAnimationAutomatic];
+[tv endUpdates];
+</code></pre>
+
+<p>All of the arrays in an RLMCollectionChange are always sorted in ascending order.</p>
+
+                        <a href="Classes/RLMCollectionChange.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">RLMCollectionChange</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">RLMCollectionChange</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMCollection.h#L288-L311">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -300,7 +368,7 @@ of an RLMRealm instance.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/Realm/RLMMigration.h#L43-L105">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMMigration.h#L42-L116">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -398,7 +466,7 @@ times when you <em>cannot</em> begin a write transaction.</li>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/Realm/RLMObject.h#L87-L408">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMObject.h#L88-L413">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -443,7 +511,7 @@ introspecting the database&rsquo;s schema.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/Realm/RLMObjectSchema.h#L34-L71">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMObjectSchema.h#L33-L70">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -488,7 +556,43 @@ introspecting the database&rsquo;s schema.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/Realm/RLMProperty.h#L53-L93">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMProperty.h#L52-L97">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RLMPropertyDescriptor"></a>
+                    <a name="//apple_ref/objc/Class/RLMPropertyDescriptor" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMPropertyDescriptor">RLMPropertyDescriptor</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>This class describes a specific property on a given class.</p>
+
+                        <a href="Classes/RLMPropertyDescriptor.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">RLMPropertyDescriptor</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">RLMPropertyDescriptor</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMProperty.h#L103-L119">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -513,7 +617,7 @@ introspecting the database&rsquo;s schema.</p>
                         <p>An RLMRealm instance (also referred to as <q>a realm</q>) represents a Realm
 database.</p>
 
-<p>Realms can either be stored on disk (see +[RLMRealm realmWithPath:]) or in
+<p>Realms can either be stored on disk (see +[RLMRealm realmWithURL:]) or in
 memory (see RLMRealmConfiguration).</p>
 
 <p>RLMRealm instances are cached internally, and constructing equivalent RLMRealm
@@ -551,7 +655,7 @@ on a consistent thread.
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/Realm/RLMRealm.h#L49-L504">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealm.h#L48-L463">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -592,7 +696,7 @@ stop, call the <code>-stop</code> method.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/Realm/RLMRealm.h#L514-L517">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealm.h#L473-L476">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -640,7 +744,7 @@ that you are using rather than creating a new one each time you open a Realm.</p
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/Realm/RLMRealmConfiguration.h#L35-L77">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealmConfiguration.h#L35-L87">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -697,12 +801,48 @@ up-to-date done on a background thread whenever possible.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">RLMResults</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">RLMResults</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/Realm/RLMResults.h#L52-L278">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMResults.h#L51-L313">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RLMLinkingObjects"></a>
+                    <a name="//apple_ref/objc/Class/RLMLinkingObjects" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMLinkingObjects">RLMLinkingObjects</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>RLMLinkingObjects is an auto-updating container type that represents a collection of objects that
+link to a given object.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">RLMLinkingObjects</span> <span class="o">&lt;</span><span class="n">RLMObjectType</span> <span class="o">:</span> <span class="n">RLMObject</span> <span class="o">*&gt;</span> <span class="o">:</span> <span class="n">RLMResults</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">RLMLinkingObjects</span> <span class="p">:</span> <span class="kt">RLMResults</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMResults.h#L319-L320">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -747,7 +887,7 @@ introspecting the database&rsquo;s schema.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/Realm/RLMSchema.h#L34-L74">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMSchema.h#L33-L73">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

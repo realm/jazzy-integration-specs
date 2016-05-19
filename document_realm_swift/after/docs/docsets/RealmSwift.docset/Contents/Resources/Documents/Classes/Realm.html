@@ -33,7 +33,7 @@
       <div class="content-wrapper">
         <p><a href="../index.html">RealmSwift Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F0%2E98%2E6%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F0%2E103%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -51,6 +51,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Classes/AnyRealmCollection.html">AnyRealmCollection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LinkingObjects.html">LinkingObjects</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/List.html">List</a>
@@ -93,6 +96,9 @@
               <li class="nav-group-task">
                 <a href="../Enums/Notification.html">Notification</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RealmCollectionChange.html">RealmCollectionChange</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -120,7 +126,7 @@
                 <a href="../Functions.html#/s:F10RealmSwift12migrateRealmFTVCS_5Realm13Configuration_GSqCSo7NSError_">migrateRealm(_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:F10RealmSwift19schemaVersionAtPathFTSS13encryptionKeyGSqCSo6NSData_5errorGVs33AutoreleasingUnsafeMutablePointerGSqCSo7NSError___GSqVs6UInt64_">schemaVersionAtPath(_:encryptionKey:error:)</a>
+                <a href="../Functions.html#/s:F10RealmSwift18schemaVersionAtURLFzTCSo5NSURL13encryptionKeyGSqCSo6NSData__Vs6UInt64">schemaVersionAtURL(_:encryptionKey:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Functions.html#/s:ZF10RealmSwiftoi2teFTOS_5ErrorPs9ErrorType__Sb">~=(_:_:)</a>
@@ -226,66 +232,6 @@ strong references to it.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC10RealmSwift5Realm4pathSS"></a>
-                    <a name="//apple_ref/swift/Property/path" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC10RealmSwift5Realm4pathSS">path</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Path to the file where this Realm is persisted.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">return</span> <span class="n">rlmRealm</span><span class="o">.</span><span class="n">path</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Realm.swift#L50">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:vC10RealmSwift5Realm8readOnlySb"></a>
-                    <a name="//apple_ref/swift/Property/readOnly" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC10RealmSwift5Realm8readOnlySb">readOnly</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Indicates if this Realm was opened in read-only mode.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">readOnly</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">return</span> <span class="n">rlmRealm</span><span class="o">.</span><span class="n">readOnly</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Realm.swift#L53">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:vC10RealmSwift5Realm6schemaCS_6Schema"></a>
                     <a name="//apple_ref/swift/Property/schema" class="dashAnchor"></a>
                     <a class="token" href="#/s:vC10RealmSwift5Realm6schemaCS_6Schema">schema</a>
@@ -308,7 +254,7 @@ strong references to it.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Realm.swift#L56">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L50">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -338,7 +284,7 @@ strong references to it.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Realm.swift#L59">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L53">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -368,7 +314,7 @@ strong references to it.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Realm.swift#L62">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L56">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -387,6 +333,43 @@ strong references to it.</p>
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:FC10RealmSwift5RealmcFzT_S0_"></a>
+                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC10RealmSwift5RealmcFzT_S0_">init()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Obtains a Realm instance with the default Realm configuration, which can be
+changed by setting <code><a href="../Classes/Realm/Configuration.html#/s:ZvVC10RealmSwift5Realm13Configuration20defaultConfigurationS1_">Realm.Configuration.defaultConfiguration</a></code>.</p>
+
+<div class="aside aside-throws">
+    <p class="aside-title">Throws</p>
+    An NSError if the Realm could not be initialized.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">()</span> <span class="k">throws</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L66-L69">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:FC10RealmSwift5RealmcFzT13configurationVS0_13Configuration_S0_"></a>
                     <a name="//apple_ref/swift/Method/init(configuration:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:FC10RealmSwift5RealmcFzT13configurationVS0_13Configuration_S0_">init(configuration:)</a>
@@ -397,8 +380,7 @@ strong references to it.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Obtains a Realm instance with the given configuration. Defaults to the default Realm configuration,
-which can be changed by setting <code><a href="../Classes/Realm/Configuration.html#/s:ZvVC10RealmSwift5Realm13Configuration20defaultConfigurationS1_">Realm.Configuration.defaultConfiguration</a></code>.</p>
+                        <p>Obtains a Realm instance with the given configuration.</p>
 
 <div class="aside aside-throws">
     <p class="aside-title">Throws</p>
@@ -411,7 +393,7 @@ which can be changed by setting <code><a href="../Classes/Realm/Configuration.ht
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="kt">Configuration</span> <span class="o">=</span> <span class="kt">Configuration</span><span class="o">.</span><span class="n">defaultConfiguration</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="kt">Configuration</span><span class="p">)</span> <span class="k">throws</span></code></pre>
 
                         </div>
                       </div>
@@ -436,7 +418,7 @@ which can be changed by setting <code><a href="../Classes/Realm/Configuration.ht
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Realm.swift#L74-L77">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L78-L81">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -444,9 +426,9 @@ which can be changed by setting <code><a href="../Classes/Realm/Configuration.ht
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC10RealmSwift5RealmcFzT4pathSS_S0_"></a>
-                    <a name="//apple_ref/swift/Method/init(path:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC10RealmSwift5RealmcFzT4pathSS_S0_">init(path:)</a>
+                    <a name="/s:FC10RealmSwift5RealmcFzT7fileURLCSo5NSURL_S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(fileURL:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC10RealmSwift5RealmcFzT7fileURLCSo5NSURL_S0_">init(fileURL:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -454,7 +436,7 @@ which can be changed by setting <code><a href="../Classes/Realm/Configuration.ht
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Obtains a Realm instance persisted at the specified file path.</p>
+                        <p>Obtains a Realm instance persisted at the specified file URL.</p>
 
 <div class="aside aside-throws">
     <p class="aside-title">Throws</p>
@@ -467,7 +449,7 @@ which can be changed by setting <code><a href="../Classes/Realm/Configuration.ht
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">path</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">fileURL</span><span class="p">:</span> <span class="kt">NSURL</span><span class="p">)</span> <span class="k">throws</span></code></pre>
 
                         </div>
                       </div>
@@ -478,12 +460,12 @@ which can be changed by setting <code><a href="../Classes/Realm/Configuration.ht
                             <tr>
                               <td>
                                 <code>
-                                <em>path</em>
+                                <em>fileURL</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>Path to the realm file.</p>
+                                  <p>Local URL to the realm file.</p>
 
                                 </div>
                               </td>
@@ -492,7 +474,7 @@ which can be changed by setting <code><a href="../Classes/Realm/Configuration.ht
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Realm.swift#L86-L90">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L90-L94">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -521,7 +503,7 @@ which can be changed by setting <code><a href="../Classes/Realm/Configuration.ht
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Performs actions contained within the given block inside a write transation.</p>
+                        <p>Performs actions contained within the given block inside a write transaction.</p>
 
 <p>Write transactions cannot be nested, and trying to execute a write transaction
 on a <code><a href="../Classes/Realm.html">Realm</a></code> which is already in a write transaction will throw an exception.
@@ -568,7 +550,7 @@ if applicable. This has no effect if the <code><a href="../Classes/Realm.html">R
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Realm.swift#L110-L112">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L114-L116">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -614,7 +596,7 @@ is committed.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Realm.swift#L133-L135">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L137-L139">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -653,7 +635,7 @@ the transaction.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Realm.swift#L145-L147">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L149-L151">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -706,7 +688,7 @@ the valid object.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Realm.swift#L176-L178">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L180-L182">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -745,7 +727,7 @@ the valid object.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Realm.swift#L188-L190">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L192-L194">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -832,7 +814,7 @@ from a Realm (i.e. <code>invalidated</code> must be false).</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Realm.swift#L213-L218">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L217-L222">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -907,7 +889,7 @@ from a Realm (i.e. <code>invalidated</code> must be false).</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Realm.swift#L230-L234">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L234-L238">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1001,7 +983,7 @@ the existing object is updated with any changed values.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Realm.swift#L259-L265">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L263-L269">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1068,7 +1050,7 @@ the existing object is updated with any changed values.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Realm.swift#L311-L313">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L315-L317">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1124,7 +1106,7 @@ the existing object is updated with any changed values.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Realm.swift#L323-L327">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L327-L331">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1160,7 +1142,7 @@ the existing object is updated with any changed values.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Realm.swift#L360-L362">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L364-L366">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1226,7 +1208,7 @@ the existing object is updated with any changed values.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Realm.swift#L373-L375">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L377-L379">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1304,7 +1286,7 @@ the existing object is updated with any changed values.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Realm.swift#L410-L412">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L414-L416">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1336,11 +1318,19 @@ the existing object is updated with any changed values.</p>
                         <p>Add a notification handler for changes in this Realm.</p>
 
 <p>Notification handlers are called after each write transaction is committed,
-either on the current thread or other threads. The block is called on the
-same thread as they were added on, and can only be added on threads which
-are currently within a run loop. Unless you are specifically creating and
-running a run loop on a background thread, this normally will only be the
-main thread.</p>
+independent from the thread or process.</p>
+
+<p>The block is called on the same thread as it was added on, and can only
+be added on threads which are currently within a run loop. Unless you are
+specifically creating and running a run loop on a background thread, this
+normally will only be the main thread.</p>
+
+<p>Notifications can&rsquo;t be delivered as long as the runloop is blocked by
+other activity. When notifications can&rsquo;t be delivered instantly, multiple
+notifications may be coalesced.</p>
+
+<p>You must retain the returned token for as long as you want updates to continue
+to be sent to the block. To stop receiving updates, call stop() on the token.</p>
 
                       </div>
                       <div class="declaration">
@@ -1374,62 +1364,11 @@ main thread.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>A notification token which can later be passed to <code><a href="../Classes/Realm.html#/s:FC10RealmSwift5Realm18removeNotificationFCSo20RLMNotificationTokenT_">removeNotification(_:)</a></code> to remove this notification.</p>
+                        <p>A token which must be held for as long as you want notifications to be delivered.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Realm.swift#L462-L464">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:FC10RealmSwift5Realm18removeNotificationFCSo20RLMNotificationTokenT_"></a>
-                    <a name="//apple_ref/swift/Method/removeNotification(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC10RealmSwift5Realm18removeNotificationFCSo20RLMNotificationTokenT_">removeNotification(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Remove a previously registered notification handler using the token returned
-from <code><a href="../Classes/Realm.html#/s:FC10RealmSwift5Realm20addNotificationBlockFFT12notificationOS_12Notification5realmS0__T_CSo20RLMNotificationToken">addNotificationBlock(_:)</a></code></p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">removeNotification</span><span class="p">(</span><span class="nv">notificationToken</span><span class="p">:</span> <span class="kt">NotificationToken</span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>notificationToken</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The token returned from <code>addNotificationBlock(_:)</code> corresponding to the notification block to remove.</p>
-
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Realm.swift#L473-L475">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L473-L481">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1496,7 +1435,7 @@ objects will not work.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Realm.swift#L509-L516">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L514-L521">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1532,7 +1471,7 @@ data for this <code><a href="../Classes/Realm.html">Realm</a></code>.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Realm.swift#L525-L527">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L530-L532">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1590,7 +1529,7 @@ cannot be called on a read-only Realm.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Realm.swift#L551-L553">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L556-L558">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1609,9 +1548,9 @@ cannot be called on a read-only Realm.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC10RealmSwift5Realm15writeCopyToPathFzTSS13encryptionKeyGSqCSo6NSData__T_"></a>
-                    <a name="//apple_ref/swift/Method/writeCopyToPath(_:encryptionKey:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC10RealmSwift5Realm15writeCopyToPathFzTSS13encryptionKeyGSqCSo6NSData__T_">writeCopyToPath(_:encryptionKey:)</a>
+                    <a name="/s:FC10RealmSwift5Realm14writeCopyToURLFzTCSo5NSURL13encryptionKeyGSqCSo6NSData__T_"></a>
+                    <a name="//apple_ref/swift/Method/writeCopyToURL(_:encryptionKey:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC10RealmSwift5Realm14writeCopyToURLFzTCSo5NSURL13encryptionKeyGSqCSo6NSData__T_">writeCopyToURL(_:encryptionKey:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -1619,7 +1558,7 @@ cannot be called on a read-only Realm.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Write an encrypted and compacted copy of the Realm to the given path.</p>
+                        <p>Write an encrypted and compacted copy of the Realm to the given local URL.</p>
 
 <p>The destination file cannot already exist.</p>
 
@@ -1637,7 +1576,7 @@ cannot be called on a read-only Realm.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">writeCopyToPath</span><span class="p">(</span><span class="nv">path</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">encryptionKey</span><span class="p">:</span> <span class="kt">NSData</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">writeCopyToURL</span><span class="p">(</span><span class="nv">fileURL</span><span class="p">:</span> <span class="kt">NSURL</span><span class="p">,</span> <span class="nv">encryptionKey</span><span class="p">:</span> <span class="kt">NSData</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">throws</span></code></pre>
 
                         </div>
                       </div>
@@ -1648,12 +1587,12 @@ cannot be called on a read-only Realm.</p>
                             <tr>
                               <td>
                                 <code>
-                                <em>path</em>
+                                <em>fileURL</em>
                                 </code>
                               </td>
                               <td>
                                 <div>
-                                  <p>Path to save the Realm to.</p>
+                                  <p>Local URL to save the Realm to.</p>
 
                                 </div>
                               </td>
@@ -1675,7 +1614,7 @@ cannot be called on a read-only Realm.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Realm.swift#L570-L576">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L575-L577">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1718,7 +1657,7 @@ using rather than creating a new one each time you open a <code><a href="../Clas
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/RealmConfiguration.swift#L35-L175">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/RealmConfiguration.swift#L35-L191">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1752,7 +1691,7 @@ using rather than creating a new one each time you open a <code><a href="../Clas
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/RealmConfiguration.swift#L182-L186">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/RealmConfiguration.swift#L198-L202">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

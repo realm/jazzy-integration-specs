@@ -33,7 +33,7 @@
       <div class="content-wrapper">
         <p><a href="../index.html">RealmSwift Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F0%2E98%2E6%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F0%2E103%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -51,6 +51,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Classes/AnyRealmCollection.html">AnyRealmCollection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LinkingObjects.html">LinkingObjects</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/List.html">List</a>
@@ -93,6 +96,9 @@
               <li class="nav-group-task">
                 <a href="../Enums/Notification.html">Notification</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RealmCollectionChange.html">RealmCollectionChange</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -120,7 +126,7 @@
                 <a href="../Functions.html#/s:F10RealmSwift12migrateRealmFTVCS_5Realm13Configuration_GSqCSo7NSError_">migrateRealm(_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:F10RealmSwift19schemaVersionAtPathFTSS13encryptionKeyGSqCSo6NSData_5errorGVs33AutoreleasingUnsafeMutablePointerGSqCSo7NSError___GSqVs6UInt64_">schemaVersionAtPath(_:encryptionKey:error:)</a>
+                <a href="../Functions.html#/s:F10RealmSwift18schemaVersionAtURLFzTCSo5NSURL13encryptionKeyGSqCSo6NSData__Vs6UInt64">schemaVersionAtURL(_:encryptionKey:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Functions.html#/s:ZF10RealmSwiftoi2teFTOS_5ErrorPs9ErrorType__Sb">~=(_:_:)</a>
@@ -228,7 +234,7 @@ do {
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Error.swift#L69">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Error.swift#L73">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -262,7 +268,7 @@ do {
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Error.swift#L72">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Error.swift#L76">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -297,7 +303,7 @@ the specified file in the specified access mode when the realm is opened.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Error.swift#L76">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Error.swift#L80">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -331,7 +337,7 @@ the specified file in the specified access mode when the realm is opened.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Error.swift#L79">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Error.swift#L83">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -367,7 +373,7 @@ when a copy should be written.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Error.swift#L84">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Error.swift#L88">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -402,7 +408,7 @@ cannot share with the current process due to an architecture mismatch.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Error.swift#L88">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Error.swift#L92">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -424,8 +430,8 @@ cannot share with the current process due to an architecture mismatch.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returned by RLMRealm if a file format upgrade is required to open the file,
-but upgrades were explicilty disabled.</p>
+                        <p>Error thrown by Realm if a file format upgrade is required to open the file,
+but upgrades were explicitly disabled.</p>
 
                       </div>
                       <div class="declaration">
@@ -437,7 +443,75 @@ but upgrades were explicilty disabled.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Error.swift#L92">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Error.swift#L96">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO10RealmSwift5Error21AddressSpaceExhaustedFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/AddressSpaceExhausted" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO10RealmSwift5Error21AddressSpaceExhaustedFMS0_S0_">AddressSpaceExhausted</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Error thrown by Realm if there is insufficient available address space.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">AddressSpaceExhausted</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Error.swift#L99">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FO10RealmSwift5Error14SchemaMismatchFMS0_S0_"></a>
+                    <a name="//apple_ref/swift/Element/SchemaMismatch" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FO10RealmSwift5Error14SchemaMismatchFMS0_S0_">SchemaMismatch</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Error thrown by Realm if there is a schema version mismatch, so that a migration is required.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">case</span> <span class="kt">SchemaMismatch</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Error.swift#L102">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

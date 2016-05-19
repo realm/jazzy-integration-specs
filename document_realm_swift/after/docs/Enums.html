@@ -32,7 +32,7 @@
       <div class="content-wrapper">
         <p><a href="index.html">RealmSwift Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F0%2E98%2E6%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F0%2E103%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -50,6 +50,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Classes/AnyRealmCollection.html">AnyRealmCollection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/LinkingObjects.html">LinkingObjects</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/List.html">List</a>
@@ -92,6 +95,9 @@
               <li class="nav-group-task">
                 <a href="Enums/Notification.html">Notification</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Enums/RealmCollectionChange.html">RealmCollectionChange</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -119,7 +125,7 @@
                 <a href="Functions.html#/s:F10RealmSwift12migrateRealmFTVCS_5Realm13Configuration_GSqCSo7NSError_">migrateRealm(_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:F10RealmSwift19schemaVersionAtPathFTSS13encryptionKeyGSqCSo6NSData_5errorGVs33AutoreleasingUnsafeMutablePointerGSqCSo7NSError___GSqVs6UInt64_">schemaVersionAtPath(_:encryptionKey:error:)</a>
+                <a href="Functions.html#/s:F10RealmSwift18schemaVersionAtURLFzTCSo5NSURL13encryptionKeyGSqCSo6NSData__Vs6UInt64">schemaVersionAtURL(_:encryptionKey:)</a>
               </li>
               <li class="nav-group-task">
                 <a href="Functions.html#/s:ZF10RealmSwiftoi2teFTOS_5ErrorPs9ErrorType__Sb">~=(_:_:)</a>
@@ -222,7 +228,7 @@ do {
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Error.swift#L35-L93">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Error.swift#L35-L103">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -264,7 +270,73 @@ do {
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.98.6/RealmSwift-swift2.0/Realm.swift#L598-L619">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L600-L621">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:O10RealmSwift21RealmCollectionChange"></a>
+                    <a name="//apple_ref/swift/Enum/RealmCollectionChange" class="dashAnchor"></a>
+                    <a class="token" href="#/s:O10RealmSwift21RealmCollectionChange">RealmCollectionChange</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>RealmCollectionChange is passed to the notification blocks for Realm
+collections, and reports the current state of the collection and what changes
+were made to the collection since the last time the notification was called.</p>
+
+<p>The arrays of indices in the .Update case follow UITableView&rsquo;s batching
+conventions, and can be passed as-is to a table view&rsquo;s batch update functions
+after converting to index paths in the appropriate section. For example, for a
+simple one-section table view, you can do the following:</p>
+
+<p>self.notificationToken = results.addNotificationBlock { changes
+       switch changes {
+       case .Initial:
+           // Results are now populated and can be accessed without blocking the UI
+           self.tableView.reloadData()
+           break
+       case .Update(_, let deletions, let insertions, let modifications):
+           // Query results have changed, so apply them to the TableView
+           self.tableView.beginUpdates()
+           self.tableView.insertRowsAtIndexPaths(insertions.map { NSIndexPath(forRow: $0, inSection: 0) },
+               withRowAnimation: .Automatic)
+           self.tableView.deleteRowsAtIndexPaths(deletions.map { NSIndexPath(forRow: $0, inSection: 0) },
+               withRowAnimation: .Automatic)
+           self.tableView.reloadRowsAtIndexPaths(modifications.map { NSIndexPath(forRow: $0, inSection: 0) },
+               withRowAnimation: .Automatic)
+           self.tableView.endUpdates()
+           break
+       case .Error(let err):
+           // An error occurred while opening the Realm file on the background worker thread
+           fatalError(<q>\(err)</q>)
+           break
+       }
+   }</p>
+
+                        <a href="Enums/RealmCollectionChange.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">RealmCollectionChange</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/RealmCollectionType.swift#L77-L114">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
