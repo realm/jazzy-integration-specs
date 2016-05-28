@@ -1,0 +1,1 @@
+> Example header abstract content injection
