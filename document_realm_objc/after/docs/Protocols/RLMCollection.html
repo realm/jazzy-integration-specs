@@ -204,7 +204,7 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="err">@required</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSUInteger</span> <span class="n">count</span><span class="p">;</span></code></pre>
+<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSUInteger</span> <span class="n"><a href="../Protocols/RLMCollection.html#/c:objc(pl)RLMCollection(py)count">count</a></span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -240,7 +240,7 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="err">@required</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">objectClassName</span><span class="p">;</span></code></pre>
+<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n"><a href="../Protocols/RLMCollection.html#/c:objc(pl)RLMCollection(py)objectClassName">objectClassName</a></span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -276,12 +276,12 @@
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="err">@required</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">RLMRealm</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">realm</span><span class="p">;</span></code></pre>
+<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Classes/RLMRealm.html">RLMRealm</a></span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n"><a href="../Protocols/RLMCollection.html#/c:objc(pl)RLMCollection(py)realm">realm</a></span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">realm</span><span class="p">:</span> <span class="kt">RLMRealm</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">realm</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMRealm.html">RLMRealm</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -479,12 +479,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nf">indexOfObject</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">RLMObject</span> <span class="o">*</span><span class="p">)</span><span class="nv">object</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">NSUInteger</span><span class="p">)</span><span class="nf">indexOfObject</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/RLMObject.html">RLMObject</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">object</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">indexOfObject</span><span class="p">(</span><span class="nv">object</span><span class="p">:</span> <span class="kt">RLMObject</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UInt</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">indexOfObject</span><span class="p">(</span><span class="nv">object</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMObject.html">RLMObject</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UInt</span></code></pre>
 
                         </div>
                       </div>
@@ -649,7 +649,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">RLMResults</span> <span class="o">*</span><span class="p">)</span><span class="nf">objectsWhere</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">predicateFormat</span><span class="p">,</span> <span class="p">...;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/RLMResults.html">RLMResults</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">objectsWhere</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">predicateFormat</span><span class="p">,</span> <span class="p">...;</span></code></pre>
 
                         </div>
                       </div>
@@ -704,12 +704,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">RLMResults</span> <span class="o">*</span><span class="p">)</span><span class="nf">objectsWithPredicate</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSPredicate</span> <span class="o">*</span><span class="p">)</span><span class="nv">predicate</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/RLMResults.html">RLMResults</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">objectsWithPredicate</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSPredicate</span> <span class="o">*</span><span class="p">)</span><span class="nv">predicate</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">objectsWithPredicate</span><span class="p">(</span><span class="nv">predicate</span><span class="p">:</span> <span class="kt">NSPredicate</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">RLMResults</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">objectsWithPredicate</span><span class="p">(</span><span class="nv">predicate</span><span class="p">:</span> <span class="kt">NSPredicate</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RLMResults.html">RLMResults</a></span></code></pre>
 
                         </div>
                       </div>
@@ -764,13 +764,13 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">RLMResults</span> <span class="o">*</span><span class="p">)</span><span class="nf">sortedResultsUsingProperty</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">property</span>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/RLMResults.html">RLMResults</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">sortedResultsUsingProperty</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">property</span>
                                          <span class="nf">ascending</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">ascending</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">sortedResultsUsingProperty</span><span class="p">(</span><span class="nv">property</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="k">as</span><span class="nv">cending</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">RLMResults</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">sortedResultsUsingProperty</span><span class="p">(</span><span class="nv">property</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="k">as</span><span class="nv">cending</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RLMResults.html">RLMResults</a></span></code></pre>
 
                         </div>
                       </div>
@@ -838,13 +838,13 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">RLMResults</span> <span class="o">*</span><span class="p">)</span><span class="nf">sortedResultsUsingDescriptors</span><span class="p">:</span>
-    <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">RLMSortDescriptor</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">properties</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/RLMResults.html">RLMResults</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">sortedResultsUsingDescriptors</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/RLMSortDescriptor.html">RLMSortDescriptor</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">properties</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">sortedResultsUsingDescriptors</span><span class="p">(</span><span class="nv">properties</span><span class="p">:</span> <span class="p">[</span><span class="kt">RLMSortDescriptor</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">RLMResults</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">sortedResultsUsingDescriptors</span><span class="p">(</span><span class="nv">properties</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/RLMSortDescriptor.html">RLMSortDescriptor</a></span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RLMResults.html">RLMResults</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1100,14 +1100,14 @@ to be sent to the block. To stop receiving updates, call <code>-stop</code> on t
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">RLMNotificationToken</span> <span class="o">*</span><span class="p">)</span><span class="nf">addNotificationBlock</span><span class="p">:</span>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/RLMNotificationToken.html">RLMNotificationToken</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">addNotificationBlock</span><span class="p">:</span>
     <span class="p">(</span><span class="n">nonnull</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">id</span><span class="o">&lt;</span><span class="n">RLMCollection</span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">,</span>
-                      <span class="n">RLMCollectionChange</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">))</span><span class="n">block</span><span class="p">;</span></code></pre>
+                      <span class="n"><a href="../Classes/RLMCollectionChange.html">RLMCollectionChange</a></span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">))</span><span class="n">block</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@warn_unused_result</span> <span class="kd">func</span> <span class="nf">addNotificationBlock</span><span class="p">(</span><span class="nv">block</span><span class="p">:</span> <span class="p">(</span><span class="kt">RLMCollection</span><span class="p">?,</span> <span class="kt">RLMCollectionChange</span><span class="p">?,</span> <span class="kt">NSError</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">RLMNotificationToken</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">@warn_unused_result</span> <span class="kd">func</span> <span class="nf">addNotificationBlock</span><span class="p">(</span><span class="nv">block</span><span class="p">:</span> <span class="p">(</span><span class="kt">RLMCollection</span><span class="p">?,</span> <span class="kt"><a href="../Classes/RLMCollectionChange.html">RLMCollectionChange</a></span><span class="p">?,</span> <span class="kt">NSError</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RLMNotificationToken.html">RLMNotificationToken</a></span></code></pre>
 
                         </div>
                       </div>

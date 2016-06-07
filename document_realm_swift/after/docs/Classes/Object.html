@@ -295,7 +295,7 @@ method on <code><a href="../Classes/Realm.html">Realm</a></code>.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Initialize a standalone (unpersisted) <code><a href="../Classes/Object.html">Object</a></code>.
+                        <p>Initialize a standalone (unpersisted) <code>Object</code>.
 Call <code>add(_:)</code> on a <code><a href="../Classes/Realm.html">Realm</a></code> to add standalone objects to a realm.</p>
 
 <div class="aside aside-see">
@@ -332,7 +332,7 @@ Call <code>add(_:)</code> on a <code><a href="../Classes/Realm.html">Realm</a></
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Initialize a standalone (unpersisted) <code><a href="../Classes/Object.html">Object</a></code> with values from an <code>Array&lt;AnyObject&gt;</code> or
+                        <p>Initialize a standalone (unpersisted) <code>Object</code> with values from an <code>Array&lt;AnyObject&gt;</code> or
 <code>Dictionary&lt;String, AnyObject&gt;</code>.
 Call <code>add(_:)</code> on a <code><a href="../Classes/Realm.html">Realm</a></code> to add standalone objects to a realm.</p>
 
@@ -403,7 +403,7 @@ does not belong to a realm (the object is standalone).</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">realm</span><span class="p">:</span> <span class="kt">Realm</span><span class="p">?</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">realm</span><span class="p">:</span> <span class="kt"><a href="../Classes/Realm.html">Realm</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -433,7 +433,7 @@ does not belong to a realm (the object is standalone).</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">objectSchema</span><span class="p">:</span> <span class="kt">ObjectSchema</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">objectSchema</span><span class="p">:</span> <span class="kt"><a href="../Classes/ObjectSchema.html">ObjectSchema</a></span></code></pre>
 
                         </div>
                       </div>
@@ -466,7 +466,7 @@ does not belong to a realm (the object is standalone).</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">override</span> <span class="k">var</span> <span class="nv">invalidated</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">return</span> <span class="k">super</span><span class="o">.</span><span class="n">invalidated</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">override</span> <span class="k">var</span> <span class="nv">invalidated</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">return</span> <span class="k">super</span><span class="o">.</span><span class="n"><a href="../Classes/Object.html#/s:vC10RealmSwift6Object11invalidatedSb">invalidated</a></span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -496,7 +496,7 @@ does not belong to a realm (the object is standalone).</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">override</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">return</span> <span class="k">super</span><span class="o">.</span><span class="n">description</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">override</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">return</span> <span class="k">super</span><span class="o">.</span><span class="n"><a href="../Classes/Object.html#/s:vC10RealmSwift6Object11descriptionSS">description</a></span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -587,7 +587,7 @@ does not belong to a realm (the object is standalone).</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Override to designate a property as the primary key for an <code><a href="../Classes/Object.html">Object</a></code> subclass. Only properties of
+                        <p>Override to designate a property as the primary key for an <code>Object</code> subclass. Only properties of
 type String and Int can be designated as the primary key. Primary key
 properties enforce uniqueness for each value whenever the property is set which incurs some overhead.
 Indexes are created automatically for primary key properties.</p>

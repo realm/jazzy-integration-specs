@@ -231,7 +231,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A shared instance of <code><a href="../Classes/Manager.html">Manager</a></code>, used by top-level Alamofire request methods, and suitable for use directly 
+                        <p>A shared instance of <code>Manager</code>, used by top-level Alamofire request methods, and suitable for use directly 
 for any ad hoc requests.</p>
 
                       </div>
@@ -329,7 +329,7 @@ for any ad hoc requests.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt">SessionDelegate</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Classes/Manager/SessionDelegate.html">SessionDelegate</a></span></code></pre>
 
                         </div>
                       </div>
@@ -431,7 +431,7 @@ SessionDelegate <code>sessionDidFinishEventsForBackgroundURLSession</code> and m
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Initializes the <code><a href="../Classes/Manager.html">Manager</a></code> instance with the specified configuration, delegate and server trust policy.</p>
+                        <p>Initializes the <code>Manager</code> instance with the specified configuration, delegate and server trust policy.</p>
 
                       </div>
                       <div class="declaration">
@@ -440,8 +440,8 @@ SessionDelegate <code>sessionDidFinishEventsForBackgroundURLSession</code> and m
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span>
         <span class="nv">configuration</span><span class="p">:</span> <span class="kt">NSURLSessionConfiguration</span> <span class="o">=</span> <span class="kt">NSURLSessionConfiguration</span><span class="o">.</span><span class="nf">defaultSessionConfiguration</span><span class="p">(),</span>
-        <span class="nv">delegate</span><span class="p">:</span> <span class="kt">SessionDelegate</span> <span class="o">=</span> <span class="kt">SessionDelegate</span><span class="p">(),</span>
-        <span class="nv">serverTrustPolicyManager</span><span class="p">:</span> <span class="kt">ServerTrustPolicyManager</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+        <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Classes/Manager/SessionDelegate.html">SessionDelegate</a></span> <span class="o">=</span> <span class="kt"><a href="../Classes/Manager/SessionDelegate.html">SessionDelegate</a></span><span class="p">(),</span>
+        <span class="nv">serverTrustPolicyManager</span><span class="p">:</span> <span class="kt"><a href="../Classes/ServerTrustPolicyManager.html">ServerTrustPolicyManager</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -493,7 +493,7 @@ SessionDelegate <code>sessionDidFinishEventsForBackgroundURLSession</code> and m
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The new <code><a href="../Classes/Manager.html">Manager</a></code> instance.</p>
+                        <p>The new <code>Manager</code> instance.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -515,7 +515,7 @@ SessionDelegate <code>sessionDidFinishEventsForBackgroundURLSession</code> and m
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Initializes the <code><a href="../Classes/Manager.html">Manager</a></code> instance with the specified session, delegate and server trust policy.</p>
+                        <p>Initializes the <code>Manager</code> instance with the specified session, delegate and server trust policy.</p>
 
                       </div>
                       <div class="declaration">
@@ -524,8 +524,8 @@ SessionDelegate <code>sessionDidFinishEventsForBackgroundURLSession</code> and m
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">?(</span>
         <span class="nv">session</span><span class="p">:</span> <span class="kt">NSURLSession</span><span class="p">,</span>
-        <span class="nv">delegate</span><span class="p">:</span> <span class="kt">SessionDelegate</span><span class="p">,</span>
-        <span class="nv">serverTrustPolicyManager</span><span class="p">:</span> <span class="kt">ServerTrustPolicyManager</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+        <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Classes/Manager/SessionDelegate.html">SessionDelegate</a></span><span class="p">,</span>
+        <span class="nv">serverTrustPolicyManager</span><span class="p">:</span> <span class="kt"><a href="../Classes/ServerTrustPolicyManager.html">ServerTrustPolicyManager</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -577,7 +577,7 @@ SessionDelegate <code>sessionDidFinishEventsForBackgroundURLSession</code> and m
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The new <code><a href="../Classes/Manager.html">Manager</a></code> instance if the URL session&rsquo;s delegate matches the delegate parameter.</p>
+                        <p>The new <code>Manager</code> instance if the URL session&rsquo;s delegate matches the delegate parameter.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -618,12 +618,12 @@ SessionDelegate <code>sessionDidFinishEventsForBackgroundURLSession</code> and m
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">request</span><span class="p">(</span>
-        <span class="nv">method</span><span class="p">:</span> <span class="kt">Method</span><span class="p">,</span>
-        <span class="n">_</span> <span class="kt">URLString</span><span class="p">:</span> <span class="kt">URLStringConvertible</span><span class="p">,</span>
+        <span class="nv">method</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/s:O9Alamofire6Method">Method</a></span><span class="p">,</span>
+        <span class="n">_</span> <span class="kt">URLString</span><span class="p">:</span> <span class="kt"><a href="../Protocols/URLStringConvertible.html">URLStringConvertible</a></span><span class="p">,</span>
         <span class="nv">parameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-        <span class="nv">encoding</span><span class="p">:</span> <span class="kt">ParameterEncoding</span> <span class="o">=</span> <span class="o">.</span><span class="kt">URL</span><span class="p">,</span>
+        <span class="nv">encoding</span><span class="p">:</span> <span class="kt"><a href="../Enums/ParameterEncoding.html">ParameterEncoding</a></span> <span class="o">=</span> <span class="o">.</span><span class="kt">URL</span><span class="p">,</span>
         <span class="nv">headers</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span>
-        <span class="o">-&gt;</span> <span class="kt">Request</span></code></pre>
+        <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Request.html">Request</a></span></code></pre>
 
                         </div>
                       </div>
@@ -732,7 +732,7 @@ SessionDelegate <code>sessionDidFinishEventsForBackgroundURLSession</code> and m
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">request</span><span class="p">(</span><span class="kt">URLRequest</span><span class="p">:</span> <span class="kt">URLRequestConvertible</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Request</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">request</span><span class="p">(</span><span class="kt">URLRequest</span><span class="p">:</span> <span class="kt"><a href="../Protocols/URLRequestConvertible.html">URLRequestConvertible</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Request.html">Request</a></span></code></pre>
 
                         </div>
                       </div>
@@ -842,7 +842,7 @@ SessionDelegate <code>sessionDidFinishEventsForBackgroundURLSession</code> and m
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">upload</span><span class="p">(</span><span class="kt">URLRequest</span><span class="p">:</span> <span class="kt">URLRequestConvertible</span><span class="p">,</span> <span class="nv">file</span><span class="p">:</span> <span class="kt">NSURL</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Request</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">upload</span><span class="p">(</span><span class="kt">URLRequest</span><span class="p">:</span> <span class="kt"><a href="../Protocols/URLRequestConvertible.html">URLRequestConvertible</a></span><span class="p">,</span> <span class="nv">file</span><span class="p">:</span> <span class="kt">NSURL</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Request.html">Request</a></span></code></pre>
 
                         </div>
                       </div>
@@ -913,11 +913,11 @@ SessionDelegate <code>sessionDidFinishEventsForBackgroundURLSession</code> and m
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">upload</span><span class="p">(</span>
-        <span class="nv">method</span><span class="p">:</span> <span class="kt">Method</span><span class="p">,</span>
-        <span class="n">_</span> <span class="kt">URLString</span><span class="p">:</span> <span class="kt">URLStringConvertible</span><span class="p">,</span>
+        <span class="nv">method</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/s:O9Alamofire6Method">Method</a></span><span class="p">,</span>
+        <span class="n">_</span> <span class="kt">URLString</span><span class="p">:</span> <span class="kt"><a href="../Protocols/URLStringConvertible.html">URLStringConvertible</a></span><span class="p">,</span>
         <span class="nv">headers</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
         <span class="nv">file</span><span class="p">:</span> <span class="kt">NSURL</span><span class="p">)</span>
-        <span class="o">-&gt;</span> <span class="kt">Request</span></code></pre>
+        <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Request.html">Request</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1024,7 +1024,7 @@ SessionDelegate <code>sessionDidFinishEventsForBackgroundURLSession</code> and m
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">upload</span><span class="p">(</span><span class="kt">URLRequest</span><span class="p">:</span> <span class="kt">URLRequestConvertible</span><span class="p">,</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">NSData</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Request</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">upload</span><span class="p">(</span><span class="kt">URLRequest</span><span class="p">:</span> <span class="kt"><a href="../Protocols/URLRequestConvertible.html">URLRequestConvertible</a></span><span class="p">,</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">NSData</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Request.html">Request</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1095,11 +1095,11 @@ SessionDelegate <code>sessionDidFinishEventsForBackgroundURLSession</code> and m
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">upload</span><span class="p">(</span>
-        <span class="nv">method</span><span class="p">:</span> <span class="kt">Method</span><span class="p">,</span>
-        <span class="n">_</span> <span class="kt">URLString</span><span class="p">:</span> <span class="kt">URLStringConvertible</span><span class="p">,</span>
+        <span class="nv">method</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/s:O9Alamofire6Method">Method</a></span><span class="p">,</span>
+        <span class="n">_</span> <span class="kt">URLString</span><span class="p">:</span> <span class="kt"><a href="../Protocols/URLStringConvertible.html">URLStringConvertible</a></span><span class="p">,</span>
         <span class="nv">headers</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
         <span class="nv">data</span><span class="p">:</span> <span class="kt">NSData</span><span class="p">)</span>
-        <span class="o">-&gt;</span> <span class="kt">Request</span></code></pre>
+        <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Request.html">Request</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1206,7 +1206,7 @@ SessionDelegate <code>sessionDidFinishEventsForBackgroundURLSession</code> and m
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">upload</span><span class="p">(</span><span class="kt">URLRequest</span><span class="p">:</span> <span class="kt">URLRequestConvertible</span><span class="p">,</span> <span class="nv">stream</span><span class="p">:</span> <span class="kt">NSInputStream</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Request</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">upload</span><span class="p">(</span><span class="kt">URLRequest</span><span class="p">:</span> <span class="kt"><a href="../Protocols/URLRequestConvertible.html">URLRequestConvertible</a></span><span class="p">,</span> <span class="nv">stream</span><span class="p">:</span> <span class="kt">NSInputStream</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Request.html">Request</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1277,11 +1277,11 @@ SessionDelegate <code>sessionDidFinishEventsForBackgroundURLSession</code> and m
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">upload</span><span class="p">(</span>
-        <span class="nv">method</span><span class="p">:</span> <span class="kt">Method</span><span class="p">,</span>
-        <span class="n">_</span> <span class="kt">URLString</span><span class="p">:</span> <span class="kt">URLStringConvertible</span><span class="p">,</span>
+        <span class="nv">method</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/s:O9Alamofire6Method">Method</a></span><span class="p">,</span>
+        <span class="n">_</span> <span class="kt">URLString</span><span class="p">:</span> <span class="kt"><a href="../Protocols/URLStringConvertible.html">URLStringConvertible</a></span><span class="p">,</span>
         <span class="nv">headers</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
         <span class="nv">stream</span><span class="p">:</span> <span class="kt">NSInputStream</span><span class="p">)</span>
-        <span class="o">-&gt;</span> <span class="kt">Request</span></code></pre>
+        <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Request.html">Request</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1424,7 +1424,7 @@ associated values.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">MultipartFormDataEncodingResult</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt"><a href="../Classes/Manager.html#/s:OC9Alamofire7Manager31MultipartFormDataEncodingResult">MultipartFormDataEncodingResult</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1470,12 +1470,12 @@ technique was used.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">upload</span><span class="p">(</span>
-        <span class="nv">method</span><span class="p">:</span> <span class="kt">Method</span><span class="p">,</span>
-        <span class="n">_</span> <span class="kt">URLString</span><span class="p">:</span> <span class="kt">URLStringConvertible</span><span class="p">,</span>
+        <span class="nv">method</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/s:O9Alamofire6Method">Method</a></span><span class="p">,</span>
+        <span class="n">_</span> <span class="kt">URLString</span><span class="p">:</span> <span class="kt"><a href="../Protocols/URLStringConvertible.html">URLStringConvertible</a></span><span class="p">,</span>
         <span class="nv">headers</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-        <span class="nv">multipartFormData</span><span class="p">:</span> <span class="kt">MultipartFormData</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">,</span>
-        <span class="nv">encodingMemoryThreshold</span><span class="p">:</span> <span class="kt">UInt64</span> <span class="o">=</span> <span class="kt">Manager</span><span class="o">.</span><span class="kt">MultipartFormDataEncodingMemoryThreshold</span><span class="p">,</span>
-        <span class="nv">encodingCompletion</span><span class="p">:</span> <span class="p">(</span><span class="kt">MultipartFormDataEncodingResult</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+        <span class="nv">multipartFormData</span><span class="p">:</span> <span class="kt"><a href="../Classes/MultipartFormData.html">MultipartFormData</a></span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">,</span>
+        <span class="nv">encodingMemoryThreshold</span><span class="p">:</span> <span class="kt">UInt64</span> <span class="o">=</span> <span class="kt">Manager</span><span class="o">.</span><span class="kt"><a href="../Classes/Manager.html#/s:ZvC9Alamofire7Manager40MultipartFormDataEncodingMemoryThresholdVs6UInt64">MultipartFormDataEncodingMemoryThreshold</a></span><span class="p">,</span>
+        <span class="nv">encodingCompletion</span><span class="p">:</span> <span class="p">(</span><span class="kt"><a href="../Classes/Manager.html#/s:OC9Alamofire7Manager31MultipartFormDataEncodingResult">MultipartFormDataEncodingResult</a></span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
 
                         </div>
                       </div>
@@ -1606,10 +1606,10 @@ technique was used.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">upload</span><span class="p">(</span>
-        <span class="kt">URLRequest</span><span class="p">:</span> <span class="kt">URLRequestConvertible</span><span class="p">,</span>
-        <span class="nv">multipartFormData</span><span class="p">:</span> <span class="kt">MultipartFormData</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">,</span>
-        <span class="nv">encodingMemoryThreshold</span><span class="p">:</span> <span class="kt">UInt64</span> <span class="o">=</span> <span class="kt">Manager</span><span class="o">.</span><span class="kt">MultipartFormDataEncodingMemoryThreshold</span><span class="p">,</span>
-        <span class="nv">encodingCompletion</span><span class="p">:</span> <span class="p">(</span><span class="kt">MultipartFormDataEncodingResult</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+        <span class="kt">URLRequest</span><span class="p">:</span> <span class="kt"><a href="../Protocols/URLRequestConvertible.html">URLRequestConvertible</a></span><span class="p">,</span>
+        <span class="nv">multipartFormData</span><span class="p">:</span> <span class="kt"><a href="../Classes/MultipartFormData.html">MultipartFormData</a></span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">,</span>
+        <span class="nv">encodingMemoryThreshold</span><span class="p">:</span> <span class="kt">UInt64</span> <span class="o">=</span> <span class="kt">Manager</span><span class="o">.</span><span class="kt"><a href="../Classes/Manager.html#/s:ZvC9Alamofire7Manager40MultipartFormDataEncodingMemoryThresholdVs6UInt64">MultipartFormDataEncodingMemoryThreshold</a></span><span class="p">,</span>
+        <span class="nv">encodingCompletion</span><span class="p">:</span> <span class="p">(</span><span class="kt"><a href="../Classes/Manager.html#/s:OC9Alamofire7Manager31MultipartFormDataEncodingResult">MultipartFormDataEncodingResult</a></span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
 
                         </div>
                       </div>
@@ -1704,7 +1704,7 @@ technique was used.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">stream</span><span class="p">(</span><span class="n">hostName</span> <span class="nv">hostName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">port</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Request</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">stream</span><span class="p">(</span><span class="n">hostName</span> <span class="nv">hostName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">port</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Request.html">Request</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1767,7 +1767,7 @@ technique was used.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">stream</span><span class="p">(</span><span class="n">netService</span> <span class="nv">netService</span><span class="p">:</span> <span class="kt">NSNetService</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Request</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">stream</span><span class="p">(</span><span class="n">netService</span> <span class="nv">netService</span><span class="p">:</span> <span class="kt">NSNetService</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Request.html">Request</a></span></code></pre>
 
                         </div>
                       </div>
@@ -2261,13 +2261,13 @@ and destination.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">download</span><span class="p">(</span>
-        <span class="nv">method</span><span class="p">:</span> <span class="kt">Method</span><span class="p">,</span>
-        <span class="n">_</span> <span class="kt">URLString</span><span class="p">:</span> <span class="kt">URLStringConvertible</span><span class="p">,</span>
+        <span class="nv">method</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/s:O9Alamofire6Method">Method</a></span><span class="p">,</span>
+        <span class="n">_</span> <span class="kt">URLString</span><span class="p">:</span> <span class="kt"><a href="../Protocols/URLStringConvertible.html">URLStringConvertible</a></span><span class="p">,</span>
         <span class="nv">parameters</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-        <span class="nv">encoding</span><span class="p">:</span> <span class="kt">ParameterEncoding</span> <span class="o">=</span> <span class="o">.</span><span class="kt">URL</span><span class="p">,</span>
+        <span class="nv">encoding</span><span class="p">:</span> <span class="kt"><a href="../Enums/ParameterEncoding.html">ParameterEncoding</a></span> <span class="o">=</span> <span class="o">.</span><span class="kt">URL</span><span class="p">,</span>
         <span class="nv">headers</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-        <span class="nv">destination</span><span class="p">:</span> <span class="kt">Request</span><span class="o">.</span><span class="kt">DownloadFileDestination</span><span class="p">)</span>
-        <span class="o">-&gt;</span> <span class="kt">Request</span></code></pre>
+        <span class="nv">destination</span><span class="p">:</span> <span class="kt"><a href="../Classes/Request.html">Request</a></span><span class="o">.</span><span class="kt"><a href="../Typealiases.html#/s:C9Alamofire7Request23DownloadFileDestination">DownloadFileDestination</a></span><span class="p">)</span>
+        <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Request.html">Request</a></span></code></pre>
 
                         </div>
                       </div>
@@ -2389,7 +2389,7 @@ and destination.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">download</span><span class="p">(</span><span class="kt">URLRequest</span><span class="p">:</span> <span class="kt">URLRequestConvertible</span><span class="p">,</span> <span class="nv">destination</span><span class="p">:</span> <span class="kt">Request</span><span class="o">.</span><span class="kt">DownloadFileDestination</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Request</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">download</span><span class="p">(</span><span class="kt">URLRequest</span><span class="p">:</span> <span class="kt"><a href="../Protocols/URLRequestConvertible.html">URLRequestConvertible</a></span><span class="p">,</span> <span class="nv">destination</span><span class="p">:</span> <span class="kt"><a href="../Classes/Request.html">Request</a></span><span class="o">.</span><span class="kt"><a href="../Typealiases.html#/s:C9Alamofire7Request23DownloadFileDestination">DownloadFileDestination</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Request.html">Request</a></span></code></pre>
 
                         </div>
                       </div>
@@ -2470,7 +2470,7 @@ and destination.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">download</span><span class="p">(</span><span class="nv">resumeData</span><span class="p">:</span> <span class="kt">NSData</span><span class="p">,</span> <span class="nv">destination</span><span class="p">:</span> <span class="kt">Request</span><span class="o">.</span><span class="kt">DownloadFileDestination</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Request</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">download</span><span class="p">(</span><span class="nv">resumeData</span><span class="p">:</span> <span class="kt">NSData</span><span class="p">,</span> <span class="nv">destination</span><span class="p">:</span> <span class="kt"><a href="../Classes/Request.html">Request</a></span><span class="o">.</span><span class="kt"><a href="../Typealiases.html#/s:C9Alamofire7Request23DownloadFileDestination">DownloadFileDestination</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Request.html">Request</a></span></code></pre>
 
                         </div>
                       </div>

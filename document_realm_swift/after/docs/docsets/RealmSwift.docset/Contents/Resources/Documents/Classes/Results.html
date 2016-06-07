@@ -192,7 +192,7 @@
             <h1>Results</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Results</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt">Object</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">ResultsBase</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Results</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt"><a href="../Classes/Object.html">Object</a></span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">ResultsBase</span></code></pre>
 
                 </div>
               </div>
@@ -305,7 +305,7 @@ up-to-date done on a background thread whenever possible.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Element</span> <span class="o">=</span> <span class="kt">T</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt"><a href="../Classes/Results.html#/s:C10RealmSwift7Results7Element">Element</a></span> <span class="o">=</span> <span class="kt">T</span></code></pre>
 
                         </div>
                       </div>
@@ -330,7 +330,7 @@ up-to-date done on a background thread whenever possible.</p>
                       <div class="abstract">
                         <p>Returns the Realm these results are associated with.
 Despite returning an <code>Optional&lt;Realm&gt;</code> in order to conform to
-<code><a href="../Protocols/RealmCollectionType.html">RealmCollectionType</a></code>, it will always return <code>.Some()</code> since a <code><a href="../Classes/Results.html">Results</a></code>
+<code><a href="../Protocols/RealmCollectionType.html">RealmCollectionType</a></code>, it will always return <code>.Some()</code> since a <code>Results</code>
 cannot exist independently from a <code><a href="../Classes/Realm.html">Realm</a></code>.</p>
 
                       </div>
@@ -338,7 +338,7 @@ cannot exist independently from a <code><a href="../Classes/Realm.html">Realm</a
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">realm</span><span class="p">:</span> <span class="kt">Realm</span><span class="p">?</span> <span class="p">{</span> <span class="k">return</span> <span class="kt">Realm</span><span class="p">(</span><span class="n">rlmResults</span><span class="o">.</span><span class="n">realm</span><span class="p">)</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">realm</span><span class="p">:</span> <span class="kt"><a href="../Classes/Realm.html">Realm</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">return</span> <span class="kt"><a href="../Classes/Realm.html">Realm</a></span><span class="p">(</span><span class="n">rlmResults</span><span class="o">.</span><span class="n"><a href="../Classes/Results.html#/s:vC10RealmSwift7Results5realmGSqCS_5Realm_">realm</a></span><span class="p">)</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -370,7 +370,7 @@ cannot exist independently from a <code><a href="../Classes/Realm.html">Realm</a
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">invalidated</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">return</span> <span class="n">rlmResults</span><span class="o">.</span><span class="n">invalidated</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">invalidated</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">return</span> <span class="n">rlmResults</span><span class="o">.</span><span class="n"><a href="../Classes/Results.html#/s:vC10RealmSwift7Results11invalidatedSb">invalidated</a></span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -400,7 +400,7 @@ cannot exist independently from a <code><a href="../Classes/Realm.html">Realm</a
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">count</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">return</span> <span class="kt">Int</span><span class="p">(</span><span class="n">rlmResults</span><span class="o">.</span><span class="n">count</span><span class="p">)</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">count</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">return</span> <span class="kt">Int</span><span class="p">(</span><span class="n">rlmResults</span><span class="o">.</span><span class="n"><a href="../Classes/Results.html#/s:vC10RealmSwift7Results5countSi">count</a></span><span class="p">)</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -683,7 +683,7 @@ or <code>nil</code> if no objects match.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns an Array containing the results of invoking <code>valueForKey(_:)</code> using key on each of the collection&rsquo;s objects.</p>
+                        <p>Returns an Array containing the results of invoking <code><a href="../Classes/Results.html#/s:FC10RealmSwift7Results11valueForKeyFSSGSqPs9AnyObject__">valueForKey(_:)</a></code> using key on each of the collection&rsquo;s objects.</p>
 
                       </div>
                       <div class="declaration">
@@ -716,7 +716,7 @@ or <code>nil</code> if no objects match.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>Array containing the results of invoking <code>valueForKey(_:)</code> using key on each of the collection&rsquo;s objects.</p>
+                        <p>Array containing the results of invoking <code><a href="../Classes/Results.html#/s:FC10RealmSwift7Results11valueForKeyFSSGSqPs9AnyObject__">valueForKey(_:)</a></code> using key on each of the collection&rsquo;s objects.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -738,7 +738,7 @@ or <code>nil</code> if no objects match.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns an Array containing the results of invoking <code>valueForKeyPath(_:)</code> using keyPath on each of the
+                        <p>Returns an Array containing the results of invoking <code><a href="../Classes/Results.html#/s:FC10RealmSwift7Results15valueForKeyPathFSSGSqPs9AnyObject__">valueForKeyPath(_:)</a></code> using keyPath on each of the
 collection&rsquo;s objects.</p>
 
                       </div>
@@ -772,7 +772,7 @@ collection&rsquo;s objects.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>Array containing the results of invoking <code>valueForKeyPath(_:)</code> using keyPath on each of the collection&rsquo;s objects.</p>
+                        <p>Array containing the results of invoking <code><a href="../Classes/Results.html#/s:FC10RealmSwift7Results15valueForKeyPathFSSGSqPs9AnyObject__">valueForKeyPath(_:)</a></code> using keyPath on each of the collection&rsquo;s objects.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -794,7 +794,7 @@ collection&rsquo;s objects.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Invokes <code>setValue(_:forKey:)</code> on each of the collection&rsquo;s objects using the specified value and key.</p>
+                        <p>Invokes <code><a href="../Classes/Results.html#/s:FC10RealmSwift7Results8setValueFTGSqPs9AnyObject__6forKeySS_T_">setValue(_:forKey:)</a></code> on each of the collection&rsquo;s objects using the specified value and key.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
@@ -995,7 +995,7 @@ collection&rsquo;s objects.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns <code><a href="../Classes/Results.html">Results</a></code> with elements sorted by the given property name.</p>
+                        <p>Returns <code>Results</code> with elements sorted by the given property name.</p>
 
                       </div>
                       <div class="declaration">
@@ -1041,7 +1041,7 @@ collection&rsquo;s objects.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p><code><a href="../Classes/Results.html">Results</a></code> with elements sorted by the given property name.</p>
+                        <p><code>Results</code> with elements sorted by the given property name.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -1063,14 +1063,14 @@ collection&rsquo;s objects.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns <code><a href="../Classes/Results.html">Results</a></code> with elements sorted by the given sort descriptors.</p>
+                        <p>Returns <code>Results</code> with elements sorted by the given sort descriptors.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">sorted</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">:</span> <span class="kt">SequenceType</span> <span class="k">where</span> <span class="kt">S</span><span class="o">.</span><span class="kt">Generator</span><span class="o">.</span><span class="kt">Element</span> <span class="o">==</span> <span class="kt">SortDescriptor</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">sortDescriptors</span><span class="p">:</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Results</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">sorted</span><span class="o">&lt;</span><span class="kt">S</span><span class="p">:</span> <span class="kt">SequenceType</span> <span class="k">where</span> <span class="kt">S</span><span class="o">.</span><span class="kt">Generator</span><span class="o">.</span><span class="kt"><a href="../Classes/Results.html#/s:C10RealmSwift7Results7Element">Element</a></span> <span class="o">==</span> <span class="kt"><a href="../Structs/SortDescriptor.html">SortDescriptor</a></span><span class="o">&gt;</span><span class="p">(</span><span class="nv">sortDescriptors</span><span class="p">:</span> <span class="kt">S</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Results</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -1096,7 +1096,7 @@ collection&rsquo;s objects.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p><code><a href="../Classes/Results.html">Results</a></code> with elements sorted by the given sort descriptors.</p>
+                        <p><code>Results</code> with elements sorted by the given sort descriptors.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -1142,7 +1142,7 @@ collection&rsquo;s objects.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">min</span><span class="o">&lt;</span><span class="kt">U</span><span class="p">:</span> <span class="kt">MinMaxType</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">property</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">U</span><span class="p">?</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">min</span><span class="o">&lt;</span><span class="kt">U</span><span class="p">:</span> <span class="kt"><a href="../Protocols.html#/s:P10RealmSwift10MinMaxType">MinMaxType</a></span><span class="o">&gt;</span><span class="p">(</span><span class="nv">property</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">U</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1203,7 +1203,7 @@ collection&rsquo;s objects.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">max</span><span class="o">&lt;</span><span class="kt">U</span><span class="p">:</span> <span class="kt">MinMaxType</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">property</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">U</span><span class="p">?</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">max</span><span class="o">&lt;</span><span class="kt">U</span><span class="p">:</span> <span class="kt"><a href="../Protocols.html#/s:P10RealmSwift10MinMaxType">MinMaxType</a></span><span class="o">&gt;</span><span class="p">(</span><span class="nv">property</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">U</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1264,7 +1264,7 @@ collection&rsquo;s objects.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">sum</span><span class="o">&lt;</span><span class="kt">U</span><span class="p">:</span> <span class="kt">AddableType</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">property</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">U</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">sum</span><span class="o">&lt;</span><span class="kt">U</span><span class="p">:</span> <span class="kt"><a href="../Protocols.html#/s:P10RealmSwift11AddableType">AddableType</a></span><span class="o">&gt;</span><span class="p">(</span><span class="nv">property</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">U</span></code></pre>
 
                         </div>
                       </div>
@@ -1325,7 +1325,7 @@ collection&rsquo;s objects.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">average</span><span class="o">&lt;</span><span class="kt">U</span><span class="p">:</span> <span class="kt">AddableType</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">property</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">U</span><span class="p">?</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">average</span><span class="o">&lt;</span><span class="kt">U</span><span class="p">:</span> <span class="kt"><a href="../Protocols.html#/s:P10RealmSwift11AddableType">AddableType</a></span><span class="o">&gt;</span><span class="p">(</span><span class="nv">property</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">U</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -1449,7 +1449,7 @@ to be sent to the block. To stop receiving updates, call stop() on the token.</p
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addNotificationBlock</span><span class="p">(</span><span class="nv">block</span><span class="p">:</span> <span class="p">(</span><span class="kt">RealmCollectionChange</span><span class="o">&lt;</span><span class="kt">Results</span><span class="o">&gt;</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="kt">NotificationToken</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">addNotificationBlock</span><span class="p">(</span><span class="nv">block</span><span class="p">:</span> <span class="p">(</span><span class="kt"><a href="../Enums/RealmCollectionChange.html">RealmCollectionChange</a></span><span class="o">&lt;</span><span class="kt">Results</span><span class="o">&gt;</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:10RealmSwift17NotificationToken">NotificationToken</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1515,7 +1515,7 @@ to be sent to the block. To stop receiving updates, call stop() on the token.</p
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">generate</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">RLMGenerator</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">generate</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RLMGenerator.html">RLMGenerator</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -1589,7 +1589,7 @@ zero or more applications of successor().</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">endIndex</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">return</span> <span class="n">count</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">endIndex</span><span class="p">:</span> <span class="kt">Int</span> <span class="p">{</span> <span class="k">return</span> <span class="n"><a href="../Classes/Results.html#/s:vC10RealmSwift7Results5countSi">count</a></span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
