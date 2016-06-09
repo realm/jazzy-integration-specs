@@ -214,7 +214,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt"><a href="../Classes/MoyaProvider.html#/s:C4Moya12MoyaProvider15EndpointClosure">EndpointClosure</a></span> <span class="o">=</span> <span class="kt">Target</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Endpoint.html">Endpoint</a></span><span class="o">&lt;</span><span class="kt">Target</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">EndpointClosure</span> <span class="o">=</span> <span class="kt">Target</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Endpoint.html">Endpoint</a></span><span class="o">&lt;</span><span class="kt">Target</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -241,7 +241,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt"><a href="../Classes/MoyaProvider.html#/s:C4Moya12MoyaProvider11StubClosure">StubClosure</a></span> <span class="o">=</span> <span class="kt">Target</span> <span class="o">-&gt;</span> <span class="kt">Moya</span><span class="o">.</span><span class="kt"><a href="../Enums/StubBehavior.html">StubBehavior</a></span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">StubClosure</span> <span class="o">=</span> <span class="kt">Target</span> <span class="o">-&gt;</span> <span class="kt">Moya</span><span class="o">.</span><span class="kt"><a href="../Enums/StubBehavior.html">StubBehavior</a></span></code></pre>
 
                         </div>
                       </div>
@@ -268,7 +268,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt"><a href="../Classes/MoyaProvider.html#/s:C4Moya12MoyaProvider14RequestClosure">RequestClosure</a></span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="../Classes/Endpoint.html">Endpoint</a></span><span class="o">&lt;</span><span class="kt">Target</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">NSURLRequest</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">RequestClosure</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="../Classes/Endpoint.html">Endpoint</a></span><span class="o">&lt;</span><span class="kt">Target</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">NSURLRequest</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
 
                         </div>
                       </div>
@@ -404,9 +404,9 @@ e.g. for logging, network activity indicator or credentials</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">endpointClosure</span><span class="p">:</span> <span class="kt"><a href="../Classes/MoyaProvider.html#/s:C4Moya12MoyaProvider15EndpointClosure">EndpointClosure</a></span> <span class="o">=</span> <span class="kt">MoyaProvider</span><span class="o">.</span><span class="kt">DefaultEndpointMapping</span><span class="p">,</span>
-        <span class="nv">requestClosure</span><span class="p">:</span> <span class="kt"><a href="../Classes/MoyaProvider.html#/s:C4Moya12MoyaProvider14RequestClosure">RequestClosure</a></span> <span class="o">=</span> <span class="kt">MoyaProvider</span><span class="o">.</span><span class="kt">DefaultRequestMapping</span><span class="p">,</span>
-        <span class="nv">stubClosure</span><span class="p">:</span> <span class="kt"><a href="../Classes/MoyaProvider.html#/s:C4Moya12MoyaProvider11StubClosure">StubClosure</a></span> <span class="o">=</span> <span class="kt">MoyaProvider</span><span class="o">.</span><span class="kt">NeverStub</span><span class="p">,</span>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">endpointClosure</span><span class="p">:</span> <span class="kt">EndpointClosure</span> <span class="o">=</span> <span class="kt">MoyaProvider</span><span class="o">.</span><span class="kt">DefaultEndpointMapping</span><span class="p">,</span>
+        <span class="nv">requestClosure</span><span class="p">:</span> <span class="kt">RequestClosure</span> <span class="o">=</span> <span class="kt">MoyaProvider</span><span class="o">.</span><span class="kt">DefaultRequestMapping</span><span class="p">,</span>
+        <span class="nv">stubClosure</span><span class="p">:</span> <span class="kt">StubClosure</span> <span class="o">=</span> <span class="kt">MoyaProvider</span><span class="o">.</span><span class="kt">NeverStub</span><span class="p">,</span>
         <span class="nv">manager</span><span class="p">:</span> <span class="kt">Manager</span> <span class="o">=</span> <span class="kt">MoyaProvider</span><span class="o">&lt;</span><span class="kt">Target</span><span class="o">&gt;.</span><span class="kt">DefaultAlamofireManager</span><span class="p">(),</span>
         <span class="nv">plugins</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/PluginType.html">PluginType</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[])</span></code></pre>
 
