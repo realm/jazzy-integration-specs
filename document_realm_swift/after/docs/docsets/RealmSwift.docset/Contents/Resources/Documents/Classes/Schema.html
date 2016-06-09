@@ -33,7 +33,7 @@
       <div class="content-wrapper">
         <p><a href="../index.html">RealmSwift Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F0%2E103%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F1%2E0%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -196,12 +196,12 @@
 
                 </div>
               </div>
-            <p>This class represents the collection of model object schemas persisted to Realm.</p>
+            <p><code>Schema</code> instances represent collections of model object schemas persisted to a Realm.</p>
 
-<p>When using Realm, <code>Schema</code> objects allow performing migrations and
+<p>When using Realm, <code>Schema</code> instances allow performing migrations and
 introspecting the database&rsquo;s schema.</p>
 
-<p><code>Schema</code>s map to collections of tables in the core database.</p>
+<p>Schemas map to collections of tables in the core database.</p>
 
           </section>
           <section class="section task-group-section">
@@ -227,7 +227,7 @@ introspecting the database&rsquo;s schema.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the object schema with the given class name, if it exists.</p>
+                        <p>Looks up and returns an <code><a href="../Classes/ObjectSchema.html">ObjectSchema</a></code> for the given class name in the Realm, if it exists.</p>
 
                       </div>
                       <div class="declaration">
@@ -239,7 +239,7 @@ introspecting the database&rsquo;s schema.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Schema.swift#L54">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Schema.swift#L57">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -257,8 +257,9 @@ introspecting the database&rsquo;s schema.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p><code><a href="../Classes/ObjectSchema.html">ObjectSchema</a></code>s for all object types in this Realm. Meant
-to be used during migrations for dynamic introspection.</p>
+                        <p>An array of <code><a href="../Classes/ObjectSchema.html">ObjectSchema</a></code>s for all object types in the Realm.</p>
+
+<p>This property is intended to be used during migrations for dynamic introspection.</p>
 
                       </div>
                       <div class="declaration">
@@ -270,7 +271,7 @@ to be used during migrations for dynamic introspection.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Schema.swift#L38-L40">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Schema.swift#L41-L43">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -300,7 +301,7 @@ to be used during migrations for dynamic introspection.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Schema.swift#L43">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Schema.swift#L46">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

@@ -182,6 +182,9 @@
             <a href="Other Extensions.html">Other Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="Extensions/NSRegularExpression.html">NSRegularExpression</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Extensions/NSURLSession.html">NSURLSession</a>
               </li>
               <li class="nav-group-task">
@@ -417,7 +420,7 @@ git submodule update --init
 
 <p>Of course, you probably don’t want to work with raw JSON in all your controllers. You can configure Siesta to automatically turn raw responses into models:</p>
 <pre class="highlight swift"><code><span class="kt">MyAPI</span><span class="o">.</span><span class="nf">configureTransformer</span><span class="p">(</span><span class="s">"/profile"</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// Path supports wildcards</span>
-    <span class="kt">UserProfile</span><span class="p">(</span><span class="nv">json</span><span class="p">:</span> <span class="nv">$0</span><span class="p">)</span>                 <span class="c1">// Create models however you like</span>
+    <span class="kt">UserProfile</span><span class="p">(</span><span class="nv">json</span><span class="p">:</span> <span class="nv">$0</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>         <span class="c1">// Create models however you like</span>
 <span class="p">}</span>
 </code></pre>
 
@@ -444,7 +447,7 @@ git submodule update --init
 <pre class="highlight swift"><code><span class="kt">MyAPI</span><span class="o">.</span><span class="nf">resource</span><span class="p">(</span><span class="s">"/profile"</span><span class="p">)</span><span class="o">.</span><span class="nf">addObserver</span><span class="p">(</span><span class="nv">owner</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span> <span class="p">{</span>
     <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="n">resource</span><span class="p">,</span> <span class="n">event</span> <span class="k">in</span>
 
-    <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="n">activityIndicator</span><span class="o">.</span><span class="n">hidden</span> <span class="o">=</span> <span class="o">!</span><span class="n">resource</span><span class="o">.</span><span class="n">loading</span>
+    <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="n">activityIndicator</span><span class="o">.</span><span class="n">hidden</span> <span class="o">=</span> <span class="o">!</span><span class="n">resource</span><span class="o">.</span><span class="n">isLoading</span>
 <span class="p">}</span>
 </code></pre>
 

@@ -33,7 +33,7 @@
       <div class="content-wrapper">
         <p><a href="../index.html">Realm Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fobjc%2F0%2E103%2E0%2Fapi%2Fdocsets%2FRealm%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fobjc%2F1%2E0%2E0%2Fapi%2Fdocsets%2FRealm%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -170,7 +170,8 @@
 
                 </div>
               </div>
-            <p>A homogenous collection of <code><a href="../Classes/RLMObject.html">RLMObject</a></code>s like <code><a href="../Classes/RLMArray.html">RLMArray</a></code> or <code><a href="../Classes/RLMResults.html">RLMResults</a></code>.</p>
+            <p>A homogenous collection of <code><a href="../Classes/RLMObject.html">RLMObject</a></code> instances. Examples of conforming types include <code><a href="../Classes/RLMArray.html">RLMArray</a></code>,
+<code><a href="../Classes/RLMResults.html">RLMResults</a></code>, and <code><a href="../Classes.html#/c:objc(cs)RLMLinkingObjects">RLMLinkingObjects</a></code>.</p>
 
           </section>
           <section class="section task-group-section">
@@ -196,7 +197,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Number of objects in the collection.</p>
+                        <p>The number of objects in the collection.</p>
 
                       </div>
                       <div class="declaration">
@@ -214,7 +215,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMCollection.h#L37">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMCollection.h#L38">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -232,7 +233,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The class name (i.e. type) of the RLMObjects contained in this RLMCollection.</p>
+                        <p>The class name (i.e. type) of the <code><a href="../Classes/RLMObject.html">RLMObject</a></code>s contained in the collection.</p>
 
                       </div>
                       <div class="declaration">
@@ -250,7 +251,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMCollection.h#L42">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMCollection.h#L43">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -268,7 +269,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The Realm in which this collection is persisted. Returns nil for standalone collections.</p>
+                        <p>The Realm which manages the collection, or <code>nil</code> for unmanaged collections.</p>
 
                       </div>
                       <div class="declaration">
@@ -286,7 +287,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMCollection.h#L47">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMCollection.h#L48">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -353,11 +354,11 @@
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An RLMObject of the type contained in this RLMCollection.</p>
+                        <p>An <code><a href="../Classes/RLMObject.html">RLMObject</a></code> of the type contained in the collection.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMCollection.h#L58">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMCollection.h#L59">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -377,7 +378,7 @@
                       <div class="abstract">
                         <p>Returns the first object in the collection.</p>
 
-<p>Returns <code>nil</code> if called on an empty RLMCollection.</p>
+<p>Returns <code>nil</code> if called on an empty collection.</p>
 
                       </div>
                       <div class="declaration">
@@ -395,11 +396,11 @@
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An RLMObject of the type contained in this RLMCollection.</p>
+                        <p>An <code><a href="../Classes/RLMObject.html">RLMObject</a></code> of the type contained in the collection.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMCollection.h#L67">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMCollection.h#L68">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -419,7 +420,7 @@
                       <div class="abstract">
                         <p>Returns the last object in the collection.</p>
 
-<p>Returns <code>nil</code> if called on an empty RLMCollection.</p>
+<p>Returns <code>nil</code> if called on an empty collection.</p>
 
                       </div>
                       <div class="declaration">
@@ -437,11 +438,11 @@
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An RLMObject of the type contained in this RLMCollection.</p>
+                        <p>An <code><a href="../Classes/RLMObject.html">RLMObject</a></code> of the type contained in the collection.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMCollection.h#L76">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMCollection.h#L77">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -470,9 +471,9 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Gets the index of an object.</p>
+                        <p>Returns the index of an object in the collection.</p>
 
-<p>Returns NSNotFound if the object is not found in this RLMCollection.</p>
+<p>Returns <code>NSNotFound</code> if the object is not found in the collection.</p>
 
                       </div>
                       <div class="declaration">
@@ -500,7 +501,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>An object (of the same type as returned from the objectClassName selector).</p>
+                                  <p>An object (of the same type as returned from the <code>objectClassName</code> selector).</p>
 
                                 </div>
                               </td>
@@ -509,7 +510,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMCollection.h#L87">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMCollection.h#L88">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -527,7 +528,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Gets the index of the first object matching the predicate.</p>
+                        <p>Returns the index of the first object in the collection matching the predicate.</p>
 
                       </div>
                       <div class="declaration">
@@ -550,7 +551,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The predicate format string which can accept variable arguments.</p>
+                                  <p>A predicate format string, optionally followed by a variable number of arguments.</p>
 
                                 </div>
                               </td>
@@ -560,11 +561,11 @@
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>Index of object or NSNotFound if the object is not found in this RLMCollection.</p>
+                        <p>The index of the object, or <code>NSNotFound</code> if the object is not found in the collection.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMCollection.h#L96">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMCollection.h#L97">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -582,7 +583,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Gets the index of the first object matching the predicate.</p>
+                        <p>Returns the index of the first object in the collection matching the predicate.</p>
 
                       </div>
                       <div class="declaration">
@@ -610,7 +611,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The predicate to filter the objects.</p>
+                                  <p>The predicate with which to filter the objects.</p>
 
                                 </div>
                               </td>
@@ -620,11 +621,11 @@
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>Index of object or NSNotFound if the object is not found in this RLMCollection.</p>
+                        <p>The index of the object, or <code>NSNotFound</code> if the object is not found in the collection.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMCollection.h#L108">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMCollection.h#L109">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -642,7 +643,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Get objects matching the given predicate in the RLMCollection.</p>
+                        <p>Returns all objects matching the given predicate in the collection.</p>
 
                       </div>
                       <div class="declaration">
@@ -665,7 +666,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The predicate format string which can accept variable arguments.</p>
+                                  <p>A predicate format string, optionally followed by a variable number of arguments.</p>
 
                                 </div>
                               </td>
@@ -675,11 +676,11 @@
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An RLMResults of objects that match the given predicate</p>
+                        <p>An <code><a href="../Classes/RLMResults.html">RLMResults</a></code> containing objects that match the given predicate.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMCollection.h#L117">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMCollection.h#L118">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -697,7 +698,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Get objects matching the given predicate in the RLMCollection.</p>
+                        <p>Returns all objects matching the given predicate in the collection.</p>
 
                       </div>
                       <div class="declaration">
@@ -725,7 +726,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The predicate to filter the objects.</p>
+                                  <p>The predicate with which to filter the objects.</p>
 
                                 </div>
                               </td>
@@ -735,11 +736,11 @@
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An RLMResults of objects that match the given predicate</p>
+                        <p>An <code><a href="../Classes/RLMResults.html">RLMResults</a></code> containing objects that match the given predicate.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMCollection.h#L129">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMCollection.h#L130">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -757,7 +758,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Get a sorted RLMResults from an RLMCollection.</p>
+                        <p>Returns a sorted <code><a href="../Classes/RLMResults.html">RLMResults</a></code> from the collection.</p>
 
                       </div>
                       <div class="declaration">
@@ -799,7 +800,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The direction to sort by.</p>
+                                  <p>The direction to sort in.</p>
 
                                 </div>
                               </td>
@@ -809,11 +810,11 @@
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An RLMResults sorted by the specified property.</p>
+                        <p>An <code><a href="../Classes/RLMResults.html">RLMResults</a></code> sorted by the specified property.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMCollection.h#L139">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMCollection.h#L140">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -831,7 +832,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Get a sorted RLMResults from an RLMCollection.</p>
+                        <p>Returns a sorted <code><a href="../Classes/RLMResults.html">RLMResults</a></code> from the collection.</p>
 
                       </div>
                       <div class="declaration">
@@ -870,11 +871,11 @@
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An RLMResults sorted by the specified properties.</p>
+                        <p>An <code><a href="../Classes/RLMResults.html">RLMResults</a></code> sorted by the specified properties.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMCollection.h#L148">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMCollection.h#L149">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -892,7 +893,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns an NSArray containing the results of invoking <code>valueForKey:</code> using key on each of the collection&rsquo;s objects.</p>
+                        <p>Returns an <code>NSArray</code> containing the results of invoking <code>valueForKey:</code> using <code>key</code> on each of the collection&rsquo;s objects.</p>
 
                       </div>
                       <div class="declaration">
@@ -930,11 +931,11 @@
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>NSArray containing the results of invoking <code>valueForKey:</code> using key on each of the collection&rsquo;s objects.</p>
+                        <p>An <code>NSArray</code> containing results.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMCollection.h#L160">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMCollection.h#L161">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -952,11 +953,11 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Invokes <code>setValue:forKey:</code> on each of the collection&rsquo;s objects using the specified value and key.</p>
+                        <p>Invokes <code>setValue:forKey:</code> on each of the collection&rsquo;s objects using the specified <code>value</code> and <code>key</code>.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>This method can only be called during a write transaction.</p>
+    <p>This method may only be called during a write transaction.</p>
 
 </div>
 
@@ -1008,7 +1009,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMCollection.h#L170">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMCollection.h#L171">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1037,24 +1038,24 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Register a block to be called each time the RLMCollection changes.</p>
+                        <p>Registers a block to be called each time the collection changes.</p>
 
 <p>The block will be asynchronously called with the initial collection, and then
 called again after each write transaction which changes either any of the
 objects in the collection, or which objects are in the collection.</p>
 
-<p>The change parameter will be <code>nil</code> the first time the block is called with the
-initial collection. For each call after that, it will contain information about
+<p>The <code>change</code> parameter will be <code>nil</code> the first time the block is called.
+For each call after that, it will contain information about
 which rows in the collection were added, removed or modified. If a write transaction
 did not modify any objects in this collection, the block is not called at all.
-See the RLMCollectionChange documentation for information on how the changes
-are reported and an example of updating a UITableView.</p>
+See the <code><a href="../Classes/RLMCollectionChange.html">RLMCollectionChange</a></code> documentation for information on how the changes
+are reported and an example of updating a <code>UITableView</code>.</p>
 
 <p>If an error occurs the block will be called with <code>nil</code> for the collection
 parameter and a non-<code>nil</code> error. Currently the only errors that can occur are
-when opening the RLMRealm on the background worker thread.</p>
+when opening the Realm on the background worker thread.</p>
 
-<p>At the time when the block is called, the RLMCollection object will be fully
+<p>At the time when the block is called, the collection object will be fully
 evaluated and up-to-date, and as long as you do not perform a write transaction
 on the same thread or explicitly call <code>-[RLMRealm refresh]</code>, accessing it will
 never perform blocking work.</p>
@@ -1091,7 +1092,7 @@ to be sent to the block. To stop receiving updates, call <code>-stop</code> on t
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method cannot be called during a write transaction, or when the
-     containing realm is read-only.</p>
+     containing Realm is read-only.</p>
 
 </div>
 
@@ -1123,7 +1124,7 @@ to be sent to the block. To stop receiving updates, call <code>-stop</code> on t
                               </td>
                               <td>
                                 <div>
-                                  <p>The block to be called with the evaluated collection.</p>
+                                  <p>The block to be called each time the collection changes.</p>
 
                                 </div>
                               </td>
@@ -1137,7 +1138,7 @@ to be sent to the block. To stop receiving updates, call <code>-stop</code> on t
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMCollection.h#L231-L233">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMCollection.h#L232-L234">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

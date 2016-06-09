@@ -33,7 +33,7 @@
       <div class="content-wrapper">
         <p><a href="../index.html">RealmSwift Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F0%2E103%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F1%2E0%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -196,9 +196,9 @@
 
                 </div>
               </div>
-            <p><code>List&lt;T&gt;</code> is the container type in Realm used to define to-many relationships.</p>
+            <p><code>List</code> is the container type in Realm used to define to-many relationships.</p>
 
-<p>Lists hold a single <code><a href="../Classes/Object.html">Object</a></code> subclass (<code>T</code>) which defines the <q>type</q> of the List.</p>
+<p>Like Swift&rsquo;s <code>Array</code>s, Lists are parameterized on a single <code><a href="../Classes/Object.html">Object</a></code> subclass (<code>T</code>).</p>
 
 <p>Lists can be filtered and sorted with the same predicates as <code><a href="../Classes/Results.html">Results&lt;T&gt;</a></code>.</p>
 
@@ -228,7 +228,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Element type contained in this collection.</p>
+                        <p>The type of the elements contained within this list.</p>
 
                       </div>
                       <div class="declaration">
@@ -240,7 +240,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/List.swift#L55">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/List.swift#L55">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -258,8 +258,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the object at the given <code>index</code> on get.
-Replaces the object at the given <code>index</code> on set.</p>
+                        <p>Returns the object at the given index (get), or replaces the object at the given index (set).</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
@@ -288,7 +287,7 @@ Replaces the object at the given <code>index</code> on set.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The index.</p>
+                                  <p>The index of the object to retrieve or replace.</p>
 
                                 </div>
                               </td>
@@ -302,7 +301,7 @@ Replaces the object at the given <code>index</code> on set.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/List.swift#L125">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/List.swift#L120">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -320,8 +319,7 @@ Replaces the object at the given <code>index</code> on set.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The Realm the objects in this List belong to, or <code>nil</code> if the List&rsquo;s
-owning object does not belong to a Realm (the List is standalone).</p>
+                        <p>The Realm which manages the list. Returns <code>nil</code> for unmanaged lists.</p>
 
                       </div>
                       <div class="declaration">
@@ -333,7 +331,7 @@ owning object does not belong to a Realm (the List is standalone).</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/List.swift#L61-L63">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/List.swift#L60-L62">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -351,7 +349,7 @@ owning object does not belong to a Realm (the List is standalone).</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Indicates if the List can no longer be accessed.</p>
+                        <p>Indicates if the list can no longer be accessed.</p>
 
                       </div>
                       <div class="declaration">
@@ -363,7 +361,7 @@ owning object does not belong to a Realm (the List is standalone).</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/List.swift#L66">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/List.swift#L65">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -404,7 +402,7 @@ owning object does not belong to a Realm (the List is standalone).</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/List.swift#L71-L73">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/List.swift#L70-L72">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -433,7 +431,7 @@ owning object does not belong to a Realm (the List is standalone).</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the index of the given object, or <code>nil</code> if the object is not in the List.</p>
+                        <p>Returns the index of an object in the list.</p>
 
                       </div>
                       <div class="declaration">
@@ -456,7 +454,7 @@ owning object does not belong to a Realm (the List is standalone).</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The object whose index is being queried.</p>
+                                  <p>An object to find.</p>
 
                                 </div>
                               </td>
@@ -466,11 +464,11 @@ owning object does not belong to a Realm (the List is standalone).</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The index of the given object, or <code>nil</code> if the object is not in the List.</p>
+                        <p>The index of the object, or <code>nil</code> if the object is not in the list.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/List.swift#L84-L86">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/List.swift#L83-L85">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -488,8 +486,7 @@ owning object does not belong to a Realm (the List is standalone).</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the index of the first object matching the given predicate,
-or <code>nil</code> no objects match.</p>
+                        <p>Returns the index of the first object in the list matching the predicate.</p>
 
                       </div>
                       <div class="declaration">
@@ -512,7 +509,7 @@ or <code>nil</code> no objects match.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The <code>NSPredicate</code> used to filter the objects.</p>
+                                  <p>The predicate with which to filter the objects.</p>
 
                                 </div>
                               </td>
@@ -526,7 +523,7 @@ or <code>nil</code> no objects match.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/List.swift#L96-L98">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/List.swift#L94-L96">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -544,8 +541,7 @@ or <code>nil</code> no objects match.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the index of the first object matching the given predicate,
-or <code>nil</code> if no objects match.</p>
+                        <p>Returns the index of the first object in the list matching the predicate.</p>
 
                       </div>
                       <div class="declaration">
@@ -568,7 +564,7 @@ or <code>nil</code> if no objects match.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The predicate format string, optionally followed by a variable number of arguments.</p>
+                                  <p>A predicate format string, optionally followed by a variable number of arguments.</p>
 
                                 </div>
                               </td>
@@ -582,7 +578,7 @@ or <code>nil</code> if no objects match.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/List.swift#L109-L111">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/List.swift#L105-L107">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -611,7 +607,7 @@ or <code>nil</code> if no objects match.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the first object in the List, or <code>nil</code> if empty.</p>
+                        <p>Returns the first object in the list, or <code>nil</code> if the list is empty.</p>
 
                       </div>
                       <div class="declaration">
@@ -623,7 +619,7 @@ or <code>nil</code> if no objects match.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/List.swift#L137">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/List.swift#L132">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -641,7 +637,7 @@ or <code>nil</code> if no objects match.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the last object in the List, or <code>nil</code> if empty.</p>
+                        <p>Returns the last object in the list, or <code>nil</code> if the list is empty.</p>
 
                       </div>
                       <div class="declaration">
@@ -653,7 +649,7 @@ or <code>nil</code> if no objects match.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/List.swift#L140">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/List.swift#L135">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -682,7 +678,8 @@ or <code>nil</code> if no objects match.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns an Array containing the results of invoking <code>valueForKey(_:)</code> using key on each of the collection&rsquo;s objects.</p>
+                        <p>Returns an <code>Array</code> containing the results of invoking <code>valueForKey(_:)</code> using <code>key</code> on each of the collection&rsquo;s
+objects.</p>
 
                       </div>
                       <div class="declaration">
@@ -715,11 +712,11 @@ or <code>nil</code> if no objects match.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>Array containing the results of invoking <code>valueForKey(_:)</code> using key on each of the collection&rsquo;s objects.</p>
+                        <p>An <code>Array</code> containing the results.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/List.swift#L151-L153">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/List.swift#L147-L149">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -737,7 +734,7 @@ or <code>nil</code> if no objects match.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns an Array containing the results of invoking <code>valueForKeyPath(_:)</code> using keyPath on each of the
+                        <p>Returns an <code>Array</code> containing the results of invoking <code>valueForKeyPath(_:)</code> using <code>keyPath</code> on each of the
 collection&rsquo;s objects.</p>
 
                       </div>
@@ -771,11 +768,11 @@ collection&rsquo;s objects.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>Array containing the results of invoking <code>valueForKeyPath(_:)</code> using keyPath on each of the collection&rsquo;s objects.</p>
+                        <p>An <code>Array</code> containing the results.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/List.swift#L164-L166">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/List.swift#L159-L161">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -793,7 +790,7 @@ collection&rsquo;s objects.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Invokes <code>setValue(_:forKey:)</code> on each of the collection&rsquo;s objects using the specified value and key.</p>
+                        <p>Invokes <code>setValue(_:forKey:)</code> on each of the collection&rsquo;s objects using the specified <code>value</code> and <code>key</code>.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
@@ -844,7 +841,7 @@ collection&rsquo;s objects.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/List.swift#L176-L178">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/List.swift#L171-L173">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -873,7 +870,7 @@ collection&rsquo;s objects.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns <code><a href="../Classes/Results.html">Results</a></code> containing elements that match the given predicate.</p>
+                        <p>Returns all objects matching the given predicate in the list.</p>
 
                       </div>
                       <div class="declaration">
@@ -896,7 +893,7 @@ collection&rsquo;s objects.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The predicate format string which can accept variable arguments.</p>
+                                  <p>A predicate format string; variable arguments are supported.</p>
 
                                 </div>
                               </td>
@@ -906,11 +903,11 @@ collection&rsquo;s objects.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p><code><a href="../Classes/Results.html">Results</a></code> containing elements that match the given predicate.</p>
+                        <p>A <code><a href="../Classes/Results.html">Results</a></code> containing objects that match the predicate.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/List.swift#L189-L191">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/List.swift#L184-L186">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -928,7 +925,7 @@ collection&rsquo;s objects.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns <code><a href="../Classes/Results.html">Results</a></code> containing elements that match the given predicate.</p>
+                        <p>Returns all objects matching the given predicate in the list.</p>
 
                       </div>
                       <div class="declaration">
@@ -951,7 +948,7 @@ collection&rsquo;s objects.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The predicate to filter the objects.</p>
+                                  <p>The predicate with which to filter the objects.</p>
 
                                 </div>
                               </td>
@@ -961,11 +958,11 @@ collection&rsquo;s objects.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p><code><a href="../Classes/Results.html">Results</a></code> containing elements that match the given predicate.</p>
+                        <p>A <code><a href="../Classes/Results.html">Results</a></code> containing objects that match the predicate.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/List.swift#L200-L202">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/List.swift#L195-L197">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -994,7 +991,7 @@ collection&rsquo;s objects.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns <code><a href="../Classes/Results.html">Results</a></code> containing elements sorted by the given property.</p>
+                        <p>Returns a sorted <code><a href="../Classes/Results.html">Results</a></code> from the list.</p>
 
                       </div>
                       <div class="declaration">
@@ -1040,11 +1037,11 @@ collection&rsquo;s objects.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p><code><a href="../Classes/Results.html">Results</a></code> containing elements sorted by the given property.</p>
+                        <p>A <code><a href="../Classes/Results.html">Results</a></code> containing the list objects sorted by the specified property.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/List.swift#L214-L216">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/List.swift#L209-L211">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1062,7 +1059,7 @@ collection&rsquo;s objects.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns <code><a href="../Classes/Results.html">Results</a></code> with elements sorted by the given sort descriptors.</p>
+                        <p>Returns a sorted <code><a href="../Classes/Results.html">Results</a></code> from the list.</p>
 
                       </div>
                       <div class="declaration">
@@ -1085,7 +1082,7 @@ collection&rsquo;s objects.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p><code>SortDescriptor</code>s to sort by.</p>
+                                  <p>An sequence of <code>SortDescriptor</code>s to sort by.</p>
 
                                 </div>
                               </td>
@@ -1095,11 +1092,11 @@ collection&rsquo;s objects.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p><code><a href="../Classes/Results.html">Results</a></code> with elements sorted by the given sort descriptors.</p>
+                        <p>A <code><a href="../Classes/Results.html">Results</a></code> containing the list objects sorted by the specified property.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/List.swift#L225-L227">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/List.swift#L220-L222">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1128,11 +1125,11 @@ collection&rsquo;s objects.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the minimum value of the given property.</p>
+                        <p>Returns the minimum (lowest) value of the given property among all the objects in the list.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>Only names of properties of a type conforming to the <code><a href="../Protocols.html#/s:P10RealmSwift10MinMaxType">MinMaxType</a></code> protocol can be used.</p>
+    <p>Only a property whose type conforms to the <code><a href="../Protocols.html#/s:P10RealmSwift10MinMaxType">MinMaxType</a></code> protocol can be specified.</p>
 
 </div>
 
@@ -1157,7 +1154,7 @@ collection&rsquo;s objects.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The name of a property conforming to <code>MinMaxType</code> to look for a minimum on.</p>
+                                  <p>The name of a property whose minimum value is desired.</p>
 
                                 </div>
                               </td>
@@ -1167,11 +1164,11 @@ collection&rsquo;s objects.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The minimum value for the property amongst objects in the List, or <code>nil</code> if the List is empty.</p>
+                        <p>The minimum value of the property, or <code>nil</code> if the list is empty.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/List.swift#L240-L242">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/List.swift#L235-L237">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1189,11 +1186,11 @@ collection&rsquo;s objects.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the maximum value of the given property.</p>
+                        <p>Returns the maximum (highest) value of the given property among all the objects in the list.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>Only names of properties of a type conforming to the <code><a href="../Protocols.html#/s:P10RealmSwift10MinMaxType">MinMaxType</a></code> protocol can be used.</p>
+    <p>Only a property whose type conforms to the <code><a href="../Protocols.html#/s:P10RealmSwift10MinMaxType">MinMaxType</a></code> protocol can be specified.</p>
 
 </div>
 
@@ -1218,7 +1215,7 @@ collection&rsquo;s objects.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The name of a property conforming to <code>MinMaxType</code> to look for a maximum on.</p>
+                                  <p>The name of a property whose maximum value is desired.</p>
 
                                 </div>
                               </td>
@@ -1228,11 +1225,11 @@ collection&rsquo;s objects.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The maximum value for the property amongst objects in the List, or <code>nil</code> if the List is empty.</p>
+                        <p>The maximum value of the property, or &rsquo;<code>nil</code> if the list is empty.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/List.swift#L253-L255">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/List.swift#L248-L250">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1250,11 +1247,11 @@ collection&rsquo;s objects.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the sum of the given property for objects in the List.</p>
+                        <p>Returns the sum of the values of a given property over all the objects in the list.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>Only names of properties of a type conforming to the <code><a href="../Protocols.html#/s:P10RealmSwift11AddableType">AddableType</a></code> protocol can be used.</p>
+    <p>Only a property whose type conforms to the <code><a href="../Protocols.html#/s:P10RealmSwift11AddableType">AddableType</a></code> protocol can be specified.</p>
 
 </div>
 
@@ -1279,7 +1276,7 @@ collection&rsquo;s objects.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The name of a property conforming to <code>AddableType</code> to calculate sum on.</p>
+                                  <p>The name of a property whose values should be summed.</p>
 
                                 </div>
                               </td>
@@ -1289,11 +1286,11 @@ collection&rsquo;s objects.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The sum of the given property over all objects in the List.</p>
+                        <p>The sum of the given property.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/List.swift#L266-L268">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/List.swift#L261-L263">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1311,11 +1308,11 @@ collection&rsquo;s objects.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the average of the given property for objects in the List.</p>
+                        <p>Returns the average value of a given property over all the objects in the list.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>Only names of properties of a type conforming to the <code><a href="../Protocols.html#/s:P10RealmSwift11AddableType">AddableType</a></code> protocol can be used.</p>
+    <p>Only a property whose type conforms to the <code><a href="../Protocols.html#/s:P10RealmSwift11AddableType">AddableType</a></code> protocol can be specified.</p>
 
 </div>
 
@@ -1340,7 +1337,7 @@ collection&rsquo;s objects.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The name of a property conforming to <code>AddableType</code> to calculate average on.</p>
+                                  <p>The name of a property whose average value should be calculated.</p>
 
                                 </div>
                               </td>
@@ -1350,11 +1347,11 @@ collection&rsquo;s objects.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The average of the given property over all objects in the List, or <code>nil</code> if the List is empty.</p>
+                        <p>The average value of the given property.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/List.swift#L279-L281">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/List.swift#L274-L276">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1383,12 +1380,14 @@ collection&rsquo;s objects.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Appends the given object to the end of the List. If the object is from a
-different Realm it is copied to the List&rsquo;s Realm.</p>
+                        <p>Appends the given object to the end of the list.</p>
+
+<p>If the object is managed by a different Realm than the receiver, a copy is made and added to the Realm managing
+the receiver.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>This method can only be called during a write transaction.</p>
+    <p>This method may only be called during a write transaction.</p>
 
 </div>
 
@@ -1422,7 +1421,7 @@ different Realm it is copied to the List&rsquo;s Realm.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/List.swift#L293-L295">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/List.swift#L290-L292">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1440,11 +1439,11 @@ different Realm it is copied to the List&rsquo;s Realm.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Appends the objects in the given sequence to the end of the List.</p>
+                        <p>Appends the objects in the given sequence to the end of the list.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>This method can only be called during a write transaction.</p>
+    <p>This method may only be called during a write transaction.</p>
 
 </div>
 
@@ -1478,7 +1477,7 @@ different Realm it is copied to the List&rsquo;s Realm.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/List.swift#L304-L308">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/List.swift#L301-L305">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1496,18 +1495,17 @@ different Realm it is copied to the List&rsquo;s Realm.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Inserts the given object at the given index.</p>
+                        <p>Inserts an object at the given index.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    This method can only be called during a write transaction.
+    <p>This method may only be called during a write transaction.</p>
 
 </div>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>Throws an exception when called with an index smaller than zero
-       or greater than or equal to the number of objects in the List.</p>
+    <p>This method will throw an exception if called with an invalid index.</p>
 
 </div>
 
@@ -1554,7 +1552,7 @@ different Realm it is copied to the List&rsquo;s Realm.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/List.swift#L320-L323">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/List.swift#L317-L320">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1572,18 +1570,17 @@ different Realm it is copied to the List&rsquo;s Realm.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Removes the object at the given index from the List. Does not remove the object from the Realm.</p>
+                        <p>Removes an object at the given index. The object is not removed from the Realm that manages it.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    This method can only be called during a write transaction.
+    <p>This method may only be called during a write transaction.</p>
 
 </div>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>Throws an exception when called with an index smaller than zero
-       or greater than or equal to the number of objects in the List.</p>
+    <p>This method will throw an exception if called with an invalid index.</p>
 
 </div>
 
@@ -1617,7 +1614,7 @@ different Realm it is copied to the List&rsquo;s Realm.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/List.swift#L334-L337">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/List.swift#L331-L334">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1635,11 +1632,11 @@ different Realm it is copied to the List&rsquo;s Realm.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Removes the last object in the List. Does not remove the object from the Realm.</p>
+                        <p>Removes the last object in the list. The object is not removed from the Realm that manages it.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    This method can only be called during a write transaction.
+    This method may only be called during a write transaction.
 
 </div>
 
@@ -1653,7 +1650,7 @@ different Realm it is copied to the List&rsquo;s Realm.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/List.swift#L344-L346">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/List.swift#L341-L343">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1671,11 +1668,11 @@ different Realm it is copied to the List&rsquo;s Realm.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Removes all objects from the List. Does not remove the objects from the Realm.</p>
+                        <p>Removes all objects from the list. The objects are not removed from the Realm that manages them.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    This method can only be called during a write transaction.
+    This method may only be called during a write transaction.
 
 </div>
 
@@ -1689,7 +1686,7 @@ different Realm it is copied to the List&rsquo;s Realm.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/List.swift#L353-L355">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/List.swift#L350-L352">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1711,14 +1708,13 @@ different Realm it is copied to the List&rsquo;s Realm.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    This method can only be called during a write transaction.
+    <p>This method may only be called during a write transaction.</p>
 
 </div>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>Throws an exception when called with an index smaller than zero
-       or greater than or equal to the number of objects in the List.</p>
+    <p>This method will throw an exception if called with an invalid index.</p>
 
 </div>
 
@@ -1756,7 +1752,7 @@ different Realm it is copied to the List&rsquo;s Realm.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>An object to replace at the specified index.</p>
+                                  <p>An object.</p>
 
                                 </div>
                               </td>
@@ -1765,7 +1761,7 @@ different Realm it is copied to the List&rsquo;s Realm.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/List.swift#L367-L370">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/List.swift#L364-L367">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1787,14 +1783,13 @@ different Realm it is copied to the List&rsquo;s Realm.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    This method can only be called during a write transaction.
+    <p>This method may only be called during a write transaction.</p>
 
 </div>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>Throws an exception when called with an index smaller than zero or greater than
-       or equal to the number of objects in the List.</p>
+    <p>This method will throw an exception if called with invalid indices.</p>
 
 </div>
 
@@ -1841,7 +1836,7 @@ different Realm it is copied to the List&rsquo;s Realm.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/List.swift#L382-L386">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/List.swift#L379-L383">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1859,17 +1854,17 @@ different Realm it is copied to the List&rsquo;s Realm.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Exchanges the objects in the List at given indexes.</p>
+                        <p>Exchanges the objects in the list at given indices.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    Throws an exception when either index exceeds the bounds of the List.
+    <p>This method may only be called during a write transaction.</p>
 
 </div>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>This method can only be called during a write transaction.</p>
+    <p>This method will throw an exception if called with invalid indices.</p>
 
 </div>
 
@@ -1894,7 +1889,7 @@ different Realm it is copied to the List&rsquo;s Realm.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The index of the object with which to replace the object at index <code>index2</code>.</p>
+                                  <p>The index of the object which should replace the object at index <code>index2</code>.</p>
 
                                 </div>
                               </td>
@@ -1907,7 +1902,7 @@ different Realm it is copied to the List&rsquo;s Realm.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The index of the object with which to replace the object at index <code>index1</code>.</p>
+                                  <p>The index of the object which should replace the object at index <code>index1</code>.</p>
 
                                 </div>
                               </td>
@@ -1916,7 +1911,7 @@ different Realm it is copied to the List&rsquo;s Realm.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/List.swift#L397-L401">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/List.swift#L395-L399">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1945,17 +1940,16 @@ different Realm it is copied to the List&rsquo;s Realm.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Register a block to be called each time the List changes.</p>
+                        <p>Registers a block to be called each time the list changes.</p>
 
 <p>The block will be asynchronously called with the initial list, and then
 called again after each write transaction which changes the list or any of
 the items in the list.</p>
 
-<p>This version of this method reports which of the objects in the List were
-added, removed, or modified in each write transaction as indices within the
-List. See the RealmCollectionChange documentation for more information on
-the change information supplied and an example of how to use it to update
-a UITableView.</p>
+<p>The <code>change</code> parameter that is passed to the block reports, in the form of indices within the
+list, which of the objects were added, removed, or modified during each write transaction. See the
+<code><a href="../Enums/RealmCollectionChange.html">RealmCollectionChange</a></code> documentation for more information on the change information supplied and an example of how
+to use it to update a <code>UITableView</code>.</p>
 
 <p>The block is called on the same thread as it was added on, and can only
 be added on threads which are currently within a run loop. Unless you are
@@ -1995,19 +1989,18 @@ try! realm.write {
 </code></pre>
 
 <p>You must retain the returned token for as long as you want updates to continue
-to be sent to the block. To stop receiving updates, call stop() on the token.</p>
+to be sent to the block. To stop receiving updates, call <code>stop()</code> on the token.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     This method cannot be called during a write transaction, or when
-        the source realm is read-only.
+the containing Realm is read-only.
 
 </div>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>This method can only be called on Lists which are stored on an
-        Object which has been added to or retrieved from a Realm.</p>
+    <p>This method may only be called on a managed list.</p>
 
 </div>
 
@@ -2042,11 +2035,11 @@ to be sent to the block. To stop receiving updates, call stop() on the token.</p
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>A token which must be held for as long as you want notifications to be delivered.</p>
+                        <p>A token which must be held for as long as you want updates to be delivered.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/List.swift#L466-L470">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/List.swift#L462-L466">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2075,7 +2068,7 @@ to be sent to the block. To stop receiving updates, call stop() on the token.</p
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns a <code>GeneratorOf&lt;T&gt;</code> that yields successive elements in the List.</p>
+                        <p>Returns a <code>GeneratorOf&lt;T&gt;</code> that yields successive elements in the list.</p>
 
                       </div>
                       <div class="declaration">
@@ -2087,7 +2080,7 @@ to be sent to the block. To stop receiving updates, call stop() on the token.</p
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/List.swift#L477-L479">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/List.swift#L473-L475">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2153,7 +2146,7 @@ to be sent to the block. To stop receiving updates, call stop() on the token.</p
                               </td>
                               <td>
                                 <div>
-                                  <p>The new elements to be inserted into the List.</p>
+                                  <p>The new elements to be inserted into the list.</p>
 
                                 </div>
                               </td>
@@ -2162,7 +2155,7 @@ to be sent to the block. To stop receiving updates, call stop() on the token.</p
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/List.swift#L489-L497">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/List.swift#L485-L493">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2181,7 +2174,7 @@ to be sent to the block. To stop receiving updates, call stop() on the token.</p
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The position of the first element in a non-empty collection.
-Identical to endIndex in an empty collection.</p>
+Identical to <code><a href="../Classes/List.html#/s:vC10RealmSwift4List8endIndexSi">endIndex</a></code> in an empty collection.</p>
 
                       </div>
                       <div class="declaration">
@@ -2193,7 +2186,7 @@ Identical to endIndex in an empty collection.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/List.swift#L501">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/List.swift#L497">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -2212,8 +2205,8 @@ Identical to endIndex in an empty collection.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The collection&rsquo;s <q>past the end</q> position.
-endIndex is not a valid argument to subscript, and is always reachable from startIndex by
-zero or more applications of successor().</p>
+<code>endIndex</code> is not a valid argument to subscript, and is always reachable from <code><a href="../Classes/List.html#/s:vC10RealmSwift4List10startIndexSi">startIndex</a></code> by
+zero or more applications of <code>successor()</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -2225,7 +2218,7 @@ zero or more applications of successor().</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/List.swift#L506">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/List.swift#L502">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

@@ -33,7 +33,7 @@
       <div class="content-wrapper">
         <p><a href="../index.html">Realm Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fobjc%2F0%2E103%2E0%2Fapi%2Fdocsets%2FRealm%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fobjc%2F1%2E0%2E0%2Fapi%2Fdocsets%2FRealm%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -170,37 +170,37 @@
 
                 </div>
               </div>
-            <p>RLMArray is the container type in Realm used to define to-many relationships.</p>
+            <p><code>RLMArray</code> is the container type in Realm used to define to-many relationships.</p>
 
-<p>Unlike an NSArray, RLMArrays hold a single type, specified by the <code>objectClassName</code> property.
+<p>Unlike an <code>NSArray</code>, <code>RLMArray</code>s hold a single type, specified by the <code>objectClassName</code> property.
 This is referred to in these docs as the “type” of the array.</p>
 
-<p>When declaring an RLMArray property, the type must be marked as conforming to a
+<p>When declaring an <code>RLMArray</code> property, the type must be marked as conforming to a
 protocol by the same name as the objects it should contain (see the
-<code>RLM_ARRAY_TYPE</code> macro). RLMArray properties can also use Objective-C generics
-if available. For example:</p>
+<code>RLM_ARRAY_TYPE</code> macro). In addition, the property can be declared using Objective-C
+generics for better compile-time type safety.</p>
 
 <pre class="highlight objective_c"><code><span class="n">RLM_ARRAY_TYPE</span><span class="p">(</span><span class="n">ObjectType</span><span class="p">)</span>
 <span class="p">...</span>
 <span class="k">@property</span> <span class="n">RLMArray</span><span class="o">&lt;</span><span class="n">ObjectType</span> <span class="o">*&gt;&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="n">arrayOfObjectTypes</span><span class="p">;</span>
 </code></pre>
 
-<p>RLMArrays can be queried with the same predicates as RLMObject and RLMResults.</p>
+<p><code>RLMArray</code>s can be queried with the same predicates as <code><a href="../Classes/RLMObject.html">RLMObject</a></code> and <code>RLMResult</code>s.</p>
 
-<p>RLMArrays cannot be created directly. RLMArray properties on RLMObjects are
+<p><code>RLMArray</code>s cannot be created directly. <code>RLMArray</code> properties on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>s are
 lazily created when accessed, or can be obtained by querying a Realm.</p>
 
 <p><a href='#key-value-observing' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='key-value-observing'>Key-Value Observing</h3></p>
 
-<p>RLMArray supports array key-value observing on RLMArray properties on RLMObject
-subclasses, and the <code>invalidated</code> property on RLMArray instances themselves is
-key-value observing compliant when the RLMArray is attached to a persisted
-RLMObject (RLMArrays on standalone RLMObjects will never become invalidated).</p>
+<p><code>RLMArray</code> supports array key-value observing on <code>RLMArray</code> properties on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>
+subclasses, and the <code>invalidated</code> property on <code>RLMArray</code> instances themselves is
+key-value observing compliant when the <code>RLMArray</code> is attached to a managed
+<code><a href="../Classes/RLMObject.html">RLMObject</a></code> (<code>RLMArray</code>s on unmanaged <code><a href="../Classes/RLMObject.html">RLMObject</a></code>s will never become invalidated).</p>
 
-<p>Because RLMArrays are attached to the object which they are a property of, they
+<p>Because <code>RLMArray</code>s are attached to the object which they are a property of, they
 do not require using the mutable collection proxy objects from
 <code>-mutableArrayValueForKey:</code> or KVC-compatible mutation methods on the containing
-object. Instead, you can call the mutation methods on the RLMArray directly.</p>
+object. Instead, you can call the mutation methods on the <code>RLMArray</code> directly.</p>
 
           </section>
           <section class="section task-group-section">
@@ -226,7 +226,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Number of objects in the array.</p>
+                        <p>The number of objects in the array.</p>
 
                       </div>
                       <div class="declaration">
@@ -243,7 +243,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMArray.h#L68">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMArray.h#L67">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -261,7 +261,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The class name (i.e. type) of the RLMObjects contained in this RLMArray.</p>
+                        <p>The class name (i.e. type) of the <code><a href="../Classes/RLMObject.html">RLMObject</a></code>s contained in the array.</p>
 
                       </div>
                       <div class="declaration">
@@ -278,7 +278,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMArray.h#L73">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMArray.h#L72">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -296,7 +296,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The Realm in which this array is persisted. Returns nil for standalone arrays.</p>
+                        <p>The Realm which manages the array. Returns <code>nil</code> for unmanaged arrays.</p>
 
                       </div>
                       <div class="declaration">
@@ -313,7 +313,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMArray.h#L78">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMArray.h#L77">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -331,7 +331,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Indicates if an array can no longer be accessed.</p>
+                        <p>Indicates if the array can no longer be accessed.</p>
 
                       </div>
                       <div class="declaration">
@@ -348,7 +348,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMArray.h#L83">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMArray.h#L82">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -415,11 +415,11 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An RLMObject of the type contained in this RLMArray.</p>
+                        <p>An <code><a href="../Classes/RLMObject.html">RLMObject</a></code> of the type contained in the array.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMArray.h#L94">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMArray.h#L93">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -439,7 +439,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                       <div class="abstract">
                         <p>Returns the first object in the array.</p>
 
-<p>Returns <code>nil</code> if called on an empty RLMArray.</p>
+<p>Returns <code>nil</code> if called on an empty array.</p>
 
                       </div>
                       <div class="declaration">
@@ -457,11 +457,11 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An RLMObject of the type contained in this RLMArray.</p>
+                        <p>An <code><a href="../Classes/RLMObject.html">RLMObject</a></code> of the type contained in the array.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMArray.h#L103">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMArray.h#L102">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -481,7 +481,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                       <div class="abstract">
                         <p>Returns the last object in the array.</p>
 
-<p>Returns <code>nil</code> if called on an empty RLMArray.</p>
+<p>Returns <code>nil</code> if called on an empty array.</p>
 
                       </div>
                       <div class="declaration">
@@ -499,11 +499,11 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An RLMObject of the type contained in this RLMArray.</p>
+                        <p>An <code><a href="../Classes/RLMObject.html">RLMObject</a></code> of the type contained in the array.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMArray.h#L112">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMArray.h#L111">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -536,7 +536,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>This method can only be called during a write transaction.</p>
+    <p>This method may only be called during a write transaction.</p>
 
 </div>
 
@@ -566,7 +566,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>An RLMObject of the type contained in this RLMArray.</p>
+                                  <p>An <code>RLMObject</code> of the type contained in the array.</p>
 
                                 </div>
                               </td>
@@ -575,7 +575,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMArray.h#L125">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMArray.h#L124">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -593,11 +593,11 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Adds an array of objects at the end of the array.</p>
+                        <p>Adds an array of objects to the end of the array.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>This method can only be called during a write transaction.</p>
+    <p>This method may only be called during a write transaction.</p>
 
 </div>
 
@@ -627,8 +627,8 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>An enumerable object such as NSArray or RLMResults which contains objects of the
-               same class as this RLMArray.</p>
+                                  <p>An enumerable object such as <code>NSArray</code> or <code>RLMResults</code> which contains objects of the
+               same class as the array.</p>
 
                                 </div>
                               </td>
@@ -637,7 +637,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMArray.h#L135">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMArray.h#L134">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -657,11 +657,11 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                       <div class="abstract">
                         <p>Inserts an object at the given index.</p>
 
-<p>Throws an exception when the index exceeds the bounds of this RLMArray.</p>
+<p>Throws an exception if the index exceeds the bounds of the array.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>This method can only be called during a write transaction.</p>
+    <p>This method may only be called during a write transaction.</p>
 
 </div>
 
@@ -691,7 +691,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>An RLMObject of the type contained in this RLMArray.</p>
+                                  <p>An <code>RLMObject</code> of the type contained in the array.</p>
 
                                 </div>
                               </td>
@@ -704,7 +704,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The array index at which the object is inserted.</p>
+                                  <p>The index at which to insert the object.</p>
 
                                 </div>
                               </td>
@@ -713,7 +713,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMArray.h#L147">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMArray.h#L146">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -731,13 +731,13 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Removes an object at a given index.</p>
+                        <p>Removes an object at the given index.</p>
 
-<p>Throws an exception when the index exceeds the bounds of this RLMArray.</p>
+<p>Throws an exception if the index exceeds the bounds of the array.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>This method can only be called during a write transaction.</p>
+    <p>This method may only be called during a write transaction.</p>
 
 </div>
 
@@ -776,7 +776,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMArray.h#L158">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMArray.h#L157">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -794,11 +794,11 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Removes the last object in an RLMArray.</p>
+                        <p>Removes the last object in the array.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    This method can only be called during a write transaction.
+    This method may only be called during a write transaction.
 
 </div>
 
@@ -817,7 +817,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMArray.h#L165">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMArray.h#L164">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -835,11 +835,11 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Removes all objects from an RLMArray.</p>
+                        <p>Removes all objects from the array.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    This method can only be called during a write transaction.
+    This method may only be called during a write transaction.
 
 </div>
 
@@ -858,7 +858,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMArray.h#L172">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMArray.h#L171">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -878,11 +878,11 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                       <div class="abstract">
                         <p>Replaces an object at the given index with a new object.</p>
 
-<p>Throws an exception when the index exceeds the bounds of this RLMArray.</p>
+<p>Throws an exception if the index exceeds the bounds of the array.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>This method can only be called during a write transaction.</p>
+    <p>This method may only be called during a write transaction.</p>
 
 </div>
 
@@ -913,7 +913,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The array index of the object to be replaced.</p>
+                                  <p>The index of the object to be replaced.</p>
 
                                 </div>
                               </td>
@@ -926,7 +926,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>An object (of the same type as returned from the objectClassName selector).</p>
+                                  <p>An object (of the same type as returned from the <code>objectClassName</code> selector).</p>
 
                                 </div>
                               </td>
@@ -935,7 +935,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMArray.h#L184">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMArray.h#L183">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -955,11 +955,11 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                       <div class="abstract">
                         <p>Moves the object at the given source index to the given destination index.</p>
 
-<p>Throws an exception when the index exceeds the bounds of this RLMArray.</p>
+<p>Throws an exception if the index exceeds the bounds of the array.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>This method can only be called during a write transaction.</p>
+    <p>This method may only be called during a write transaction.</p>
 
 </div>
 
@@ -1012,7 +1012,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMArray.h#L196">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMArray.h#L195">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1030,13 +1030,13 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Exchanges the objects in the array at given indexes.</p>
+                        <p>Exchanges the objects in the array at given indices.</p>
 
-<p>Throws an exception when either index exceeds the bounds of this RLMArray.</p>
+<p>Throws an exception if either index exceeds the bounds of the array.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>This method can only be called during a write transaction.</p>
+    <p>This method may only be called during a write transaction.</p>
 
 </div>
 
@@ -1067,7 +1067,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The index of the object with which to replace the object at index <code>index2</code>.</p>
+                                  <p>The index of the object which should replace the object at index <code>index2</code>.</p>
 
                                 </div>
                               </td>
@@ -1080,7 +1080,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The index of the object with which to replace the object at index <code>index1</code>.</p>
+                                  <p>The index of the object which should replace the object at index <code>index1</code>.</p>
 
                                 </div>
                               </td>
@@ -1089,7 +1089,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMArray.h#L208">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMArray.h#L207">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1118,9 +1118,9 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Gets the index of an object.</p>
+                        <p>Returns the index of an object in the array.</p>
 
-<p>Returns NSNotFound if the object is not found in this RLMArray.</p>
+<p>Returns <code>NSNotFound</code> if the object is not found in the array.</p>
 
                       </div>
                       <div class="declaration">
@@ -1148,7 +1148,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>An object (of the same type as returned from the objectClassName selector).</p>
+                                  <p>An object (of the same type as returned from the <code>objectClassName</code> selector).</p>
 
                                 </div>
                               </td>
@@ -1157,7 +1157,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMArray.h#L219">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMArray.h#L218">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1175,7 +1175,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Gets the index of the first object matching the predicate.</p>
+                        <p>Returns the index of the first object in the array matching the predicate.</p>
 
                       </div>
                       <div class="declaration">
@@ -1198,7 +1198,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The predicate format string which can accept variable arguments.</p>
+                                  <p>A predicate format string, optionally followed by a variable number of arguments.</p>
 
                                 </div>
                               </td>
@@ -1208,11 +1208,11 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>Index of object or NSNotFound if the object is not found in this RLMArray.</p>
+                        <p>The index of the object, or <code>NSNotFound</code> if the object is not found in the array.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMArray.h#L228">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMArray.h#L227">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1230,7 +1230,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Gets the index of the first object matching the predicate.</p>
+                        <p>Returns the index of the first object in the array matching the predicate.</p>
 
                       </div>
                       <div class="declaration">
@@ -1258,7 +1258,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The predicate to filter the objects.</p>
+                                  <p>The predicate with which to filter the objects.</p>
 
                                 </div>
                               </td>
@@ -1268,11 +1268,11 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>Index of object or NSNotFound if the object is not found in this RLMArray.</p>
+                        <p>The index of the object, or <code>NSNotFound</code> if the object is not found in the array.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMArray.h#L240">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMArray.h#L239">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1290,7 +1290,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Get objects matching the given predicate in the RLMArray.</p>
+                        <p>Returns all the objects matching the given predicate in the array.</p>
 
                       </div>
                       <div class="declaration">
@@ -1314,7 +1314,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The predicate format string which can accept variable arguments.</p>
+                                  <p>A predicate format string, optionally followed by a variable number of arguments.</p>
 
                                 </div>
                               </td>
@@ -1324,11 +1324,11 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An RLMResults of objects that match the given predicate</p>
+                        <p>An <code><a href="../Classes/RLMResults.html">RLMResults</a></code> of objects that match the given predicate.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMArray.h#L249">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMArray.h#L248">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1346,7 +1346,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Get objects matching the given predicate in the RLMArray.</p>
+                        <p>Returns all the objects matching the given predicate in the array.</p>
 
                       </div>
                       <div class="declaration">
@@ -1375,7 +1375,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The predicate to filter the objects.</p>
+                                  <p>The predicate with which to filter the objects.</p>
 
                                 </div>
                               </td>
@@ -1385,11 +1385,11 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An RLMResults of objects that match the given predicate</p>
+                        <p>An <code><a href="../Classes/RLMResults.html">RLMResults</a></code> of objects that match the given predicate</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMArray.h#L261">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMArray.h#L260">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1407,7 +1407,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Get a sorted RLMResults from an RLMArray</p>
+                        <p>Returns a sorted <code><a href="../Classes/RLMResults.html">RLMResults</a></code> from the array.</p>
 
                       </div>
                       <div class="declaration">
@@ -1450,7 +1450,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The direction to sort by.</p>
+                                  <p>The direction to sort in.</p>
 
                                 </div>
                               </td>
@@ -1460,11 +1460,11 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An RLMResults sorted by the specified property.</p>
+                        <p>An <code><a href="../Classes/RLMResults.html">RLMResults</a></code> sorted by the specified property.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMArray.h#L271">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMArray.h#L270">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1482,7 +1482,7 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Get a sorted RLMResults from an RLMArray</p>
+                        <p>Returns a sorted <code><a href="../Classes/RLMResults.html">RLMResults</a></code> from the array.</p>
 
                       </div>
                       <div class="declaration">
@@ -1521,11 +1521,11 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An RLMResults sorted by the specified properties.</p>
+                        <p>An <code><a href="../Classes/RLMResults.html">RLMResults</a></code> sorted by the specified properties.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMArray.h#L280">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMArray.h#L279">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1554,23 +1554,23 @@ object. Instead, you can call the mutation methods on the RLMArray directly.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Register a block to be called each time the RLMArray changes.</p>
+                        <p>Registers a block to be called each time the array changes.</p>
 
 <p>The block will be asynchronously called with the initial array, and then
 called again after each write transaction which changes any of the objects in
 the array, which objects are in the results, or the order of the objects in the
 array.</p>
 
-<p>The change parameter will be <code>nil</code> the first time the block is called with the
-initial array. For each call after that, it will contain information about
+<p>The <code>changes</code> parameter will be <code>nil</code> the first time the block is called.
+For each call after that, it will contain information about
 which rows in the array were added, removed or modified. If a write transaction
-did not modify any objects in this array, the block is not called at all.
-See the RLMCollectionChange documentation for information on how the changes
-are reported and an example of updating a UITableView.</p>
+did not modify any objects in the array, the block is not called at all.
+See the <code><a href="../Classes/RLMCollectionChange.html">RLMCollectionChange</a></code> documentation for information on how the changes
+are reported and an example of updating a <code>UITableView</code>.</p>
 
 <p>If an error occurs the block will be called with <code>nil</code> for the results
 parameter and a non-<code>nil</code> error. Currently the only errors that can occur are
-when opening the RLMRealm on the background worker thread.</p>
+when opening the Realm on the background worker thread.</p>
 
 <p>Notifications are delivered via the standard run loop, and so can&rsquo;t be
 delivered while the run loop is blocked by other activity. When
@@ -1604,14 +1604,13 @@ to be sent to the block. To stop receiving updates, call <code>-stop</code> on t
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     This method cannot be called during a write transaction, or when the
-     containing realm is read-only.
+     containing Realm is read-only.
 
 </div>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>This method can only be called on RLMArray object which has been add
-     to or retrieved from a Realm.</p>
+    <p>This method may only be called on a managed array.</p>
 
 </div>
 
@@ -1657,7 +1656,7 @@ to be sent to the block. To stop receiving updates, call <code>-stop</code> on t
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMArray.h#L345-L347">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMArray.h#L343-L345">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1686,8 +1685,8 @@ to be sent to the block. To stop receiving updates, call <code>-stop</code> on t
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>-[RLMArray init] is not available because RLMArrays cannot be created directly.
-RLMArray properties on RLMObjects are lazily created when accessed, or can be obtained by querying a Realm.</p>
+                        <p><code>-[RLMArray init]</code> is not available because <code><a href="../Classes/RLMArray.html">RLMArray</a></code>s cannot be created directly.
+<code><a href="../Classes/RLMArray.html">RLMArray</a></code> properties on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>s are lazily created when accessed, or can be obtained by querying a Realm.</p>
 
                       </div>
                       <div class="declaration">
@@ -1699,7 +1698,7 @@ RLMArray properties on RLMObjects are lazily created when accessed, or can be ob
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMArray.h#L355">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMArray.h#L353">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1717,8 +1716,8 @@ RLMArray properties on RLMObjects are lazily created when accessed, or can be ob
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>+[RLMArray new] is not available because RLMArrays cannot be created directly.
-RLMArray properties on RLMObjects are lazily created when accessed, or can be obtained by querying a Realm.</p>
+                        <p><code>+[RLMArray new]</code> is not available because <code><a href="../Classes/RLMArray.html">RLMArray</a></code>s cannot be created directly.
+<code><a href="../Classes/RLMArray.html">RLMArray</a></code> properties on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>s are lazily created when accessed, or can be obtained by querying a Realm.</p>
 
                       </div>
                       <div class="declaration">
@@ -1730,7 +1729,7 @@ RLMArray properties on RLMObjects are lazily created when accessed, or can be ob
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMArray.h#L361">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMArray.h#L359">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

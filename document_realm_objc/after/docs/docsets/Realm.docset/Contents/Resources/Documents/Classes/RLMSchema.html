@@ -33,7 +33,7 @@
       <div class="content-wrapper">
         <p><a href="../index.html">Realm Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fobjc%2F0%2E103%2E0%2Fapi%2Fdocsets%2FRealm%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fobjc%2F1%2E0%2E0%2Fapi%2Fdocsets%2FRealm%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -170,9 +170,9 @@
 
                 </div>
               </div>
-            <p>This class represents the collection of model object schemas persisted to Realm.</p>
+            <p><code>RLMSchema</code> instances represent collections of model object schemas persisted to a Realm.</p>
 
-<p>When using Realm, RLMSchema objects allow performing migrations and
+<p>When using Realm, <code>RLMSchema</code> instances allow performing migrations and
 introspecting the database&rsquo;s schema.</p>
 
 <p>Schemas map to collections of tables in the core database.</p>
@@ -201,12 +201,13 @@ introspecting the database&rsquo;s schema.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>An NSArray containing RLMObjectSchemas for all object types in this Realm. Meant
-to be used during migrations for dynamic introspection.</p>
+                        <p>An <code>NSArray</code> containing <code><a href="../Classes/RLMObjectSchema.html">RLMObjectSchema</a></code>s for all object types in the Realm.</p>
+
+<p>This property is intended to be used during migrations for dynamic introspection.</p>
 
 <div class="aside aside-see">
     <p class="aside-title">See</p>
-    RLMObjectSchema
+    <code><a href="../Classes/RLMObjectSchema.html">RLMObjectSchema</a></code>
 
 </div>
 
@@ -226,7 +227,7 @@ to be used during migrations for dynamic introspection.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMSchema.h#L43">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMSchema.h#L44">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -255,11 +256,11 @@ to be used during migrations for dynamic introspection.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns an RLMObjectSchema for the given class name in this RLMSchema.</p>
+                        <p>Returns an <code><a href="../Classes/RLMObjectSchema.html">RLMObjectSchema</a></code> for the given class name in the schema.</p>
 
 <div class="aside aside-see">
     <p class="aside-title">See</p>
-    <p>RLMObjectSchema</p>
+    <p><code><a href="../Classes/RLMObjectSchema.html">RLMObjectSchema</a></code></p>
 
 </div>
 
@@ -299,11 +300,11 @@ to be used during migrations for dynamic introspection.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>RLMObjectSchema for the given class in this RLMSchema.</p>
+                        <p>An <code><a href="../Classes/RLMObjectSchema.html">RLMObjectSchema</a></code> for the given class in the schema.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMSchema.h#L55">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMSchema.h#L56">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -321,12 +322,13 @@ to be used during migrations for dynamic introspection.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Look up an RLMObjectSchema for the given class name in this Realm. Throws 
-an exception if there is no object of type className in this RLMSchema instance.</p>
+                        <p>Looks up and returns an <code><a href="../Classes/RLMObjectSchema.html">RLMObjectSchema</a></code> for the given class name in the Realm.</p>
+
+<p>If there is no object of type <code>className</code> in the schema, an exception will be thrown.</p>
 
 <div class="aside aside-see">
     <p class="aside-title">See</p>
-    <p>RLMObjectSchema</p>
+    <p><code><a href="../Classes/RLMObjectSchema.html">RLMObjectSchema</a></code></p>
 
 </div>
 
@@ -367,11 +369,11 @@ an exception if there is no object of type className in this RLMSchema instance.
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>RLMObjectSchema for the given class in this Realm.</p>
+                        <p>An <code><a href="../Classes/RLMObjectSchema.html">RLMObjectSchema</a></code> for the given class in this Realm.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMSchema.h#L66">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMSchema.h#L68">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -389,7 +391,7 @@ an exception if there is no object of type className in this RLMSchema instance.
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns YES if equal to schema</p>
+                        <p>Returns a Boolean value that indicates whether two <code><a href="../Classes/RLMSchema.html">RLMSchema</a></code> instances are equivalent.</p>
 
                       </div>
                       <div class="declaration">
@@ -406,7 +408,7 @@ an exception if there is no object of type className in this RLMSchema instance.
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMSchema.h#L71">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMSchema.h#L73">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

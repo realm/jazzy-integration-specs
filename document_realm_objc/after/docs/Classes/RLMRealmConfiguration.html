@@ -33,7 +33,7 @@
       <div class="content-wrapper">
         <p><a href="../index.html">Realm Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fobjc%2F0%2E103%2E0%2Fapi%2Fdocsets%2FRealm%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fobjc%2F1%2E0%2E0%2Fapi%2Fdocsets%2FRealm%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -170,15 +170,17 @@
 
                 </div>
               </div>
-            <p>An <code>RLMRealmConfiguration</code> is used to describe the different options used to
-create an <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> instance.</p>
+            <p>An <code>RLMRealmConfiguration</code> instance describes the different options used to
+create an instance of a Realm.</p>
 
-<p><code>RLMRealmConfiguration</code> instances are just plain NSObjects, and unlike RLMRealm
-and RLMObjects can be freely shared between threads as long as you do not
-mutate them. Creating configuration objects for class subsets (by setting the
-<code>objectClasses</code> property) can be expensive, and so you will normally want to
-cache and reuse a single configuration object for each distinct configuration
-that you are using rather than creating a new one each time you open a Realm.</p>
+<p><code>RLMRealmConfiguration</code> instances are just plain <code>NSObject</code>s. Unlike <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code>s
+and <code><a href="../Classes/RLMObject.html">RLMObject</a></code>s, they can be freely shared between threads as long as you do not
+mutate them.</p>
+
+<p>Creating configuration objects for class subsets (by setting the
+<code>objectClasses</code> property) can be expensive. Because of this, you will normally want to
+cache and reuse a single configuration object for each distinct configuration rather than 
+creating a new object each time you open a Realm.</p>
 
           </section>
           <section class="section task-group-section">
@@ -227,7 +229,7 @@ configuration is explicitly specified (i.e. <code>+[RLMRealm defaultRealm]</code
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealmConfiguration.h#L45">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMRealmConfiguration.h#L47">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -282,7 +284,7 @@ configuration is explicitly specified (i.e. <code>+[RLMRealm defaultRealm]</code
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealmConfiguration.h#L52">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMRealmConfiguration.h#L54">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -311,7 +313,7 @@ configuration is explicitly specified (i.e. <code>+[RLMRealm defaultRealm]</code
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The local URL to the realm file. Mutually exclusive with <code><a href="../Classes/RLMRealmConfiguration.html#/c:objc(cs)RLMRealmConfiguration(py)inMemoryIdentifier">inMemoryIdentifier</a></code>.</p>
+                        <p>The local URL of the Realm file. Mutually exclusive with <code><a href="../Classes/RLMRealmConfiguration.html#/c:objc(cs)RLMRealmConfiguration(py)inMemoryIdentifier">inMemoryIdentifier</a></code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -328,7 +330,7 @@ configuration is explicitly specified (i.e. <code>+[RLMRealm defaultRealm]</code
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealmConfiguration.h#L57">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMRealmConfiguration.h#L59">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -363,7 +365,7 @@ configuration is explicitly specified (i.e. <code>+[RLMRealm defaultRealm]</code
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealmConfiguration.h#L60">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMRealmConfiguration.h#L62">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -381,7 +383,7 @@ configuration is explicitly specified (i.e. <code>+[RLMRealm defaultRealm]</code
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>64-byte key to use to encrypt the data.</p>
+                        <p>A 64-byte key to use to encrypt the data, or <code>nil</code> if encryption is not enabled.</p>
 
                       </div>
                       <div class="declaration">
@@ -398,7 +400,7 @@ configuration is explicitly specified (i.e. <code>+[RLMRealm defaultRealm]</code
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealmConfiguration.h#L63">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMRealmConfiguration.h#L65">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -416,7 +418,7 @@ configuration is explicitly specified (i.e. <code>+[RLMRealm defaultRealm]</code
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Whether the Realm is read-only (must be YES for read-only files).</p>
+                        <p>Whether the Realm is read-only (must be <code>YES</code> for read-only files).</p>
 
                       </div>
                       <div class="declaration">
@@ -433,7 +435,7 @@ configuration is explicitly specified (i.e. <code>+[RLMRealm defaultRealm]</code
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealmConfiguration.h#L66">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMRealmConfiguration.h#L68">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -468,7 +470,7 @@ configuration is explicitly specified (i.e. <code>+[RLMRealm defaultRealm]</code
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealmConfiguration.h#L69">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMRealmConfiguration.h#L71">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -499,7 +501,7 @@ configuration is explicitly specified (i.e. <code>+[RLMRealm defaultRealm]</code
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealmConfiguration.h#L72">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMRealmConfiguration.h#L74">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -517,14 +519,14 @@ configuration is explicitly specified (i.e. <code>+[RLMRealm defaultRealm]</code
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Recreate the Realm file with the provided schema if a migration is required.
+                        <p>Whether to recreate the Realm file with the provided schema if a migration is required.
 This is the case when the stored schema differs from the provided schema or
 the stored schema version differs from the version on this configuration.
-This deletes the file if a migration would otherwise be required or run.</p>
+Setting this property to <code>YES</code> deletes the file if a migration would otherwise be required or executed.</p>
 
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
-    This doesn&rsquo;t disable file format migrations.
+    Setting this property to <code>YES</code> doesn&rsquo;t disable file format migrations.
 
 </div>
 
@@ -543,7 +545,7 @@ This deletes the file if a migration would otherwise be required or run.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealmConfiguration.h#L82">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMRealmConfiguration.h#L84">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -578,7 +580,7 @@ This deletes the file if a migration would otherwise be required or run.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealmConfiguration.h#L85">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMRealmConfiguration.h#L87">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

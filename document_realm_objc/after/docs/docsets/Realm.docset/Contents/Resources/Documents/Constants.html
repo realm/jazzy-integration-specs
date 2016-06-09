@@ -32,7 +32,7 @@
       <div class="content-wrapper">
         <p><a href="index.html">Realm Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fobjc%2F0%2E103%2E0%2Fapi%2Fdocsets%2FRealm%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fobjc%2F1%2E0%2E0%2Fapi%2Fdocsets%2FRealm%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -189,12 +189,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Posted by RLMRealm when the data in the realm has changed.</p>
+                        <p>This notification is posted by a Realm when the data in that Realm has changed.</p>
 
-<p>DidChange are posted after a realm has been refreshed to reflect a write
-transaction, i.e. when an autorefresh occurs, <code>[RLMRealm refresh]</code> is
-called, after an implicit refresh from <code>[RLMRealm beginWriteTransaction]</code>,
-and after a local write transaction is committed.</p>
+<p>More specifically, this notification is posted after a Realm has been refreshed to
+reflect a write transaction. This can happen when an autorefresh occurs, when
+<code>-[RLMRealm refresh]</code> is called, after an implicit refresh from <code>-[RLMRealm beginWriteTransaction]</code>,
+or after a local write transaction is completed.</p>
 
                       </div>
                       <div class="declaration">
@@ -211,7 +211,7 @@ and after a local write transaction is committed.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMConstants.h#L104">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMConstants.h#L135">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -229,15 +229,17 @@ and after a local write transaction is committed.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Posted by RLMRealm when a write transaction has been committed to an RLMRealm on
-a different thread for the same file. This is not posted if
-<code>[RLMRealm autorefresh]</code> is enabled or if the RLMRealm is
-refreshed before the notifcation has a chance to run.</p>
+                        <p>This notification is posted by a Realm when a write transaction has been
+committed to a Realm on a different thread for the same file.</p>
 
-<p>Realms with autorefresh disabled should normally have a handler for this
-notification which calls <code>[RLMRealm refresh]</code> after doing some work.
-While not refreshing is allowed, it may lead to large Realm files as Realm has
-to keep an extra copy of the data for the un-refreshed RLMRealm.</p>
+<p>It is not posted if <code>-[RLMRealm autorefresh]</code> is enabled, or if the Realm is
+refreshed before the notification has a chance to run.</p>
+
+<p>Realms with autorefresh disabled should normally install a handler for this
+notification which calls <code>-[RLMRealm refresh]</code> after doing some work. Refreshing
+the Realm is optional, but not refreshing the Realm may lead to large Realm
+files. This is because Realm must keep an extra copy of the data for the stale
+Realm.</p>
 
                       </div>
                       <div class="declaration">
@@ -254,7 +256,7 @@ to keep an extra copy of the data for the un-refreshed RLMRealm.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMConstants.h#L117">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMConstants.h#L150">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -283,7 +285,7 @@ to keep an extra copy of the data for the un-refreshed RLMRealm.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Schema version used for uninitialized Realms</p>
+                        <p>The schema version used for uninitialized Realms</p>
 
                       </div>
                       <div class="declaration">
@@ -300,7 +302,7 @@ to keep an extra copy of the data for the un-refreshed RLMRealm.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMConstants.h#L122">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMConstants.h#L155">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -318,7 +320,7 @@ to keep an extra copy of the data for the un-refreshed RLMRealm.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Error domain used in Realm.</p>
+                        <p>An error domain identifying Realm-specific errors.</p>
 
                       </div>
                       <div class="declaration">
@@ -335,7 +337,7 @@ to keep an extra copy of the data for the un-refreshed RLMRealm.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMConstants.h#L125">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMConstants.h#L158">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -353,7 +355,7 @@ to keep an extra copy of the data for the un-refreshed RLMRealm.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Error domain used for non-specific system errors.</p>
+                        <p>An error domain identifying non-specific system errors.</p>
 
                       </div>
                       <div class="declaration">
@@ -370,7 +372,7 @@ to keep an extra copy of the data for the un-refreshed RLMRealm.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMConstants.h#L128">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMConstants.h#L161">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -388,7 +390,7 @@ to keep an extra copy of the data for the un-refreshed RLMRealm.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Key for name of Realm exceptions.</p>
+                        <p>The corresponding value is the name of an exception thrown by Realm.</p>
 
                       </div>
                       <div class="declaration">
@@ -405,7 +407,7 @@ to keep an extra copy of the data for the un-refreshed RLMRealm.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMConstants.h#L131">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMConstants.h#L164">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -423,7 +425,7 @@ to keep an extra copy of the data for the un-refreshed RLMRealm.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Key for Realm file version.</p>
+                        <p>The corresponding value is a Realm file version.</p>
 
                       </div>
                       <div class="declaration">
@@ -440,7 +442,7 @@ to keep an extra copy of the data for the un-refreshed RLMRealm.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMConstants.h#L134">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMConstants.h#L167">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -458,7 +460,7 @@ to keep an extra copy of the data for the un-refreshed RLMRealm.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Key for Realm core version.</p>
+                        <p>The corresponding key is the version of the underlying database engine.</p>
 
                       </div>
                       <div class="declaration">
@@ -475,7 +477,7 @@ to keep an extra copy of the data for the un-refreshed RLMRealm.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMConstants.h#L137">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMConstants.h#L170">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -493,7 +495,7 @@ to keep an extra copy of the data for the un-refreshed RLMRealm.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Key for Realm invalidated property name.</p>
+                        <p>The corresponding key is the Realm invalidated property name.</p>
 
                       </div>
                       <div class="declaration">
@@ -510,7 +512,7 @@ to keep an extra copy of the data for the un-refreshed RLMRealm.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMConstants.h#L140">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMConstants.h#L173">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

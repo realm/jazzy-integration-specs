@@ -32,7 +32,7 @@
       <div class="content-wrapper">
         <p><a href="index.html">RealmSwift Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F0%2E103%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F1%2E0%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -208,17 +208,15 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Enumeration that describes the error codes within the Realm error domain.
-The values can be used to catch a variety of <em>recoverable</em> errors, especially those
-happening when initializing a Realm instance.</p>
+                        <p><code>Error</code> is an enum representing all recoverable errors. It is associated with the
+Realm error domain specified in <code>RLMErrorDomain</code>.</p>
 
-<pre class="highlight plaintext"><code>let realm: Realm?
-do {
-    realm = Realm()
-} catch RealmSwift.Error.IncompatibleLockFile() {
-    print("Realm Browser app may be attached to Realm on device?")
-}
-</code></pre>
+<p>let realm: Realm?
+   do {
+       realm = Realm()
+   } catch RealmSwift.Error.IncompatibleLockFile() {
+       print(<q>Realm Browser app may be attached to Realm on device?</q>)
+   }</p>
 
                         <a href="Enums/Error.html" class="slightly-smaller">See more</a>
                       </div>
@@ -231,7 +229,7 @@ do {
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Error.swift#L35-L103">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Error.swift#L34-L112">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -260,7 +258,7 @@ do {
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A notification due to changes to a realm.</p>
+                        <p>A notification indicating that changes were made to a Realm.</p>
 
                         <a href="Enums/Notification.html" class="slightly-smaller">See more</a>
                       </div>
@@ -273,7 +271,7 @@ do {
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L600-L621">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Realm.swift#L594-L616">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -295,14 +293,17 @@ do {
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>RealmCollectionChange is passed to the notification blocks for Realm
-collections, and reports the current state of the collection and what changes
-were made to the collection since the last time the notification was called.</p>
+                        <p>A <code>RealmCollectionChange</code> value encapsulates information about changes to collections
+that are reported by Realm notifications.</p>
 
-<p>The arrays of indices in the .Update case follow UITableView&rsquo;s batching
-conventions, and can be passed as-is to a table view&rsquo;s batch update functions
-after converting to index paths in the appropriate section. For example, for a
-simple one-section table view, you can do the following:</p>
+<p>The change information is available in two formats: a simple array of row
+indices in the collection for each type of change, and an array of index paths
+in a requested section suitable for passing directly to <code>UITableView</code>&rsquo;s batch
+update methods.</p>
+
+<p>The arrays of indices in the <code>.Update</code> case follow <code>UITableView</code>&rsquo;s batching
+conventions, and can be passed as-is to a table view&rsquo;s batch update functions after being converted to index paths.
+For example, for a simple one-section table view, you can do the following:</p>
 
 <p>self.notificationToken = results.addNotificationBlock { changes
        switch changes {
@@ -339,7 +340,7 @@ simple one-section table view, you can do the following:</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/RealmCollectionType.swift#L77-L114">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/RealmCollectionType.swift#L79-L115">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

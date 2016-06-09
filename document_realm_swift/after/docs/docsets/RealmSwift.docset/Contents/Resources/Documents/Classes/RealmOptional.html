@@ -33,7 +33,7 @@
       <div class="content-wrapper">
         <p><a href="../index.html">RealmSwift Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F0%2E103%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F1%2E0%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -196,11 +196,10 @@
 
                 </div>
               </div>
-            <p>A <code>RealmOptional</code> represents a optional value for types that can&rsquo;t be directly
-declared as <code>dynamic</code> in Swift, such as <code>Int</code>s, <code>Float</code>, <code>Double</code>, and <code>Bool</code>.</p>
+            <p>A <code>RealmOptional</code> instance represents a optional value for types that can&rsquo;t be directly declared as <code>dynamic</code> in Swift,
+such as <code>Int</code>, <code>Float</code>, <code>Double</code>, and <code>Bool</code>.</p>
 
-<p>It encapsulates a value in its <code>value</code> property, which is the only way to mutate
-a <code>RealmOptional</code> property on an <code><a href="../Classes/Object.html">Object</a></code>.</p>
+<p>To change the underlying value stored by a <code>RealmOptional</code> instance, mutate the instance&rsquo;s <code>value</code> property.</p>
 
           </section>
           <section class="section task-group-section">
@@ -231,7 +230,7 @@ a <code>RealmOptional</code> property on an <code><a href="../Classes/Object.htm
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Optional.swift#L71-L78">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Optional.swift#L70-L77">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -249,7 +248,7 @@ a <code>RealmOptional</code> property on an <code><a href="../Classes/Object.htm
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Creates a <code><a href="../Classes/RealmOptional.html">RealmOptional</a></code> with the given default value (defaults to <code>nil</code>).</p>
+                        <p>Creates a <code><a href="../Classes/RealmOptional.html">RealmOptional</a></code> instance encapsulating the given default value.</p>
 
                       </div>
                       <div class="declaration">
@@ -272,7 +271,7 @@ a <code>RealmOptional</code> property on an <code><a href="../Classes/Object.htm
                               </td>
                               <td>
                                 <div>
-                                  <p>The default value for this optional.</p>
+                                  <p>The value to store in the optional, or <code>nil</code> if not specified.</p>
 
                                 </div>
                               </td>
@@ -281,7 +280,7 @@ a <code>RealmOptional</code> property on an <code><a href="../Classes/Object.htm
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Optional.swift#L85-L88">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Optional.swift#L84-L87">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

@@ -33,7 +33,7 @@
       <div class="content-wrapper">
         <p><a href="../index.html">Realm Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fobjc%2F0%2E103%2E0%2Fapi%2Fdocsets%2FRealm%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fobjc%2F1%2E0%2E0%2Fapi%2Fdocsets%2FRealm%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -170,8 +170,10 @@
 
                 </div>
               </div>
-            <p>In Realm you define your model classes by subclassing <code>RLMObject</code> and adding properties to be persisted.
-You then instantiate and use your custom subclasses instead of using the <code>RLMObject</code> class directly.</p>
+            <p><code>RLMObject</code> is a base class for model objects representing data stored in Realms.</p>
+
+<p>Define your model classes by subclassing <code>RLMObject</code> and adding properties to be persisted. 
+Then instantiate and use your custom subclasses instead of using the <code>RLMObject</code> class directly.</p>
 
 <pre class="highlight objective_c"><code><span class="c1">// Dog.h
 </span><span class="k">@interface</span> <span class="nc">Dog</span> <span class="p">:</span> <span class="nc">RLMObject</span>
@@ -192,16 +194,24 @@ You then instantiate and use your custom subclasses instead of using the <code>R
 <li><code>BOOL</code> or <code>bool</code></li>
 <li><code>NSDate</code></li>
 <li><code>NSData</code></li>
-<li><code>NSNumber&lt;X&gt;</code>, where X is one of RLMInt, RLMFloat, RLMDouble or RLMBool, for optional number properties</li>
-<li><code>RLMObject</code> subclasses, so you can have many-to-one relationships.</li>
-<li><code><a href="../Classes/RLMArray.html">RLMArray&lt;X&gt;</a></code>, where X is an <code>RLMObject</code> subclass, so you can have many-to-many relationships.</li>
+<li><code>NSNumber&lt;X&gt;</code>, where <code>X</code> is one of <code>RLMInt</code>, <code>RLMFloat</code>, <code>RLMDouble</code> or <code>RLMBool</code>, for optional number properties</li>
+<li><code>RLMObject</code> subclasses, to model many-to-one relationships.</li>
+<li><code><a href="../Classes/RLMArray.html">RLMArray&lt;X&gt;</a></code>, where <code>X</code> is an <code>RLMObject</code> subclass, to model many-to-many relationships.</li>
 </ul>
 
 <p><a href='#querying' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='querying'>Querying</h3></p>
 
-<p>You can query an object directly via the class methods: <code>allObjects</code>, <code>objectsWhere:</code>, and <code>objectsWithPredicate:</code>.
-These methods allow you to easily query a custom subclass for instances of this class in the
-default Realm. To search in a Realm other than the default Realm use the interface on an RLMRealm instance.</p>
+<p>You can initiate queries directly via the class methods: <code>allObjects</code>, <code>objectsWhere:</code>, and <code>objectsWithPredicate:</code>.
+These methods allow you to easily query a custom subclass for instances of that class in the default Realm.</p>
+
+<p>To search in a Realm other than the default Realm, use the <code>allObjectsInRealm:</code>, <code>objectsInRealm:where:</code>,
+and <code>objectsInRealm:withPredicate:</code> class methods.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code>
+
+</div>
 
 <p><a href='#relationships' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='relationships'>Relationships</h3></p>
 
@@ -211,19 +221,20 @@ default Realm. To search in a Realm other than the default Realm use the interfa
 
 <p>All <code>RLMObject</code> properties (including properties you create in subclasses) are
 <a href="https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/KeyValueObserving/KeyValueObserving.html">Key-Value Observing compliant</a>,
-except for <code>realm</code> and <code>objectSchema</code>. There are several Realm-specific things
-to keep in mind when observing Realm objects:</p>
+except for <code>realm</code> and <code>objectSchema</code>.</p>
+
+<p>Keep the following tips in mind when observing Realm objects:</p>
 
 <ol>
 <li>Unlike <code>NSMutableArray</code> properties, <code><a href="../Classes/RLMArray.html">RLMArray</a></code> properties do not require
 using the proxy object returned from <code>-mutableArrayValueForKey:</code>, or defining
 KVC mutation methods on the containing class. You can simply call methods on
-the RLMArray directly and the changes will be observed by the containing
+the <code><a href="../Classes/RLMArray.html">RLMArray</a></code> directly; any changes will be automatically observed by the containing
 object.</li>
-<li>Standalone <code>RLMObjects</code> cannot be added to a Realm while they have any
+<li>Unmanaged <code>RLMObject</code> instances cannot be added to a Realm while they have any
 observed properties.</li>
-<li>Modifying persisted <code>RLMObjects</code> in <code>-observeValueForKeyPath:ofObject:change:context:</code>
-is problematic. Properties may change when the Realm is not in a write
+<li>Modifying managed <code>RLMObject</code>s within <code>-observeValueForKeyPath:ofObject:change:context:</code>
+is not recommended. Properties may change even when the Realm is not in a write
 transaction (for example, when <code>-[RLMRealm refresh]</code> is called after changes
 are made on a different thread), and notifications sent prior to the change
 being applied (when <code>NSKeyValueObservingOptionPrior</code> is used) may be sent at
@@ -254,14 +265,13 @@ times when you <em>cannot</em> begin a write transaction.</li>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Initialize a standalone RLMObject</p>
+                        <p>Initializes an unmanaged instance of a Realm object.</p>
 
-<p>Initialize an unpersisted instance of this object.
-Call addObject: on an RLMRealm to add standalone object to a realm.</p>
+<p>Call <code>addObject:</code> on a <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> instance to add an unmanaged object into that Realm.</p>
 
 <div class="aside aside-see">
     <p class="aside-title">See</p>
-    [RLMRealm addObject:]:
+    <code>[RLMRealm addObject:]</code>
 
 </div>
 
@@ -280,7 +290,7 @@ Call addObject: on an RLMRealm to add standalone object to a realm.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMObject.h#L100">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMObject.h#L105">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -298,14 +308,15 @@ Call addObject: on an RLMRealm to add standalone object to a realm.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Initialize a standalone RLMObject with values from an NSArray or NSDictionary</p>
+                        <p>Initializes an unmanaged instance of a Realm object.</p>
 
-<p>Initialize an unpersisted instance of this object.
-Call addObject: on an RLMRealm to add standalone object to a realm.</p>
+<p>Pass in an <code>NSArray</code> or <code>NSDictionary</code> instance to set the values of the object&rsquo;s properties.</p>
+
+<p>Call <code>addObject:</code> on a <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> instance to add an unmanaged object into that Realm.</p>
 
 <div class="aside aside-see">
     <p class="aside-title">See</p>
-    [RLMRealm addObject:]:
+    <code>[RLMRealm addObject:]</code>
 
 </div>
 
@@ -324,7 +335,7 @@ Call addObject: on an RLMRealm to add standalone object to a realm.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMObject.h#L111">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMObject.h#L117">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -342,7 +353,7 @@ Call addObject: on an RLMRealm to add standalone object to a realm.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Helper to return the class name for an RLMObject subclass.</p>
+                        <p>Returns the class name for a Realm object subclass.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
@@ -371,7 +382,7 @@ Call addObject: on an RLMRealm to add standalone object to a realm.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMObject.h#L122">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMObject.h#L128">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -389,19 +400,14 @@ Call addObject: on an RLMRealm to add standalone object to a realm.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Create an RLMObject in the default Realm with a given value.</p>
+                        <p>Creates an instance of a Realm object with a given value, and adds it to the default Realm.</p>
 
-<p>Creates an instance of this object and adds it to the default Realm populating
-the object with the given value.</p>
-
-<p>If nested objects are included in the argument, <code>createInDefaultRealmWithValue:</code> will be called
+<p>If nested objects are included in the argument, <code>createInDefaultRealmWithValue:</code> will be recursively called
 on them.</p>
-
-<p>When passing in an NSArray, all properties must be present, valid and in the same order as the properties defined in the model.</p>
 
 <div class="aside aside-see">
     <p class="aside-title">See</p>
-    defaultPropertyValues
+    <p><code>defaultPropertyValues</code></p>
 
 </div>
 
@@ -431,10 +437,11 @@ on them.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The value used to populate the object. This can be any key/value coding compliant
-             object, or a JSON object such as those returned from the methods in NSJSONSerialization, or
-             an NSArray with one object for each persisted property. An exception will be
-             thrown if any required properties are not present and no default is set.</p>
+                                  <p>The value used to populate the object. This can be any key-value coding compliant
+             object, or an array or dictionary returned from the methods in <code>NSJSONSerialization</code>, or
+             an <code>NSArray</code> containing one element for each persisted property. An exception will be
+             thrown if any required properties are not present and those properties were not defined with
+             default values.</p>
 
                                 </div>
                               </td>
@@ -443,7 +450,7 @@ on them.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMObject.h#L142">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMObject.h#L147">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -461,17 +468,14 @@ on them.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Create an RLMObject in a Realm with a given object.</p>
+                        <p>Creates an instance of a Realm object with a given value, and adds it to the specified Realm.</p>
 
-<p>Creates an instance of this object and adds it to the given Realm populating
-the object with the given object.</p>
-
-<p>If nested objects are included in the argument, <code>createInRealm:withValue:</code> will be called
+<p>If nested objects are included in the argument, <code>createInRealm:withValue:</code> will be recursively called
 on them.</p>
 
 <div class="aside aside-see">
     <p class="aside-title">See</p>
-    <p>defaultPropertyValues</p>
+    <p><code>defaultPropertyValues</code></p>
 
 </div>
 
@@ -502,7 +506,7 @@ on them.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The Realm in which this object is persisted.</p>
+                                  <p>The Realm which should manage the newly-created object.</p>
 
                                 </div>
                               </td>
@@ -515,10 +519,11 @@ on them.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The value used to populate the object. This can be any key/value coding compliant
-             object, or a JSON object such as those returned from the methods in NSJSONSerialization, or
-             an NSArray with one object for each persisted property. An exception will be
-             thrown if any required properties are not present and no default is set.</p>
+                                  <p>The value used to populate the object. This can be any key-value coding compliant
+             object, or an array or dictionary returned from the methods in <code>NSJSONSerialization</code>, or
+             an <code>NSArray</code> containing one element for each persisted property. An exception will be
+             thrown if any required properties are not present and those properties were not defined with
+             default values.</p>
 
                                 </div>
                               </td>
@@ -527,7 +532,7 @@ on them.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMObject.h#L163">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMObject.h#L167">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -545,22 +550,21 @@ on them.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Create or update an RLMObject in the default Realm with a given object.</p>
+                        <p>Creates or updates a Realm object within the default Realm.</p>
 
-<p>This method can only be called on object types with a primary key defined. If there is already
-an object with the same primary key value in the default RLMRealm its values are updated and the object
-is returned. Otherwise this creates and populates a new instance of this object in the default Realm.</p>
+<p>This method may only be called on Realm object types with a primary key defined. If there is already
+an object with the same primary key value in the default Realm, its values are updated and the object
+is returned. Otherwise, this method creates and populates a new instance of the object in the default Realm.</p>
 
 <p>If nested objects are included in the argument, <code>createOrUpdateInDefaultRealmWithValue:</code> will be
-called on them if have a primary key (<code>createInDefaultRealmWithValue:</code> otherwise).</p>
+recursively called on them if they have primary keys, <code>createInDefaultRealmWithValue:</code> if they do not.</p>
 
-<p>This is a no-op if the argument is an RLMObject of the same type already backed by the target realm.</p>
-
-<p>When passing in an NSArray, all properties must be present, valid and in the same order as the properties defined in the model.</p>
+<p>If the argument is a Realm object already managed by the default Realm, the argument&rsquo;s type is the same
+as the receiver, and the objects have identical values for their persisted properties, this method does nothing.</p>
 
 <div class="aside aside-see">
     <p class="aside-title">See</p>
-    defaultPropertyValues, primaryKey
+    <p><code>defaultPropertyValues</code>, <code>primaryKey</code></p>
 
 </div>
 
@@ -590,10 +594,11 @@ called on them if have a primary key (<code>createInDefaultRealmWithValue:</code
                               </td>
                               <td>
                                 <div>
-                                  <p>The value used to populate the object. This can be any key/value coding compliant
-             object, or a JSON object such as those returned from the methods in NSJSONSerialization, or
-             an NSArray with one object for each persisted property. An exception will be
-             thrown if any required properties are not present and no default is set.</p>
+                                  <p>The value used to populate the object. This can be any key-value coding compliant
+             object, or an array or dictionary returned from the methods in <code>NSJSONSerialization</code>, or
+             an <code>NSArray</code> containing one element for each persisted property. An exception will be
+             thrown if any required properties are not present and those properties were not defined with
+             default values.</p>
 
                                 </div>
                               </td>
@@ -602,7 +607,7 @@ called on them if have a primary key (<code>createInDefaultRealmWithValue:</code
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMObject.h#L186">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMObject.h#L193">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -620,22 +625,21 @@ called on them if have a primary key (<code>createInDefaultRealmWithValue:</code
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Create or update an RLMObject with a given object.</p>
+                        <p>Creates or updates an Realm object within a specified Realm.</p>
 
-<p>This method can only be called on object types with a primary key defined. If there is already
-an object with the same primary key value in the provided RLMRealm its values are updated and the object
-is returned. Otherwise this creates and populates a new instance of this object in the provided Realm.</p>
+<p>This method may only be called on Realm object types with a primary key defined. If there is already
+an object with the same primary key value in the given Realm, its values are updated and the object
+is returned. Otherwise this method creates and populates a new instance of this object in the given Realm.</p>
 
 <p>If nested objects are included in the argument, <code>createOrUpdateInRealm:withValue:</code> will be
-called on them if have a primary key (<code>createInRealm:withValue:</code> otherwise).</p>
+recursively called on them if they have primary keys, <code>createInRealm:withValue:</code> if they do not.</p>
 
-<p>This is a no-op if the argument is an RLMObject of the same type already backed by the target realm.</p>
-
-<p>When passing in an NSArray, all properties must be present, valid and in the same order as the properties defined in the model.</p>
+<p>If the argument is a Realm object already managed by the given Realm, the argument&rsquo;s type is the same
+as the receiver, and the objects have identical values for their persisted properties, this method does nothing.</p>
 
 <div class="aside aside-see">
     <p class="aside-title">See</p>
-    defaultPropertyValues, primaryKey
+    <p><code>defaultPropertyValues</code>, <code>primaryKey</code></p>
 
 </div>
 
@@ -666,7 +670,7 @@ called on them if have a primary key (<code>createInRealm:withValue:</code> othe
                               </td>
                               <td>
                                 <div>
-                                  <p>The Realm in which this object is persisted.</p>
+                                  <p>The Realm which should own the object.</p>
 
                                 </div>
                               </td>
@@ -679,10 +683,11 @@ called on them if have a primary key (<code>createInRealm:withValue:</code> othe
                               </td>
                               <td>
                                 <div>
-                                  <p>The value used to populate the object. This can be any key/value coding compliant
-             object, or a JSON object such as those returned from the methods in NSJSONSerialization, or
-             an NSArray with one object for each persisted property. An exception will be
-             thrown if any required properties are not present and no default is set.</p>
+                                  <p>The value used to populate the object. This can be any key-value coding compliant
+             object, or an array or dictionary returned from the methods in <code>NSJSONSerialization</code>, or
+             an <code>NSArray</code> containing one element for each persisted property. An exception will be
+             thrown if any required properties are not present and those properties were not defined with
+             default values.</p>
 
                                 </div>
                               </td>
@@ -691,7 +696,7 @@ called on them if have a primary key (<code>createInRealm:withValue:</code> othe
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMObject.h#L210">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMObject.h#L220">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -720,7 +725,7 @@ called on them if have a primary key (<code>createInRealm:withValue:</code> othe
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The Realm in which this object is persisted. Returns nil for standalone objects.</p>
+                        <p>The Realm which manages the object, or <code>nil</code> if the object is unmanaged.</p>
 
                       </div>
                       <div class="declaration">
@@ -737,7 +742,7 @@ called on them if have a primary key (<code>createInRealm:withValue:</code> othe
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMObject.h#L217">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMObject.h#L227">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -755,7 +760,7 @@ called on them if have a primary key (<code>createInRealm:withValue:</code> othe
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The ObjectSchema which lists the persisted properties for this object.</p>
+                        <p>The object schema which lists the persisted properties for the object.</p>
 
                       </div>
                       <div class="declaration">
@@ -772,7 +777,7 @@ called on them if have a primary key (<code>createInRealm:withValue:</code> othe
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMObject.h#L222">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMObject.h#L232">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -790,10 +795,10 @@ called on them if have a primary key (<code>createInRealm:withValue:</code> othe
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Indicates if an object can no longer be accessed.</p>
+                        <p>Indicates if the object can no longer be accessed because it is now invalid.</p>
 
-<p>An object can no longer be accessed if the object has been deleted from the containing <code><a href="../Classes/RLMObject.html#/c:objc(cs)RLMObject(py)realm">realm</a></code> or
-if <code>invalidate</code> is called on the containing <code><a href="../Classes/RLMObject.html#/c:objc(cs)RLMObject(py)realm">realm</a></code>.</p>
+<p>An object can no longer be accessed if the object has been deleted from the Realm that manages it, or
+if <code>invalidate</code> is called on that Realm.</p>
 
                       </div>
                       <div class="declaration">
@@ -810,7 +815,7 @@ if <code>invalidate</code> is called on the containing <code><a href="../Classes
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMObject.h#L230">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMObject.h#L240">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -839,9 +844,9 @@ if <code>invalidate</code> is called on the containing <code><a href="../Classes
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Return an array of property names for properties which should be indexed.
-Only supported for string, integer, boolean, and NSDate properties.
-- returns:    NSArray of property names.</p>
+                        <p>Returns an array of property names for properties which should be indexed.</p>
+
+<p>Only string, integer, boolean, and <code>NSDate</code> properties are supported.</p>
 
                       </div>
                       <div class="declaration">
@@ -859,11 +864,11 @@ Only supported for string, integer, boolean, and NSDate properties.
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>NSArray of property names.</p>
+                        <p>An array of property names.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMObject.h#L240">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMObject.h#L252">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -881,7 +886,7 @@ Only supported for string, integer, boolean, and NSDate properties.
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Implement to indicate the default values to be used for each property.</p>
+                        <p>Override this method to specify the default values to be used for each property.</p>
 
                       </div>
                       <div class="declaration">
@@ -899,11 +904,11 @@ Only supported for string, integer, boolean, and NSDate properties.
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>NSDictionary mapping property names to their default values.</p>
+                        <p>A dictionary mapping property names to their default values.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMObject.h#L247">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMObject.h#L259">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -921,9 +926,10 @@ Only supported for string, integer, boolean, and NSDate properties.
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Implement to designate a property as the primary key for an RLMObject subclass. Only properties of
-type RLMPropertyTypeString and RLMPropertyTypeInt can be designated as the primary key. Primary key 
-properties enforce uniqueness for each value whenever the property is set which incurs some overhead.
+                        <p>Override this method to specify the name of a property to be used as the primary key.</p>
+
+<p>Only properties of types <code>RLMPropertyTypeString</code> and <code>RLMPropertyTypeInt</code> can be designated as the primary key.
+Primary key properties enforce uniqueness for each value whenever the property is set, which incurs minor overhead.
 Indexes are created automatically for primary key properties.</p>
 
                       </div>
@@ -942,11 +948,11 @@ Indexes are created automatically for primary key properties.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>Name of the property designated as the primary key.</p>
+                        <p>The name of the property designated as the primary key.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMObject.h#L257">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMObject.h#L270">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -964,8 +970,8 @@ Indexes are created automatically for primary key properties.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Implement to return an array of property names to ignore. These properties will not be persisted
-and are treated as transient.</p>
+                        <p>Override this method to specify the names of properties to ignore. These properties will not be persisted within
+the Realm that manages the object.</p>
 
                       </div>
                       <div class="declaration">
@@ -983,11 +989,11 @@ and are treated as transient.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>NSArray of property names to ignore.</p>
+                        <p>An array of property names to ignore.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMObject.h#L265">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMObject.h#L278">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1005,14 +1011,14 @@ and are treated as transient.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Implement to return an array of property names that should not allow storing nil.</p>
+                        <p>Override this method to specify the names of properties that are non-optional (i.e. cannot be assigned a <code>nil</code> value).</p>
 
-<p>By default, all properties of a type that support storing nil are considered optional properties.
-To require that an object in a Realm always have a non-nil value for a property,
+<p>By default, all properties of a type whose values can be set to <code>nil</code> are considered optional properties.
+To require that an object in a Realm always store a non-<code>nil</code> value for a property,
 add the name of the property to the array returned from this method.</p>
 
-<p>Currently Object properties cannot be required. Array and NSNumber properties
-can, but it makes little sense to do so: arrays do not support storing nil, and
+<p>Properties of <code><a href="../Classes/RLMObject.html">RLMObject</a></code> type cannot be non-optional. Array and <code>NSNumber</code> properties
+can be non-optional, but there is no reason to do so: arrays do not support storing nil, and
 if you want a non-optional number you should instead use the primitive type.</p>
 
                       </div>
@@ -1031,11 +1037,11 @@ if you want a non-optional number you should instead use the primitive type.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>NSArray of property names that are required.</p>
+                        <p>An array of property names that are required.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMObject.h#L280">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMObject.h#L293">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1053,12 +1059,11 @@ if you want a non-optional number you should instead use the primitive type.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Implement to return a dictionary providing information related to linking objects properties.</p>
+                        <p>Override this method to provide information related to properties containing linking objects.</p>
 
-<p>Properties of type RLMLinkingObjects must have a corresponding entry in the dictionary to provide
-information about the origin of the link that they represent. Their corresponding value in the
-dictionary must be an instance of RLMPropertyDescriptor that describes a property that forms a
-relationship with this class:</p>
+<p>Each property of type <code><a href="../Classes.html#/c:objc(cs)RLMLinkingObjects">RLMLinkingObjects</a></code> must have a key in the dictionary returned by this method consisting
+of the property name. The corresponding value must be an instance of <code><a href="../Classes/RLMPropertyDescriptor.html">RLMPropertyDescriptor</a></code> that describes the class
+and property that the property is linked to.</p>
 
 <pre class="highlight plaintext"><code>return @{ @"owners": [RLMPropertyDescriptor descriptorWithClass:Owner.class propertyName:@"dogs"] };
 </code></pre>
@@ -1080,11 +1085,11 @@ relationship with this class:</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>NSDictionary mapping property names to RLMPropertyDescriptor objects.</p>
+                        <p>A dictionary mapping property names to <code><a href="../Classes/RLMPropertyDescriptor.html">RLMPropertyDescriptor</a></code> instances.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMObject.h#L295">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMObject.h#L306">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1113,7 +1118,7 @@ relationship with this class:</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Get all objects of this type from the default Realm.</p>
+                        <p>Returns all objects of this object type from the default Realm.</p>
 
                       </div>
                       <div class="declaration">
@@ -1131,11 +1136,11 @@ relationship with this class:</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An RLMResults of all objects of this type in the default Realm.</p>
+                        <p>An <code><a href="../Classes/RLMResults.html">RLMResults</a></code> containing all objects of this type in the default Realm.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMObject.h#L305">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMObject.h#L316">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1153,7 +1158,7 @@ relationship with this class:</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Get objects matching the given predicate for this type from the default Realm.</p>
+                        <p>Returns all objects of this object type matching the given predicate from the default Realm.</p>
 
                       </div>
                       <div class="declaration">
@@ -1176,7 +1181,7 @@ relationship with this class:</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The predicate format string which can accept variable arguments.</p>
+                                  <p>A predicate format string, optionally followed by a variable number of arguments.</p>
 
                                 </div>
                               </td>
@@ -1186,11 +1191,11 @@ relationship with this class:</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An RLMResults of objects of the subclass type in the default Realm that match the given predicate</p>
+                        <p>An <code><a href="../Classes/RLMResults.html">RLMResults</a></code> containing all objects of this type in the default Realm that match the given predicate.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMObject.h#L314">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMObject.h#L325">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1208,7 +1213,7 @@ relationship with this class:</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Get objects matching the given predicate for this type from the default Realm.</p>
+                        <p>Returns all objects of this object type matching the given predicate from the default Realm.</p>
 
                       </div>
                       <div class="declaration">
@@ -1236,7 +1241,7 @@ relationship with this class:</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The predicate to filter the objects.</p>
+                                  <p>The predicate with which to filter the objects.</p>
 
                                 </div>
                               </td>
@@ -1246,11 +1251,11 @@ relationship with this class:</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An RLMResults of objects of the subclass type in the default Realm that match the given predicate</p>
+                        <p>An <code><a href="../Classes/RLMResults.html">RLMResults</a></code> containing all objects of this type in the default Realm that match the given predicate.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMObject.h#L327">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMObject.h#L338">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1268,7 +1273,7 @@ relationship with this class:</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Get the single object with the given primary key from the default Realm.</p>
+                        <p>Retrieves the single instance of this object type with the given primary key from the default Realm.</p>
 
 <p>Returns the object from the default Realm which has the given primary key, or
 <code>nil</code> if the object does not exist. This is slightly faster than the otherwise
@@ -1278,7 +1283,7 @@ equivalent <code>[[SubclassName objectsWhere:@&quot;primaryKeyPropertyName = %@&
 
 <div class="aside aside-see">
     <p class="aside-title">See</p>
-    -primaryKey
+    <code>-primaryKey</code>
 
 </div>
 
@@ -1298,11 +1303,11 @@ equivalent <code>[[SubclassName objectsWhere:@&quot;primaryKeyPropertyName = %@&
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An object of the subclass type or nil if an object with the given primary key does not exist.</p>
+                        <p>An object of this object type, or <code>nil</code> if an object with the given primary key does not exist.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMObject.h#L341">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMObject.h#L352">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1331,7 +1336,7 @@ equivalent <code>[[SubclassName objectsWhere:@&quot;primaryKeyPropertyName = %@&
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Get all objects of this type from the specified Realm.</p>
+                        <p>Returns all objects of this object type from the specified Realm.</p>
 
                       </div>
                       <div class="declaration">
@@ -1359,7 +1364,7 @@ equivalent <code>[[SubclassName objectsWhere:@&quot;primaryKeyPropertyName = %@&
                               </td>
                               <td>
                                 <div>
-                                  <p>The Realm instance to query.</p>
+                                  <p>The Realm to query.</p>
 
                                 </div>
                               </td>
@@ -1369,11 +1374,11 @@ equivalent <code>[[SubclassName objectsWhere:@&quot;primaryKeyPropertyName = %@&
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An RLMResults of all objects of this type in the specified Realm.</p>
+                        <p>An <code><a href="../Classes/RLMResults.html">RLMResults</a></code> containing all objects of this type in the specified Realm.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMObject.h#L353">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMObject.h#L364">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1391,7 +1396,7 @@ equivalent <code>[[SubclassName objectsWhere:@&quot;primaryKeyPropertyName = %@&
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Get objects matching the given predicate for this type from the specified Realm.</p>
+                        <p>Returns all objects of this object type matching the given predicate from the specified Realm.</p>
 
                       </div>
                       <div class="declaration">
@@ -1415,7 +1420,7 @@ equivalent <code>[[SubclassName objectsWhere:@&quot;primaryKeyPropertyName = %@&
                               </td>
                               <td>
                                 <div>
-                                  <p>The predicate format string which can accept variable arguments.</p>
+                                  <p>A predicate format string, optionally followed by a variable number of arguments.</p>
 
                                 </div>
                               </td>
@@ -1428,7 +1433,7 @@ equivalent <code>[[SubclassName objectsWhere:@&quot;primaryKeyPropertyName = %@&
                               </td>
                               <td>
                                 <div>
-                                  <p>The Realm instance to query.</p>
+                                  <p>The Realm to query.</p>
 
                                 </div>
                               </td>
@@ -1438,11 +1443,11 @@ equivalent <code>[[SubclassName objectsWhere:@&quot;primaryKeyPropertyName = %@&
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An RLMResults of objects of the subclass type in the specified Realm that match the given predicate</p>
+                        <p>An <code><a href="../Classes/RLMResults.html">RLMResults</a></code> containing all objects of this type in the specified Realm that match the given predicate.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMObject.h#L363">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMObject.h#L374">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1460,7 +1465,7 @@ equivalent <code>[[SubclassName objectsWhere:@&quot;primaryKeyPropertyName = %@&
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Get objects matching the given predicate for this type from the specified Realm.</p>
+                        <p>Returns all objects of this object type matching the given predicate from the specified Realm.</p>
 
                       </div>
                       <div class="declaration">
@@ -1489,7 +1494,7 @@ equivalent <code>[[SubclassName objectsWhere:@&quot;primaryKeyPropertyName = %@&
                               </td>
                               <td>
                                 <div>
-                                  <p>The predicate to filter the objects.</p>
+                                  <p>A predicate to use to filter the elements.</p>
 
                                 </div>
                               </td>
@@ -1502,7 +1507,7 @@ equivalent <code>[[SubclassName objectsWhere:@&quot;primaryKeyPropertyName = %@&
                               </td>
                               <td>
                                 <div>
-                                  <p>The Realm instance to query.</p>
+                                  <p>The Realm to query.</p>
 
                                 </div>
                               </td>
@@ -1512,11 +1517,11 @@ equivalent <code>[[SubclassName objectsWhere:@&quot;primaryKeyPropertyName = %@&
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An RLMResults of objects of the subclass type in the specified Realm that match the given predicate</p>
+                        <p>An <code><a href="../Classes/RLMResults.html">RLMResults</a></code> containing all objects of this type in the specified Realm that match the given predicate.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMObject.h#L376">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMObject.h#L387">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1534,7 +1539,7 @@ equivalent <code>[[SubclassName objectsWhere:@&quot;primaryKeyPropertyName = %@&
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Get the single object with the given primary key from the specified Realm.</p>
+                        <p>Retrieves the single instance of this object type with the given primary key from the specified Realm.</p>
 
 <p>Returns the object from the specified Realm which has the given primary key, or
 <code>nil</code> if the object does not exist. This is slightly faster than the otherwise
@@ -1544,7 +1549,7 @@ equivalent <code>[[SubclassName objectsInRealm:realm where:@&quot;primaryKeyProp
 
 <div class="aside aside-see">
     <p class="aside-title">See</p>
-    -primaryKey
+    <code>-primaryKey</code>
 
 </div>
 
@@ -1565,11 +1570,11 @@ equivalent <code>[[SubclassName objectsInRealm:realm where:@&quot;primaryKeyProp
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An object of the subclass type or nil if an object with the given primary key does not exist.</p>
+                        <p>An object of this object type, or <code>nil</code> if an object with the given primary key does not exist.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMObject.h#L390">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMObject.h#L401">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1598,9 +1603,11 @@ equivalent <code>[[SubclassName objectsInRealm:realm where:@&quot;primaryKeyProp
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns YES if another RLMObject points to the same object in an RLMRealm. For RLMObject types
-with a primary, key, <code>isEqual:</code> is overridden to use this method (along with a corresponding
-implementation for <code>hash</code>.</p>
+                        <p>Returns YES if another Realm object instance points to the same object as the receiver in the Realm managing
+the receiver.</p>
+
+<p>For object types with a primary, key, <code>isEqual:</code> is overridden to use this method (along with a corresponding
+implementation for <code>hash</code>).</p>
 
                       </div>
                       <div class="declaration">
@@ -1628,7 +1635,7 @@ implementation for <code>hash</code>.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The object to compare to.</p>
+                                  <p>The object to compare the receiver to.</p>
 
                                 </div>
                               </td>
@@ -1638,11 +1645,11 @@ implementation for <code>hash</code>.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>YES if the object represents the same object in the same RLMRealm.</p>
+                        <p>A Boolean indicating whether the object represents the same object as the receiver.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMObject.h#L403">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMObject.h#L416">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

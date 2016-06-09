@@ -33,7 +33,7 @@
       <div class="content-wrapper">
         <p><a href="../index.html">RealmSwift Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F0%2E103%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F1%2E0%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -196,18 +196,18 @@
 
                 </div>
               </div>
-            <p>LinkingObjects is an auto-updating container type that represents a collection of objects that
-link to a given object.</p>
+            <p><code>LinkingObjects</code> is an auto-updating container type. It represents a collection of objects that
+link to its parent object.</p>
 
-<p>LinkingObjects can be queried with the same predicates as <code><a href="../Classes/List.html">List&lt;T&gt;</a></code> and <code><a href="../Classes/Results.html">Results&lt;T&gt;</a></code>.</p>
+<p><code>LinkingObjects</code> can be queried with the same predicates as <code><a href="../Classes/List.html">List&lt;T&gt;</a></code> and <code><a href="../Classes/Results.html">Results&lt;T&gt;</a></code>.</p>
 
-<p>LinkingObjects always reflect the current state of the Realm on the current thread,
+<p><code>LinkingObjects</code> always reflects the current state of the Realm on the current thread,
 including during write transactions on the current thread. The one exception to
 this is when using <code>for...in</code> enumeration, which will always enumerate over the
-linking objects when the enumeration is begun, even if some of them are deleted or
-modified to no longer link to the target object during the enumeration.</p>
+linking objects that were present when the enumeration is begun, even if some of them
+are deleted or modified to no longer link to the target object during the enumeration.</p>
 
-<p>LinkingObjects can only be used as a property on <code><a href="../Classes/Object.html">Object</a></code> models. The property must
+<p><code>LinkingObjects</code> can only be used as a property on <code><a href="../Classes/Object.html">Object</a></code> models. Properties of this type must
 be declared as <code>let</code> and cannot be <code>dynamic</code>.</p>
 
           </section>
@@ -221,6 +221,36 @@ be declared as <code>let</code> and cannot be <code>dynamic</code>.</p>
                 </a>
               </div>
               <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:C10RealmSwift14LinkingObjects7Element"></a>
+                    <a name="//apple_ref/swift/Alias/Element" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C10RealmSwift14LinkingObjects7Element">Element</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The element type contained in this collection.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Element</span> <span class="o">=</span> <span class="kt">T</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/LinkingObjects.swift#L83">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -271,37 +301,7 @@ be declared as <code>let</code> and cannot be <code>dynamic</code>.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/LinkingObjects.swift#L166">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:C10RealmSwift14LinkingObjects7Element"></a>
-                    <a name="//apple_ref/swift/Alias/Element" class="dashAnchor"></a>
-                    <a class="token" href="#/s:C10RealmSwift14LinkingObjects7Element">Element</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Element type contained in this collection.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Element</span> <span class="o">=</span> <span class="kt">T</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/LinkingObjects.swift#L83">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/LinkingObjects.swift#L167">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -319,7 +319,7 @@ be declared as <code>let</code> and cannot be <code>dynamic</code>.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the Realm these linking objects are associated with.</p>
+                        <p>The Realm which manages this linking objects collection, or <code>nil</code> if the collection is unmanaged.</p>
 
                       </div>
                       <div class="declaration">
@@ -331,7 +331,7 @@ be declared as <code>let</code> and cannot be <code>dynamic</code>.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/LinkingObjects.swift#L88">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/LinkingObjects.swift#L88">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -349,9 +349,11 @@ be declared as <code>let</code> and cannot be <code>dynamic</code>.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Indicates if the linking objects can no longer be accessed.</p>
+                        <p>Indicates if the linking objects collection is no longer valid.</p>
 
-<p>Linking objects can no longer be accessed if <code>invalidate</code> is called on the containing <code><a href="../Classes/Realm.html">Realm</a></code>.</p>
+<p>The linking objects collection becomes invalid if <code>invalidate</code> is called on the containing <code><a href="../Classes/LinkingObjects.html#/s:vC10RealmSwift14LinkingObjects5realmGSqCS_5Realm_">realm</a></code>.</p>
+
+<p>An invalidated linking objects can be accessed, but will always be empty.</p>
 
                       </div>
                       <div class="declaration">
@@ -363,7 +365,7 @@ be declared as <code>let</code> and cannot be <code>dynamic</code>.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/LinkingObjects.swift#L93">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/LinkingObjects.swift#L95">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -381,7 +383,7 @@ be declared as <code>let</code> and cannot be <code>dynamic</code>.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the number of objects in these linking objects.</p>
+                        <p>The number of objects in the linking objects.</p>
 
                       </div>
                       <div class="declaration">
@@ -393,7 +395,7 @@ be declared as <code>let</code> and cannot be <code>dynamic</code>.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/LinkingObjects.swift#L96">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/LinkingObjects.swift#L98">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -422,7 +424,7 @@ be declared as <code>let</code> and cannot be <code>dynamic</code>.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Creates a LinkingObjects. This initializer should only be called when
+                        <p>Creates an instance of a <code><a href="../Classes/LinkingObjects.html">LinkingObjects</a></code>. This initializer should only be called when
 declaring a property on a Realm model.</p>
 
                       </div>
@@ -446,7 +448,7 @@ declaring a property on a Realm model.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The originating type linking to this object type.</p>
+                                  <p>The type of the object owning the property this <code>LinkingObjects</code> should refer to.</p>
 
                                 </div>
                               </td>
@@ -459,7 +461,7 @@ declaring a property on a Realm model.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The property name of the incoming relationship this LinkingObjects should refer to.</p>
+                                  <p>The property name of the property this <code>LinkingObjects</code> should refer to.</p>
 
                                 </div>
                               </td>
@@ -468,7 +470,7 @@ declaring a property on a Realm model.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/LinkingObjects.swift#L108-L111">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/LinkingObjects.swift#L109-L112">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -486,7 +488,7 @@ declaring a property on a Realm model.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns a human-readable description of the objects contained in these linking objects.</p>
+                        <p>Returns a description of the objects contained within the linking objects.</p>
 
                       </div>
                       <div class="declaration">
@@ -498,7 +500,7 @@ declaring a property on a Realm model.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/LinkingObjects.swift#L114-L117">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/LinkingObjects.swift#L115-L118">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -564,7 +566,7 @@ declaring a property on a Realm model.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/LinkingObjects.swift#L128-L130">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/LinkingObjects.swift#L129-L131">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -606,7 +608,7 @@ or <code>nil</code> if no objects match.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The predicate to filter the objects.</p>
+                                  <p>The predicate with which to filter the objects.</p>
 
                                 </div>
                               </td>
@@ -620,7 +622,7 @@ or <code>nil</code> if no objects match.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/LinkingObjects.swift#L140-L142">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/LinkingObjects.swift#L141-L143">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -662,7 +664,7 @@ or <code>nil</code> if no objects match.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The predicate format string which can accept variable arguments.</p>
+                                  <p>A predicate format string, optionally followed by a variable number of arguments.</p>
 
                                 </div>
                               </td>
@@ -676,7 +678,7 @@ or <code>nil</code> if no objects match.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/LinkingObjects.swift#L152-L155">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/LinkingObjects.swift#L153-L156">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -705,7 +707,7 @@ or <code>nil</code> if no objects match.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the first object in the collection, or <code>nil</code> if empty.</p>
+                        <p>Returns the first object in the linking objects collection, or <code>nil</code> if the collection is empty.</p>
 
                       </div>
                       <div class="declaration">
@@ -717,7 +719,7 @@ or <code>nil</code> if no objects match.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/LinkingObjects.swift#L174">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/LinkingObjects.swift#L175">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -735,7 +737,7 @@ or <code>nil</code> if no objects match.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the last object in the collection, or <code>nil</code> if empty.</p>
+                        <p>Returns the last object in the linking objects collection, or <code>nil</code> if collection is empty.</p>
 
                       </div>
                       <div class="declaration">
@@ -747,7 +749,7 @@ or <code>nil</code> if no objects match.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/LinkingObjects.swift#L177">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/LinkingObjects.swift#L178">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -776,7 +778,7 @@ or <code>nil</code> if no objects match.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns an Array containing the results of invoking <code>valueForKey(_:)</code> using key on each of the
+                        <p>Returns an <code>Array</code> containing the results of invoking <code>valueForKey(_:)</code> with <code>key</code> on each of the linking objects
 collection&rsquo;s objects.</p>
 
                       </div>
@@ -810,11 +812,11 @@ collection&rsquo;s objects.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>Array containing the results of invoking <code>valueForKey(_:)</code> using key on each of the collection&rsquo;s objects.</p>
+                        <p>An <code>Array</code> containing the results.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/LinkingObjects.swift#L190-L192">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/LinkingObjects.swift#L190-L192">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -832,8 +834,8 @@ collection&rsquo;s objects.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns an Array containing the results of invoking <code>valueForKeyPath(_:)</code> using keyPath on each of the
-collection&rsquo;s objects.</p>
+                        <p>Returns an <code>Array</code> containing the results of invoking <code>valueForKeyPath(_:)</code> with <code>keyPath</code> on each of the linking
+objects collection&rsquo;s objects.</p>
 
                       </div>
                       <div class="declaration">
@@ -866,11 +868,11 @@ collection&rsquo;s objects.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>Array containing the results of invoking <code>valueForKeyPath(_:)</code> using keyPath on each of the collection&rsquo;s objects.</p>
+                        <p>An <code>Array</code> containing the results.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/LinkingObjects.swift#L203-L205">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/LinkingObjects.swift#L202-L204">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -888,11 +890,12 @@ collection&rsquo;s objects.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Invokes <code>setValue(_:forKey:)</code> on each of the collection&rsquo;s objects using the specified value and key.</p>
+                        <p>Invokes <code>setValue(_:forKey:)</code> on each of the linking objects collection&rsquo;s objects using the specified <code>value</code> and
+<code>key</code>.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>This method can only be called during a write transaction.</p>
+    <p>This method may only be called during a write transaction.</p>
 
 </div>
 
@@ -939,7 +942,7 @@ collection&rsquo;s objects.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/LinkingObjects.swift#L215-L217">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/LinkingObjects.swift#L215-L217">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -968,7 +971,7 @@ collection&rsquo;s objects.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Filters the collection to the objects that match the given predicate.</p>
+                        <p>Returns all the objects matching the given predicate in the linking objects collection.</p>
 
                       </div>
                       <div class="declaration">
@@ -991,7 +994,7 @@ collection&rsquo;s objects.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The predicate format string which can accept variable arguments.</p>
+                                  <p>A predicate format string, optionally followed by a variable number of arguments.</p>
 
                                 </div>
                               </td>
@@ -1001,11 +1004,11 @@ collection&rsquo;s objects.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>Results containing objects that match the given predicate.</p>
+                        <p>A <code><a href="../Classes/Results.html">Results</a></code> object containing the results.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/LinkingObjects.swift#L228-L230">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/LinkingObjects.swift#L228-L230">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1023,7 +1026,7 @@ collection&rsquo;s objects.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Filters the collection to the objects that match the given predicate.</p>
+                        <p>Returns all the objects matching the given predicate in the linking objects collection.</p>
 
                       </div>
                       <div class="declaration">
@@ -1046,7 +1049,7 @@ collection&rsquo;s objects.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The predicate to filter the objects.</p>
+                                  <p>The predicate with which to filter the objects.</p>
 
                                 </div>
                               </td>
@@ -1056,11 +1059,11 @@ collection&rsquo;s objects.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>Results containing objects that match the given predicate.</p>
+                        <p>A <code><a href="../Classes/Results.html">Results</a></code> object containing the results.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/LinkingObjects.swift#L239-L241">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/LinkingObjects.swift#L239-L241">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1089,7 +1092,7 @@ collection&rsquo;s objects.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns <code><a href="../Classes/Results.html">Results</a></code> with elements sorted by the given property name.</p>
+                        <p>Returns a <code><a href="../Classes/Results.html">Results</a></code> containing the linking objects collection&rsquo;s elements sorted by the given property name.</p>
 
                       </div>
                       <div class="declaration">
@@ -1125,7 +1128,7 @@ collection&rsquo;s objects.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The direction to sort by.</p>
+                                  <p>The direction to sort in.</p>
 
                                 </div>
                               </td>
@@ -1135,11 +1138,11 @@ collection&rsquo;s objects.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p><code><a href="../Classes/Results.html">Results</a></code> with elements sorted by the given property name.</p>
+                        <p>A <code><a href="../Classes/Results.html">Results</a></code> object.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/LinkingObjects.swift#L253-L255">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/LinkingObjects.swift#L253-L255">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1157,7 +1160,7 @@ collection&rsquo;s objects.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns <code><a href="../Classes/Results.html">Results</a></code> with elements sorted by the given sort descriptors.</p>
+                        <p>Returns a <code><a href="../Classes/Results.html">Results</a></code> containing the linking objects collection&rsquo;s elements sorted by the given sort descriptors.</p>
 
                       </div>
                       <div class="declaration">
@@ -1180,7 +1183,7 @@ collection&rsquo;s objects.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p><code>SortDescriptor</code>s to sort by.</p>
+                                  <p>A sequence of <code>SortDescriptor</code>s to sort by.</p>
 
                                 </div>
                               </td>
@@ -1190,11 +1193,11 @@ collection&rsquo;s objects.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p><code><a href="../Classes/Results.html">Results</a></code> with elements sorted by the given sort descriptors.</p>
+                        <p>A <code><a href="../Classes/Results.html">Results</a></code> object.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/LinkingObjects.swift#L264-L266">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/LinkingObjects.swift#L264-L266">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1223,11 +1226,12 @@ collection&rsquo;s objects.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the minimum value of the given property.</p>
+                        <p>Returns the minimum (lowest) value of the given property among all the objects represented by the linking objects
+collection.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>Only names of properties of a type conforming to the <code><a href="../Protocols.html#/s:P10RealmSwift10MinMaxType">MinMaxType</a></code> protocol can be used.</p>
+    <p>Only a property whose type conforms to the <code><a href="../Protocols.html#/s:P10RealmSwift10MinMaxType">MinMaxType</a></code> protocol can be specified.</p>
 
 </div>
 
@@ -1252,7 +1256,7 @@ collection&rsquo;s objects.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The name of a property conforming to <code>MinMaxType</code> to look for a minimum on.</p>
+                                  <p>The name of a property whose minimum value is desired.</p>
 
                                 </div>
                               </td>
@@ -1262,11 +1266,11 @@ collection&rsquo;s objects.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The minimum value for the property amongst objects in the collection, or <code>nil</code> if the collection is empty.</p>
+                        <p>The minimum value of the property, or <code>nil</code> if the collection is empty.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/LinkingObjects.swift#L280-L282">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/LinkingObjects.swift#L280-L282">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1284,11 +1288,12 @@ collection&rsquo;s objects.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the maximum value of the given property.</p>
+                        <p>Returns the maximum (highest) value of the given property among all the objects represented by the linking objects
+collection.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>Only names of properties of a type conforming to the <code><a href="../Protocols.html#/s:P10RealmSwift10MinMaxType">MinMaxType</a></code> protocol can be used.</p>
+    <p>Only a property whose type conforms to the <code><a href="../Protocols.html#/s:P10RealmSwift10MinMaxType">MinMaxType</a></code> protocol can be specified.</p>
 
 </div>
 
@@ -1313,7 +1318,7 @@ collection&rsquo;s objects.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The name of a property conforming to <code>MinMaxType</code> to look for a maximum on.</p>
+                                  <p>The name of a property whose minimum value is desired.</p>
 
                                 </div>
                               </td>
@@ -1323,11 +1328,11 @@ collection&rsquo;s objects.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The maximum value for the property amongst objects in the collection, or <code>nil</code> if the collection is empty.</p>
+                        <p>The maximum value of the property, or <code>nil</code> if the collection is empty.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/LinkingObjects.swift#L294-L296">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/LinkingObjects.swift#L294-L296">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1345,11 +1350,12 @@ collection&rsquo;s objects.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the sum of the given property for objects in the collection.</p>
+                        <p>Returns the sum of the values of a given property over all the objects represented by the linking objects
+collection.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>Only names of properties of a type conforming to the <code><a href="../Protocols.html#/s:P10RealmSwift11AddableType">AddableType</a></code> protocol can be used.</p>
+    <p>Only a property whose type conforms to the <code><a href="../Protocols.html#/s:P10RealmSwift11AddableType">AddableType</a></code> protocol can be specified.</p>
 
 </div>
 
@@ -1374,7 +1380,7 @@ collection&rsquo;s objects.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The name of a property conforming to <code>AddableType</code> to calculate sum on.</p>
+                                  <p>The name of a property whose values should be summed.</p>
 
                                 </div>
                               </td>
@@ -1384,11 +1390,11 @@ collection&rsquo;s objects.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The sum of the given property over all objects in the collection.</p>
+                        <p>The sum of the given property.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/LinkingObjects.swift#L307-L309">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/LinkingObjects.swift#L308-L310">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1406,11 +1412,11 @@ collection&rsquo;s objects.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the average of the given property for objects in the collection.</p>
+                        <p>Returns the average value of a given property over all the objects represented by the linking objects collection.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>Only names of properties of a type conforming to the <code><a href="../Protocols.html#/s:P10RealmSwift11AddableType">AddableType</a></code> protocol can be used.</p>
+    <p>Only the name of a property whose type conforms to the <code><a href="../Protocols.html#/s:P10RealmSwift11AddableType">AddableType</a></code> protocol can be specified.</p>
 
 </div>
 
@@ -1435,7 +1441,7 @@ collection&rsquo;s objects.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The name of a property conforming to <code>AddableType</code> to calculate average on.</p>
+                                  <p>The name of a property whose average value should be calculated.</p>
 
                                 </div>
                               </td>
@@ -1445,11 +1451,11 @@ collection&rsquo;s objects.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The average of the given property over all objects in the collection, or <code>nil</code> if the collection is empty.</p>
+                        <p>The average value of the given property, or <code>nil</code> if the collection is empty.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/LinkingObjects.swift#L321-L323">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/LinkingObjects.swift#L321-L323">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1478,21 +1484,20 @@ collection&rsquo;s objects.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Register a block to be called each time the LinkingObjects changes.</p>
+                        <p>Registers a block to be called each time the linking objects collection changes.</p>
 
-<p>The block will be asynchronously called with the initial set of objects, and then
-called again after each write transaction which changes either any of the
-objects in the collection, or which objects are in the collection.</p>
+<p>The block will be asynchronously called with the initial linking objects collection,
+and then called again after each write transaction which changes either any
+of the objects in the collection, or which objects are in the collection.</p>
 
-<p>This version of this method reports which of the objects in the collection were
-added, removed, or modified in each write transaction as indices within the
-collection. See the RealmCollectionChange documentation for more information on
-the change information supplied and an example of how to use it to update
-a UITableView.</p>
+<p>The <code>change</code> parameter that is passed to the block reports, in the form of indices within the
+collection, which of the objects were added, removed, or modified during each write transaction. See the
+<code><a href="../Enums/RealmCollectionChange.html">RealmCollectionChange</a></code> documentation for more information on the change information supplied and an example of how
+to use it to update a <code>UITableView</code>.</p>
 
-<p>At the time when the block is called, the LinkingObjects object will be fully
+<p>At the time when the block is called, the linking objects collection will be fully
 evaluated and up-to-date, and as long as you do not perform a write transaction
-on the same thread or explicitly call realm.refresh(), accessing it will never
+on the same thread or explicitly call <code>realm.refresh()</code>, accessing it will never
 perform blocking work.</p>
 
 <p>Notifications are delivered via the standard run loop, and so can&rsquo;t be
@@ -1528,12 +1533,12 @@ try! realm.write {
 </code></pre>
 
 <p>You must retain the returned token for as long as you want updates to continue
-to be sent to the block. To stop receiving updates, call stop() on the token.</p>
+to be sent to the block. To stop receiving updates, call <code>stop()</code> on the token.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method cannot be called during a write transaction, or when
-the source realm is read-only.</p>
+the containing Realm is read-only.</p>
 
 </div>
 
@@ -1558,7 +1563,7 @@ the source realm is read-only.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The block to be called with the evaluated linking objects and change information.</p>
+                                  <p>The block to be called whenever a change occurs.</p>
 
                                 </div>
                               </td>
@@ -1568,11 +1573,11 @@ the source realm is read-only.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>A token which must be held for as long as you want updates to be delivered.</p>
+                        <p>A token which must be retained for as long as you want updates to be delivered.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/LinkingObjects.swift#L386-L390">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/LinkingObjects.swift#L385-L389">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1613,7 +1618,7 @@ the source realm is read-only.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/LinkingObjects.swift#L397-L399">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/LinkingObjects.swift#L396-L398">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1643,7 +1648,7 @@ the source realm is read-only.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The position of the first element in a non-empty collection.
-Identical to endIndex in an empty collection.</p>
+Identical to <code><a href="../Classes/LinkingObjects.html#/s:vC10RealmSwift14LinkingObjects8endIndexSi">endIndex</a></code> in an empty collection.</p>
 
                       </div>
                       <div class="declaration">
@@ -1655,7 +1660,7 @@ Identical to endIndex in an empty collection.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/LinkingObjects.swift#L405">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/LinkingObjects.swift#L404">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1674,8 +1679,8 @@ Identical to endIndex in an empty collection.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The collection&rsquo;s <q>past the end</q> position.
-endIndex is not a valid argument to subscript, and is always reachable from startIndex by
-zero or more applications of successor().</p>
+<code>endIndex</code> is not a valid argument to subscript, and is always reachable from <code><a href="../Classes/LinkingObjects.html#/s:vC10RealmSwift14LinkingObjects10startIndexSi">startIndex</a></code> by
+zero or more applications of <code>successor()</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -1687,7 +1692,7 @@ zero or more applications of successor().</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/LinkingObjects.swift#L410">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/LinkingObjects.swift#L409">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

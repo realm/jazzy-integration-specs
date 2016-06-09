@@ -33,7 +33,7 @@
       <div class="content-wrapper">
         <p><a href="../index.html">RealmSwift Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F0%2E103%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F1%2E0%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -196,12 +196,11 @@
 
                 </div>
               </div>
-            <p>This class represents properties persisted to Realm in an <code><a href="../Classes/ObjectSchema.html">ObjectSchema</a></code>.</p>
+            <p><code>Property</code> instances represent properties persisted to Realm in the context of an object schema.</p>
 
-<p>When using Realm, <code>Property</code> objects allow performing migrations and
-introspecting the database&rsquo;s schema.</p>
+<p>When using Realm, <code>Property</code> instances allow performing migrations and introspecting the database&rsquo;s schema.</p>
 
-<p>These properties map to columns in the core database.</p>
+<p>These property instances map to columns in the core database.</p>
 
           </section>
           <section class="section task-group-section">
@@ -227,7 +226,7 @@ introspecting the database&rsquo;s schema.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Property name.</p>
+                        <p>The name of the property.</p>
 
                       </div>
                       <div class="declaration">
@@ -239,7 +238,7 @@ introspecting the database&rsquo;s schema.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Property.swift#L37">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Property.swift#L36">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -257,7 +256,7 @@ introspecting the database&rsquo;s schema.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Property type.</p>
+                        <p>The type of the property.</p>
 
                       </div>
                       <div class="declaration">
@@ -269,7 +268,7 @@ introspecting the database&rsquo;s schema.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Property.swift#L40">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Property.swift#L39">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -287,7 +286,7 @@ introspecting the database&rsquo;s schema.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Whether this property is indexed.</p>
+                        <p>Indicates whether this property is indexed.</p>
 
                       </div>
                       <div class="declaration">
@@ -299,7 +298,7 @@ introspecting the database&rsquo;s schema.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Property.swift#L43">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Property.swift#L42">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -317,7 +316,8 @@ introspecting the database&rsquo;s schema.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Whether this property is optional (can contain <code>nil</code> values).</p>
+                        <p>Indicates whether this property is optional. (Note that certain numeric types must be wrapped in a
+<code><a href="../Classes/RealmOptional.html">RealmOptional</a></code> instance in order to be declared as optional.)</p>
 
                       </div>
                       <div class="declaration">
@@ -329,7 +329,7 @@ introspecting the database&rsquo;s schema.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Property.swift#L46">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Property.swift#L46">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -347,7 +347,7 @@ introspecting the database&rsquo;s schema.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Object class name - specify object types for <code><a href="../Classes/Object.html">Object</a></code> and <code><a href="../Classes/List.html">List</a></code> properties.</p>
+                        <p>For <code><a href="../Classes/Object.html">Object</a></code> and <code><a href="../Classes/List.html">List</a></code> properties, the name of the class of object stored in the property.</p>
 
                       </div>
                       <div class="declaration">
@@ -359,7 +359,7 @@ introspecting the database&rsquo;s schema.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Property.swift#L49">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Property.swift#L49">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -389,7 +389,7 @@ introspecting the database&rsquo;s schema.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Property.swift#L52">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Property.swift#L52">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

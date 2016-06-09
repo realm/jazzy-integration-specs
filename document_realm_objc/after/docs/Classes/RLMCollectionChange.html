@@ -33,7 +33,7 @@
       <div class="content-wrapper">
         <p><a href="../index.html">Realm Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fobjc%2F0%2E103%2E0%2Fapi%2Fdocsets%2FRealm%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fobjc%2F1%2E0%2E0%2Fapi%2Fdocsets%2FRealm%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -170,13 +170,16 @@
 
                 </div>
               </div>
-            <p>RLMCollectionChange is passed to the notification blocks registered with
--addNotificationBlock on RLMArray and RLMResults, and reports what rows in the
+            <p>A <code>RLMCollectionChange</code> object encapsulates information about changes to collections
+that are reported by Realm notifications.</p>
+
+<p><code>RLMCollectionChange</code> is passed to the notification blocks registered with
+<code>-addNotificationBlock</code> on <code><a href="../Classes/RLMArray.html">RLMArray</a></code> and <code><a href="../Classes/RLMResults.html">RLMResults</a></code>, and reports what rows in the
 collection changed since the last time the notification block was called.</p>
 
 <p>The change information is available in two formats: a simple array of row
 indices in the collection for each type of change, and an array of index paths
-in a requested section suitable for passing directly to UITableView&rsquo;s batch
+in a requested section suitable for passing directly to <code>UITableView</code>&rsquo;s batch
 update methods. A complete example of updating a <code>UITableView</code> named <code>tv</code>:</p>
 
 <pre class="highlight plaintext"><code>[tv beginUpdates];
@@ -186,7 +189,7 @@ update methods. A complete example of updating a <code>UITableView</code> named 
 [tv endUpdates];
 </code></pre>
 
-<p>All of the arrays in an RLMCollectionChange are always sorted in ascending order.</p>
+<p>All of the arrays in an <code>RLMCollectionChange</code> are always sorted in ascending order.</p>
 
           </section>
           <section class="section task-group-section">
@@ -223,7 +226,7 @@ been removed from this one.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMCollection.h#L291">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMCollection.h#L298">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -258,7 +261,7 @@ been removed from this one.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMCollection.h#L294">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMCollection.h#L301">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -276,10 +279,13 @@ been removed from this one.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The indices in the new version of the collection which were modified. For
-RLMResults, this means that one or more of the properties of the object at
+                        <p>The indices in the new version of the collection which were modified.</p>
+
+<p>For <code><a href="../Classes/RLMResults.html">RLMResults</a></code>, this means that one or more of the properties of the object at
 that index were modified (or an object linked to by that object was
-modified). For RLMArray, the array itself being modified to contain a
+modified).</p>
+
+<p>For <code><a href="../Classes/RLMArray.html">RLMArray</a></code>, the array itself being modified to contain a
 different object at that index will also be reported as a modification.</p>
 
                       </div>
@@ -297,7 +303,7 @@ different object at that index will also be reported as a modification.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMCollection.h#L301">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMCollection.h#L313">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -315,7 +321,7 @@ different object at that index will also be reported as a modification.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns index paths of the deletion indices in the given section.</p>
+                        <p>Returns the index paths of the deletion indices in the given section.</p>
 
                       </div>
                       <div class="declaration">
@@ -332,7 +338,7 @@ different object at that index will also be reported as a modification.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMCollection.h#L304">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMCollection.h#L316">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -350,7 +356,7 @@ different object at that index will also be reported as a modification.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns index paths of the insertion indices in the given section.</p>
+                        <p>Returns the index paths of the insertion indices in the given section.</p>
 
                       </div>
                       <div class="declaration">
@@ -367,7 +373,7 @@ different object at that index will also be reported as a modification.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMCollection.h#L307">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMCollection.h#L319">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -385,7 +391,7 @@ different object at that index will also be reported as a modification.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns index paths of the modification indices in the given section.</p>
+                        <p>Returns the index paths of the modification indices in the given section.</p>
 
                       </div>
                       <div class="declaration">
@@ -402,7 +408,7 @@ different object at that index will also be reported as a modification.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMCollection.h#L310">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMCollection.h#L322">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

@@ -32,7 +32,7 @@
       <div class="content-wrapper">
         <p><a href="index.html">Realm Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fobjc%2F0%2E103%2E0%2Fapi%2Fdocsets%2FRealm%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fobjc%2F1%2E0%2E0%2Fapi%2Fdocsets%2FRealm%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -182,8 +182,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Provides both the old and new versions of an object in this Realm. Object properties can only be
-accessed using keyed subscripting.</p>
+                        <p>A block type which provides both the old and new versions of an object in the Realm. Object 
+properties can only be accessed using keyed subscripting.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <p><code>-[RLMMigration enumerateObjects:block:]</code></p>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -212,7 +218,7 @@ accessed using keyed subscripting.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>Object in original RLMRealm (read-only).</p>
+                                  <p>The object from the original Realm (read-only).</p>
 
                                 </div>
                               </td>
@@ -225,7 +231,7 @@ accessed using keyed subscripting.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>Object in migrated RLMRealm (read-write).</p>
+                                  <p>The object from the migrated Realm (read-write).</p>
 
                                 </div>
                               </td>
@@ -234,7 +240,7 @@ accessed using keyed subscripting.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMMigration.h#L34">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMMigration.h#L36">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -256,7 +262,13 @@ accessed using keyed subscripting.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Block to run when the data in a Realm was modified.</p>
+                        <p>The type of a block to run whenever the data within the Realm is modified.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <code>-[RLMRealm addNotificationBlock:]</code>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -273,7 +285,7 @@ accessed using keyed subscripting.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealm.h#L117">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMRealm.h#L124">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -291,7 +303,7 @@ accessed using keyed subscripting.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Migration block used to migrate a Realm.</p>
+                        <p>The type of a migration block used to migrate a Realm.</p>
 
                       </div>
                       <div class="declaration">
@@ -319,7 +331,7 @@ accessed using keyed subscripting.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p><code>RLMMigration</code> object used to perform the migration. The
+                                  <p>A <code>RLMMigration</code> object used to perform the migration. The
                  migration object allows you to enumerate and alter any
                  existing objects which require migration.</p>
 
@@ -334,7 +346,7 @@ accessed using keyed subscripting.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The schema version of the <code>RLMRealm</code> being migrated.</p>
+                                  <p>The schema version of the Realm being migrated.</p>
 
                                 </div>
                               </td>
@@ -343,7 +355,7 @@ accessed using keyed subscripting.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealm.h#L434">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMRealm.h#L453">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

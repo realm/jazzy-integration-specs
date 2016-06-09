@@ -33,7 +33,7 @@
       <div class="content-wrapper">
         <p><a href="../index.html">RealmSwift Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F0%2E103%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F1%2E0%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -196,10 +196,11 @@
 
                 </div>
               </div>
-            <p><code>Migration</code> is the object passed into a user-defined <code><a href="../Typealiases.html#/s:10RealmSwift14MigrationBlock">MigrationBlock</a></code> when updating the version
-of a <code><a href="../Classes/Realm.html">Realm</a></code> instance.</p>
+            <p><code>Migration</code> instances encapsulate information intended to facilitate a schema migration.</p>
 
-<p>This object provides access to the previous and current <code><a href="../Classes/Schema.html">Schema</a></code>s for this migration.</p>
+<p>A <code>Migration</code> instance is passed into a user-defined <code><a href="../Typealiases.html#/s:10RealmSwift14MigrationBlock">MigrationBlock</a></code> block when updating
+the version of a Realm. This instance provides access to the old and new database schemas, the
+objects in the Realm, and provides functionality for modifying the Realm during the migration.</p>
 
           </section>
           <section class="section task-group-section">
@@ -225,7 +226,7 @@ of a <code><a href="../Classes/Realm.html">Realm</a></code> instance.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The migration&rsquo;s old <code><a href="../Classes/Schema.html">Schema</a></code>, describing the <code><a href="../Classes/Realm.html">Realm</a></code> before applying a migration.</p>
+                        <p>Returns the old schema, describing the Realm before applying a migration.</p>
 
                       </div>
                       <div class="declaration">
@@ -237,7 +238,7 @@ of a <code><a href="../Classes/Realm.html">Realm</a></code> instance.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Migration.swift#L95">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Migration.swift#L93">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -255,7 +256,7 @@ of a <code><a href="../Classes/Realm.html">Realm</a></code> instance.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The migration&rsquo;s new <code><a href="../Classes/Schema.html">Schema</a></code>, describing the <code><a href="../Classes/Realm.html">Realm</a></code> after applying a migration.</p>
+                        <p>Returns the new schema, describing the Realm after applying a migration.</p>
 
                       </div>
                       <div class="declaration">
@@ -267,7 +268,7 @@ of a <code><a href="../Classes/Realm.html">Realm</a></code> instance.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Migration.swift#L98">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Migration.swift#L96">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -296,7 +297,7 @@ of a <code><a href="../Classes/Realm.html">Realm</a></code> instance.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Enumerates objects of a given type in this Realm, providing both the old and new versions of
+                        <p>Enumerates all the objects of a given type in this Realm, providing both the old and new versions of
 each object. Object properties can be accessed using subscripting.</p>
 
                       </div>
@@ -342,7 +343,7 @@ each object. Object properties can be accessed using subscripting.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Migration.swift#L111-L116">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Migration.swift#L109-L114">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -360,7 +361,7 @@ each object. Object properties can be accessed using subscripting.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Create an <code><a href="../Classes/Object.html">Object</a></code> of type <code>className</code> in the Realm being migrated.</p>
+                        <p>Creates and returns an <code><a href="../Classes/Object.html">Object</a></code> of type <code>className</code> in the Realm being migrated.</p>
 
                       </div>
                       <div class="declaration">
@@ -396,7 +397,8 @@ each object. Object properties can be accessed using subscripting.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The object used to populate the new <code>Object</code>. This can be any key/value coding compliant object, or a JSON object such as those returned from the methods in <code>NSJSONSerialization</code>, or an <code>Array</code> with one object for each persisted property. An exception will be thrown if any required properties are not present and no default is set.</p>
+                                  <p>The value used to populate the created object. This can be any key-value coding compliant object, or an array or dictionary returned from the methods in <code>NSJSONSerialization</code>, or an <code>Array</code> containing one element for each persisted property. An exception will be thrown if any required properties are not present and those properties were not defined with default values.</p>
+<pre class="highlight plaintext"><code></code></pre>
 
                                 </div>
                               </td>
@@ -406,11 +408,11 @@ each object. Object properties can be accessed using subscripting.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The created object.</p>
+                        <p>The newly created object.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Migration.swift#L130-L132">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Migration.swift#L131-L133">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -428,8 +430,9 @@ each object. Object properties can be accessed using subscripting.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Delete an object from a Realm during a migration. This can be called within
-<code>enumerate(_:block:)</code>.</p>
+                        <p>Deletes an object from a Realm during a migration.</p>
+
+<p>It is permitted to call this method from within the block passed to <code>enumerate(_:block:)</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -461,7 +464,7 @@ each object. Object properties can be accessed using subscripting.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Migration.swift#L140-L142">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Migration.swift#L142-L144">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -479,9 +482,10 @@ each object. Object properties can be accessed using subscripting.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Deletes the data for the class with the given name.
-This deletes all objects of the given class, and if the Object subclass no longer exists in your program,
-cleans up any remaining metadata for the class in the Realm file.</p>
+                        <p>Deletes the data for the class with the given name.</p>
+
+<p>All objects of the given class will be deleted. If the <code>RLMObject</code> subclass no longer exists in your program, any
+remaining metadata for the class will be removed from the Realm file.</p>
 
                       </div>
                       <div class="declaration">
@@ -504,7 +508,7 @@ cleans up any remaining metadata for the class in the Realm file.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The name of the Object class to delete.</p>
+                                  <p>The name of the <code>Object</code> class to delete.</p>
 
                                 </div>
                               </td>
@@ -514,11 +518,11 @@ cleans up any remaining metadata for the class in the Realm file.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p><code>true</code> if there was any data to delete.</p>
+                        <p>A Boolean value indicating whether there was any data to delete.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Migration.swift#L153-L155">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Migration.swift#L156-L158">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -536,7 +540,7 @@ cleans up any remaining metadata for the class in the Realm file.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Rename property of the given class from <code>oldName</code> to <code>newName</code>.</p>
+                        <p>Renames a property of the given class from <code>oldName</code> to <code>newName</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -559,7 +563,7 @@ cleans up any remaining metadata for the class in the Realm file.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>Class for which the property is to be renamed. Must be present in both the old and new Realm schemas.</p>
+                                  <p>The name of the class whose property should be renamed. This class must be present in both the old and new Realm schemas.</p>
 
                                 </div>
                               </td>
@@ -572,7 +576,7 @@ cleans up any remaining metadata for the class in the Realm file.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>Old name for the property to be renamed. Must not be present in the new Realm.</p>
+                                  <p>The old name for the property to be renamed. There must not be a property with this name in the class as defined by the new Realm schema.</p>
 
                                 </div>
                               </td>
@@ -585,7 +589,7 @@ cleans up any remaining metadata for the class in the Realm file.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>New name for the property to be renamed. Must not be present in the old Realm.</p>
+                                  <p>The new name for the property to be renamed. There must not be a property with this name in the class as defined by the old Realm schema.</p>
 
                                 </div>
                               </td>
@@ -594,7 +598,7 @@ cleans up any remaining metadata for the class in the Realm file.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Migration.swift#L167-L169">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Migration.swift#L170-L172">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

@@ -33,7 +33,7 @@
       <div class="content-wrapper">
         <p><a href="../../index.html">RealmSwift Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="../../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F0%2E103%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F1%2E0%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -196,15 +196,17 @@
 
                 </div>
               </div>
-            <p>A <code>Realm.Configuration</code> is used to describe the different options used to
-create a <code><a href="../../Classes/Realm.html">Realm</a></code> instance.</p>
+            <p>A <code>Configuration</code> instance describes the different options used to
+create an instance of a Realm.</p>
 
-<p><code>Realm.Configuration</code> instances are just plain Swift structs, and unlike
-<code><a href="../../Classes/Realm.html">Realm</a></code> and <code><a href="../../Classes/Object.html">Object</a></code>s can be freely shared between threads. Creating
-configuration objects for class subsets (by setting the <code>objectTypes</code>
-property) can be expensive, and so you will normally want to cache and reuse
-a single configuration object for each distinct configuration that you are
-using rather than creating a new one each time you open a <code><a href="../../Classes/Realm.html">Realm</a></code>.</p>
+<p><code>Configuration</code> instances are just plain Swift structs. Unlike <code><a href="../../Classes/Realm.html">Realm</a></code>s
+and <code><a href="../../Classes/Object.html">Object</a></code>s, they can be freely shared between threads as long as you do not
+mutate them.</p>
+
+<p>Creating configuration values for class subsets (by setting the
+<code>objectClasses</code> property) can be expensive. Because of this, you will normally want to
+cache and reuse a single configuration value for each distinct configuration rather than
+creating a new value each time you open a Realm.</p>
 
           </section>
           <section class="section task-group-section">
@@ -230,7 +232,7 @@ using rather than creating a new one each time you open a <code><a href="../../C
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the default Realm.Configuration used to create Realms when no other
+                        <p>Returns the default configuration used to create Realms when no other
 configuration is explicitly specified (i.e. <code>Realm()</code>).</p>
 
                       </div>
@@ -243,7 +245,7 @@ configuration is explicitly specified (i.e. <code>Realm()</code>).</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/RealmConfiguration.swift#L41-L48">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/RealmConfiguration.swift#L43-L50">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -302,7 +304,7 @@ configuration is explicitly specified (i.e. <code>Realm()</code>).</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The local URL to the realm file.</p>
+                                  <p>The local URL to the Realm file.</p>
 
                                 </div>
                               </td>
@@ -328,7 +330,7 @@ configuration is explicitly specified (i.e. <code>Realm()</code>).</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>64-byte key to use to encrypt the data.</p>
+                                  <p>An optional 64-byte key to use to encrypt the data.</p>
 
                                 </div>
                               </td>
@@ -402,7 +404,7 @@ configuration is explicitly specified (i.e. <code>Realm()</code>).</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/RealmConfiguration.swift#L65-L83">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/RealmConfiguration.swift#L67-L85">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -431,8 +433,7 @@ configuration is explicitly specified (i.e. <code>Realm()</code>).</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The local URL to the realm file.
-Mutually exclusive with <code><a href="../../Classes/Realm/Configuration.html#/s:vVC10RealmSwift5Realm13Configuration18inMemoryIdentifierGSqSS_">inMemoryIdentifier</a></code>.</p>
+                        <p>The local URL of the Realm file. Mutually exclusive with <code><a href="../../Classes/Realm/Configuration.html#/s:vVC10RealmSwift5Realm13Configuration18inMemoryIdentifierGSqSS_">inMemoryIdentifier</a></code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -444,7 +445,7 @@ Mutually exclusive with <code><a href="../../Classes/Realm/Configuration.html#/s
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/RealmConfiguration.swift#L89-L97">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/RealmConfiguration.swift#L90-L98">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -462,8 +463,7 @@ Mutually exclusive with <code><a href="../../Classes/Realm/Configuration.html#/s
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A string used to identify a particular in-memory Realm.
-Mutually exclusive with <code>path</code>.</p>
+                        <p>A string used to identify a particular in-memory Realm. Mutually exclusive with <code>path</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -475,7 +475,7 @@ Mutually exclusive with <code>path</code>.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/RealmConfiguration.swift#L103-L111">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/RealmConfiguration.swift#L103-L111">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -493,7 +493,7 @@ Mutually exclusive with <code>path</code>.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>64-byte key to use to encrypt the data.</p>
+                        <p>A 64-byte key to use to encrypt the data, or <code>nil</code> if encryption is not enabled.</p>
 
                       </div>
                       <div class="declaration">
@@ -505,7 +505,7 @@ Mutually exclusive with <code>path</code>.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/RealmConfiguration.swift#L116">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/RealmConfiguration.swift#L116">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -523,7 +523,7 @@ Mutually exclusive with <code>path</code>.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Whether the Realm is read-only (must be true for read-only files).</p>
+                        <p>Whether the Realm is read-only (must be <code>true</code> for read-only files).</p>
 
                       </div>
                       <div class="declaration">
@@ -535,7 +535,7 @@ Mutually exclusive with <code>path</code>.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/RealmConfiguration.swift#L119">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/RealmConfiguration.swift#L119">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -565,7 +565,7 @@ Mutually exclusive with <code>path</code>.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/RealmConfiguration.swift#L122">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/RealmConfiguration.swift#L122">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -595,7 +595,7 @@ Mutually exclusive with <code>path</code>.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/RealmConfiguration.swift#L125">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/RealmConfiguration.swift#L125">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -613,14 +613,14 @@ Mutually exclusive with <code>path</code>.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Recreate the Realm file with the provided schema if a migration is required.
+                        <p>Whether to recreate the Realm file with the provided schema if a migration is required.
 This is the case when the stored schema differs from the provided schema or
 the stored schema version differs from the version on this configuration.
-This deletes the file if a migration would otherwise be required or run.</p>
+Setting this property to <code>true</code> deletes the file if a migration would otherwise be required or executed.</p>
 
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
-    This doesn&rsquo;t disable file format migrations.
+    Setting this property to <code>true</code> doesn&rsquo;t disable file format migrations.
 
 </div>
 
@@ -634,7 +634,7 @@ This deletes the file if a migration would otherwise be required or run.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/RealmConfiguration.swift#L135">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/RealmConfiguration.swift#L135">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -664,7 +664,7 @@ This deletes the file if a migration would otherwise be required or run.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/RealmConfiguration.swift#L138-L145">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/RealmConfiguration.swift#L138-L145">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

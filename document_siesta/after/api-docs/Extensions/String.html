@@ -183,6 +183,9 @@
             <a href="../Other Extensions.html">Other Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Extensions/NSRegularExpression.html">NSRegularExpression</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Extensions/NSURLSession.html">NSURLSession</a>
               </li>
               <li class="nav-group-task">
@@ -216,7 +219,7 @@
 
                 </div>
               </div>
-            <p>Support for passing URL patterns with wildcards to <code><a href="../Classes/Service.html#/s:FC6Siesta7Service9configureFT11descriptionSS10configurerFCVS_13Configuration7BuilderT__T_">Service.configure(...)</a></code>.</p>
+            <p>Support for passing URL patterns with wildcards to <code><a href="../Classes/Service.html#/s:FC6Siesta7Service9configureFTPS_31ConfigurationPatternConvertible_14requestMethodsGSqGSaOS_13RequestMethod__11descriptionGSqSS_10configurerFCVS_13Configuration7BuilderT__T_">Service.configure(...)</a></code>.</p>
 
           </section>
           <section class="section task-group-section">
@@ -240,10 +243,10 @@
 <p>The <code>urlPattern</code> is interpreted relative to the service’s base URL unless it begins with a protocol (e.g. <code>http:</code>).
 If it is relative, the leading slash is optional.</p>
 
-<p>The pattern supports two wildcards:</p>
+<p>The pattern supports three wildcards:</p>
 
 <ul>
-<li><code>*</code> matches zero or more characters within a path segment, and</li>
+<li><code>*</code> matches zero or more characters within a path segment.</li>
 <li><code>**</code> matches zero or more characters across path segments, with the special case that `/*</li>
 </ul>
 

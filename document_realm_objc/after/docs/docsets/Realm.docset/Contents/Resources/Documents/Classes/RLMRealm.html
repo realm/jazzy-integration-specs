@@ -33,7 +33,7 @@
       <div class="content-wrapper">
         <p><a href="../index.html">Realm Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fobjc%2F0%2E103%2E0%2Fapi%2Fdocsets%2FRealm%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fobjc%2F1%2E0%2E0%2Fapi%2Fdocsets%2FRealm%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -170,28 +170,31 @@
 
                 </div>
               </div>
-            <p>An RLMRealm instance (also referred to as <q>a realm</q>) represents a Realm
+            <p>An <code>RLMRealm</code> instance (also referred to as <q>a Realm</q>) represents a Realm
 database.</p>
 
-<p>Realms can either be stored on disk (see +[RLMRealm realmWithURL:]) or in
-memory (see RLMRealmConfiguration).</p>
+<p>Realms can either be stored on disk (see <code>+[RLMRealm realmWithURL:]</code>) or in
+memory (see <code><a href="../Classes/RLMRealmConfiguration.html">RLMRealmConfiguration</a></code>).</p>
 
-<p>RLMRealm instances are cached internally, and constructing equivalent RLMRealm
-objects (with the same path or identifier) multiple times on a single thread
+<p><code>RLMRealm</code> instances are cached internally, and constructing equivalent <code>RLMRealm</code>
+objects (for example, by using the same path or identifier) multiple times on a single thread
 within a single iteration of the run loop will normally return the same
-RLMRealm object. If you specifically want to ensure a RLMRealm object is
-destroyed (for example, if you wish to open a realm, check some property, and
-then possibly delete the realm file and re-open it), place the code which uses
-the realm within an <code>@autoreleasepool {}</code> and ensure you have no other
+<code>RLMRealm</code> object.</p>
+
+<p>If you specifically want to ensure a <code>RLMRealm</code> instance is
+destroyed (for example, if you wish to open a Realm, check some property, and
+then possibly delete the Realm file and re-open it), place the code which uses
+the Realm within an <code>@autoreleasepool {}</code> and ensure you have no other
 strong references to it.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    RLMRealm instances are not thread safe and can not be shared across
-threads or dispatch queues. You must call this method on each thread you want
-to interact with the realm on. For dispatch queues, this means that you must
+    <code>RLMRealm</code> instances are not thread safe and cannot be shared across
+threads or dispatch queues. Trying to do so will cause an exception to be thrown.
+You must call this method on each thread you want
+to interact with the Realm on. For dispatch queues, this means that you must
 call it in each block which is dispatched, as a queue is not guaranteed to run
-on a consistent thread.
+all of its blocks on the same thread.
 
 </div>
 
@@ -250,7 +253,7 @@ can be changed via <code>+[RLMRealmConfiguration setDefaultConfiguration:]</code
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealm.h#L66">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMRealm.h#L69">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -298,7 +301,7 @@ can be changed via <code>+[RLMRealmConfiguration setDefaultConfiguration:]</code
                               </td>
                               <td>
                                 <div>
-                                  <p>The configuration for the realm.</p>
+                                  <p>A configuration object to use when creating the Realm.</p>
 
                                 </div>
                               </td>
@@ -327,7 +330,7 @@ can be changed via <code>+[RLMRealmConfiguration setDefaultConfiguration:]</code
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealm.h#L78">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMRealm.h#L81">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -345,7 +348,7 @@ can be changed via <code>+[RLMRealmConfiguration setDefaultConfiguration:]</code
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Obtains an <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> instance persisted at a specific file URL.</p>
+                        <p>Obtains an <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> instance persisted at a specified file URL.</p>
 
                       </div>
                       <div class="declaration">
@@ -373,7 +376,7 @@ can be changed via <code>+[RLMRealmConfiguration setDefaultConfiguration:]</code
                               </td>
                               <td>
                                 <div>
-                                  <p>Local URL to the file you want the data saved in.</p>
+                                  <p>The local URL of the file the Realm should be saved at.</p>
 
                                 </div>
                               </td>
@@ -387,7 +390,7 @@ can be changed via <code>+[RLMRealmConfiguration setDefaultConfiguration:]</code
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealm.h#L87">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMRealm.h#L90">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -405,7 +408,7 @@ can be changed via <code>+[RLMRealmConfiguration setDefaultConfiguration:]</code
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The RLMSchema used by this RLMRealm.</p>
+                        <p>The <code><a href="../Classes/RLMSchema.html">RLMSchema</a></code> used by the Realm.</p>
 
                       </div>
                       <div class="declaration">
@@ -422,7 +425,7 @@ can be changed via <code>+[RLMRealmConfiguration setDefaultConfiguration:]</code
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealm.h#L92">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMRealm.h#L95">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -440,7 +443,7 @@ can be changed via <code>+[RLMRealmConfiguration setDefaultConfiguration:]</code
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Indicates if this Realm is currently in a write transaction.</p>
+                        <p>Indicates if the Realm is currently engaged in a write transaction.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
@@ -466,7 +469,7 @@ can be changed via <code>+[RLMRealmConfiguration setDefaultConfiguration:]</code
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealm.h#L102">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMRealm.h#L105">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -484,7 +487,7 @@ can be changed via <code>+[RLMRealmConfiguration setDefaultConfiguration:]</code
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the <code><a href="../Classes/RLMRealmConfiguration.html">RLMRealmConfiguration</a></code> that was used to create this <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> instance.</p>
+                        <p>The <code><a href="../Classes/RLMRealmConfiguration.html">RLMRealmConfiguration</a></code> object that was used to create this <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> instance.</p>
 
                       </div>
                       <div class="declaration">
@@ -501,7 +504,7 @@ can be changed via <code>+[RLMRealmConfiguration setDefaultConfiguration:]</code
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealm.h#L107">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMRealm.h#L110">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -536,7 +539,7 @@ can be changed via <code>+[RLMRealmConfiguration setDefaultConfiguration:]</code
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealm.h#L112">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMRealm.h#L115">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -565,13 +568,14 @@ can be changed via <code>+[RLMRealmConfiguration setDefaultConfiguration:]</code
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Add a notification handler for changes in this RLMRealm.</p>
+                        <p>Adds a notification handler for changes in this Realm, and returns a notification token.</p>
 
 <p>Notification handlers are called after each write transaction is committed,
-either on the current thread or other threads. The block is called on the same
-thread as they were added on, and can only be added on threads which are
-currently within a run loop. Unless you are specifically creating and running a
-run loop on a background thread, this normally will only be the main thread.</p>
+either on the current thread or other threads.</p>
+
+<p>Handler blocks are called on the same thread that they were added on, and may only be added on threads which are
+currently within a run loop. Unless you are specifically creating and running a run loop on a background thread, this
+will normally only be the main thread.</p>
 
 <p>The block has the following definition:</p>
 
@@ -582,9 +586,9 @@ run loop on a background thread, this normally will only be the main thread.</p>
 
 <ul>
 <li><code>NSString</code> *<strong>notification</strong>:    The name of the incoming notification. See
-                                RLMRealmNotification for information on what
+                                <code>RLMRealmNotification</code> for information on what
                                 notifications are sent.</li>
-<li><p><code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> *<strong>realm</strong>:           The realm for which this notification occurred</p></li>
+<li><p><code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> *<strong>realm</strong>:           The Realm for which this notification occurred.</p></li>
 </ul>
 
                       </div>
@@ -614,7 +618,7 @@ run loop on a background thread, this normally will only be the main thread.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>A block which is called to process RLMRealm notifications.</p>
+                                  <p>A block which is called to process Realm notifications.</p>
 
                                 </div>
                               </td>
@@ -624,12 +628,12 @@ run loop on a background thread, this normally will only be the main thread.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>A token object which must be stored as long as you wish to continue
+                        <p>A token object which must be retained as long as you wish to continue
         receiving change notifications.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealm.h#L146">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMRealm.h#L154">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -658,22 +662,22 @@ run loop on a background thread, this normally will only be the main thread.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Begins a write transaction in an <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code>.</p>
+                        <p>Begins a write transaction on the Realm.</p>
 
 <p>Only one write transaction can be open at a time. Write transactions cannot be
-nested, and trying to begin a write transaction on a <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> which is
+nested, and trying to begin a write transaction on a Realm which is
 already in a write transaction will throw an exception. Calls to
 <code>beginWriteTransaction</code> from <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> instances in other threads will block
 until the current write transaction completes.</p>
 
 <p>Before beginning the write transaction, <code>beginWriteTransaction</code> updates the
-<code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> to the latest Realm version, as if refresh was called, and
-generates notifications if applicable. This has no effect if the <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code>
+<code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> instance to the latest Realm version, as if <code>refresh</code> had been called, and
+generates notifications if applicable. This has no effect if the Realm
 was already up to date.</p>
 
 <p>It is rarely a good idea to have write transactions span multiple cycles of
 the run loop, but if you do wish to do so you will need to ensure that the
-<code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> in the write transaction is kept alive until the write transaction
+Realm participating in the write transaction is kept alive until the write transaction
 is committed.</p>
 
                       </div>
@@ -691,7 +695,7 @@ is committed.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealm.h#L172">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMRealm.h#L180">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -714,7 +718,7 @@ transaction.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    This method can only be called during a write transaction.
+    This method may only be called during a write transaction.
 
 </div>
 
@@ -728,7 +732,7 @@ transaction.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealm.h#L180">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMRealm.h#L188">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -751,7 +755,7 @@ transaction.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>This method can only be called during a write transaction.</p>
+    <p>This method may only be called during a write transaction.</p>
 
 </div>
 
@@ -797,7 +801,7 @@ transaction.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealm.h#L194">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMRealm.h#L202">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -815,14 +819,14 @@ transaction.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Reverts all writes made in the current write transaction and ends the transaction.</p>
+                        <p>Reverts all writes made during the current write transaction and ends the transaction.</p>
 
 <p>This rolls back all objects in the Realm to the state they were in at the
 beginning of the write transaction, and then ends the transaction.</p>
 
 <p>This restores the data for deleted objects, but does not revive invalidated
 object instances. Any <code><a href="../Classes/RLMObject.html">RLMObject</a></code>s which were added to the Realm will be
-invalidated rather than switching back to standalone objects.
+invalidated rather than becoming unmanaged.
 Given the following code:</p>
 
 <pre class="highlight plaintext"><code>ObjectType *oldObject = [[ObjectType objectsWhere:@"..."] firstObject];
@@ -840,7 +844,7 @@ the valid object.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    This method can only be called during a write transaction.
+    This method may only be called during a write transaction.
 
 </div>
 
@@ -859,7 +863,7 @@ the valid object.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealm.h#L221">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMRealm.h#L229">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -877,7 +881,13 @@ the valid object.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Helper to perform a block within a transaction.</p>
+                        <p>Performs actions contained within the given block inside a write transaction.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <code>[RLMRealm transactionWithBlock:error:]</code>
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -889,7 +899,7 @@ the valid object.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealm.h#L226">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMRealm.h#L236">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -910,13 +920,13 @@ the valid object.</p>
                         <p>Performs actions contained within the given block inside a write transaction.</p>
 
 <p>Write transactions cannot be nested, and trying to execute a write transaction 
-on a <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> which is already in a write transaction will throw an 
+on a Realm which is already participating in a write transaction will throw an
 exception. Calls to <code>transactionWithBlock:</code> from <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> instances in other 
 threads will block until the current write transaction completes.</p>
 
 <p>Before beginning the write transaction, <code>transactionWithBlock:</code> updates the
-<code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> to the latest Realm version, as if refresh was called, and
-generates notifications if applicable. This has no effect if the <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code>
+<code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> instance to the latest Realm version, as if <code>refresh</code> had been called, and
+generates notifications if applicable. This has no effect if the Realm
 was already up to date.</p>
 
                       </div>
@@ -946,7 +956,7 @@ was already up to date.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The block to perform.</p>
+                                  <p>The block containing actions to perform.</p>
 
                                 </div>
                               </td>
@@ -975,7 +985,7 @@ was already up to date.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealm.h#L248">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMRealm.h#L258">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -993,7 +1003,7 @@ was already up to date.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Update an <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> and outstanding objects to point to the most recent data for this <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code>.</p>
+                        <p>Updates the Realm and outstanding objects managed by the Realm to point to the most recent data.</p>
 
                       </div>
                       <div class="declaration">
@@ -1011,11 +1021,12 @@ was already up to date.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>Whether the realm had any updates. Note that this may return YES even if no data has actually changed.</p>
+                        <p>Whether there were any updates for the Realm. Note that <code>YES</code> may be returned even if no data actually
+        changed.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealm.h#L255">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMRealm.h#L266">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1033,33 +1044,33 @@ was already up to date.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Set to YES to automatically update this Realm when changes happen in other threads.</p>
+                        <p>Set this property to <code>YES</code> to automatically update this Realm when changes happen in other threads.</p>
 
-<p>If set to YES (the default), changes made on other threads will be reflected
+<p>If set to <code>YES</code> (the default), changes made on other threads will be reflected
 in this Realm on the next cycle of the run loop after the changes are
-committed.  If set to NO, you must manually call <code><a href="../Classes/RLMRealm.html#/c:objc(cs)RLMRealm(im)refresh">-refresh</a></code> on the Realm to
-update it to get the latest version.</p>
+committed.  If set to <code>NO</code>, you must manually call <code><a href="../Classes/RLMRealm.html#/c:objc(cs)RLMRealm(im)refresh">-refresh</a></code> on the Realm to
+update it to get the latest data.</p>
 
 <p>Note that by default, background threads do not have an active run loop and you 
 will need to manually call <code><a href="../Classes/RLMRealm.html#/c:objc(cs)RLMRealm(im)refresh">-refresh</a></code> in order to update to the latest version,
-even if <code>autorefresh</code> is set to <code>true</code>.</p>
+even if <code>autorefresh</code> is set to <code>YES</code>.</p>
 
 <p>Even with this enabled, you can still call <code><a href="../Classes/RLMRealm.html#/c:objc(cs)RLMRealm(im)refresh">-refresh</a></code> at any time to update the
 Realm before the automatic refresh would occur.</p>
 
 <p>Notifications are sent when a write transaction is committed whether or not
-this is enabled.</p>
+automatic refreshing is enabled.</p>
 
-<p>Disabling this on an <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> without any strong references to it will not
-have any effect, and it will switch back to YES the next time the <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code>
-object is created. This is normally irrelevant as it means that there is
+<p>Disabling <code>autorefresh</code> on a Realm without any strong references to it will not
+have any effect, and <code>autorefresh</code> will revert back to <code>YES</code> the next time the Realm is created.
+This is normally irrelevant as it means that there is
 nothing to refresh (as persisted <code><a href="../Classes/RLMObject.html">RLMObject</a></code>s, <code><a href="../Classes/RLMArray.html">RLMArray</a></code>s, and <code><a href="../Classes/RLMResults.html">RLMResults</a></code> have strong
-references to the containing <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code>), but it means that setting
+references to the Realm that manages them), but it means that setting
 <code>RLMRealm.defaultRealm.autorefresh = NO</code> in
 <code>application:didFinishLaunchingWithOptions:</code> and only later storing Realm
 objects will not work.</p>
 
-<p>Defaults to YES.</p>
+<p>Defaults to <code>YES</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -1076,7 +1087,7 @@ objects will not work.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealm.h#L286">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMRealm.h#L297">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1094,13 +1105,12 @@ objects will not work.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Write a compacted and optionally encrypted copy of the RLMRealm to the given
-local URL.</p>
+                        <p>Writes a compacted and optionally encrypted copy of the Realm to the given local URL.</p>
 
 <p>The destination file cannot already exist.</p>
 
-<p>Note that if this is called from within a write transaction it writes the
-<em>current</em> data, and not data when the last write transaction was committed.</p>
+<p>Note that if this method is called from within a write transaction, the <em>current</em> data is written, not the data from
+the point when the previous write transaction was committed.</p>
 
                       </div>
                       <div class="declaration">
@@ -1156,10 +1166,9 @@ local URL.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>On input, a pointer to an error object. If an error occurs,
-             this pointer is set to an actual error object containing the
-             error information. You may specify nil for this parameter if you
-             do not want the error information.</p>
+                                  <p>If an error occurs, upon return contains an <code>NSError</code> object
+             that describes the problem. If you are not interested in
+             possible errors, pass in <code>NULL</code>.</p>
 
                                 </div>
                               </td>
@@ -1169,11 +1178,11 @@ local URL.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>YES if the realm was copied successfully. Returns NO if an error occurred.</p>
+                        <p><code>YES</code> if the Realm was successfully written to disk, <code>NO</code> if an error occurred.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealm.h#L306">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMRealm.h#L315">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1191,24 +1200,24 @@ local URL.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Invalidate all RLMObjects and RLMResults read from this Realm.</p>
+                        <p>Invalidates all <code><a href="../Classes/RLMObject.html">RLMObject</a></code>s and <code><a href="../Classes/RLMResults.html">RLMResults</a></code> managed by the Realm.</p>
 
-<p>An RLMRealm holds a read lock on the version of the data accessed by it, so
+<p>A Realm holds a read lock on the version of the data accessed by it, so
 that changes made to the Realm on different threads do not modify or delete the
-data seen by this RLMRealm. Calling this method releases the read lock,
+data seen by this Realm. Calling this method releases the read lock,
 allowing the space used on disk to be reused by later write transactions rather
 than growing the file. This method should be called before performing long
 blocking operations on a background thread on which you previously read data
 from the Realm which you no longer need.</p>
 
 <p>All <code><a href="../Classes/RLMObject.html">RLMObject</a></code>, <code><a href="../Classes/RLMResults.html">RLMResults</a></code> and <code><a href="../Classes/RLMArray.html">RLMArray</a></code> instances obtained from this
-<code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> on the current thread are invalidated, and can not longer be used.
-The <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> itself remains valid, and a new read transaction is implicitly
-begun the next time data is read from the Realm.</p>
+<code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> instance on the current thread are invalidated. <code><a href="../Classes/RLMObject.html">RLMObject</a></code>s and <code><a href="../Classes/RLMArray.html">RLMArray</a></code>s
+cannot be used. <code><a href="../Classes/RLMResults.html">RLMResults</a></code> will become empty. The Realm itself remains valid,
+and a new read transaction is implicitly begun the next time data is read from the Realm.</p>
 
 <p>Calling this method multiple times in a row without reading any data from the
-Realm, or before ever reading any data from the Realm is a no-op. This method
-cannot be called on a read-only Realm.</p>
+Realm, or before ever reading any data from the Realm, is a no-op. This method
+may not be called on a read-only Realm.</p>
 
                       </div>
                       <div class="declaration">
@@ -1225,7 +1234,7 @@ cannot be called on a read-only Realm.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealm.h#L328">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMRealm.h#L337">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1254,22 +1263,24 @@ cannot be called on a read-only Realm.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Adds an object to be persisted in this Realm.</p>
+                        <p>Adds an object to the Realm.</p>
 
-<p>Once added, this object can be retrieved using the <code>objectsWhere:</code> selectors
-on <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> and on subclasses of <code><a href="../Classes/RLMObject.html">RLMObject</a></code>. When added, all (child)
-relationships referenced by this object will also be added to the Realm if they are
-not already in it. If the object or any related objects already belong to a
-different Realm an exception will be thrown. Use
-<code>-[RLMObject createInRealm:withObject]</code> to insert a copy of a persisted object
+<p>Once added, this object is considered to be managed by the Realm. It can be retrieved
+using the <code>objectsWhere:</code> selectors on <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> and on subclasses of <code><a href="../Classes/RLMObject.html">RLMObject</a></code>.</p>
+
+<p>When added, all child relationships referenced by this object will also be added to 
+the Realm if they are not already in it.</p>
+
+<p>If the object or any related objects are already being managed by a different Realm
+an exception will be thrown. Use <code>-[RLMObject createInRealm:withObject:]</code> to insert a copy of a managed object
 into a different Realm.</p>
 
 <p>The object to be added must be valid and cannot have been previously deleted
-from a Realm (i.e. <code>isInvalidated</code>) must be false.</p>
+from a Realm (i.e. <code>isInvalidated</code> must be <code>NO</code>).</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>This method can only be called during a write transaction.</p>
+    <p>This method may only be called during a write transaction.</p>
 
 </div>
 
@@ -1299,7 +1310,7 @@ from a Realm (i.e. <code>isInvalidated</code>) must be false.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>Object to be added to this Realm.</p>
+                                  <p>The object to be added to this Realm.</p>
 
                                 </div>
                               </td>
@@ -1308,7 +1319,7 @@ from a Realm (i.e. <code>isInvalidated</code>) must be false.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealm.h#L353">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMRealm.h#L364">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1326,19 +1337,19 @@ from a Realm (i.e. <code>isInvalidated</code>) must be false.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Adds objects in the given array to be persisted in this Realm.</p>
+                        <p>Adds all the objects in a collection to the Realm.</p>
 
-<p>This is the equivalent of <code>addObject:</code> except for an array of objects.</p>
+<p>This is the equivalent of calling <code>addObject:</code> for every object in a collection.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>This method can only be called during a write transaction.</p>
+    <p>This method may only be called during a write transaction.</p>
 
 </div>
 
 <div class="aside aside-see">
     <p class="aside-title">See</p>
-    <p>addObject:</p>
+    <p><code>addObject:</code></p>
 
 </div>
 
@@ -1368,8 +1379,8 @@ from a Realm (i.e. <code>isInvalidated</code>) must be false.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>An enumerable object such as NSArray or RLMResults which contains objects to be added to
-             this Realm.</p>
+                                  <p>An enumerable object such as <code>NSArray</code> or <code>RLMResults</code> which contains objects to be added to
+             the Realm.</p>
 
                                 </div>
                               </td>
@@ -1378,7 +1389,7 @@ from a Realm (i.e. <code>isInvalidated</code>) must be false.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealm.h#L367">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMRealm.h#L378">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1396,17 +1407,19 @@ from a Realm (i.e. <code>isInvalidated</code>) must be false.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Adds or updates an object to be persisted in this Realm. The object provided must have a designated
-primary key. If no objects exist in the RLMRealm instance with the same primary key value, the object is
-inserted. Otherwise, the existing object is updated with any changed values.</p>
+                        <p>Adds or updates an existing object into the Realm.</p>
 
-<p>As with <code>addObject:</code>, the object cannot already be persisted in a different
+<p>The object provided must have a designated primary key. If no objects exist in the Realm 
+with the same primary key value, the object is inserted. Otherwise, the existing object is
+updated with any changed values.</p>
+
+<p>As with <code>addObject:</code>, the object cannot already be managed by a different
 Realm. Use <code>-[RLMObject createOrUpdateInRealm:withValue:]</code> to copy values to
 a different Realm.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>This method can only be called during a write transaction.</p>
+    <p>This method may only be called during a write transaction.</p>
 
 </div>
 
@@ -1436,7 +1449,7 @@ a different Realm.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>Object to be added or updated.</p>
+                                  <p>The object to be added or updated.</p>
 
                                 </div>
                               </td>
@@ -1445,7 +1458,7 @@ a different Realm.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealm.h#L382">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMRealm.h#L395">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1463,19 +1476,19 @@ a different Realm.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Adds or updates objects in the given array to be persisted in this Realm.</p>
+                        <p>Adds or updates all the objects in a collection into the Realm.</p>
 
-<p>This is the equivalent of <code>addOrUpdateObject:</code> except for an array of objects.</p>
+<p>This is the equivalent of calling <code>addOrUpdateObject:</code> for every object in a collection.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>This method can only be called during a write transaction.</p>
+    <p>This method may only be called during a write transaction.</p>
 
 </div>
 
 <div class="aside aside-see">
     <p class="aside-title">See</p>
-    <p>addOrUpdateObject:</p>
+    <p><code>addOrUpdateObject:</code></p>
 
 </div>
 
@@ -1505,7 +1518,7 @@ a different Realm.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p><code>NSArray</code>, <code>RLMArray</code>, or <code>RLMResults</code> of <code>RLMObject</code>s (or subclasses) to be added to this Realm.</p>
+                                  <p>An <code>NSArray</code>, <code>RLMArray</code>, or <code>RLMResults</code> of <code>RLMObject</code>s (or subclasses) to be added to the Realm.</p>
 
                                 </div>
                               </td>
@@ -1514,7 +1527,7 @@ a different Realm.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealm.h#L395">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMRealm.h#L408">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1532,11 +1545,11 @@ a different Realm.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Delete an object from this Realm.</p>
+                        <p>Deletes an object from the Realm. Once the object is deleted it is considered invalidated.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>This method can only be called during a write transaction.</p>
+    <p>This method may only be called during a write transaction.</p>
 
 </div>
 
@@ -1566,7 +1579,7 @@ a different Realm.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>Object to be deleted from this Realm.</p>
+                                  <p>The object to be deleted.</p>
 
                                 </div>
                               </td>
@@ -1575,7 +1588,7 @@ a different Realm.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealm.h#L404">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMRealm.h#L417">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1593,11 +1606,19 @@ a different Realm.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Delete an <code>NSArray</code>, <code><a href="../Classes/RLMArray.html">RLMArray</a></code>, or <code><a href="../Classes/RLMResults.html">RLMResults</a></code> of objects from this Realm.</p>
+                        <p>Deletes one or more objects from the Realm.</p>
+
+<p>This is the equivalent of calling <code>deleteObject:</code> for every object in a collection.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>This method can only be called during a write transaction.</p>
+    <p>This method may only be called during a write transaction.</p>
+
+</div>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <p><code>deleteObject:</code></p>
 
 </div>
 
@@ -1627,7 +1648,7 @@ a different Realm.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p><code>RLMArray</code>, <code>NSArray</code>, or <code>RLMResults</code> of <code>RLMObject</code>s to be deleted.</p>
+                                  <p>An <code>RLMArray</code>, <code>NSArray</code>, or <code>RLMResults</code> of <code>RLMObject</code>s (or subclasses) to be deleted.</p>
 
                                 </div>
                               </td>
@@ -1636,7 +1657,7 @@ a different Realm.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealm.h#L413">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMRealm.h#L430">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1654,11 +1675,17 @@ a different Realm.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Deletes all objects in this Realm.</p>
+                        <p>Deletes all objects from the Realm.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    This method can only be called during a write transaction.
+    <p>This method may only be called during a write transaction.</p>
+
+</div>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <p><code>deleteObject:</code></p>
 
 </div>
 
@@ -1677,7 +1704,7 @@ a different Realm.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealm.h#L420">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMRealm.h#L439">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1706,7 +1733,7 @@ a different Realm.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Get the schema version for a Realm at a given local URL.</p>
+                        <p>Returns the schema version for a Realm at a given local URL.</p>
 
                       </div>
                       <div class="declaration">
@@ -1749,7 +1776,7 @@ a different Realm.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>64-byte key used to encrypt the file, or nil if it is unencrypted.</p>
+                                  <p>64-byte key used to encrypt the file, or <code>nil</code> if it is unencrypted.</p>
 
                                 </div>
                               </td>
@@ -1774,11 +1801,11 @@ a different Realm.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The version of the Realm at <code>fileURL</code> or RLMNotVersioned if the version cannot be read.</p>
+                        <p>The version of the Realm at <code>fileURL</code>, or <code><a href="../Constants.html#/c:@RLMNotVersioned">RLMNotVersioned</a></code> if the version cannot be read.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealm.h#L447">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMRealm.h#L466">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1849,7 +1876,7 @@ exactly when and how migrations are performed.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMRealm.h#L461">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMRealm.h#L480">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
