@@ -33,7 +33,7 @@
       <div class="content-wrapper">
         <p><a href="../index.html">Realm Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fobjc%2F0%2E103%2E0%2Fapi%2Fdocsets%2FRealm%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fobjc%2F1%2E0%2E0%2Fapi%2Fdocsets%2FRealm%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -170,12 +170,11 @@
 
                 </div>
               </div>
-            <p>This class models properties persisted to Realm in an RLMObjectSchema.</p>
+            <p><code>RLMProperty</code> instances represent properties persisted to Realm in the context of an object schema.</p>
 
-<p>When using Realm, RLMProperty objects allow performing migrations and 
-introspecting the database&rsquo;s schema.</p>
+<p>When using Realm, <code>RLMProperty</code> instances allow performing migrations and introspecting the database&rsquo;s schema.</p>
 
-<p>These properties map to columns in the core database.</p>
+<p>These property instances map to columns in the core database.</p>
 
           </section>
           <section class="section task-group-section">
@@ -201,7 +200,7 @@ introspecting the database&rsquo;s schema.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Property name.</p>
+                        <p>The name of the property.</p>
 
                       </div>
                       <div class="declaration">
@@ -218,7 +217,7 @@ introspecting the database&rsquo;s schema.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMProperty.h#L59">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMProperty.h#L58">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -236,11 +235,11 @@ introspecting the database&rsquo;s schema.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Property type.</p>
+                        <p>The type of the property.</p>
 
 <div class="aside aside-see">
     <p class="aside-title">See</p>
-    RLMPropertyType
+    <code><a href="../Enums/RLMPropertyType.html">RLMPropertyType</a></code>
 
 </div>
 
@@ -259,7 +258,7 @@ introspecting the database&rsquo;s schema.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMProperty.h#L66">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMProperty.h#L65">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -277,11 +276,11 @@ introspecting the database&rsquo;s schema.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Indicates if this property is indexed.</p>
+                        <p>Indicates whether this property is indexed.</p>
 
 <div class="aside aside-see">
     <p class="aside-title">See</p>
-    RLMObject
+    <code><a href="../Classes/RLMObject.html">RLMObject</a></code>
 
 </div>
 
@@ -300,7 +299,7 @@ introspecting the database&rsquo;s schema.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMProperty.h#L73">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMProperty.h#L72">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -318,7 +317,7 @@ introspecting the database&rsquo;s schema.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Object class name - specify object types for RLMObject and RLMArray properties.</p>
+                        <p>For <code><a href="../Classes/RLMObject.html">RLMObject</a></code> and <code><a href="../Classes/RLMArray.html">RLMArray</a></code> properties, the name of the class of object stored in the property.</p>
 
                       </div>
                       <div class="declaration">
@@ -335,7 +334,7 @@ introspecting the database&rsquo;s schema.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMProperty.h#L78">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMProperty.h#L77">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -353,7 +352,7 @@ introspecting the database&rsquo;s schema.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Property name of the origin of a link. Specified for linking objects properties.</p>
+                        <p>For linking objects properties, the property name of the property the linking objects property is linked to.</p>
 
                       </div>
                       <div class="declaration">
@@ -370,7 +369,7 @@ introspecting the database&rsquo;s schema.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMProperty.h#L83">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMProperty.h#L82">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -388,7 +387,7 @@ introspecting the database&rsquo;s schema.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Whether this property is optional.</p>
+                        <p>Indicates whether this property is optional.</p>
 
                       </div>
                       <div class="declaration">
@@ -405,7 +404,7 @@ introspecting the database&rsquo;s schema.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMProperty.h#L88">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMProperty.h#L87">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -434,7 +433,7 @@ introspecting the database&rsquo;s schema.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns YES if property objects are equal.</p>
+                        <p>Returns a Boolean value that indicates whether a given property object is equal to the receiver.</p>
 
                       </div>
                       <div class="declaration">
@@ -451,7 +450,7 @@ introspecting the database&rsquo;s schema.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMProperty.h#L95">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMProperty.h#L94">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

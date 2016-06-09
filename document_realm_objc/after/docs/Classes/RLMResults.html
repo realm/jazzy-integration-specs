@@ -33,7 +33,7 @@
       <div class="content-wrapper">
         <p><a href="../index.html">Realm Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fobjc%2F0%2E103%2E0%2Fapi%2Fdocsets%2FRealm%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fobjc%2F1%2E0%2E0%2Fapi%2Fdocsets%2FRealm%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -170,29 +170,29 @@
 
                 </div>
               </div>
-            <p>RLMResults is an auto-updating container type in Realm returned from object
-queries.</p>
+            <p><code>RLMResults</code> is an auto-updating container type in Realm returned from object
+queries. It represents the results of the query in the form of a collection of objects.</p>
 
-<p>RLMResults can be queried with the same predicates as RLMObject and RLMArray
-and you can chain queries to further filter query results.</p>
+<p><code>RLMResults</code> can be queried using the same predicates as <code><a href="../Classes/RLMObject.html">RLMObject</a></code> and <code><a href="../Classes/RLMArray.html">RLMArray</a></code>,
+and you can chain queries to further filter results.</p>
 
-<p>RLMResults always reflect the current state of the Realm on the current thread,
+<p><code>RLMResults</code> always reflect the current state of the Realm on the current thread,
 including during write transactions on the current thread. The one exception to
 this is when using <code>for...in</code> fast enumeration, which will always enumerate
 over the objects which matched the query when the enumeration is begun, even if
 some of them are deleted or modified to be excluded by the filter during the
 enumeration.</p>
 
-<p>RLMResults are initially lazily evaluated, and only run queries when the result
-of the query is requested. This means that chaining several temporary
-RLMResults to sort and filter your data does not perform any extra work
-processing the intermediate state.</p>
+<p><code>RLMResults</code> are lazily evaluated the first time they are accessed; they only
+run queries when the result of the query is requested. This means that 
+chaining several temporary <code>RLMResults</code> to sort and filter your data does not 
+perform any extra work processing the intermediate state.</p>
 
 <p>Once the results have been evaluated or a notification block has been added,
 the results are eagerly kept up-to-date, with the work done to keep them
 up-to-date done on a background thread whenever possible.</p>
 
-<p>RLMResults cannot be created directly.</p>
+<p><code>RLMResults</code> cannot be directly instantiated.</p>
 
           </section>
           <section class="section task-group-section">
@@ -218,7 +218,7 @@ up-to-date done on a background thread whenever possible.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Number of objects in the results.</p>
+                        <p>The number of objects in the results collection.</p>
 
                       </div>
                       <div class="declaration">
@@ -235,7 +235,7 @@ up-to-date done on a background thread whenever possible.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMResults.h#L58">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMResults.h#L58">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -253,7 +253,7 @@ up-to-date done on a background thread whenever possible.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The class name (i.e. type) of the RLMObjects contained in this RLMResults.</p>
+                        <p>The class name (i.e. type) of the <code><a href="../Classes/RLMObject.html">RLMObject</a></code>s contained in the results collection.</p>
 
                       </div>
                       <div class="declaration">
@@ -270,7 +270,7 @@ up-to-date done on a background thread whenever possible.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMResults.h#L63">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMResults.h#L63">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -288,7 +288,7 @@ up-to-date done on a background thread whenever possible.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The Realm this <code><a href="../Classes/RLMResults.html">RLMResults</a></code> is associated with.</p>
+                        <p>The Realm which manages this results collection.</p>
 
                       </div>
                       <div class="declaration">
@@ -305,7 +305,7 @@ up-to-date done on a background thread whenever possible.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMResults.h#L68">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMResults.h#L68">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -323,9 +323,10 @@ up-to-date done on a background thread whenever possible.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Indicates if the results can no longer be accessed.</p>
+                        <p>Indicates if the results collection is no longer valid.</p>
 
-<p>The results can no longer be accessed if <code>invalidate</code> is called on the containing <code><a href="../Classes/RLMResults.html#/c:objc(cs)RLMResults(py)realm">realm</a></code>.</p>
+<p>The results collection becomes invalid if <code>invalidate</code> is called on the containing <code><a href="../Classes/RLMResults.html#/c:objc(cs)RLMResults(py)realm">realm</a></code>.
+An invalidated results collection can be accessed, but will always be empty.</p>
 
                       </div>
                       <div class="declaration">
@@ -342,7 +343,7 @@ up-to-date done on a background thread whenever possible.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMResults.h#L75">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMResults.h#L76">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -409,11 +410,11 @@ up-to-date done on a background thread whenever possible.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An RLMObject of the type contained in this RLMResults.</p>
+                        <p>An <code><a href="../Classes/RLMObject.html">RLMObject</a></code> of the type contained in the results collection.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMResults.h#L86">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMResults.h#L87">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -431,9 +432,9 @@ up-to-date done on a background thread whenever possible.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the first object in the results.</p>
+                        <p>Returns the first object in the results collection.</p>
 
-<p>Returns <code>nil</code> if called on an empty RLMResults.</p>
+<p>Returns <code>nil</code> if called on an empty results collection.</p>
 
                       </div>
                       <div class="declaration">
@@ -451,11 +452,11 @@ up-to-date done on a background thread whenever possible.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An RLMObject of the type contained in this RLMResults.</p>
+                        <p>An <code><a href="../Classes/RLMObject.html">RLMObject</a></code> of the type contained in the results collection.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMResults.h#L95">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMResults.h#L96">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -473,9 +474,9 @@ up-to-date done on a background thread whenever possible.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the last object in the results.</p>
+                        <p>Returns the last object in the results collection.</p>
 
-<p>Returns <code>nil</code> if called on an empty RLMResults.</p>
+<p>Returns <code>nil</code> if called on an empty results collection.</p>
 
                       </div>
                       <div class="declaration">
@@ -493,11 +494,11 @@ up-to-date done on a background thread whenever possible.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An RLMObject of the type contained in this RLMResults.</p>
+                        <p>An <code><a href="../Classes/RLMObject.html">RLMObject</a></code> of the type contained in the results collection.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMResults.h#L104">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMResults.h#L105">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -526,9 +527,9 @@ up-to-date done on a background thread whenever possible.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Gets the index of an object.</p>
+                        <p>Returns the index of an object in the results collection.</p>
 
-<p>Returns NSNotFound if the object is not found in this RLMResults.</p>
+<p>Returns <code>NSNotFound</code> if the object is not found in the results collection.</p>
 
                       </div>
                       <div class="declaration">
@@ -556,7 +557,7 @@ up-to-date done on a background thread whenever possible.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>An object (of the same type as returned from the objectClassName selector).</p>
+                                  <p>An object (of the same type as returned from the <code>objectClassName</code> selector).</p>
 
                                 </div>
                               </td>
@@ -565,7 +566,7 @@ up-to-date done on a background thread whenever possible.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMResults.h#L115">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMResults.h#L116">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -583,7 +584,7 @@ up-to-date done on a background thread whenever possible.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Gets the index of the first object matching the predicate.</p>
+                        <p>Returns the index of the first object in the results collection matching the predicate.</p>
 
                       </div>
                       <div class="declaration">
@@ -606,7 +607,7 @@ up-to-date done on a background thread whenever possible.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The predicate format string which can accept variable arguments.</p>
+                                  <p>A predicate format string, optionally followed by a variable number of arguments.</p>
 
                                 </div>
                               </td>
@@ -616,11 +617,11 @@ up-to-date done on a background thread whenever possible.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>Index of object or NSNotFound if the object is not found in this RLMResults.</p>
+                        <p>The index of the object, or <code>NSNotFound</code> if the object is not found in the results collection.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMResults.h#L124">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMResults.h#L125">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -638,7 +639,7 @@ up-to-date done on a background thread whenever possible.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Gets the index of the first object matching the predicate.</p>
+                        <p>Returns the index of the first object in the results collection matching the predicate.</p>
 
                       </div>
                       <div class="declaration">
@@ -666,7 +667,7 @@ up-to-date done on a background thread whenever possible.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The predicate to filter the objects.</p>
+                                  <p>The predicate with which to filter the objects.</p>
 
                                 </div>
                               </td>
@@ -676,11 +677,11 @@ up-to-date done on a background thread whenever possible.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>Index of object or NSNotFound if the object is not found in this RLMResults.</p>
+                        <p>The index of the object, or <code>NSNotFound</code> if the object is not found in the results collection.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMResults.h#L136">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMResults.h#L137">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -698,7 +699,7 @@ up-to-date done on a background thread whenever possible.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Get objects matching the given predicate in the RLMResults.</p>
+                        <p>Returns all the objects matching the given predicate in the results collection.</p>
 
                       </div>
                       <div class="declaration">
@@ -722,7 +723,7 @@ up-to-date done on a background thread whenever possible.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The predicate format string which can accept variable arguments.</p>
+                                  <p>A predicate format string, optionally followed by a variable number of arguments.</p>
 
                                 </div>
                               </td>
@@ -732,11 +733,11 @@ up-to-date done on a background thread whenever possible.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An RLMResults of objects that match the given predicate</p>
+                        <p>An <code><a href="../Classes/RLMResults.html">RLMResults</a></code> of objects that match the given predicate.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMResults.h#L145">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMResults.h#L146">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -754,7 +755,7 @@ up-to-date done on a background thread whenever possible.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Get objects matching the given predicate in the RLMResults.</p>
+                        <p>Returns all the objects matching the given predicate in the results collection.</p>
 
                       </div>
                       <div class="declaration">
@@ -783,7 +784,7 @@ up-to-date done on a background thread whenever possible.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The predicate to filter the objects.</p>
+                                  <p>The predicate with which to filter the objects.</p>
 
                                 </div>
                               </td>
@@ -793,11 +794,11 @@ up-to-date done on a background thread whenever possible.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An RLMResults of objects that match the given predicate</p>
+                        <p>An <code><a href="../Classes/RLMResults.html">RLMResults</a></code> of objects that match the given predicate.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMResults.h#L157">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMResults.h#L158">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -815,7 +816,7 @@ up-to-date done on a background thread whenever possible.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Get a sorted <code><a href="../Classes/RLMResults.html">RLMResults</a></code> from an existing <code><a href="../Classes/RLMResults.html">RLMResults</a></code> sorted by a property.</p>
+                        <p>Returns a sorted <code><a href="../Classes/RLMResults.html">RLMResults</a></code> from an existing results collection.</p>
 
                       </div>
                       <div class="declaration">
@@ -858,7 +859,7 @@ up-to-date done on a background thread whenever possible.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The direction to sort by.</p>
+                                  <p>The direction to sort in.</p>
 
                                 </div>
                               </td>
@@ -868,11 +869,11 @@ up-to-date done on a background thread whenever possible.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An RLMResults sorted by the specified property.</p>
+                        <p>An <code><a href="../Classes/RLMResults.html">RLMResults</a></code> sorted by the specified property.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMResults.h#L167">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMResults.h#L168">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -890,7 +891,7 @@ up-to-date done on a background thread whenever possible.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Get a sorted <code><a href="../Classes/RLMResults.html">RLMResults</a></code> from an existing <code><a href="../Classes/RLMResults.html">RLMResults</a></code> sorted by an <code>NSArray</code><code>of</code>RLMSortDescriptor`s.</p>
+                        <p>Returns a sorted <code><a href="../Classes/RLMResults.html">RLMResults</a></code> from an existing results collection.</p>
 
                       </div>
                       <div class="declaration">
@@ -929,11 +930,11 @@ up-to-date done on a background thread whenever possible.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An RLMResults sorted by the specified properties.</p>
+                        <p>An <code><a href="../Classes/RLMResults.html">RLMResults</a></code> sorted by the specified properties.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMResults.h#L176">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMResults.h#L177">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -962,24 +963,25 @@ up-to-date done on a background thread whenever possible.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Register a block to be called each time the RLMResults changes.</p>
+                        <p>Registers a block to be called each time the results collection changes.</p>
 
-<p>The block will be asynchronously called with the initial results, and then
-called again after each write transaction which changes either any of the
-objects in the results, or which objects are in the results.</p>
+<p>The block will be asynchronously called with the initial results collection,
+and then called again after each write transaction which changes either any
+of the objects in the results, or which objects are in the results.</p>
 
-<p>The change parameter will be <code>nil</code> the first time the block is called with the
-initial results. For each call after that, it will contain information about
-which rows in the results were added, removed or modified. If a write transaction
-did not modify any objects in this results, the block is not called at all.
-See the RLMCollectionChange documentation for information on how the changes
-are reported and an example of updating a UITableView.</p>
+<p>The <code>change</code> parameter will be <code>nil</code> the first time the block is called.
+For each call after that, it will contain information about
+which rows in the results collection were added, removed or modified. If a
+write transaction did not modify any objects in the results collection,
+the block is not called at all. See the <code><a href="../Classes/RLMCollectionChange.html">RLMCollectionChange</a></code> documentation for
+information on how the changes are reported and an example of updating a 
+<code>UITableView</code>.</p>
 
 <p>If an error occurs the block will be called with <code>nil</code> for the results
 parameter and a non-<code>nil</code> error. Currently the only errors that can occur are
-when opening the RLMRealm on the background worker thread.</p>
+when opening the Realm on the background worker thread.</p>
 
-<p>At the time when the block is called, the RLMResults object will be fully
+<p>At the time when the block is called, the <code><a href="../Classes/RLMResults.html">RLMResults</a></code> object will be fully
 evaluated and up-to-date, and as long as you do not perform a write transaction
 on the same thread or explicitly call <code>-[RLMRealm refresh]</code>, accessing it will
 never perform blocking work.</p>
@@ -1016,7 +1018,7 @@ to be sent to the block. To stop receiving updates, call <code>-stop</code> on t
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method cannot be called during a write transaction, or when the
-     containing realm is read-only.</p>
+     containing Realm is read-only.</p>
 
 </div>
 
@@ -1048,7 +1050,7 @@ to be sent to the block. To stop receiving updates, call <code>-stop</code> on t
                               </td>
                               <td>
                                 <div>
-                                  <p>The block to be called with the evaluated results.</p>
+                                  <p>The block to be called whenever a change occurs.</p>
 
                                 </div>
                               </td>
@@ -1058,11 +1060,11 @@ to be sent to the block. To stop receiving updates, call <code>-stop</code> on t
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>A token which must be held for as long as you want query results to be delivered.</p>
+                        <p>A token which must be held for as long as you want updates to be delivered.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMResults.h#L237-L239">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMResults.h#L239-L241">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1091,14 +1093,15 @@ to be sent to the block. To stop receiving updates, call <code>-stop</code> on t
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the minimum (lowest) value of the given property</p>
+                        <p>Returns the minimum (lowest) value of the given property among all the objects
+represented by the results collection.</p>
 
 <pre class="highlight plaintext"><code>NSNumber *min = [results minOfProperty:@"age"];
 </code></pre>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>You cannot use this method on RLMObject, RLMArray, and NSData properties.</p>
+    <p>You cannot use this method on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>, <code><a href="../Classes/RLMArray.html">RLMArray</a></code>, and <code>NSData</code> properties.</p>
 
 </div>
 
@@ -1128,7 +1131,8 @@ to be sent to the block. To stop receiving updates, call <code>-stop</code> on t
                               </td>
                               <td>
                                 <div>
-                                  <p>The property to look for a minimum on. Only properties of type int, float, double and NSDate are supported.</p>
+                                  <p>The property whose minimum value is desired. Only properties of types <code>int</code>, <code>float</code>, <code>double</code>, and
+                <code>NSDate</code> are supported.</p>
 
                                 </div>
                               </td>
@@ -1138,11 +1142,11 @@ to be sent to the block. To stop receiving updates, call <code>-stop</code> on t
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The minimum value for the property amongst objects in an RLMResults.</p>
+                        <p>The minimum value of the property.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMResults.h#L254">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMResults.h#L258">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1160,14 +1164,14 @@ to be sent to the block. To stop receiving updates, call <code>-stop</code> on t
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the maximum (highest) value of the given property of objects in an RLMResults</p>
+                        <p>Returns the maximum (highest) value of the given property among all the objects represented by the results collection.</p>
 
 <pre class="highlight plaintext"><code>NSNumber *max = [results maxOfProperty:@"age"];
 </code></pre>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>You cannot use this method on RLMObject, RLMArray, and NSData properties.</p>
+    <p>You cannot use this method on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>, <code><a href="../Classes/RLMArray.html">RLMArray</a></code>, and <code>NSData</code> properties.</p>
 
 </div>
 
@@ -1197,7 +1201,8 @@ to be sent to the block. To stop receiving updates, call <code>-stop</code> on t
                               </td>
                               <td>
                                 <div>
-                                  <p>The property to look for a maximum on. Only properties of type int, float, double and NSDate are supported.</p>
+                                  <p>The property whose maximum value is desired. Only properties of types <code>int</code>, <code>float</code>, <code>double</code>, and 
+                <code>NSDate</code> are supported.</p>
 
                                 </div>
                               </td>
@@ -1207,11 +1212,11 @@ to be sent to the block. To stop receiving updates, call <code>-stop</code> on t
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The maximum value for the property amongst objects in an RLMResults</p>
+                        <p>The maximum value of the property.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMResults.h#L267">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMResults.h#L272">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1229,14 +1234,14 @@ to be sent to the block. To stop receiving updates, call <code>-stop</code> on t
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the sum of the given property for objects in an RLMResults.</p>
+                        <p>Returns the sum of the values of a given property over all the objects represented by the results collection.</p>
 
 <pre class="highlight plaintext"><code>NSNumber *sum = [results sumOfProperty:@"age"];
 </code></pre>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>You cannot use this method on RLMObject, RLMArray, and NSData properties.</p>
+    <p>You cannot use this method on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>, <code><a href="../Classes/RLMArray.html">RLMArray</a></code>, and <code>NSData</code> properties.</p>
 
 </div>
 
@@ -1266,7 +1271,8 @@ to be sent to the block. To stop receiving updates, call <code>-stop</code> on t
                               </td>
                               <td>
                                 <div>
-                                  <p>The property to calculate sum on. Only properties of type int, float and double are supported.</p>
+                                  <p>The property whose values should be summed. Only properties of types <code>int</code>, <code>float</code>, and <code>double</code> are
+                supported.</p>
 
                                 </div>
                               </td>
@@ -1276,11 +1282,11 @@ to be sent to the block. To stop receiving updates, call <code>-stop</code> on t
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The sum of the given property over all objects in an RLMResults.</p>
+                        <p>The sum of the given property.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMResults.h#L280">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMResults.h#L286">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1298,14 +1304,14 @@ to be sent to the block. To stop receiving updates, call <code>-stop</code> on t
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the average of a given property for objects in an RLMResults.</p>
+                        <p>Returns the average value of a given property over the objects represented by the results collection.</p>
 
 <pre class="highlight plaintext"><code>NSNumber *average = [results averageOfProperty:@"age"];
 </code></pre>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>You cannot use this method on RLMObject, RLMArray, and NSData properties.</p>
+    <p>You cannot use this method on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>, <code><a href="../Classes/RLMArray.html">RLMArray</a></code>, and <code>NSData</code> properties.</p>
 
 </div>
 
@@ -1335,7 +1341,8 @@ to be sent to the block. To stop receiving updates, call <code>-stop</code> on t
                               </td>
                               <td>
                                 <div>
-                                  <p>The property to calculate average on. Only properties of type int, float and double are supported.</p>
+                                  <p>The property whose average value should be calculated. Only properties of types <code>int</code>, <code>float</code>, and
+                <code>double</code> are supported.</p>
 
                                 </div>
                               </td>
@@ -1345,12 +1352,12 @@ to be sent to the block. To stop receiving updates, call <code>-stop</code> on t
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The average for the given property amongst objects in an RLMResults. This will be of type double for both
-float and double properties.</p>
+                        <p>The average value of the given property. This will be of type <code>double</code> for both <code>float</code> and <code>double</code>
+        properties.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMResults.h#L294">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMResults.h#L301">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1379,8 +1386,8 @@ float and double properties.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>-[RLMResults init] is not available because RLMResults cannot be created directly.
-RLMResults can be obtained by querying a Realm.</p>
+                        <p><code>-[RLMResults init]</code> is not available because <code><a href="../Classes/RLMResults.html">RLMResults</a></code> cannot be created directly.
+<code><a href="../Classes/RLMResults.html">RLMResults</a></code> can be obtained by querying a Realm.</p>
 
                       </div>
                       <div class="declaration">
@@ -1392,7 +1399,7 @@ RLMResults can be obtained by querying a Realm.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMResults.h#L305">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMResults.h#L312">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1410,8 +1417,8 @@ RLMResults can be obtained by querying a Realm.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>+[RLMResults new] is not available because RLMResults cannot be created directly.
-RLMResults can be obtained by querying a Realm.</p>
+                        <p><code>+[RLMResults new]</code> is not available because <code><a href="../Classes/RLMResults.html">RLMResults</a></code> cannot be created directly.
+<code><a href="../Classes/RLMResults.html">RLMResults</a></code> can be obtained by querying a Realm.</p>
 
                       </div>
                       <div class="declaration">
@@ -1423,7 +1430,7 @@ RLMResults can be obtained by querying a Realm.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMResults.h#L311">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMResults.h#L318">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

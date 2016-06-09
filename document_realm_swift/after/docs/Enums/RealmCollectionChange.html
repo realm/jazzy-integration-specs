@@ -33,7 +33,7 @@
       <div class="content-wrapper">
         <p><a href="../index.html">RealmSwift Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F0%2E103%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F1%2E0%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -196,14 +196,17 @@
 
                 </div>
               </div>
-            <p>RealmCollectionChange is passed to the notification blocks for Realm
-collections, and reports the current state of the collection and what changes
-were made to the collection since the last time the notification was called.</p>
+            <p>A <code>RealmCollectionChange</code> value encapsulates information about changes to collections
+that are reported by Realm notifications.</p>
 
-<p>The arrays of indices in the .Update case follow UITableView&rsquo;s batching
-conventions, and can be passed as-is to a table view&rsquo;s batch update functions
-after converting to index paths in the appropriate section. For example, for a
-simple one-section table view, you can do the following:</p>
+<p>The change information is available in two formats: a simple array of row
+indices in the collection for each type of change, and an array of index paths
+in a requested section suitable for passing directly to <code>UITableView</code>&rsquo;s batch
+update methods.</p>
+
+<p>The arrays of indices in the <code>.Update</code> case follow <code>UITableView</code>&rsquo;s batching
+conventions, and can be passed as-is to a table view&rsquo;s batch update functions after being converted to index paths.
+For example, for a simple one-section table view, you can do the following:</p>
 
 <p>self.notificationToken = results.addNotificationBlock { changes
        switch changes {
@@ -259,7 +262,7 @@ collection can now be used without performing any blocking work.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/RealmCollectionType.swift#L80">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/RealmCollectionType.swift#L82">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -343,7 +346,7 @@ collection.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/RealmCollectionType.swift#L94">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/RealmCollectionType.swift#L96">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -366,9 +369,8 @@ collection.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>If an error occurs, notification blocks are called one time with a
-.Error result and an NSError with details. Currently the only thing
-that can fail is opening the Realm on a background worker thread to
-calculate the change set.</p>
+<code>.Error</code> result and an <code>NSError</code> containing details about the error. This can only currently happen if the
+Realm is opened on a background worker thread to calculate the change set.</p>
 
                       </div>
                       <div class="declaration">
@@ -380,7 +382,7 @@ calculate the change set.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/RealmCollectionType.swift#L100">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/RealmCollectionType.swift#L101">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

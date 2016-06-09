@@ -32,7 +32,7 @@
       <div class="content-wrapper">
         <p><a href="index.html">RealmSwift Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F0%2E103%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F1%2E0%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -215,7 +215,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns whether the two errors are identical</p>
+                        <p>Returns a Boolean indicating whether the errors are identical.</p>
 
                       </div>
                       <div class="declaration">
@@ -227,7 +227,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Error.swift#L110-L113">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Error.swift#L119-L122">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -256,8 +256,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Explicitly implement pattern matching for <code>Realm.Error</code>, so that the instances can be used in the
-<code>do … syntax</code>.</p>
+                        <p>Pattern matching matching for <code>Realm.Error</code>, so that the instances can be used with Swift&rsquo;s
+<code>do { ... } catch { ... }</code> syntax.</p>
 
                       </div>
                       <div class="declaration">
@@ -269,7 +269,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Error.swift#L121-L123">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Error.swift#L130-L132">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -291,11 +291,11 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Get the schema version for a Realm at a given local URL.</p>
+                        <p>Returns the schema version for a Realm at a given local URL.</p>
 
 <div class="aside aside-throws">
     <p class="aside-title">Throws</p>
-    <p>An NSError that describes the problem.</p>
+    <p>An <code>NSError</code> that describes the problem.</p>
 
 </div>
 
@@ -333,7 +333,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>Optional 64-byte encryption key for encrypted Realms.</p>
+                                  <p>64-byte key used to encrypt the file, or <code>nil</code> if it is unencrypted.</p>
 
                                 </div>
                               </td>
@@ -347,7 +347,7 @@
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Migration.swift#L55-L62">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Migration.swift#L56-L63">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -365,8 +365,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Performs the configuration&rsquo;s migration block on the Realm created by the given
-configuration.</p>
+                        <p>Performs the given Realm configuration&rsquo;s migration block on a Realm at the given path.</p>
 
 <p>This method is called automatically when opening a Realm for the first time and does
 not need to be called explicitly. You can choose to call this method to control
@@ -393,7 +392,7 @@ exactly when and how migrations are performed.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The Realm.Configuration used to create the Realm to be migrated, and containing the schema version and migration block used to perform the migration.</p>
+                                  <p>The Realm configuration used to open and migrate the Realm.</p>
 
                                 </div>
                               </td>
@@ -403,11 +402,11 @@ exactly when and how migrations are performed.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p><code>nil</code> if the migration was successful, or an <code>NSError</code> object that describes the problem that occurred otherwise.</p>
+                        <p>An <code>NSError</code> that describes an error that occurred while applying the migration, if any.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Migration.swift#L79-L81">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Migration.swift#L76-L78">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -448,7 +447,7 @@ exactly when and how migrations are performed.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/ObjectSchema.swift#L77-L79">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/ObjectSchema.swift#L81-L83">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -477,7 +476,7 @@ exactly when and how migrations are performed.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns whether the two properties are equal.</p>
+                        <p>Returns whether the two property objects are equal.</p>
 
                       </div>
                       <div class="declaration">
@@ -489,7 +488,7 @@ exactly when and how migrations are performed.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Property.swift#L66-L68">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Property.swift#L66-L68">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -518,7 +517,7 @@ exactly when and how migrations are performed.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns whether the two realms are equal.</p>
+                        <p>Returns a Boolean indicating whether two <code><a href="Classes/Realm.html">Realm</a></code> instances are equal.</p>
 
                       </div>
                       <div class="declaration">
@@ -530,7 +529,7 @@ exactly when and how migrations are performed.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L593-L595">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Realm.swift#L587-L589">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -559,7 +558,7 @@ exactly when and how migrations are performed.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns whether the two schemas are equal.</p>
+                        <p>Returns a Boolean value that indicates whether two <code><a href="Classes/Schema.html">Schema</a></code> instances are equivalent.</p>
 
                       </div>
                       <div class="declaration">
@@ -571,7 +570,7 @@ exactly when and how migrations are performed.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Schema.swift#L67-L69">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Schema.swift#L70-L72">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -612,7 +611,7 @@ exactly when and how migrations are performed.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/SortDescriptor.swift#L79-L83">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/SortDescriptor.swift#L79-L83">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

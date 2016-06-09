@@ -33,7 +33,7 @@
       <div class="content-wrapper">
         <p><a href="../index.html">RealmSwift Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F0%2E103%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F1%2E0%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -196,28 +196,23 @@
 
                 </div>
               </div>
-            <p>A Realm instance (also referred to as <q>a realm</q>) represents a Realm
-database.</p>
+            <p>A <code>Realm</code> instance (also referred to as <q>a Realm</q>) represents a Realm database.</p>
 
-<p>Realms can either be stored on disk (see <code>init(path:)</code>) or in
-memory (see <code>Configuration</code>).</p>
+<p>Realms can either be stored on disk (see <code>init(path:)</code>) or in memory (see <code>Configuration</code>).</p>
 
-<p>Realm instances are cached internally, and constructing equivalent Realm
-objects (with the same path or identifier) produces limited overhead.</p>
+<p><code>Realm</code> instances are cached internally, and constructing equivalent <code>Realm</code> objects (for example, by using the same
+path or identifier) produces limited overhead.</p>
 
-<p>If you specifically want to ensure a Realm object is
-destroyed (for example, if you wish to open a realm, check some property, and
-then possibly delete the realm file and re-open it), place the code which uses
-the realm within an <code>autoreleasepool {}</code> and ensure you have no other
-strong references to it.</p>
+<p>If you specifically want to ensure a <code>Realm</code> instance is destroyed (for example, if you wish to open a Realm, check
+some property, and then possibly delete the Realm file and re-open it), place the code which uses the Realm within an
+<code>autoreleasepool {}</code> and ensure you have no other strong references to it.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    Realm instances are not thread safe and can not be shared across
-       threads or dispatch queues. You must construct a new instance on each thread you want
-       to interact with the realm on. For dispatch queues, this means that you must
-       call it in each block which is dispatched, as a queue is not guaranteed to run
-       on a consistent thread.
+    <code>Realm</code> instances are not thread safe and cannot be shared across threads or dispatch queues. You must
+       construct a new instance for each thread in which a Realm will be accessed. For dispatch queues, this means
+       that you must construct a new instance in each block which is dispatched, as a queue is not guaranteed to
+       run all of its blocks on the same thread.
 
 </div>
 
@@ -245,7 +240,7 @@ strong references to it.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The Schema used by this realm.</p>
+                        <p>The <code><a href="../Classes/Schema.html">Schema</a></code> used by the Realm.</p>
 
                       </div>
                       <div class="declaration">
@@ -257,7 +252,7 @@ strong references to it.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L50">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Realm.swift#L45">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -275,7 +270,7 @@ strong references to it.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the <code><a href="../Classes/Realm/Configuration.html">Configuration</a></code> that was used to create this <code><a href="../Classes/Realm.html">Realm</a></code> instance.</p>
+                        <p>The <code>RealmConfiguration</code> object that was used to create this <code><a href="../Classes/Realm.html">Realm</a></code> instance.</p>
 
                       </div>
                       <div class="declaration">
@@ -287,7 +282,7 @@ strong references to it.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L53">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Realm.swift#L48">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -317,7 +312,7 @@ strong references to it.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L56">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Realm.swift#L51">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -346,12 +341,17 @@ strong references to it.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Obtains a Realm instance with the default Realm configuration, which can be
-changed by setting <code><a href="../Classes/Realm/Configuration.html#/s:ZvVC10RealmSwift5Realm13Configuration20defaultConfigurationS1_">Realm.Configuration.defaultConfiguration</a></code>.</p>
+                        <p>Obtains an instance of the default Realm.</p>
+
+<p>The default Realm is persisted as default.realm under the Documents directory of your Application on iOS, and in
+your application&rsquo;s Application Support directory on OS X.</p>
+
+<p>The default Realm is created using the default <code><a href="../Classes/Realm/Configuration.html">Configuration</a></code>, which can be changed by setting a new
+<code><a href="../Classes/Realm/Configuration.html">Configuration</a></code> object on the <code><a href="../Classes/Realm/Configuration.html#/s:ZvVC10RealmSwift5Realm13Configuration20defaultConfigurationS1_">Realm.Configuration.defaultConfiguration</a></code> property.</p>
 
 <div class="aside aside-throws">
     <p class="aside-title">Throws</p>
-    An NSError if the Realm could not be initialized.
+    An <code>NSError</code> if the Realm could not be initialized.
 
 </div>
 
@@ -365,7 +365,7 @@ changed by setting <code><a href="../Classes/Realm/Configuration.html#/s:ZvVC10R
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L66-L69">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Realm.swift#L66-L69">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -383,11 +383,11 @@ changed by setting <code><a href="../Classes/Realm/Configuration.html#/s:ZvVC10R
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Obtains a Realm instance with the given configuration.</p>
+                        <p>Obtains a <code><a href="../Classes/Realm.html">Realm</a></code> instance with the given configuration.</p>
 
 <div class="aside aside-throws">
     <p class="aside-title">Throws</p>
-    <p>An NSError if the Realm could not be initialized.</p>
+    <p>An <code>NSError</code> if the Realm could not be initialized.</p>
 
 </div>
 
@@ -412,7 +412,7 @@ changed by setting <code><a href="../Classes/Realm/Configuration.html#/s:ZvVC10R
                               </td>
                               <td>
                                 <div>
-                                  <p>The configuration to use when creating the Realm instance.</p>
+                                  <p>A configuration value to use when creating the Realm.</p>
 
                                 </div>
                               </td>
@@ -421,7 +421,7 @@ changed by setting <code><a href="../Classes/Realm/Configuration.html#/s:ZvVC10R
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L78-L81">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Realm.swift#L78-L81">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -439,11 +439,11 @@ changed by setting <code><a href="../Classes/Realm/Configuration.html#/s:ZvVC10R
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Obtains a Realm instance persisted at the specified file URL.</p>
+                        <p>Obtains a <code><a href="../Classes/Realm.html">Realm</a></code> instance persisted at a specified file URL.</p>
 
 <div class="aside aside-throws">
     <p class="aside-title">Throws</p>
-    <p>An NSError if the Realm could not be initialized.</p>
+    <p>An <code>NSError</code> if the Realm could not be initialized.</p>
 
 </div>
 
@@ -468,7 +468,7 @@ changed by setting <code><a href="../Classes/Realm/Configuration.html#/s:ZvVC10R
                               </td>
                               <td>
                                 <div>
-                                  <p>Local URL to the realm file.</p>
+                                  <p>The local URL of the file the Realm should be saved at.</p>
 
                                 </div>
                               </td>
@@ -477,7 +477,7 @@ changed by setting <code><a href="../Classes/Realm/Configuration.html#/s:ZvVC10R
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L90-L94">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Realm.swift#L90-L94">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -508,18 +508,17 @@ changed by setting <code><a href="../Classes/Realm/Configuration.html#/s:ZvVC10R
                       <div class="abstract">
                         <p>Performs actions contained within the given block inside a write transaction.</p>
 
-<p>Write transactions cannot be nested, and trying to execute a write transaction
-on a <code><a href="../Classes/Realm.html">Realm</a></code> which is already in a write transaction will throw an exception.
-Calls to <code>write</code> from <code><a href="../Classes/Realm.html">Realm</a></code> instances in other threads will block
-   until the current write transaction completes.</p>
+<p>Write transactions cannot be nested, and trying to execute a write transaction on a Realm which is already
+participating in a write transaction will throw an error. Calls to <code>write</code> from <code><a href="../Classes/Realm.html">Realm</a></code> instances in other threads
+will block until the current write transaction completes.</p>
 
-<p>Before executing the write transaction, <code>write</code> updates the <code><a href="../Classes/Realm.html">Realm</a></code> to the
-latest Realm version, as if <code><a href="../Classes/Realm.html#/s:FC10RealmSwift5Realm7refreshFT_Sb">refresh()</a></code> was called, and generates notifications
-if applicable. This has no effect if the <code><a href="../Classes/Realm.html">Realm</a></code> was already up to date.</p>
+<p>Before executing the write transaction, <code>write</code> updates the <code><a href="../Classes/Realm.html">Realm</a></code> instance to the
+latest Realm version, as if <code><a href="../Classes/Realm.html#/s:FC10RealmSwift5Realm7refreshFT_Sb">refresh()</a></code> had been called, and generates notifications
+if applicable. This has no effect if the Realm was already up to date.</p>
 
 <div class="aside aside-throws">
     <p class="aside-title">Throws</p>
-    <p>An NSError if the transaction could not be written.</p>
+    <p>An <code>NSError</code> if the transaction could not be completed successfully.</p>
 
 </div>
 
@@ -544,7 +543,7 @@ if applicable. This has no effect if the <code><a href="../Classes/Realm.html">R
                               </td>
                               <td>
                                 <div>
-                                  <p>The block to be executed inside a write transaction.</p>
+                                  <p>The block containing actions to perform.</p>
 
                                 </div>
                               </td>
@@ -553,7 +552,7 @@ if applicable. This has no effect if the <code><a href="../Classes/Realm.html">R
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L114-L116">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Realm.swift#L113-L115">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -571,22 +570,22 @@ if applicable. This has no effect if the <code><a href="../Classes/Realm.html">R
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Begins a write transaction in a <code><a href="../Classes/Realm.html">Realm</a></code>.</p>
+                        <p>Begins a write transaction on the Realm.</p>
 
 <p>Only one write transaction can be open at a time. Write transactions cannot be
-nested, and trying to begin a write transaction on a <code><a href="../Classes/Realm.html">Realm</a></code> which is
-already in a write transaction will throw an exception. Calls to
+nested, and trying to begin a write transaction on a Realm which is
+already in a write transaction will throw an error. Calls to
 <code>beginWrite</code> from <code><a href="../Classes/Realm.html">Realm</a></code> instances in other threads will block
 until the current write transaction completes.</p>
 
 <p>Before beginning the write transaction, <code>beginWrite</code> updates the
-<code><a href="../Classes/Realm.html">Realm</a></code> to the latest Realm version, as if <code><a href="../Classes/Realm.html#/s:FC10RealmSwift5Realm7refreshFT_Sb">refresh()</a></code> was called, and
-generates notifications if applicable. This has no effect if the <code><a href="../Classes/Realm.html">Realm</a></code>
+<code><a href="../Classes/Realm.html">Realm</a></code> instance to the latest Realm version, as if <code><a href="../Classes/Realm.html#/s:FC10RealmSwift5Realm7refreshFT_Sb">refresh()</a></code> had been called, and
+generates notifications if applicable. This has no effect if the Realm
 was already up to date.</p>
 
 <p>It is rarely a good idea to have write transactions span multiple cycles of
 the run loop, but if you do wish to do so you will need to ensure that the
-<code><a href="../Classes/Realm.html">Realm</a></code> in the write transaction is kept alive until the write transaction
+Realm in the write transaction is kept alive until the write transaction
 is committed.</p>
 
                       </div>
@@ -599,7 +598,7 @@ is committed.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L137-L139">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Realm.swift#L136-L138">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -617,14 +616,17 @@ is committed.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Commits all writes operations in the current write transaction, and ends
-the transaction.</p>
+                        <p>Commits all write operations in the current write transaction, and ends the transaction.</p>
 
-<p>Calling this when not in a write transaction will throw an exception.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>This method may only be called during a write transaction.</p>
+
+</div>
 
 <div class="aside aside-throws">
     <p class="aside-title">Throws</p>
-    An NSError if the transaction could not be written.
+    <p>An <code>NSError</code> if the transaction could not be written.</p>
 
 </div>
 
@@ -638,7 +640,7 @@ the transaction.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L149-L151">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Realm.swift#L147-L149">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -656,14 +658,14 @@ the transaction.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Reverts all writes made in the current write transaction and end the transaction.</p>
+                        <p>Reverts all writes made in the current write transaction and ends the transaction.</p>
 
 <p>This rolls back all objects in the Realm to the state they were in at the
 beginning of the write transaction, and then ends the transaction.</p>
 
 <p>This restores the data for deleted objects, but does not revive invalidated
 object instances. Any <code><a href="../Classes/Object.html">Object</a></code>s which were added to the Realm will be
-invalidated rather than switching back to standalone objects.
+invalidated rather than becoming unmanaged.
 Given the following code:</p>
 
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">oldObject</span> <span class="o">=</span> <span class="nf">objects</span><span class="p">(</span><span class="kt">ObjectType</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="o">!</span>
@@ -679,7 +681,11 @@ Given the following code:</p>
 but re-running the query which provided <code>oldObject</code> will once again return
 the valid object.</p>
 
-<p>Calling this when not in a write transaction will throw an exception.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    This method may only be called during a write transaction.
+
+</div>
 
                       </div>
                       <div class="declaration">
@@ -691,7 +697,7 @@ the valid object.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L180-L182">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Realm.swift#L178-L180">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -709,14 +715,14 @@ the valid object.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Indicates if this Realm is currently in a write transaction.</p>
+                        <p>Indicates whether this Realm is currently in a write transaction.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     Wrapping mutating operations in a write transaction if this property returns <code>false</code>
-       may cause a large number of write transactions to be created, which could negatively
-       impact Realm&rsquo;s performance. Always prefer performing multiple mutations in a single
-       transaction when possible.
+        may cause a large number of write transactions to be created, which could negatively
+        impact Realm&rsquo;s performance. Always prefer performing multiple mutations in a single
+        transaction when possible.
 
 </div>
 
@@ -730,7 +736,7 @@ the valid object.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L192-L194">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Realm.swift#L190-L192">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -759,20 +765,20 @@ the valid object.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Adds or updates an object to be persisted it in this Realm.</p>
+                        <p>Adds or updates an existing object into the Realm.</p>
 
-<p>When &lsquo;update&rsquo; is &lsquo;true&rsquo;, the object must have a primary key. If no objects exist in
-the Realm instance with the same primary key value, the object is inserted. Otherwise,
+<p>Only pass <code>true</code> to <code>update</code> if the object has a primary key. If no objects exist in
+the Realm with the same primary key value, the object is inserted. Otherwise,
 the existing object is updated with any changed values.</p>
 
-<p>When added, all (child) relationships referenced by this object will also be
-added to the Realm if they are not already in it. If the object or any related
-objects already belong to a different Realm an exception will be thrown. Use one
-of the <code>create</code> functions to insert a copy of a persisted object into a different
+<p>When added, all child relationships referenced by this object will also be added to
+the Realm if they are not already in it. If the object or any related
+objects are already being managed by a different Realm an error will be thrown. Use one
+of the <code>create</code> functions to insert a copy of a managed object into a different
 Realm.</p>
 
 <p>The object to be added must be valid and cannot have been previously deleted
-from a Realm (i.e. <code>invalidated</code> must be false).</p>
+from a Realm (i.e. <code>invalidated</code> must be <code>false</code>).</p>
 
                       </div>
                       <div class="declaration">
@@ -795,7 +801,7 @@ from a Realm (i.e. <code>invalidated</code> must be false).</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>Object to be added to this Realm.</p>
+                                  <p>The object to be added to this Realm.</p>
 
                                 </div>
                               </td>
@@ -808,7 +814,7 @@ from a Realm (i.e. <code>invalidated</code> must be false).</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>If true will try to update existing objects with the same primary key.</p>
+                                  <p>If <code>true</code>, the Realm will try to find an existing copy of the object (with the same primary key), and update it. Otherwise, the object will be added.</p>
 
                                 </div>
                               </td>
@@ -817,7 +823,7 @@ from a Realm (i.e. <code>invalidated</code> must be false).</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L217-L222">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Realm.swift#L216-L221">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -835,17 +841,17 @@ from a Realm (i.e. <code>invalidated</code> must be false).</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Adds or updates objects in the given sequence to be persisted it in this Realm.</p>
+                        <p>Adds or updates all the objects in a collection into the Realm.</p>
 
 <div class="aside aside-see">
     <p class="aside-title">See</p>
-    <p>add(_:update:)</p>
+    <p><code><a href="../Classes/Realm.html#/s:FC10RealmSwift5Realm3addFTCS_6Object6updateSb_T_">add(_:update:)</a></code></p>
 
 </div>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>This method can only be called during a write transaction.</p>
+    <p>This method may only be called during a write transaction.</p>
 
 </div>
 
@@ -870,7 +876,7 @@ from a Realm (i.e. <code>invalidated</code> must be false).</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>A sequence which contains objects to be added to this Realm.</p>
+                                  <p>A sequence which contains objects to be added to the Realm.</p>
 
                                 </div>
                               </td>
@@ -883,7 +889,7 @@ from a Realm (i.e. <code>invalidated</code> must be false).</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>If true will try to update existing objects with the same primary key.</p>
+                                  <p>If <code>true</code>, objects that are already in the Realm will be updated instead of added anew.</p>
 
                                 </div>
                               </td>
@@ -892,7 +898,7 @@ from a Realm (i.e. <code>invalidated</code> must be false).</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L234-L238">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Realm.swift#L233-L237">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -910,18 +916,15 @@ from a Realm (i.e. <code>invalidated</code> must be false).</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Create an <code><a href="../Classes/Object.html">Object</a></code> with the given value.</p>
+                        <p>Creates or updates a Realm object with a given value, adding it to the Realm and returning it.</p>
 
-<p>Creates or updates an instance of this object and adds it to the <code><a href="../Classes/Realm.html">Realm</a></code> populating
-the object with the given value.</p>
-
-<p>When &lsquo;update&rsquo; is &lsquo;true&rsquo;, the object must have a primary key. If no objects exist in
-the Realm instance with the same primary key value, the object is inserted. Otherwise,
+<p>Only pass <code>true</code> to <code>update</code> if the object has a primary key. If no objects exist in
+the Realm with the same primary key value, the object is inserted. Otherwise,
 the existing object is updated with any changed values.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>This method can only be called during a write transaction.</p>
+    <p>This method may only be called during a write transaction.</p>
 
 </div>
 
@@ -946,7 +949,7 @@ the existing object is updated with any changed values.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The object type to create.</p>
+                                  <p>The type of the object to create.</p>
 
                                 </div>
                               </td>
@@ -959,7 +962,8 @@ the existing object is updated with any changed values.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The value used to populate the object. This can be any key/value coding compliant object, or a JSON dictionary such as those returned from the methods in <code>NSJSONSerialization</code>, or an <code>Array</code> with one object for each persisted property. An exception will be thrown if any required properties are not present and no default is set. When passing in an <code>Array</code>, all properties must be present, valid and in the same order as the properties defined in the model.</p>
+                                  <p>The value used to populate the object. This can be any key-value coding compliant object, or an array or dictionary returned from the methods in <code>NSJSONSerialization</code>, or an <code>Array</code> containing one element for each persisted property. An error will be thrown if any required properties are not present and those properties were not defined with default values.</p>
+<pre class="highlight plaintext"><code></code></pre>
 
                                 </div>
                               </td>
@@ -972,7 +976,7 @@ the existing object is updated with any changed values.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>If true will try to update existing objects with the same primary key.</p>
+                                  <p>If <code>true</code>, the Realm will try to find an existing copy of the object (with the same primary key), and update it. Otherwise, the object will be added.</p>
 
                                 </div>
                               </td>
@@ -982,11 +986,11 @@ the existing object is updated with any changed values.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The created object.</p>
+                        <p>The newly created object.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L263-L269">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Realm.swift#L262-L268">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1015,11 +1019,11 @@ the existing object is updated with any changed values.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Deletes the given object from this Realm.</p>
+                        <p>Deletes an object from the Realm. Once the object is deleted it is considered invalidated.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>This method can only be called during a write transaction.</p>
+    <p>This method may only be called during a write transaction.</p>
 
 </div>
 
@@ -1053,7 +1057,7 @@ the existing object is updated with any changed values.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L315-L317">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Realm.swift#L315-L317">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1071,11 +1075,11 @@ the existing object is updated with any changed values.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Deletes the given objects from this Realm.</p>
+                        <p>Deletes one or more objects from the Realm.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>This method can only be called during a write transaction.</p>
+    <p>This method may only be called during a write transaction.</p>
 
 </div>
 
@@ -1100,7 +1104,7 @@ the existing object is updated with any changed values.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The objects to be deleted. This can be a <code>List&lt;Object&gt;</code>, <code>Results&lt;Object&gt;</code>, or any other enumerable SequenceType which generates Object.</p>
+                                  <p>The objects to be deleted. This can be a <code>List&lt;Object&gt;</code>, <code>Results&lt;Object&gt;</code>, or any other enumerable <code>SequenceType</code> whose elements are <code>Object</code>s.</p>
 
                                 </div>
                               </td>
@@ -1109,7 +1113,7 @@ the existing object is updated with any changed values.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L327-L331">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Realm.swift#L327-L331">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1127,11 +1131,11 @@ the existing object is updated with any changed values.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Deletes all objects from this Realm.</p>
+                        <p>Deletes all objects from the Realm.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    This method can only be called during a write transaction.
+    This method may only be called during a write transaction.
 
 </div>
 
@@ -1145,7 +1149,7 @@ the existing object is updated with any changed values.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L364-L366">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Realm.swift#L364-L366">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1174,7 +1178,7 @@ the existing object is updated with any changed values.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns all objects of the given type in the Realm.</p>
+                        <p>Returns all objects of the given type stored in the Realm.</p>
 
                       </div>
                       <div class="declaration">
@@ -1207,11 +1211,11 @@ the existing object is updated with any changed values.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>All objects of the given type in Realm.</p>
+                        <p>A <code><a href="../Classes/Results.html">Results</a></code> containing the objects.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L377-L379">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Realm.swift#L377-L379">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1229,15 +1233,13 @@ the existing object is updated with any changed values.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Get an object with the given primary key.</p>
+                        <p>Retrieves the single instance of a given object type with the given primary key from the Realm.</p>
 
-<p>Returns <code>nil</code> if no object exists with the given primary key.</p>
-
-<p>This method requires that <code>primaryKey()</code> be overridden on the given subclass.</p>
+<p>This method requires that <code>primaryKey()</code> be overridden on the given object class.</p>
 
 <div class="aside aside-see">
     <p class="aside-title">See</p>
-    <p>Object.primaryKey()</p>
+    <p><code><a href="../Classes/Object.html#/s:ZFC10RealmSwift6Object10primaryKeyFT_GSqSS_">Object.primaryKey()</a></code></p>
 
 </div>
 
@@ -1262,7 +1264,7 @@ the existing object is updated with any changed values.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The type of the objects to be returned.</p>
+                                  <p>The type of the object to be returned.</p>
 
                                 </div>
                               </td>
@@ -1285,11 +1287,11 @@ the existing object is updated with any changed values.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An object of type <code>type</code> or <code>nil</code> if an object with the given primary key does not exist.</p>
+                        <p>An object of type <code>type</code>, or <code>nil</code> if no instance with the given primary key exists.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L414-L416">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Realm.swift#L412-L414">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1318,22 +1320,26 @@ the existing object is updated with any changed values.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Add a notification handler for changes in this Realm.</p>
+                        <p>Adds a notification handler for changes in this Realm, and returns a notification token.</p>
 
 <p>Notification handlers are called after each write transaction is committed,
 independent from the thread or process.</p>
 
-<p>The block is called on the same thread as it was added on, and can only
-be added on threads which are currently within a run loop. Unless you are
-specifically creating and running a run loop on a background thread, this
-normally will only be the main thread.</p>
+<p>Handler blocks are called on the same thread that they were added on, and may only be added on threads which are
+currently within a run loop. Unless you are specifically creating and running a run loop on a background thread,
+this will normally only be the main thread.</p>
 
-<p>Notifications can&rsquo;t be delivered as long as the runloop is blocked by
+<p>Notifications can&rsquo;t be delivered as long as the run loop is blocked by
 other activity. When notifications can&rsquo;t be delivered instantly, multiple
 notifications may be coalesced.</p>
 
 <p>You must retain the returned token for as long as you want updates to continue
-to be sent to the block. To stop receiving updates, call stop() on the token.</p>
+to be sent to the block. To stop receiving updates, call <code>stop()</code> on the token.</p>
+
+<ul>
+<li><p><code><a href="../Enums/Notification.html">Notification</a></code>: The incoming notification.</p></li>
+<li><p><code><a href="../Classes/Realm.html">Realm</a></code>:        The Realm for which this notification occurred.</p></li>
+</ul>
 
                       </div>
                       <div class="declaration">
@@ -1357,7 +1363,6 @@ to be sent to the block. To stop receiving updates, call stop() on the token.</p
                               <td>
                                 <div>
                                   <p>A block which is called to process Realm notifications. It receives the following parameters:</p>
-<pre class="highlight plaintext"><code></code></pre>
 
                                 </div>
                               </td>
@@ -1367,11 +1372,11 @@ to be sent to the block. To stop receiving updates, call stop() on the token.</p
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>A token which must be held for as long as you want notifications to be delivered.</p>
+                        <p>A token which must be retained for as long as you wish to continue receiving change notifications.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L473-L481">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Realm.swift#L470-L478">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1400,12 +1405,12 @@ to be sent to the block. To stop receiving updates, call stop() on the token.</p
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Whether this Realm automatically updates when changes happen in other threads.</p>
+                        <p>Set this property to <code>true</code> to automatically update this Realm when changes happen in other threads.</p>
 
 <p>If set to <code>true</code> (the default), changes made on other threads will be reflected
 in this Realm on the next cycle of the run loop after the changes are
 committed.  If set to <code>false</code>, you must manually call <code><a href="../Classes/Realm.html#/s:FC10RealmSwift5Realm7refreshFT_Sb">refresh()</a></code> on the Realm to
-update it to get the latest version.</p>
+update it to get the latest data.</p>
 
 <p>Note that by default, background threads do not have an active run loop and you
 will need to manually call <code><a href="../Classes/Realm.html#/s:FC10RealmSwift5Realm7refreshFT_Sb">refresh()</a></code> in order to update to the latest version,
@@ -1415,18 +1420,17 @@ even if <code>autorefresh</code> is set to <code>true</code>.</p>
 Realm before the automatic refresh would occur.</p>
 
 <p>Notifications are sent when a write transaction is committed whether or not
-this is enabled.</p>
+automatic refreshing is enabled.</p>
 
-<p>Disabling this on a <code><a href="../Classes/Realm.html">Realm</a></code> without any strong references to it will not
-have any effect, and it will switch back to YES the next time the <code><a href="../Classes/Realm.html">Realm</a></code>
-object is created. This is normally irrelevant as it means that there is
-nothing to refresh (as persisted <code><a href="../Classes/Object.html">Object</a></code>s, <code><a href="../Classes/List.html">List</a></code>s, and <code><a href="../Classes/Results.html">Results</a></code> have strong
-references to the containing <code><a href="../Classes/Realm.html">Realm</a></code>), but it means that setting
+<p>Disabling <code>autorefresh</code> on a <code><a href="../Classes/Realm.html">Realm</a></code> without any strong references to it will not
+have any effect, and <code>autorefresh</code> will revert back to <code>true</code> the next time the Realm is created. This is normally
+irrelevant as it means that there is nothing to refresh (as persisted <code><a href="../Classes/Object.html">Object</a></code>s, <code><a href="../Classes/List.html">List</a></code>s, and <code><a href="../Classes/Results.html">Results</a></code> have strong
+references to the <code><a href="../Classes/Realm.html">Realm</a></code> that manages them), but it means that setting
 <code>Realm().autorefresh = false</code> in
 <code>application(_:didFinishLaunchingWithOptions:)</code> and only later storing Realm
 objects will not work.</p>
 
-<p>Defaults to true.</p>
+<p>Defaults to <code>true</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -1438,7 +1442,7 @@ objects will not work.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L514-L521">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Realm.swift#L510-L517">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1456,8 +1460,7 @@ objects will not work.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Update a <code><a href="../Classes/Realm.html">Realm</a></code> and outstanding objects to point to the most recent
-data for this <code><a href="../Classes/Realm.html">Realm</a></code>.</p>
+                        <p>Updates the Realm and outstanding objects managed by the Realm to point to the most recent data.</p>
 
                       </div>
                       <div class="declaration">
@@ -1470,11 +1473,11 @@ data for this <code><a href="../Classes/Realm.html">Realm</a></code>.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>Whether the realm had any updates. Note that this may return true even if no data has actually changed.</p>
+                        <p>Whether there were any updates for the Realm. Note that <code>true</code> may be returned even if no data actually changed.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L530-L532">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Realm.swift#L525-L527">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1503,7 +1506,7 @@ data for this <code><a href="../Classes/Realm.html">Realm</a></code>.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Invalidate all <code><a href="../Classes/Object.html">Object</a></code>s and <code><a href="../Classes/Results.html">Results</a></code> read from this Realm.</p>
+                        <p>Invalidates all <code><a href="../Classes/Object.html">Object</a></code>s and <code><a href="../Classes/Results.html">Results</a></code> managed by the Realm.</p>
 
 <p>A Realm holds a read lock on the version of the data accessed by it, so
 that changes made to the Realm on different threads do not modify or delete the
@@ -1513,14 +1516,13 @@ than growing the file. This method should be called before performing long
 blocking operations on a background thread on which you previously read data
 from the Realm which you no longer need.</p>
 
-<p>All <code><a href="../Classes/Object.html">Object</a></code>, <code><a href="../Classes/Results.html">Results</a></code> and <code><a href="../Classes/List.html">List</a></code> instances obtained from this
-<code><a href="../Classes/Realm.html">Realm</a></code> on the current thread are invalidated, and can not longer be used.
-The <code><a href="../Classes/Realm.html">Realm</a></code> itself remains valid, and a new read transaction is implicitly
-begun the next time data is read from the Realm.</p>
+<p>All <code><a href="../Classes/Object.html">Object</a></code>, <code><a href="../Classes/Results.html">Results</a></code> and <code><a href="../Classes/List.html">List</a></code> instances obtained from this <code><a href="../Classes/Realm.html">Realm</a></code> instance on the current thread are
+invalidated. <code><a href="../Classes/Object.html">Object</a></code>s and <code>Array</code>s cannot be used. <code><a href="../Classes/Results.html">Results</a></code> will become empty. The Realm itself remains valid,
+and a new read transaction is implicitly begun the next time data is read from the Realm.</p>
 
 <p>Calling this method multiple times in a row without reading any data from the
-Realm, or before ever reading any data from the Realm is a no-op. This method
-cannot be called on a read-only Realm.</p>
+Realm, or before ever reading any data from the Realm, is a no-op. This method
+may not be called on a read-only Realm.</p>
 
                       </div>
                       <div class="declaration">
@@ -1532,7 +1534,7 @@ cannot be called on a read-only Realm.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L556-L558">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Realm.swift#L550-L552">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1561,16 +1563,16 @@ cannot be called on a read-only Realm.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Write an encrypted and compacted copy of the Realm to the given local URL.</p>
+                        <p>Writes a compacted and optionally encrypted copy of the Realm to the given local URL.</p>
 
 <p>The destination file cannot already exist.</p>
 
-<p>Note that if this is called from within a write transaction it writes the
-<em>current</em> data, and not data when the last write transaction was committed.</p>
+<p>Note that if this method is called from within a write transaction, the <em>current</em> data is written, not the data
+from the point when the previous write transaction was committed.</p>
 
 <div class="aside aside-throws">
     <p class="aside-title">Throws</p>
-    <p>An NSError if the copy could not be written.</p>
+    <p>An <code>NSError</code> if the copy could not be written.</p>
 
 </div>
 
@@ -1617,7 +1619,7 @@ cannot be called on a read-only Realm.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L575-L577">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Realm.swift#L569-L571">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1639,15 +1641,17 @@ cannot be called on a read-only Realm.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A <code>Realm.Configuration</code> is used to describe the different options used to
-create a <code><a href="../Classes/Realm.html">Realm</a></code> instance.</p>
+                        <p>A <code>Configuration</code> instance describes the different options used to
+create an instance of a Realm.</p>
 
-<p><code>Realm.Configuration</code> instances are just plain Swift structs, and unlike
-<code><a href="../Classes/Realm.html">Realm</a></code> and <code><a href="../Classes/Object.html">Object</a></code>s can be freely shared between threads. Creating
-configuration objects for class subsets (by setting the <code>objectTypes</code>
-property) can be expensive, and so you will normally want to cache and reuse
-a single configuration object for each distinct configuration that you are
-using rather than creating a new one each time you open a <code><a href="../Classes/Realm.html">Realm</a></code>.</p>
+<p><code>Configuration</code> instances are just plain Swift structs. Unlike <code><a href="../Classes/Realm.html">Realm</a></code>s
+and <code><a href="../Classes/Object.html">Object</a></code>s, they can be freely shared between threads as long as you do not
+mutate them.</p>
+
+<p>Creating configuration values for class subsets (by setting the
+<code>objectClasses</code> property) can be expensive. Because of this, you will normally want to
+cache and reuse a single configuration value for each distinct configuration rather than
+creating a new value each time you open a Realm.</p>
 
                         <a href="../Classes/Realm/Configuration.html" class="slightly-smaller">See more</a>
                       </div>
@@ -1660,7 +1664,7 @@ using rather than creating a new one each time you open a <code><a href="../Clas
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/RealmConfiguration.swift#L35-L191">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/RealmConfiguration.swift#L37-L191">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1694,7 +1698,7 @@ using rather than creating a new one each time you open a <code><a href="../Clas
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/RealmConfiguration.swift#L198-L202">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/RealmConfiguration.swift#L198-L202">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

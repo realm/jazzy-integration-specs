@@ -33,7 +33,7 @@
       <div class="content-wrapper">
         <p><a href="../index.html">Realm Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fobjc%2F0%2E103%2E0%2Fapi%2Fdocsets%2FRealm%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fobjc%2F1%2E0%2E0%2Fapi%2Fdocsets%2FRealm%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -170,10 +170,12 @@
 
                 </div>
               </div>
-            <p>An RLMSortDescriptor stores a property name and a sort order for use with
-<code>sortedResultsUsingDescriptors:</code>. It is similar to NSSortDescriptor, but supports
-only the subset of functionality which can be efficiently run by the query
-engine. RLMSortDescriptor instances are immutable.</p>
+            <p>An <code>RLMSortDescriptor</code> stores a property name and a sort order for use with
+<code>sortedResultsUsingDescriptors:</code>. It is similar to <code>NSSortDescriptor</code>, but supports
+only the subset of functionality which can be efficiently run by Realm&rsquo;s query
+engine.</p>
+
+<p><code>RLMSortDescriptor</code> instances are immutable.</p>
 
           </section>
           <section class="section task-group-section">
@@ -199,7 +201,7 @@ engine. RLMSortDescriptor instances are immutable.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The name of the property which this sort descriptor orders results by.</p>
+                        <p>The name of the property which the sort descriptor orders results by.</p>
 
                       </div>
                       <div class="declaration">
@@ -216,7 +218,7 @@ engine. RLMSortDescriptor instances are immutable.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMCollection.h#L249">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMCollection.h#L253">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -234,7 +236,7 @@ engine. RLMSortDescriptor instances are immutable.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Whether this descriptor sorts in ascending or descending order.</p>
+                        <p>Whether the descriptor sorts in ascending or descending order.</p>
 
                       </div>
                       <div class="declaration">
@@ -251,7 +253,7 @@ engine. RLMSortDescriptor instances are immutable.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMCollection.h#L254">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMCollection.h#L258">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -280,7 +282,7 @@ engine. RLMSortDescriptor instances are immutable.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns a new sort descriptor for the given property name and order.</p>
+                        <p>Returns a new sort descriptor for the given property name and sort direction.</p>
 
                       </div>
                       <div class="declaration">
@@ -299,7 +301,7 @@ engine. RLMSortDescriptor instances are immutable.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMCollection.h#L261">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMCollection.h#L265">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -317,7 +319,7 @@ engine. RLMSortDescriptor instances are immutable.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns a copy of the receiver with the sort order reversed.</p>
+                        <p>Returns a copy of the receiver with the sort direction reversed.</p>
 
                       </div>
                       <div class="declaration">
@@ -334,7 +336,7 @@ engine. RLMSortDescriptor instances are immutable.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/Realm/RLMCollection.h#L266">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/Realm/RLMCollection.h#L270">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

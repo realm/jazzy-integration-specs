@@ -33,7 +33,7 @@
       <div class="content-wrapper">
         <p><a href="../index.html">RealmSwift Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F0%2E103%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F1%2E0%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -223,7 +223,7 @@ and operated upon.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Element type contained in this collection.</p>
+                        <p>The type of the objects contained in the collection.</p>
 
                       </div>
                       <div class="declaration">
@@ -235,7 +235,7 @@ and operated upon.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/RealmCollectionType.swift#L123">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/RealmCollectionType.swift#L124">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -253,9 +253,7 @@ and operated upon.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The Realm the objects in this collection belong to, or <code>nil</code> if the
-collection&rsquo;s owning object does not belong to a realm (the collection is
-standalone).</p>
+                        <p>The Realm which manages the collection, or <code>nil</code> for unmanaged collections.</p>
 
                       </div>
                       <div class="declaration">
@@ -267,7 +265,7 @@ standalone).</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/RealmCollectionType.swift#L131">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/RealmCollectionType.swift#L130">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -287,7 +285,7 @@ standalone).</p>
                       <div class="abstract">
                         <p>Indicates if the collection can no longer be accessed.</p>
 
-<p>The collection can no longer be accessed if <code>invalidate</code> is called on the containing <code><a href="../Classes/Realm.html">Realm</a></code>.</p>
+<p>The collection can no longer be accessed if <code>invalidate</code> is called on the <code><a href="../Classes/Realm.html">Realm</a></code> that manages the collection.</p>
 
                       </div>
                       <div class="declaration">
@@ -299,7 +297,7 @@ standalone).</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/RealmCollectionType.swift#L136">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/RealmCollectionType.swift#L135">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -317,7 +315,7 @@ standalone).</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the number of objects in this collection.</p>
+                        <p>The number of objects in the collection.</p>
 
                       </div>
                       <div class="declaration">
@@ -329,7 +327,7 @@ standalone).</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/RealmCollectionType.swift#L139">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/RealmCollectionType.swift#L138">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -347,7 +345,7 @@ standalone).</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns a human-readable description of the objects contained in this collection.</p>
+                        <p>A human-readable description of the objects contained in the collection.</p>
 
                       </div>
                       <div class="declaration">
@@ -359,7 +357,7 @@ standalone).</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/RealmCollectionType.swift#L142">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/RealmCollectionType.swift#L141">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -388,7 +386,7 @@ standalone).</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the index of the given object, or <code>nil</code> if the object is not in the collection.</p>
+                        <p>Returns the index of an object in the collection.</p>
 
                       </div>
                       <div class="declaration">
@@ -411,7 +409,7 @@ standalone).</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The object whose index is being queried.</p>
+                                  <p>An object.</p>
 
                                 </div>
                               </td>
@@ -425,7 +423,7 @@ standalone).</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/RealmCollectionType.swift#L154">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/RealmCollectionType.swift#L153">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -443,8 +441,7 @@ standalone).</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the index of the first object matching the given predicate,
-or <code>nil</code> no objects match.</p>
+                        <p>Returns the index of the first object matching the predicate.</p>
 
                       </div>
                       <div class="declaration">
@@ -467,7 +464,7 @@ or <code>nil</code> no objects match.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The <code>NSPredicate</code> used to filter the objects.</p>
+                                  <p>The predicate to use to filter the objects.</p>
 
                                 </div>
                               </td>
@@ -477,11 +474,11 @@ or <code>nil</code> no objects match.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The index of the first matching object, or <code>nil</code> if no objects match.</p>
+                        <p>The index of the first object that matches, or <code>nil</code> if no objects match.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/RealmCollectionType.swift#L164">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/RealmCollectionType.swift#L162">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -499,8 +496,7 @@ or <code>nil</code> no objects match.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the index of the first object matching the given predicate,
-or <code>nil</code> if no objects match.</p>
+                        <p>Returns the index of the first object matching the predicate.</p>
 
                       </div>
                       <div class="declaration">
@@ -523,7 +519,7 @@ or <code>nil</code> if no objects match.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The predicate format string, optionally followed by a variable number of arguments.</p>
+                                  <p>A predicate format string, optionally followed by a variable number of arguments.</p>
 
                                 </div>
                               </td>
@@ -533,11 +529,11 @@ or <code>nil</code> if no objects match.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The index of the first matching object, or <code>nil</code> if no objects match.</p>
+                        <p>The index of the first object that matches, or <code>nil</code> if no objects match.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/RealmCollectionType.swift#L175">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/RealmCollectionType.swift#L171">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -566,7 +562,7 @@ or <code>nil</code> if no objects match.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns <code><a href="../Classes/Results.html">Results</a></code> containing collection elements that match the given predicate.</p>
+                        <p>Returns all objects matching the given predicate in the collection.</p>
 
                       </div>
                       <div class="declaration">
@@ -589,7 +585,7 @@ or <code>nil</code> if no objects match.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The predicate format string which can accept variable arguments.</p>
+                                  <p>A predicate format string, optionally followed by a variable number of arguments.</p>
 
                                 </div>
                               </td>
@@ -599,11 +595,11 @@ or <code>nil</code> if no objects match.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p><code><a href="../Classes/Results.html">Results</a></code> containing collection elements that match the given predicate.</p>
+                        <p>A <code><a href="../Classes/Results.html">Results</a></code> containing objects that match the given predicate.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/RealmCollectionType.swift#L187">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/RealmCollectionType.swift#L183">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -621,7 +617,7 @@ or <code>nil</code> if no objects match.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns <code><a href="../Classes/Results.html">Results</a></code> containing collection elements that match the given predicate.</p>
+                        <p>Returns all objects matching the given predicate in the collection.</p>
 
                       </div>
                       <div class="declaration">
@@ -644,7 +640,7 @@ or <code>nil</code> if no objects match.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The predicate to filter the objects.</p>
+                                  <p>The predicate to use to filter the objects.</p>
 
                                 </div>
                               </td>
@@ -654,11 +650,11 @@ or <code>nil</code> if no objects match.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p><code><a href="../Classes/Results.html">Results</a></code> containing collection elements that match the given predicate.</p>
+                        <p>A <code><a href="../Classes/Results.html">Results</a></code> containing objects that match the given predicate.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/RealmCollectionType.swift#L196">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/RealmCollectionType.swift#L192">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -687,7 +683,7 @@ or <code>nil</code> if no objects match.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns <code><a href="../Classes/Results.html">Results</a></code> containing collection elements sorted by the given property.</p>
+                        <p>Returns a sorted <code><a href="../Classes/Results.html">Results</a></code> from the collection.</p>
 
                       </div>
                       <div class="declaration">
@@ -723,7 +719,7 @@ or <code>nil</code> if no objects match.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The direction to sort by.</p>
+                                  <p>The direction to sort in.</p>
 
                                 </div>
                               </td>
@@ -733,11 +729,11 @@ or <code>nil</code> if no objects match.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p><code><a href="../Classes/Results.html">Results</a></code> containing collection elements sorted by the given property.</p>
+                        <p>A <code><a href="../Classes/Results.html">Results</a></code> sorted by the specified property.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/RealmCollectionType.swift#L209">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/RealmCollectionType.swift#L205">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -755,7 +751,7 @@ or <code>nil</code> if no objects match.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns <code><a href="../Classes/Results.html">Results</a></code> with elements sorted by the given sort descriptors.</p>
+                        <p>Returns a sorted <code><a href="../Classes/Results.html">Results</a></code> from the collection.</p>
 
                       </div>
                       <div class="declaration">
@@ -778,7 +774,7 @@ or <code>nil</code> if no objects match.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p><code>SortDescriptor</code>s to sort by.</p>
+                                  <p>A sequence of <code>SortDescriptor</code>s to sort by.</p>
 
                                 </div>
                               </td>
@@ -788,11 +784,11 @@ or <code>nil</code> if no objects match.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p><code><a href="../Classes/Results.html">Results</a></code> with elements sorted by the given sort descriptors.</p>
+                        <p>A <code><a href="../Classes/Results.html">Results</a></code> sorted by the specified properties.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/RealmCollectionType.swift#L218">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/RealmCollectionType.swift#L214">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -821,11 +817,11 @@ or <code>nil</code> if no objects match.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the minimum value of the given property.</p>
+                        <p>Returns the minimum (lowest) value of the given property among all the objects represented by the collection.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>Only names of properties of a type conforming to the <code><a href="../Protocols.html#/s:P10RealmSwift10MinMaxType">MinMaxType</a></code> protocol can be used.</p>
+    <p>Only a property whose type conforms to the <code><a href="../Protocols.html#/s:P10RealmSwift10MinMaxType">MinMaxType</a></code> protocol can be specified.</p>
 
 </div>
 
@@ -850,7 +846,7 @@ or <code>nil</code> if no objects match.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The name of a property conforming to <code>MinMaxType</code> to look for a minimum on.</p>
+                                  <p>The name of a property whose minimum value is desired.</p>
 
                                 </div>
                               </td>
@@ -860,11 +856,11 @@ or <code>nil</code> if no objects match.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The minimum value for the property amongst objects in the collection, or <code>nil</code> if the collection is empty.</p>
+                        <p>The minimum value of the property, or <code>nil</code> if the collection is empty.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/RealmCollectionType.swift#L233">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/RealmCollectionType.swift#L228">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -882,11 +878,11 @@ or <code>nil</code> if no objects match.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the maximum value of the given property.</p>
+                        <p>Returns the maximum (highest) value of the given property among all the objects represented by the collection.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>Only names of properties of a type conforming to the <code><a href="../Protocols.html#/s:P10RealmSwift10MinMaxType">MinMaxType</a></code> protocol can be used.</p>
+    <p>Only a property whose type conforms to the <code><a href="../Protocols.html#/s:P10RealmSwift10MinMaxType">MinMaxType</a></code> protocol can be specified.</p>
 
 </div>
 
@@ -911,7 +907,7 @@ or <code>nil</code> if no objects match.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The name of a property conforming to <code>MinMaxType</code> to look for a maximum on.</p>
+                                  <p>The name of a property whose minimum value is desired.</p>
 
                                 </div>
                               </td>
@@ -921,11 +917,11 @@ or <code>nil</code> if no objects match.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The maximum value for the property amongst objects in the collection, or <code>nil</code> if the collection is empty.</p>
+                        <p>The maximum value of the property, or <code>nil</code> if the collection is empty.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/RealmCollectionType.swift#L245">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/RealmCollectionType.swift#L239">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -943,11 +939,11 @@ or <code>nil</code> if no objects match.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the sum of the given property for objects in the collection.</p>
+                        <p>Returns the sum of the values of a given property over all the objects represented by the collection.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>Only names of properties of a type conforming to the <code><a href="../Protocols.html#/s:P10RealmSwift11AddableType">AddableType</a></code> protocol can be used.</p>
+    <p>Only a property whose type conforms to the <code><a href="../Protocols.html#/s:P10RealmSwift11AddableType">AddableType</a></code> protocol can be specified.</p>
 
 </div>
 
@@ -972,7 +968,7 @@ or <code>nil</code> if no objects match.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The name of a property conforming to <code>AddableType</code> to calculate sum on.</p>
+                                  <p>The name of a property whose values should be summed.</p>
 
                                 </div>
                               </td>
@@ -982,11 +978,11 @@ or <code>nil</code> if no objects match.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The sum of the given property over all objects in the collection.</p>
+                        <p>The sum of the given property.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/RealmCollectionType.swift#L256">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/RealmCollectionType.swift#L250">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1004,11 +1000,11 @@ or <code>nil</code> if no objects match.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns the average of the given property for objects in the collection.</p>
+                        <p>Returns the average value of a given property over all the objects represented by the collection.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>Only names of properties of a type conforming to the <code><a href="../Protocols.html#/s:P10RealmSwift11AddableType">AddableType</a></code> protocol can be used.</p>
+    <p>Only the name of a property whose type conforms to the <code><a href="../Protocols.html#/s:P10RealmSwift11AddableType">AddableType</a></code> protocol can be specified.</p>
 
 </div>
 
@@ -1033,7 +1029,7 @@ or <code>nil</code> if no objects match.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The name of a property conforming to <code>AddableType</code> to calculate average on.</p>
+                                  <p>The name of a property whose average value should be calculated.</p>
 
                                 </div>
                               </td>
@@ -1043,11 +1039,11 @@ or <code>nil</code> if no objects match.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The average of the given property over all objects in the collection, or <code>nil</code> if the collection is empty.</p>
+                        <p>The average value of the given property, or <code>nil</code> if the collection is empty.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/RealmCollectionType.swift#L268">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/RealmCollectionType.swift#L261">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1076,7 +1072,8 @@ or <code>nil</code> if no objects match.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns an Array containing the results of invoking <code>valueForKey(_:)</code> using key on each of the collection&rsquo;s objects.</p>
+                        <p>Returns an <code>Array</code> containing the results of invoking <code>valueForKey(_:)</code> with <code>key</code> on each of the collection&rsquo;s
+objects.</p>
 
                       </div>
                       <div class="declaration">
@@ -1109,11 +1106,11 @@ or <code>nil</code> if no objects match.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>Array containing the results of invoking <code>valueForKey(_:)</code> using key on each of the collection&rsquo;s objects.</p>
+                        <p>An <code>Array</code> containing the results.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/RealmCollectionType.swift#L280">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/RealmCollectionType.swift#L274">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1131,7 +1128,7 @@ or <code>nil</code> if no objects match.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns an Array containing the results of invoking <code>valueForKeyPath(_:)</code> using keyPath on each of the
+                        <p>Returns an <code>Array</code> containing the results of invoking <code>valueForKeyPath(_:)</code> with <code>keyPath</code> on each of the
 collection&rsquo;s objects.</p>
 
                       </div>
@@ -1165,11 +1162,11 @@ collection&rsquo;s objects.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>Array containing the results of invoking <code>valueForKeyPath(_:)</code> using keyPath on each of the collection&rsquo;s objects.</p>
+                        <p>An <code>Array</code> containing the results.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/RealmCollectionType.swift#L291">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/RealmCollectionType.swift#L284">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1187,11 +1184,11 @@ collection&rsquo;s objects.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Invokes <code>setValue(_:forKey:)</code> on each of the collection&rsquo;s objects using the specified value and key.</p>
+                        <p>Invokes <code>setValue(_:forKey:)</code> on each of the collection&rsquo;s objects using the specified <code>value</code> and <code>key</code>.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
-    <p>This method can only be called during a write transaction.</p>
+    <p>This method may only be called during a write transaction.</p>
 
 </div>
 
@@ -1238,7 +1235,7 @@ collection&rsquo;s objects.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/RealmCollectionType.swift#L301">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/RealmCollectionType.swift#L294">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1267,15 +1264,20 @@ collection&rsquo;s objects.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Register a block to be called each time the collection changes.</p>
+                        <p>Registers a block to be called each time the collection changes.</p>
 
 <p>The block will be asynchronously called with the initial results, and then
 called again after each write transaction which changes either any of the
 objects in the collection, or which objects are in the collection.</p>
 
-<p>At the time when the block is called, the collection object will be fully
+<p>The <code>change</code> parameter that is passed to the block reports, in the form of indices within the
+collection, which of the objects were added, removed, or modified during each write transaction. See the
+<code><a href="../Enums/RealmCollectionChange.html">RealmCollectionChange</a></code> documentation for more information on the change information supplied and an example of how
+to use it to update a <code>UITableView</code>.</p>
+
+<p>At the time when the block is called, the collection will be fully
 evaluated and up-to-date, and as long as you do not perform a write
-transaction on the same thread or explicitly call realm.refresh(),
+transaction on the same thread or explicitly call <code>realm.refresh()</code>,
 accessing it will never perform blocking work.</p>
 
 <p>Notifications are delivered via the standard run loop, and so can&rsquo;t be
@@ -1312,12 +1314,12 @@ try! realm.write {
 </code></pre>
 
 <p>You must retain the returned token for as long as you want updates to continue
-to be sent to the block. To stop receiving updates, call stop() on the token.</p>
+to be sent to the block. To stop receiving updates, call <code>stop()</code> on the token.</p>
 
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method cannot be called during a write transaction, or when
-       the source realm is read-only.</p>
+       the containing Realm is read-only.</p>
 
 </div>
 
@@ -1342,7 +1344,7 @@ to be sent to the block. To stop receiving updates, call stop() on the token.</p
                               </td>
                               <td>
                                 <div>
-                                  <p>The block to be called with the evaluated collection and change information.</p>
+                                  <p>The block to be called whenever a change occurs.</p>
 
                                 </div>
                               </td>
@@ -1352,11 +1354,11 @@ to be sent to the block. To stop receiving updates, call stop() on the token.</p
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>A token which must be held for as long as you want updates to be delivered.</p>
+                        <p>A token which must be retained for as long as you want updates to be delivered.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/RealmCollectionType.swift#L358">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/RealmCollectionType.swift#L356">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

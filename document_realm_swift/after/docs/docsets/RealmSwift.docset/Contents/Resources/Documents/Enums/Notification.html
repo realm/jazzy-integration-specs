@@ -33,7 +33,7 @@
       <div class="content-wrapper">
         <p><a href="../index.html">RealmSwift Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F0%2E103%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F1%2E0%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -196,7 +196,7 @@
 
                 </div>
               </div>
-            <p>A notification due to changes to a realm.</p>
+            <p>A notification indicating that changes were made to a Realm.</p>
 
           </section>
           <section class="section task-group-section">
@@ -215,11 +215,11 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Posted when the data in a realm has changed.</p>
+                        <p>This notification is posted when the data in a Realm has changed.</p>
 
-<p>DidChange is posted after a realm has been refreshed to reflect a write transaction, i.e. when
+<p><code>DidChange</code> is posted after a Realm has been refreshed to reflect a write transaction, This can happen when
 an autorefresh occurs, <code>refresh()</code> is called, after an implicit refresh from
-<code>write(_:)</code>/<code>beginWrite()</code>, and after a local write transaction is committed.</p>
+<code>write(_:)</code>/<code>beginWrite()</code>, or after a local write transaction is committed.</p>
 
                       </div>
                       <div class="declaration">
@@ -231,7 +231,7 @@ an autorefresh occurs, <code>refresh()</code> is called, after an implicit refre
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L608">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Realm.swift#L602">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -253,14 +253,15 @@ an autorefresh occurs, <code>refresh()</code> is called, after an implicit refre
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Posted when a write transaction has been committed to a Realm on a different thread for the same
-file. This is not posted if <code>autorefresh</code> is enabled or if the Realm is refreshed before the
+                        <p>This notification is posted when a write transaction has been committed to a Realm on a different thread for the
+same file.</p>
+
+<p>It is not posted if <code>autorefresh</code> is enabled, or if the Realm is refreshed before the
 notification has a chance to run.</p>
 
-<p>Realms with autorefresh disabled should normally have a handler for this notification which
-calls <code>refresh()</code> after doing some work.
-While not refreshing is allowed, it may lead to large Realm files as Realm has to keep an extra
-copy of the data for the un-refreshed Realm.</p>
+<p>Realms with autorefresh disabled should normally install a handler for this notification which calls <code>refresh()</code>
+after doing some work. Refreshing the Realm is optional, but not refreshing the Realm may lead to large Realm
+files. This is because Realm must keep an extra copy of the data for the stale Realm.</p>
 
                       </div>
                       <div class="declaration">
@@ -272,7 +273,7 @@ copy of the data for the un-refreshed Realm.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Realm.swift#L620">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Realm.swift#L615">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

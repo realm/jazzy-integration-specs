@@ -33,7 +33,7 @@
       <div class="content-wrapper">
         <p><a href="../index.html">RealmSwift Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F0%2E103%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F1%2E0%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -196,17 +196,15 @@
 
                 </div>
               </div>
-            <p>Enumeration that describes the error codes within the Realm error domain.
-The values can be used to catch a variety of <em>recoverable</em> errors, especially those
-happening when initializing a Realm instance.</p>
+            <p><code>Error</code> is an enum representing all recoverable errors. It is associated with the
+Realm error domain specified in <code>RLMErrorDomain</code>.</p>
 
-<pre class="highlight plaintext"><code>let realm: Realm?
-do {
-    realm = Realm()
-} catch RealmSwift.Error.IncompatibleLockFile() {
-    print("Realm Browser app may be attached to Realm on device?")
-}
-</code></pre>
+<p>let realm: Realm?
+   do {
+       realm = Realm()
+   } catch RealmSwift.Error.IncompatibleLockFile() {
+       print(<q>Realm Browser app may be attached to Realm on device?</q>)
+   }</p>
 
           </section>
           <section class="section task-group-section">
@@ -225,7 +223,7 @@ do {
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Error thrown by Realm if no other specific error is returned when a realm is opened.</p>
+                        <p>Denotes a general error that occurred when trying to open a Realm.</p>
 
                       </div>
                       <div class="declaration">
@@ -237,7 +235,7 @@ do {
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Error.swift#L73">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Error.swift#L72">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -259,7 +257,7 @@ do {
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Error thrown by Realm for any I/O related exception scenarios when a realm is opened.</p>
+                        <p>Denotes a file I/O error that occurred when trying to open a Realm.</p>
 
                       </div>
                       <div class="declaration">
@@ -271,7 +269,7 @@ do {
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Error.swift#L76">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Error.swift#L75">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -293,8 +291,10 @@ do {
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Error thrown by Realm if the user does not have permission to open or create
-the specified file in the specified access mode when the realm is opened.</p>
+                        <p>Denotes a file permission error that ocurred when trying to open a Realm.</p>
+
+<p>This error can occur if the user does not have permission to open or create
+the specified file in the specified access mode when opening a Realm.</p>
 
                       </div>
                       <div class="declaration">
@@ -306,7 +306,7 @@ the specified file in the specified access mode when the realm is opened.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Error.swift#L80">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Error.swift#L81">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -328,7 +328,8 @@ the specified file in the specified access mode when the realm is opened.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Error thrown by Realm if the file already exists when a copy should be written.</p>
+                        <p>Denotes an error where a file was to be written to disk, but another file with the same name
+already exists.</p>
 
                       </div>
                       <div class="declaration">
@@ -340,7 +341,7 @@ the specified file in the specified access mode when the realm is opened.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Error.swift#L83">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Error.swift#L85">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -362,9 +363,11 @@ the specified file in the specified access mode when the realm is opened.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Error thrown by Realm if no file was found when a realm was opened as
-read-only or if the directory part of the specified path was not found
-when a copy should be written.</p>
+                        <p>Denotes an error that occurs if a file could not be found.</p>
+
+<p>This error may occur if a Realm file could not be found on disk when trying to open a
+Realm as read-only, or if the directory part of the specified path was not found when
+trying to write a copy.</p>
 
                       </div>
                       <div class="declaration">
@@ -376,7 +379,7 @@ when a copy should be written.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Error.swift#L88">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Error.swift#L92">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -398,8 +401,13 @@ when a copy should be written.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Error thrown by Realm if the database file is currently open in another process which
-cannot share with the current process due to an architecture mismatch.</p>
+                        <p>Denotes an error that occurs if the database file is currently open in another
+process which cannot share with the current process due to an
+architecture mismatch.</p>
+
+<p>This error may occur if trying to share a Realm file between an i386 (32-bit) iOS
+Simulator and the Realm Browser application. In this case, please use the 64-bit
+version of the iOS Simulator.</p>
 
                       </div>
                       <div class="declaration">
@@ -411,7 +419,7 @@ cannot share with the current process due to an architecture mismatch.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Error.swift#L92">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Error.swift#L101">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -433,7 +441,7 @@ cannot share with the current process due to an architecture mismatch.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Error thrown by Realm if a file format upgrade is required to open the file,
+                        <p>Denotes an error that occurs if a file format upgrade is required to open the file,
 but upgrades were explicitly disabled.</p>
 
                       </div>
@@ -446,7 +454,7 @@ but upgrades were explicitly disabled.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Error.swift#L96">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Error.swift#L105">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -468,7 +476,7 @@ but upgrades were explicitly disabled.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Error thrown by Realm if there is insufficient available address space.</p>
+                        <p>Denotes an error that occurs when there is insufficient available address space.</p>
 
                       </div>
                       <div class="declaration">
@@ -480,7 +488,7 @@ but upgrades were explicitly disabled.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Error.swift#L99">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Error.swift#L108">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -502,7 +510,7 @@ but upgrades were explicitly disabled.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Error thrown by Realm if there is a schema version mismatch, so that a migration is required.</p>
+                        <p>Denotes an error that occurs if there is a schema version mismatch, so that a migration is required.</p>
 
                       </div>
                       <div class="declaration">
@@ -514,7 +522,7 @@ but upgrades were explicitly disabled.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v0.103.0/RealmSwift-swift2.2/Error.swift#L102">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Error.swift#L111">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

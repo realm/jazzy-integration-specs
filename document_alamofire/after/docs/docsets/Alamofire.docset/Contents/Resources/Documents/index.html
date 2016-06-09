@@ -165,6 +165,9 @@
                 <a href="Structs/Error.html#/s:OV9Alamofire5Error4Code">– Code</a>
               </li>
               <li class="nav-group-task">
+                <a href="Structs/Error/UserInfoKeys.html">– UserInfoKeys</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Structs/Notifications.html">Notifications</a>
               </li>
               <li class="nav-group-task">
@@ -234,7 +237,7 @@
 
 <ul>
 <li>iOS 8.0+ / Mac OS X 10.9+ / tvOS 9.0+ / watchOS 2.0+</li>
-<li>Xcode 7.2+</li>
+<li>Xcode 7.3+</li>
 </ul>
 <a href='#migration-guides' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='migration-guides'>Migration Guides</h2>
 
@@ -270,10 +273,10 @@
 
 <p>To integrate Alamofire into your Xcode project using CocoaPods, specify it in your <code>Podfile</code>:</p>
 <pre class="highlight ruby"><code><span class="n">source</span> <span class="s1">'https://github.com/CocoaPods/Specs.git'</span>
-<span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span> <span class="s1">'8.0'</span>
+<span class="n">platform</span> <span class="ss">:ios</span><span class="p">,</span> <span class="s1">'9.0'</span>
 <span class="n">use_frameworks!</span>
 
-<span class="n">pod</span> <span class="s1">'Alamofire'</span><span class="p">,</span> <span class="s1">'~&gt; 3.0'</span>
+<span class="n">pod</span> <span class="s1">'Alamofire'</span><span class="p">,</span> <span class="s1">'~&gt; 3.4'</span>
 </code></pre>
 
 <p>Then, run the following command:</p>
@@ -289,7 +292,7 @@
 </code></pre>
 
 <p>To integrate Alamofire into your Xcode project using Carthage, specify it in your <code>Cartfile</code>:</p>
-<pre class="highlight plaintext"><code>github "Alamofire/Alamofire" ~&gt; 3.0
+<pre class="highlight plaintext"><code>github "Alamofire/Alamofire" ~&gt; 3.4
 </code></pre>
 
 <p>Run <code>carthage update</code> to build the framework and drag the built <code>Alamofire.framework</code> into your Xcode project.</p>
@@ -363,6 +366,31 @@
 
 <p>Rather than blocking execution to wait for a response from the server, a <a href="http://en.wikipedia.org/wiki/Callback_%28computer_programming%29">callback</a> is specified to handle the response once it&rsquo;s received. The result of a request is only available inside the scope of a response handler. Any execution contingent on the response or data received from the server must be done within a handler.</p>
 </blockquote>
+<a href='#validation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='validation'>Validation</h3>
+
+<p>By default, Alamofire treats any completed request to be successful, regardless of the content of the response. Calling <code>validate</code> before a response handler causes an error to be generated if the response had an unacceptable status code or MIME type.</p>
+<a href='#manual-validation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='manual-validation'>Manual Validation</h4>
+<pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="kt">GET</span><span class="p">,</span> <span class="s">"https://httpbin.org/get"</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="p">[</span><span class="s">"foo"</span><span class="p">:</span> <span class="s">"bar"</span><span class="p">])</span>
+         <span class="o">.</span><span class="nf">validate</span><span class="p">(</span><span class="nv">statusCode</span><span class="p">:</span> <span class="mi">200</span><span class="o">..&lt;</span><span class="mi">300</span><span class="p">)</span>
+         <span class="o">.</span><span class="nf">validate</span><span class="p">(</span><span class="nv">contentType</span><span class="p">:</span> <span class="p">[</span><span class="s">"application/json"</span><span class="p">])</span>
+         <span class="o">.</span><span class="n">response</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+             <span class="nf">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
+         <span class="p">}</span>
+</code></pre>
+<a href='#automatic-validation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='automatic-validation'>Automatic Validation</h4>
+
+<p>Automatically validates status code within <code>200...299</code> range, and that the <code>Content-Type</code> header of the response matches the <code>Accept</code> header of the request, if one is provided.</p>
+<pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="kt">GET</span><span class="p">,</span> <span class="s">"https://httpbin.org/get"</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="p">[</span><span class="s">"foo"</span><span class="p">:</span> <span class="s">"bar"</span><span class="p">])</span>
+         <span class="o">.</span><span class="nf">validate</span><span class="p">()</span>
+         <span class="o">.</span><span class="n">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+             <span class="k">switch</span> <span class="n">response</span><span class="o">.</span><span class="n">result</span> <span class="p">{</span>
+             <span class="k">case</span> <span class="o">.</span><span class="kt">Success</span><span class="p">:</span>
+                 <span class="nf">print</span><span class="p">(</span><span class="s">"Validation Successful"</span><span class="p">)</span>
+             <span class="k">case</span> <span class="o">.</span><span class="kt">Failure</span><span class="p">(</span><span class="k">let</span> <span class="nv">error</span><span class="p">):</span>
+                 <span class="nf">print</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
+             <span class="p">}</span>
+         <span class="p">}</span>
+</code></pre>
 <a href='#response-serialization' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='response-serialization'>Response Serialization</h3>
 
 <p><strong>Built-in Response Methods</strong></p>
@@ -376,6 +404,7 @@
 </ul>
 <a href='#response-handler' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='response-handler'>Response Handler</h4>
 <pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="kt">GET</span><span class="p">,</span> <span class="s">"https://httpbin.org/get"</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="p">[</span><span class="s">"foo"</span><span class="p">:</span> <span class="s">"bar"</span><span class="p">])</span>
+         <span class="o">.</span><span class="nf">validate</span><span class="p">()</span>
          <span class="o">.</span><span class="n">response</span> <span class="p">{</span> <span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">error</span> <span class="k">in</span>
              <span class="nf">print</span><span class="p">(</span><span class="n">request</span><span class="p">)</span>
              <span class="nf">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
@@ -389,6 +418,7 @@
 </blockquote>
 <a href='#response-data-handler' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='response-data-handler'>Response Data Handler</h4>
 <pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="kt">GET</span><span class="p">,</span> <span class="s">"https://httpbin.org/get"</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="p">[</span><span class="s">"foo"</span><span class="p">:</span> <span class="s">"bar"</span><span class="p">])</span>
+         <span class="o">.</span><span class="nf">validate</span><span class="p">()</span>
          <span class="o">.</span><span class="n">responseData</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
              <span class="nf">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">request</span><span class="p">)</span>
              <span class="nf">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">response</span><span class="p">)</span>
@@ -397,6 +427,7 @@
 </code></pre>
 <a href='#response-string-handler' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='response-string-handler'>Response String Handler</h4>
 <pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="kt">GET</span><span class="p">,</span> <span class="s">"https://httpbin.org/get"</span><span class="p">)</span>
+         <span class="o">.</span><span class="nf">validate</span><span class="p">()</span>
          <span class="o">.</span><span class="n">responseString</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
              <span class="nf">print</span><span class="p">(</span><span class="s">"Success: </span><span class="se">\(</span><span class="n">response</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">isSuccess</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
              <span class="nf">print</span><span class="p">(</span><span class="s">"Response String: </span><span class="se">\(</span><span class="n">response</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">value</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
@@ -404,6 +435,7 @@
 </code></pre>
 <a href='#response-json-handler' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='response-json-handler'>Response JSON Handler</h4>
 <pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="kt">GET</span><span class="p">,</span> <span class="s">"https://httpbin.org/get"</span><span class="p">)</span>
+         <span class="o">.</span><span class="nf">validate</span><span class="p">()</span>
          <span class="o">.</span><span class="n">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
              <span class="nf">debugPrint</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
          <span class="p">}</span>
@@ -412,6 +444,7 @@
 
 <p>Response handlers can even be chained:</p>
 <pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="kt">GET</span><span class="p">,</span> <span class="s">"https://httpbin.org/get"</span><span class="p">)</span>
+         <span class="o">.</span><span class="nf">validate</span><span class="p">()</span>
          <span class="o">.</span><span class="n">responseString</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
              <span class="nf">print</span><span class="p">(</span><span class="s">"Response String: </span><span class="se">\(</span><span class="n">response</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">value</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
          <span class="p">}</span>
@@ -503,7 +536,7 @@
 </blockquote>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">headers</span> <span class="o">=</span> <span class="p">[</span>
     <span class="s">"Authorization"</span><span class="p">:</span> <span class="s">"Basic QWxhZGRpbjpvcGVuIHNlc2FtZQ=="</span><span class="p">,</span>
-    <span class="s">"Content-Type"</span><span class="p">:</span> <span class="s">"application/x-www-form-urlencoded"</span>
+    <span class="s">"Accept"</span><span class="p">:</span> <span class="s">"application/json"</span>
 <span class="p">]</span>
 
 <span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="kt">GET</span><span class="p">,</span> <span class="s">"https://httpbin.org/get"</span><span class="p">,</span> <span class="nv">headers</span><span class="p">:</span> <span class="n">headers</span><span class="p">)</span>
@@ -539,6 +572,7 @@
                  <span class="nf">print</span><span class="p">(</span><span class="s">"Total bytes written on main queue: </span><span class="se">\(</span><span class="n">totalBytesWritten</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
              <span class="p">}</span>
          <span class="p">}</span>
+         <span class="o">.</span><span class="nf">validate</span><span class="p">()</span>
          <span class="o">.</span><span class="n">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
              <span class="nf">debugPrint</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
          <span class="p">}</span>
@@ -681,31 +715,6 @@
          <span class="o">.</span><span class="nf">authenticate</span><span class="p">(</span><span class="nv">usingCredential</span><span class="p">:</span> <span class="n">credential</span><span class="p">)</span>
          <span class="o">.</span><span class="n">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
              <span class="nf">debugPrint</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
-         <span class="p">}</span>
-</code></pre>
-<a href='#validation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='validation'>Validation</h3>
-
-<p>By default, Alamofire treats any completed request to be successful, regardless of the content of the response. Calling <code>validate</code> before a response handler causes an error to be generated if the response had an unacceptable status code or MIME type.</p>
-<a href='#manual-validation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='manual-validation'>Manual Validation</h4>
-<pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="kt">GET</span><span class="p">,</span> <span class="s">"https://httpbin.org/get"</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="p">[</span><span class="s">"foo"</span><span class="p">:</span> <span class="s">"bar"</span><span class="p">])</span>
-         <span class="o">.</span><span class="nf">validate</span><span class="p">(</span><span class="nv">statusCode</span><span class="p">:</span> <span class="mi">200</span><span class="o">..&lt;</span><span class="mi">300</span><span class="p">)</span>
-         <span class="o">.</span><span class="nf">validate</span><span class="p">(</span><span class="nv">contentType</span><span class="p">:</span> <span class="p">[</span><span class="s">"application/json"</span><span class="p">])</span>
-         <span class="o">.</span><span class="n">response</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
-             <span class="nf">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
-         <span class="p">}</span>
-</code></pre>
-<a href='#automatic-validation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='automatic-validation'>Automatic Validation</h4>
-
-<p>Automatically validates status code within <code>200...299</code> range, and that the <code>Content-Type</code> header of the response matches the <code>Accept</code> header of the request, if one is provided.</p>
-<pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="kt">GET</span><span class="p">,</span> <span class="s">"https://httpbin.org/get"</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="p">[</span><span class="s">"foo"</span><span class="p">:</span> <span class="s">"bar"</span><span class="p">])</span>
-         <span class="o">.</span><span class="nf">validate</span><span class="p">()</span>
-         <span class="o">.</span><span class="n">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
-             <span class="k">switch</span> <span class="n">response</span><span class="o">.</span><span class="n">result</span> <span class="p">{</span>
-             <span class="k">case</span> <span class="o">.</span><span class="kt">Success</span><span class="p">:</span>
-                 <span class="nf">print</span><span class="p">(</span><span class="s">"Validation Successful"</span><span class="p">)</span>
-             <span class="k">case</span> <span class="o">.</span><span class="kt">Failure</span><span class="p">(</span><span class="k">let</span> <span class="nv">error</span><span class="p">):</span>
-                 <span class="nf">print</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
-             <span class="p">}</span>
          <span class="p">}</span>
 </code></pre>
 <a href='#timeline' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='timeline'>Timeline</h3>
@@ -1093,6 +1102,67 @@ this framework, it is recommended that you be familiar with the concepts and cap
 </code></pre>
 <pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="kt">Router</span><span class="o">.</span><span class="kt">ReadUser</span><span class="p">(</span><span class="s">"mattt"</span><span class="p">))</span> <span class="c1">// GET /users/mattt</span>
 </code></pre>
+<a href='#sessiondelegate' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='sessiondelegate'>SessionDelegate</h3>
+
+<p>By default, an Alamofire <code>Manager</code> instance creates an internal <code>SessionDelegate</code> object to handle all the various types of delegate callbacks that are generated by the underlying <code>NSURLSession</code>. The implementations of each delegate method handle the most common use cases for these types of calls abstracting the complexity away from the top-level APIs. However, advanced users may find the need to override the default functionality for various reasons.</p>
+<a href='#override-closures' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='override-closures'>Override Closures</h4>
+
+<p>The first way to customize the <code>SessionDelegate</code> behavior is through the use of the override closures. Each closure gives you the ability to override the implementation of the matching <code>SessionDelegate</code> API, yet still use the default implementation for all other APIs. This makes it easy to customize subsets of the delegate functionality. Here are a few examples of some of the override closures available:</p>
+<pre class="highlight swift"><code><span class="c1">/// Overrides default behavior for NSURLSessionDelegate method `URLSession:didReceiveChallenge:completionHandler:`.</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">sessionDidReceiveChallenge</span><span class="p">:</span> <span class="p">((</span><span class="kt">NSURLSession</span><span class="p">,</span> <span class="kt">NSURLAuthenticationChallenge</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">NSURLSessionAuthChallengeDisposition</span><span class="p">,</span> <span class="kt">NSURLCredential</span><span class="p">?))?</span>
+
+<span class="c1">/// Overrides default behavior for NSURLSessionDelegate method `URLSessionDidFinishEventsForBackgroundURLSession:`.</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">sessionDidFinishEventsForBackgroundURLSession</span><span class="p">:</span> <span class="p">((</span><span class="kt">NSURLSession</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span>
+
+<span class="c1">/// Overrides default behavior for NSURLSessionTaskDelegate method `URLSession:task:willPerformHTTPRedirection:newRequest:completionHandler:`.</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">taskWillPerformHTTPRedirection</span><span class="p">:</span> <span class="p">((</span><span class="kt">NSURLSession</span><span class="p">,</span> <span class="kt">NSURLSessionTask</span><span class="p">,</span> <span class="kt">NSHTTPURLResponse</span><span class="p">,</span> <span class="kt">NSURLRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSURLRequest</span><span class="p">?)?</span>
+
+<span class="c1">/// Overrides default behavior for NSURLSessionDataDelegate method `URLSession:dataTask:willCacheResponse:completionHandler:`.</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">dataTaskWillCacheResponse</span><span class="p">:</span> <span class="p">((</span><span class="kt">NSURLSession</span><span class="p">,</span> <span class="kt">NSURLSessionDataTask</span><span class="p">,</span> <span class="kt">NSCachedURLResponse</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSCachedURLResponse</span><span class="p">?)?</span>
+</code></pre>
+
+<p>The following is a short example of how to use the <code>taskWillPerformHTTPRedirection</code> to avoid following redirects to any <code>apple.com</code> domains.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt">Alamofire</span><span class="o">.</span><span class="kt">Manager</span><span class="o">.</span><span class="kt">SessionDelegate</span> <span class="o">=</span> <span class="n">manager</span><span class="o">.</span><span class="n">delegate</span>
+
+<span class="n">delegate</span><span class="o">.</span><span class="n">taskWillPerformHTTPRedirection</span> <span class="o">=</span> <span class="p">{</span> <span class="n">session</span><span class="p">,</span> <span class="n">task</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">request</span> <span class="k">in</span>
+    <span class="k">var</span> <span class="nv">finalRequest</span> <span class="o">=</span> <span class="n">request</span>
+
+    <span class="k">if</span> <span class="k">let</span> <span class="nv">originalRequest</span> <span class="o">=</span> <span class="n">task</span><span class="o">.</span><span class="n">originalRequest</span> <span class="k">where</span> <span class="n">originalRequest</span><span class="o">.</span><span class="kt">URLString</span><span class="o">.</span><span class="nf">containsString</span><span class="p">(</span><span class="s">"apple.com"</span><span class="p">)</span> <span class="p">{</span>
+        <span class="n">finalRequest</span> <span class="o">=</span> <span class="n">originalRequest</span>
+    <span class="p">}</span>
+
+    <span class="k">return</span> <span class="n">finalRequest</span>
+<span class="p">}</span>
+</code></pre>
+<a href='#subclassing' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='subclassing'>Subclassing</h4>
+
+<p>Another way to override the default implementation of the <code>SessionDelegate</code> is to subclass it. Subclassing allows you completely customize the behavior of the API or to create a proxy for the API and still use the default implementation. Creating a proxy allows you to log events, emit notifications, provide pre and post hook implementations, etc. Here&rsquo;s a quick example of subclassing the <code>SessionDelegate</code> and logging a message when a redirect occurs.</p>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">LoggingSessionDelegate</span><span class="p">:</span> <span class="kt">Manager</span><span class="o">.</span><span class="kt">SessionDelegate</span> <span class="p">{</span>
+    <span class="k">override</span> <span class="kd">func</span> <span class="kt">URLSession</span><span class="p">(</span>
+        <span class="nv">session</span><span class="p">:</span> <span class="kt">NSURLSession</span><span class="p">,</span>
+        <span class="nv">task</span><span class="p">:</span> <span class="kt">NSURLSessionTask</span><span class="p">,</span>
+        <span class="n">willPerformHTTPRedirection</span> <span class="nv">response</span><span class="p">:</span> <span class="kt">NSHTTPURLResponse</span><span class="p">,</span>
+        <span class="n">newRequest</span> <span class="nv">request</span><span class="p">:</span> <span class="kt">NSURLRequest</span><span class="p">,</span>
+        <span class="nv">completionHandler</span><span class="p">:</span> <span class="kt">NSURLRequest</span><span class="p">?</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span>
+    <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"URLSession will perform HTTP redirection to request: </span><span class="se">\(</span><span class="n">request</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+
+        <span class="k">super</span><span class="o">.</span><span class="kt">URLSession</span><span class="p">(</span>
+            <span class="n">session</span><span class="p">,</span>
+            <span class="nv">task</span><span class="p">:</span> <span class="n">task</span><span class="p">,</span>
+            <span class="nv">willPerformHTTPRedirection</span><span class="p">:</span> <span class="n">response</span><span class="p">,</span>
+            <span class="nv">newRequest</span><span class="p">:</span> <span class="n">request</span><span class="p">,</span>
+            <span class="nv">completionHandler</span><span class="p">:</span> <span class="n">completionHandler</span>
+        <span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Generally, either the default implementation or the override closures should provide the necessary functionality required. Subclassing should only be used as a last resort.</p>
+
+<blockquote>
+<p>It is important to keep in mind that the <code>subdelegates</code> are initialized and destroyed in the default implementation. Be careful when subclassing to not introduce memory leaks.</p>
+</blockquote>
 <a href='#security' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='security'>Security</h3>
 
 <p>Using a secure HTTPS connection when communicating with servers and web services is an important step in securing sensitive data. By default, Alamofire will evaluate the certificate chain provided by the server using Apple&rsquo;s built in validation provided by the Security framework. While this guarantees the certificate chain is valid, it does not prevent man-in-the-middle (MITM) attacks or other potential vulnerabilities. In order to mitigate MITM attacks, applications dealing with sensitive customer data or financial information should use certificate or public key pinning provided by the <code>ServerTrustPolicy</code>.</p>
@@ -1171,7 +1241,7 @@ this framework, it is recommended that you be familiar with the concepts and cap
 </blockquote>
 <a href='#validating-the-certificate-chain' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h4 id='validating-the-certificate-chain'>Validating the Certificate Chain</h4>
 
-<p>Pinning certificates and public keys both have the option of validating the certificate chain using the <code>validateCertificateChain</code> parameter. By setting this value to <code>true</code>, the full certificate chain will be evaluated in addition to performing a byte equality check against the pinned certficates or public keys. A value of <code>false</code> will skip the certificate chain validation, but will still perform the byte equality check.</p>
+<p>Pinning certificates and public keys both have the option of validating the certificate chain using the <code>validateCertificateChain</code> parameter. By setting this value to <code>true</code>, the full certificate chain will be evaluated in addition to performing a byte equality check against the pinned certificates or public keys. A value of <code>false</code> will skip the certificate chain validation, but will still perform the byte equality check.</p>
 
 <p>There are several cases where it may make sense to disable certificate chain validation. The most common use cases for disabling validation are self-signed and expired certificates. The evaluation would always fail in both of these cases, but the byte equality check will still ensure you are receiving the certificate you expect from the server.</p>
 
@@ -1242,7 +1312,7 @@ this framework, it is recommended that you be familiar with the concepts and cap
 <li>The network reachability status can be useful for determining why a network request may have failed.
 
 <ul>
-<li>If a network request fails, it is more useful to tell the user that the network request failed due to being offline rather than a more technical errror, such as <q>request timed out.</q></li>
+<li>If a network request fails, it is more useful to tell the user that the network request failed due to being offline rather than a more technical error, such as <q>request timed out.</q></li>
 </ul></li>
 </ul>
 
