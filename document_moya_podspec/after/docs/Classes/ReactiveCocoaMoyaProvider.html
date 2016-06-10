@@ -157,7 +157,7 @@
             <h1>ReactiveCocoaMoyaProvider</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ReactiveCocoaMoyaProvider</span><span class="o">&lt;</span><span class="kt">Target</span> <span class="k">where</span> <span class="kt">Target</span><span class="p">:</span> <span class="kt">TargetType</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">MoyaProvider</span><span class="o">&lt;</span><span class="kt">Target</span><span class="o">&gt;</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ReactiveCocoaMoyaProvider</span><span class="o">&lt;</span><span class="kt">Target</span> <span class="k">where</span> <span class="kt">Target</span><span class="p">:</span> <span class="kt"><a href="../Protocols/TargetType.html">TargetType</a></span><span class="o">&gt;</span><span class="p">:</span> <span class="kt"><a href="../Classes/MoyaProvider.html">MoyaProvider</a></span><span class="o">&lt;</span><span class="kt">Target</span><span class="o">&gt;</span></code></pre>
 
                 </div>
               </div>
@@ -187,11 +187,11 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">endpointClosure</span><span class="p">:</span> <span class="kt">EndpointClosure</span> <span class="o">=</span> <span class="kt">MoyaProvider</span><span class="o">.</span><span class="kt">DefaultEndpointMapping</span><span class="p">,</span>
-        <span class="nv">requestClosure</span><span class="p">:</span> <span class="kt">RequestClosure</span> <span class="o">=</span> <span class="kt">MoyaProvider</span><span class="o">.</span><span class="kt">DefaultRequestMapping</span><span class="p">,</span>
-        <span class="nv">stubClosure</span><span class="p">:</span> <span class="kt">StubClosure</span> <span class="o">=</span> <span class="kt">MoyaProvider</span><span class="o">.</span><span class="kt">NeverStub</span><span class="p">,</span>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">endpointClosure</span><span class="p">:</span> <span class="kt">EndpointClosure</span> <span class="o">=</span> <span class="kt"><a href="../Classes/MoyaProvider.html">MoyaProvider</a></span><span class="o">.</span><span class="kt">DefaultEndpointMapping</span><span class="p">,</span>
+        <span class="nv">requestClosure</span><span class="p">:</span> <span class="kt">RequestClosure</span> <span class="o">=</span> <span class="kt"><a href="../Classes/MoyaProvider.html">MoyaProvider</a></span><span class="o">.</span><span class="kt">DefaultRequestMapping</span><span class="p">,</span>
+        <span class="nv">stubClosure</span><span class="p">:</span> <span class="kt">StubClosure</span> <span class="o">=</span> <span class="kt"><a href="../Classes/MoyaProvider.html">MoyaProvider</a></span><span class="o">.</span><span class="kt">NeverStub</span><span class="p">,</span>
         <span class="nv">manager</span><span class="p">:</span> <span class="kt">Manager</span> <span class="o">=</span> <span class="kt">ReactiveCocoaMoyaProvider</span><span class="o">&lt;</span><span class="kt">Target</span><span class="o">&gt;.</span><span class="kt">DefaultAlamofireManager</span><span class="p">(),</span>
-        <span class="nv">plugins</span><span class="p">:</span> <span class="p">[</span><span class="kt">PluginType</span><span class="p">]</span> <span class="o">=</span> <span class="p">[],</span> <span class="nv">stubScheduler</span><span class="p">:</span> <span class="kt">DateSchedulerType</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+        <span class="nv">plugins</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/PluginType.html">PluginType</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[],</span> <span class="nv">stubScheduler</span><span class="p">:</span> <span class="kt">DateSchedulerType</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -218,7 +218,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">request</span><span class="p">(</span><span class="nv">token</span><span class="p">:</span> <span class="kt">Target</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SignalProducer</span><span class="o">&lt;</span><span class="kt">Response</span><span class="p">,</span> <span class="kt">Error</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">request</span><span class="p">(</span><span class="nv">token</span><span class="p">:</span> <span class="kt">Target</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SignalProducer</span><span class="o">&lt;</span><span class="kt"><a href="../Classes/Response.html">Response</a></span><span class="p">,</span> <span class="kt"><a href="../Enums/Error.html">Error</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -245,7 +245,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ReactiveCocoaMoyaProvider</span><span class="o">&lt;</span><span class="kt">Target</span> <span class="k">where</span> <span class="kt">Target</span><span class="p">:</span> <span class="kt">TargetType</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt">MoyaProvider</span><span class="o">&lt;</span><span class="kt">Target</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ReactiveCocoaMoyaProvider</span><span class="o">&lt;</span><span class="kt">Target</span> <span class="k">where</span> <span class="kt">Target</span><span class="p">:</span> <span class="kt"><a href="../Protocols/TargetType.html">TargetType</a></span><span class="o">&gt;</span><span class="p">:</span> <span class="kt"><a href="../Classes/MoyaProvider.html">MoyaProvider</a></span><span class="o">&lt;</span><span class="kt">Target</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>

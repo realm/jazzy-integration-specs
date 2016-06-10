@@ -225,7 +225,7 @@ all of its blocks on the same thread.
                         <p>Obtains an instance of the default Realm.</p>
 
 <p>The default Realm is used by the <code><a href="../Classes/RLMObject.html">RLMObject</a></code> class methods
-which do not take a <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> parameter, but is otherwise not special. The
+which do not take a <code>RLMRealm</code> parameter, but is otherwise not special. The
 default Realm is persisted as default.realm under the Documents directory of
 your Application on iOS, and in your application&rsquo;s Application Support
 directory on OS X.</p>
@@ -249,7 +249,7 @@ can be changed via <code>+[RLMRealmConfiguration setDefaultConfiguration:]</code
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>The default <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> instance for the current thread.</p>
+                        <p>The default <code>RLMRealm</code> instance for the current thread.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -271,7 +271,7 @@ can be changed via <code>+[RLMRealmConfiguration setDefaultConfiguration:]</code
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Obtains an <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> instance with the given configuration.</p>
+                        <p>Obtains an <code>RLMRealm</code> instance with the given configuration.</p>
 
                       </div>
                       <div class="declaration">
@@ -279,13 +279,13 @@ can be changed via <code>+[RLMRealmConfiguration setDefaultConfiguration:]</code
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">instancetype</span><span class="p">)</span>
-<span class="nf">realmWithConfiguration</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">RLMRealmConfiguration</span> <span class="o">*</span><span class="p">)</span><span class="nv">configuration</span>
+<span class="nf">realmWithConfiguration</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/RLMRealmConfiguration.html">RLMRealmConfiguration</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">configuration</span>
                  <span class="nf">error</span><span class="p">:(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="kt">RLMRealmConfiguration</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+                          <pre class="highlight"><code><span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMRealmConfiguration.html">RLMRealmConfiguration</a></span><span class="p">)</span> <span class="k">throws</span></code></pre>
 
                         </div>
                       </div>
@@ -326,7 +326,7 @@ can be changed via <code>+[RLMRealmConfiguration setDefaultConfiguration:]</code
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> instance.</p>
+                        <p>An <code>RLMRealm</code> instance.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -348,7 +348,7 @@ can be changed via <code>+[RLMRealmConfiguration setDefaultConfiguration:]</code
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Obtains an <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> instance persisted at a specified file URL.</p>
+                        <p>Obtains an <code>RLMRealm</code> instance persisted at a specified file URL.</p>
 
                       </div>
                       <div class="declaration">
@@ -386,7 +386,7 @@ can be changed via <code>+[RLMRealmConfiguration setDefaultConfiguration:]</code
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>An <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> instance.</p>
+                        <p>An <code>RLMRealm</code> instance.</p>
 
                       </div>
                       <div class="slightly-smaller">
@@ -415,12 +415,12 @@ can be changed via <code>+[RLMRealmConfiguration setDefaultConfiguration:]</code
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">null_unspecified</span><span class="p">)</span> <span class="n">RLMSchema</span> <span class="o">*</span><span class="n">schema</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">null_unspecified</span><span class="p">)</span> <span class="n"><a href="../Classes/RLMSchema.html">RLMSchema</a></span> <span class="o">*</span><span class="n">schema</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">schema</span><span class="p">:</span> <span class="kt">RLMSchema</span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">schema</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMSchema.html">RLMSchema</a></span><span class="o">!</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -487,19 +487,19 @@ can be changed via <code>+[RLMRealmConfiguration setDefaultConfiguration:]</code
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The <code><a href="../Classes/RLMRealmConfiguration.html">RLMRealmConfiguration</a></code> object that was used to create this <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> instance.</p>
+                        <p>The <code><a href="../Classes/RLMRealmConfiguration.html">RLMRealmConfiguration</a></code> object that was used to create this <code>RLMRealm</code> instance.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">RLMRealmConfiguration</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">configuration</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Classes/RLMRealmConfiguration.html">RLMRealmConfiguration</a></span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">configuration</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">configuration</span><span class="p">:</span> <span class="kt">RLMRealmConfiguration</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">configuration</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMRealmConfiguration.html">RLMRealmConfiguration</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -588,7 +588,7 @@ will normally only be the main thread.</p>
 <li><code>NSString</code> *<strong>notification</strong>:    The name of the incoming notification. See
                                 <code>RLMRealmNotification</code> for information on what
                                 notifications are sent.</li>
-<li><p><code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> *<strong>realm</strong>:           The Realm for which this notification occurred.</p></li>
+<li><p><code>RLMRealm</code> *<strong>realm</strong>:           The Realm for which this notification occurred.</p></li>
 </ul>
 
                       </div>
@@ -596,13 +596,13 @@ will normally only be the main thread.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">RLMNotificationToken</span> <span class="o">*</span><span class="p">)</span><span class="nf">addNotificationBlock</span><span class="p">:</span>
-    <span class="p">(</span><span class="n">nonnull</span> <span class="n">RLMNotificationBlock</span><span class="p">)</span><span class="nv">block</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/RLMNotificationToken.html">RLMNotificationToken</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">addNotificationBlock</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type Definitions.html#/c:RLMRealm.h@T@RLMNotificationBlock">RLMNotificationBlock</a></span><span class="p">)</span><span class="nv">block</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">@warn_unused_result</span> <span class="kd">func</span> <span class="nf">addNotificationBlock</span><span class="p">(</span><span class="nv">block</span><span class="p">:</span> <span class="kt">RLMNotificationBlock</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">RLMNotificationToken</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">@warn_unused_result</span> <span class="kd">func</span> <span class="nf">addNotificationBlock</span><span class="p">(</span><span class="nv">block</span><span class="p">:</span> <span class="kt"><a href="../Type Definitions.html#/c:RLMRealm.h@T@RLMNotificationBlock">RLMNotificationBlock</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RLMNotificationToken.html">RLMNotificationToken</a></span></code></pre>
 
                         </div>
                       </div>
@@ -667,11 +667,11 @@ will normally only be the main thread.</p>
 <p>Only one write transaction can be open at a time. Write transactions cannot be
 nested, and trying to begin a write transaction on a Realm which is
 already in a write transaction will throw an exception. Calls to
-<code>beginWriteTransaction</code> from <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> instances in other threads will block
+<code>beginWriteTransaction</code> from <code>RLMRealm</code> instances in other threads will block
 until the current write transaction completes.</p>
 
 <p>Before beginning the write transaction, <code>beginWriteTransaction</code> updates the
-<code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> instance to the latest Realm version, as if <code>refresh</code> had been called, and
+<code>RLMRealm</code> instance to the latest Realm version, as if <code>refresh</code> had been called, and
 generates notifications if applicable. This has no effect if the Realm
 was already up to date.</p>
 
@@ -921,11 +921,11 @@ the valid object.</p>
 
 <p>Write transactions cannot be nested, and trying to execute a write transaction 
 on a Realm which is already participating in a write transaction will throw an
-exception. Calls to <code>transactionWithBlock:</code> from <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> instances in other 
+exception. Calls to <code>transactionWithBlock:</code> from <code>RLMRealm</code> instances in other 
 threads will block until the current write transaction completes.</p>
 
 <p>Before beginning the write transaction, <code>transactionWithBlock:</code> updates the
-<code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> instance to the latest Realm version, as if <code>refresh</code> had been called, and
+<code>RLMRealm</code> instance to the latest Realm version, as if <code>refresh</code> had been called, and
 generates notifications if applicable. This has no effect if the Realm
 was already up to date.</p>
 
@@ -1211,7 +1211,7 @@ blocking operations on a background thread on which you previously read data
 from the Realm which you no longer need.</p>
 
 <p>All <code><a href="../Classes/RLMObject.html">RLMObject</a></code>, <code><a href="../Classes/RLMResults.html">RLMResults</a></code> and <code><a href="../Classes/RLMArray.html">RLMArray</a></code> instances obtained from this
-<code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> instance on the current thread are invalidated. <code><a href="../Classes/RLMObject.html">RLMObject</a></code>s and <code><a href="../Classes/RLMArray.html">RLMArray</a></code>s
+<code>RLMRealm</code> instance on the current thread are invalidated. <code><a href="../Classes/RLMObject.html">RLMObject</a></code>s and <code><a href="../Classes/RLMArray.html">RLMArray</a></code>s
 cannot be used. <code><a href="../Classes/RLMResults.html">RLMResults</a></code> will become empty. The Realm itself remains valid,
 and a new read transaction is implicitly begun the next time data is read from the Realm.</p>
 
@@ -1266,7 +1266,7 @@ may not be called on a read-only Realm.</p>
                         <p>Adds an object to the Realm.</p>
 
 <p>Once added, this object is considered to be managed by the Realm. It can be retrieved
-using the <code>objectsWhere:</code> selectors on <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> and on subclasses of <code><a href="../Classes/RLMObject.html">RLMObject</a></code>.</p>
+using the <code>objectsWhere:</code> selectors on <code>RLMRealm</code> and on subclasses of <code><a href="../Classes/RLMObject.html">RLMObject</a></code>.</p>
 
 <p>When added, all child relationships referenced by this object will also be added to 
 the Realm if they are not already in it.</p>
@@ -1289,12 +1289,12 @@ from a Realm (i.e. <code>isInvalidated</code> must be <code>NO</code>).</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">addObject</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">RLMObject</span> <span class="o">*</span><span class="p">)</span><span class="nv">object</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">addObject</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/RLMObject.html">RLMObject</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">object</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">addObject</span><span class="p">(</span><span class="nv">object</span><span class="p">:</span> <span class="kt">RLMObject</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">addObject</span><span class="p">(</span><span class="nv">object</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMObject.html">RLMObject</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1428,12 +1428,12 @@ a different Realm.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">addOrUpdateObject</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">RLMObject</span> <span class="o">*</span><span class="p">)</span><span class="nv">object</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">addOrUpdateObject</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/RLMObject.html">RLMObject</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">object</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">addOrUpdateObject</span><span class="p">(</span><span class="nv">object</span><span class="p">:</span> <span class="kt">RLMObject</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">addOrUpdateObject</span><span class="p">(</span><span class="nv">object</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMObject.html">RLMObject</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1558,12 +1558,12 @@ a different Realm.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">deleteObject</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">RLMObject</span> <span class="o">*</span><span class="p">)</span><span class="nv">object</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">deleteObject</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/RLMObject.html">RLMObject</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">object</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">deleteObject</span><span class="p">(</span><span class="nv">object</span><span class="p">:</span> <span class="kt">RLMObject</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">deleteObject</span><span class="p">(</span><span class="nv">object</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMObject.html">RLMObject</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1841,12 +1841,12 @@ exactly when and how migrations are performed.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSError</span> <span class="o">*</span><span class="p">)</span><span class="nf">migrateRealm</span><span class="p">:</span>
-    <span class="p">(</span><span class="n">nonnull</span> <span class="n">RLMRealmConfiguration</span> <span class="o">*</span><span class="p">)</span><span class="nv">configuration</span><span class="p">;</span></code></pre>
+    <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/RLMRealmConfiguration.html">RLMRealmConfiguration</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">configuration</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">migrateRealm</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="kt">RLMRealmConfiguration</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSError</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">migrateRealm</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMRealmConfiguration.html">RLMRealmConfiguration</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSError</span></code></pre>
 
                         </div>
                       </div>

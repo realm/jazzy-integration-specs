@@ -249,13 +249,13 @@ being of an unexpected type. Siesta provides <code><a href="../Protocols/TypedCo
 
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
-    <p>Why is the type of this property <code>Any</code> instead of a generic <code>T</code>? Because an <code><a href="../Structs/Entity.html">Entity&lt;T&gt;</a></code> declaration would mean
+    <p>Why is the type of this property <code>Any</code> instead of a generic <code>T</code>? Because an <code>Entity&lt;T&gt;</code> declaration would mean
 “Siesta guarantees the data is of type <code>T</code>” — that’s what strong static types do — but there is no way to tell
 Swift at <em>compile time</em> what content type a server will actually send at <em>runtime</em>.</p>
 
 <p>The best client code can do is to say, “I expect the server to have returned data of type <code>T</code>; did it?” That
 is exactly what Swift’s <code>as?</code> operator does — and any scheme within the current system involving a generic
-<code><a href="../Structs/Entity.html">Entity&lt;T&gt;</a></code> ends up being an obfuscated equivalent to <code>as?</code> — or, far worse, an obfuscated <code>as!</code>, a.k.a.
+<code>Entity&lt;T&gt;</code> ends up being an obfuscated equivalent to <code>as?</code> — or, far worse, an obfuscated <code>as!</code>, a.k.a.
 “The Amazing Server-Triggered Client Crash-o-Matic.”</p>
 
 <p>Siesta’s future direction is to let users declare their expected type at the resource level by asking for a
@@ -541,7 +541,7 @@ for example, you might see “<code>text/plain</code>”, “<code>text/plain; c
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">touch</span><span class="p">()</span>
-        <span class="p">{</span> <span class="n">timestamp</span> <span class="o">=</span> <span class="nf">now</span><span class="p">()</span> <span class="p">}</span></code></pre>
+        <span class="p">{</span> <span class="n"><a href="../Structs/Entity.html#/s:vV6Siesta6Entity9timestampSd">timestamp</a></span> <span class="o">=</span> <span class="nf">now</span><span class="p">()</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
