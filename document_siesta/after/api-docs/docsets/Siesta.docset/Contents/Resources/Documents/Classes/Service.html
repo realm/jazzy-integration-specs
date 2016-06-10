@@ -289,8 +289,8 @@ add your own <code><a href="../Protocols/ResponseTransformer.html">ResponseTrans
 <div class="aside aside-parameter">
     <p class="aside-title">Parameter</p>
     Parameter networking:
-The handler to use for networking. The default is <code><a href="../Extensions/NSURLSession.html">NSURLSession</a></code> with ephemeral session configuration. You can
-pass an <code><a href="../Extensions/NSURLSession.html">NSURLSession</a></code>, <code><a href="../Extensions/NSURLSessionConfiguration.html">NSURLSessionConfiguration</a></code>, or <code>Alamofire.Manager</code> to use an existing provider with
+The handler to use for networking. The default is <code>NSURLSession</code> with ephemeral session configuration. You can
+pass an <code>NSURLSession</code>, <code>NSURLSessionConfiguration</code>, or <code>Alamofire.Manager</code> to use an existing provider with
 custom configuration. You can also use your own networking library of choice by implementing <code><a href="../Protocols/NetworkingProvider.html">NetworkingProvider</a></code>.
 
 </div>
@@ -303,7 +303,7 @@ custom configuration. You can also use your own networking library of choice by 
                           <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span>
             <span class="nv">baseURL</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
             <span class="nv">useDefaultTransformers</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
-            <span class="nv">networking</span><span class="p">:</span> <span class="kt">NetworkingProviderConvertible</span> <span class="o">=</span> <span class="kt">NSURLSessionConfiguration</span><span class="o">.</span><span class="nf">ephemeralSessionConfiguration</span><span class="p">())</span></code></pre>
+            <span class="nv">networking</span><span class="p">:</span> <span class="kt"><a href="../Protocols/NetworkingProviderConvertible.html">NetworkingProviderConvertible</a></span> <span class="o">=</span> <span class="kt">NSURLSessionConfiguration</span><span class="o">.</span><span class="nf">ephemeralSessionConfiguration</span><span class="p">())</span></code></pre>
 
                         </div>
                       </div>
@@ -394,7 +394,7 @@ resource’s path, with escaping if necessary.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">func</span> <span class="nf">resource</span><span class="p">(</span><span class="nv">path</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Resource</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">func</span> <span class="nf">resource</span><span class="p">(</span><span class="nv">path</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Resource.html">Resource</a></span></code></pre>
 
                         </div>
                       </div>
@@ -417,7 +417,7 @@ resource’s path, with escaping if necessary.</p>
                         <p>Returns the unique resource with the given URL, ignoring <code><a href="../Classes/Service.html#/s:vC6Siesta7Service7baseURLGSqCSo5NSURL_">baseURL</a></code>.</p>
 
 <p>This method will <em>always</em> return the same instance of <code><a href="../Classes/Resource.html">Resource</a></code> for the same URL within
-the context of a <code><a href="../Classes/Service.html">Service</a></code> as long as anyone retains a reference to that resource.
+the context of a <code>Service</code> as long as anyone retains a reference to that resource.
 Unreferenced resources remain in memory (with their cached data) until a low memory event
 occurs, at which point they are summarily evicted.</p>
 
@@ -433,7 +433,7 @@ occurs, at which point they are summarily evicted.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">func</span> <span class="nf">resource</span><span class="p">(</span><span class="n">absoluteURL</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">NSURL</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Resource</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">func</span> <span class="nf">resource</span><span class="p">(</span><span class="n">absoluteURL</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">NSURL</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Resource.html">Resource</a></span></code></pre>
 
                         </div>
                       </div>
@@ -466,7 +466,7 @@ occurs, at which point they are summarily evicted.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">func</span> <span class="nf">resource</span><span class="p">(</span><span class="n">absoluteURL</span> <span class="nv">urlString</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Resource</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">func</span> <span class="nf">resource</span><span class="p">(</span><span class="n">absoluteURL</span> <span class="nv">urlString</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Resource.html">Resource</a></span></code></pre>
 
                         </div>
                       </div>
@@ -520,8 +520,8 @@ of this method that takes a predicate as its first argument.</p>
 <div class="aside aside-parameter">
     <p class="aside-title">Parameter</p>
     Parameter pattern:
-Selects the subset of resources to which this configuration applies. You can pass a <code><a href="../Extensions/String.html">String</a></code>, <code><a href="../Classes/Resource.html">Resource</a></code>, or
-<code><a href="../Extensions/NSRegularExpression.html">NSRegularExpression</a></code> for the <code>pattern</code> argument — or write your own custom implementation of
+Selects the subset of resources to which this configuration applies. You can pass a <code>String</code>, <code><a href="../Classes/Resource.html">Resource</a></code>, or
+<code>NSRegularExpression</code> for the <code>pattern</code> argument — or write your own custom implementation of
 <code><a href="../Protocols/ConfigurationPatternConvertible.html">ConfigurationPatternConvertible</a></code>.
 
 </div>
@@ -573,10 +573,10 @@ for global config and more fine-grained matching</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span>
-            <span class="nv">pattern</span><span class="p">:</span> <span class="kt">ConfigurationPatternConvertible</span><span class="p">,</span>
-            <span class="nv">requestMethods</span><span class="p">:</span> <span class="p">[</span><span class="kt">RequestMethod</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+            <span class="nv">pattern</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ConfigurationPatternConvertible.html">ConfigurationPatternConvertible</a></span><span class="p">,</span>
+            <span class="nv">requestMethods</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Enums/RequestMethod.html">RequestMethod</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
             <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-            <span class="nv">configurer</span><span class="p">:</span> <span class="kt">Configuration</span><span class="o">.</span><span class="kt">Builder</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+            <span class="nv">configurer</span><span class="p">:</span> <span class="kt"><a href="../Structs/Configuration.html">Configuration</a></span><span class="o">.</span><span class="kt">Builder</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -674,9 +674,9 @@ for pattern-based matching, and for details about the parameters.</p>
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span>
             <span class="n">whenURLMatches</span> <span class="nv">configurationPattern</span><span class="p">:</span> <span class="kt">NSURL</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="p">{</span> <span class="n">_</span> <span class="k">in</span> <span class="kc">true</span> <span class="p">},</span>
-            <span class="nv">requestMethods</span><span class="p">:</span> <span class="p">[</span><span class="kt">RequestMethod</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+            <span class="nv">requestMethods</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Enums/RequestMethod.html">RequestMethod</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
             <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-            <span class="nv">configurer</span><span class="p">:</span> <span class="kt">Configuration</span><span class="o">.</span><span class="kt">Builder</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+            <span class="nv">configurer</span><span class="p">:</span> <span class="kt"><a href="../Structs/Configuration.html">Configuration</a></span><span class="o">.</span><span class="kt">Builder</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -728,7 +728,7 @@ for pattern-based matching, and for details about the parameters.</p>
 
 <p>Siesta checks that the incoming <code><a href="../Structs/Entity.html#/s:vV6Siesta6Entity7contentP_">Entity.content</a></code> matches the type of the closure’s <code>content</code> parameter. In the
 example code above, if the <code>json</code> parameter of <code>FooModel.init</code> takes a <code>Dictionary</code>, but the transformer pipeline
-at that point has produced a <code><a href="../Extensions/String.html">String</a></code>, then the transformer outputs a failure response.</p>
+at that point has produced a <code>String</code>, then the transformer outputs a failure response.</p>
 
 <p>You can use this behavior to configure a service to refuse all server responses not of a specific type by passing
 a transformer that passes the content through unmodified, but requires a specific type:</p>
@@ -758,10 +758,10 @@ for more robust transformation options.
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">func</span> <span class="n">configureTransformer</span><span class="o">&lt;</span><span class="kt">I</span><span class="p">,</span><span class="kt">O</span><span class="o">&gt;</span><span class="p">(</span>
-            <span class="nv">pattern</span><span class="p">:</span> <span class="kt">ConfigurationPatternConvertible</span><span class="p">,</span>
-            <span class="nv">requestMethods</span><span class="p">:</span> <span class="p">[</span><span class="kt">RequestMethod</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+            <span class="nv">pattern</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ConfigurationPatternConvertible.html">ConfigurationPatternConvertible</a></span><span class="p">,</span>
+            <span class="nv">requestMethods</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Enums/RequestMethod.html">RequestMethod</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
             <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-            <span class="nv">contentTransform</span><span class="p">:</span> <span class="kt">ResponseContentTransformer</span><span class="o">&lt;</span><span class="kt">I</span><span class="p">,</span><span class="kt">O</span><span class="o">&gt;.</span><span class="kt">Processor</span><span class="p">)</span></code></pre>
+            <span class="nv">contentTransform</span><span class="p">:</span> <span class="kt"><a href="../Structs/ResponseContentTransformer.html">ResponseContentTransformer</a></span><span class="o">&lt;</span><span class="kt">I</span><span class="p">,</span><span class="kt">O</span><span class="o">&gt;.</span><span class="kt">Processor</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -856,7 +856,7 @@ over subsequent resource interactions.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">func</span> <span class="nf">wipeResources</span><span class="p">(</span><span class="kd">@noescape</span> <span class="nv">predicate</span><span class="p">:</span> <span class="kt">Resource</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="o">=</span>  <span class="p">{</span> <span class="n">_</span> <span class="k">in</span> <span class="kc">true</span> <span class="p">})</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">func</span> <span class="nf">wipeResources</span><span class="p">(</span><span class="kd">@noescape</span> <span class="nv">predicate</span><span class="p">:</span> <span class="kt"><a href="../Classes/Resource.html">Resource</a></span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="o">=</span>  <span class="p">{</span> <span class="n">_</span> <span class="k">in</span> <span class="kc">true</span> <span class="p">})</span></code></pre>
 
                         </div>
                       </div>
@@ -887,7 +887,7 @@ service.wipeResources(profileResource)
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">func</span> <span class="nf">wipeResources</span><span class="p">(</span><span class="nv">pattern</span><span class="p">:</span> <span class="kt">ConfigurationPatternConvertible</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">func</span> <span class="nf">wipeResources</span><span class="p">(</span><span class="nv">pattern</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ConfigurationPatternConvertible.html">ConfigurationPatternConvertible</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>

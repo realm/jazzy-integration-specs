@@ -166,7 +166,7 @@
             <h1>RLMArray</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">RLMArray</span> <span class="o">&lt;</span><span class="n">RLMObjectType</span> <span class="o">:</span> <span class="n">RLMObject</span> <span class="o">*&gt;</span> <span class="o">:</span> <span class="n">NSObject</span><span class="o">&lt;</span><span class="n">RLMCollection</span><span class="p">,</span><span class="n">NSFastEnumeration</span><span class="o">&gt;</span> </code></pre>
+                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">RLMArray</span> <span class="o">&lt;</span><span class="n">RLMObjectType</span> <span class="o">:</span> <span class="n"><a href="../Classes/RLMObject.html">RLMObject</a></span> <span class="o">*&gt;</span> <span class="o">:</span> <span class="n">NSObject</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/RLMCollection.html">RLMCollection</a></span><span class="p">,</span><span class="n">NSFastEnumeration</span><span class="o">&gt;</span> </code></pre>
 
                 </div>
               </div>
@@ -303,12 +303,12 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">RLMRealm</span> <span class="o">*</span><span class="n">realm</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Classes/RLMRealm.html">RLMRealm</a></span> <span class="o">*</span><span class="n">realm</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">realm</span><span class="p">:</span> <span class="kt">RLMRealm</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">realm</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMRealm.html">RLMRealm</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -389,7 +389,7 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">objectAtIndex</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">RLMObject</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">objectAtIndex</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RLMObject.html">RLMObject</a></span></code></pre>
 
                         </div>
                       </div>
@@ -451,7 +451,7 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">firstObject</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">RLMObject</span><span class="p">?</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">firstObject</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RLMObject.html">RLMObject</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -493,7 +493,7 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">lastObject</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">RLMObject</span><span class="p">?</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">lastObject</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RLMObject.html">RLMObject</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -550,7 +550,7 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">addObject</span><span class="p">(</span><span class="nv">object</span><span class="p">:</span> <span class="kt">RLMObject</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">addObject</span><span class="p">(</span><span class="nv">object</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMObject.html">RLMObject</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -675,7 +675,7 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">insertObject</span><span class="p">(</span><span class="nv">anObject</span><span class="p">:</span> <span class="kt">RLMObject</span><span class="p">,</span> <span class="n">atIndex</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">insertObject</span><span class="p">(</span><span class="nv">anObject</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMObject.html">RLMObject</a></span><span class="p">,</span> <span class="n">atIndex</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -897,7 +897,7 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">replaceObjectAtIndex</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">,</span> <span class="n">withObject</span> <span class="nv">anObject</span><span class="p">:</span> <span class="kt">RLMObject</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">replaceObjectAtIndex</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">,</span> <span class="n">withObject</span> <span class="nv">anObject</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMObject.html">RLMObject</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1132,7 +1132,7 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">indexOfObject</span><span class="p">(</span><span class="nv">object</span><span class="p">:</span> <span class="kt">RLMObject</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UInt</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">indexOfObject</span><span class="p">(</span><span class="nv">object</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMObject.html">RLMObject</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UInt</span></code></pre>
 
                         </div>
                       </div>
@@ -1297,7 +1297,7 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">RLMResults</span><span class="o">&lt;</span><span class="n">RLMObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nf">objectsWhere</span><span class="p">:</span>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/RLMResults.html">RLMResults</a></span><span class="o">&lt;</span><span class="n">RLMObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nf">objectsWhere</span><span class="p">:</span>
     <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">predicateFormat</span><span class="p">,</span> <span class="p">...;</span></code></pre>
 
                         </div>
@@ -1353,13 +1353,13 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">RLMResults</span><span class="o">&lt;</span><span class="n">RLMObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nf">objectsWithPredicate</span><span class="p">:</span>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/RLMResults.html">RLMResults</a></span><span class="o">&lt;</span><span class="n">RLMObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nf">objectsWithPredicate</span><span class="p">:</span>
     <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSPredicate</span> <span class="o">*</span><span class="p">)</span><span class="nv">predicate</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">objectsWithPredicate</span><span class="p">(</span><span class="nv">predicate</span><span class="p">:</span> <span class="kt">NSPredicate</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">RLMResults</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">objectsWithPredicate</span><span class="p">(</span><span class="nv">predicate</span><span class="p">:</span> <span class="kt">NSPredicate</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RLMResults.html">RLMResults</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1414,14 +1414,14 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">RLMResults</span><span class="o">&lt;</span><span class="n">RLMObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/RLMResults.html">RLMResults</a></span><span class="o">&lt;</span><span class="n">RLMObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span>
 <span class="nf">sortedResultsUsingProperty</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">property</span>
                  <span class="nf">ascending</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">ascending</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">sortedResultsUsingProperty</span><span class="p">(</span><span class="nv">property</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">ascending</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">RLMResults</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">sortedResultsUsingProperty</span><span class="p">(</span><span class="nv">property</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">ascending</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RLMResults.html">RLMResults</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1489,13 +1489,13 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">RLMResults</span><span class="o">&lt;</span><span class="n">RLMObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nf">sortedResultsUsingDescriptors</span><span class="p">:</span>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/RLMResults.html">RLMResults</a></span><span class="o">&lt;</span><span class="n">RLMObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nf">sortedResultsUsingDescriptors</span><span class="p">:</span>
     <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSArray</span> <span class="o">*</span><span class="p">)</span><span class="nv">properties</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">sortedResultsUsingDescriptors</span><span class="p">(</span><span class="nv">properties</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyObject</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">RLMResults</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">sortedResultsUsingDescriptors</span><span class="p">(</span><span class="nv">properties</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyObject</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RLMResults.html">RLMResults</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1619,9 +1619,9 @@ to be sent to the block. To stop receiving updates, call <code>-stop</code> on t
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">RLMNotificationToken</span> <span class="o">*</span><span class="p">)</span><span class="nf">addNotificationBlock</span><span class="p">:</span>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/RLMNotificationToken.html">RLMNotificationToken</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">addNotificationBlock</span><span class="p">:</span>
     <span class="p">(</span><span class="n">nonnull</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="p">)(</span><span class="n">RLMArray</span><span class="o">&lt;</span><span class="n">RLMObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">,</span>
-                      <span class="n">RLMCollectionChange</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">))</span><span class="n">block</span><span class="p">;</span></code></pre>
+                      <span class="n"><a href="../Classes/RLMCollectionChange.html">RLMCollectionChange</a></span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">))</span><span class="n">block</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -1685,8 +1685,8 @@ to be sent to the block. To stop receiving updates, call <code>-stop</code> on t
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p><code>-[RLMArray init]</code> is not available because <code><a href="../Classes/RLMArray.html">RLMArray</a></code>s cannot be created directly.
-<code><a href="../Classes/RLMArray.html">RLMArray</a></code> properties on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>s are lazily created when accessed, or can be obtained by querying a Realm.</p>
+                        <p><code>-[RLMArray init]</code> is not available because <code>RLMArray</code>s cannot be created directly.
+<code>RLMArray</code> properties on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>s are lazily created when accessed, or can be obtained by querying a Realm.</p>
 
                       </div>
                       <div class="declaration">
@@ -1716,8 +1716,8 @@ to be sent to the block. To stop receiving updates, call <code>-stop</code> on t
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p><code>+[RLMArray new]</code> is not available because <code><a href="../Classes/RLMArray.html">RLMArray</a></code>s cannot be created directly.
-<code><a href="../Classes/RLMArray.html">RLMArray</a></code> properties on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>s are lazily created when accessed, or can be obtained by querying a Realm.</p>
+                        <p><code>+[RLMArray new]</code> is not available because <code>RLMArray</code>s cannot be created directly.
+<code>RLMArray</code> properties on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>s are lazily created when accessed, or can be obtained by querying a Realm.</p>
 
                       </div>
                       <div class="declaration">

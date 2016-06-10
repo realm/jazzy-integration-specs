@@ -208,12 +208,12 @@ migration is applied.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">RLMSchema</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">oldSchema</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Classes/RLMSchema.html">RLMSchema</a></span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">oldSchema</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">oldSchema</span><span class="p">:</span> <span class="kt">RLMSchema</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">oldSchema</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMSchema.html">RLMSchema</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -244,12 +244,12 @@ migration is applied.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">RLMSchema</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">newSchema</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Classes/RLMSchema.html">RLMSchema</a></span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">newSchema</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">newSchema</span><span class="p">:</span> <span class="kt">RLMSchema</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">newSchema</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMSchema.html">RLMSchema</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -300,12 +300,12 @@ of each object. Within the block, object properties can only be accessed using k
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">enumerateObjects</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">className</span>
-                   <span class="nf">block</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">RLMObjectMigrationBlock</span><span class="p">)</span><span class="nv">block</span><span class="p">;</span></code></pre>
+                   <span class="nf">block</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type Definitions.html#/c:RLMMigration.h@T@RLMObjectMigrationBlock">RLMObjectMigrationBlock</a></span><span class="p">)</span><span class="nv">block</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">enumerateObjects</span><span class="p">(</span><span class="nv">className</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">block</span><span class="p">:</span> <span class="kt">RLMObjectMigrationBlock</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">enumerateObjects</span><span class="p">(</span><span class="nv">className</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">block</span><span class="p">:</span> <span class="kt"><a href="../Type Definitions.html#/c:RLMMigration.h@T@RLMObjectMigrationBlock">RLMObjectMigrationBlock</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -355,13 +355,13 @@ of each object. Within the block, object properties can only be accessed using k
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">RLMObject</span> <span class="o">*</span><span class="p">)</span><span class="nf">createObject</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">className</span>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/RLMObject.html">RLMObject</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">createObject</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">className</span>
                           <span class="nf">withValue</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">id</span><span class="p">)</span><span class="nv">value</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">createObject</span><span class="p">(</span><span class="nv">className</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">withValue</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">RLMObject</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">createObject</span><span class="p">(</span><span class="nv">className</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">withValue</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RLMObject.html">RLMObject</a></span></code></pre>
 
                         </div>
                       </div>
@@ -430,12 +430,12 @@ of each object. Within the block, object properties can only be accessed using k
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">deleteObject</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">RLMObject</span> <span class="o">*</span><span class="p">)</span><span class="nv">object</span><span class="p">;</span></code></pre>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">deleteObject</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/RLMObject.html">RLMObject</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">object</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">deleteObject</span><span class="p">(</span><span class="nv">object</span><span class="p">:</span> <span class="kt">RLMObject</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">deleteObject</span><span class="p">(</span><span class="nv">object</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMObject.html">RLMObject</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
