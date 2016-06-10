@@ -725,7 +725,7 @@ SessionDelegate <code>sessionDidFinishEventsForBackgroundURLSession</code> and m
                       <div class="abstract">
                         <p>Creates a request for the specified URL request.</p>
 
-<p>If <code>startRequestsImmediately</code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
+<p>If <code><a href="../Classes/Manager.html#/s:vC9Alamofire7Manager24startRequestsImmediatelySb">startRequestsImmediately</a></code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
 
                       </div>
                       <div class="declaration">
@@ -835,7 +835,7 @@ SessionDelegate <code>sessionDidFinishEventsForBackgroundURLSession</code> and m
                       <div class="abstract">
                         <p>Creates a request for uploading a file to the specified URL request.</p>
 
-<p>If <code>startRequestsImmediately</code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
+<p>If <code><a href="../Classes/Manager.html#/s:vC9Alamofire7Manager24startRequestsImmediatelySb">startRequestsImmediately</a></code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
 
                       </div>
                       <div class="declaration">
@@ -905,7 +905,7 @@ SessionDelegate <code>sessionDidFinishEventsForBackgroundURLSession</code> and m
                       <div class="abstract">
                         <p>Creates a request for uploading a file to the specified URL request.</p>
 
-<p>If <code>startRequestsImmediately</code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
+<p>If <code><a href="../Classes/Manager.html#/s:vC9Alamofire7Manager24startRequestsImmediatelySb">startRequestsImmediately</a></code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
 
                       </div>
                       <div class="declaration">
@@ -1017,7 +1017,7 @@ SessionDelegate <code>sessionDidFinishEventsForBackgroundURLSession</code> and m
                       <div class="abstract">
                         <p>Creates a request for uploading data to the specified URL request.</p>
 
-<p>If <code>startRequestsImmediately</code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
+<p>If <code><a href="../Classes/Manager.html#/s:vC9Alamofire7Manager24startRequestsImmediatelySb">startRequestsImmediately</a></code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
 
                       </div>
                       <div class="declaration">
@@ -1087,7 +1087,7 @@ SessionDelegate <code>sessionDidFinishEventsForBackgroundURLSession</code> and m
                       <div class="abstract">
                         <p>Creates a request for uploading data to the specified URL request.</p>
 
-<p>If <code>startRequestsImmediately</code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
+<p>If <code><a href="../Classes/Manager.html#/s:vC9Alamofire7Manager24startRequestsImmediatelySb">startRequestsImmediately</a></code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
 
                       </div>
                       <div class="declaration">
@@ -1199,7 +1199,7 @@ SessionDelegate <code>sessionDidFinishEventsForBackgroundURLSession</code> and m
                       <div class="abstract">
                         <p>Creates a request for uploading a stream to the specified URL request.</p>
 
-<p>If <code>startRequestsImmediately</code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
+<p>If <code><a href="../Classes/Manager.html#/s:vC9Alamofire7Manager24startRequestsImmediatelySb">startRequestsImmediately</a></code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
 
                       </div>
                       <div class="declaration">
@@ -1269,7 +1269,7 @@ SessionDelegate <code>sessionDidFinishEventsForBackgroundURLSession</code> and m
                       <div class="abstract">
                         <p>Creates a request for uploading a stream to the specified URL request.</p>
 
-<p>If <code>startRequestsImmediately</code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
+<p>If <code><a href="../Classes/Manager.html#/s:vC9Alamofire7Manager24startRequestsImmediatelySb">startRequestsImmediately</a></code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
 
                       </div>
                       <div class="declaration">
@@ -1462,7 +1462,7 @@ encoding takes place in-memory. If the content length exceeds the threshold, the
 during the encoding process. Then the result is uploaded as data or as a stream depending on which encoding 
 technique was used.</p>
 
-<p>If <code>startRequestsImmediately</code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
+<p>If <code><a href="../Classes/Manager.html#/s:vC9Alamofire7Manager24startRequestsImmediatelySb">startRequestsImmediately</a></code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
 
                       </div>
                       <div class="declaration">
@@ -1474,8 +1474,8 @@ technique was used.</p>
         <span class="n">_</span> <span class="kt">URLString</span><span class="p">:</span> <span class="kt"><a href="../Protocols/URLStringConvertible.html">URLStringConvertible</a></span><span class="p">,</span>
         <span class="nv">headers</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
         <span class="nv">multipartFormData</span><span class="p">:</span> <span class="kt"><a href="../Classes/MultipartFormData.html">MultipartFormData</a></span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">,</span>
-        <span class="nv">encodingMemoryThreshold</span><span class="p">:</span> <span class="kt">UInt64</span> <span class="o">=</span> <span class="kt">Manager</span><span class="o">.</span><span class="kt">MultipartFormDataEncodingMemoryThreshold</span><span class="p">,</span>
-        <span class="nv">encodingCompletion</span><span class="p">:</span> <span class="p">(</span><span class="kt">MultipartFormDataEncodingResult</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+        <span class="nv">encodingMemoryThreshold</span><span class="p">:</span> <span class="kt">UInt64</span> <span class="o">=</span> <span class="kt">Manager</span><span class="o">.</span><span class="kt"><a href="../Classes/Manager.html#/s:ZvC9Alamofire7Manager40MultipartFormDataEncodingMemoryThresholdVs6UInt64">MultipartFormDataEncodingMemoryThreshold</a></span><span class="p">,</span>
+        <span class="nv">encodingCompletion</span><span class="p">:</span> <span class="p">(</span><span class="kt"><a href="../Classes/Manager.html#/s:OC9Alamofire7Manager31MultipartFormDataEncodingResult">MultipartFormDataEncodingResult</a></span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
 
                         </div>
                       </div>
@@ -1598,7 +1598,7 @@ encoding takes place in-memory. If the content length exceeds the threshold, the
 during the encoding process. Then the result is uploaded as data or as a stream depending on which encoding
 technique was used.</p>
 
-<p>If <code>startRequestsImmediately</code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
+<p>If <code><a href="../Classes/Manager.html#/s:vC9Alamofire7Manager24startRequestsImmediatelySb">startRequestsImmediately</a></code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
 
                       </div>
                       <div class="declaration">
@@ -1608,8 +1608,8 @@ technique was used.</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">upload</span><span class="p">(</span>
         <span class="kt">URLRequest</span><span class="p">:</span> <span class="kt"><a href="../Protocols/URLRequestConvertible.html">URLRequestConvertible</a></span><span class="p">,</span>
         <span class="nv">multipartFormData</span><span class="p">:</span> <span class="kt"><a href="../Classes/MultipartFormData.html">MultipartFormData</a></span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">,</span>
-        <span class="nv">encodingMemoryThreshold</span><span class="p">:</span> <span class="kt">UInt64</span> <span class="o">=</span> <span class="kt">Manager</span><span class="o">.</span><span class="kt">MultipartFormDataEncodingMemoryThreshold</span><span class="p">,</span>
-        <span class="nv">encodingCompletion</span><span class="p">:</span> <span class="p">(</span><span class="kt">MultipartFormDataEncodingResult</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+        <span class="nv">encodingMemoryThreshold</span><span class="p">:</span> <span class="kt">UInt64</span> <span class="o">=</span> <span class="kt">Manager</span><span class="o">.</span><span class="kt"><a href="../Classes/Manager.html#/s:ZvC9Alamofire7Manager40MultipartFormDataEncodingMemoryThresholdVs6UInt64">MultipartFormDataEncodingMemoryThreshold</a></span><span class="p">,</span>
+        <span class="nv">encodingCompletion</span><span class="p">:</span> <span class="p">(</span><span class="kt"><a href="../Classes/Manager.html#/s:OC9Alamofire7Manager31MultipartFormDataEncodingResult">MultipartFormDataEncodingResult</a></span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
 
                         </div>
                       </div>
@@ -2253,7 +2253,7 @@ technique was used.</p>
                         <p>Creates a download request for the specified method, URL string, parameters, parameter encoding, headers
 and destination.</p>
 
-<p>If <code>startRequestsImmediately</code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
+<p>If <code><a href="../Classes/Manager.html#/s:vC9Alamofire7Manager24startRequestsImmediatelySb">startRequestsImmediately</a></code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
 
                       </div>
                       <div class="declaration">
@@ -2382,7 +2382,7 @@ and destination.</p>
                       <div class="abstract">
                         <p>Creates a request for downloading from the specified URL request.</p>
 
-<p>If <code>startRequestsImmediately</code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
+<p>If <code><a href="../Classes/Manager.html#/s:vC9Alamofire7Manager24startRequestsImmediatelySb">startRequestsImmediately</a></code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
 
                       </div>
                       <div class="declaration">
@@ -2463,7 +2463,7 @@ and destination.</p>
                       <div class="abstract">
                         <p>Creates a request for downloading from the resume data produced from a previous request cancellation.</p>
 
-<p>If <code>startRequestsImmediately</code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
+<p>If <code><a href="../Classes/Manager.html#/s:vC9Alamofire7Manager24startRequestsImmediatelySb">startRequestsImmediately</a></code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
 
                       </div>
                       <div class="declaration">

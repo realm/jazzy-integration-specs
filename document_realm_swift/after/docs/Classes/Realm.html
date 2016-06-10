@@ -514,7 +514,7 @@ Calls to <code>write</code> from <code>Realm</code> instances in other threads w
    until the current write transaction completes.</p>
 
 <p>Before executing the write transaction, <code>write</code> updates the <code>Realm</code> to the
-latest Realm version, as if <code>refresh()</code> was called, and generates notifications
+latest Realm version, as if <code><a href="../Classes/Realm.html#/s:FC10RealmSwift5Realm7refreshFT_Sb">refresh()</a></code> was called, and generates notifications
 if applicable. This has no effect if the <code>Realm</code> was already up to date.</p>
 
 <div class="aside aside-throws">
@@ -580,7 +580,7 @@ already in a write transaction will throw an exception. Calls to
 until the current write transaction completes.</p>
 
 <p>Before beginning the write transaction, <code>beginWrite</code> updates the
-<code>Realm</code> to the latest Realm version, as if <code>refresh()</code> was called, and
+<code>Realm</code> to the latest Realm version, as if <code><a href="../Classes/Realm.html#/s:FC10RealmSwift5Realm7refreshFT_Sb">refresh()</a></code> was called, and
 generates notifications if applicable. This has no effect if the <code>Realm</code>
 was already up to date.</p>
 
@@ -1404,14 +1404,14 @@ to be sent to the block. To stop receiving updates, call stop() on the token.</p
 
 <p>If set to <code>true</code> (the default), changes made on other threads will be reflected
 in this Realm on the next cycle of the run loop after the changes are
-committed.  If set to <code>false</code>, you must manually call <code>refresh()</code> on the Realm to
+committed.  If set to <code>false</code>, you must manually call <code><a href="../Classes/Realm.html#/s:FC10RealmSwift5Realm7refreshFT_Sb">refresh()</a></code> on the Realm to
 update it to get the latest version.</p>
 
 <p>Note that by default, background threads do not have an active run loop and you
-will need to manually call <code>refresh()</code> in order to update to the latest version,
+will need to manually call <code><a href="../Classes/Realm.html#/s:FC10RealmSwift5Realm7refreshFT_Sb">refresh()</a></code> in order to update to the latest version,
 even if <code>autorefresh</code> is set to <code>true</code>.</p>
 
-<p>Even with this enabled, you can still call <code>refresh()</code> at any time to update the
+<p>Even with this enabled, you can still call <code><a href="../Classes/Realm.html#/s:FC10RealmSwift5Realm7refreshFT_Sb">refresh()</a></code> at any time to update the
 Realm before the automatic refresh would occur.</p>
 
 <p>Notifications are sent when a write transaction is committed whether or not

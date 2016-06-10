@@ -1037,14 +1037,14 @@ was already up to date.</p>
 
 <p>If set to YES (the default), changes made on other threads will be reflected
 in this Realm on the next cycle of the run loop after the changes are
-committed.  If set to NO, you must manually call <code>-refresh</code> on the Realm to
+committed.  If set to NO, you must manually call <code><a href="../Classes/RLMRealm.html#/c:objc(cs)RLMRealm(im)refresh">-refresh</a></code> on the Realm to
 update it to get the latest version.</p>
 
 <p>Note that by default, background threads do not have an active run loop and you 
-will need to manually call <code>-refresh</code> in order to update to the latest version,
+will need to manually call <code><a href="../Classes/RLMRealm.html#/c:objc(cs)RLMRealm(im)refresh">-refresh</a></code> in order to update to the latest version,
 even if <code>autorefresh</code> is set to <code>true</code>.</p>
 
-<p>Even with this enabled, you can still call <code>-refresh</code> at any time to update the
+<p>Even with this enabled, you can still call <code><a href="../Classes/RLMRealm.html#/c:objc(cs)RLMRealm(im)refresh">-refresh</a></code> at any time to update the
 Realm before the automatic refresh would occur.</p>
 
 <p>Notifications are sent when a write transaction is committed whether or not
