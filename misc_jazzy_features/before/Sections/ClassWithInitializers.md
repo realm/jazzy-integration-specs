@@ -1,1 +1,1 @@
-Example extra abstract to inject after default abstract of ClassWithInitializers
+Example extra abstract to inject before default abstract of ClassWithInitializers
