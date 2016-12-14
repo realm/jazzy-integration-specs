@@ -74,37 +74,3 @@ enum UndocumentedEnum {
     // UNSUPPORTED: undocumented enum element
     case UndocumentedValue
 }
-
-/// Function (recommended documentation comment style)
-///
-/// - Parameters:
-///     - aParameter: A parameter
-///
-/// - Returns: A result
-public func functionA(aParameter: Bool) -> Bool {
-    return true
-}
-
-/// Function (alternate documentation comment style)
-///
-/// - Parameter: aParameter: A parameter
-public func functionB(aParameter: Bool) -> Bool {
-    return true
-}
-
-/// Function (non‐standard documentation comment style)
-///
-/// - parameters:
-///     - aParameter: A parameter
-///
-/// - returns: A result
-public func functionC(aParameter: Bool) -> Bool {
-    return true
-}
-
-/// Function (alternate non‐standard documentation comment style)
-///
-/// - parameter: aParameter: A parameter
-public func functionD(aParameter: Bool) -> Bool {
-    return true
-}
