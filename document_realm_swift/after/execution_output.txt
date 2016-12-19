@@ -17,23 +17,23 @@ COCOAPODS_SKIP_UPDATE_MESSAGE=TRUE JAZZY_FAKE_DATE=YYYY-MM-DD JAZZY_FAKE_VERSION
 '\</script\>'
 ' 2>&1
 Running xcodebuild
-Parsing Aliases.swift (1/17)
-Parsing Error.swift (2/17)
-Parsing LinkingObjects.swift (3/17)
-Parsing List.swift (4/17)
-Parsing Migration.swift (5/17)
-Parsing Object.swift (6/17)
-Parsing ObjectSchema.swift (7/17)
-Parsing Optional.swift (8/17)
-Parsing Property.swift (9/17)
-Parsing Realm.swift (10/17)
-Parsing RealmCollectionType.swift (11/17)
-Parsing RealmConfiguration.swift (12/17)
-Parsing Results.swift (13/17)
-Parsing Schema.swift (14/17)
-Parsing SortDescriptor.swift (15/17)
-Parsing SwiftVersion.swift (16/17)
-Parsing Util.swift (17/17)
-`className` has no USR. First make sure all modules used in your project have been imported. If all used modules are imported, please report this problem by filing an issue at https://github.com/realm/jazzy/issues along with your Xcode project. If this token is declared in an `#if` block, please ignore this message.
-building site
-jam out ♪♫ to your fresh new docs in `docs`
+Could not parse compiler arguments from `xcodebuild` output.
+Please confirm that `xcodebuild` is building a Swift module.
+Saved `xcodebuild` log file: /var/folders/b3/19w6ywgj33ng48t9lg89_5lc0000gn/T/xcodebuild-298E0BE2-CFAD-41A4-AD27-81E402326D9F.log
+Failed to generate documentation
+ROOT/lib/jazzy/executable.rb:36:in `execute_command': ROOT/lib/jazzy/SourceKitten/bin/sourcekitten ["doc", "--module-name", "RealmSwift", "--", "-scheme", "RealmSwift"] (RuntimeError)
+
+Running xcodebuild
+
+Could not parse compiler arguments from `xcodebuild` output.
+
+Please confirm that `xcodebuild` is building a Swift module.
+
+Saved `xcodebuild` log file: /var/folders/b3/19w6ywgj33ng48t9lg89_5lc0000gn/T/xcodebuild-298E0BE2-CFAD-41A4-AD27-81E402326D9F.log
+
+Failed to generate documentation
+	from ROOT/lib/jazzy/sourcekitten.rb:147:in `run_sourcekitten'
+	from ROOT/lib/jazzy/doc_builder.rb:65:in `block in build'
+	from ROOT/lib/jazzy/doc_builder.rb:63:in `chdir'
+	from ROOT/lib/jazzy/doc_builder.rb:63:in `build'
+	from ROOT/bin/jazzy:15:in `<main>'

@@ -193,7 +193,7 @@
 
 <p>More specifically, this notification is posted after a Realm has been refreshed to
 reflect a write transaction. This can happen when an autorefresh occurs, when
-<code>-[RLMRealm refresh]</code> is called, after an implicit refresh from <code>-[RLMRealm beginWriteTransaction]</code>,
+<code><a href="Classes/RLMRealm.html#/c:objc(cs)RLMRealm(im)refresh">-[RLMRealm refresh]</a></code> is called, after an implicit refresh from <code><a href="Classes/RLMRealm.html#/c:objc(cs)RLMRealm(im)beginWriteTransaction">-[RLMRealm beginWriteTransaction]</a></code>,
 or after a local write transaction is completed.</p>
 
                       </div>
@@ -206,7 +206,7 @@ or after a local write transaction is completed.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">let</span> <span class="nv">RLMRealmRefreshRequiredNotification</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">RLMRealmRefreshRequired</span><span class="p">:</span> <span class="kt">NSNotification</span><span class="o">.</span><span class="kt">Name</span></code></pre>
 
                         </div>
                       </div>
@@ -236,7 +236,7 @@ committed to a Realm on a different thread for the same file.</p>
 refreshed before the notification has a chance to run.</p>
 
 <p>Realms with autorefresh disabled should normally install a handler for this
-notification which calls <code>-[RLMRealm refresh]</code> after doing some work. Refreshing
+notification which calls <code><a href="Classes/RLMRealm.html#/c:objc(cs)RLMRealm(im)refresh">-[RLMRealm refresh]</a></code> after doing some work. Refreshing
 the Realm is optional, but not refreshing the Realm may lead to large Realm
 files. This is because Realm must keep an extra copy of the data for the stale
 Realm.</p>
@@ -251,7 +251,7 @@ Realm.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">let</span> <span class="nv">RLMRealmDidChangeNotification</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">RLMRealmDidChange</span><span class="p">:</span> <span class="kt">NSNotification</span><span class="o">.</span><span class="kt">Name</span></code></pre>
 
                         </div>
                       </div>
