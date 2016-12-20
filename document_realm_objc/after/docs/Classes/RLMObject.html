@@ -330,7 +330,7 @@ times when you <em>cannot</em> begin a write transaction.</li>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="nf">init</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -421,7 +421,7 @@ on them.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">createInDefaultRealm</span><span class="p">(</span><span class="n">withValue</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">createInDefaultRealmWithValue</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -490,7 +490,7 @@ on them.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">create</span><span class="p">(</span><span class="k">in</span> <span class="nv">realm</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMRealm.html">RLMRealm</a></span><span class="p">,</span> <span class="n">withValue</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">createInRealm</span><span class="p">(</span><span class="nv">realm</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMRealm.html">RLMRealm</a></span><span class="p">,</span> <span class="n">withValue</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -578,7 +578,7 @@ as the receiver, and the objects have identical values for their persisted prope
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">createOrUpdateInDefaultRealm</span><span class="p">(</span><span class="n">withValue</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">createOrUpdateInDefaultRealmWithValue</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -654,7 +654,7 @@ as the receiver, and the objects have identical values for their persisted prope
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">createOrUpdate</span><span class="p">(</span><span class="k">in</span> <span class="nv">realm</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMRealm.html">RLMRealm</a></span><span class="p">,</span> <span class="n">withValue</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">createOrUpdateInRealm</span><span class="p">(</span><span class="nv">realm</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMRealm.html">RLMRealm</a></span><span class="p">,</span> <span class="n">withValue</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -810,7 +810,7 @@ if <code>invalidate</code> is called on that Realm.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">isInvalidated</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">invalidated</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -898,7 +898,7 @@ if <code>invalidate</code> is called on that Realm.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">defaultPropertyValues</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">AnyHashable</span> <span class="p">:</span> <span class="kt">Any</span><span class="p">]?</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">defaultPropertyValues</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">NSObject</span> <span class="p">:</span> <span class="kt">AnyObject</span><span class="p">]?</span></code></pre>
 
                         </div>
                       </div>
@@ -1225,7 +1225,7 @@ and property that the property is linked to.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">objects</span><span class="p">(</span><span class="n">with</span> <span class="nv">predicate</span><span class="p">:</span> <span class="kt">NSPredicate</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RLMResults.html">RLMResults</a></span></code></pre>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">objectsWithPredicate</span><span class="p">(</span><span class="nv">predicate</span><span class="p">:</span> <span class="kt">NSPredicate</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RLMResults.html">RLMResults</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1297,7 +1297,7 @@ equivalent <code>[[SubclassName objectsWhere:@&quot;primaryKeyPropertyName = %@&
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">convenience</span> <span class="nf">init</span><span class="p">?(</span><span class="n">forPrimaryKey</span> <span class="nv">primaryKey</span><span class="p">:</span> <span class="kt">Any</span><span class="p">?)</span></code></pre>
+                          <pre class="highlight"><code><span class="n">convenience</span> <span class="nf">init</span><span class="p">?(</span><span class="n">forPrimaryKey</span> <span class="nv">primaryKey</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">?)</span></code></pre>
 
                         </div>
                       </div>
@@ -1348,7 +1348,7 @@ equivalent <code>[[SubclassName objectsWhere:@&quot;primaryKeyPropertyName = %@&
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">allObjects</span><span class="p">(</span><span class="k">in</span> <span class="nv">realm</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMRealm.html">RLMRealm</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RLMResults.html">RLMResults</a></span></code></pre>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">allObjectsInRealm</span><span class="p">(</span><span class="nv">realm</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMRealm.html">RLMRealm</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RLMResults.html">RLMResults</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1478,7 +1478,7 @@ equivalent <code>[[SubclassName objectsWhere:@&quot;primaryKeyPropertyName = %@&
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">objects</span><span class="p">(</span><span class="k">in</span> <span class="nv">realm</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMRealm.html">RLMRealm</a></span><span class="p">,</span> <span class="n">with</span> <span class="nv">predicate</span><span class="p">:</span> <span class="kt">NSPredicate</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RLMResults.html">RLMResults</a></span></code></pre>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">objectsInRealm</span><span class="p">(</span><span class="nv">realm</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMRealm.html">RLMRealm</a></span><span class="p">,</span> <span class="n">withPredicate</span> <span class="nv">predicate</span><span class="p">:</span> <span class="kt">NSPredicate</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RLMResults.html">RLMResults</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1564,7 +1564,7 @@ equivalent <code>[[SubclassName objectsInRealm:realm where:@&quot;primaryKeyProp
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">convenience</span> <span class="nf">init</span><span class="p">?(</span><span class="k">in</span> <span class="nv">realm</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMRealm.html">RLMRealm</a></span><span class="p">,</span> <span class="n">forPrimaryKey</span> <span class="nv">primaryKey</span><span class="p">:</span> <span class="kt">Any</span><span class="p">?)</span></code></pre>
+                          <pre class="highlight"><code><span class="n">convenience</span> <span class="nf">init</span><span class="p">?(</span><span class="n">inRealm</span> <span class="nv">realm</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMRealm.html">RLMRealm</a></span><span class="p">,</span> <span class="n">forPrimaryKey</span> <span class="nv">primaryKey</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">?)</span></code></pre>
 
                         </div>
                       </div>
@@ -1619,7 +1619,7 @@ implementation for <code>hash</code>).</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">isEqual</span><span class="p">(</span><span class="n">to</span> <span class="nv">object</span><span class="p">:</span> <span class="kt">RLMObject</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">isEqualToObject</span><span class="p">(</span><span class="nv">object</span><span class="p">:</span> <span class="kt">RLMObject</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>

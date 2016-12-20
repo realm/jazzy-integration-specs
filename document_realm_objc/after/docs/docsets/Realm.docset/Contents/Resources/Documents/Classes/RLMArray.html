@@ -343,7 +343,7 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">isInvalidated</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">invalidated</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -389,7 +389,7 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">object</span><span class="p">(</span><span class="n">at</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">RLMObjectType</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">objectAtIndex</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RLMObject.html">RLMObject</a></span></code></pre>
 
                         </div>
                       </div>
@@ -451,7 +451,7 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">firstObject</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">RLMObjectType</span><span class="p">?</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">firstObject</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RLMObject.html">RLMObject</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -493,7 +493,7 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">lastObject</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">RLMObjectType</span><span class="p">?</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">lastObject</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RLMObject.html">RLMObject</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -550,7 +550,7 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="n">_</span> <span class="nv">object</span><span class="p">:</span> <span class="kt">RLMObjectType</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">addObject</span><span class="p">(</span><span class="nv">object</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMObject.html">RLMObject</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -611,7 +611,7 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">addObjects</span><span class="p">(</span><span class="n">_</span> <span class="nv">objects</span><span class="p">:</span> <span class="kt">NSFastEnumeration</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">addObjects</span><span class="p">(</span><span class="nv">objects</span><span class="p">:</span> <span class="kt">NSFastEnumeration</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -675,7 +675,7 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">insert</span><span class="p">(</span><span class="n">_</span> <span class="nv">anObject</span><span class="p">:</span> <span class="kt">RLMObjectType</span><span class="p">,</span> <span class="n">at</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">insertObject</span><span class="p">(</span><span class="nv">anObject</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMObject.html">RLMObject</a></span><span class="p">,</span> <span class="n">atIndex</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -751,7 +751,7 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">removeObject</span><span class="p">(</span><span class="n">at</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">removeObjectAtIndex</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -897,7 +897,7 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">replaceObject</span><span class="p">(</span><span class="n">at</span> <span class="nv">index</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">,</span> <span class="n">with</span> <span class="nv">anObject</span><span class="p">:</span> <span class="kt">RLMObjectType</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">replaceObjectAtIndex</span><span class="p">(</span><span class="nv">index</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">,</span> <span class="n">withObject</span> <span class="nv">anObject</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMObject.html">RLMObject</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -974,7 +974,7 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">moveObject</span><span class="p">(</span><span class="n">at</span> <span class="nv">sourceIndex</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">,</span> <span class="n">to</span> <span class="nv">destinationIndex</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">moveObjectAtIndex</span><span class="p">(</span><span class="nv">sourceIndex</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">,</span> <span class="n">toIndex</span> <span class="nv">destinationIndex</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1051,7 +1051,7 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">exchangeObject</span><span class="p">(</span><span class="n">at</span> <span class="nv">index1</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">,</span> <span class="n">withObjectAt</span> <span class="nv">index2</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">exchangeObjectAtIndex</span><span class="p">(</span><span class="nv">index1</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">,</span> <span class="n">withObjectAtIndex</span> <span class="nv">index2</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1132,7 +1132,7 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">index</span><span class="p">(</span><span class="n">of</span> <span class="nv">object</span><span class="p">:</span> <span class="kt">RLMObjectType</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UInt</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">indexOfObject</span><span class="p">(</span><span class="nv">object</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMObject.html">RLMObject</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UInt</span></code></pre>
 
                         </div>
                       </div>
@@ -1242,7 +1242,7 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">indexOfObject</span><span class="p">(</span><span class="n">with</span> <span class="nv">predicate</span><span class="p">:</span> <span class="kt">NSPredicate</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UInt</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">indexOfObjectWithPredicate</span><span class="p">(</span><span class="nv">predicate</span><span class="p">:</span> <span class="kt">NSPredicate</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UInt</span></code></pre>
 
                         </div>
                       </div>
@@ -1359,7 +1359,7 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">objects</span><span class="p">(</span><span class="n">with</span> <span class="nv">predicate</span><span class="p">:</span> <span class="kt">NSPredicate</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RLMResults.html">RLMResults</a></span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">objectsWithPredicate</span><span class="p">(</span><span class="nv">predicate</span><span class="p">:</span> <span class="kt">NSPredicate</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RLMResults.html">RLMResults</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1421,7 +1421,7 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">sortedResults</span><span class="p">(</span><span class="n">usingProperty</span> <span class="nv">property</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">ascending</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RLMResults.html">RLMResults</a></span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">sortedResultsUsingProperty</span><span class="p">(</span><span class="nv">property</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">ascending</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RLMResults.html">RLMResults</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1495,7 +1495,7 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">sortedResults</span><span class="p">(</span><span class="n">usingDescriptors</span> <span class="nv">properties</span><span class="p">:</span> <span class="p">[</span><span class="kt">Any</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RLMResults.html">RLMResults</a></span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">sortedResultsUsingDescriptors</span><span class="p">(</span><span class="nv">properties</span><span class="p">:</span> <span class="p">[</span><span class="kt">AnyObject</span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RLMResults.html">RLMResults</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1626,7 +1626,7 @@ to be sent to the block. To stop receiving updates, call <code>-stop</code> on t
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">addNotificationBlock</span><span class="p">(</span><span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="p">(</span><span class="kt">RLMArray</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">@warn_unused_result</span> <span class="kd">func</span> <span class="nf">addNotificationBlock</span><span class="p">(</span><span class="nv">block</span><span class="p">:</span> <span class="p">(</span><span class="kt">RLMArray</span><span class="p">?,</span> <span class="kt">UnsafeMutablePointer</span></code></pre>
 
                         </div>
                       </div>

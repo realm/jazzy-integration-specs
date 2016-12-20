@@ -243,7 +243,7 @@ can be changed via <code><a href="../Classes/RLMRealmConfiguration.html#/c:objc(
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="err">`</span><span class="k">default</span><span class="err">`</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">defaultRealm</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -360,7 +360,7 @@ can be changed via <code><a href="../Classes/RLMRealmConfiguration.html#/c:objc(
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="n">url</span> <span class="nv">fileURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="n">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="kt">URL</span> <span class="nv">fileURL</span><span class="p">:</span> <span class="kt">NSURL</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -602,7 +602,7 @@ will normally only be the main thread.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">addNotificationBlock</span><span class="p">(</span><span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Type Definitions.html#/c:RLMRealm.h@T@RLMNotificationBlock">RLMNotificationBlock</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RLMNotificationToken.html">RLMNotificationToken</a></span></code></pre>
+                          <pre class="highlight"><code><span class="kd">@warn_unused_result</span> <span class="kd">func</span> <span class="nf">addNotificationBlock</span><span class="p">(</span><span class="nv">block</span><span class="p">:</span> <span class="kt"><a href="../Type Definitions.html#/c:RLMRealm.h@T@RLMNotificationBlock">RLMNotificationBlock</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RLMNotificationToken.html">RLMNotificationToken</a></span></code></pre>
 
                         </div>
                       </div>
@@ -940,7 +940,7 @@ was already up to date.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">transaction</span><span class="p">(</span><span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="k">throws</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">transactionWithBlock</span><span class="p">(</span><span class="kd">@noescape</span> <span class="nv">block</span><span class="p">:</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="k">throws</span></code></pre>
 
                         </div>
                       </div>
@@ -1124,7 +1124,7 @@ the point when the previous write transaction was committed.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">writeCopy</span><span class="p">(</span><span class="n">to</span> <span class="nv">fileURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="n">encryptionKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?)</span> <span class="k">throws</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">writeCopyToURL</span><span class="p">(</span><span class="nv">fileURL</span><span class="p">:</span> <span class="kt">NSURL</span><span class="p">,</span> <span class="n">encryptionKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">NSData</span><span class="p">?)</span> <span class="k">throws</span></code></pre>
 
                         </div>
                       </div>
@@ -1294,7 +1294,7 @@ from a Realm (i.e. <code>isInvalidated</code> must be <code>NO</code>).</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="n">_</span> <span class="nv">object</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMObject.html">RLMObject</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">addObject</span><span class="p">(</span><span class="nv">object</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMObject.html">RLMObject</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1363,7 +1363,7 @@ from a Realm (i.e. <code>isInvalidated</code> must be <code>NO</code>).</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">addObjects</span><span class="p">(</span><span class="n">_</span> <span class="nv">array</span><span class="p">:</span> <span class="kt">NSFastEnumeration</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">addObjects</span><span class="p">(</span><span class="nv">array</span><span class="p">:</span> <span class="kt">NSFastEnumeration</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1433,7 +1433,7 @@ a different Realm.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">addOrUpdate</span><span class="p">(</span><span class="n">_</span> <span class="nv">object</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMObject.html">RLMObject</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">addOrUpdateObject</span><span class="p">(</span><span class="nv">object</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMObject.html">RLMObject</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1502,7 +1502,7 @@ a different Realm.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">addOrUpdateObjects</span><span class="p">(</span><span class="n">fromArray</span> <span class="nv">array</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">addOrUpdateObjectsFromArray</span><span class="p">(</span><span class="nv">array</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1563,7 +1563,7 @@ a different Realm.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">delete</span><span class="p">(</span><span class="n">_</span> <span class="nv">object</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMObject.html">RLMObject</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">deleteObject</span><span class="p">(</span><span class="nv">object</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMObject.html">RLMObject</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1632,7 +1632,7 @@ a different Realm.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">deleteObjects</span><span class="p">(</span><span class="n">_</span> <span class="nv">array</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">deleteObjects</span><span class="p">(</span><span class="nv">array</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1747,7 +1747,7 @@ a different Realm.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">schemaVersion</span><span class="p">(</span><span class="n">at</span> <span class="nv">fileURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="n">encryptionKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">NSErrorPointer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UInt64</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">schemaVersionAtURL</span><span class="p">(</span><span class="nv">fileURL</span><span class="p">:</span> <span class="kt">NSURL</span><span class="p">,</span> <span class="n">encryptionKey</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">NSData</span><span class="p">?,</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">NSErrorPointer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UInt64</span></code></pre>
 
                         </div>
                       </div>
@@ -1846,7 +1846,7 @@ exactly when and how migrations are performed.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">migrateRealm</span><span class="p">(</span><span class="n">_</span> <span class="nv">configuration</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMRealmConfiguration.html">RLMRealmConfiguration</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Error</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">migrateRealm</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMRealmConfiguration.html">RLMRealmConfiguration</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">NSError</span></code></pre>
 
                         </div>
                       </div>
