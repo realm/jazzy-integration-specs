@@ -983,7 +983,7 @@ when opening the Realm on the background worker thread.</p>
 
 <p>At the time when the block is called, the <code>RLMResults</code> object will be fully
 evaluated and up-to-date, and as long as you do not perform a write transaction
-on the same thread or explicitly call <code>-[RLMRealm refresh]</code>, accessing it will
+on the same thread or explicitly call <code><a href="../Classes/RLMRealm.html#/c:objc(cs)RLMRealm(im)refresh">-[RLMRealm refresh]</a></code>, accessing it will
 never perform blocking work.</p>
 
 <p>Notifications are delivered via the standard run loop, and so can&rsquo;t be
