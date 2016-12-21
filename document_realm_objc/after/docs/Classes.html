@@ -461,7 +461,7 @@ object.</li>
 observed properties.</li>
 <li>Modifying managed <code>RLMObject</code>s within <code>-observeValueForKeyPath:ofObject:change:context:</code>
 is not recommended. Properties may change even when the Realm is not in a write
-transaction (for example, when <code>-[RLMRealm refresh]</code> is called after changes
+transaction (for example, when <code><a href="Classes/RLMRealm.html#/c:objc(cs)RLMRealm(im)refresh">-[RLMRealm refresh]</a></code> is called after changes
 are made on a different thread), and notifications sent prior to the change
 being applied (when <code>NSKeyValueObservingOptionPrior</code> is used) may be sent at
 times when you <em>cannot</em> begin a write transaction.</li>
@@ -633,7 +633,7 @@ introspecting the database&rsquo;s schema.</p>
                         <p>An <code>RLMRealm</code> instance (also referred to as <q>a Realm</q>) represents a Realm
 database.</p>
 
-<p>Realms can either be stored on disk (see <code>+[RLMRealm realmWithURL:]</code>) or in
+<p>Realms can either be stored on disk (see <code><a href="Classes/RLMRealm.html#/c:objc(cs)RLMRealm(cm)realmWithURL:">+[RLMRealm realmWithURL:]</a></code>) or in
 memory (see <code><a href="Classes/RLMRealmConfiguration.html">RLMRealmConfiguration</a></code>).</p>
 
 <p><code>RLMRealm</code> instances are cached internally, and constructing equivalent <code>RLMRealm</code>
