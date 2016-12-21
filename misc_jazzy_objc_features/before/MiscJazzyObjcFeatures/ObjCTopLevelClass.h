@@ -12,7 +12,11 @@
 
 /// A dummy top level Objective-C class. Doesn't do much.
 @interface ObjCTopLevelClass : NSObject
-/// Always returns `SomeEnumFoo`
+/**
+ Always returns `SomeEnumFoo`
+ 
+ @return `SomeEnumFoo` even if `-[NSObject load]` fails
+ */
 - (SomeEnum)methodReturningEnum:(NSString*)param;
 @end
 
