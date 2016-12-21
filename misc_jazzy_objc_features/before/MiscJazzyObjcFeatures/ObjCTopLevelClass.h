@@ -10,6 +10,8 @@
 
 #import "SomeEnum.h"
 
+@class Manager;
+
 /// A dummy top level Objective-C class. Doesn't do much.
 @interface ObjCTopLevelClass : NSObject
 /**
@@ -31,3 +33,8 @@
 - (void)markedCategoryMethod:(NSString*)argument;
 @end
 
+/// A mid-level class. Does a little more than its superclass.
+@interface ObjCMidLevelClass : ObjCTopLevelClass
+/// Prepare a mid-level manager.
+- (Manager *)prepareManager;
+@end

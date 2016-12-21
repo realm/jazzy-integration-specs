@@ -22,3 +22,8 @@
 }
 @end
 
+@implementation ObjCMidLevelClass
+- (nullable Manager *)prepareManager {
+    return nil;
+}
+@end
