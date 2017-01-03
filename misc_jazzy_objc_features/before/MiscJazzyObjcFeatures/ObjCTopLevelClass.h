@@ -33,7 +33,10 @@
 - (void)markedCategoryMethod:(NSString*)argument;
 @end
 
-/// A mid-level class. Does a little more than its superclass.
+/**
+ A mid-level class. Does a little more than its superclass via
+ `-prepareManager`.
+ */
 @interface ObjCMidLevelClass : ObjCTopLevelClass
 /// Prepare a mid-level manager.
 - (Manager *)prepareManager;
