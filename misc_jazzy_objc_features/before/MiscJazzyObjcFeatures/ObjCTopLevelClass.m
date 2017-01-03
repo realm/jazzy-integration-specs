@@ -27,3 +27,31 @@
     return nil;
 }
 @end
+
+@implementation NSValue (SomeAdditions)
+
++ (instancetype)valueWithSomeEnum:(SomeEnum)someEnum {
+    return [[self class] valueWithBytes:&someEnum objCType:@encode(SomeEnum)];
+}
+
+- (SomeEnum)someEnumValue {
+    SomeEnum someEnum;
+    [self getValue:&someEnum];
+    return someEnum;
+}
+
+@end
+
+@implementation NSValue (SomeMoreAdditions)
+
++ (instancetype)valueWithSomeMoreEnum:(SomeEnum)someEnum {
+    return [[self class] valueWithBytes:&someEnum objCType:@encode(SomeEnum)];
+}
+
+- (SomeEnum)someMoreEnumValue {
+    SomeEnum someEnum;
+    [self getValue:&someEnum];
+    return someEnum;
+}
+
+@end

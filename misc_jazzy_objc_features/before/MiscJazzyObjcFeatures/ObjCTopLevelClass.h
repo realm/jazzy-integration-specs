@@ -41,3 +41,25 @@
 /// Prepare a mid-level manager.
 - (Manager *)prepareManager;
 @end
+
+/// Some additions on `NSValue`.
+@interface NSValue (SomeAdditions)
+
+/// Creates and returns a value object containing the enumeration value.
++ (instancetype)valueWithSomeEnum:(SomeEnum)someEnum;
+
+/// Returns the enumeration value contained in the receiver.
+@property (nonatomic, readonly) SomeEnum someEnumValue;
+
+@end
+
+/// Some more additions on `NSValue`.
+@interface NSValue (SomeMoreAdditions)
+
+/// Creates and returns a value object containing the enumeration value.
++ (instancetype)valueWithSomeMoreEnum:(SomeEnum)someEnum;
+
+/// Returns the enumeration value contained in the receiver.
+@property (nonatomic, readonly) SomeEnum someMoreEnumValue;
+
+@end
