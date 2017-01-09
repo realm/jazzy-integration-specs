@@ -740,29 +740,6 @@ up to you to canonicalize your parameter order.</p>
 <p>Note that, unlike load() and loadIfNeeded(), this method does <em>not</em> update latestData or latestError,
 and does not notify resource observers about the result.</p>
 
-<div class="aside aside-parameter">
-    <p class="aside-title">Parameter</p>
-    Parameter method: The HTTP verb to use for the request
-
-</div>
-
-<div class="aside aside-parameter">
-    <p class="aside-title">Parameter</p>
-    <p>Parameter requestMutation:
-An optional callback to change details of the request before it is sent. For example:</p>
-<pre class="highlight plaintext"><code>request(.POST) { nsreq in
-  nsreq.HTTPBody = imageData
-  nsreq.addValue(
-    "image/png",
-    forHTTPHeaderField:
-      "Content-Type")
-}
-</code></pre>
-
-<p>Does nothing by default.</p>
-
-</div>
-
 <div class="aside aside-see-also">
     <p class="aside-title">See also</p>
     <p>SeeAlso:</p>
@@ -1465,18 +1442,6 @@ still exists.</p>
 <p>If the string cannot be encoded using the given encoding, this methods triggers the <code>onFailure(_:)</code> request hook
 immediately, without touching the network.</p>
 
-<div class="aside aside-parameter">
-    <p class="aside-title">Parameter</p>
-    Parameter contentType: <code>text/plain</code> by default.
-
-</div>
-
-<div class="aside aside-parameter">
-    <p class="aside-title">Parameter</p>
-    Parameter encoding: UTF-8 (<code>NSUTF8StringEncoding</code>) by default.
-
-</div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1545,12 +1510,6 @@ immediately, without touching the network.</p>
 
 <p>If the <code>json</code> cannot be encoded as JSON, e.g. if it is a dictionary with non-JSON-convertible data, this methods
 triggers the <code>onFailure(_:)</code> request hook immediately, without touching the network.</p>
-
-<div class="aside aside-parameter">
-    <p class="aside-title">Parameter</p>
-    Parameter contentType: <code>application/json</code> by default.
-
-</div>
 
                       </div>
                       <div class="declaration">
