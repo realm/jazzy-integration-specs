@@ -26,7 +26,7 @@ class ImplicitlyInternalTopLevelClass {
 
 /// :nodoc:
 /// Documented, but should be ignored
-public class ExplicitlyNoDocClass {}
+open class ExplicitlyNoDocClass {}
 
 /// SUPPORTED: explicitly internal top-level class
 internal class ExplicitlyInternalTopLevelClass {}
@@ -35,7 +35,7 @@ internal class ExplicitlyInternalTopLevelClass {}
 private class PrivateTopLevelClass {}
 
 /// SUPPORTED: public top-level class
-public class PublicTopLevelClass {}
+open class PublicTopLevelClass {}
 
 /// SUPPORTED: @objc top-level class
 @objc class ObjCTopLevelClass {}
@@ -66,11 +66,11 @@ class ClassWithInitializers {
 /// SUPPORTED: documented enum
 enum DocumentedEnum {
     /// SUPPORTED: documented enum element
-    case DocumentedValue
+    case documentedValue
 }
 
 // SUPPORTED: undocumented enum
 enum UndocumentedEnum {
     // UNSUPPORTED: undocumented enum element
-    case UndocumentedValue
+    case undocumentedValue
 }

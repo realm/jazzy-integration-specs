@@ -1,0 +1,708 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>RLMSyncUser Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    <link rel="icon" href="https://realm.io/img/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://realm.io/img/favicon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://realm.io/img/favicon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://realm.io/img/favicon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://realm.io/img/favicon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://realm.io/img/favicon-120x120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://realm.io/img/favicon-152x152.png" />
+<link rel="icon" type="image/png" href="https://realm.io/img/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="https://realm.io/img/favicon-16x16.png" sizes="16x16" />
+<script defer>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-50247013-1', 'realm.io');
+  ga('send', 'pageview');
+</script>
+
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Class/RLMSyncUser" class="dashAnchor"></a>
+    <a title="RLMSyncUser Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Realm Docs</a> (99% documented)</p>
+        <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fobjc%2F2%2E3%2E0%2Fapi%2Fdocsets%2FRealm%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Realm Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        RLMSyncUser Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Categories.html">Categories</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Categories/NSError(RLMSync).html">NSError(RLMSync)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/RLMArray.html">RLMArray</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMCollectionChange.html">RLMCollectionChange</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)RLMLinkingObjects">RLMLinkingObjects</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMMigration.html">RLMMigration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMNotificationToken.html">RLMNotificationToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMObject.html">RLMObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMObjectSchema.html">RLMObjectSchema</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)RLMProgressNotificationToken">RLMProgressNotificationToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMProperty.html">RLMProperty</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMPropertyDescriptor.html">RLMPropertyDescriptor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMRealm.html">RLMRealm</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMRealmConfiguration.html">RLMRealmConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMResults.html">RLMResults</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMSchema.html">RLMSchema</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMSortDescriptor.html">RLMSortDescriptor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMSyncConfiguration.html">RLMSyncConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMSyncCredentials.html">RLMSyncCredentials</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMSyncManager.html">RLMSyncManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMSyncPermissionChange.html">RLMSyncPermissionChange</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMSyncPermissionOffer.html">RLMSyncPermissionOffer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMSyncPermissionOfferResponse.html">RLMSyncPermissionOfferResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMSyncSession.html">RLMSyncSession</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMSyncUser.html">RLMSyncUser</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMThreadSafeReference.html">RLMThreadSafeReference</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RLMErrorDomain">RLMErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RLMExceptionName">RLMExceptionName</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RLMIdentityProviderCloudKit">RLMIdentityProviderCloudKit</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RLMIdentityProviderDebug">RLMIdentityProviderDebug</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RLMIdentityProviderFacebook">RLMIdentityProviderFacebook</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RLMIdentityProviderGoogle">RLMIdentityProviderGoogle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RLMIdentityProviderUsernamePassword">RLMIdentityProviderUsernamePassword</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RLMInvalidatedKey">RLMInvalidatedKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RLMNotVersioned">RLMNotVersioned</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RLMRealmCoreVersionKey">RLMRealmCoreVersionKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RLMRealmDidChangeNotification">RLMRealmDidChangeNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RLMRealmRefreshRequiredNotification">RLMRealmRefreshRequiredNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RLMRealmVersionKey">RLMRealmVersionKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RLMSyncErrorDomain">RLMSyncErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RLMUnknownSystemErrorDomain">RLMUnknownSystemErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@kRLMSyncInitiateClientResetBlockKey">kRLMSyncInitiateClientResetBlockKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@kRLMSyncPathOfRealmBackupCopyKey">kRLMSyncPathOfRealmBackupCopyKey</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/RLMError.html">RLMError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RLMPropertyType.html">RLMPropertyType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RLMSyncAuthError.html">RLMSyncAuthError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RLMSyncError.html">RLMSyncError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RLMSyncLogLevel.html">RLMSyncLogLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RLMSyncManagementObjectStatus.html">RLMSyncManagementObjectStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RLMSyncProgress.html">RLMSyncProgress</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RLMSyncProgressDirection.html">RLMSyncProgressDirection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RLMSyncSessionState.html">RLMSyncSessionState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RLMSyncUserState.html">RLMSyncUserState</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/RLMCollection.html">RLMCollection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/RLMThreadConfined.html">RLMThreadConfined</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Type Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:RLMSyncCredentials.h@T@RLMIdentityProvider">RLMIdentityProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:RLMRealm.h@T@RLMMigrationBlock">RLMMigrationBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:RLMConstants.h@T@RLMNotification">RLMNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:RLMRealm.h@T@RLMNotificationBlock">RLMNotificationBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:RLMMigration.h@T@RLMObjectMigrationBlock">RLMObjectMigrationBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:RLMSyncSession.h@T@RLMProgressNotificationBlock">RLMProgressNotificationBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:RLMSyncUtil.h@T@RLMServerToken">RLMServerToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:RLMSyncCredentials.h@T@RLMSyncCredentialsToken">RLMSyncCredentialsToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:RLMSyncManager.h@T@RLMSyncErrorReportingBlock">RLMSyncErrorReportingBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type Definitions.html#/c:RLMSyncUser.h@T@RLMUserCompletionBlock">RLMUserCompletionBlock</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>RLMSyncUser</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="k">@interface</span> <span class="nc">RLMSyncUser</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>A <code>RLMSyncUser</code> instance represents a single Realm Object Server user account (or just user).</p>
+
+<p>A user may have one or more credentials associated with it. These credentials uniquely identify the user to a
+third-party auth provider, and are used to sign into a Realm Object Server user account.</p>
+
+<p>Note that users are only vended out via SDK APIs, and only one user instance ever exists for a given user account.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RLMSyncUser(cm)allUsers"></a>
+                    <a name="//apple_ref/objc/Method/+allUsers" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMSyncUser(cm)allUsers">+allUsers</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A dictionary of all valid, logged-in user identities corresponding to their <code>RLMSyncUser</code> objects.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">RLMSyncUser</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="n">allUsers</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">__allUsers</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">RLMSyncUser</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/Realm/RLMSyncUser.h#L53">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RLMSyncUser(cm)currentUser"></a>
+                    <a name="//apple_ref/objc/Method/+currentUser" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMSyncUser(cm)currentUser">+currentUser</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The logged-in user. <code>nil</code> if none exists.</p>
+
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    Throws an exception if more than one logged-in user exists.
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">RLMSyncUser</span> <span class="o">*</span><span class="p">)</span><span class="n">currentUser</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">__current</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">RLMSyncUser</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/Realm/RLMSyncUser.h#L60">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RLMSyncUser(py)identity"></a>
+                    <a name="//apple_ref/objc/Property/identity" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMSyncUser(py)identity">identity</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The unique Realm Object Server user ID string identifying this user.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">identity</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">identity</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/Realm/RLMSyncUser.h#L65">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RLMSyncUser(py)authenticationServer"></a>
+                    <a name="//apple_ref/objc/Property/authenticationServer" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMSyncUser(py)authenticationServer">authenticationServer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The URL of the authentication server this user will communicate with.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSURL</span> <span class="o">*</span><span class="n">authenticationServer</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">authenticationServer</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/Realm/RLMSyncUser.h#L70">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RLMSyncUser(py)state"></a>
+                    <a name="//apple_ref/objc/Property/state" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMSyncUser(py)state">state</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The current state of the user.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Enums/RLMSyncUserState.html">RLMSyncUserState</a></span> <span class="n">state</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">state</span><span class="p">:</span> <span class="kt"><a href="../Enums/RLMSyncUserState.html">RLMSyncUserState</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/Realm/RLMSyncUser.h#L75">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RLMSyncUser(cm)logInWithCredentials:authServerURL:timeout:onCompletion:"></a>
+                    <a name="//apple_ref/objc/Method/+logInWithCredentials:authServerURL:timeout:onCompletion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMSyncUser(cm)logInWithCredentials:authServerURL:timeout:onCompletion:">+logInWithCredentials:authServerURL:timeout:onCompletion:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create, log in, and asynchronously return a new user object, specifying a custom timeout for the network request.
+Credentials identifying the user must be passed in. The user becomes available in the completion block, at which point
+it is ready for use.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">logInWithCredentials</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/RLMSyncCredentials.html">RLMSyncCredentials</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">credentials</span>
+               <span class="nf">authServerURL</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">authServerURL</span>
+                     <span class="nf">timeout</span><span class="p">:(</span><span class="n">NSTimeInterval</span><span class="p">)</span><span class="nv">timeout</span>
+                <span class="nf">onCompletion</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type Definitions.html#/c:RLMSyncUser.h@T@RLMUserCompletionBlock">RLMUserCompletionBlock</a></span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">__logIn</span><span class="p">(</span><span class="n">with</span> <span class="nv">credentials</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMSyncCredentials.html">RLMSyncCredentials</a></span><span class="p">,</span> <span class="nv">authServerURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="nv">timeout</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">,</span> <span class="n">onCompletion</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Type Definitions.html#/c:RLMSyncUser.h@T@RLMUserCompletionBlock">RLMUserCompletionBlock</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/Realm/RLMSyncUser.h#L82-L85">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RLMSyncUser(cm)logInWithCredentials:authServerURL:onCompletion:"></a>
+                    <a name="//apple_ref/objc/Method/+logInWithCredentials:authServerURL:onCompletion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMSyncUser(cm)logInWithCredentials:authServerURL:onCompletion:">+logInWithCredentials:authServerURL:onCompletion:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Create, log in, and asynchronously return a new user object. Credentials identifying the user must be passed in. The
+user becomes available in the completion block, at which point it is ready for use.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">+</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">logInWithCredentials</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/RLMSyncCredentials.html">RLMSyncCredentials</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">credentials</span>
+               <span class="nf">authServerURL</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">authServerURL</span>
+                <span class="nf">onCompletion</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type Definitions.html#/c:RLMSyncUser.h@T@RLMUserCompletionBlock">RLMUserCompletionBlock</a></span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/Realm/RLMSyncUser.h#L91-L94">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RLMSyncUser(im)logOut"></a>
+                    <a name="//apple_ref/objc/Method/-logOut" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMSyncUser(im)logOut">-logOut</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Log a user out, destroying their server state, deregistering them from the SDK, and removing any synced Realms
+associated with them from on-disk storage. If the user is already logged out or in an error state, this is a no-op.</p>
+
+<p>This method should be called whenever the application is committed to not using a user again unless they are recreated.
+Failing to call this method may result in unused files and metadata needlessly taking up space.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">logOut</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">logOut</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/Realm/RLMSyncUser.h#L103">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RLMSyncUser(im)sessionForURL:"></a>
+                    <a name="//apple_ref/objc/Method/-sessionForURL:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMSyncUser(im)sessionForURL:">-sessionForURL:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Retrieve a valid session object belonging to this user for a given URL, or <code>nil</code> if no such object exists.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nullable</span> <span class="n"><a href="../Classes/RLMSyncSession.html">RLMSyncSession</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">sessionForURL</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">session</span><span class="p">(</span><span class="k">for</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RLMSyncSession.html">RLMSyncSession</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/Realm/RLMSyncUser.h#L108">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RLMSyncUser(im)allSessions"></a>
+                    <a name="//apple_ref/objc/Method/-allSessions" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMSyncUser(im)allSessions">-allSessions</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Retrieve all the valid sessions belonging to this user.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/RLMSyncSession.html">RLMSyncSession</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="n">allSessions</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">allSessions</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Classes/RLMSyncSession.html">RLMSyncSession</a></span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/Realm/RLMSyncUser.h#L113">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RLMSyncUser(im)managementRealmWithError:"></a>
+                    <a name="//apple_ref/objc/Method/-managementRealmWithError:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMSyncUser(im)managementRealmWithError:">-managementRealmWithError:</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns an instance of the Management Realm owned by the user.</p>
+
+<p>This Realm can be used to control access permissions for Realms managed by the user.
+This includes granting other users access to Realms.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/RLMRealm.html">RLMRealm</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">managementRealmWithError</span><span class="p">:</span>
+    <span class="p">(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span><span class="nv">error</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">__managementRealmWithError</span><span class="p">(</span><span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">NSErrorPointer</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RLMRealm.html">RLMRealm</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/Realm/RLMSyncUser.h#L121">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; YYYY <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

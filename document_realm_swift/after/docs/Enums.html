@@ -32,7 +32,7 @@
       <div class="content-wrapper">
         <p><a href="index.html">RealmSwift Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F1%2E0%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F2%2E3%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -70,10 +70,16 @@
                 <a href="Classes/Property.html">Property</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/RLMGenerator.html">RLMGenerator</a>
+                <a href="Classes/RLMIterator.html">RLMIterator</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/Realm.html">Realm</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Realm/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Realm/Notification.html">– Notification</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/Realm/Configuration.html">– Configuration</a>
@@ -87,19 +93,51 @@
               <li class="nav-group-task">
                 <a href="Classes/Schema.html">Schema</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Classes/SyncPermissionChange.html">SyncPermissionChange</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SyncPermissionOffer.html">SyncPermissionOffer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SyncPermissionOfferResponse.html">SyncPermissionOfferResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ThreadSafeReference.html">ThreadSafeReference</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
             <a href="Enums.html">Enums</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Enums/Error.html">Error</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/Notification.html">Notification</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Enums/RealmCollectionChange.html">RealmCollectionChange</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/SyncError.html">SyncError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/SyncManager.html">SyncManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/SyncSession.html">SyncSession</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/SyncSession/ProgressDirection.html">– ProgressDirection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/SyncSession/ProgressMode.html">– ProgressMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/SyncSession/Progress.html">– Progress</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/SyncUser.html">SyncUser</a>
               </li>
             </ul>
           </li>
@@ -107,31 +145,13 @@
             <a href="Functions.html">Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Functions.html#/s:ZF10RealmSwiftoi2eeFTCS_12ObjectSchemaS0__Sb">==(_:_:)</a>
+                <a href="Functions.html#/s:F10RealmSwiftoi2eeFTPs5Error_PS0___Sb">==(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:ZF10RealmSwiftoi2eeFTCS_5RealmS0__Sb">==(_:_:)</a>
+                <a href="Functions.html#/s:F10RealmSwift18schemaVersionAtURLFzTV10Foundation3URL13encryptionKeyGSqVS0_4Data__Vs6UInt64">schemaVersionAtURL(_:encryptionKey:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:ZF10RealmSwiftoi2eeFTCS_6SchemaS0__Sb">==(_:_:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Functions.html#/s:ZF10RealmSwiftoi2eeFTCS_8PropertyS0__Sb">==(_:_:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Functions.html#/s:ZF10RealmSwiftoi2eeFTPs9ErrorType_PS0___Sb">==(_:_:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Functions.html#/s:ZF10RealmSwiftoi2eeFTVS_14SortDescriptorS0__Sb">==(_:_:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Functions.html#/s:F10RealmSwift12migrateRealmFTVCS_5Realm13Configuration_GSqCSo7NSError_">migrateRealm(_:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Functions.html#/s:F10RealmSwift18schemaVersionAtURLFzTCSo5NSURL13encryptionKeyGSqCSo6NSData__Vs6UInt64">schemaVersionAtURL(_:encryptionKey:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Functions.html#/s:ZF10RealmSwiftoi2teFTOS_5ErrorPs9ErrorType__Sb">~=(_:_:)</a>
+                <a href="Functions.html#/s:F10RealmSwiftoi2teFTVCS_5Realm5ErrorPs5Error__Sb">~=(_:_:)</a>
               </li>
             </ul>
           </li>
@@ -145,10 +165,13 @@
                 <a href="Protocols.html#/s:P10RealmSwift10MinMaxType">MinMaxType</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/RealmCollectionType.html">RealmCollectionType</a>
+                <a href="Protocols/RealmCollection.html">RealmCollection</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols.html#/s:P10RealmSwift17RealmOptionalType">RealmOptionalType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/ThreadConfined.html">ThreadConfined</a>
               </li>
             </ul>
           </li>
@@ -158,11 +181,20 @@
               <li class="nav-group-task">
                 <a href="Structs/SortDescriptor.html">SortDescriptor</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Structs/SyncConfiguration.html">SyncConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/SyncCredentials.html">SyncCredentials</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
             <a href="Typealiases.html">Typealiases</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10RealmSwift19ErrorReportingBlock">ErrorReportingBlock</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Typealiases.html#/s:10RealmSwift14MigrationBlock">MigrationBlock</a>
               </li>
@@ -181,6 +213,30 @@
               <li class="nav-group-task">
                 <a href="Typealiases.html#/s:10RealmSwift12PropertyType">PropertyType</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10RealmSwift8Provider">Provider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10RealmSwift9SyncError">SyncError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10RealmSwift12SyncLogLevel">SyncLogLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10RealmSwift26SyncManagementObjectStatus">SyncManagementObjectStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10RealmSwift11SyncManager">SyncManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10RealmSwift11SyncSession">SyncSession</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10RealmSwift8SyncUser">SyncUser</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10RealmSwift19UserCompletionBlock">UserCompletionBlock</a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -193,91 +249,6 @@
 
           </section>
           <section class="section task-group-section">
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:O10RealmSwift5Error"></a>
-                    <a name="//apple_ref/swift/Enum/Error" class="dashAnchor"></a>
-                    <a class="token" href="#/s:O10RealmSwift5Error">Error</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p><code>Error</code> is an enum representing all recoverable errors. It is associated with the
-Realm error domain specified in <code>RLMErrorDomain</code>.</p>
-
-<p>let realm: Realm?
-   do {
-       realm = Realm()
-   } catch RealmSwift.Error.IncompatibleLockFile() {
-       print(<q>Realm Browser app may be attached to Realm on device?</q>)
-   }</p>
-
-                        <a href="Enums/Error.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Error</span><span class="p">:</span> <span class="kt">ErrorType</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Error.swift#L34-L112">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Notifications"></a>
-                <a name="//apple_ref/swift/Section/Notifications" class="dashAnchor"></a>
-                <a href="#/Notifications">
-                  <h3 class="section-name">Notifications</h3>
-                </a>
-              </div>
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:O10RealmSwift12Notification"></a>
-                    <a name="//apple_ref/swift/Enum/Notification" class="dashAnchor"></a>
-                    <a class="token" href="#/s:O10RealmSwift12Notification">Notification</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A notification indicating that changes were made to a Realm.</p>
-
-                        <a href="Enums/Notification.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Notification</span><span class="p">:</span> <span class="kt">String</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Realm.swift#L594-L616">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
             <div class="task-group">
               <ul>
                 <li class="item">
@@ -305,29 +276,30 @@ update methods.</p>
 conventions, and can be passed as-is to a table view&rsquo;s batch update functions after being converted to index paths.
 For example, for a simple one-section table view, you can do the following:</p>
 
-<p>self.notificationToken = results.addNotificationBlock { changes
-       switch changes {
-       case .Initial:
-           // Results are now populated and can be accessed without blocking the UI
-           self.tableView.reloadData()
-           break
-       case .Update(_, let deletions, let insertions, let modifications):
-           // Query results have changed, so apply them to the TableView
-           self.tableView.beginUpdates()
-           self.tableView.insertRowsAtIndexPaths(insertions.map { NSIndexPath(forRow: $0, inSection: 0) },
-               withRowAnimation: .Automatic)
-           self.tableView.deleteRowsAtIndexPaths(deletions.map { NSIndexPath(forRow: $0, inSection: 0) },
-               withRowAnimation: .Automatic)
-           self.tableView.reloadRowsAtIndexPaths(modifications.map { NSIndexPath(forRow: $0, inSection: 0) },
-               withRowAnimation: .Automatic)
-           self.tableView.endUpdates()
-           break
-       case .Error(let err):
-           // An error occurred while opening the Realm file on the background worker thread
-           fatalError(<q>\(err)</q>)
-           break
-       }
-   }</p>
+<pre class="highlight swift"><code><span class="k">self</span><span class="o">.</span><span class="n">notificationToken</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">addNotificationBlock</span> <span class="p">{</span> <span class="n">changes</span> <span class="k">in</span>
+    <span class="k">switch</span> <span class="n">changes</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="o">.</span><span class="nv">initial</span><span class="p">:</span>
+        <span class="c1">// Results are now populated and can be accessed without blocking the UI</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">tableView</span><span class="o">.</span><span class="nf">reloadData</span><span class="p">()</span>
+        <span class="k">break</span>
+    <span class="k">case</span> <span class="o">.</span><span class="nf">update</span><span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="k">let</span> <span class="nv">deletions</span><span class="p">,</span> <span class="k">let</span> <span class="nv">insertions</span><span class="p">,</span> <span class="k">let</span> <span class="nv">modifications</span><span class="p">):</span>
+        <span class="c1">// Query results have changed, so apply them to the TableView</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">tableView</span><span class="o">.</span><span class="nf">beginUpdates</span><span class="p">()</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">tableView</span><span class="o">.</span><span class="nf">insertRowsAtIndexPaths</span><span class="p">(</span><span class="n">insertions</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="kt">NSIndexPath</span><span class="p">(</span><span class="nv">forRow</span><span class="p">:</span> <span class="nv">$0</span><span class="p">,</span> <span class="nv">inSection</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span> <span class="p">},</span>
+           <span class="nv">withRowAnimation</span><span class="p">:</span> <span class="o">.</span><span class="kt">Automatic</span><span class="p">)</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">tableView</span><span class="o">.</span><span class="nf">deleteRowsAtIndexPaths</span><span class="p">(</span><span class="n">deletions</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="kt">NSIndexPath</span><span class="p">(</span><span class="nv">forRow</span><span class="p">:</span> <span class="nv">$0</span><span class="p">,</span> <span class="nv">inSection</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span> <span class="p">},</span>
+           <span class="nv">withRowAnimation</span><span class="p">:</span> <span class="o">.</span><span class="kt">Automatic</span><span class="p">)</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">tableView</span><span class="o">.</span><span class="nf">reloadRowsAtIndexPaths</span><span class="p">(</span><span class="n">modifications</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="kt">NSIndexPath</span><span class="p">(</span><span class="nv">forRow</span><span class="p">:</span> <span class="nv">$0</span><span class="p">,</span> <span class="nv">inSection</span><span class="p">:</span> <span class="mi">0</span><span class="p">)</span> <span class="p">},</span>
+           <span class="nv">withRowAnimation</span><span class="p">:</span> <span class="o">.</span><span class="kt">Automatic</span><span class="p">)</span>
+        <span class="k">self</span><span class="o">.</span><span class="n">tableView</span><span class="o">.</span><span class="nf">endUpdates</span><span class="p">()</span>
+        <span class="k">break</span>
+    <span class="k">case</span> <span class="o">.</span><span class="nf">error</span><span class="p">(</span><span class="k">let</span> <span class="nv">err</span><span class="p">):</span>
+        <span class="c1">// An error occurred while opening the Realm file on the background worker thread</span>
+        <span class="nf">fatalError</span><span class="p">(</span><span class="s">"</span><span class="se">\(</span><span class="n">err</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+        <span class="k">break</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
 
                         <a href="Enums/RealmCollectionChange.html" class="slightly-smaller">See more</a>
                       </div>
@@ -340,7 +312,7 @@ For example, for a simple one-section table view, you can do the following:</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/RealmCollectionType.swift#L79-L115">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/RealmCollection.swift#L84-L122">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

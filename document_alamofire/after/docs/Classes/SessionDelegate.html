@@ -1,0 +1,2906 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SessionDelegate Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/SessionDelegate" class="dashAnchor"></a>
+    <a title="SessionDelegate Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Alamofire Docs</a> (86% documented)</p>
+        <p class="header-right"><a href="https://github.com/Alamofire/Alamofire"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fstatic%2Erealm%2Eio%2Fjazzy_demo%2FAlamofire%2Fdocsets%2FAlamofire%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Alamofire Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        SessionDelegate Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/DataRequest.html">DataRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DownloadRequest.html">DownloadRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DownloadRequest/DownloadOptions.html">– DownloadOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MultipartFormData.html">MultipartFormData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NetworkReachabilityManager.html">NetworkReachabilityManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NetworkReachabilityManager.html#/s:OC9Alamofire26NetworkReachabilityManager25NetworkReachabilityStatus">– NetworkReachabilityStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NetworkReachabilityManager.html#/s:OC9Alamofire26NetworkReachabilityManager14ConnectionType">– ConnectionType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Request.html">Request</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Request.html#/s:OC9Alamofire7Request16ValidationResult">– ValidationResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ServerTrustPolicyManager.html">ServerTrustPolicyManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SessionDelegate.html">SessionDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SessionManager.html">SessionManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SessionManager.html#/s:OC9Alamofire14SessionManager31MultipartFormDataEncodingResult">– MultipartFormDataEncodingResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:C9Alamofire13StreamRequest">StreamRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TaskDelegate.html">TaskDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UploadRequest.html">UploadRequest</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/AFError.html">AFError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/AFError.html#/s:OO9Alamofire7AFError30ParameterEncodingFailureReason">– ParameterEncodingFailureReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/AFError.html#/s:OO9Alamofire7AFError30MultipartEncodingFailureReason">– MultipartEncodingFailureReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/AFError.html#/s:OO9Alamofire7AFError31ResponseValidationFailureReason">– ResponseValidationFailureReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/AFError.html#/s:OO9Alamofire7AFError34ResponseSerializationFailureReason">– ResponseSerializationFailureReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums.html#/s:O9Alamofire10HTTPMethod">HTTPMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Result.html">Result</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ServerTrustPolicy.html">ServerTrustPolicy</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Notification.html">Notification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Notification/Task.html">– Task</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Notification/Key.html">– Key</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/URL.html">URL</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/URLComponents.html">URLComponents</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F9Alamofireoi2eeFTOCS_26NetworkReachabilityManager25NetworkReachabilityStatusS1__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F9Alamofire8downloadFTPS_14URLConvertible_6methodOS_10HTTPMethod10parametersGSqGVs10DictionarySSP___8encodingPS_17ParameterEncoding_7headersGSqGS2_SSSS__2toGSqFTV10Foundation3URLCSo15HTTPURLResponse_T14destinationURLS5_7optionsVCS_15DownloadRequest15DownloadOptions___S7_">download(_:method:parameters:encoding:headers:to:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F9Alamofire8downloadFTPS_21URLRequestConvertible_2toGSqFTV10Foundation3URLCSo15HTTPURLResponse_T14destinationURLS2_7optionsVCS_15DownloadRequest15DownloadOptions___S4_">download(_:to:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F9Alamofire8downloadFT12resumingWithV10Foundation4Data2toGSqFTVS0_3URLCSo15HTTPURLResponse_T14destinationURLS2_7optionsVCS_15DownloadRequest15DownloadOptions___S4_">download(resumingWith:to:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F9Alamofire7requestFPS_21URLRequestConvertible_CS_11DataRequest">request(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F9Alamofire7requestFTPS_14URLConvertible_6methodOS_10HTTPMethod10parametersGSqGVs10DictionarySSP___8encodingPS_17ParameterEncoding_7headersGSqGS2_SSSS___CS_11DataRequest">request(_:method:parameters:encoding:headers:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F9Alamofire6streamFT4withCSo10NetService_CS_13StreamRequest">stream(with:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F9Alamofire6streamFT12withHostNameSS4portSi_CS_13StreamRequest">stream(withHostName:port:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F9Alamofire6uploadFTCSo11InputStream2toPS_14URLConvertible_6methodOS_10HTTPMethod7headersGSqGVs10DictionarySSSS___CS_13UploadRequest">upload(_:to:method:headers:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F9Alamofire6uploadFTV10Foundation3URL2toPS_14URLConvertible_6methodOS_10HTTPMethod7headersGSqGVs10DictionarySSSS___CS_13UploadRequest">upload(_:to:method:headers:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F9Alamofire6uploadFTV10Foundation4Data2toPS_14URLConvertible_6methodOS_10HTTPMethod7headersGSqGVs10DictionarySSSS___CS_13UploadRequest">upload(_:to:method:headers:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F9Alamofire6uploadFTCSo11InputStream4withPS_21URLRequestConvertible__CS_13UploadRequest">upload(_:with:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F9Alamofire6uploadFTV10Foundation3URL4withPS_21URLRequestConvertible__CS_13UploadRequest">upload(_:with:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F9Alamofire6uploadFTV10Foundation4Data4withPS_21URLRequestConvertible__CS_13UploadRequest">upload(_:with:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F9Alamofire6uploadFT17multipartFormDataFCS_17MultipartFormDataT_14usingThresholdVs6UInt642toPS_14URLConvertible_6methodOS_10HTTPMethod7headersGSqGVs10DictionarySSSS__18encodingCompletionGSqFOCS_14SessionManager31MultipartFormDataEncodingResultT___T_">upload(multipartFormData:usingThreshold:to:method:headers:encodingCompletion:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F9Alamofire6uploadFT17multipartFormDataFCS_17MultipartFormDataT_14usingThresholdVs6UInt644withPS_21URLRequestConvertible_18encodingCompletionGSqFOCS_14SessionManager31MultipartFormDataEncodingResultT___T_">upload(multipartFormData:usingThreshold:with:encodingCompletion:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/DataResponseSerializerProtocol.html">DataResponseSerializerProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DownloadResponseSerializerProtocol.html">DownloadResponseSerializerProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ParameterEncoding.html">ParameterEncoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/RequestAdapter.html">RequestAdapter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/RequestRetrier.html">RequestRetrier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/URLConvertible.html">URLConvertible</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/URLRequestConvertible.html">URLRequestConvertible</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/DataResponse.html">DataResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DataResponseSerializer.html">DataResponseSerializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DefaultDataResponse.html">DefaultDataResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DefaultDownloadResponse.html">DefaultDownloadResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DownloadResponse.html">DownloadResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DownloadResponseSerializer.html">DownloadResponseSerializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/JSONEncoding.html">JSONEncoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/PropertyListEncoding.html">PropertyListEncoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Timeline.html">Timeline</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/URLEncoding.html">URLEncoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/URLEncoding.html#/s:OV9Alamofire11URLEncoding11Destination">– Destination</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Typealiases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9Alamofire11HTTPHeaders">HTTPHeaders</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9Alamofire10Parameters">Parameters</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9Alamofire22RequestRetryCompletion">RequestRetryCompletion</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:C9Alamofire11DataRequest10Validation">Validation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:C9Alamofire15DownloadRequest10Validation">Validation</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>SessionDelegate</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">SessionDelegate</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>Responsible for handling all delegate callbacks for the underlying session.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/URLSessionDelegate%20Overrides"></a>
+                <a name="//apple_ref/swift/Section/URLSessionDelegate Overrides" class="dashAnchor"></a>
+                <a href="#/URLSessionDelegate%20Overrides">
+                  <h3 class="section-name">URLSessionDelegate Overrides</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:iC9Alamofire15SessionDelegate9subscriptFCSo14URLSessionTaskGSqCS_7Request_"></a>
+                    <a name="//apple_ref/swift/Method/subscript(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:iC9Alamofire15SessionDelegate9subscriptFCSo14URLSessionTaskGSqCS_7Request_">subscript(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Access the task delegate for the specified task in a thread-safe manner.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="nf">subscript</span><span class="p">(</span><span class="nv">task</span><span class="p">:</span> <span class="kt">URLSessionTask</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Request.html">Request</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L170">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9Alamofire15SessionDelegate32sessionDidBecomeInvalidWithErrorGSqFTCSo10URLSessionGSqPs5Error___T__"></a>
+                    <a name="//apple_ref/swift/Property/sessionDidBecomeInvalidWithError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9Alamofire15SessionDelegate32sessionDidBecomeInvalidWithErrorGSqFTCSo10URLSessionGSqPs5Error___T__">sessionDidBecomeInvalidWithError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Overrides default behavior for URLSessionDelegate method <code><a href="../Classes/SessionDelegate.html#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession25didBecomeInvalidWithErrorGSqPs5Error___T_">urlSession(_:didBecomeInvalidWithError:)</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">sessionDidBecomeInvalidWithError</span><span class="p">:</span> <span class="p">((</span><span class="kt">URLSession</span><span class="p">,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L33">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9Alamofire15SessionDelegate26sessionDidReceiveChallengeGSqFTCSo10URLSessionCSo26URLAuthenticationChallenge_TOS1_24AuthChallengeDispositionGSqCSo13URLCredential___"></a>
+                    <a name="//apple_ref/swift/Property/sessionDidReceiveChallenge" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9Alamofire15SessionDelegate26sessionDidReceiveChallengeGSqFTCSo10URLSessionCSo26URLAuthenticationChallenge_TOS1_24AuthChallengeDispositionGSqCSo13URLCredential___">sessionDidReceiveChallenge</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Overrides default behavior for URLSessionDelegate method <code><a href="../Classes/SessionDelegate.html#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession10didReceiveCSo26URLAuthenticationChallenge17completionHandlerFTOS1_24AuthChallengeDispositionGSqCSo13URLCredential__T__T_">urlSession(_:didReceive:completionHandler:)</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">sessionDidReceiveChallenge</span><span class="p">:</span> <span class="p">((</span><span class="kt">URLSession</span><span class="p">,</span> <span class="kt">URLAuthenticationChallenge</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">URLSession</span><span class="o">.</span><span class="kt">AuthChallengeDisposition</span><span class="p">,</span> <span class="kt">URLCredential</span><span class="p">?))?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L36">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9Alamofire15SessionDelegate40sessionDidReceiveChallengeWithCompletionGSqFTCSo10URLSessionCSo26URLAuthenticationChallengeFTOS1_24AuthChallengeDispositionGSqCSo13URLCredential__T__T__"></a>
+                    <a name="//apple_ref/swift/Property/sessionDidReceiveChallengeWithCompletion" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9Alamofire15SessionDelegate40sessionDidReceiveChallengeWithCompletionGSqFTCSo10URLSessionCSo26URLAuthenticationChallengeFTOS1_24AuthChallengeDispositionGSqCSo13URLCredential__T__T__">sessionDidReceiveChallengeWithCompletion</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Overrides all behavior for URLSessionDelegate method <code><a href="../Classes/SessionDelegate.html#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession10didReceiveCSo26URLAuthenticationChallenge17completionHandlerFTOS1_24AuthChallengeDispositionGSqCSo13URLCredential__T__T_">urlSession(_:didReceive:completionHandler:)</a></code> and requires the caller to call the <code>completionHandler</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">sessionDidReceiveChallengeWithCompletion</span><span class="p">:</span> <span class="p">((</span><span class="kt">URLSession</span><span class="p">,</span> <span class="kt">URLAuthenticationChallenge</span><span class="p">,</span> <span class="p">(</span><span class="kt">URLSession</span><span class="o">.</span><span class="kt">AuthChallengeDisposition</span><span class="p">,</span> <span class="kt">URLCredential</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L39">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9Alamofire15SessionDelegate45sessionDidFinishEventsForBackgroundURLSessionGSqFCSo10URLSessionT__"></a>
+                    <a name="//apple_ref/swift/Property/sessionDidFinishEventsForBackgroundURLSession" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9Alamofire15SessionDelegate45sessionDidFinishEventsForBackgroundURLSessionGSqFCSo10URLSessionT__">sessionDidFinishEventsForBackgroundURLSession</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Overrides default behavior for URLSessionDelegate method <code><a href="../Classes/SessionDelegate.html#/s:FC9Alamofire15SessionDelegate25urlSessionDidFinishEventsFT23forBackgroundURLSessionCSo10URLSession_T_">urlSessionDidFinishEvents(forBackgroundURLSession:)</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">sessionDidFinishEventsForBackgroundURLSession</span><span class="p">:</span> <span class="p">((</span><span class="kt">URLSession</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L42">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/URLSessionTaskDelegate%20Overrides"></a>
+                <a name="//apple_ref/swift/Section/URLSessionTaskDelegate Overrides" class="dashAnchor"></a>
+                <a href="#/URLSessionTaskDelegate%20Overrides">
+                  <h3 class="section-name">URLSessionTaskDelegate Overrides</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9Alamofire15SessionDelegate30taskWillPerformHTTPRedirectionGSqFTCSo10URLSessionCSo14URLSessionTaskCSo15HTTPURLResponseV10Foundation10URLRequest_GSqS5___"></a>
+                    <a name="//apple_ref/swift/Property/taskWillPerformHTTPRedirection" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9Alamofire15SessionDelegate30taskWillPerformHTTPRedirectionGSqFTCSo10URLSessionCSo14URLSessionTaskCSo15HTTPURLResponseV10Foundation10URLRequest_GSqS5___">taskWillPerformHTTPRedirection</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Overrides default behavior for URLSessionTaskDelegate method <code><a href="../Classes/SessionDelegate.html#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession4taskCSo14URLSessionTask26willPerformHTTPRedirectionCSo15HTTPURLResponse10newRequestV10Foundation10URLRequest17completionHandlerFGSqS5__T__T_">urlSession(_:task:willPerformHTTPRedirection:newRequest:completionHandler:)</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">taskWillPerformHTTPRedirection</span><span class="p">:</span> <span class="p">((</span><span class="kt">URLSession</span><span class="p">,</span> <span class="kt">URLSessionTask</span><span class="p">,</span> <span class="kt">HTTPURLResponse</span><span class="p">,</span> <span class="kt">URLRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">URLRequest</span><span class="p">?)?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L47">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9Alamofire15SessionDelegate44taskWillPerformHTTPRedirectionWithCompletionGSqFTCSo10URLSessionCSo14URLSessionTaskCSo15HTTPURLResponseV10Foundation10URLRequestFGSqS5__T__T__"></a>
+                    <a name="//apple_ref/swift/Property/taskWillPerformHTTPRedirectionWithCompletion" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9Alamofire15SessionDelegate44taskWillPerformHTTPRedirectionWithCompletionGSqFTCSo10URLSessionCSo14URLSessionTaskCSo15HTTPURLResponseV10Foundation10URLRequestFGSqS5__T__T__">taskWillPerformHTTPRedirectionWithCompletion</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Overrides all behavior for URLSessionTaskDelegate method <code><a href="../Classes/SessionDelegate.html#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession4taskCSo14URLSessionTask26willPerformHTTPRedirectionCSo15HTTPURLResponse10newRequestV10Foundation10URLRequest17completionHandlerFGSqS5__T__T_">urlSession(_:task:willPerformHTTPRedirection:newRequest:completionHandler:)</a></code> and
+requires the caller to call the <code>completionHandler</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">taskWillPerformHTTPRedirectionWithCompletion</span><span class="p">:</span> <span class="p">((</span><span class="kt">URLSession</span><span class="p">,</span> <span class="kt">URLSessionTask</span><span class="p">,</span> <span class="kt">HTTPURLResponse</span><span class="p">,</span> <span class="kt">URLRequest</span><span class="p">,</span> <span class="p">(</span><span class="kt">URLRequest</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L51">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9Alamofire15SessionDelegate23taskDidReceiveChallengeGSqFTCSo10URLSessionCSo14URLSessionTaskCSo26URLAuthenticationChallenge_TOS1_24AuthChallengeDispositionGSqCSo13URLCredential___"></a>
+                    <a name="//apple_ref/swift/Property/taskDidReceiveChallenge" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9Alamofire15SessionDelegate23taskDidReceiveChallengeGSqFTCSo10URLSessionCSo14URLSessionTaskCSo26URLAuthenticationChallenge_TOS1_24AuthChallengeDispositionGSqCSo13URLCredential___">taskDidReceiveChallenge</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Overrides default behavior for URLSessionTaskDelegate method <code><a href="../Classes/SessionDelegate.html#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession4taskCSo14URLSessionTask10didReceiveCSo26URLAuthenticationChallenge17completionHandlerFTOS1_24AuthChallengeDispositionGSqCSo13URLCredential__T__T_">urlSession(_:task:didReceive:completionHandler:)</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">taskDidReceiveChallenge</span><span class="p">:</span> <span class="p">((</span><span class="kt">URLSession</span><span class="p">,</span> <span class="kt">URLSessionTask</span><span class="p">,</span> <span class="kt">URLAuthenticationChallenge</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">URLSession</span><span class="o">.</span><span class="kt">AuthChallengeDisposition</span><span class="p">,</span> <span class="kt">URLCredential</span><span class="p">?))?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L54">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9Alamofire15SessionDelegate37taskDidReceiveChallengeWithCompletionGSqFTCSo10URLSessionCSo14URLSessionTaskCSo26URLAuthenticationChallengeFTOS1_24AuthChallengeDispositionGSqCSo13URLCredential__T__T__"></a>
+                    <a name="//apple_ref/swift/Property/taskDidReceiveChallengeWithCompletion" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9Alamofire15SessionDelegate37taskDidReceiveChallengeWithCompletionGSqFTCSo10URLSessionCSo14URLSessionTaskCSo26URLAuthenticationChallengeFTOS1_24AuthChallengeDispositionGSqCSo13URLCredential__T__T__">taskDidReceiveChallengeWithCompletion</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Overrides all behavior for URLSessionTaskDelegate method <code><a href="../Classes/SessionDelegate.html#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession4taskCSo14URLSessionTask10didReceiveCSo26URLAuthenticationChallenge17completionHandlerFTOS1_24AuthChallengeDispositionGSqCSo13URLCredential__T__T_">urlSession(_:task:didReceive:completionHandler:)</a></code> and
+requires the caller to call the <code>completionHandler</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">taskDidReceiveChallengeWithCompletion</span><span class="p">:</span> <span class="p">((</span><span class="kt">URLSession</span><span class="p">,</span> <span class="kt">URLSessionTask</span><span class="p">,</span> <span class="kt">URLAuthenticationChallenge</span><span class="p">,</span> <span class="p">(</span><span class="kt">URLSession</span><span class="o">.</span><span class="kt">AuthChallengeDisposition</span><span class="p">,</span> <span class="kt">URLCredential</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L58">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9Alamofire15SessionDelegate21taskNeedNewBodyStreamGSqFTCSo10URLSessionCSo14URLSessionTask_GSqCSo11InputStream__"></a>
+                    <a name="//apple_ref/swift/Property/taskNeedNewBodyStream" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9Alamofire15SessionDelegate21taskNeedNewBodyStreamGSqFTCSo10URLSessionCSo14URLSessionTask_GSqCSo11InputStream__">taskNeedNewBodyStream</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Overrides default behavior for URLSessionTaskDelegate method <code><a href="../Classes/SessionDelegate.html#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession4taskCSo14URLSessionTask17needNewBodyStreamFGSqCSo11InputStream_T__T_">urlSession(_:task:needNewBodyStream:)</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">taskNeedNewBodyStream</span><span class="p">:</span> <span class="p">((</span><span class="kt">URLSession</span><span class="p">,</span> <span class="kt">URLSessionTask</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">InputStream</span><span class="p">?)?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L61">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9Alamofire15SessionDelegate35taskNeedNewBodyStreamWithCompletionGSqFTCSo10URLSessionCSo14URLSessionTaskFGSqCSo11InputStream_T__T__"></a>
+                    <a name="//apple_ref/swift/Property/taskNeedNewBodyStreamWithCompletion" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9Alamofire15SessionDelegate35taskNeedNewBodyStreamWithCompletionGSqFTCSo10URLSessionCSo14URLSessionTaskFGSqCSo11InputStream_T__T__">taskNeedNewBodyStreamWithCompletion</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Overrides all behavior for URLSessionTaskDelegate method <code><a href="../Classes/SessionDelegate.html#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession4taskCSo14URLSessionTask17needNewBodyStreamFGSqCSo11InputStream_T__T_">urlSession(_:task:needNewBodyStream:)</a></code> and
+requires the caller to call the <code>completionHandler</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">taskNeedNewBodyStreamWithCompletion</span><span class="p">:</span> <span class="p">((</span><span class="kt">URLSession</span><span class="p">,</span> <span class="kt">URLSessionTask</span><span class="p">,</span> <span class="p">(</span><span class="kt">InputStream</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L65">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9Alamofire15SessionDelegate19taskDidSendBodyDataGSqFTCSo10URLSessionCSo14URLSessionTaskVs5Int64S3_S3__T__"></a>
+                    <a name="//apple_ref/swift/Property/taskDidSendBodyData" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9Alamofire15SessionDelegate19taskDidSendBodyDataGSqFTCSo10URLSessionCSo14URLSessionTaskVs5Int64S3_S3__T__">taskDidSendBodyData</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Overrides default behavior for URLSessionTaskDelegate method <code><a href="../Classes/SessionDelegate.html#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession4taskCSo14URLSessionTask15didSendBodyDataVs5Int6414totalBytesSentS3_24totalBytesExpectedToSendS3__T_">urlSession(_:task:didSendBodyData:totalBytesSent:totalBytesExpectedToSend:)</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">taskDidSendBodyData</span><span class="p">:</span> <span class="p">((</span><span class="kt">URLSession</span><span class="p">,</span> <span class="kt">URLSessionTask</span><span class="p">,</span> <span class="kt">Int64</span><span class="p">,</span> <span class="kt">Int64</span><span class="p">,</span> <span class="kt">Int64</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L68">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9Alamofire15SessionDelegate15taskDidCompleteGSqFTCSo10URLSessionCSo14URLSessionTaskGSqPs5Error___T__"></a>
+                    <a name="//apple_ref/swift/Property/taskDidComplete" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9Alamofire15SessionDelegate15taskDidCompleteGSqFTCSo10URLSessionCSo14URLSessionTaskGSqPs5Error___T__">taskDidComplete</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Overrides default behavior for URLSessionTaskDelegate method <code><a href="../Classes/SessionDelegate.html#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession4taskCSo14URLSessionTask20didCompleteWithErrorGSqPs5Error___T_">urlSession(_:task:didCompleteWithError:)</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">taskDidComplete</span><span class="p">:</span> <span class="p">((</span><span class="kt">URLSession</span><span class="p">,</span> <span class="kt">URLSessionTask</span><span class="p">,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L71">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/URLSessionDataDelegate%20Overrides"></a>
+                <a name="//apple_ref/swift/Section/URLSessionDataDelegate Overrides" class="dashAnchor"></a>
+                <a href="#/URLSessionDataDelegate%20Overrides">
+                  <h3 class="section-name">URLSessionDataDelegate Overrides</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9Alamofire15SessionDelegate26dataTaskDidReceiveResponseGSqFTCSo10URLSessionCSo18URLSessionDataTaskCSo11URLResponse_OS1_19ResponseDisposition_"></a>
+                    <a name="//apple_ref/swift/Property/dataTaskDidReceiveResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9Alamofire15SessionDelegate26dataTaskDidReceiveResponseGSqFTCSo10URLSessionCSo18URLSessionDataTaskCSo11URLResponse_OS1_19ResponseDisposition_">dataTaskDidReceiveResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Overrides default behavior for URLSessionDataDelegate method <code><a href="../Classes/SessionDelegate.html#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession8dataTaskCSo18URLSessionDataTask10didReceiveCSo11URLResponse17completionHandlerFOS1_19ResponseDispositionT__T_">urlSession(_:dataTask:didReceive:completionHandler:)</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">dataTaskDidReceiveResponse</span><span class="p">:</span> <span class="p">((</span><span class="kt">URLSession</span><span class="p">,</span> <span class="kt">URLSessionDataTask</span><span class="p">,</span> <span class="kt">URLResponse</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">URLSession</span><span class="o">.</span><span class="kt">ResponseDisposition</span><span class="p">)?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L76">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9Alamofire15SessionDelegate40dataTaskDidReceiveResponseWithCompletionGSqFTCSo10URLSessionCSo18URLSessionDataTaskCSo11URLResponseFOS1_19ResponseDispositionT__T__"></a>
+                    <a name="//apple_ref/swift/Property/dataTaskDidReceiveResponseWithCompletion" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9Alamofire15SessionDelegate40dataTaskDidReceiveResponseWithCompletionGSqFTCSo10URLSessionCSo18URLSessionDataTaskCSo11URLResponseFOS1_19ResponseDispositionT__T__">dataTaskDidReceiveResponseWithCompletion</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Overrides all behavior for URLSessionDataDelegate method <code><a href="../Classes/SessionDelegate.html#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession8dataTaskCSo18URLSessionDataTask10didReceiveCSo11URLResponse17completionHandlerFOS1_19ResponseDispositionT__T_">urlSession(_:dataTask:didReceive:completionHandler:)</a></code> and
+requires caller to call the <code>completionHandler</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">dataTaskDidReceiveResponseWithCompletion</span><span class="p">:</span> <span class="p">((</span><span class="kt">URLSession</span><span class="p">,</span> <span class="kt">URLSessionDataTask</span><span class="p">,</span> <span class="kt">URLResponse</span><span class="p">,</span> <span class="p">(</span><span class="kt">URLSession</span><span class="o">.</span><span class="kt">ResponseDisposition</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L80">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9Alamofire15SessionDelegate29dataTaskDidBecomeDownloadTaskGSqFTCSo10URLSessionCSo18URLSessionDataTaskCSo22URLSessionDownloadTask_T__"></a>
+                    <a name="//apple_ref/swift/Property/dataTaskDidBecomeDownloadTask" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9Alamofire15SessionDelegate29dataTaskDidBecomeDownloadTaskGSqFTCSo10URLSessionCSo18URLSessionDataTaskCSo22URLSessionDownloadTask_T__">dataTaskDidBecomeDownloadTask</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Overrides default behavior for URLSessionDataDelegate method <code><a href="../Classes/SessionDelegate.html#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession8dataTaskCSo18URLSessionDataTask9didBecomeCSo22URLSessionDownloadTask_T_">urlSession(_:dataTask:didBecome:)</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">dataTaskDidBecomeDownloadTask</span><span class="p">:</span> <span class="p">((</span><span class="kt">URLSession</span><span class="p">,</span> <span class="kt">URLSessionDataTask</span><span class="p">,</span> <span class="kt">URLSessionDownloadTask</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L83">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9Alamofire15SessionDelegate22dataTaskDidReceiveDataGSqFTCSo10URLSessionCSo18URLSessionDataTaskV10Foundation4Data_T__"></a>
+                    <a name="//apple_ref/swift/Property/dataTaskDidReceiveData" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9Alamofire15SessionDelegate22dataTaskDidReceiveDataGSqFTCSo10URLSessionCSo18URLSessionDataTaskV10Foundation4Data_T__">dataTaskDidReceiveData</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Overrides default behavior for URLSessionDataDelegate method <code><a href="../Classes/SessionDelegate.html#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession8dataTaskCSo18URLSessionDataTask10didReceiveV10Foundation4Data_T_">urlSession(_:dataTask:didReceive:)</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">dataTaskDidReceiveData</span><span class="p">:</span> <span class="p">((</span><span class="kt">URLSession</span><span class="p">,</span> <span class="kt">URLSessionDataTask</span><span class="p">,</span> <span class="kt">Data</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L86">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9Alamofire15SessionDelegate25dataTaskWillCacheResponseGSqFTCSo10URLSessionCSo18URLSessionDataTaskCSo17CachedURLResponse_GSqS3___"></a>
+                    <a name="//apple_ref/swift/Property/dataTaskWillCacheResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9Alamofire15SessionDelegate25dataTaskWillCacheResponseGSqFTCSo10URLSessionCSo18URLSessionDataTaskCSo17CachedURLResponse_GSqS3___">dataTaskWillCacheResponse</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Overrides default behavior for URLSessionDataDelegate method <code><a href="../Classes/SessionDelegate.html#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession8dataTaskCSo18URLSessionDataTask17willCacheResponseCSo17CachedURLResponse17completionHandlerFGSqS3__T__T_">urlSession(_:dataTask:willCacheResponse:completionHandler:)</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">dataTaskWillCacheResponse</span><span class="p">:</span> <span class="p">((</span><span class="kt">URLSession</span><span class="p">,</span> <span class="kt">URLSessionDataTask</span><span class="p">,</span> <span class="kt">CachedURLResponse</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CachedURLResponse</span><span class="p">?)?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L89">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9Alamofire15SessionDelegate39dataTaskWillCacheResponseWithCompletionGSqFTCSo10URLSessionCSo18URLSessionDataTaskCSo17CachedURLResponseFGSqS3__T__T__"></a>
+                    <a name="//apple_ref/swift/Property/dataTaskWillCacheResponseWithCompletion" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9Alamofire15SessionDelegate39dataTaskWillCacheResponseWithCompletionGSqFTCSo10URLSessionCSo18URLSessionDataTaskCSo17CachedURLResponseFGSqS3__T__T__">dataTaskWillCacheResponseWithCompletion</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Overrides all behavior for URLSessionDataDelegate method <code><a href="../Classes/SessionDelegate.html#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession8dataTaskCSo18URLSessionDataTask17willCacheResponseCSo17CachedURLResponse17completionHandlerFGSqS3__T__T_">urlSession(_:dataTask:willCacheResponse:completionHandler:)</a></code> and
+requires caller to call the <code>completionHandler</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">dataTaskWillCacheResponseWithCompletion</span><span class="p">:</span> <span class="p">((</span><span class="kt">URLSession</span><span class="p">,</span> <span class="kt">URLSessionDataTask</span><span class="p">,</span> <span class="kt">CachedURLResponse</span><span class="p">,</span> <span class="p">(</span><span class="kt">CachedURLResponse</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L93">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/URLSessionDownloadDelegate%20Overrides"></a>
+                <a name="//apple_ref/swift/Section/URLSessionDownloadDelegate Overrides" class="dashAnchor"></a>
+                <a href="#/URLSessionDownloadDelegate%20Overrides">
+                  <h3 class="section-name">URLSessionDownloadDelegate Overrides</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9Alamofire15SessionDelegate37downloadTaskDidFinishDownloadingToURLGSqFTCSo10URLSessionCSo22URLSessionDownloadTaskV10Foundation3URL_T__"></a>
+                    <a name="//apple_ref/swift/Property/downloadTaskDidFinishDownloadingToURL" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9Alamofire15SessionDelegate37downloadTaskDidFinishDownloadingToURLGSqFTCSo10URLSessionCSo22URLSessionDownloadTaskV10Foundation3URL_T__">downloadTaskDidFinishDownloadingToURL</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Overrides default behavior for URLSessionDownloadDelegate method <code><a href="../Classes/SessionDelegate.html#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession12downloadTaskCSo22URLSessionDownloadTask22didFinishDownloadingToV10Foundation3URL_T_">urlSession(_:downloadTask:didFinishDownloadingTo:)</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">downloadTaskDidFinishDownloadingToURL</span><span class="p">:</span> <span class="p">((</span><span class="kt">URLSession</span><span class="p">,</span> <span class="kt">URLSessionDownloadTask</span><span class="p">,</span> <span class="kt">URL</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L98">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9Alamofire15SessionDelegate24downloadTaskDidWriteDataGSqFTCSo10URLSessionCSo22URLSessionDownloadTaskVs5Int64S3_S3__T__"></a>
+                    <a name="//apple_ref/swift/Property/downloadTaskDidWriteData" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9Alamofire15SessionDelegate24downloadTaskDidWriteDataGSqFTCSo10URLSessionCSo22URLSessionDownloadTaskVs5Int64S3_S3__T__">downloadTaskDidWriteData</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Overrides default behavior for URLSessionDownloadDelegate method <code><a href="../Classes/SessionDelegate.html#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession12downloadTaskCSo22URLSessionDownloadTask12didWriteDataVs5Int6417totalBytesWrittenS3_25totalBytesExpectedToWriteS3__T_">urlSession(_:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:)</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">downloadTaskDidWriteData</span><span class="p">:</span> <span class="p">((</span><span class="kt">URLSession</span><span class="p">,</span> <span class="kt">URLSessionDownloadTask</span><span class="p">,</span> <span class="kt">Int64</span><span class="p">,</span> <span class="kt">Int64</span><span class="p">,</span> <span class="kt">Int64</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L101">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9Alamofire15SessionDelegate29downloadTaskDidResumeAtOffsetGSqFTCSo10URLSessionCSo22URLSessionDownloadTaskVs5Int64S3__T__"></a>
+                    <a name="//apple_ref/swift/Property/downloadTaskDidResumeAtOffset" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9Alamofire15SessionDelegate29downloadTaskDidResumeAtOffsetGSqFTCSo10URLSessionCSo22URLSessionDownloadTaskVs5Int64S3__T__">downloadTaskDidResumeAtOffset</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Overrides default behavior for URLSessionDownloadDelegate method <code><a href="../Classes/SessionDelegate.html#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession12downloadTaskCSo22URLSessionDownloadTask17didResumeAtOffsetVs5Int6418expectedTotalBytesS3__T_">urlSession(_:downloadTask:didResumeAtOffset:expectedTotalBytes:)</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">downloadTaskDidResumeAtOffset</span><span class="p">:</span> <span class="p">((</span><span class="kt">URLSession</span><span class="p">,</span> <span class="kt">URLSessionDownloadTask</span><span class="p">,</span> <span class="kt">Int64</span><span class="p">,</span> <span class="kt">Int64</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L104">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/URLSessionStreamDelegate%20Overrides"></a>
+                <a name="//apple_ref/swift/Section/URLSessionStreamDelegate Overrides" class="dashAnchor"></a>
+                <a href="#/URLSessionStreamDelegate%20Overrides">
+                  <h3 class="section-name">URLSessionStreamDelegate Overrides</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9Alamofire15SessionDelegate20streamTaskReadClosedGSqFTCSo10URLSessionCSo20URLSessionStreamTask_T__"></a>
+                    <a name="//apple_ref/swift/Property/streamTaskReadClosed" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9Alamofire15SessionDelegate20streamTaskReadClosedGSqFTCSo10URLSessionCSo20URLSessionStreamTask_T__">streamTaskReadClosed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Overrides default behavior for URLSessionStreamDelegate method <code><a href="../Classes/SessionDelegate.html#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession13readClosedForCSo20URLSessionStreamTask_T_">urlSession(_:readClosedFor:)</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">streamTaskReadClosed</span><span class="p">:</span> <span class="p">((</span><span class="kt">URLSession</span><span class="p">,</span> <span class="kt">URLSessionStreamTask</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L112-L119">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9Alamofire15SessionDelegate21streamTaskWriteClosedGSqFTCSo10URLSessionCSo20URLSessionStreamTask_T__"></a>
+                    <a name="//apple_ref/swift/Property/streamTaskWriteClosed" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9Alamofire15SessionDelegate21streamTaskWriteClosedGSqFTCSo10URLSessionCSo20URLSessionStreamTask_T__">streamTaskWriteClosed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Overrides default behavior for URLSessionStreamDelegate method <code><a href="../Classes/SessionDelegate.html#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession14writeClosedForCSo20URLSessionStreamTask_T_">urlSession(_:writeClosedFor:)</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">streamTaskWriteClosed</span><span class="p">:</span> <span class="p">((</span><span class="kt">URLSession</span><span class="p">,</span> <span class="kt">URLSessionStreamTask</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L123-L130">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9Alamofire15SessionDelegate31streamTaskBetterRouteDiscoveredGSqFTCSo10URLSessionCSo20URLSessionStreamTask_T__"></a>
+                    <a name="//apple_ref/swift/Property/streamTaskBetterRouteDiscovered" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9Alamofire15SessionDelegate31streamTaskBetterRouteDiscoveredGSqFTCSo10URLSessionCSo20URLSessionStreamTask_T__">streamTaskBetterRouteDiscovered</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Overrides default behavior for URLSessionStreamDelegate method <code><a href="../Classes/SessionDelegate.html#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession24betterRouteDiscoveredForCSo20URLSessionStreamTask_T_">urlSession(_:betterRouteDiscoveredFor:)</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">streamTaskBetterRouteDiscovered</span><span class="p">:</span> <span class="p">((</span><span class="kt">URLSession</span><span class="p">,</span> <span class="kt">URLSessionStreamTask</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L134-L141">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9Alamofire15SessionDelegate40streamTaskDidBecomeInputAndOutputStreamsGSqFTCSo10URLSessionCSo20URLSessionStreamTaskCSo11InputStreamCSo12OutputStream_T__"></a>
+                    <a name="//apple_ref/swift/Property/streamTaskDidBecomeInputAndOutputStreams" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9Alamofire15SessionDelegate40streamTaskDidBecomeInputAndOutputStreamsGSqFTCSo10URLSessionCSo20URLSessionStreamTaskCSo11InputStreamCSo12OutputStream_T__">streamTaskDidBecomeInputAndOutputStreams</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Overrides default behavior for URLSessionStreamDelegate method <code><a href="../Classes/SessionDelegate.html#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession10streamTaskCSo20URLSessionStreamTask9didBecomeCSo11InputStream12outputStreamCSo12OutputStream_T_">urlSession(_:streamTask:didBecome:outputStream:)</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">streamTaskDidBecomeInputAndOutputStreams</span><span class="p">:</span> <span class="p">((</span><span class="kt">URLSession</span><span class="p">,</span> <span class="kt">URLSessionStreamTask</span><span class="p">,</span> <span class="kt">InputStream</span><span class="p">,</span> <span class="kt">OutputStream</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L145-L152">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Lifecycle"></a>
+                <a name="//apple_ref/swift/Section/Lifecycle" class="dashAnchor"></a>
+                <a href="#/Lifecycle">
+                  <h3 class="section-name">Lifecycle</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire15SessionDelegatecFT_S0_"></a>
+                    <a name="//apple_ref/swift/Method/init()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire15SessionDelegatecFT_S0_">init()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Initializes the <code>SessionDelegate</code> instance.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">override</span> <span class="nf">init</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The new <code>SessionDelegate</code> instance.</p>
+
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L186-L188">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/NSObject%20Overrides"></a>
+                <a name="//apple_ref/swift/Section/NSObject Overrides" class="dashAnchor"></a>
+                <a href="#/NSObject%20Overrides">
+                  <h3 class="section-name">NSObject Overrides</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire15SessionDelegate8respondsFT2toV10ObjectiveC8Selector_Sb"></a>
+                    <a name="//apple_ref/swift/Method/responds(to:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire15SessionDelegate8respondsFT2toV10ObjectiveC8Selector_Sb">responds(to:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a <code>Bool</code> indicating whether the <code>SessionDelegate</code> implements or inherits a method that can respond
+to a specified message.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">responds</span><span class="p">(</span><span class="n">to</span> <span class="nv">selector</span><span class="p">:</span> <span class="kt">Selector</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>selector</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A selector that identifies a message.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>true</code> if the receiver implements or inherits a method that can respond to selector, otherwise <code>false</code>.</p>
+
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L198-L234">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession25didBecomeInvalidWithErrorGSqPs5Error___T_"></a>
+                    <a name="//apple_ref/swift/Method/urlSession(_:didBecomeInvalidWithError:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession25didBecomeInvalidWithErrorGSqPs5Error___T_">urlSession(_:didBecomeInvalidWithError:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tells the delegate that the session has been invalidated.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">urlSession</span><span class="p">(</span><span class="n">_</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">URLSession</span><span class="p">,</span> <span class="n">didBecomeInvalidWithError</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>session</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The session object that was invalidated.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The error that caused invalidation, or nil if the invalidation was explicit.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L244-L246">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession10didReceiveCSo26URLAuthenticationChallenge17completionHandlerFTOS1_24AuthChallengeDispositionGSqCSo13URLCredential__T__T_"></a>
+                    <a name="//apple_ref/swift/Method/urlSession(_:didReceive:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession10didReceiveCSo26URLAuthenticationChallenge17completionHandlerFTOS1_24AuthChallengeDispositionGSqCSo13URLCredential__T__T_">urlSession(_:didReceive:completionHandler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Requests credentials from the delegate in response to a session-level authentication request from the
+remote server.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">urlSession</span><span class="p">(</span>
+        <span class="n">_</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">URLSession</span><span class="p">,</span>
+        <span class="n">didReceive</span> <span class="nv">challenge</span><span class="p">:</span> <span class="kt">URLAuthenticationChallenge</span><span class="p">,</span>
+        <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">URLSession</span><span class="o">.</span><span class="kt">AuthChallengeDisposition</span><span class="p">,</span> <span class="kt">URLCredential</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>session</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The session containing the task that requested authentication.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>challenge</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An object that contains the request for authentication.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A handler that your delegate method must call providing the disposition and credential.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L255-L287">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire15SessionDelegate25urlSessionDidFinishEventsFT23forBackgroundURLSessionCSo10URLSession_T_"></a>
+                    <a name="//apple_ref/swift/Method/urlSessionDidFinishEvents(forBackgroundURLSession:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire15SessionDelegate25urlSessionDidFinishEventsFT23forBackgroundURLSessionCSo10URLSession_T_">urlSessionDidFinishEvents(forBackgroundURLSession:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tells the delegate that all messages enqueued for a session have been delivered.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">urlSessionDidFinishEvents</span><span class="p">(</span><span class="n">forBackgroundURLSession</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">URLSession</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>session</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The session that no longer has any outstanding requests.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L294-L296">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession4taskCSo14URLSessionTask26willPerformHTTPRedirectionCSo15HTTPURLResponse10newRequestV10Foundation10URLRequest17completionHandlerFGSqS5__T__T_"></a>
+                    <a name="//apple_ref/swift/Method/urlSession(_:task:willPerformHTTPRedirection:newRequest:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession4taskCSo14URLSessionTask26willPerformHTTPRedirectionCSo15HTTPURLResponse10newRequestV10Foundation10URLRequest17completionHandlerFGSqS5__T__T_">urlSession(_:task:willPerformHTTPRedirection:newRequest:completionHandler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tells the delegate that the remote server requested an HTTP redirect.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">urlSession</span><span class="p">(</span>
+        <span class="n">_</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">URLSession</span><span class="p">,</span>
+        <span class="nv">task</span><span class="p">:</span> <span class="kt">URLSessionTask</span><span class="p">,</span>
+        <span class="n">willPerformHTTPRedirection</span> <span class="nv">response</span><span class="p">:</span> <span class="kt">HTTPURLResponse</span><span class="p">,</span>
+        <span class="n">newRequest</span> <span class="nv">request</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">,</span>
+        <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">URLRequest</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>session</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The session containing the task whose request resulted in a redirect.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>task</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The task whose request resulted in a redirect.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>response</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An object containing the server’s response to the original request.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>request</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A URL request object filled out with the new location.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A closure that your handler should call with either the value of the request parameter, a modified URL request object, or NULL to refuse the redirect and return the body of the redirect response.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L313-L332">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession4taskCSo14URLSessionTask10didReceiveCSo26URLAuthenticationChallenge17completionHandlerFTOS1_24AuthChallengeDispositionGSqCSo13URLCredential__T__T_"></a>
+                    <a name="//apple_ref/swift/Method/urlSession(_:task:didReceive:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession4taskCSo14URLSessionTask10didReceiveCSo26URLAuthenticationChallenge17completionHandlerFTOS1_24AuthChallengeDispositionGSqCSo13URLCredential__T__T_">urlSession(_:task:didReceive:completionHandler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Requests credentials from the delegate in response to an authentication request from the remote server.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">urlSession</span><span class="p">(</span>
+        <span class="n">_</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">URLSession</span><span class="p">,</span>
+        <span class="nv">task</span><span class="p">:</span> <span class="kt">URLSessionTask</span><span class="p">,</span>
+        <span class="n">didReceive</span> <span class="nv">challenge</span><span class="p">:</span> <span class="kt">URLAuthenticationChallenge</span><span class="p">,</span>
+        <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">URLSession</span><span class="o">.</span><span class="kt">AuthChallengeDisposition</span><span class="p">,</span> <span class="kt">URLCredential</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>session</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The session containing the task whose request requires authentication.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>task</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The task whose request requires authentication.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>challenge</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An object that contains the request for authentication.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A handler that your delegate method must call providing the disposition and credential.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L341-L365">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession4taskCSo14URLSessionTask17needNewBodyStreamFGSqCSo11InputStream_T__T_"></a>
+                    <a name="//apple_ref/swift/Method/urlSession(_:task:needNewBodyStream:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession4taskCSo14URLSessionTask17needNewBodyStreamFGSqCSo11InputStream_T__T_">urlSession(_:task:needNewBodyStream:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tells the delegate when a task requires a new request body stream to send to the remote server.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">urlSession</span><span class="p">(</span>
+        <span class="n">_</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">URLSession</span><span class="p">,</span>
+        <span class="nv">task</span><span class="p">:</span> <span class="kt">URLSessionTask</span><span class="p">,</span>
+        <span class="n">needNewBodyStream</span> <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">InputStream</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>session</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The session containing the task that needs a new body stream.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>task</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The task that needs a new body stream.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A completion handler that your delegate method should call with the new body stream.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L372-L387">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession4taskCSo14URLSessionTask15didSendBodyDataVs5Int6414totalBytesSentS3_24totalBytesExpectedToSendS3__T_"></a>
+                    <a name="//apple_ref/swift/Method/urlSession(_:task:didSendBodyData:totalBytesSent:totalBytesExpectedToSend:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession4taskCSo14URLSessionTask15didSendBodyDataVs5Int6414totalBytesSentS3_24totalBytesExpectedToSendS3__T_">urlSession(_:task:didSendBodyData:totalBytesSent:totalBytesExpectedToSend:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Periodically informs the delegate of the progress of sending body content to the server.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">urlSession</span><span class="p">(</span>
+        <span class="n">_</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">URLSession</span><span class="p">,</span>
+        <span class="nv">task</span><span class="p">:</span> <span class="kt">URLSessionTask</span><span class="p">,</span>
+        <span class="n">didSendBodyData</span> <span class="nv">bytesSent</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">,</span>
+        <span class="nv">totalBytesSent</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">,</span>
+        <span class="nv">totalBytesExpectedToSend</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>session</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The session containing the data task.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>task</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The data task.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>bytesSent</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The number of bytes sent since the last time this delegate method was called.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>totalBytesSent</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The total number of bytes sent so far.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>totalBytesExpectedToSend</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The expected length of the body data.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L396-L414">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession4taskCSo14URLSessionTask19didFinishCollectingCSo21URLSessionTaskMetrics_T_"></a>
+                    <a name="//apple_ref/swift/Method/urlSession(_:task:didFinishCollecting:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession4taskCSo14URLSessionTask19didFinishCollectingCSo21URLSessionTaskMetrics_T_">urlSession(_:task:didFinishCollecting:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tells the delegate that the session finished collecting metrics for the task.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">urlSession</span><span class="p">(</span><span class="n">_</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">URLSession</span><span class="p">,</span> <span class="nv">task</span><span class="p">:</span> <span class="kt">URLSessionTask</span><span class="p">,</span> <span class="n">didFinishCollecting</span> <span class="nv">metrics</span><span class="p">:</span> <span class="kt">URLSessionTaskMetrics</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>session</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The session collecting the metrics.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>task</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The task whose metrics have been collected.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>metrics</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The collected metrics.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L425-L427">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession4taskCSo14URLSessionTask20didCompleteWithErrorGSqPs5Error___T_"></a>
+                    <a name="//apple_ref/swift/Method/urlSession(_:task:didCompleteWithError:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession4taskCSo14URLSessionTask20didCompleteWithErrorGSqPs5Error___T_">urlSession(_:task:didCompleteWithError:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tells the delegate that the task finished transferring data.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">urlSession</span><span class="p">(</span><span class="n">_</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">URLSession</span><span class="p">,</span> <span class="nv">task</span><span class="p">:</span> <span class="kt">URLSessionTask</span><span class="p">,</span> <span class="n">didCompleteWithError</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>session</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The session containing the task whose request finished transferring data.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>task</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The task whose request finished transferring data.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>error</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>If an error occurred, an error object indicating how the transfer failed, otherwise nil.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L436-L493">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession8dataTaskCSo18URLSessionDataTask10didReceiveCSo11URLResponse17completionHandlerFOS1_19ResponseDispositionT__T_"></a>
+                    <a name="//apple_ref/swift/Method/urlSession(_:dataTask:didReceive:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession8dataTaskCSo18URLSessionDataTask10didReceiveCSo11URLResponse17completionHandlerFOS1_19ResponseDispositionT__T_">urlSession(_:dataTask:didReceive:completionHandler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tells the delegate that the data task received the initial reply (headers) from the server.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">urlSession</span><span class="p">(</span>
+        <span class="n">_</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">URLSession</span><span class="p">,</span>
+        <span class="nv">dataTask</span><span class="p">:</span> <span class="kt">URLSessionDataTask</span><span class="p">,</span>
+        <span class="n">didReceive</span> <span class="nv">response</span><span class="p">:</span> <span class="kt">URLResponse</span><span class="p">,</span>
+        <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">URLSession</span><span class="o">.</span><span class="kt">ResponseDisposition</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>session</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The session containing the data task that received an initial reply.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>dataTask</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The data task that received an initial reply.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>response</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A URL response object populated with headers.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A completion handler that your code calls to continue the transfer, passing a constant to indicate whether the transfer should continue as a data task or should become a download task.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L507-L525">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession8dataTaskCSo18URLSessionDataTask9didBecomeCSo22URLSessionDownloadTask_T_"></a>
+                    <a name="//apple_ref/swift/Method/urlSession(_:dataTask:didBecome:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession8dataTaskCSo18URLSessionDataTask9didBecomeCSo22URLSessionDownloadTask_T_">urlSession(_:dataTask:didBecome:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tells the delegate that the data task was changed to a download task.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">urlSession</span><span class="p">(</span>
+        <span class="n">_</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">URLSession</span><span class="p">,</span>
+        <span class="nv">dataTask</span><span class="p">:</span> <span class="kt">URLSessionDataTask</span><span class="p">,</span>
+        <span class="n">didBecome</span> <span class="nv">downloadTask</span><span class="p">:</span> <span class="kt">URLSessionDownloadTask</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>session</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The session containing the task that was replaced by a download task.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>dataTask</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The data task that was replaced by a download task.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>downloadTask</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The new download task that replaced the data task.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L532-L542">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession8dataTaskCSo18URLSessionDataTask10didReceiveV10Foundation4Data_T_"></a>
+                    <a name="//apple_ref/swift/Method/urlSession(_:dataTask:didReceive:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession8dataTaskCSo18URLSessionDataTask10didReceiveV10Foundation4Data_T_">urlSession(_:dataTask:didReceive:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tells the delegate that the data task has received some of the expected data.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">urlSession</span><span class="p">(</span><span class="n">_</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">URLSession</span><span class="p">,</span> <span class="nv">dataTask</span><span class="p">:</span> <span class="kt">URLSessionDataTask</span><span class="p">,</span> <span class="n">didReceive</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>session</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The session containing the data task that provided data.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>dataTask</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The data task that provided data.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A data object containing the transferred data.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L549-L555">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession8dataTaskCSo18URLSessionDataTask17willCacheResponseCSo17CachedURLResponse17completionHandlerFGSqS3__T__T_"></a>
+                    <a name="//apple_ref/swift/Method/urlSession(_:dataTask:willCacheResponse:completionHandler:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession8dataTaskCSo18URLSessionDataTask17willCacheResponseCSo17CachedURLResponse17completionHandlerFGSqS3__T__T_">urlSession(_:dataTask:willCacheResponse:completionHandler:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Asks the delegate whether the data (or upload) task should store the response in the cache.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">urlSession</span><span class="p">(</span>
+        <span class="n">_</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">URLSession</span><span class="p">,</span>
+        <span class="nv">dataTask</span><span class="p">:</span> <span class="kt">URLSessionDataTask</span><span class="p">,</span>
+        <span class="n">willCacheResponse</span> <span class="nv">proposedResponse</span><span class="p">:</span> <span class="kt">CachedURLResponse</span><span class="p">,</span>
+        <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">CachedURLResponse</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>session</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The session containing the data (or upload) task.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>dataTask</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The data (or upload) task.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>proposedResponse</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The default caching behavior. This behavior is determined based on the current caching policy and the values of certain received headers, such as the Pragma and Cache-Control headers.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completionHandler</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A block that your handler must call, providing either the original proposed response, a modified version of that response, or NULL to prevent caching the response. If your delegate implements this method, it must call this completion handler; otherwise, your app leaks memory.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L568-L591">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession12downloadTaskCSo22URLSessionDownloadTask22didFinishDownloadingToV10Foundation3URL_T_"></a>
+                    <a name="//apple_ref/swift/Method/urlSession(_:downloadTask:didFinishDownloadingTo:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession12downloadTaskCSo22URLSessionDownloadTask22didFinishDownloadingToV10Foundation3URL_T_">urlSession(_:downloadTask:didFinishDownloadingTo:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tells the delegate that a download task has finished downloading.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">urlSession</span><span class="p">(</span>
+        <span class="n">_</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">URLSession</span><span class="p">,</span>
+        <span class="nv">downloadTask</span><span class="p">:</span> <span class="kt">URLSessionDownloadTask</span><span class="p">,</span>
+        <span class="n">didFinishDownloadingTo</span> <span class="nv">location</span><span class="p">:</span> <span class="kt">URL</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>session</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The session containing the download task that finished.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>downloadTask</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The download task that finished.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>location</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A file URL for the temporary file. Because the file is temporary, you must either open the file for reading or move it to a permanent location in your app’s sandbox container directory before returning from this delegate method.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L604-L614">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession12downloadTaskCSo22URLSessionDownloadTask12didWriteDataVs5Int6417totalBytesWrittenS3_25totalBytesExpectedToWriteS3__T_"></a>
+                    <a name="//apple_ref/swift/Method/urlSession(_:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession12downloadTaskCSo22URLSessionDownloadTask12didWriteDataVs5Int6417totalBytesWrittenS3_25totalBytesExpectedToWriteS3__T_">urlSession(_:downloadTask:didWriteData:totalBytesWritten:totalBytesExpectedToWrite:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Periodically informs the delegate about the download’s progress.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">urlSession</span><span class="p">(</span>
+        <span class="n">_</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">URLSession</span><span class="p">,</span>
+        <span class="nv">downloadTask</span><span class="p">:</span> <span class="kt">URLSessionDownloadTask</span><span class="p">,</span>
+        <span class="n">didWriteData</span> <span class="nv">bytesWritten</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">,</span>
+        <span class="nv">totalBytesWritten</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">,</span>
+        <span class="nv">totalBytesExpectedToWrite</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>session</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The session containing the download task.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>downloadTask</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The download task.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>bytesWritten</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The number of bytes transferred since the last time this delegate method was called.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>totalBytesWritten</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The total number of bytes transferred so far.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>totalBytesExpectedToWrite</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The expected length of the file, as provided by the Content-Length header. If this header was not provided, the value is <code>NSURLSessionTransferSizeUnknown</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L626-L644">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession12downloadTaskCSo22URLSessionDownloadTask17didResumeAtOffsetVs5Int6418expectedTotalBytesS3__T_"></a>
+                    <a name="//apple_ref/swift/Method/urlSession(_:downloadTask:didResumeAtOffset:expectedTotalBytes:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession12downloadTaskCSo22URLSessionDownloadTask17didResumeAtOffsetVs5Int6418expectedTotalBytesS3__T_">urlSession(_:downloadTask:didResumeAtOffset:expectedTotalBytes:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tells the delegate that the download task has resumed downloading.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">urlSession</span><span class="p">(</span>
+        <span class="n">_</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">URLSession</span><span class="p">,</span>
+        <span class="nv">downloadTask</span><span class="p">:</span> <span class="kt">URLSessionDownloadTask</span><span class="p">,</span>
+        <span class="n">didResumeAtOffset</span> <span class="nv">fileOffset</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">,</span>
+        <span class="nv">expectedTotalBytes</span><span class="p">:</span> <span class="kt">Int64</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>session</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The session containing the download task that finished.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>downloadTask</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The download task that resumed. See explanation in the discussion.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>fileOffset</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>If the file’s cache policy or last modified date prevents reuse of the existing content, then this value is zero. Otherwise, this value is an integer representing the number of bytes on disk that do not need to be retrieved again.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>expectedTotalBytes</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The expected length of the file, as provided by the Content-Length header. If this header was not provided, the value is NSURLSessionTransferSizeUnknown.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L656-L672">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession13readClosedForCSo20URLSessionStreamTask_T_"></a>
+                    <a name="//apple_ref/swift/Method/urlSession(_:readClosedFor:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession13readClosedForCSo20URLSessionStreamTask_T_">urlSession(_:readClosedFor:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tells the delegate that the read side of the connection has been closed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">urlSession</span><span class="p">(</span><span class="n">_</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">URLSession</span><span class="p">,</span> <span class="n">readClosedFor</span> <span class="nv">streamTask</span><span class="p">:</span> <span class="kt">URLSessionStreamTask</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>session</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The session.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>streamTask</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The stream task.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L685-L687">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession14writeClosedForCSo20URLSessionStreamTask_T_"></a>
+                    <a name="//apple_ref/swift/Method/urlSession(_:writeClosedFor:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession14writeClosedForCSo20URLSessionStreamTask_T_">urlSession(_:writeClosedFor:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tells the delegate that the write side of the connection has been closed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">urlSession</span><span class="p">(</span><span class="n">_</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">URLSession</span><span class="p">,</span> <span class="n">writeClosedFor</span> <span class="nv">streamTask</span><span class="p">:</span> <span class="kt">URLSessionStreamTask</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>session</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The session.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>streamTask</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The stream task.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L693-L695">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession24betterRouteDiscoveredForCSo20URLSessionStreamTask_T_"></a>
+                    <a name="//apple_ref/swift/Method/urlSession(_:betterRouteDiscoveredFor:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession24betterRouteDiscoveredForCSo20URLSessionStreamTask_T_">urlSession(_:betterRouteDiscoveredFor:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tells the delegate that the system has determined that a better route to the host is available.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">urlSession</span><span class="p">(</span><span class="n">_</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">URLSession</span><span class="p">,</span> <span class="n">betterRouteDiscoveredFor</span> <span class="nv">streamTask</span><span class="p">:</span> <span class="kt">URLSessionStreamTask</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>session</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The session.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>streamTask</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The stream task.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L701-L703">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession10streamTaskCSo20URLSessionStreamTask9didBecomeCSo11InputStream12outputStreamCSo12OutputStream_T_"></a>
+                    <a name="//apple_ref/swift/Method/urlSession(_:streamTask:didBecome:outputStream:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire15SessionDelegate10urlSessionFTCSo10URLSession10streamTaskCSo20URLSessionStreamTask9didBecomeCSo11InputStream12outputStreamCSo12OutputStream_T_">urlSession(_:streamTask:didBecome:outputStream:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Tells the delegate that the stream task has been completed and provides the unopened stream objects.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">urlSession</span><span class="p">(</span>
+        <span class="n">_</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">URLSession</span><span class="p">,</span>
+        <span class="nv">streamTask</span><span class="p">:</span> <span class="kt">URLSessionStreamTask</span><span class="p">,</span>
+        <span class="n">didBecome</span> <span class="nv">inputStream</span><span class="p">:</span> <span class="kt">InputStream</span><span class="p">,</span>
+        <span class="nv">outputStream</span><span class="p">:</span> <span class="kt">OutputStream</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>session</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The session.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>streamTask</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The stream task.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>inputStream</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The new input stream.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>outputStream</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The new output stream.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L711-L718">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; YYYY <a class="link" href="https://nshipster.com/alamofire" target="_blank" rel="external">Alamofire</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

@@ -1,0 +1,621 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Response Pipeline  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset="utf-8">
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+
+
+    <a title="Response Pipeline  Reference"></a>
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          Siesta Docs
+        </a>
+         (96% documented)
+      </p>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/bustoutsolutions/siesta">
+            <img class="header-icon" src="img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">Siesta Reference</a>
+      <img class="carat" src="img/carat.png" />
+      Response Pipeline  Reference
+    </p>
+
+    <div class="content-wrapper">
+      <nav class="navigation">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Resources.html">Resources</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/Service.html">Service</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/Resource.html">Resource</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/Entity.html">Entity</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/Configuration.html">Configuration</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/ConfigurationPatternConvertible.html">ConfigurationPatternConvertible</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/TypedContentAccessors.html">TypedContentAccessors</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Observing Resources.html">Observing Resources</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/ResourceObserver.html">ResourceObserver</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Observing Resources.html#/s:6Siesta23ResourceObserverClosure">ResourceObserverClosure</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/ResourceEvent.html">ResourceEvent</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/ResourceEvent/NewDataSource.html">– NewDataSource</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Requests.html">Requests</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/Request.html">Request</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/RequestMethod.html">RequestMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/RequestError.html">RequestError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/RequestError/Cause.html">– Cause</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/Response.html">Response</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/ResponseInfo.html">ResponseInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/RequestChainAction.html">RequestChainAction</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Response Pipeline.html">Response Pipeline</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/Pipeline.html">Pipeline</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/PipelineStage.html">PipelineStage</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/PipelineStage/MutationAction.html">– MutationAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Classes/PipelineStageKey.html">PipelineStageKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/ResponseTransformer.html">ResponseTransformer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/ResponseContentTransformer.html">ResponseContentTransformer</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/InputTypeMismatchAction.html">InputTypeMismatchAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Response Pipeline.html#/s:F6Siesta23JSONResponseTransformerFSbPS_19ResponseTransformer_">JSONResponseTransformer(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Response Pipeline.html#/s:F6Siesta23TextResponseTransformerFSbPS_19ResponseTransformer_">TextResponseTransformer(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Response Pipeline.html#/s:F6Siesta24ImageResponseTransformerFSbPS_19ResponseTransformer_">ImageResponseTransformer(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Caching.html">Caching</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/EntityCache.html">EntityCache</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Network Layer.html">Network Layer</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/NetworkingProvider.html">NetworkingProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/NetworkingProviderConvertible.html">NetworkingProviderConvertible</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/RequestNetworking.html">RequestNetworking</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Network Layer.html#/s:6Siesta35RequestNetworkingCompletionCallback">RequestNetworkingCompletionCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/RequestTransferMetrics.html">RequestTransferMetrics</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/SessionTaskContainer.html">SessionTaskContainer</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Logging.html">Logging</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/LogCategory.html">LogCategory</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Logging.html#/s:v6Siesta6loggerFTOS_11LogCategorySS_T_">logger</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Other Extensions.html">Other Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/NSRegularExpression.html">NSRegularExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/URL.html">URL</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/URLSession.html">URLSession</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/URLSessionConfiguration.html">URLSessionConfiguration</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Other Protocols.html">Other Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Other Protocols.html#/s:P6Siesta15JSONConvertible">JSONConvertible</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Protocols/URLConvertible.html">URLConvertible</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="Other Structs.html">Other Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/URLSessionProvider.html">URLSessionProvider</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+
+        <section class="section">
+          <div class="section-content">
+            <h1>Response Pipeline</h1>
+            
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:V6Siesta8Pipeline"></a>
+                    <a name="//apple_ref/swift/Struct/Pipeline" class="dashAnchor"></a>
+                    <a class="token" href="#/s:V6Siesta8Pipeline">Pipeline</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A sequence of transformation and cache operations that Siesta applies to server responses. A raw response comes in the
+pipeline, and the appropriate data structure for your app comes out the other end. Apps may optionally cache responses
+in one or more of their intermediate forms along the way.</p>
+
+<p>A pipeline has sequence of <strong>stages</strong>, each of which is uniquely identified by a <code><a href="Classes/PipelineStageKey.html">PipelineStageKey</a></code>. Apps can create
+custom stages, and customize their order. Each stage has zero or more <code><a href="Protocols/ResponseTransformer.html">ResponseTransformer</a></code>s, followed by an optional
+<code><a href="Protocols/EntityCache.html">EntityCache</a></code>.</p>
+
+<p>The pipeline is a part of a <code><a href="Structs/Configuration.html">Configuration</a></code>, so you can thus customize the pipeline per API or per resource.</p>
+
+<pre class="highlight plaintext"><code>service.configure {
+  $0.pipeline[.parsing].add(SwiftyJSONTransformer, contentTypes: ["*​/json"])
+  $0.pipeline[.cleanup].add(GithubErrorMessageExtractor())
+  $0.pipeline[.model].cacheUsing(myRealmCache)
+}
+
+service.configureTransformer("/item/​*") {  // Replaces .model stage by default
+  Item(json: $0.content)
+}
+</code></pre>
+
+<p>By default, Siesta pipelines start with parsers for common data types (JSON, text, image) configured at the
+<code><a href="Classes/PipelineStageKey.html#/s:ZvC6Siesta16PipelineStageKey7parsingS0_">PipelineStageKey.parsing</a></code> stage. You can remove these default transformers for individual configurations using calls
+such as <code>clear()</code> and <code>PipelineStage.removeAllTransformers()</code>, or you can disable these default parsers entirely by
+passing <code>useDefaultTransformers: false</code> when creating a <code><a href="Classes/Service.html">Service</a></code>.</p>
+
+<p>Services do not have any persistent caching by default.</p>
+
+                        <a href="Structs/Pipeline.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Pipeline</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:V6Siesta13PipelineStage"></a>
+                    <a name="//apple_ref/swift/Struct/PipelineStage" class="dashAnchor"></a>
+                    <a class="token" href="#/s:V6Siesta13PipelineStage">PipelineStage</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A logical grouping of transformers and a cache.</p>
+
+<p>Why create separate stages?</p>
+
+<p><li>To be able to append, replace, or remove some transformations independently of others, e.g. override the model
+transform without disabling JSON parsing.</li>
+<li>To cache entities at any intermediate stage of processing.</li>
+<li><p>To maintain multiple caches.</p></li>
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <p><code><a href="Structs/Pipeline.html">Pipeline</a></code></p></p>
+
+<p></div></p>
+
+                        <a href="Structs/PipelineStage.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">PipelineStage</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:C6Siesta16PipelineStageKey"></a>
+                    <a name="//apple_ref/swift/Class/PipelineStageKey" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C6Siesta16PipelineStageKey">PipelineStageKey</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An unique identifier for a <code><a href="Structs/PipelineStage.html">PipelineStage</a></code> within a <code><a href="Structs/Pipeline.html">Pipeline</a></code>. Transformers and stages have no intrinsic notion of
+identity or equality, so these keys are the only way to alter transformers after they’re configured.</p>
+
+<p>Stage keys are arbitrary, and have no intrinsic meaning. The descriptions of the default stages are for human
+comprehensibility, and Siesta does not enforce them in any way (e.g. it does not prevent you from configuring the
+<code>rawData</code> stage to output something other than <code>Data</code>).</p>
+
+<p>Because this is not an enum, you can add custom stages:</p>
+
+<pre class="highlight plaintext"><code>extension PipelineStageKey {
+  static let
+    munging   = PipelineStageKey(description: "munging"),
+    twiddling = PipelineStageKey(description: "twiddling")
+}
+
+...
+
+service.configure {
+    $0.pipeline.order = [.rawData, .munging, .twiddling, .cleanup]
+}
+</code></pre>
+
+                        <a href="Classes/PipelineStageKey.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">PipelineStageKey</span><span class="p">:</span> <span class="n">_OpenEnum</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:P6Siesta19ResponseTransformer"></a>
+                    <a name="//apple_ref/swift/Protocol/ResponseTransformer" class="dashAnchor"></a>
+                    <a class="token" href="#/s:P6Siesta19ResponseTransformer">ResponseTransformer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Transforms a response from a less parsed form (e.g. <code>Data</code>) to a more parsed data structure. Responses pass through
+a chain of transformers before being sent to response hooks or observers.</p>
+
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    Transformers run in a GCD background queue, and <strong>must be thread-safe</strong>. You’re in the clear if your
+       transformer touches only its input parameters, and those parameters are value types or otherwise
+       exclusively owned.
+
+</div>
+
+                        <a href="Protocols/ResponseTransformer.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ResponseTransformer</span><span class="p">:</span> <span class="kt">CustomDebugStringConvertible</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Wrapper%20types"></a>
+                <a name="//apple_ref/swift/Section/Wrapper types" class="dashAnchor"></a>
+                <a href="#/Wrapper%20types">
+                  <h3 class="section-name">Wrapper types</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:V6Siesta26ResponseContentTransformer"></a>
+                    <a name="//apple_ref/swift/Struct/ResponseContentTransformer" class="dashAnchor"></a>
+                    <a class="token" href="#/s:V6Siesta26ResponseContentTransformer">ResponseContentTransformer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A simplified <code><a href="Protocols/ResponseTransformer.html">ResponseTransformer</a></code> that deals only with the content of the response entity, and does not touch the
+surrounding metadata.</p>
+
+<p>If <code>processEntity(_:)</code> throws or returns nil, the output is an error.</p>
+
+<p>If the input entity’s content does not match the <code>InputContentType</code>, the response is an error.</p>
+
+                        <a href="Structs/ResponseContentTransformer.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ResponseContentTransformer</span><span class="o">&lt;</span><span class="kt">InputContentType</span><span class="p">,</span> <span class="kt">OutputContentType</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt"><a href="Protocols/ResponseTransformer.html">ResponseTransformer</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:O6Siesta23InputTypeMismatchAction"></a>
+                    <a name="//apple_ref/swift/Enum/InputTypeMismatchAction" class="dashAnchor"></a>
+                    <a class="token" href="#/s:O6Siesta23InputTypeMismatchAction">InputTypeMismatchAction</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Action to take when actual input type at runtime does not match expected input type declared in code.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <code><a href="Structs/ResponseContentTransformer.html#/s:FV6Siesta26ResponseContentTransformercFT19onInputTypeMismatchOS_23InputTypeMismatchAction15transformErrorsSb9processorFzGVS_6Entityx_GSqq___GS0_xq__">ResponseContentTransformer.init(...)</a></code>
+
+</div>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <code><a href="Classes/Service.html#/s:FC6Siesta7Service20configureTransformeru0_rFTPS_31ConfigurationPatternConvertible_14requestMethodsGSqGSaOS_13RequestMethod__7atStageCS_16PipelineStageKey6actionOVS_13PipelineStage14MutationAction19onInputTypeMismatchOS_23InputTypeMismatchAction15transformErrorsSb11descriptionGSqSS_16contentTransformFzGVS_6Entityx_GSqq___T_">Service.configureTransformer(...)</a></code>
+
+</div>
+
+                        <a href="Enums/InputTypeMismatchAction.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">InputTypeMismatchAction</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Transformers%20for%20standard%20types"></a>
+                <a name="//apple_ref/swift/Section/Transformers for standard types" class="dashAnchor"></a>
+                <a href="#/Transformers%20for%20standard%20types">
+                  <h3 class="section-name">Transformers for standard types</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:F6Siesta23JSONResponseTransformerFSbPS_19ResponseTransformer_"></a>
+                    <a name="//apple_ref/swift/Function/JSONResponseTransformer(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:F6Siesta23JSONResponseTransformerFSbPS_19ResponseTransformer_">JSONResponseTransformer(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Parses <code>Data</code> content as JSON, outputting either a dictionary or an array.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="kt">JSONResponseTransformer</span><span class="p">(</span><span class="n">_</span> <span class="nv">transformErrors</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="Protocols/ResponseTransformer.html">ResponseTransformer</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:F6Siesta23TextResponseTransformerFSbPS_19ResponseTransformer_"></a>
+                    <a name="//apple_ref/swift/Function/TextResponseTransformer(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:F6Siesta23TextResponseTransformerFSbPS_19ResponseTransformer_">TextResponseTransformer(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Parses <code>Data</code> content as text, using the encoding specified in the content type, or ISO-8859-1 by default.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="kt">TextResponseTransformer</span><span class="p">(</span><span class="n">_</span> <span class="nv">transformErrors</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="Protocols/ResponseTransformer.html">ResponseTransformer</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:F6Siesta24ImageResponseTransformerFSbPS_19ResponseTransformer_"></a>
+                    <a name="//apple_ref/swift/Function/ImageResponseTransformer(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:F6Siesta24ImageResponseTransformerFSbPS_19ResponseTransformer_">ImageResponseTransformer(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Parses <code>Data</code> content as an image, yielding a <code>UIImage</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="kt">ImageResponseTransformer</span><span class="p">(</span><span class="n">_</span> <span class="nv">transformErrors</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="Protocols/ResponseTransformer.html">ResponseTransformer</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+      </article>
+    </div>
+    <section class="footer">
+      <p>© 2016 <a class="link" href="http://bustoutsolutions.com" target="_blank" rel="external">Bust Out Solutions</a> under <a class="link" href="https://github.com/bustoutsolutions/siesta/blob/master/LICENSE" target="_blank" rel="external">open source license</a>.</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
+  </body>
+</div>
+</html>

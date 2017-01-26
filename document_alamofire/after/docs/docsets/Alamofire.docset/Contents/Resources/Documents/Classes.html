@@ -13,9 +13,9 @@
     <a title="Classes  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">Alamofire Docs</a> (85% documented)</p>
+        <p><a href="index.html">Alamofire Docs</a> (86% documented)</p>
         <p class="header-right"><a href="https://github.com/Alamofire/Alamofire"><img src="img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://http%3A%2F%2Fstatic%2Erealm%2Eio%2Fjazzy_demo%2FAlamofire%2Fdocsets%2FAlamofire%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fstatic%2Erealm%2Eio%2Fjazzy_demo%2FAlamofire%2Fdocsets%2FAlamofire%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -32,13 +32,13 @@
             <a href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Classes/Manager.html">Manager</a>
+                <a href="Classes/DataRequest.html">DataRequest</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/Manager/SessionDelegate.html">– SessionDelegate</a>
+                <a href="Classes/DownloadRequest.html">DownloadRequest</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/Manager.html#/s:OC9Alamofire7Manager31MultipartFormDataEncodingResult">– MultipartFormDataEncodingResult</a>
+                <a href="Classes/DownloadRequest/DownloadOptions.html">– DownloadOptions</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/MultipartFormData.html">MultipartFormData</a>
@@ -56,13 +56,28 @@
                 <a href="Classes/Request.html">Request</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/Request/TaskDelegate.html">– TaskDelegate</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Classes/Request.html#/s:OC9Alamofire7Request16ValidationResult">– ValidationResult</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/ServerTrustPolicyManager.html">ServerTrustPolicyManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SessionDelegate.html">SessionDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SessionManager.html">SessionManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SessionManager.html#/s:OC9Alamofire14SessionManager31MultipartFormDataEncodingResult">– MultipartFormDataEncodingResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes.html#/s:C9Alamofire13StreamRequest">StreamRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/TaskDelegate.html">TaskDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/UploadRequest.html">UploadRequest</a>
               </li>
             </ul>
           </li>
@@ -70,10 +85,22 @@
             <a href="Enums.html">Enums</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Enums.html#/s:O9Alamofire6Method">Method</a>
+                <a href="Enums/AFError.html">AFError</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums/ParameterEncoding.html">ParameterEncoding</a>
+                <a href="Enums/AFError.html#/s:OO9Alamofire7AFError30ParameterEncodingFailureReason">– ParameterEncodingFailureReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/AFError.html#/s:OO9Alamofire7AFError30MultipartEncodingFailureReason">– MultipartEncodingFailureReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/AFError.html#/s:OO9Alamofire7AFError31ResponseValidationFailureReason">– ResponseValidationFailureReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/AFError.html#/s:OO9Alamofire7AFError34ResponseSerializationFailureReason">– ResponseSerializationFailureReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums.html#/s:O9Alamofire10HTTPMethod">HTTPMethod</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/Result.html">Result</a>
@@ -87,10 +114,22 @@
             <a href="Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Extensions.html#/c:objc(cs)NSURLRequest">NSURLRequest</a>
+                <a href="Extensions/Notification.html">Notification</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions.html#/s:SS">String</a>
+                <a href="Extensions/Notification/Task.html">– Task</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Notification/Key.html">– Key</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/URL.html">URL</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/URLComponents.html">URLComponents</a>
               </li>
             </ul>
           </li>
@@ -98,46 +137,52 @@
             <a href="Functions.html">Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Functions.html#/s:ZF9Alamofireoi2eeFTOCS_26NetworkReachabilityManager25NetworkReachabilityStatusS1__Sb">==(_:_:)</a>
+                <a href="Functions.html#/s:F9Alamofireoi2eeFTOCS_26NetworkReachabilityManager25NetworkReachabilityStatusS1__Sb">==(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:F9Alamofire8downloadFTOS_6MethodPS_20URLStringConvertible_10parametersGSqGVs10DictionarySSPs9AnyObject___8encodingOS_17ParameterEncoding7headersGSqGS2_SSSS__11destinationFTCSo5NSURLCSo17NSHTTPURLResponse_S5__CS_7Request">download(_:_:parameters:encoding:headers:destination:)</a>
+                <a href="Functions.html#/s:F9Alamofire8downloadFTPS_14URLConvertible_6methodOS_10HTTPMethod10parametersGSqGVs10DictionarySSP___8encodingPS_17ParameterEncoding_7headersGSqGS2_SSSS__2toGSqFTV10Foundation3URLCSo15HTTPURLResponse_T14destinationURLS5_7optionsVCS_15DownloadRequest15DownloadOptions___S7_">download(_:method:parameters:encoding:headers:to:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:F9Alamofire8downloadFTPS_21URLRequestConvertible_11destinationFTCSo5NSURLCSo17NSHTTPURLResponse_S1__CS_7Request">download(_:destination:)</a>
+                <a href="Functions.html#/s:F9Alamofire8downloadFTPS_21URLRequestConvertible_2toGSqFTV10Foundation3URLCSo15HTTPURLResponse_T14destinationURLS2_7optionsVCS_15DownloadRequest15DownloadOptions___S4_">download(_:to:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:F9Alamofire8downloadFT10resumeDataCSo6NSData11destinationFTCSo5NSURLCSo17NSHTTPURLResponse_S1__CS_7Request">download(resumeData:destination:)</a>
+                <a href="Functions.html#/s:F9Alamofire8downloadFT12resumingWithV10Foundation4Data2toGSqFTVS0_3URLCSo15HTTPURLResponse_T14destinationURLS2_7optionsVCS_15DownloadRequest15DownloadOptions___S4_">download(resumingWith:to:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:F9Alamofire7requestFPS_21URLRequestConvertible_CS_7Request">request(_:)</a>
+                <a href="Functions.html#/s:F9Alamofire7requestFPS_21URLRequestConvertible_CS_11DataRequest">request(_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:F9Alamofire7requestFTOS_6MethodPS_20URLStringConvertible_10parametersGSqGVs10DictionarySSPs9AnyObject___8encodingOS_17ParameterEncoding7headersGSqGS2_SSSS___CS_7Request">request(_:_:parameters:encoding:headers:)</a>
+                <a href="Functions.html#/s:F9Alamofire7requestFTPS_14URLConvertible_6methodOS_10HTTPMethod10parametersGSqGVs10DictionarySSP___8encodingPS_17ParameterEncoding_7headersGSqGS2_SSSS___CS_11DataRequest">request(_:method:parameters:encoding:headers:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:F9Alamofire6uploadFTOS_6MethodPS_20URLStringConvertible_7headersGSqGVs10DictionarySSSS__4dataCSo6NSData_CS_7Request">upload(_:_:headers:data:)</a>
+                <a href="Functions.html#/s:F9Alamofire6streamFT4withCSo10NetService_CS_13StreamRequest">stream(with:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:F9Alamofire6uploadFTOS_6MethodPS_20URLStringConvertible_7headersGSqGVs10DictionarySSSS__4fileCSo5NSURL_CS_7Request">upload(_:_:headers:file:)</a>
+                <a href="Functions.html#/s:F9Alamofire6streamFT12withHostNameSS4portSi_CS_13StreamRequest">stream(withHostName:port:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:F9Alamofire6uploadFTOS_6MethodPS_20URLStringConvertible_7headersGSqGVs10DictionarySSSS__17multipartFormDataFCS_17MultipartFormDataT_23encodingMemoryThresholdVs6UInt6418encodingCompletionGSqFOCS_7Manager31MultipartFormDataEncodingResultT___T_">upload(_:_:headers:multipartFormData:encodingMemoryThreshold:encodingCompletion:)</a>
+                <a href="Functions.html#/s:F9Alamofire6uploadFTCSo11InputStream2toPS_14URLConvertible_6methodOS_10HTTPMethod7headersGSqGVs10DictionarySSSS___CS_13UploadRequest">upload(_:to:method:headers:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:F9Alamofire6uploadFTOS_6MethodPS_20URLStringConvertible_7headersGSqGVs10DictionarySSSS__6streamCSo13NSInputStream_CS_7Request">upload(_:_:headers:stream:)</a>
+                <a href="Functions.html#/s:F9Alamofire6uploadFTV10Foundation3URL2toPS_14URLConvertible_6methodOS_10HTTPMethod7headersGSqGVs10DictionarySSSS___CS_13UploadRequest">upload(_:to:method:headers:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:F9Alamofire6uploadFTPS_21URLRequestConvertible_4dataCSo6NSData_CS_7Request">upload(_:data:)</a>
+                <a href="Functions.html#/s:F9Alamofire6uploadFTV10Foundation4Data2toPS_14URLConvertible_6methodOS_10HTTPMethod7headersGSqGVs10DictionarySSSS___CS_13UploadRequest">upload(_:to:method:headers:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:F9Alamofire6uploadFTPS_21URLRequestConvertible_4fileCSo5NSURL_CS_7Request">upload(_:file:)</a>
+                <a href="Functions.html#/s:F9Alamofire6uploadFTCSo11InputStream4withPS_21URLRequestConvertible__CS_13UploadRequest">upload(_:with:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:F9Alamofire6uploadFTPS_21URLRequestConvertible_17multipartFormDataFCS_17MultipartFormDataT_23encodingMemoryThresholdVs6UInt6418encodingCompletionGSqFOCS_7Manager31MultipartFormDataEncodingResultT___T_">upload(_:multipartFormData:encodingMemoryThreshold:encodingCompletion:)</a>
+                <a href="Functions.html#/s:F9Alamofire6uploadFTV10Foundation3URL4withPS_21URLRequestConvertible__CS_13UploadRequest">upload(_:with:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:F9Alamofire6uploadFTPS_21URLRequestConvertible_6streamCSo13NSInputStream_CS_7Request">upload(_:stream:)</a>
+                <a href="Functions.html#/s:F9Alamofire6uploadFTV10Foundation4Data4withPS_21URLRequestConvertible__CS_13UploadRequest">upload(_:with:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:F9Alamofire6uploadFT17multipartFormDataFCS_17MultipartFormDataT_14usingThresholdVs6UInt642toPS_14URLConvertible_6methodOS_10HTTPMethod7headersGSqGVs10DictionarySSSS__18encodingCompletionGSqFOCS_14SessionManager31MultipartFormDataEncodingResultT___T_">upload(multipartFormData:usingThreshold:to:method:headers:encodingCompletion:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:F9Alamofire6uploadFT17multipartFormDataFCS_17MultipartFormDataT_14usingThresholdVs6UInt644withPS_21URLRequestConvertible_18encodingCompletionGSqFOCS_14SessionManager31MultipartFormDataEncodingResultT___T_">upload(multipartFormData:usingThreshold:with:encodingCompletion:)</a>
               </li>
             </ul>
           </li>
@@ -145,13 +190,25 @@
             <a href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Protocols/ResponseSerializerType.html">ResponseSerializerType</a>
+                <a href="Protocols/DataResponseSerializerProtocol.html">DataResponseSerializerProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/DownloadResponseSerializerProtocol.html">DownloadResponseSerializerProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/ParameterEncoding.html">ParameterEncoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/RequestAdapter.html">RequestAdapter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/RequestRetrier.html">RequestRetrier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/URLConvertible.html">URLConvertible</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/URLRequestConvertible.html">URLRequestConvertible</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Protocols/URLStringConvertible.html">URLStringConvertible</a>
               </li>
             </ul>
           </li>
@@ -159,28 +216,37 @@
             <a href="Structs.html">Structs</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Structs/Error.html">Error</a>
+                <a href="Structs/DataResponse.html">DataResponse</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/Error.html#/s:OV9Alamofire5Error4Code">– Code</a>
+                <a href="Structs/DataResponseSerializer.html">DataResponseSerializer</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/Error/UserInfoKeys.html">– UserInfoKeys</a>
+                <a href="Structs/DefaultDataResponse.html">DefaultDataResponse</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/Notifications.html">Notifications</a>
+                <a href="Structs/DefaultDownloadResponse.html">DefaultDownloadResponse</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/Notifications/Task.html">– Task</a>
+                <a href="Structs/DownloadResponse.html">DownloadResponse</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/Response.html">Response</a>
+                <a href="Structs/DownloadResponseSerializer.html">DownloadResponseSerializer</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/ResponseSerializer.html">ResponseSerializer</a>
+                <a href="Structs/JSONEncoding.html">JSONEncoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/PropertyListEncoding.html">PropertyListEncoding</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/Timeline.html">Timeline</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/URLEncoding.html">URLEncoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/URLEncoding.html#/s:OV9Alamofire11URLEncoding11Destination">– Destination</a>
               </li>
             </ul>
           </li>
@@ -188,10 +254,19 @@
             <a href="Typealiases.html">Typealiases</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Typealiases.html#/s:C9Alamofire7Request23DownloadFileDestination">DownloadFileDestination</a>
+                <a href="Typealiases.html#/s:9Alamofire11HTTPHeaders">HTTPHeaders</a>
               </li>
               <li class="nav-group-task">
-                <a href="Typealiases.html#/s:C9Alamofire7Request10Validation">Validation</a>
+                <a href="Typealiases.html#/s:9Alamofire10Parameters">Parameters</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:9Alamofire22RequestRetryCompletion">RequestRetryCompletion</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:C9Alamofire11DataRequest10Validation">Validation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:C9Alamofire15DownloadRequest10Validation">Validation</a>
               </li>
             </ul>
           </li>
@@ -210,9 +285,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:C9Alamofire7Manager"></a>
-                    <a name="//apple_ref/swift/Class/Manager" class="dashAnchor"></a>
-                    <a class="token" href="#/s:C9Alamofire7Manager">Manager</a>
+                    <a name="/s:C9Alamofire15SessionDelegate"></a>
+                    <a name="//apple_ref/swift/Class/SessionDelegate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C9Alamofire15SessionDelegate">SessionDelegate</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -220,20 +295,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Responsible for creating and managing <code><a href="Classes/Request.html">Request</a></code> objects, as well as their underlying <code>NSURLSession</code>.</p>
+                        <p>Responsible for handling all delegate callbacks for the underlying session.</p>
 
-                        <a href="Classes/Manager.html" class="slightly-smaller">See more</a>
+                        <a href="Classes/SessionDelegate.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Manager</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">SessionDelegate</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/3.4.0/Source/Manager.swift#L30-L755">Show on GitHub</a>
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionDelegate.swift#L28-L235">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -255,8 +330,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Responsible for sending a request and receiving the response and associated data from the server, as well as 
-managing its underlying <code>NSURLSessionTask</code>.</p>
+                        <p>Responsible for sending a request and receiving the response and associated data from the server, as well as
+managing its underlying <code>URLSessionTask</code>.</p>
 
                         <a href="Classes/Request.html" class="slightly-smaller">See more</a>
                       </div>
@@ -264,12 +339,186 @@ managing its underlying <code>NSURLSessionTask</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Request</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">Request</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/3.4.0/Source/Request.swift#L31-L454">Show on GitHub</a>
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/Request.swift#L73-L237">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:C9Alamofire11DataRequest"></a>
+                    <a name="//apple_ref/swift/Class/DataRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C9Alamofire11DataRequest">DataRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specific type of <code><a href="Classes/Request.html">Request</a></code> that manages an underlying <code>URLSessionDataTask</code>.</p>
+
+                        <a href="Classes/DataRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">DataRequest</span><span class="p">:</span> <span class="kt"><a href="Classes/Request.html">Request</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/Request.swift#L349-L411">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:C9Alamofire15DownloadRequest"></a>
+                    <a name="//apple_ref/swift/Class/DownloadRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C9Alamofire15DownloadRequest">DownloadRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specific type of <code><a href="Classes/Request.html">Request</a></code> that manages an underlying <code>URLSessionDownloadTask</code>.</p>
+
+                        <a href="Classes/DownloadRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">DownloadRequest</span><span class="p">:</span> <span class="kt"><a href="Classes/Request.html">Request</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/Request.swift#L416-L546">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:C9Alamofire13UploadRequest"></a>
+                    <a name="//apple_ref/swift/Class/UploadRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C9Alamofire13UploadRequest">UploadRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specific type of <code><a href="Classes/Request.html">Request</a></code> that manages an underlying <code>URLSessionUploadTask</code>.</p>
+
+                        <a href="Classes/UploadRequest.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">UploadRequest</span><span class="p">:</span> <span class="kt"><a href="Classes/DataRequest.html">DataRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/Request.swift#L551-L619">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:C9Alamofire13StreamRequest"></a>
+                    <a name="//apple_ref/swift/Class/StreamRequest" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C9Alamofire13StreamRequest">StreamRequest</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Specific type of <code><a href="Classes/Request.html">Request</a></code> that manages an underlying <code>URLSessionStreamTask</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">StreamRequest</span><span class="p">:</span> <span class="kt"><a href="Classes/Request.html">Request</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/Request.swift#L627-L645">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:C9Alamofire14SessionManager"></a>
+                    <a name="//apple_ref/swift/Class/SessionManager" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C9Alamofire14SessionManager">SessionManager</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Responsible for creating and managing <code><a href="Classes/Request.html">Request</a></code> objects, as well as their underlying <code>NSURLSession</code>.</p>
+
+                        <a href="Classes/SessionManager.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">SessionManager</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionManager.swift#L28-L891">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -291,10 +540,10 @@ managing its underlying <code>NSURLSessionTask</code>.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Constructs <code>multipart/form-data</code> for uploads within an HTTP or HTTPS body. There are currently two ways to encode 
-multipart form data. The first way is to encode the data directly in memory. This is very efficient, but can lead 
-to memory issues if the dataset is too large. The second way is designed for larger datasets and will write all the 
-data to a single file on disk with all the proper boundary segmentation. The second approach MUST be used for 
+                        <p>Constructs <code>multipart/form-data</code> for uploads within an HTTP or HTTPS body. There are currently two ways to encode
+multipart form data. The first way is to encode the data directly in memory. This is very efficient, but can lead
+to memory issues if the dataset is too large. The second way is designed for larger datasets and will write all the
+data to a single file on disk with all the proper boundary segmentation. The second approach MUST be used for
 larger datasets such as video content, otherwise your app may run out of memory when trying to encode the dataset.</p>
 
 <p>For more information on <code>multipart/form-data</code> in general, please refer to the RFC-2388 and RFC-2045 specs as well
@@ -312,12 +561,12 @@ and the w3 form documentation.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">MultipartFormData</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">MultipartFormData</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/3.4.0/Source/MultipartFormData.swift#L47-L659">Show on GitHub</a>
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/MultipartFormData.swift#L45-L581">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -347,12 +596,12 @@ and the w3 form documentation.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ServerTrustPolicyManager</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">ServerTrustPolicyManager</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/3.4.0/Source/ServerTrustPolicy.swift#L28-L61">Show on GitHub</a>
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/ServerTrustPolicy.swift#L28-L57">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -392,7 +641,43 @@ request, as it&rsquo;s possible that an initial request may be required to estab
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/3.4.0/Source/NetworkReachabilityManager.swift#L38-L222">Show on GitHub</a>
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/NetworkReachabilityManager.swift#L36-L201">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:C9Alamofire12TaskDelegate"></a>
+                    <a name="//apple_ref/swift/Class/TaskDelegate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C9Alamofire12TaskDelegate">TaskDelegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The task delegate is responsible for handling all delegate callbacks for the underlying task as well as
+executing all operations attached to the serial operation queue upon task completion.</p>
+
+                        <a href="Classes/TaskDelegate.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">TaskDelegate</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/TaskDelegate.swift#L29-L170">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

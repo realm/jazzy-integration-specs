@@ -1,192 +1,301 @@
-COCOAPODS_SKIP_UPDATE_MESSAGE=TRUE JAZZY_FAKE_DATE=YYYY-MM-DD JAZZY_FAKE_VERSION=X.X.X JAZZY_INTEGRATION_SPECS=TRUE ruby ROOT/bin/jazzy --podspec=Moya.podspec 2>&1
+COCOAPODS_SKIP_UPDATE_MESSAGE=TRUE JAZZY_FAKE_DATE=YYYY-MM-DD JAZZY_FAKE_VERSION=X.X.X JAZZY_INTEGRATION_SPECS=TRUE ruby ROOT/bin/jazzy --podspec=Moya.podspec --swift-version=3.0 2>&1
 Analyzing dependencies
 Fetching podspec for `Moya` from `ROOT/tmp/document_moya_podspec`
 Downloading dependencies
-[32mInstalling Alamofire (3.5.1)[0m
-[32mInstalling Moya (6.5.0)[0m
-[32mInstalling ReactiveCocoa (4.2.2)[0m
-[32mInstalling Result (2.1.3)[0m
-[32mInstalling RxSwift (2.6.1)[0m
+[32mInstalling Alamofire (4.2.0)[0m
+[32mInstalling Moya (8.0.1)[0m
+[32mInstalling ReactiveSwift (1.0.0)[0m
+[32mInstalling Result (3.1.0)[0m
+[32mInstalling RxSwift (3.1.0)[0m
 Generating Pods project
 Skipping User Project Integration
-[32mPod installation complete! There are 4 dependencies from the Podfile and 5 total pods installed.[0m
+[32mPod installation complete! There are 5 dependencies from the Podfile and 5 total pods installed.[0m
 Running xcodebuild
-Parsing CredentialsPlugin.swift (1/10)
-Parsing Endpoint.swift (2/10)
-Parsing Error.swift (3/10)
-Parsing Image.swift (4/10)
-Parsing Moya+Alamofire.swift (5/10)
-Parsing Moya.swift (6/10)
-Parsing NetworkActivityPlugin.swift (7/10)
-Parsing NetworkLoggerPlugin.swift (8/10)
-Parsing Plugin.swift (9/10)
-Parsing Response.swift (10/10)
+Parsing AccessTokenPlugin.swift (1/18)
+Parsing Cancellable.swift (2/18)
+Parsing CredentialsPlugin.swift (3/18)
+Parsing Endpoint.swift (4/18)
+Parsing Image.swift (5/18)
+Parsing Moya+Alamofire.swift (6/18)
+Parsing MoyaAvailability.swift (7/18)
+Parsing MoyaError.swift (8/18)
+Parsing MoyaProvider+Defaults.swift (9/18)
+Parsing MoyaProvider+Internal.swift (10/18)
+Parsing MoyaProvider.swift (11/18)
+Parsing MultipartFormData.swift (12/18)
+Parsing MultiTarget.swift (13/18)
+Parsing NetworkActivityPlugin.swift (14/18)
+Parsing NetworkLoggerPlugin.swift (15/18)
+Parsing Plugin.swift (16/18)
+Parsing Response.swift (17/18)
+Parsing TargetType.swift (18/18)
 Running xcodebuild
-Parsing CredentialsPlugin.swift (1/10)
-Parsing Endpoint.swift (2/10)
-Parsing Error.swift (3/10)
-Parsing Image.swift (4/10)
-Parsing Moya+Alamofire.swift (5/10)
-Parsing Moya.swift (6/10)
-Parsing NetworkActivityPlugin.swift (7/10)
-Parsing NetworkLoggerPlugin.swift (8/10)
-Parsing Plugin.swift (9/10)
-Parsing Response.swift (10/10)
+Parsing AccessTokenPlugin.swift (1/18)
+Parsing Cancellable.swift (2/18)
+Parsing CredentialsPlugin.swift (3/18)
+Parsing Endpoint.swift (4/18)
+Parsing Image.swift (5/18)
+Parsing Moya+Alamofire.swift (6/18)
+Parsing MoyaAvailability.swift (7/18)
+Parsing MoyaError.swift (8/18)
+Parsing MoyaProvider+Defaults.swift (9/18)
+Parsing MoyaProvider+Internal.swift (10/18)
+Parsing MoyaProvider.swift (11/18)
+Parsing MultipartFormData.swift (12/18)
+Parsing MultiTarget.swift (13/18)
+Parsing NetworkActivityPlugin.swift (14/18)
+Parsing NetworkLoggerPlugin.swift (15/18)
+Parsing Plugin.swift (16/18)
+Parsing Response.swift (17/18)
+Parsing TargetType.swift (18/18)
 Running xcodebuild
-Parsing CredentialsPlugin.swift (1/13)
-Parsing Endpoint.swift (2/13)
-Parsing Error.swift (3/13)
-Parsing Image.swift (4/13)
-Parsing Moya+Alamofire.swift (5/13)
-Parsing Moya+ReactiveCocoa.swift (6/13)
-Parsing Moya.swift (7/13)
-Parsing NetworkActivityPlugin.swift (8/13)
-Parsing NetworkLoggerPlugin.swift (9/13)
-Parsing Plugin.swift (10/13)
-Parsing RACSignal+Moya.swift (11/13)
-Parsing Response.swift (12/13)
-Parsing SignalProducer+Moya.swift (13/13)
+Parsing AccessTokenPlugin.swift (1/21)
+Parsing Cancellable.swift (2/21)
+Parsing CredentialsPlugin.swift (3/21)
+Parsing Endpoint.swift (4/21)
+Parsing Image.swift (5/21)
+Parsing Moya+Alamofire.swift (6/21)
+Parsing MoyaAvailability.swift (7/21)
+Parsing MoyaError.swift (8/21)
+Parsing MoyaProvider+Defaults.swift (9/21)
+Parsing MoyaProvider+Internal.swift (10/21)
+Parsing MoyaProvider.swift (11/21)
+Parsing MultipartFormData.swift (12/21)
+Parsing MultiTarget.swift (13/21)
+Parsing NetworkActivityPlugin.swift (14/21)
+Parsing NetworkLoggerPlugin.swift (15/21)
+Parsing Plugin.swift (16/21)
+Parsing ReactiveMoyaAvailability.swift (17/21)
+Parsing ReactiveSwiftMoyaProvider.swift (18/21)
+Parsing Response.swift (19/21)
+Parsing SignalProducer+Response.swift (20/21)
+Parsing TargetType.swift (21/21)
 Running xcodebuild
-Parsing CredentialsPlugin.swift (1/12)
-Parsing Endpoint.swift (2/12)
-Parsing Error.swift (3/12)
-Parsing Image.swift (4/12)
-Parsing Moya+Alamofire.swift (5/12)
-Parsing Moya+RxSwift.swift (6/12)
-Parsing Moya.swift (7/12)
-Parsing NetworkActivityPlugin.swift (8/12)
-Parsing NetworkLoggerPlugin.swift (9/12)
-Parsing Observable+Moya.swift (10/12)
-Parsing Plugin.swift (11/12)
-Parsing Response.swift (12/12)
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: class CredentialsPlugin, class CredentialsPlugin, class CredentialsPlugin, class CredentialsPlugin
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method init(credentialsClosure:), instance method init(credentialsClosure:), instance method init(credentialsClosure:), instance method init(credentialsClosure:)
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method willSendRequest(_:target:), instance method willSendRequest(_:target:), instance method willSendRequest(_:target:), instance method willSendRequest(_:target:)
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method didReceiveResponse(_:target:), instance method didReceiveResponse(_:target:), instance method didReceiveResponse(_:target:), instance method didReceiveResponse(_:target:)
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum EndpointSampleResponse, enum EndpointSampleResponse, enum EndpointSampleResponse, enum EndpointSampleResponse
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element NetworkResponse, enum element NetworkResponse, enum element NetworkResponse, enum element NetworkResponse
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element NetworkError, enum element NetworkError, enum element NetworkError, enum element NetworkError
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: class Endpoint, class Endpoint, class Endpoint, class Endpoint
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable URL, instance variable URL, instance variable URL, instance variable URL
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable method, instance variable method, instance variable method, instance variable method
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable sampleResponseClosure, instance variable sampleResponseClosure, instance variable sampleResponseClosure, instance variable sampleResponseClosure
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable parameters, instance variable parameters, instance variable parameters, instance variable parameters
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable parameterEncoding, instance variable parameterEncoding, instance variable parameterEncoding, instance variable parameterEncoding
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable httpHeaderFields, instance variable httpHeaderFields, instance variable httpHeaderFields, instance variable httpHeaderFields
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method init(URL:sampleResponseClosure:method:parameters:parameterEncoding:httpHeaderFields:), instance method init(URL:sampleResponseClosure:method:parameters:parameterEncoding:httpHeaderFields:), instance method init(URL:sampleResponseClosure:method:parameters:parameterEncoding:httpHeaderFields:), instance method init(URL:sampleResponseClosure:method:parameters:parameterEncoding:httpHeaderFields:)
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method endpointByAddingParameters(_:), instance method endpointByAddingParameters(_:), instance method endpointByAddingParameters(_:), instance method endpointByAddingParameters(_:)
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method endpointByAddingHTTPHeaderFields(_:), instance method endpointByAddingHTTPHeaderFields(_:), instance method endpointByAddingHTTPHeaderFields(_:), instance method endpointByAddingHTTPHeaderFields(_:)
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method endpointByAddingParameterEncoding(_:), instance method endpointByAddingParameterEncoding(_:), instance method endpointByAddingParameterEncoding(_:), instance method endpointByAddingParameterEncoding(_:)
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method endpointByAdding(parameters:httpHeaderFields:parameterEncoding:), instance method endpointByAdding(parameters:httpHeaderFields:parameterEncoding:), instance method endpointByAdding(parameters:httpHeaderFields:parameterEncoding:), instance method endpointByAdding(parameters:httpHeaderFields:parameterEncoding:)
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable urlRequest, instance variable urlRequest, instance variable urlRequest, instance variable urlRequest
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable hashValue, instance variable hashValue, instance variable hashValue, instance variable hashValue
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: function ==(_:_:), function ==(_:_:), function ==(_:_:), function ==(_:_:)
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: generic type parameter T, generic type parameter T, generic type parameter T, generic type parameter T
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum Error, enum Error, enum Error, enum Error
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element ImageMapping, enum element ImageMapping, enum element ImageMapping, enum element ImageMapping
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element JSONMapping, enum element JSONMapping, enum element JSONMapping, enum element JSONMapping
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element StringMapping, enum element StringMapping, enum element StringMapping, enum element StringMapping
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element StatusCode, enum element StatusCode, enum element StatusCode, enum element StatusCode
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element Data, enum element Data, enum element Data, enum element Data
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element Underlying, enum element Underlying, enum element Underlying, enum element Underlying
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable nsError, instance variable nsError, instance variable nsError, instance variable nsError
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable response, instance variable response, instance variable response, instance variable response
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: global variable MoyaErrorDomain, global variable MoyaErrorDomain, global variable MoyaErrorDomain, global variable MoyaErrorDomain
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum MoyaErrorCode, enum MoyaErrorCode, enum MoyaErrorCode, enum MoyaErrorCode
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element ImageMapping, enum element ImageMapping, enum element ImageMapping, enum element ImageMapping
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element JSONMapping, enum element JSONMapping, enum element JSONMapping, enum element JSONMapping
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element StringMapping, enum element StringMapping, enum element StringMapping, enum element StringMapping
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element StatusCode, enum element StatusCode, enum element StatusCode, enum element StatusCode
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element Data, enum element Data, enum element Data, enum element Data
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: typealias ParameterEncoding, typealias ParameterEncoding, typealias ParameterEncoding, typealias ParameterEncoding
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum Method, enum Method, enum Method, enum Method
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element GET, enum element GET, enum element GET, enum element GET
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element POST, enum element POST, enum element POST, enum element POST
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element PUT, enum element PUT, enum element PUT, enum element PUT
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element DELETE, enum element DELETE, enum element DELETE, enum element DELETE
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element OPTIONS, enum element OPTIONS, enum element OPTIONS, enum element OPTIONS
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element HEAD, enum element HEAD, enum element HEAD, enum element HEAD
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element PATCH, enum element PATCH, enum element PATCH, enum element PATCH
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element TRACE, enum element TRACE, enum element TRACE, enum element TRACE
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element CONNECT, enum element CONNECT, enum element CONNECT, enum element CONNECT
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: typealias Completion, typealias Completion, typealias Completion, typealias Completion
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum StubBehavior, enum StubBehavior, enum StubBehavior, enum StubBehavior
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element Never, enum element Never, enum element Never, enum element Never
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element Immediate, enum element Immediate, enum element Immediate, enum element Immediate
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element Delayed, enum element Delayed, enum element Delayed, enum element Delayed
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: protocol TargetType, protocol TargetType, protocol TargetType, protocol TargetType
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable baseURL, instance variable baseURL, instance variable baseURL, instance variable baseURL
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable path, instance variable path, instance variable path, instance variable path
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable method, instance variable method, instance variable method, instance variable method
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable parameters, instance variable parameters, instance variable parameters, instance variable parameters
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable sampleData, instance variable sampleData, instance variable sampleData, instance variable sampleData
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum StructTarget, enum StructTarget, enum StructTarget, enum StructTarget
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element Struct, enum element Struct, enum element Struct, enum element Struct
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method init(_:), instance method init(_:), instance method init(_:), instance method init(_:)
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable path, instance variable path, instance variable path, instance variable path
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable baseURL, instance variable baseURL, instance variable baseURL, instance variable baseURL
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable method, instance variable method, instance variable method, instance variable method
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable parameters, instance variable parameters, instance variable parameters, instance variable parameters
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable sampleData, instance variable sampleData, instance variable sampleData, instance variable sampleData
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable target, instance variable target, instance variable target, instance variable target
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: protocol Cancellable, protocol Cancellable, protocol Cancellable, protocol Cancellable
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method cancel(), instance method cancel(), instance method cancel(), instance method cancel()
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: class MoyaProvider, class MoyaProvider, class MoyaProvider, class MoyaProvider
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable endpointClosure, instance variable endpointClosure, instance variable endpointClosure, instance variable endpointClosure
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: typealias EndpointClosure, typealias EndpointClosure, typealias EndpointClosure, typealias EndpointClosure
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: typealias StubClosure, typealias StubClosure, typealias StubClosure, typealias StubClosure
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: typealias RequestClosure, typealias RequestClosure, typealias RequestClosure, typealias RequestClosure
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable requestClosure, instance variable requestClosure, instance variable requestClosure, instance variable requestClosure
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable stubClosure, instance variable stubClosure, instance variable stubClosure, instance variable stubClosure
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable manager, instance variable manager, instance variable manager, instance variable manager
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable plugins, instance variable plugins, instance variable plugins, instance variable plugins
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method init(endpointClosure:requestClosure:stubClosure:manager:plugins:), instance method init(endpointClosure:requestClosure:stubClosure:manager:plugins:), instance method init(endpointClosure:requestClosure:stubClosure:manager:plugins:), instance method init(endpointClosure:requestClosure:stubClosure:manager:plugins:)
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method endpoint(_:), instance method endpoint(_:), instance method endpoint(_:), instance method endpoint(_:)
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method request(_:queue:completion:), instance method request(_:queue:completion:), instance method request(_:queue:completion:), instance method request(_:queue:completion:)
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method request(_:completion:), instance method request(_:completion:), instance method request(_:completion:), instance method request(_:completion:)
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: class method DefaultEndpointMapping(_:), class method DefaultEndpointMapping(_:), class method DefaultEndpointMapping(_:), class method DefaultEndpointMapping(_:)
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: class method DefaultRequestMapping(_:closure:), class method DefaultRequestMapping(_:closure:), class method DefaultRequestMapping(_:closure:), class method DefaultRequestMapping(_:closure:)
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: class method DefaultAlamofireManager(), class method DefaultAlamofireManager(), class method DefaultAlamofireManager(), class method DefaultAlamofireManager()
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: class method NeverStub(_:), class method NeverStub(_:), class method NeverStub(_:), class method NeverStub(_:)
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: class method ImmediatelyStub(_:), class method ImmediatelyStub(_:), class method ImmediatelyStub(_:), class method ImmediatelyStub(_:)
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: class method DelayedStub(_:), class method DelayedStub(_:), class method DelayedStub(_:), class method DelayedStub(_:)
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: function convertResponseToResult(_:data:error:), function convertResponseToResult(_:data:error:), function convertResponseToResult(_:data:error:), function convertResponseToResult(_:data:error:)
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum NetworkActivityChangeType, enum NetworkActivityChangeType, enum NetworkActivityChangeType, enum NetworkActivityChangeType
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element Began, enum element Began, enum element Began, enum element Began
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element Ended, enum element Ended, enum element Ended, enum element Ended
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: class NetworkActivityPlugin, class NetworkActivityPlugin, class NetworkActivityPlugin, class NetworkActivityPlugin
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method init(networkActivityClosure:), instance method init(networkActivityClosure:), instance method init(networkActivityClosure:), instance method init(networkActivityClosure:)
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method willSendRequest(_:target:), instance method willSendRequest(_:target:), instance method willSendRequest(_:target:), instance method willSendRequest(_:target:)
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method didReceiveResponse(_:target:), instance method didReceiveResponse(_:target:), instance method didReceiveResponse(_:target:), instance method didReceiveResponse(_:target:)
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: class NetworkLoggerPlugin, class NetworkLoggerPlugin, class NetworkLoggerPlugin, class NetworkLoggerPlugin
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable verbose, instance variable verbose, instance variable verbose, instance variable verbose
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method init(verbose:output:responseDataFormatter:), instance method init(verbose:output:responseDataFormatter:), instance method init(verbose:output:responseDataFormatter:), instance method init(verbose:output:responseDataFormatter:)
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method willSendRequest(_:target:), instance method willSendRequest(_:target:), instance method willSendRequest(_:target:), instance method willSendRequest(_:target:)
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method didReceiveResponse(_:target:), instance method didReceiveResponse(_:target:), instance method didReceiveResponse(_:target:), instance method didReceiveResponse(_:target:)
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: protocol PluginType, protocol PluginType, protocol PluginType, protocol PluginType
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method willSendRequest(_:target:), instance method willSendRequest(_:target:), instance method willSendRequest(_:target:), instance method willSendRequest(_:target:)
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method didReceiveResponse(_:target:), instance method didReceiveResponse(_:target:), instance method didReceiveResponse(_:target:), instance method didReceiveResponse(_:target:)
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: protocol RequestType, protocol RequestType, protocol RequestType, protocol RequestType
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable request, instance variable request, instance variable request, instance variable request
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method authenticate(user:password:persistence:), instance method authenticate(user:password:persistence:), instance method authenticate(user:password:persistence:), instance method authenticate(user:password:persistence:)
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method authenticate(usingCredential:), instance method authenticate(usingCredential:), instance method authenticate(usingCredential:), instance method authenticate(usingCredential:)
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: class Response, class Response, class Response, class Response
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable statusCode, instance variable statusCode, instance variable statusCode, instance variable statusCode
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable data, instance variable data, instance variable data, instance variable data
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable response, instance variable response, instance variable response, instance variable response
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method init(statusCode:data:response:), instance method init(statusCode:data:response:), instance method init(statusCode:data:response:), instance method init(statusCode:data:response:)
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable description, instance variable description, instance variable description, instance variable description
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable debugDescription, instance variable debugDescription, instance variable debugDescription, instance variable debugDescription
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method filterStatusCodes(_:), instance method filterStatusCodes(_:), instance method filterStatusCodes(_:), instance method filterStatusCodes(_:)
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method filterStatusCode(_:), instance method filterStatusCode(_:), instance method filterStatusCode(_:), instance method filterStatusCode(_:)
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method filterSuccessfulStatusCodes(), instance method filterSuccessfulStatusCodes(), instance method filterSuccessfulStatusCodes(), instance method filterSuccessfulStatusCodes()
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method filterSuccessfulStatusAndRedirectCodes(), instance method filterSuccessfulStatusAndRedirectCodes(), instance method filterSuccessfulStatusAndRedirectCodes(), instance method filterSuccessfulStatusAndRedirectCodes()
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method mapImage(), instance method mapImage(), instance method mapImage(), instance method mapImage()
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method mapJSON(), instance method mapJSON(), instance method mapJSON(), instance method mapJSON()
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method mapString(), instance method mapString(), instance method mapString(), instance method mapString()
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: function ==(_:_:), function ==(_:_:), function ==(_:_:), function ==(_:_:)
+Parsing AccessTokenPlugin.swift (1/21)
+Parsing Cancellable.swift (2/21)
+Parsing CredentialsPlugin.swift (3/21)
+Parsing Endpoint.swift (4/21)
+Parsing Image.swift (5/21)
+Parsing Moya+Alamofire.swift (6/21)
+Parsing MoyaAvailability.swift (7/21)
+Parsing MoyaError.swift (8/21)
+Parsing MoyaProvider+Defaults.swift (9/21)
+Parsing MoyaProvider+Internal.swift (10/21)
+Parsing MoyaProvider.swift (11/21)
+Parsing MultipartFormData.swift (12/21)
+Parsing MultiTarget.swift (13/21)
+Parsing NetworkActivityPlugin.swift (14/21)
+Parsing NetworkLoggerPlugin.swift (15/21)
+Parsing Plugin.swift (16/21)
+Parsing ReactiveMoyaAvailability.swift (17/21)
+Parsing ReactiveSwiftMoyaProvider.swift (18/21)
+Parsing Response.swift (19/21)
+Parsing SignalProducer+Response.swift (20/21)
+Parsing TargetType.swift (21/21)
+Running xcodebuild
+Parsing AccessTokenPlugin.swift (1/20)
+Parsing Cancellable.swift (2/20)
+Parsing CredentialsPlugin.swift (3/20)
+Parsing Endpoint.swift (4/20)
+Parsing Image.swift (5/20)
+Parsing Moya+Alamofire.swift (6/20)
+Parsing MoyaAvailability.swift (7/20)
+Parsing MoyaError.swift (8/20)
+Parsing MoyaProvider+Defaults.swift (9/20)
+Parsing MoyaProvider+Internal.swift (10/20)
+Parsing MoyaProvider.swift (11/20)
+Parsing MultipartFormData.swift (12/20)
+Parsing MultiTarget.swift (13/20)
+Parsing NetworkActivityPlugin.swift (14/20)
+Parsing NetworkLoggerPlugin.swift (15/20)
+Parsing Observable+Response.swift (16/20)
+Parsing Plugin.swift (17/20)
+Parsing Response.swift (18/20)
+Parsing RxMoyaProvider.swift (19/20)
+Parsing TargetType.swift (20/20)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: protocol AccessTokenAuthorizable, protocol AccessTokenAuthorizable, protocol AccessTokenAuthorizable, protocol AccessTokenAuthorizable, protocol AccessTokenAuthorizable
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable shouldAuthorize, instance variable shouldAuthorize, instance variable shouldAuthorize, instance variable shouldAuthorize, instance variable shouldAuthorize
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: struct AccessTokenPlugin, struct AccessTokenPlugin, struct AccessTokenPlugin, struct AccessTokenPlugin, struct AccessTokenPlugin
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable token, instance variable token, instance variable token, instance variable token, instance variable token
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method init(token:), instance method init(token:), instance method init(token:), instance method init(token:), instance method init(token:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method prepare(_:target:), instance method prepare(_:target:), instance method prepare(_:target:), instance method prepare(_:target:), instance method prepare(_:target:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: protocol Cancellable, protocol Cancellable, protocol Cancellable, protocol Cancellable, protocol Cancellable
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable isCancelled, instance variable isCancelled, instance variable isCancelled, instance variable isCancelled, instance variable isCancelled
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method cancel(), instance method cancel(), instance method cancel(), instance method cancel(), instance method cancel()
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: class CredentialsPlugin, class CredentialsPlugin, class CredentialsPlugin, class CredentialsPlugin, class CredentialsPlugin
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method init(credentialsClosure:), instance method init(credentialsClosure:), instance method init(credentialsClosure:), instance method init(credentialsClosure:), instance method init(credentialsClosure:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method willSend(_:target:), instance method willSend(_:target:), instance method willSend(_:target:), instance method willSend(_:target:), instance method willSend(_:target:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum EndpointSampleResponse, enum EndpointSampleResponse, enum EndpointSampleResponse, enum EndpointSampleResponse, enum EndpointSampleResponse
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element networkResponse, enum element networkResponse, enum element networkResponse, enum element networkResponse, enum element networkResponse
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element response, enum element response, enum element response, enum element response, enum element response
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element networkError, enum element networkError, enum element networkError, enum element networkError, enum element networkError
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: class Endpoint, class Endpoint, class Endpoint, class Endpoint, class Endpoint
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable url, instance variable url, instance variable url, instance variable url, instance variable url
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable method, instance variable method, instance variable method, instance variable method, instance variable method
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable sampleResponseClosure, instance variable sampleResponseClosure, instance variable sampleResponseClosure, instance variable sampleResponseClosure, instance variable sampleResponseClosure
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable parameters, instance variable parameters, instance variable parameters, instance variable parameters, instance variable parameters
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable parameterEncoding, instance variable parameterEncoding, instance variable parameterEncoding, instance variable parameterEncoding, instance variable parameterEncoding
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable httpHeaderFields, instance variable httpHeaderFields, instance variable httpHeaderFields, instance variable httpHeaderFields, instance variable httpHeaderFields
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method init(url:sampleResponseClosure:method:parameters:parameterEncoding:httpHeaderFields:), instance method init(url:sampleResponseClosure:method:parameters:parameterEncoding:httpHeaderFields:), instance method init(url:sampleResponseClosure:method:parameters:parameterEncoding:httpHeaderFields:), instance method init(url:sampleResponseClosure:method:parameters:parameterEncoding:httpHeaderFields:), instance method init(url:sampleResponseClosure:method:parameters:parameterEncoding:httpHeaderFields:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method adding(newParameters:), instance method adding(newParameters:), instance method adding(newParameters:), instance method adding(newParameters:), instance method adding(newParameters:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method adding(newHTTPHeaderFields:), instance method adding(newHTTPHeaderFields:), instance method adding(newHTTPHeaderFields:), instance method adding(newHTTPHeaderFields:), instance method adding(newHTTPHeaderFields:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method adding(newParameterEncoding:), instance method adding(newParameterEncoding:), instance method adding(newParameterEncoding:), instance method adding(newParameterEncoding:), instance method adding(newParameterEncoding:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method adding(parameters:httpHeaderFields:parameterEncoding:), instance method adding(parameters:httpHeaderFields:parameterEncoding:), instance method adding(parameters:httpHeaderFields:parameterEncoding:), instance method adding(parameters:httpHeaderFields:parameterEncoding:), instance method adding(parameters:httpHeaderFields:parameterEncoding:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable urlRequest, instance variable urlRequest, instance variable urlRequest, instance variable urlRequest, instance variable urlRequest
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable hashValue, instance variable hashValue, instance variable hashValue, instance variable hashValue, instance variable hashValue
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: static method ==(_:_:), static method ==(_:_:), static method ==(_:_:), static method ==(_:_:), static method ==(_:_:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: typealias Image, typealias Image, typealias Image, typealias Image, typealias Image
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: typealias RequestMultipartFormData, typealias RequestMultipartFormData, typealias RequestMultipartFormData, typealias RequestMultipartFormData, typealias RequestMultipartFormData
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: typealias Method, typealias Method, typealias Method, typealias Method, typealias Method
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: typealias MultipartFormDataEncodingResult, typealias MultipartFormDataEncodingResult, typealias MultipartFormDataEncodingResult, typealias MultipartFormDataEncodingResult, typealias MultipartFormDataEncodingResult
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: typealias ParameterEncoding, typealias ParameterEncoding, typealias ParameterEncoding, typealias ParameterEncoding, typealias ParameterEncoding
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: class CancellableToken, class CancellableToken, class CancellableToken, class CancellableToken, class CancellableToken
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable isCancelled, instance variable isCancelled, instance variable isCancelled, instance variable isCancelled, instance variable isCancelled
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method cancel(), instance method cancel(), instance method cancel(), instance method cancel(), instance method cancel()
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method init(action:), instance method init(action:), instance method init(action:), instance method init(action:), instance method init(action:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable debugDescription, instance variable debugDescription, instance variable debugDescription, instance variable debugDescription, instance variable debugDescription
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum MoyaError, enum MoyaError, enum MoyaError, enum MoyaError, enum MoyaError
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element imageMapping, enum element imageMapping, enum element imageMapping, enum element imageMapping, enum element imageMapping
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element jsonMapping, enum element jsonMapping, enum element jsonMapping, enum element jsonMapping, enum element jsonMapping
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element stringMapping, enum element stringMapping, enum element stringMapping, enum element stringMapping, enum element stringMapping
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element statusCode, enum element statusCode, enum element statusCode, enum element statusCode, enum element statusCode
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element underlying, enum element underlying, enum element underlying, enum element underlying, enum element underlying
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element requestMapping, enum element requestMapping, enum element requestMapping, enum element requestMapping, enum element requestMapping
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable response, instance variable response, instance variable response, instance variable response, instance variable response
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable errorDescription, instance variable errorDescription, instance variable errorDescription, instance variable errorDescription, instance variable errorDescription
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: class MoyaProvider, class MoyaProvider, class MoyaProvider, class MoyaProvider, class MoyaProvider
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable endpointClosure, instance variable endpointClosure, instance variable endpointClosure, instance variable endpointClosure, instance variable endpointClosure
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: typealias StubClosure, typealias StubClosure, typealias StubClosure, typealias StubClosure, typealias StubClosure
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: typealias RequestClosure, typealias RequestClosure, typealias RequestClosure, typealias RequestClosure, typealias RequestClosure
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: typealias RequestResultClosure, typealias RequestResultClosure, typealias RequestResultClosure, typealias RequestResultClosure, typealias RequestResultClosure
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: typealias EndpointClosure, typealias EndpointClosure, typealias EndpointClosure, typealias EndpointClosure, typealias EndpointClosure
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable requestClosure, instance variable requestClosure, instance variable requestClosure, instance variable requestClosure, instance variable requestClosure
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable stubClosure, instance variable stubClosure, instance variable stubClosure, instance variable stubClosure, instance variable stubClosure
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable manager, instance variable manager, instance variable manager, instance variable manager, instance variable manager
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable plugins, instance variable plugins, instance variable plugins, instance variable plugins, instance variable plugins
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable trackInflights, instance variable trackInflights, instance variable trackInflights, instance variable trackInflights, instance variable trackInflights
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable inflightRequests, instance variable inflightRequests, instance variable inflightRequests, instance variable inflightRequests, instance variable inflightRequests
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method init(endpointClosure:requestClosure:stubClosure:manager:plugins:trackInflights:), instance method init(endpointClosure:requestClosure:stubClosure:manager:plugins:trackInflights:), instance method init(endpointClosure:requestClosure:stubClosure:manager:plugins:trackInflights:), instance method init(endpointClosure:requestClosure:stubClosure:manager:plugins:trackInflights:), instance method init(endpointClosure:requestClosure:stubClosure:manager:plugins:trackInflights:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method endpoint(_:), instance method endpoint(_:), instance method endpoint(_:), instance method endpoint(_:), instance method endpoint(_:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method request(_:completion:), instance method request(_:completion:), instance method request(_:completion:), instance method request(_:completion:), instance method request(_:completion:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method request(_:queue:progress:completion:), instance method request(_:queue:progress:completion:), instance method request(_:queue:progress:completion:), instance method request(_:queue:progress:completion:), instance method request(_:queue:progress:completion:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method stubRequest(_:request:completion:endpoint:stubBehavior:), instance method stubRequest(_:request:completion:endpoint:stubBehavior:), instance method stubRequest(_:request:completion:endpoint:stubBehavior:), instance method stubRequest(_:request:completion:endpoint:stubBehavior:), instance method stubRequest(_:request:completion:endpoint:stubBehavior:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: class method defaultEndpointMapping(for:), class method defaultEndpointMapping(for:), class method defaultEndpointMapping(for:), class method defaultEndpointMapping(for:), class method defaultEndpointMapping(for:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: class method defaultRequestMapping(for:closure:), class method defaultRequestMapping(for:closure:), class method defaultRequestMapping(for:closure:), class method defaultRequestMapping(for:closure:), class method defaultRequestMapping(for:closure:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: class method defaultAlamofireManager(), class method defaultAlamofireManager(), class method defaultAlamofireManager(), class method defaultAlamofireManager(), class method defaultAlamofireManager()
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method requestNormal(_:queue:progress:completion:), instance method requestNormal(_:queue:progress:completion:), instance method requestNormal(_:queue:progress:completion:), instance method requestNormal(_:queue:progress:completion:), instance method requestNormal(_:queue:progress:completion:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method cancelCompletion(_:target:), instance method cancelCompletion(_:target:), instance method cancelCompletion(_:target:), instance method cancelCompletion(_:target:), instance method cancelCompletion(_:target:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method createStubFunction(_:forTarget:withCompletion:endpoint:plugins:request:), instance method createStubFunction(_:forTarget:withCompletion:endpoint:plugins:request:), instance method createStubFunction(_:forTarget:withCompletion:endpoint:plugins:request:), instance method createStubFunction(_:forTarget:withCompletion:endpoint:plugins:request:), instance method createStubFunction(_:forTarget:withCompletion:endpoint:plugins:request:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method notifyPluginsOfImpendingStub(for:target:), instance method notifyPluginsOfImpendingStub(for:target:), instance method notifyPluginsOfImpendingStub(for:target:), instance method notifyPluginsOfImpendingStub(for:target:), instance method notifyPluginsOfImpendingStub(for:target:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: class method neverStub(_:), class method neverStub(_:), class method neverStub(_:), class method neverStub(_:), class method neverStub(_:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: class method immediatelyStub(_:), class method immediatelyStub(_:), class method immediatelyStub(_:), class method immediatelyStub(_:), class method immediatelyStub(_:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: class method delayedStub(_:), class method delayedStub(_:), class method delayedStub(_:), class method delayedStub(_:), class method delayedStub(_:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable supportsMultipart, instance variable supportsMultipart, instance variable supportsMultipart, instance variable supportsMultipart, instance variable supportsMultipart
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: struct ProgressResponse, struct ProgressResponse, struct ProgressResponse, struct ProgressResponse, struct ProgressResponse
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable response, instance variable response, instance variable response, instance variable response, instance variable response
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable progressObject, instance variable progressObject, instance variable progressObject, instance variable progressObject, instance variable progressObject
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method init(progress:response:), instance method init(progress:response:), instance method init(progress:response:), instance method init(progress:response:), instance method init(progress:response:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable progress, instance variable progress, instance variable progress, instance variable progress, instance variable progress
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable completed, instance variable completed, instance variable completed, instance variable completed, instance variable completed
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: typealias ProgressBlock, typealias ProgressBlock, typealias ProgressBlock, typealias ProgressBlock, typealias ProgressBlock
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: typealias Completion, typealias Completion, typealias Completion, typealias Completion, typealias Completion
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum StubBehavior, enum StubBehavior, enum StubBehavior, enum StubBehavior, enum StubBehavior
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element never, enum element never, enum element never, enum element never, enum element never
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element immediate, enum element immediate, enum element immediate, enum element immediate, enum element immediate
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element delayed, enum element delayed, enum element delayed, enum element delayed, enum element delayed
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: function convertResponseToResult(_:request:data:error:), function convertResponseToResult(_:request:data:error:), function convertResponseToResult(_:request:data:error:), function convertResponseToResult(_:request:data:error:), function convertResponseToResult(_:request:data:error:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: struct MultipartFormData, struct MultipartFormData, struct MultipartFormData, struct MultipartFormData, struct MultipartFormData
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum FormDataProvider, enum FormDataProvider, enum FormDataProvider, enum FormDataProvider, enum FormDataProvider
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element data, enum element data, enum element data, enum element data, enum element data
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element file, enum element file, enum element file, enum element file, enum element file
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element stream, enum element stream, enum element stream, enum element stream, enum element stream
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method init(provider:name:fileName:mimeType:), instance method init(provider:name:fileName:mimeType:), instance method init(provider:name:fileName:mimeType:), instance method init(provider:name:fileName:mimeType:), instance method init(provider:name:fileName:mimeType:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable provider, instance variable provider, instance variable provider, instance variable provider, instance variable provider
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable name, instance variable name, instance variable name, instance variable name, instance variable name
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable fileName, instance variable fileName, instance variable fileName, instance variable fileName, instance variable fileName
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable mimeType, instance variable mimeType, instance variable mimeType, instance variable mimeType, instance variable mimeType
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum MultiTarget, enum MultiTarget, enum MultiTarget, enum MultiTarget, enum MultiTarget
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element target, enum element target, enum element target, enum element target, enum element target
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method init(_:), instance method init(_:), instance method init(_:), instance method init(_:), instance method init(_:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable path, instance variable path, instance variable path, instance variable path, instance variable path
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable baseURL, instance variable baseURL, instance variable baseURL, instance variable baseURL, instance variable baseURL
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable method, instance variable method, instance variable method, instance variable method, instance variable method
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable parameters, instance variable parameters, instance variable parameters, instance variable parameters, instance variable parameters
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable parameterEncoding, instance variable parameterEncoding, instance variable parameterEncoding, instance variable parameterEncoding, instance variable parameterEncoding
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable sampleData, instance variable sampleData, instance variable sampleData, instance variable sampleData, instance variable sampleData
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable task, instance variable task, instance variable task, instance variable task, instance variable task
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable validate, instance variable validate, instance variable validate, instance variable validate, instance variable validate
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable target, instance variable target, instance variable target, instance variable target, instance variable target
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum NetworkActivityChangeType, enum NetworkActivityChangeType, enum NetworkActivityChangeType, enum NetworkActivityChangeType, enum NetworkActivityChangeType
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element began, enum element began, enum element began, enum element began, enum element began
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element ended, enum element ended, enum element ended, enum element ended, enum element ended
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: class NetworkActivityPlugin, class NetworkActivityPlugin, class NetworkActivityPlugin, class NetworkActivityPlugin, class NetworkActivityPlugin
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method init(networkActivityClosure:), instance method init(networkActivityClosure:), instance method init(networkActivityClosure:), instance method init(networkActivityClosure:), instance method init(networkActivityClosure:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method willSend(_:target:), instance method willSend(_:target:), instance method willSend(_:target:), instance method willSend(_:target:), instance method willSend(_:target:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method didReceive(_:target:), instance method didReceive(_:target:), instance method didReceive(_:target:), instance method didReceive(_:target:), instance method didReceive(_:target:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: class NetworkLoggerPlugin, class NetworkLoggerPlugin, class NetworkLoggerPlugin, class NetworkLoggerPlugin, class NetworkLoggerPlugin
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable isVerbose, instance variable isVerbose, instance variable isVerbose, instance variable isVerbose, instance variable isVerbose
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable cURL, instance variable cURL, instance variable cURL, instance variable cURL, instance variable cURL
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method init(verbose:cURL:output:responseDataFormatter:), instance method init(verbose:cURL:output:responseDataFormatter:), instance method init(verbose:cURL:output:responseDataFormatter:), instance method init(verbose:cURL:output:responseDataFormatter:), instance method init(verbose:cURL:output:responseDataFormatter:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method willSend(_:target:), instance method willSend(_:target:), instance method willSend(_:target:), instance method willSend(_:target:), instance method willSend(_:target:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method didReceive(_:target:), instance method didReceive(_:target:), instance method didReceive(_:target:), instance method didReceive(_:target:), instance method didReceive(_:target:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: protocol PluginType, protocol PluginType, protocol PluginType, protocol PluginType, protocol PluginType
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method prepare(_:target:), instance method prepare(_:target:), instance method prepare(_:target:), instance method prepare(_:target:), instance method prepare(_:target:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method willSend(_:target:), instance method willSend(_:target:), instance method willSend(_:target:), instance method willSend(_:target:), instance method willSend(_:target:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method didReceive(_:target:), instance method didReceive(_:target:), instance method didReceive(_:target:), instance method didReceive(_:target:), instance method didReceive(_:target:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method process(_:target:), instance method process(_:target:), instance method process(_:target:), instance method process(_:target:), instance method process(_:target:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: protocol RequestType, protocol RequestType, protocol RequestType, protocol RequestType, protocol RequestType
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable request, instance variable request, instance variable request, instance variable request, instance variable request
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method authenticate(user:password:persistence:), instance method authenticate(user:password:persistence:), instance method authenticate(user:password:persistence:), instance method authenticate(user:password:persistence:), instance method authenticate(user:password:persistence:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method authenticate(usingCredential:), instance method authenticate(usingCredential:), instance method authenticate(usingCredential:), instance method authenticate(usingCredential:), instance method authenticate(usingCredential:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: class Response, class Response, class Response, class Response, class Response
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable statusCode, instance variable statusCode, instance variable statusCode, instance variable statusCode, instance variable statusCode
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable data, instance variable data, instance variable data, instance variable data, instance variable data
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable request, instance variable request, instance variable request, instance variable request, instance variable request
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable response, instance variable response, instance variable response, instance variable response, instance variable response
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method init(statusCode:data:request:response:), instance method init(statusCode:data:request:response:), instance method init(statusCode:data:request:response:), instance method init(statusCode:data:request:response:), instance method init(statusCode:data:request:response:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable description, instance variable description, instance variable description, instance variable description, instance variable description
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable debugDescription, instance variable debugDescription, instance variable debugDescription, instance variable debugDescription, instance variable debugDescription
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: static method ==(_:_:), static method ==(_:_:), static method ==(_:_:), static method ==(_:_:), static method ==(_:_:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method filter(statusCodes:), instance method filter(statusCodes:), instance method filter(statusCodes:), instance method filter(statusCodes:), instance method filter(statusCodes:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method filter(statusCode:), instance method filter(statusCode:), instance method filter(statusCode:), instance method filter(statusCode:), instance method filter(statusCode:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method filterSuccessfulStatusCodes(), instance method filterSuccessfulStatusCodes(), instance method filterSuccessfulStatusCodes(), instance method filterSuccessfulStatusCodes(), instance method filterSuccessfulStatusCodes()
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method filterSuccessfulStatusAndRedirectCodes(), instance method filterSuccessfulStatusAndRedirectCodes(), instance method filterSuccessfulStatusAndRedirectCodes(), instance method filterSuccessfulStatusAndRedirectCodes(), instance method filterSuccessfulStatusAndRedirectCodes()
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method mapImage(), instance method mapImage(), instance method mapImage(), instance method mapImage(), instance method mapImage()
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method mapJSON(failsOnEmptyData:), instance method mapJSON(failsOnEmptyData:), instance method mapJSON(failsOnEmptyData:), instance method mapJSON(failsOnEmptyData:), instance method mapJSON(failsOnEmptyData:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method mapString(atKeyPath:), instance method mapString(atKeyPath:), instance method mapString(atKeyPath:), instance method mapString(atKeyPath:), instance method mapString(atKeyPath:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: protocol TargetType, protocol TargetType, protocol TargetType, protocol TargetType, protocol TargetType
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable baseURL, instance variable baseURL, instance variable baseURL, instance variable baseURL, instance variable baseURL
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable path, instance variable path, instance variable path, instance variable path, instance variable path
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable method, instance variable method, instance variable method, instance variable method, instance variable method
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable parameters, instance variable parameters, instance variable parameters, instance variable parameters, instance variable parameters
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable parameterEncoding, instance variable parameterEncoding, instance variable parameterEncoding, instance variable parameterEncoding, instance variable parameterEncoding
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable sampleData, instance variable sampleData, instance variable sampleData, instance variable sampleData, instance variable sampleData
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable task, instance variable task, instance variable task, instance variable task, instance variable task
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable validate, instance variable validate, instance variable validate, instance variable validate, instance variable validate
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum UploadType, enum UploadType, enum UploadType, enum UploadType, enum UploadType
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element file, enum element file, enum element file, enum element file, enum element file
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element multipart, enum element multipart, enum element multipart, enum element multipart, enum element multipart
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum DownloadType, enum DownloadType, enum DownloadType, enum DownloadType, enum DownloadType
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element request, enum element request, enum element request, enum element request, enum element request
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum Task, enum Task, enum Task, enum Task, enum Task
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element request, enum element request, enum element request, enum element request, enum element request
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element upload, enum element upload, enum element upload, enum element upload, enum element upload
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: enum element download, enum element download, enum element download, enum element download, enum element download
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: class ReactiveSwiftMoyaProvider, class ReactiveSwiftMoyaProvider
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method init(endpointClosure:requestClosure:stubClosure:manager:plugins:stubScheduler:trackInflights:), instance method init(endpointClosure:requestClosure:stubClosure:manager:plugins:stubScheduler:trackInflights:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method request(_:), instance method request(_:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method stubRequest(_:request:completion:endpoint:stubBehavior:), instance method stubRequest(_:request:completion:endpoint:stubBehavior:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method requestWithProgress(token:), instance method requestWithProgress(token:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method filter(statusCodes:), instance method filter(statusCodes:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method filter(statusCode:), instance method filter(statusCode:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method filterSuccessfulStatusCodes(), instance method filterSuccessfulStatusCodes()
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method filterSuccessfulStatusAndRedirectCodes(), instance method filterSuccessfulStatusAndRedirectCodes()
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method mapImage(), instance method mapImage()
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method mapJSON(failsOnEmptyData:), instance method mapJSON(failsOnEmptyData:)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method mapString(atKeyPath:), instance method mapString(atKeyPath:)
 building site
 building search index
-36% documentation coverage with 350 undocumented symbols
+72% documentation coverage with 262 undocumented symbols
 downloading coverage badge
 jam out ♪♫ to your fresh new docs in `docs`

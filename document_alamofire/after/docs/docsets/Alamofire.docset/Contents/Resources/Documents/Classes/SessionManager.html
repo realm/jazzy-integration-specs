@@ -1,0 +1,2270 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SessionManager Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/SessionManager" class="dashAnchor"></a>
+    <a title="SessionManager Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Alamofire Docs</a> (86% documented)</p>
+        <p class="header-right"><a href="https://github.com/Alamofire/Alamofire"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fstatic%2Erealm%2Eio%2Fjazzy_demo%2FAlamofire%2Fdocsets%2FAlamofire%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Alamofire Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        SessionManager Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/DataRequest.html">DataRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DownloadRequest.html">DownloadRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/DownloadRequest/DownloadOptions.html">– DownloadOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/MultipartFormData.html">MultipartFormData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NetworkReachabilityManager.html">NetworkReachabilityManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NetworkReachabilityManager.html#/s:OC9Alamofire26NetworkReachabilityManager25NetworkReachabilityStatus">– NetworkReachabilityStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NetworkReachabilityManager.html#/s:OC9Alamofire26NetworkReachabilityManager14ConnectionType">– ConnectionType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Request.html">Request</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Request.html#/s:OC9Alamofire7Request16ValidationResult">– ValidationResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ServerTrustPolicyManager.html">ServerTrustPolicyManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SessionDelegate.html">SessionDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SessionManager.html">SessionManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SessionManager.html#/s:OC9Alamofire14SessionManager31MultipartFormDataEncodingResult">– MultipartFormDataEncodingResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/s:C9Alamofire13StreamRequest">StreamRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/TaskDelegate.html">TaskDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/UploadRequest.html">UploadRequest</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enums</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/AFError.html">AFError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/AFError.html#/s:OO9Alamofire7AFError30ParameterEncodingFailureReason">– ParameterEncodingFailureReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/AFError.html#/s:OO9Alamofire7AFError30MultipartEncodingFailureReason">– MultipartEncodingFailureReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/AFError.html#/s:OO9Alamofire7AFError31ResponseValidationFailureReason">– ResponseValidationFailureReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/AFError.html#/s:OO9Alamofire7AFError34ResponseSerializationFailureReason">– ResponseSerializationFailureReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums.html#/s:O9Alamofire10HTTPMethod">HTTPMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/Result.html">Result</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ServerTrustPolicy.html">ServerTrustPolicy</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/Notification.html">Notification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Notification/Task.html">– Task</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Notification/Key.html">– Key</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/URL.html">URL</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/URLComponents.html">URLComponents</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F9Alamofireoi2eeFTOCS_26NetworkReachabilityManager25NetworkReachabilityStatusS1__Sb">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F9Alamofire8downloadFTPS_14URLConvertible_6methodOS_10HTTPMethod10parametersGSqGVs10DictionarySSP___8encodingPS_17ParameterEncoding_7headersGSqGS2_SSSS__2toGSqFTV10Foundation3URLCSo15HTTPURLResponse_T14destinationURLS5_7optionsVCS_15DownloadRequest15DownloadOptions___S7_">download(_:method:parameters:encoding:headers:to:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F9Alamofire8downloadFTPS_21URLRequestConvertible_2toGSqFTV10Foundation3URLCSo15HTTPURLResponse_T14destinationURLS2_7optionsVCS_15DownloadRequest15DownloadOptions___S4_">download(_:to:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F9Alamofire8downloadFT12resumingWithV10Foundation4Data2toGSqFTVS0_3URLCSo15HTTPURLResponse_T14destinationURLS2_7optionsVCS_15DownloadRequest15DownloadOptions___S4_">download(resumingWith:to:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F9Alamofire7requestFPS_21URLRequestConvertible_CS_11DataRequest">request(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F9Alamofire7requestFTPS_14URLConvertible_6methodOS_10HTTPMethod10parametersGSqGVs10DictionarySSP___8encodingPS_17ParameterEncoding_7headersGSqGS2_SSSS___CS_11DataRequest">request(_:method:parameters:encoding:headers:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F9Alamofire6streamFT4withCSo10NetService_CS_13StreamRequest">stream(with:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F9Alamofire6streamFT12withHostNameSS4portSi_CS_13StreamRequest">stream(withHostName:port:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F9Alamofire6uploadFTCSo11InputStream2toPS_14URLConvertible_6methodOS_10HTTPMethod7headersGSqGVs10DictionarySSSS___CS_13UploadRequest">upload(_:to:method:headers:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F9Alamofire6uploadFTV10Foundation3URL2toPS_14URLConvertible_6methodOS_10HTTPMethod7headersGSqGVs10DictionarySSSS___CS_13UploadRequest">upload(_:to:method:headers:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F9Alamofire6uploadFTV10Foundation4Data2toPS_14URLConvertible_6methodOS_10HTTPMethod7headersGSqGVs10DictionarySSSS___CS_13UploadRequest">upload(_:to:method:headers:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F9Alamofire6uploadFTCSo11InputStream4withPS_21URLRequestConvertible__CS_13UploadRequest">upload(_:with:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F9Alamofire6uploadFTV10Foundation3URL4withPS_21URLRequestConvertible__CS_13UploadRequest">upload(_:with:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F9Alamofire6uploadFTV10Foundation4Data4withPS_21URLRequestConvertible__CS_13UploadRequest">upload(_:with:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F9Alamofire6uploadFT17multipartFormDataFCS_17MultipartFormDataT_14usingThresholdVs6UInt642toPS_14URLConvertible_6methodOS_10HTTPMethod7headersGSqGVs10DictionarySSSS__18encodingCompletionGSqFOCS_14SessionManager31MultipartFormDataEncodingResultT___T_">upload(multipartFormData:usingThreshold:to:method:headers:encodingCompletion:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:F9Alamofire6uploadFT17multipartFormDataFCS_17MultipartFormDataT_14usingThresholdVs6UInt644withPS_21URLRequestConvertible_18encodingCompletionGSqFOCS_14SessionManager31MultipartFormDataEncodingResultT___T_">upload(multipartFormData:usingThreshold:with:encodingCompletion:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/DataResponseSerializerProtocol.html">DataResponseSerializerProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/DownloadResponseSerializerProtocol.html">DownloadResponseSerializerProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ParameterEncoding.html">ParameterEncoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/RequestAdapter.html">RequestAdapter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/RequestRetrier.html">RequestRetrier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/URLConvertible.html">URLConvertible</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/URLRequestConvertible.html">URLRequestConvertible</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structs</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/DataResponse.html">DataResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DataResponseSerializer.html">DataResponseSerializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DefaultDataResponse.html">DefaultDataResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DefaultDownloadResponse.html">DefaultDownloadResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DownloadResponse.html">DownloadResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/DownloadResponseSerializer.html">DownloadResponseSerializer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/JSONEncoding.html">JSONEncoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/PropertyListEncoding.html">PropertyListEncoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Timeline.html">Timeline</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/URLEncoding.html">URLEncoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/URLEncoding.html#/s:OV9Alamofire11URLEncoding11Destination">– Destination</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Typealiases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9Alamofire11HTTPHeaders">HTTPHeaders</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9Alamofire10Parameters">Parameters</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:9Alamofire22RequestRetryCompletion">RequestRetryCompletion</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:C9Alamofire11DataRequest10Validation">Validation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:C9Alamofire15DownloadRequest10Validation">Validation</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>SessionManager</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">SessionManager</span></code></pre>
+
+                </div>
+              </div>
+            <p>Responsible for creating and managing <code><a href="../Classes/Request.html">Request</a></code> objects, as well as their underlying <code>NSURLSession</code>.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Helper%20Types"></a>
+                <a name="//apple_ref/swift/Section/Helper Types" class="dashAnchor"></a>
+                <a href="#/Helper%20Types">
+                  <h3 class="section-name">Helper Types</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:OC9Alamofire14SessionManager31MultipartFormDataEncodingResult"></a>
+                    <a name="//apple_ref/swift/Enum/MultipartFormDataEncodingResult" class="dashAnchor"></a>
+                    <a class="token" href="#/s:OC9Alamofire14SessionManager31MultipartFormDataEncodingResult">MultipartFormDataEncodingResult</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Defines whether the <code><a href="../Classes/MultipartFormData.html">MultipartFormData</a></code> encoding was successful and contains result of the encoding as
+associated values.</p>
+
+<ul>
+<li>Success: Represents a successful <code><a href="../Classes/MultipartFormData.html">MultipartFormData</a></code> encoding and contains the new <code><a href="../Classes/UploadRequest.html">UploadRequest</a></code> along with
+       streaming information.</li>
+<li>Failure: Used to represent a failure in the <code><a href="../Classes/MultipartFormData.html">MultipartFormData</a></code> encoding and also contains the encoding
+       error.</li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">MultipartFormDataEncodingResult</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionManager.swift#L39-L42">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Properties"></a>
+                <a name="//apple_ref/swift/Section/Properties" class="dashAnchor"></a>
+                <a href="#/Properties">
+                  <h3 class="section-name">Properties</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC9Alamofire14SessionManager7defaultS0_"></a>
+                    <a name="//apple_ref/swift/Variable/default" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC9Alamofire14SessionManager7defaultS0_">default</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A default instance of <code>SessionManager</code>, used by top-level Alamofire request methods, and suitable for use
+directly for any ad hoc requests.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">static</span> <span class="kd">let</span> <span class="err">`</span><span class="k">default</span><span class="err">`</span><span class="p">:</span> <span class="kt">SessionManager</span> <span class="o">=</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionManager.swift#L48">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC9Alamofire14SessionManager18defaultHTTPHeadersGVs10DictionarySSSS_"></a>
+                    <a name="//apple_ref/swift/Variable/defaultHTTPHeaders" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC9Alamofire14SessionManager18defaultHTTPHeadersGVs10DictionarySSSS_">defaultHTTPHeaders</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates default values for the <q>Accept-Encoding</q>, <q>Accept-Language</q> and <q>User-Agent</q> headers.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">defaultHTTPHeaders</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:9Alamofire11HTTPHeaders">HTTPHeaders</a></span> <span class="o">=</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionManager.swift#L56">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:ZvC9Alamofire14SessionManager40multipartFormDataEncodingMemoryThresholdVs6UInt64"></a>
+                    <a name="//apple_ref/swift/Variable/multipartFormDataEncodingMemoryThreshold" class="dashAnchor"></a>
+                    <a class="token" href="#/s:ZvC9Alamofire14SessionManager40multipartFormDataEncodingMemoryThresholdVs6UInt64">multipartFormDataEncodingMemoryThreshold</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Default memory threshold used when encoding <code><a href="../Classes/MultipartFormData.html">MultipartFormData</a></code> in bytes.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">multipartFormDataEncodingMemoryThreshold</span><span class="p">:</span> <span class="kt">UInt64</span> <span class="o">=</span> <span class="mi">10_000_000</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionManager.swift#L121">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9Alamofire14SessionManager7sessionCSo10URLSession"></a>
+                    <a name="//apple_ref/swift/Property/session" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9Alamofire14SessionManager7sessionCSo10URLSession">session</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The underlying session.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">let</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">URLSession</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionManager.swift#L124">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9Alamofire14SessionManager8delegateCS_15SessionDelegate"></a>
+                    <a name="//apple_ref/swift/Property/delegate" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9Alamofire14SessionManager8delegateCS_15SessionDelegate">delegate</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The session delegate handling all the task and session delegate callbacks.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">let</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Classes/SessionDelegate.html">SessionDelegate</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionManager.swift#L127">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9Alamofire14SessionManager24startRequestsImmediatelySb"></a>
+                    <a name="//apple_ref/swift/Property/startRequestsImmediately" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9Alamofire14SessionManager24startRequestsImmediatelySb">startRequestsImmediately</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Whether to start requests immediately after being constructed. <code>true</code> by default.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">startRequestsImmediately</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionManager.swift#L130">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9Alamofire14SessionManager7adapterGSqPS_14RequestAdapter__"></a>
+                    <a name="//apple_ref/swift/Property/adapter" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9Alamofire14SessionManager7adapterGSqPS_14RequestAdapter__">adapter</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The request adapter called each time a new request is created.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">adapter</span><span class="p">:</span> <span class="kt"><a href="../Protocols/RequestAdapter.html">RequestAdapter</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionManager.swift#L133">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9Alamofire14SessionManager7retrierGSqPS_14RequestRetrier__"></a>
+                    <a name="//apple_ref/swift/Property/retrier" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9Alamofire14SessionManager7retrierGSqPS_14RequestRetrier__">retrier</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The request retrier called each time a request encounters an error to determine whether to retry the request.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">retrier</span><span class="p">:</span> <span class="kt"><a href="../Protocols/RequestRetrier.html">RequestRetrier</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionManager.swift#L136-L139">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC9Alamofire14SessionManager27backgroundCompletionHandlerGSqFT_T__"></a>
+                    <a name="//apple_ref/swift/Property/backgroundCompletionHandler" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC9Alamofire14SessionManager27backgroundCompletionHandlerGSqFT_T__">backgroundCompletionHandler</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The background completion handler closure provided by the UIApplicationDelegate
+<code>application:handleEventsForBackgroundURLSession:completionHandler:</code> method. By setting the background
+completion handler, the SessionDelegate <code>sessionDidFinishEventsForBackgroundURLSession</code> closure implementation
+will automatically call the handler.</p>
+
+<p>If you need to handle your own events before the handler is called, then you need to override the
+SessionDelegate <code>sessionDidFinishEventsForBackgroundURLSession</code> and manually call the handler when finished.</p>
+
+<p><code>nil</code> by default.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">var</span> <span class="nv">backgroundCompletionHandler</span><span class="p">:</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionManager.swift#L150">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Lifecycle"></a>
+                <a name="//apple_ref/swift/Section/Lifecycle" class="dashAnchor"></a>
+                <a href="#/Lifecycle">
+                  <h3 class="section-name">Lifecycle</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire14SessionManagercFT13configurationCSo23URLSessionConfiguration8delegateCS_15SessionDelegate24serverTrustPolicyManagerGSqCS_24ServerTrustPolicyManager__S0_"></a>
+                    <a name="//apple_ref/swift/Method/init(configuration:delegate:serverTrustPolicyManager:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire14SessionManagercFT13configurationCSo23URLSessionConfiguration8delegateCS_15SessionDelegate24serverTrustPolicyManagerGSqCS_24ServerTrustPolicyManager__S0_">init(configuration:delegate:serverTrustPolicyManager:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates an instance with the specified <code>configuration</code>, <code><a href="../Classes/SessionManager.html#/s:vC9Alamofire14SessionManager8delegateCS_15SessionDelegate">delegate</a></code> and <code>serverTrustPolicyManager</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span>
+        <span class="nv">configuration</span><span class="p">:</span> <span class="kt">URLSessionConfiguration</span> <span class="o">=</span> <span class="kt">URLSessionConfiguration</span><span class="o">.</span><span class="k">default</span><span class="p">,</span>
+        <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Classes/SessionDelegate.html">SessionDelegate</a></span> <span class="o">=</span> <span class="kt"><a href="../Classes/SessionDelegate.html">SessionDelegate</a></span><span class="p">(),</span>
+        <span class="nv">serverTrustPolicyManager</span><span class="p">:</span> <span class="kt"><a href="../Classes/ServerTrustPolicyManager.html">ServerTrustPolicyManager</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>configuration</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The configuration used to construct the managed session. <code>URLSessionConfiguration.default</code> by default.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>delegate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The delegate used when initializing the session. <code>SessionDelegate()</code> by default.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>serverTrustPolicyManager</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The server trust policy manager to use for evaluating all server trust challenges. <code>nil</code> by default.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The new <code>SessionManager</code> instance.</p>
+
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionManager.swift#L166-L175">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire14SessionManagercFT7sessionCSo10URLSession8delegateCS_15SessionDelegate24serverTrustPolicyManagerGSqCS_24ServerTrustPolicyManager__GSqS0__"></a>
+                    <a name="//apple_ref/swift/Method/init(session:delegate:serverTrustPolicyManager:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire14SessionManagercFT7sessionCSo10URLSession8delegateCS_15SessionDelegate24serverTrustPolicyManagerGSqCS_24ServerTrustPolicyManager__GSqS0__">init(session:delegate:serverTrustPolicyManager:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates an instance with the specified <code><a href="../Classes/SessionManager.html#/s:vC9Alamofire14SessionManager7sessionCSo10URLSession">session</a></code>, <code><a href="../Classes/SessionManager.html#/s:vC9Alamofire14SessionManager8delegateCS_15SessionDelegate">delegate</a></code> and <code>serverTrustPolicyManager</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">?(</span>
+        <span class="nv">session</span><span class="p">:</span> <span class="kt">URLSession</span><span class="p">,</span>
+        <span class="nv">delegate</span><span class="p">:</span> <span class="kt"><a href="../Classes/SessionDelegate.html">SessionDelegate</a></span><span class="p">,</span>
+        <span class="nv">serverTrustPolicyManager</span><span class="p">:</span> <span class="kt"><a href="../Classes/ServerTrustPolicyManager.html">ServerTrustPolicyManager</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>session</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The URL session.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>delegate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The delegate of the URL session. Must equal the URL session’s delegate.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>serverTrustPolicyManager</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The server trust policy manager to use for evaluating all server trust challenges. <code>nil</code> by default.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The new <code>SessionManager</code> instance if the URL session’s delegate matches; <code>nil</code> otherwise.</p>
+
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionManager.swift#L185-L196">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Data%20Request"></a>
+                <a name="//apple_ref/swift/Section/Data Request" class="dashAnchor"></a>
+                <a href="#/Data%20Request">
+                  <h3 class="section-name">Data Request</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire14SessionManager7requestFTPS_14URLConvertible_6methodOS_10HTTPMethod10parametersGSqGVs10DictionarySSP___8encodingPS_17ParameterEncoding_7headersGSqGS3_SSSS___CS_11DataRequest"></a>
+                    <a name="//apple_ref/swift/Method/request(_:method:parameters:encoding:headers:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire14SessionManager7requestFTPS_14URLConvertible_6methodOS_10HTTPMethod10parametersGSqGVs10DictionarySSP___8encodingPS_17ParameterEncoding_7headersGSqGS3_SSSS___CS_11DataRequest">request(_:method:parameters:encoding:headers:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a <code><a href="../Classes/DataRequest.html">DataRequest</a></code> to retrieve the contents of the specified <code>url</code>, <code>method</code>, <code>parameters</code>, <code>encoding</code>
+and <code>headers</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">request</span><span class="p">(</span>
+        <span class="n">_</span> <span class="nv">url</span><span class="p">:</span> <span class="kt"><a href="../Protocols/URLConvertible.html">URLConvertible</a></span><span class="p">,</span>
+        <span class="nv">method</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/s:O9Alamofire10HTTPMethod">HTTPMethod</a></span> <span class="o">=</span> <span class="o">.</span><span class="k">get</span><span class="p">,</span>
+        <span class="nv">parameters</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:9Alamofire10Parameters">Parameters</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+        <span class="nv">encoding</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ParameterEncoding.html">ParameterEncoding</a></span> <span class="o">=</span> <span class="kt"><a href="../Structs/URLEncoding.html">URLEncoding</a></span><span class="o">.</span><span class="k">default</span><span class="p">,</span>
+        <span class="nv">headers</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:9Alamofire11HTTPHeaders">HTTPHeaders</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span>
+        <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/DataRequest.html">DataRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The URL.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>method</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The HTTP method. <code>.get</code> by default.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parameters</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The parameters. <code>nil</code> by default.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>encoding</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The parameter encoding. <code>URLEncoding.default</code> by default.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>headers</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The HTTP headers. <code>nil</code> by default.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The created <code><a href="../Classes/DataRequest.html">DataRequest</a></code>.</p>
+
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionManager.swift#L226-L243">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire14SessionManager7requestFPS_21URLRequestConvertible_CS_11DataRequest"></a>
+                    <a name="//apple_ref/swift/Method/request(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire14SessionManager7requestFPS_21URLRequestConvertible_CS_11DataRequest">request(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a <code><a href="../Classes/DataRequest.html">DataRequest</a></code> to retrieve the contents of a URL based on the specified <code>urlRequest</code>.</p>
+
+<p>If <code><a href="../Classes/SessionManager.html#/s:vC9Alamofire14SessionManager24startRequestsImmediatelySb">startRequestsImmediately</a></code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">request</span><span class="p">(</span><span class="n">_</span> <span class="nv">urlRequest</span><span class="p">:</span> <span class="kt"><a href="../Protocols/URLRequestConvertible.html">URLRequestConvertible</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/DataRequest.html">DataRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>urlRequest</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The URL request.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The created <code><a href="../Classes/DataRequest.html">DataRequest</a></code>.</p>
+
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionManager.swift#L252-L270">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/URL%20Request"></a>
+                <a name="//apple_ref/swift/Section/URL Request" class="dashAnchor"></a>
+                <a href="#/URL%20Request">
+                  <h3 class="section-name">URL Request</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire14SessionManager8downloadFTPS_14URLConvertible_6methodOS_10HTTPMethod10parametersGSqGVs10DictionarySSP___8encodingPS_17ParameterEncoding_7headersGSqGS3_SSSS__2toGSqFTV10Foundation3URLCSo15HTTPURLResponse_T14destinationURLS6_7optionsVCS_15DownloadRequest15DownloadOptions___S8_"></a>
+                    <a name="//apple_ref/swift/Method/download(_:method:parameters:encoding:headers:to:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire14SessionManager8downloadFTPS_14URLConvertible_6methodOS_10HTTPMethod10parametersGSqGVs10DictionarySSP___8encodingPS_17ParameterEncoding_7headersGSqGS3_SSSS__2toGSqFTV10Foundation3URLCSo15HTTPURLResponse_T14destinationURLS6_7optionsVCS_15DownloadRequest15DownloadOptions___S8_">download(_:method:parameters:encoding:headers:to:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a <code><a href="../Classes/DownloadRequest.html">DownloadRequest</a></code> to retrieve the contents the specified <code>url</code>, <code>method</code>, <code>parameters</code>, <code>encoding</code>,
+<code>headers</code> and save them to the <code>destination</code>.</p>
+
+<p>If <code>destination</code> is not specified, the contents will remain in the temporary location determined by the
+underlying URL session.</p>
+
+<p>If <code><a href="../Classes/SessionManager.html#/s:vC9Alamofire14SessionManager24startRequestsImmediatelySb">startRequestsImmediately</a></code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">download</span><span class="p">(</span>
+        <span class="n">_</span> <span class="nv">url</span><span class="p">:</span> <span class="kt"><a href="../Protocols/URLConvertible.html">URLConvertible</a></span><span class="p">,</span>
+        <span class="nv">method</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/s:O9Alamofire10HTTPMethod">HTTPMethod</a></span> <span class="o">=</span> <span class="o">.</span><span class="k">get</span><span class="p">,</span>
+        <span class="nv">parameters</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:9Alamofire10Parameters">Parameters</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+        <span class="nv">encoding</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ParameterEncoding.html">ParameterEncoding</a></span> <span class="o">=</span> <span class="kt"><a href="../Structs/URLEncoding.html">URLEncoding</a></span><span class="o">.</span><span class="k">default</span><span class="p">,</span>
+        <span class="nv">headers</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:9Alamofire11HTTPHeaders">HTTPHeaders</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+        <span class="n">to</span> <span class="nv">destination</span><span class="p">:</span> <span class="kt"><a href="../Classes/DownloadRequest.html">DownloadRequest</a></span><span class="o">.</span><span class="kt">DownloadFileDestination</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span>
+        <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/DownloadRequest.html">DownloadRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The URL.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>method</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The HTTP method. <code>.get</code> by default.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>parameters</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The parameters. <code>nil</code> by default.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>encoding</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The parameter encoding. <code>URLEncoding.default</code> by default.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>headers</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The HTTP headers. <code>nil</code> by default.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>destination</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure used to determine the destination of the downloaded file. <code>nil</code> by default.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The created <code><a href="../Classes/DownloadRequest.html">DownloadRequest</a></code>.</p>
+
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionManager.swift#L315-L331">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire14SessionManager8downloadFTPS_21URLRequestConvertible_2toGSqFTV10Foundation3URLCSo15HTTPURLResponse_T14destinationURLS3_7optionsVCS_15DownloadRequest15DownloadOptions___S5_"></a>
+                    <a name="//apple_ref/swift/Method/download(_:to:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire14SessionManager8downloadFTPS_21URLRequestConvertible_2toGSqFTV10Foundation3URLCSo15HTTPURLResponse_T14destinationURLS3_7optionsVCS_15DownloadRequest15DownloadOptions___S5_">download(_:to:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a <code><a href="../Classes/DownloadRequest.html">DownloadRequest</a></code> to retrieve the contents of a URL based on the specified <code>urlRequest</code> and save
+them to the <code>destination</code>.</p>
+
+<p>If <code>destination</code> is not specified, the contents will remain in the temporary location determined by the
+underlying URL session.</p>
+
+<p>If <code><a href="../Classes/SessionManager.html#/s:vC9Alamofire14SessionManager24startRequestsImmediatelySb">startRequestsImmediately</a></code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">download</span><span class="p">(</span>
+        <span class="n">_</span> <span class="nv">urlRequest</span><span class="p">:</span> <span class="kt"><a href="../Protocols/URLRequestConvertible.html">URLRequestConvertible</a></span><span class="p">,</span>
+        <span class="n">to</span> <span class="nv">destination</span><span class="p">:</span> <span class="kt"><a href="../Classes/DownloadRequest.html">DownloadRequest</a></span><span class="o">.</span><span class="kt">DownloadFileDestination</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span>
+        <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/DownloadRequest.html">DownloadRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>urlRequest</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The URL request</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>destination</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure used to determine the destination of the downloaded file. <code>nil</code> by default.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The created <code><a href="../Classes/DownloadRequest.html">DownloadRequest</a></code>.</p>
+
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionManager.swift#L346-L357">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Resume%20Data"></a>
+                <a name="//apple_ref/swift/Section/Resume Data" class="dashAnchor"></a>
+                <a href="#/Resume%20Data">
+                  <h3 class="section-name">Resume Data</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire14SessionManager8downloadFT12resumingWithV10Foundation4Data2toGSqFTVS1_3URLCSo15HTTPURLResponse_T14destinationURLS3_7optionsVCS_15DownloadRequest15DownloadOptions___S5_"></a>
+                    <a name="//apple_ref/swift/Method/download(resumingWith:to:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire14SessionManager8downloadFT12resumingWithV10Foundation4Data2toGSqFTVS1_3URLCSo15HTTPURLResponse_T14destinationURLS3_7optionsVCS_15DownloadRequest15DownloadOptions___S5_">download(resumingWith:to:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a <code><a href="../Classes/DownloadRequest.html">DownloadRequest</a></code> from the <code>resumeData</code> produced from a previous request cancellation to retrieve
+the contents of the original request and save them to the <code>destination</code>.</p>
+
+<p>If <code>destination</code> is not specified, the contents will remain in the temporary location determined by the
+underlying URL session.</p>
+
+<p>If <code><a href="../Classes/SessionManager.html#/s:vC9Alamofire14SessionManager24startRequestsImmediatelySb">startRequestsImmediately</a></code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
+
+<p>On the latest release of all the Apple platforms (iOS 10, macOS 10.12, tvOS 10, watchOS 3), <code>resumeData</code> is broken
+on background URL session configurations. There&rsquo;s an underlying bug in the <code>resumeData</code> generation logic where the
+data is written incorrectly and will always fail to resume the download. For more information about the bug and
+possible workarounds, please refer to the following Stack Overflow post:</p>
+
+<ul>
+<li><p><a href="http://stackoverflow.com/a/39347461/1342462">http://stackoverflow.com/a/39347461/1342462</a></p></li>
+</ul>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">download</span><span class="p">(</span>
+        <span class="n">resumingWith</span> <span class="nv">resumeData</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span>
+        <span class="n">to</span> <span class="nv">destination</span><span class="p">:</span> <span class="kt"><a href="../Classes/DownloadRequest.html">DownloadRequest</a></span><span class="o">.</span><span class="kt">DownloadFileDestination</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span>
+        <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/DownloadRequest.html">DownloadRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>resumeData</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The resume data. This is an opaque data blob produced by <code>URLSessionDownloadTask</code> when a task is cancelled. See <code>URLSession -downloadTask(withResumeData:)</code> for additional information.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>destination</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure used to determine the destination of the downloaded file. <code>nil</code> by default.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The created <code><a href="../Classes/DownloadRequest.html">DownloadRequest</a></code>.</p>
+
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionManager.swift#L383-L389">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/File"></a>
+                <a name="//apple_ref/swift/Section/File" class="dashAnchor"></a>
+                <a href="#/File">
+                  <h3 class="section-name">File</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire14SessionManager6uploadFTV10Foundation3URL2toPS_14URLConvertible_6methodOS_10HTTPMethod7headersGSqGVs10DictionarySSSS___CS_13UploadRequest"></a>
+                    <a name="//apple_ref/swift/Method/upload(_:to:method:headers:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire14SessionManager6uploadFTV10Foundation3URL2toPS_14URLConvertible_6methodOS_10HTTPMethod7headersGSqGVs10DictionarySSSS___CS_13UploadRequest">upload(_:to:method:headers:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates an <code><a href="../Classes/UploadRequest.html">UploadRequest</a></code> from the specified <code>url</code>, <code>method</code> and <code>headers</code> for uploading the <code>file</code>.</p>
+
+<p>If <code><a href="../Classes/SessionManager.html#/s:vC9Alamofire14SessionManager24startRequestsImmediatelySb">startRequestsImmediately</a></code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">upload</span><span class="p">(</span>
+        <span class="n">_</span> <span class="nv">fileURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span>
+        <span class="n">to</span> <span class="nv">url</span><span class="p">:</span> <span class="kt"><a href="../Protocols/URLConvertible.html">URLConvertible</a></span><span class="p">,</span>
+        <span class="nv">method</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/s:O9Alamofire10HTTPMethod">HTTPMethod</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">post</span><span class="p">,</span>
+        <span class="nv">headers</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:9Alamofire11HTTPHeaders">HTTPHeaders</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span>
+        <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/UploadRequest.html">UploadRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>file</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The file to upload.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The URL.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>method</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The HTTP method. <code>.post</code> by default.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>headers</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The HTTP headers. <code>nil</code> by default.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The created <code><a href="../Classes/UploadRequest.html">UploadRequest</a></code>.</p>
+
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionManager.swift#L455-L468">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire14SessionManager6uploadFTV10Foundation3URL4withPS_21URLRequestConvertible__CS_13UploadRequest"></a>
+                    <a name="//apple_ref/swift/Method/upload(_:with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire14SessionManager6uploadFTV10Foundation3URL4withPS_21URLRequestConvertible__CS_13UploadRequest">upload(_:with:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a <code><a href="../Classes/UploadRequest.html">UploadRequest</a></code> from the specified <code>urlRequest</code> for uploading the <code>file</code>.</p>
+
+<p>If <code><a href="../Classes/SessionManager.html#/s:vC9Alamofire14SessionManager24startRequestsImmediatelySb">startRequestsImmediately</a></code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">upload</span><span class="p">(</span><span class="n">_</span> <span class="nv">fileURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="n">with</span> <span class="nv">urlRequest</span><span class="p">:</span> <span class="kt"><a href="../Protocols/URLRequestConvertible.html">URLRequestConvertible</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/UploadRequest.html">UploadRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>file</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The file to upload.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>urlRequest</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The URL request.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The created <code><a href="../Classes/UploadRequest.html">UploadRequest</a></code>.</p>
+
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionManager.swift#L479-L486">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Data"></a>
+                <a name="//apple_ref/swift/Section/Data" class="dashAnchor"></a>
+                <a href="#/Data">
+                  <h3 class="section-name">Data</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire14SessionManager6uploadFTV10Foundation4Data2toPS_14URLConvertible_6methodOS_10HTTPMethod7headersGSqGVs10DictionarySSSS___CS_13UploadRequest"></a>
+                    <a name="//apple_ref/swift/Method/upload(_:to:method:headers:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire14SessionManager6uploadFTV10Foundation4Data2toPS_14URLConvertible_6methodOS_10HTTPMethod7headersGSqGVs10DictionarySSSS___CS_13UploadRequest">upload(_:to:method:headers:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates an <code><a href="../Classes/UploadRequest.html">UploadRequest</a></code> from the specified <code>url</code>, <code>method</code> and <code>headers</code> for uploading the <code>data</code>.</p>
+
+<p>If <code><a href="../Classes/SessionManager.html#/s:vC9Alamofire14SessionManager24startRequestsImmediatelySb">startRequestsImmediately</a></code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">upload</span><span class="p">(</span>
+        <span class="n">_</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span>
+        <span class="n">to</span> <span class="nv">url</span><span class="p">:</span> <span class="kt"><a href="../Protocols/URLConvertible.html">URLConvertible</a></span><span class="p">,</span>
+        <span class="nv">method</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/s:O9Alamofire10HTTPMethod">HTTPMethod</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">post</span><span class="p">,</span>
+        <span class="nv">headers</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:9Alamofire11HTTPHeaders">HTTPHeaders</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span>
+        <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/UploadRequest.html">UploadRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The data to upload.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The URL.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>method</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The HTTP method. <code>.post</code> by default.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>headers</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The HTTP headers. <code>nil</code> by default.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The created <code><a href="../Classes/UploadRequest.html">UploadRequest</a></code>.</p>
+
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionManager.swift#L501-L514">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire14SessionManager6uploadFTV10Foundation4Data4withPS_21URLRequestConvertible__CS_13UploadRequest"></a>
+                    <a name="//apple_ref/swift/Method/upload(_:with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire14SessionManager6uploadFTV10Foundation4Data4withPS_21URLRequestConvertible__CS_13UploadRequest">upload(_:with:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates an <code><a href="../Classes/UploadRequest.html">UploadRequest</a></code> from the specified <code>urlRequest</code> for uploading the <code>data</code>.</p>
+
+<p>If <code><a href="../Classes/SessionManager.html#/s:vC9Alamofire14SessionManager24startRequestsImmediatelySb">startRequestsImmediately</a></code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">upload</span><span class="p">(</span><span class="n">_</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="n">with</span> <span class="nv">urlRequest</span><span class="p">:</span> <span class="kt"><a href="../Protocols/URLRequestConvertible.html">URLRequestConvertible</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/UploadRequest.html">UploadRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>data</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The data to upload.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>urlRequest</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The URL request.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The created <code><a href="../Classes/UploadRequest.html">UploadRequest</a></code>.</p>
+
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionManager.swift#L525-L532">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/InputStream"></a>
+                <a name="//apple_ref/swift/Section/InputStream" class="dashAnchor"></a>
+                <a href="#/InputStream">
+                  <h3 class="section-name">InputStream</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire14SessionManager6uploadFTCSo11InputStream2toPS_14URLConvertible_6methodOS_10HTTPMethod7headersGSqGVs10DictionarySSSS___CS_13UploadRequest"></a>
+                    <a name="//apple_ref/swift/Method/upload(_:to:method:headers:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire14SessionManager6uploadFTCSo11InputStream2toPS_14URLConvertible_6methodOS_10HTTPMethod7headersGSqGVs10DictionarySSSS___CS_13UploadRequest">upload(_:to:method:headers:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates an <code><a href="../Classes/UploadRequest.html">UploadRequest</a></code> from the specified <code>url</code>, <code>method</code> and <code>headers</code> for uploading the <code>stream</code>.</p>
+
+<p>If <code><a href="../Classes/SessionManager.html#/s:vC9Alamofire14SessionManager24startRequestsImmediatelySb">startRequestsImmediately</a></code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">upload</span><span class="p">(</span>
+        <span class="n">_</span> <span class="nv">stream</span><span class="p">:</span> <span class="kt">InputStream</span><span class="p">,</span>
+        <span class="n">to</span> <span class="nv">url</span><span class="p">:</span> <span class="kt"><a href="../Protocols/URLConvertible.html">URLConvertible</a></span><span class="p">,</span>
+        <span class="nv">method</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/s:O9Alamofire10HTTPMethod">HTTPMethod</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">post</span><span class="p">,</span>
+        <span class="nv">headers</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:9Alamofire11HTTPHeaders">HTTPHeaders</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span>
+        <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/UploadRequest.html">UploadRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>stream</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The stream to upload.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The URL.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>method</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The HTTP method. <code>.post</code> by default.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>headers</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The HTTP headers. <code>nil</code> by default.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The created <code><a href="../Classes/UploadRequest.html">UploadRequest</a></code>.</p>
+
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionManager.swift#L547-L560">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire14SessionManager6uploadFTCSo11InputStream4withPS_21URLRequestConvertible__CS_13UploadRequest"></a>
+                    <a name="//apple_ref/swift/Method/upload(_:with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire14SessionManager6uploadFTCSo11InputStream4withPS_21URLRequestConvertible__CS_13UploadRequest">upload(_:with:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates an <code><a href="../Classes/UploadRequest.html">UploadRequest</a></code> from the specified <code>urlRequest</code> for uploading the <code>stream</code>.</p>
+
+<p>If <code><a href="../Classes/SessionManager.html#/s:vC9Alamofire14SessionManager24startRequestsImmediatelySb">startRequestsImmediately</a></code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">upload</span><span class="p">(</span><span class="n">_</span> <span class="nv">stream</span><span class="p">:</span> <span class="kt">InputStream</span><span class="p">,</span> <span class="n">with</span> <span class="nv">urlRequest</span><span class="p">:</span> <span class="kt"><a href="../Protocols/URLRequestConvertible.html">URLRequestConvertible</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/UploadRequest.html">UploadRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>stream</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The stream to upload.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>urlRequest</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The URL request.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The created <code><a href="../Classes/UploadRequest.html">UploadRequest</a></code>.</p>
+
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionManager.swift#L571-L578">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/MultipartFormData"></a>
+                <a name="//apple_ref/swift/Section/MultipartFormData" class="dashAnchor"></a>
+                <a href="#/MultipartFormData">
+                  <h3 class="section-name">MultipartFormData</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire14SessionManager6uploadFT17multipartFormDataFCS_17MultipartFormDataT_14usingThresholdVs6UInt642toPS_14URLConvertible_6methodOS_10HTTPMethod7headersGSqGVs10DictionarySSSS__18encodingCompletionGSqFOS0_31MultipartFormDataEncodingResultT___T_"></a>
+                    <a name="//apple_ref/swift/Method/upload(multipartFormData:usingThreshold:to:method:headers:encodingCompletion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire14SessionManager6uploadFT17multipartFormDataFCS_17MultipartFormDataT_14usingThresholdVs6UInt642toPS_14URLConvertible_6methodOS_10HTTPMethod7headersGSqGVs10DictionarySSSS__18encodingCompletionGSqFOS0_31MultipartFormDataEncodingResultT___T_">upload(multipartFormData:usingThreshold:to:method:headers:encodingCompletion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Encodes <code>multipartFormData</code> using <code>encodingMemoryThreshold</code> and calls <code>encodingCompletion</code> with new
+<code><a href="../Classes/UploadRequest.html">UploadRequest</a></code> using the <code>url</code>, <code>method</code> and <code>headers</code>.</p>
+
+<p>It is important to understand the memory implications of uploading <code><a href="../Classes/MultipartFormData.html">MultipartFormData</a></code>. If the cummulative
+payload is small, encoding the data in-memory and directly uploading to a server is the by far the most
+efficient approach. However, if the payload is too large, encoding the data in-memory could cause your app to
+be terminated. Larger payloads must first be written to disk using input and output streams to keep the memory
+footprint low, then the data can be uploaded as a stream from the resulting file. Streaming from disk MUST be
+used for larger payloads such as video content.</p>
+
+<p>The <code>encodingMemoryThreshold</code> parameter allows Alamofire to automatically determine whether to encode in-memory
+or stream from disk. If the content length of the <code><a href="../Classes/MultipartFormData.html">MultipartFormData</a></code> is below the <code>encodingMemoryThreshold</code>,
+encoding takes place in-memory. If the content length exceeds the threshold, the data is streamed to disk
+during the encoding process. Then the result is uploaded as data or as a stream depending on which encoding
+technique was used.</p>
+
+<p>If <code><a href="../Classes/SessionManager.html#/s:vC9Alamofire14SessionManager24startRequestsImmediatelySb">startRequestsImmediately</a></code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">upload</span><span class="p">(</span>
+        <span class="nv">multipartFormData</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/MultipartFormData.html">MultipartFormData</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">,</span>
+        <span class="n">usingThreshold</span> <span class="nv">encodingMemoryThreshold</span><span class="p">:</span> <span class="kt">UInt64</span> <span class="o">=</span> <span class="kt">SessionManager</span><span class="o">.</span><span class="n"><a href="../Classes/SessionManager.html#/s:ZvC9Alamofire14SessionManager40multipartFormDataEncodingMemoryThresholdVs6UInt64">multipartFormDataEncodingMemoryThreshold</a></span><span class="p">,</span>
+        <span class="n">to</span> <span class="nv">url</span><span class="p">:</span> <span class="kt"><a href="../Protocols/URLConvertible.html">URLConvertible</a></span><span class="p">,</span>
+        <span class="nv">method</span><span class="p">:</span> <span class="kt"><a href="../Enums.html#/s:O9Alamofire10HTTPMethod">HTTPMethod</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">post</span><span class="p">,</span>
+        <span class="nv">headers</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:9Alamofire11HTTPHeaders">HTTPHeaders</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+        <span class="nv">encodingCompletion</span><span class="p">:</span> <span class="p">((</span><span class="kt"><a href="../Classes/SessionManager.html#/s:OC9Alamofire14SessionManager31MultipartFormDataEncodingResult">MultipartFormDataEncodingResult</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>multipartFormData</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure used to append body parts to the <code>MultipartFormData</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>encodingMemoryThreshold</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The encoding memory threshold in bytes. <code>multipartFormDataEncodingMemoryThreshold</code> by default.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>url</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The URL.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>method</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The HTTP method. <code>.post</code> by default.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>headers</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The HTTP headers. <code>nil</code> by default.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>encodingCompletion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure called when the <code>MultipartFormData</code> encoding is complete.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionManager.swift#L607-L627">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire14SessionManager6uploadFT17multipartFormDataFCS_17MultipartFormDataT_14usingThresholdVs6UInt644withPS_21URLRequestConvertible_18encodingCompletionGSqFOS0_31MultipartFormDataEncodingResultT___T_"></a>
+                    <a name="//apple_ref/swift/Method/upload(multipartFormData:usingThreshold:with:encodingCompletion:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire14SessionManager6uploadFT17multipartFormDataFCS_17MultipartFormDataT_14usingThresholdVs6UInt644withPS_21URLRequestConvertible_18encodingCompletionGSqFOS0_31MultipartFormDataEncodingResultT___T_">upload(multipartFormData:usingThreshold:with:encodingCompletion:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Encodes <code>multipartFormData</code> using <code>encodingMemoryThreshold</code> and calls <code>encodingCompletion</code> with new
+<code><a href="../Classes/UploadRequest.html">UploadRequest</a></code> using the <code>urlRequest</code>.</p>
+
+<p>It is important to understand the memory implications of uploading <code><a href="../Classes/MultipartFormData.html">MultipartFormData</a></code>. If the cummulative
+payload is small, encoding the data in-memory and directly uploading to a server is the by far the most
+efficient approach. However, if the payload is too large, encoding the data in-memory could cause your app to
+be terminated. Larger payloads must first be written to disk using input and output streams to keep the memory
+footprint low, then the data can be uploaded as a stream from the resulting file. Streaming from disk MUST be
+used for larger payloads such as video content.</p>
+
+<p>The <code>encodingMemoryThreshold</code> parameter allows Alamofire to automatically determine whether to encode in-memory
+or stream from disk. If the content length of the <code><a href="../Classes/MultipartFormData.html">MultipartFormData</a></code> is below the <code>encodingMemoryThreshold</code>,
+encoding takes place in-memory. If the content length exceeds the threshold, the data is streamed to disk
+during the encoding process. Then the result is uploaded as data or as a stream depending on which encoding
+technique was used.</p>
+
+<p>If <code><a href="../Classes/SessionManager.html#/s:vC9Alamofire14SessionManager24startRequestsImmediatelySb">startRequestsImmediately</a></code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">upload</span><span class="p">(</span>
+        <span class="nv">multipartFormData</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Classes/MultipartFormData.html">MultipartFormData</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">,</span>
+        <span class="n">usingThreshold</span> <span class="nv">encodingMemoryThreshold</span><span class="p">:</span> <span class="kt">UInt64</span> <span class="o">=</span> <span class="kt">SessionManager</span><span class="o">.</span><span class="n"><a href="../Classes/SessionManager.html#/s:ZvC9Alamofire14SessionManager40multipartFormDataEncodingMemoryThresholdVs6UInt64">multipartFormDataEncodingMemoryThreshold</a></span><span class="p">,</span>
+        <span class="n">with</span> <span class="nv">urlRequest</span><span class="p">:</span> <span class="kt"><a href="../Protocols/URLRequestConvertible.html">URLRequestConvertible</a></span><span class="p">,</span>
+        <span class="nv">encodingCompletion</span><span class="p">:</span> <span class="p">((</span><span class="kt"><a href="../Classes/SessionManager.html#/s:OC9Alamofire14SessionManager31MultipartFormDataEncodingResult">MultipartFormDataEncodingResult</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>multipartFormData</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure used to append body parts to the <code>MultipartFormData</code>.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>encodingMemoryThreshold</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The encoding memory threshold in bytes. <code>multipartFormDataEncodingMemoryThreshold</code> by default.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>urlRequest</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The URL request.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>encodingCompletion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The closure called when the <code>MultipartFormData</code> encoding is complete.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionManager.swift#L652-L738">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Hostname%20and%20Port"></a>
+                <a name="//apple_ref/swift/Section/Hostname and Port" class="dashAnchor"></a>
+                <a href="#/Hostname%20and%20Port">
+                  <h3 class="section-name">Hostname and Port</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire14SessionManager6streamFT12withHostNameSS4portSi_CS_13StreamRequest"></a>
+                    <a name="//apple_ref/swift/Method/stream(withHostName:port:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire14SessionManager6streamFT12withHostNameSS4portSi_CS_13StreamRequest">stream(withHostName:port:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a <code><a href="../Classes.html#/s:C9Alamofire13StreamRequest">StreamRequest</a></code> for bidirectional streaming using the <code>hostname</code> and <code>port</code>.</p>
+
+<p>If <code><a href="../Classes/SessionManager.html#/s:vC9Alamofire14SessionManager24startRequestsImmediatelySb">startRequestsImmediately</a></code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">stream</span><span class="p">(</span><span class="n">withHostName</span> <span class="nv">hostName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">port</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes.html#/s:C9Alamofire13StreamRequest">StreamRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>hostName</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The hostname of the server to connect to.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>port</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The port of the server to connect to.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The created <code><a href="../Classes.html#/s:C9Alamofire13StreamRequest">StreamRequest</a></code>.</p>
+
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionManager.swift#L796-L798">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/NetService"></a>
+                <a name="//apple_ref/swift/Section/NetService" class="dashAnchor"></a>
+                <a href="#/NetService">
+                  <h3 class="section-name">NetService</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC9Alamofire14SessionManager6streamFT4withCSo10NetService_CS_13StreamRequest"></a>
+                    <a name="//apple_ref/swift/Method/stream(with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC9Alamofire14SessionManager6streamFT4withCSo10NetService_CS_13StreamRequest">stream(with:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Creates a <code><a href="../Classes.html#/s:C9Alamofire13StreamRequest">StreamRequest</a></code> for bidirectional streaming using the <code>netService</code>.</p>
+
+<p>If <code><a href="../Classes/SessionManager.html#/s:vC9Alamofire14SessionManager24startRequestsImmediatelySb">startRequestsImmediately</a></code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">stream</span><span class="p">(</span><span class="n">with</span> <span class="nv">netService</span><span class="p">:</span> <span class="kt">NetService</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes.html#/s:C9Alamofire13StreamRequest">StreamRequest</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>netService</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The net service used to identify the endpoint.</p>
+
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The created <code><a href="../Classes.html#/s:C9Alamofire13StreamRequest">StreamRequest</a></code>.</p>
+
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/SessionManager.swift#L811-L813">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; YYYY <a class="link" href="https://nshipster.com/alamofire" target="_blank" rel="external">Alamofire</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

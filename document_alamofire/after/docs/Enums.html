@@ -13,9 +13,9 @@
     <a title="Enums  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">Alamofire Docs</a> (85% documented)</p>
+        <p><a href="index.html">Alamofire Docs</a> (86% documented)</p>
         <p class="header-right"><a href="https://github.com/Alamofire/Alamofire"><img src="img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://http%3A%2F%2Fstatic%2Erealm%2Eio%2Fjazzy_demo%2FAlamofire%2Fdocsets%2FAlamofire%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fstatic%2Erealm%2Eio%2Fjazzy_demo%2FAlamofire%2Fdocsets%2FAlamofire%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -32,13 +32,13 @@
             <a href="Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Classes/Manager.html">Manager</a>
+                <a href="Classes/DataRequest.html">DataRequest</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/Manager/SessionDelegate.html">– SessionDelegate</a>
+                <a href="Classes/DownloadRequest.html">DownloadRequest</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/Manager.html#/s:OC9Alamofire7Manager31MultipartFormDataEncodingResult">– MultipartFormDataEncodingResult</a>
+                <a href="Classes/DownloadRequest/DownloadOptions.html">– DownloadOptions</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/MultipartFormData.html">MultipartFormData</a>
@@ -56,13 +56,28 @@
                 <a href="Classes/Request.html">Request</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/Request/TaskDelegate.html">– TaskDelegate</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Classes/Request.html#/s:OC9Alamofire7Request16ValidationResult">– ValidationResult</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/ServerTrustPolicyManager.html">ServerTrustPolicyManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SessionDelegate.html">SessionDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SessionManager.html">SessionManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SessionManager.html#/s:OC9Alamofire14SessionManager31MultipartFormDataEncodingResult">– MultipartFormDataEncodingResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes.html#/s:C9Alamofire13StreamRequest">StreamRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/TaskDelegate.html">TaskDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/UploadRequest.html">UploadRequest</a>
               </li>
             </ul>
           </li>
@@ -70,10 +85,22 @@
             <a href="Enums.html">Enums</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Enums.html#/s:O9Alamofire6Method">Method</a>
+                <a href="Enums/AFError.html">AFError</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums/ParameterEncoding.html">ParameterEncoding</a>
+                <a href="Enums/AFError.html#/s:OO9Alamofire7AFError30ParameterEncodingFailureReason">– ParameterEncodingFailureReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/AFError.html#/s:OO9Alamofire7AFError30MultipartEncodingFailureReason">– MultipartEncodingFailureReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/AFError.html#/s:OO9Alamofire7AFError31ResponseValidationFailureReason">– ResponseValidationFailureReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/AFError.html#/s:OO9Alamofire7AFError34ResponseSerializationFailureReason">– ResponseSerializationFailureReason</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums.html#/s:O9Alamofire10HTTPMethod">HTTPMethod</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/Result.html">Result</a>
@@ -87,10 +114,22 @@
             <a href="Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Extensions.html#/c:objc(cs)NSURLRequest">NSURLRequest</a>
+                <a href="Extensions/Notification.html">Notification</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions.html#/s:SS">String</a>
+                <a href="Extensions/Notification/Task.html">– Task</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Notification/Key.html">– Key</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/String.html">String</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/URL.html">URL</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/URLComponents.html">URLComponents</a>
               </li>
             </ul>
           </li>
@@ -98,46 +137,52 @@
             <a href="Functions.html">Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Functions.html#/s:ZF9Alamofireoi2eeFTOCS_26NetworkReachabilityManager25NetworkReachabilityStatusS1__Sb">==(_:_:)</a>
+                <a href="Functions.html#/s:F9Alamofireoi2eeFTOCS_26NetworkReachabilityManager25NetworkReachabilityStatusS1__Sb">==(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:F9Alamofire8downloadFTOS_6MethodPS_20URLStringConvertible_10parametersGSqGVs10DictionarySSPs9AnyObject___8encodingOS_17ParameterEncoding7headersGSqGS2_SSSS__11destinationFTCSo5NSURLCSo17NSHTTPURLResponse_S5__CS_7Request">download(_:_:parameters:encoding:headers:destination:)</a>
+                <a href="Functions.html#/s:F9Alamofire8downloadFTPS_14URLConvertible_6methodOS_10HTTPMethod10parametersGSqGVs10DictionarySSP___8encodingPS_17ParameterEncoding_7headersGSqGS2_SSSS__2toGSqFTV10Foundation3URLCSo15HTTPURLResponse_T14destinationURLS5_7optionsVCS_15DownloadRequest15DownloadOptions___S7_">download(_:method:parameters:encoding:headers:to:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:F9Alamofire8downloadFTPS_21URLRequestConvertible_11destinationFTCSo5NSURLCSo17NSHTTPURLResponse_S1__CS_7Request">download(_:destination:)</a>
+                <a href="Functions.html#/s:F9Alamofire8downloadFTPS_21URLRequestConvertible_2toGSqFTV10Foundation3URLCSo15HTTPURLResponse_T14destinationURLS2_7optionsVCS_15DownloadRequest15DownloadOptions___S4_">download(_:to:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:F9Alamofire8downloadFT10resumeDataCSo6NSData11destinationFTCSo5NSURLCSo17NSHTTPURLResponse_S1__CS_7Request">download(resumeData:destination:)</a>
+                <a href="Functions.html#/s:F9Alamofire8downloadFT12resumingWithV10Foundation4Data2toGSqFTVS0_3URLCSo15HTTPURLResponse_T14destinationURLS2_7optionsVCS_15DownloadRequest15DownloadOptions___S4_">download(resumingWith:to:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:F9Alamofire7requestFPS_21URLRequestConvertible_CS_7Request">request(_:)</a>
+                <a href="Functions.html#/s:F9Alamofire7requestFPS_21URLRequestConvertible_CS_11DataRequest">request(_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:F9Alamofire7requestFTOS_6MethodPS_20URLStringConvertible_10parametersGSqGVs10DictionarySSPs9AnyObject___8encodingOS_17ParameterEncoding7headersGSqGS2_SSSS___CS_7Request">request(_:_:parameters:encoding:headers:)</a>
+                <a href="Functions.html#/s:F9Alamofire7requestFTPS_14URLConvertible_6methodOS_10HTTPMethod10parametersGSqGVs10DictionarySSP___8encodingPS_17ParameterEncoding_7headersGSqGS2_SSSS___CS_11DataRequest">request(_:method:parameters:encoding:headers:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:F9Alamofire6uploadFTOS_6MethodPS_20URLStringConvertible_7headersGSqGVs10DictionarySSSS__4dataCSo6NSData_CS_7Request">upload(_:_:headers:data:)</a>
+                <a href="Functions.html#/s:F9Alamofire6streamFT4withCSo10NetService_CS_13StreamRequest">stream(with:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:F9Alamofire6uploadFTOS_6MethodPS_20URLStringConvertible_7headersGSqGVs10DictionarySSSS__4fileCSo5NSURL_CS_7Request">upload(_:_:headers:file:)</a>
+                <a href="Functions.html#/s:F9Alamofire6streamFT12withHostNameSS4portSi_CS_13StreamRequest">stream(withHostName:port:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:F9Alamofire6uploadFTOS_6MethodPS_20URLStringConvertible_7headersGSqGVs10DictionarySSSS__17multipartFormDataFCS_17MultipartFormDataT_23encodingMemoryThresholdVs6UInt6418encodingCompletionGSqFOCS_7Manager31MultipartFormDataEncodingResultT___T_">upload(_:_:headers:multipartFormData:encodingMemoryThreshold:encodingCompletion:)</a>
+                <a href="Functions.html#/s:F9Alamofire6uploadFTCSo11InputStream2toPS_14URLConvertible_6methodOS_10HTTPMethod7headersGSqGVs10DictionarySSSS___CS_13UploadRequest">upload(_:to:method:headers:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:F9Alamofire6uploadFTOS_6MethodPS_20URLStringConvertible_7headersGSqGVs10DictionarySSSS__6streamCSo13NSInputStream_CS_7Request">upload(_:_:headers:stream:)</a>
+                <a href="Functions.html#/s:F9Alamofire6uploadFTV10Foundation3URL2toPS_14URLConvertible_6methodOS_10HTTPMethod7headersGSqGVs10DictionarySSSS___CS_13UploadRequest">upload(_:to:method:headers:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:F9Alamofire6uploadFTPS_21URLRequestConvertible_4dataCSo6NSData_CS_7Request">upload(_:data:)</a>
+                <a href="Functions.html#/s:F9Alamofire6uploadFTV10Foundation4Data2toPS_14URLConvertible_6methodOS_10HTTPMethod7headersGSqGVs10DictionarySSSS___CS_13UploadRequest">upload(_:to:method:headers:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:F9Alamofire6uploadFTPS_21URLRequestConvertible_4fileCSo5NSURL_CS_7Request">upload(_:file:)</a>
+                <a href="Functions.html#/s:F9Alamofire6uploadFTCSo11InputStream4withPS_21URLRequestConvertible__CS_13UploadRequest">upload(_:with:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:F9Alamofire6uploadFTPS_21URLRequestConvertible_17multipartFormDataFCS_17MultipartFormDataT_23encodingMemoryThresholdVs6UInt6418encodingCompletionGSqFOCS_7Manager31MultipartFormDataEncodingResultT___T_">upload(_:multipartFormData:encodingMemoryThreshold:encodingCompletion:)</a>
+                <a href="Functions.html#/s:F9Alamofire6uploadFTV10Foundation3URL4withPS_21URLRequestConvertible__CS_13UploadRequest">upload(_:with:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:F9Alamofire6uploadFTPS_21URLRequestConvertible_6streamCSo13NSInputStream_CS_7Request">upload(_:stream:)</a>
+                <a href="Functions.html#/s:F9Alamofire6uploadFTV10Foundation4Data4withPS_21URLRequestConvertible__CS_13UploadRequest">upload(_:with:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:F9Alamofire6uploadFT17multipartFormDataFCS_17MultipartFormDataT_14usingThresholdVs6UInt642toPS_14URLConvertible_6methodOS_10HTTPMethod7headersGSqGVs10DictionarySSSS__18encodingCompletionGSqFOCS_14SessionManager31MultipartFormDataEncodingResultT___T_">upload(multipartFormData:usingThreshold:to:method:headers:encodingCompletion:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/s:F9Alamofire6uploadFT17multipartFormDataFCS_17MultipartFormDataT_14usingThresholdVs6UInt644withPS_21URLRequestConvertible_18encodingCompletionGSqFOCS_14SessionManager31MultipartFormDataEncodingResultT___T_">upload(multipartFormData:usingThreshold:with:encodingCompletion:)</a>
               </li>
             </ul>
           </li>
@@ -145,13 +190,25 @@
             <a href="Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Protocols/ResponseSerializerType.html">ResponseSerializerType</a>
+                <a href="Protocols/DataResponseSerializerProtocol.html">DataResponseSerializerProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/DownloadResponseSerializerProtocol.html">DownloadResponseSerializerProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/ParameterEncoding.html">ParameterEncoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/RequestAdapter.html">RequestAdapter</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/RequestRetrier.html">RequestRetrier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/URLConvertible.html">URLConvertible</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/URLRequestConvertible.html">URLRequestConvertible</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Protocols/URLStringConvertible.html">URLStringConvertible</a>
               </li>
             </ul>
           </li>
@@ -159,28 +216,37 @@
             <a href="Structs.html">Structs</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Structs/Error.html">Error</a>
+                <a href="Structs/DataResponse.html">DataResponse</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/Error.html#/s:OV9Alamofire5Error4Code">– Code</a>
+                <a href="Structs/DataResponseSerializer.html">DataResponseSerializer</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/Error/UserInfoKeys.html">– UserInfoKeys</a>
+                <a href="Structs/DefaultDataResponse.html">DefaultDataResponse</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/Notifications.html">Notifications</a>
+                <a href="Structs/DefaultDownloadResponse.html">DefaultDownloadResponse</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/Notifications/Task.html">– Task</a>
+                <a href="Structs/DownloadResponse.html">DownloadResponse</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/Response.html">Response</a>
+                <a href="Structs/DownloadResponseSerializer.html">DownloadResponseSerializer</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/ResponseSerializer.html">ResponseSerializer</a>
+                <a href="Structs/JSONEncoding.html">JSONEncoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/PropertyListEncoding.html">PropertyListEncoding</a>
               </li>
               <li class="nav-group-task">
                 <a href="Structs/Timeline.html">Timeline</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/URLEncoding.html">URLEncoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/URLEncoding.html#/s:OV9Alamofire11URLEncoding11Destination">– Destination</a>
               </li>
             </ul>
           </li>
@@ -188,10 +254,19 @@
             <a href="Typealiases.html">Typealiases</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Typealiases.html#/s:C9Alamofire7Request23DownloadFileDestination">DownloadFileDestination</a>
+                <a href="Typealiases.html#/s:9Alamofire11HTTPHeaders">HTTPHeaders</a>
               </li>
               <li class="nav-group-task">
-                <a href="Typealiases.html#/s:C9Alamofire7Request10Validation">Validation</a>
+                <a href="Typealiases.html#/s:9Alamofire10Parameters">Parameters</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:9Alamofire22RequestRetryCompletion">RequestRetryCompletion</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:C9Alamofire11DataRequest10Validation">Validation</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:C9Alamofire15DownloadRequest10Validation">Validation</a>
               </li>
             </ul>
           </li>
@@ -210,9 +285,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:O9Alamofire6Method"></a>
-                    <a name="//apple_ref/swift/Enum/Method" class="dashAnchor"></a>
-                    <a class="token" href="#/s:O9Alamofire6Method">Method</a>
+                    <a name="/s:O9Alamofire10HTTPMethod"></a>
+                    <a name="//apple_ref/swift/Enum/HTTPMethod" class="dashAnchor"></a>
+                    <a class="token" href="#/s:O9Alamofire10HTTPMethod">HTTPMethod</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -229,12 +304,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Method</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">HTTPMethod</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/3.4.0/Source/ParameterEncoding.swift#L32-L34">Show on GitHub</a>
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/ParameterEncoding.swift#L30-L40">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -242,20 +317,13 @@
               </ul>
             </div>
             <div class="task-group">
-              <div class="task-name-container">
-                <a name="/ParameterEncoding"></a>
-                <a name="//apple_ref/swift/Section/ParameterEncoding" class="dashAnchor"></a>
-                <a href="#/ParameterEncoding">
-                  <h3 class="section-name">ParameterEncoding</h3>
-                </a>
-              </div>
               <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:O9Alamofire17ParameterEncoding"></a>
-                    <a name="//apple_ref/swift/Enum/ParameterEncoding" class="dashAnchor"></a>
-                    <a class="token" href="#/s:O9Alamofire17ParameterEncoding">ParameterEncoding</a>
+                    <a name="/s:O9Alamofire7AFError"></a>
+                    <a name="//apple_ref/swift/Enum/AFError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:O9Alamofire7AFError">AFError</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -263,41 +331,29 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Used to specify the way in which a set of parameters are applied to a URL request.</p>
+                        <p><code>AFError</code> is the error type returned by Alamofire. It encompasses a few different types of errors, each with
+their own associated reasons.</p>
 
 <ul>
-<li><p><code>URL</code>:             Creates a query string to be set as or appended to any existing URL query for <code>GET</code>, <code>HEAD</code>, 
-                 and <code>DELETE</code> requests, or set as the body for requests with any other HTTP method. The 
-                 <code>Content-Type</code> HTTP header field of an encoded request with HTTP body is set to
-                 <code>application/x-www-form-urlencoded; charset=utf-8</code>. Since there is no published specification
-                 for how to encode collection types, the convention of appending <code>[]</code> to the key for array
-                 values (<code>foo[]=1&amp;foo[]=2</code>), and appending the key surrounded by square brackets for nested
-                 dictionary values (<code>foo[bar]=baz</code>).</p></li>
-<li><p><code>URLEncodedInURL</code>: Creates query string to be set as or appended to any existing URL query. Uses the same
-                 implementation as the <code>.URL</code> case, but always applies the encoded result to the URL.</p></li>
-<li><p><code>JSON</code>:            Uses <code>NSJSONSerialization</code> to create a JSON representation of the parameters object, which is 
-                 set as the body of the request. The <code>Content-Type</code> HTTP header field of an encoded request is 
-                 set to <code>application/json</code>.</p></li>
-<li><p><code>PropertyList</code>:    Uses <code>NSPropertyListSerialization</code> to create a plist representation of the parameters object,
-                 according to the associated format and write options values, which is set as the body of the
-                 request. The <code>Content-Type</code> HTTP header field of an encoded request is set to
-                 <code>application/x-plist</code>.</p></li>
-<li><p><code>Custom</code>:          Uses the associated closure value to construct a new request given an existing request and
-                 parameters.</p></li>
+<li>invalidURL:                  Returned when a <code><a href="Protocols/URLConvertible.html">URLConvertible</a></code> type fails to create a valid <code>URL</code>.</li>
+<li>parameterEncodingFailed:     Returned when a parameter encoding object throws an error during the encoding process.</li>
+<li>multipartEncodingFailed:     Returned when some step in the multipart encoding process fails.</li>
+<li>responseValidationFailed:    Returned when a <code>validate()</code> call fails.</li>
+<li>responseSerializationFailed: Returned when a response serializer encounters an error in the serialization process.</li>
 </ul>
 
-                        <a href="Enums/ParameterEncoding.html" class="slightly-smaller">See more</a>
+                        <a href="Enums/AFError.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ParameterEncoding</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">AFError</span><span class="p">:</span> <span class="kt">Error</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/3.4.0/Source/ParameterEncoding.swift#L64-L261">Show on GitHub</a>
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/AFError.swift#L35-L133">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -326,33 +382,39 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The <code>ServerTrustPolicy</code> evaluates the server trust generally provided by an <code>NSURLAuthenticationChallenge</code> when 
-connecting to a server over a secure HTTPS connection. The policy configuration then evaluates the server trust 
+                        <p>The <code>ServerTrustPolicy</code> evaluates the server trust generally provided by an <code>NSURLAuthenticationChallenge</code> when
+connecting to a server over a secure HTTPS connection. The policy configuration then evaluates the server trust
 with a given set of criteria to determine whether the server trust is valid and the connection should be made.</p>
 
-<p>Using pinned certificates or public keys for evaluation helps prevent man-in-the-middle (MITM) attacks and other 
-vulnerabilities. Applications dealing with sensitive customer data or financial information are strongly encouraged 
+<p>Using pinned certificates or public keys for evaluation helps prevent man-in-the-middle (MITM) attacks and other
+vulnerabilities. Applications dealing with sensitive customer data or financial information are strongly encouraged
 to route all communication over an HTTPS connection with pinning enabled.</p>
 
 <ul>
-<li><p>PerformDefaultEvaluation: Uses the default server trust evaluation while allowing you to control whether to 
-                        validate the host provided by the challenge. Applications are encouraged to always 
-                        validate the host in production environments to guarantee the validity of the server&rsquo;s 
+<li><p>performDefaultEvaluation: Uses the default server trust evaluation while allowing you to control whether to
+                        validate the host provided by the challenge. Applications are encouraged to always
+                        validate the host in production environments to guarantee the validity of the server&rsquo;s
                         certificate chain.</p></li>
-<li><p>PinCertificates:          Uses the pinned certificates to validate the server trust. The server trust is
-                        considered valid if one of the pinned certificates match one of the server certificates. 
-                        By validating both the certificate chain and host, certificate pinning provides a very 
-                        secure form of server trust validation mitigating most, if not all, MITM attacks. 
-                        Applications are encouraged to always validate the host and require a valid certificate 
+<li><p>performRevokedEvaluation: Uses the default and revoked server trust evaluations allowing you to control whether to
+                        validate the host provided by the challenge as well as specify the revocation flags for
+                        testing for revoked certificates. Apple platforms did not start testing for revoked
+                        certificates automatically until iOS 10.1, macOS 10.12 and tvOS 10.1 which is
+                        demonstrated in our TLS tests. Applications are encouraged to always validate the host
+                        in production environments to guarantee the validity of the server&rsquo;s certificate chain.</p></li>
+<li><p>pinCertificates:          Uses the pinned certificates to validate the server trust. The server trust is
+                        considered valid if one of the pinned certificates match one of the server certificates.
+                        By validating both the certificate chain and host, certificate pinning provides a very
+                        secure form of server trust validation mitigating most, if not all, MITM attacks.
+                        Applications are encouraged to always validate the host and require a valid certificate
                         chain in production environments.</p></li>
-<li><p>PinPublicKeys:            Uses the pinned public keys to validate the server trust. The server trust is considered
-                        valid if one of the pinned public keys match one of the server certificate public keys. 
-                        By validating both the certificate chain and host, public key pinning provides a very 
-                        secure form of server trust validation mitigating most, if not all, MITM attacks. 
-                        Applications are encouraged to always validate the host and require a valid certificate 
+<li><p>pinPublicKeys:            Uses the pinned public keys to validate the server trust. The server trust is considered
+                        valid if one of the pinned public keys match one of the server certificate public keys.
+                        By validating both the certificate chain and host, public key pinning provides a very
+                        secure form of server trust validation mitigating most, if not all, MITM attacks.
+                        Applications are encouraged to always validate the host and require a valid certificate
                         chain in production environments.</p></li>
-<li><p>DisableEvaluation:        Disables all evaluation which in turn will always consider any server trust as valid.</p></li>
-<li><p>CustomEvaluation:         Uses the associated closure to evaluate the validity of the server trust.</p></li>
+<li><p>disableEvaluation:        Disables all evaluation which in turn will always consider any server trust as valid.</p></li>
+<li><p>customEvaluation:         Uses the associated closure to evaluate the validity of the server trust.</p></li>
 </ul>
 
                         <a href="Enums/ServerTrustPolicy.html" class="slightly-smaller">See more</a>
@@ -366,7 +428,7 @@ to route all communication over an HTTPS connection with pinning enabled.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/3.4.0/Source/ServerTrustPolicy.swift#L114-L304">Show on GitHub</a>
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/ServerTrustPolicy.swift#L115-L307">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -391,10 +453,10 @@ to route all communication over an HTTPS connection with pinning enabled.</p>
                         <p>Used to represent whether a request was successful or encountered an error.</p>
 
 <ul>
-<li>Success: The request and all post processing operations were successful resulting in the serialization of the 
-       provided associated value.</li>
-<li>Failure: The request encountered an error resulting in a failure. The associated values are the original data 
-       provided by the server as well as the error that caused the failure.</li>
+<li><p>success: The request and all post processing operations were successful resulting in the serialization of the
+       provided associated value.</p></li>
+<li><p>failure: The request encountered an error resulting in a failure. The associated values are the original data
+       provided by the server as well as the error that caused the failure.</p></li>
 </ul>
 
                         <a href="Enums/Result.html" class="slightly-smaller">See more</a>
@@ -403,12 +465,12 @@ to route all communication over an HTTPS connection with pinning enabled.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Result</span><span class="o">&lt;</span><span class="kt">Value</span><span class="p">,</span> <span class="kt"><a href="Structs/Error.html">Error</a></span><span class="p">:</span> <span class="kt">ErrorType</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Result</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/3.4.0/Source/Result.swift#L35-L73">Show on GitHub</a>
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/Result.swift#L34-L72">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

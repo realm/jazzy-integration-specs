@@ -32,7 +32,7 @@
       <div class="content-wrapper">
         <p><a href="index.html">RealmSwift Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F1%2E0%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F2%2E3%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -70,10 +70,16 @@
                 <a href="Classes/Property.html">Property</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/RLMGenerator.html">RLMGenerator</a>
+                <a href="Classes/RLMIterator.html">RLMIterator</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/Realm.html">Realm</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Realm/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Realm/Notification.html">– Notification</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/Realm/Configuration.html">– Configuration</a>
@@ -87,19 +93,51 @@
               <li class="nav-group-task">
                 <a href="Classes/Schema.html">Schema</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Classes/SyncPermissionChange.html">SyncPermissionChange</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SyncPermissionOffer.html">SyncPermissionOffer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SyncPermissionOfferResponse.html">SyncPermissionOfferResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ThreadSafeReference.html">ThreadSafeReference</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
             <a href="Enums.html">Enums</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Enums/Error.html">Error</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/Notification.html">Notification</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Enums/RealmCollectionChange.html">RealmCollectionChange</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/SyncError.html">SyncError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/SyncManager.html">SyncManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/SyncSession.html">SyncSession</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/SyncSession/ProgressDirection.html">– ProgressDirection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/SyncSession/ProgressMode.html">– ProgressMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/SyncSession/Progress.html">– Progress</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/SyncUser.html">SyncUser</a>
               </li>
             </ul>
           </li>
@@ -107,31 +145,13 @@
             <a href="Functions.html">Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Functions.html#/s:ZF10RealmSwiftoi2eeFTCS_12ObjectSchemaS0__Sb">==(_:_:)</a>
+                <a href="Functions.html#/s:F10RealmSwiftoi2eeFTPs5Error_PS0___Sb">==(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:ZF10RealmSwiftoi2eeFTCS_5RealmS0__Sb">==(_:_:)</a>
+                <a href="Functions.html#/s:F10RealmSwift18schemaVersionAtURLFzTV10Foundation3URL13encryptionKeyGSqVS0_4Data__Vs6UInt64">schemaVersionAtURL(_:encryptionKey:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:ZF10RealmSwiftoi2eeFTCS_6SchemaS0__Sb">==(_:_:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Functions.html#/s:ZF10RealmSwiftoi2eeFTCS_8PropertyS0__Sb">==(_:_:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Functions.html#/s:ZF10RealmSwiftoi2eeFTPs9ErrorType_PS0___Sb">==(_:_:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Functions.html#/s:ZF10RealmSwiftoi2eeFTVS_14SortDescriptorS0__Sb">==(_:_:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Functions.html#/s:F10RealmSwift12migrateRealmFTVCS_5Realm13Configuration_GSqCSo7NSError_">migrateRealm(_:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Functions.html#/s:F10RealmSwift18schemaVersionAtURLFzTCSo5NSURL13encryptionKeyGSqCSo6NSData__Vs6UInt64">schemaVersionAtURL(_:encryptionKey:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Functions.html#/s:ZF10RealmSwiftoi2teFTOS_5ErrorPs9ErrorType__Sb">~=(_:_:)</a>
+                <a href="Functions.html#/s:F10RealmSwiftoi2teFTVCS_5Realm5ErrorPs5Error__Sb">~=(_:_:)</a>
               </li>
             </ul>
           </li>
@@ -145,10 +165,13 @@
                 <a href="Protocols.html#/s:P10RealmSwift10MinMaxType">MinMaxType</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/RealmCollectionType.html">RealmCollectionType</a>
+                <a href="Protocols/RealmCollection.html">RealmCollection</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols.html#/s:P10RealmSwift17RealmOptionalType">RealmOptionalType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/ThreadConfined.html">ThreadConfined</a>
               </li>
             </ul>
           </li>
@@ -158,11 +181,20 @@
               <li class="nav-group-task">
                 <a href="Structs/SortDescriptor.html">SortDescriptor</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Structs/SyncConfiguration.html">SyncConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/SyncCredentials.html">SyncCredentials</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
             <a href="Typealiases.html">Typealiases</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10RealmSwift19ErrorReportingBlock">ErrorReportingBlock</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Typealiases.html#/s:10RealmSwift14MigrationBlock">MigrationBlock</a>
               </li>
@@ -181,6 +213,30 @@
               <li class="nav-group-task">
                 <a href="Typealiases.html#/s:10RealmSwift12PropertyType">PropertyType</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10RealmSwift8Provider">Provider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10RealmSwift9SyncError">SyncError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10RealmSwift12SyncLogLevel">SyncLogLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10RealmSwift26SyncManagementObjectStatus">SyncManagementObjectStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10RealmSwift11SyncManager">SyncManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10RealmSwift11SyncSession">SyncSession</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10RealmSwift8SyncUser">SyncUser</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10RealmSwift19UserCompletionBlock">UserCompletionBlock</a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -192,7 +248,7 @@
             <p><img src="https://github.com/realm/realm-cocoa/raw/master/logo.png" alt="Realm"></p>
 
 <p>Realm is a mobile database that runs directly inside phones, tablets or wearables.
-This repository holds the source code for the iOS, OS X, watchOS &amp; tvOS versions of Realm Swift &amp; Realm Objective-C.</p>
+This repository holds the source code for the iOS, macOS, tvOS &amp; watchOS versions of Realm Swift &amp; Realm Objective-C.</p>
 <a href='#features' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='features'>Features</h2>
 
 <ul>
@@ -219,7 +275,7 @@ The API reference is located at <a href="https://realm.io/docs/swift/latest/api"
 <li><strong>Need help with your code?</strong>: Look for previous questions on the  <a href="https://stackoverflow.com/questions/tagged/realm?sort=newest">#realm tag</a> — or <a href="https://stackoverflow.com/questions/ask?tags=realm">ask a new question</a>. We actively monitor &amp; answer questions on SO!</li>
 <li><strong>Have a bug to report?</strong> <a href="https://github.com/realm/realm-cocoa/issues/new">Open an issue</a>. If possible, include the version of Realm, a full log, the Realm file, and a project that shows the issue.</li>
 <li><strong>Have a feature request?</strong> <a href="https://github.com/realm/realm-cocoa/issues/new">Open an issue</a>. Tell us what the feature should do, and why you want the feature.</li>
-<li>Sign up for our <a href="http://eepurl.com/VEKCn"><strong>Community Newsletter</strong></a> to get regular tips, learn about other use-cases and get alerted of blogposts and tutorials about Realm.</li>
+<li>Sign up for our <a href="https://www2.realm.io/l/210132/2016-12-05/fy9m"><strong>Community Newsletter</strong></a> to get regular tips, learn about other use-cases and get alerted of blogposts and tutorials about Realm.</li>
 </ul>
 <a href='#building-realm' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='building-realm'>Building Realm</h2>
 
@@ -228,7 +284,8 @@ The API reference is located at <a href="https://realm.io/docs/swift/latest/api"
 <p>Prerequisites:</p>
 
 <ul>
-<li>Building Realm requires Xcode 7.3.</li>
+<li>Building Realm requires Xcode 7.3.1 or Xcode 8.x.</li>
+<li>If cloning from git, submodules are required: <code>git submodule update --init --recursive</code>.</li>
 <li>Building Realm documentation requires <a href="https://github.com/realm/jazzy">jazzy</a></li>
 </ul>
 
@@ -238,10 +295,15 @@ The API reference is located at <a href="https://realm.io/docs/swift/latest/api"
 <a href='#contributing' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='contributing'>Contributing</h2>
 
 <p>See <a href="CONTRIBUTING.md">CONTRIBUTING.md</a> for more details!</p>
+
+<p>This project adheres to the <a href="https://realm.io/conduct">Contributor Covenant Code of Conduct</a>.
+By participating, you are expected to uphold this code. Please report
+unacceptable behavior to <a href="mailto:info@realm.io">info@realm.io</a>.</p>
 <a href='#license' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='license'>License</h2>
 
 <p>Realm Objective-C &amp; Realm Swift are published under the Apache 2.0 license.<br>
-The underlying core is available under the <a href="https://github.com/realm/realm-cocoa/blob/master/LICENSE#L210-L243">Realm Core Binary License</a> while we <a href="https://realm.io/docs/objc/latest/#faq">work to open-source it under the Apache 2.0 license</a>.</p>
+Realm Core is also published under the Apache 2.0 license and is available
+<a href="https://github.com/realm/realm-core">here</a>.</p>
 
 <p><strong>This product is not being made available to any person located in Cuba, Iran,
 North Korea, Sudan, Syria or the Crimea region, or to any other person that is

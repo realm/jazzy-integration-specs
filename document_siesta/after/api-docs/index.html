@@ -4,252 +4,278 @@
     <title>Siesta  Reference</title>
     <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="css/highlight.css" />
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <script src="js/jquery.min.js" defer></script>
     <script src="js/jazzy.js" defer></script>
     
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
   </head>
   <body>
+
+
     <a title="Siesta  Reference"></a>
-    <header>
-      <div class="content-wrapper">
-        <p><a href="index.html">Siesta Docs</a> (96% documented)</p>
-        <p class="header-right"><a href="https://github.com/bustoutsolutions/siesta"><img src="img/gh.png"/>View on GitHub</a></p>
-      </div>
-    </header>
-    <div class="content-wrapper">
-      <p id="breadcrumbs">
-        <a href="index.html">Siesta Reference</a>
-        <img id="carat" src="img/carat.png" />
-        Siesta  Reference
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="index.html">
+          Siesta Docs
+        </a>
+         (96% documented)
       </p>
-    </div>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/bustoutsolutions/siesta">
+            <img class="header-icon" src="img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="index.html">Siesta Reference</a>
+      <img class="carat" src="img/carat.png" />
+      Siesta  Reference
+    </p>
+
     <div class="content-wrapper">
-      <nav class="sidebar">
+      <nav class="navigation">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a href="Resources.html">Resources</a>
+            <a class="nav-group-name-link" href="Resources.html">Resources</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Classes/Service.html">Service</a>
+                <a class="nav-group-task-link" href="Classes/Service.html">Service</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/Resource.html">Resource</a>
+                <a class="nav-group-task-link" href="Classes/Resource.html">Resource</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/Entity.html">Entity</a>
+                <a class="nav-group-task-link" href="Structs/Entity.html">Entity</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/Error.html">Error</a>
+                <a class="nav-group-task-link" href="Structs/Configuration.html">Configuration</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/Error/Cause.html">– Cause</a>
+                <a class="nav-group-task-link" href="Protocols/ConfigurationPatternConvertible.html">ConfigurationPatternConvertible</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/Configuration.html">Configuration</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs/Configuration/Builder.html">– Builder</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Protocols/ConfigurationPatternConvertible.html">ConfigurationPatternConvertible</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Protocols/TypedContentAccessors.html">TypedContentAccessors</a>
+                <a class="nav-group-task-link" href="Protocols/TypedContentAccessors.html">TypedContentAccessors</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Observering Resources.html">Observering Resources</a>
+            <a class="nav-group-name-link" href="Observing Resources.html">Observing Resources</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Protocols/ResourceObserver.html">ResourceObserver</a>
+                <a class="nav-group-task-link" href="Protocols/ResourceObserver.html">ResourceObserver</a>
               </li>
               <li class="nav-group-task">
-                <a href="Observering Resources.html#/s:6Siesta23ResourceObserverClosure">ResourceObserverClosure</a>
+                <a class="nav-group-task-link" href="Observing Resources.html#/s:6Siesta23ResourceObserverClosure">ResourceObserverClosure</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums/ResourceEvent.html">ResourceEvent</a>
+                <a class="nav-group-task-link" href="Enums/ResourceEvent.html">ResourceEvent</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums/ResourceEvent/NewDataSource.html">– NewDataSource</a>
+                <a class="nav-group-task-link" href="Enums/ResourceEvent/NewDataSource.html">– NewDataSource</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Requests.html">Requests</a>
+            <a class="nav-group-name-link" href="Requests.html">Requests</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Protocols/Request.html">Request</a>
+                <a class="nav-group-task-link" href="Protocols/Request.html">Request</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums/RequestMethod.html">RequestMethod</a>
+                <a class="nav-group-task-link" href="Enums/RequestMethod.html">RequestMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/RequestError.html">RequestError</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/RequestError/Cause.html">– Cause</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/Response.html">Response</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/ResponseInfo.html">ResponseInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Enums/RequestChainAction.html">RequestChainAction</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Response Parsing.html">Response Parsing</a>
+            <a class="nav-group-name-link" href="Response Pipeline.html">Response Pipeline</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Enums/Response.html">Response</a>
+                <a class="nav-group-task-link" href="Structs/Pipeline.html">Pipeline</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/ResponseTransformer.html">ResponseTransformer</a>
+                <a class="nav-group-task-link" href="Structs/PipelineStage.html">PipelineStage</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/TransformerSequence.html">TransformerSequence</a>
+                <a class="nav-group-task-link" href="Structs/PipelineStage/MutationAction.html">– MutationAction</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/ResponseContentTransformer.html">ResponseContentTransformer</a>
+                <a class="nav-group-task-link" href="Classes/PipelineStageKey.html">PipelineStageKey</a>
               </li>
               <li class="nav-group-task">
-                <a href="Response Parsing.html#/s:F6Siesta23JSONResponseTransformerFTSb_PS_19ResponseTransformer_">JSONResponseTransformer(_:)</a>
+                <a class="nav-group-task-link" href="Protocols/ResponseTransformer.html">ResponseTransformer</a>
               </li>
               <li class="nav-group-task">
-                <a href="Response Parsing.html#/s:F6Siesta23TextResponseTransformerFTSb_PS_19ResponseTransformer_">TextResponseTransformer(_:)</a>
+                <a class="nav-group-task-link" href="Structs/ResponseContentTransformer.html">ResponseContentTransformer</a>
               </li>
               <li class="nav-group-task">
-                <a href="Response Parsing.html#/s:F6Siesta24ImageResponseTransformerFTSb_PS_19ResponseTransformer_">ImageResponseTransformer(_:)</a>
+                <a class="nav-group-task-link" href="Enums/InputTypeMismatchAction.html">InputTypeMismatchAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Response Pipeline.html#/s:F6Siesta23JSONResponseTransformerFSbPS_19ResponseTransformer_">JSONResponseTransformer(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Response Pipeline.html#/s:F6Siesta23TextResponseTransformerFSbPS_19ResponseTransformer_">TextResponseTransformer(_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Response Pipeline.html#/s:F6Siesta24ImageResponseTransformerFSbPS_19ResponseTransformer_">ImageResponseTransformer(_:)</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="UI Helpers.html">UI Helpers</a>
+            <a class="nav-group-name-link" href="Caching.html">Caching</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Classes/ResourceStatusOverlay.html">ResourceStatusOverlay</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/ResourceStatusOverlay/StateRule.html">– StateRule</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Classes/RemoteImageView.html">RemoteImageView</a>
+                <a class="nav-group-task-link" href="Protocols/EntityCache.html">EntityCache</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Network Layer.html">Network Layer</a>
+            <a class="nav-group-name-link" href="Network Layer.html">Network Layer</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Protocols/NetworkingProvider.html">NetworkingProvider</a>
+                <a class="nav-group-task-link" href="Protocols/NetworkingProvider.html">NetworkingProvider</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/NetworkingProviderConvertible.html">NetworkingProviderConvertible</a>
+                <a class="nav-group-task-link" href="Protocols/NetworkingProviderConvertible.html">NetworkingProviderConvertible</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/RequestNetworking.html">RequestNetworking</a>
+                <a class="nav-group-task-link" href="Protocols/RequestNetworking.html">RequestNetworking</a>
               </li>
               <li class="nav-group-task">
-                <a href="Network Layer.html#/s:6Siesta35RequestNetworkingCompletionCallback">RequestNetworkingCompletionCallback</a>
+                <a class="nav-group-task-link" href="Network Layer.html#/s:6Siesta35RequestNetworkingCompletionCallback">RequestNetworkingCompletionCallback</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/RequestTransferMetrics.html">RequestTransferMetrics</a>
+                <a class="nav-group-task-link" href="Structs/RequestTransferMetrics.html">RequestTransferMetrics</a>
               </li>
               <li class="nav-group-task">
-                <a href="Structs/NSURLSessionProvider.html">NSURLSessionProvider</a>
+                <a class="nav-group-task-link" href="Protocols/SessionTaskContainer.html">SessionTaskContainer</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Caching.html">Caching</a>
+            <a class="nav-group-name-link" href="Logging.html">Logging</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Protocols/EntityCache.html">EntityCache</a>
+                <a class="nav-group-task-link" href="Enums/LogCategory.html">LogCategory</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/EntityEncoder.html">EntityEncoder</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Structs/JSONEntityEncoder.html">JSONEntityEncoder</a>
+                <a class="nav-group-task-link" href="Logging.html#/s:v6Siesta6loggerFTOS_11LogCategorySS_T_">logger</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Logging.html">Logging</a>
+            <a class="nav-group-name-link" href="Other Extensions.html">Other Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Logging.html#/s:v6Siesta20enabledLogCategoriesGVs3SetOS_11LogCategory_">enabledLogCategories</a>
+                <a class="nav-group-task-link" href="Extensions/NSRegularExpression.html">NSRegularExpression</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enums/LogCategory.html">LogCategory</a>
+                <a class="nav-group-task-link" href="Extensions/String.html">String</a>
               </li>
               <li class="nav-group-task">
-                <a href="Logging.html#/s:v6Siesta6loggerFTOS_11LogCategorySS_T_">logger</a>
+                <a class="nav-group-task-link" href="Extensions/URL.html">URL</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/URLSession.html">URLSession</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Extensions/URLSessionConfiguration.html">URLSessionConfiguration</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Other Extensions.html">Other Extensions</a>
+            <a class="nav-group-name-link" href="Other Protocols.html">Other Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Extensions/NSRegularExpression.html">NSRegularExpression</a>
+                <a class="nav-group-task-link" href="Other Protocols.html#/s:P6Siesta15JSONConvertible">JSONConvertible</a>
               </li>
               <li class="nav-group-task">
-                <a href="Extensions/NSURLSession.html">NSURLSession</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/NSURLSessionConfiguration.html">NSURLSessionConfiguration</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Extensions/String.html">String</a>
+                <a class="nav-group-task-link" href="Protocols/URLConvertible.html">URLConvertible</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Other Protocols.html">Other Protocols</a>
+            <a class="nav-group-name-link" href="Other Structs.html">Other Structs</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Other Protocols.html#/s:P6Siesta17NSJSONConvertible">NSJSONConvertible</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Protocols/SessionTaskContainer.html">SessionTaskContainer</a>
+                <a class="nav-group-task-link" href="Structs/URLSessionProvider.html">URLSessionProvider</a>
               </li>
             </ul>
           </li>
         </ul>
       </nav>
       <article class="main-content">
-        <section>
-          <section class="section">
+
+        <section class="section">
+          <div class="section-content">
             
             <a href='#img-alt-siesta-src-https-bustoutsolutions-github-io-siesta-images-logo-2x-png-width-256-height-88' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h1 id='img-alt-siesta-src-https-bustoutsolutions-github-io-siesta-images-logo-2x-png-width-256-height-88'><img alt="Siesta" src="https://bustoutsolutions.github.io/siesta/images/logo@2x.png" width=256 height=88></h1>
 
-<p><strong>iOS REST Client Framework</strong></p>
+<p><strong>The elegant way to write iOS / macOS REST clients</strong></p>
 
-<p><a href="https://travis-ci.org/bustoutsolutions/siesta"><img src="https://travis-ci.org/bustoutsolutions/siesta.svg" alt="Build Status"></a>
-<a href="https://github.com/bustoutsolutions/siesta/releases"><img src="https://img.shields.io/cocoapods/v/Siesta.svg" alt="CocoaPods"></a>
-<a href="https://github.com/bustoutsolutions/siesta/releases"><img src="https://img.shields.io/badge/Carthage-compatible-5b9dd9.svg" alt="Carthage compatible"></a>
+<p><a href="https://travis-ci.org/bustoutsolutions/siesta"><img src="https://api.travis-ci.org/bustoutsolutions/siesta.svg?branch=master" alt="Build Status"></a>
+<a href="https://github.com/bustoutsolutions/siesta/releases"><img src="https://img.shields.io/github/tag/bustoutsolutions/siesta.svg?label=version" alt="Version"></a>
+<a href="https://github.com/bustoutsolutions/siesta#installation"><img src="https://img.shields.io/badge/Platforms-iOS%20%7C%20macOS-f6b854.svg" alt="Platforms"></a>
+<a href="https://bustoutsolutions.github.io/siesta/guide/"><img src="https://img.shields.io/badge/Docs-awesome-12a49f.svg" alt="Docs"></a>
 <a href="https://github.com/bustoutsolutions/siesta/blob/master/LICENSE"><img src="https://img.shields.io/github/license/mashape/apistatus.svg" alt="GitHub license"></a>
 <a href="https://twitter.com/siestaframework"><img src="https://img.shields.io/badge/Twitter-@siestaframework-f26430.svg" alt="Twitter: @siestaframework"></a></p>
 
 <p>Drastically simplifies app code by providing a client-side cache of observable models for RESTful resources.</p>
 
 <ul>
-<li><strong>OS:</strong> iOS 8+</li>
+<li><strong>OS:</strong> iOS 8+, macOS 10.11+</li>
 <li><strong>Languages:</strong> Written in Swift, supports apps in both Swift and Objective-C</li>
-<li><strong>Tool requirements:</strong> Xcode 7, Swift 2.0</li>
+<li><strong>Tool requirements:</strong> Xcode 8, Swift 3  (See <code>swift-2.x</code> branches for legacy support)</li>
 <li><strong>License:</strong> MIT</li>
-<li><strong>Status:</strong> Solid code, already in use on the App Store, but still classified as “beta” so we can gather feedback before locking in the API for the official 1.0 release. Please kick the tires, file issues, and send pull requests. Be bold!</li>
 </ul>
-<a href='#contents' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='contents'>Contents</h3>
+<a href='#overview' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='overview'>Overview</h3>
 
 <ul>
-<li><a href="#what%E2%80%99s-it-for">What’s It For?</a></li>
+<li><a href="#whats-it-for">What’s It For?</a></li>
 <li><a href="#features">Features</a></li>
 <li><a href="#origin">Origin</a></li>
 <li><a href="#design-philosophy">Design Philosophy</a></li>
 <li><a href="#installation">Installation</a></li>
 <li><a href="#basic-usage">Basic Usage</a></li>
 <li><a href="#comparison-with-other-frameworks">Comparison With Other Frameworks</a></li>
-<li>Documentation
-
-<ul>
-<li><a href="https://bustoutsolutions.github.io/siesta/guide/">User Guide</a></li>
-<li><a href="https://bustoutsolutions.github.io/siesta/api/">API Docs</a></li>
-<li><a href="https://bustoutsolutions.github.io/siesta/specs/">Specs</a></li>
-</ul></li>
 <li><a href="#examples">Examples</a></li>
 <li><a href="#contributing-and-getting-help">Contributing and Getting Help</a></li>
+</ul>
+<a href='#documentation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='documentation'>Documentation</h3>
+
+<ul>
+<li><a href="https://bustoutsolutions.github.io/siesta/guide/">User Guide</a> — Extensive! Thrilling! Full of examples!</li>
+<li><a href="https://bustoutsolutions.github.io/siesta/api/">API Docs</a> — Lascivious detail! Hidden treasure! More examples!</li>
+<li><a href="https://bustoutsolutions.github.io/siesta/specs/">Specs</a> — OK, doesn’t sound glamorous, but surprisingly informative.</li>
 </ul>
 <a href='#what-s-it-for' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='what-s-it-for'>What’s It For?</h2>
 <a href='#the-problem' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='the-problem'>The Problem</h3>
@@ -298,12 +324,12 @@
 <li>…also works great from Objective-C thanks to a compatibility layer.</li>
 <li>Lightweight. Won’t achieve sentience and attempt to destroy you.</li>
 <li><a href="https://bustoutsolutions.github.io/siesta/specs/">Robust regression tests</a></li>
-<li><a href="https://bustoutsolutions.github.io/siesta/guide/">Documentation</a> and <a href="http://bustoutsolutions.github.io/siesta/api/">more documentation</a></li>
+<li><a href="https://bustoutsolutions.github.io/siesta/guide/">Documentation</a> and <a href="https://bustoutsolutions.github.io/siesta/api/">more documentation</a></li>
 </ul>
 <a href='#what-it-doesn-t-do' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='what-it-doesn-t-do'>What it doesn’t do</h3>
 
 <ul>
-<li>It <strong>doesn’t reinvent networking.</strong> Siesta delegates network operations to your library of choice (<code>NSURLSession</code> by default, or <a href="https://github.com/Alamofire/Alamofire">Alamofire</a>, or inject your own <a href="http://bustoutsolutions.github.io/siesta/api/Protocols/NetworkingProvider.html">custom adapter</a>).</li>
+<li>It <strong>doesn’t reinvent networking.</strong> Siesta delegates network operations to your library of choice (<code>URLSession</code> by default, or <a href="https://github.com/Alamofire/Alamofire">Alamofire</a>, or inject your own <a href="https://bustoutsolutions.github.io/siesta/api/Protocols/NetworkingProvider.html">custom adapter</a>).</li>
 <li>It <strong>doesn’t hide HTTP</strong>. On the contrary, Siesta strives to expose the full richness of HTTP while providing conveniences to simplify common usage patterns. You can devise an abstraction layer to suit your own particular needs, or work directly with Siesta’s nice APIs for requests and response entities.</li>
 <li>It <strong>doesn’t do automatic response ↔ model mapping.</strong> This means that Siesta doesn’t constrain your response models, or force you to have any at all. Add a response transformer to output models of whatever flavor you prefer, or work directly with parsed JSON.</li>
 </ul>
@@ -313,7 +339,7 @@
 
 <p>For the open source transition, we took the time to rewrite our code in Swift — and <em>rethink</em> it in Swift, embracing the language to make the API as clean as the concepts.</p>
 
-<p>Siesta’s code is therefore both old and new: battle-tasted on the App Store, then reincarnated in a Swifty green field.</p>
+<p>Siesta’s code is therefore both old and new: battle-tested on the App Store, then reincarnated in a Swifty green field.</p>
 <a href='#design-philosophy' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='design-philosophy'>Design Philosophy</h2>
 
 <p>Make the default thing the right thing most of the time.</p>
@@ -336,50 +362,57 @@
 <hr>
 <a href='#installation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='installation'>Installation</h2>
 
-<p>Siesta requires Swift 2.0, so make sure you have <a href="https://developer.apple.com/xcode/downloads/">Xcode 7</a>.</p>
+<p>Siesta requires Swift 3, so make sure you have <a href="https://developer.apple.com/xcode/downloads/">Xcode 8</a>. (Use the <code>swift-2.x</code> branches if you haven’t made the big migration yet.)</p>
 <a href='#cocoapods' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='cocoapods'>CocoaPods</h3>
 
 <p>In your <code>Podfile</code>:</p>
-<pre class="highlight plaintext"><code>pod 'Siesta', '&gt;=1.0-beta.6'
+<pre class="highlight plaintext"><code>pod 'Siesta', '&gt;=1.0.1'
 </code></pre>
 
-<p>If you want to use Alamofire as your networking provider instead of <code>NSURLSession</code>:</p>
-<pre class="highlight plaintext"><code>pod 'Siesta/Alamofire'
+<p>If you want to use the UI helpers:</p>
+<pre class="highlight plaintext"><code>pod 'Siesta/UI', '&gt;=1.0.1'
 </code></pre>
 
-<p>(You’ll also need to pass an <code>Alamofire.Manager</code> when you configure your <code>Siesta.Service</code>. See the <a href="http://bustoutsolutions.github.io/siesta/api/Classes/Service.html#/s:FC6Siesta7ServicecFMS0_FT4baseGSqSS_22useDefaultTransformersSb18networkingProviderPS_18NetworkingProvider__S0_">API docs</a> for more info.)</p>
+<p>If you want to use Alamofire as your networking provider instead of Foundation’s <code>URLSession</code>:</p>
+<pre class="highlight plaintext"><code>pod 'Siesta/Alamofire', '&gt;=1.0.1'
+</code></pre>
+
+<p>(You’ll also need to pass an <code>Alamofire.Manager</code> when you configure your <code>Siesta.Service</code>. See the <a href="https://bustoutsolutions.github.io/siesta/api/Classes/Service.html#//apple_ref/swift/Method/init(baseURL:useDefaultTransformers:networking:)">API docs</a> for more info.)</p>
 <a href='#carthage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='carthage'>Carthage</h3>
 
 <p>In your <code>Cartfile</code>:</p>
-<pre class="highlight plaintext"><code>github "bustoutsolutions/siesta" "1.0-beta.6"
+<pre class="highlight plaintext"><code>github "bustoutsolutions/siesta" "1.0.1"
 </code></pre>
 
-<p>Follow the <a href="https://github.com/Carthage/Carthage#adding-frameworks-to-an-application">Carthage instructions</a> to add <code>Siesta.framework</code> to your project.</p>
+<p>Follow the <a href="https://github.com/Carthage/Carthage#adding-frameworks-to-an-application">Carthage instructions</a> to add <code>Siesta.framework</code> to your project. If you want to use the UI helpers, you will also need to add <code>SiestaUI.framework</code> to your project as well.</p>
 
-<p>As of this writing, there is one additional step you need to follow for Xcode 7 that isn’t in the Carthage docs:</p>
+<p>As of this writing, there is one additional step you need to follow that isn’t in the Carthage docs:</p>
 
 <ul>
 <li>Build settings → Framework search paths → <code>$(PROJECT_DIR)/Carthage/Build/iOS/</code></li>
 </ul>
 
-<p>(In-depth discussion of Carthage on XC7 is <a href="https://github.com/Carthage/Carthage/issues/536">here</a>.)</p>
+<p>(In-depth discussion of Carthage in recent Xcode versions is <a href="https://github.com/Carthage/Carthage/issues/536">here</a>.)</p>
 
 <p>The code in <code>Extensions/</code> is <em>not</em> part of the <code>Siesta.framework</code> that Carthage builds. (This currently includes only Alamofire support.) You will need to include those source files in your project manually if you want to use them.</p>
 <a href='#git-submodule' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='git-submodule'>Git Submodule</h3>
 
-<p>Clone Siesta as a submodule into the directory of your choice, in this case Libraries/Siesta:
+<ol>
+<li><p>Clone Siesta as a submodule into the directory of your choice, in this case Libraries/Siesta:
 <code>
 git submodule add https://github.com/bustoutsolutions/siesta.git Libraries/Siesta
 git submodule update --init
-</code></p>
+</code></p></li>
+<li><p>Drag <code>Siesta.xcodeproj</code> into your project tree as a subproject.</p></li>
+<li><p>Under your project&rsquo;s Build Phases, expand Target Dependencies. Click the + button and add Siesta.</p></li>
+<li><p>Expand the Link Binary With Libraries phase. Click the + button and add Siesta.</p></li>
+<li><p>Click the + button in the top left corner to add a Copy Files build phase. Set the directory to Frameworks. Click the + button and add Siesta.</p></li>
+</ol>
 
-<p>Drag <code>Siesta.xcodeproj</code> into your project tree as a subproject.</p>
+<p>If you want to use the UI helpers, you will need to repeat steps 3–5 for <code>SiestaUI</code>.</p>
+<a href='#installation-troubles' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='installation-troubles'>Installation troubles?</h3>
 
-<p>Under your project&rsquo;s Build Phases, expand Target Dependencies. Click the + button and add Siesta.</p>
-
-<p>Expand the Link Binary With Libraries phase. Click the + button and add Siesta.</p>
-
-<p>Click the + button in the top left corner to add a Copy Files build phase. Set the directory to Frameworks. Click the + button and add Siesta.</p>
+<p>Please <a href="#contributing-and-getting-help">let us know about it</a>, even if you eventually figure it out. Knowing where people get stuck will help improve these instructions!</p>
 
 <hr>
 <a href='#basic-usage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='basic-usage'>Basic Usage</h2>
@@ -388,7 +421,7 @@ git submodule update --init
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">MyAPI</span> <span class="o">=</span> <span class="kt">Service</span><span class="p">(</span><span class="nv">baseURL</span><span class="p">:</span> <span class="s">"https://api.example.com"</span><span class="p">)</span>
 </code></pre>
 
-<p>Now register your view controller — or view, or anything you like — to receive notifications whenever a particular resource’s state changes:</p>
+<p>Now register your view controller — or view, internal glue class, reactive signal/sequence, anything you like — to receive notifications whenever a particular resource’s state changes:</p>
 <pre class="highlight swift"><code><span class="k">override</span> <span class="kd">func</span> <span class="nf">viewDidLoad</span><span class="p">()</span> <span class="p">{</span>
     <span class="k">super</span><span class="o">.</span><span class="nf">viewDidLoad</span><span class="p">()</span>
 
@@ -397,7 +430,7 @@ git submodule update --init
 </code></pre>
 
 <p>Use those notifications to populate your UI:</p>
-<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">resourceChanged</span><span class="p">(</span><span class="nv">resource</span><span class="p">:</span> <span class="kt">Resource</span><span class="p">,</span> <span class="nv">event</span><span class="p">:</span> <span class="kt">ResourceEvent</span><span class="p">)</span> <span class="p">{</span>
+<pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">resourceChanged</span><span class="p">(</span><span class="n">_</span> <span class="nv">resource</span><span class="p">:</span> <span class="kt">Resource</span><span class="p">,</span> <span class="nv">event</span><span class="p">:</span> <span class="kt">ResourceEvent</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">nameLabel</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">resource</span><span class="o">.</span><span class="n">jsonDict</span><span class="p">[</span><span class="s">"name"</span><span class="p">]</span> <span class="k">as?</span> <span class="kt">String</span>
     <span class="n">colorLabel</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">resource</span><span class="o">.</span><span class="n">jsonDict</span><span class="p">[</span><span class="s">"favoriteColor"</span><span class="p">]</span> <span class="k">as?</span> <span class="kt">String</span>
 
@@ -436,7 +469,7 @@ git submodule update --init
 </code></pre>
 
 <p>Trigger a staleness-aware, redundant-request-suppressing load when the view appears:</p>
-<pre class="highlight swift"><code><span class="k">override</span> <span class="kd">func</span> <span class="nf">viewWillAppear</span><span class="p">(</span><span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="p">{</span>
+<pre class="highlight swift"><code><span class="k">override</span> <span class="kd">func</span> <span class="nf">viewWillAppear</span><span class="p">(</span><span class="n">_</span> <span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="p">{</span>
     <span class="kt">MyAPI</span><span class="o">.</span><span class="nf">resource</span><span class="p">(</span><span class="s">"/profile"</span><span class="p">)</span><span class="o">.</span><span class="nf">loadIfNeeded</span><span class="p">()</span>
 <span class="p">}</span>
 </code></pre>
@@ -447,7 +480,7 @@ git submodule update --init
 <pre class="highlight swift"><code><span class="kt">MyAPI</span><span class="o">.</span><span class="nf">resource</span><span class="p">(</span><span class="s">"/profile"</span><span class="p">)</span><span class="o">.</span><span class="nf">addObserver</span><span class="p">(</span><span class="nv">owner</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span> <span class="p">{</span>
     <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="n">resource</span><span class="p">,</span> <span class="n">event</span> <span class="k">in</span>
 
-    <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="n">activityIndicator</span><span class="o">.</span><span class="n">hidden</span> <span class="o">=</span> <span class="o">!</span><span class="n">resource</span><span class="o">.</span><span class="n">isLoading</span>
+    <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="n">activityIndicator</span><span class="o">.</span><span class="n">isHidden</span> <span class="o">=</span> <span class="o">!</span><span class="n">resource</span><span class="o">.</span><span class="n">isLoading</span>
 <span class="p">}</span>
 </code></pre>
 
@@ -465,12 +498,12 @@ git submodule update --init
             <span class="o">.</span><span class="nf">addObserver</span><span class="p">(</span><span class="n">statusOverlay</span><span class="p">)</span>
     <span class="p">}</span>
 
-    <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewWillAppear</span><span class="p">(</span><span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">override</span> <span class="kd">func</span> <span class="nf">viewWillAppear</span><span class="p">(</span><span class="n">_</span> <span class="nv">animated</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">super</span><span class="o">.</span><span class="nf">viewWillAppear</span><span class="p">(</span><span class="n">animated</span><span class="p">)</span>
         <span class="kt">MyAPI</span><span class="o">.</span><span class="nf">resource</span><span class="p">(</span><span class="s">"/profile"</span><span class="p">)</span><span class="o">.</span><span class="nf">loadIfNeeded</span><span class="p">()</span>
     <span class="p">}</span>
 
-    <span class="kd">func</span> <span class="nf">resourceChanged</span><span class="p">(</span><span class="nv">resource</span><span class="p">:</span> <span class="kt">Resource</span><span class="p">,</span> <span class="nv">event</span><span class="p">:</span> <span class="kt">ResourceEvent</span><span class="p">)</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">resourceChanged</span><span class="p">(</span><span class="n">_</span> <span class="nv">resource</span><span class="p">:</span> <span class="kt">Resource</span><span class="p">,</span> <span class="nv">event</span><span class="p">:</span> <span class="kt">ResourceEvent</span><span class="p">)</span> <span class="p">{</span>
         <span class="n">nameLabel</span><span class="o">.</span><span class="n">text</span>  <span class="o">=</span> <span class="n">resource</span><span class="o">.</span><span class="n">jsonDict</span><span class="p">[</span><span class="s">"name"</span><span class="p">]</span> <span class="k">as?</span> <span class="kt">String</span>
         <span class="n">colorLabel</span><span class="o">.</span><span class="n">text</span> <span class="o">=</span> <span class="n">resource</span><span class="o">.</span><span class="n">jsonDict</span><span class="p">[</span><span class="s">"favoriteColor"</span><span class="p">]</span> <span class="k">as?</span> <span class="kt">String</span>
     <span class="p">}</span>
@@ -490,9 +523,9 @@ git submodule update --init
 
   <span class="k">var</span> <span class="nv">placeholderImage</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?</span>
 
-  <span class="k">var</span> <span class="nv">imageURL</span><span class="p">:</span> <span class="kt">NSURL</span><span class="p">?</span> <span class="p">{</span>
+  <span class="k">var</span> <span class="nv">imageURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?</span> <span class="p">{</span>
     <span class="k">get</span> <span class="p">{</span> <span class="k">return</span> <span class="n">imageResource</span><span class="p">?</span><span class="o">.</span><span class="n">url</span> <span class="p">}</span>
-    <span class="k">set</span> <span class="p">{</span> <span class="n">imageResource</span> <span class="o">=</span> <span class="kt">RemoteImageView</span><span class="o">.</span><span class="n">imageCache</span><span class="o">.</span><span class="nf">resource</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="n">newValue</span><span class="p">)</span> <span class="p">}</span>
+    <span class="k">set</span> <span class="p">{</span> <span class="n">imageResource</span> <span class="o">=</span> <span class="kt">RemoteImageView</span><span class="o">.</span><span class="n">imageCache</span><span class="o">.</span><span class="nf">resource</span><span class="p">(</span><span class="nv">absoluteURL</span><span class="p">:</span> <span class="n">newValue</span><span class="p">)</span> <span class="p">}</span>
   <span class="p">}</span>
 
   <span class="k">var</span> <span class="nv">imageResource</span><span class="p">:</span> <span class="kt">Resource</span><span class="p">?</span> <span class="p">{</span>
@@ -504,7 +537,8 @@ git submodule update --init
     <span class="k">didSet</span> <span class="p">{</span>
       <span class="n">imageResource</span><span class="p">?</span><span class="o">.</span><span class="nf">loadIfNeeded</span><span class="p">()</span>
       <span class="n">imageResource</span><span class="p">?</span><span class="o">.</span><span class="nf">addObserver</span><span class="p">(</span><span class="nv">owner</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="n">_</span> <span class="k">in</span>
-        <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="n">imageResource</span><span class="p">?</span><span class="o">.</span><span class="nf">contentAsType</span><span class="p">(</span><span class="nv">ifNone</span><span class="p">:</span> <span class="n">placeholderImage</span><span class="p">)</span>
+        <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="n">imageResource</span><span class="p">?</span><span class="o">.</span><span class="nf">typedContent</span><span class="p">(</span>
+            <span class="nv">ifNone</span><span class="p">:</span> <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="n">placeholderImage</span><span class="p">)</span>
       <span class="p">}</span>
     <span class="p">}</span>
   <span class="p">}</span>
@@ -513,21 +547,21 @@ git submodule update --init
 
 <p>A thumbnail of both versions, for your code comparing pleasure:</p>
 
-<p align="center"><img alt="Code comparison" src="https://bustoutsolutions.github.io/siesta/guide/images/code-comparison@2x.png" width=388 height=628></p>
+<p align="center"><img alt="Code comparison" src="https://bustoutsolutions.github.io/siesta/guide/images/code-comparison@2x.png" width="388" height="628"></p>
 
 <p>The same functionality. Yes, really.</p>
 
-<p><small>(Well, OK, they’re not <em>exactly</em> identical. The Siesta version has more robust caching behavior, and will transparently update an image everywhere it is displayed if it’s refreshed.)</small></p>
+<p><small>(Well, OK, they’re not <em>exactly</em> identical. The Siesta version has more robust caching behavior, and will automatically update an image everywhere it is displayed if it’s refreshed.)</small></p>
 
-<p>There’s a more featureful version of <code>RemoteImageView</code> <a href="http://bustoutsolutions.github.io/siesta/api/Classes/RemoteImageView.html">already included with Siesta</a> — but the UI freebies aren’t the point. “Less code” isn’t even the point. The point is that Siesta gives you an <strong>elegant abstraction</strong> that <strong>solves problems you actually have</strong>, making your code <strong>simpler and less brittle</strong>.</p>
+<p>There’s a more featureful version of <code>RemoteImageView</code> <a href="https://bustoutsolutions.github.io/siesta/api/Classes/RemoteImageView.html">already included with Siesta</a> — but the UI freebies aren’t the point. “Less code” isn’t even the point. The point is that Siesta gives you an <strong>elegant abstraction</strong> that <strong>solves problems you actually have</strong>, making your code <strong>simpler and less brittle</strong>.</p>
 <a href='#comparison-with-other-frameworks' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='comparison-with-other-frameworks'>Comparison With Other Frameworks</h2>
 
 <p>Popular REST / networking frameworks have different primary goals:</p>
 
 <ul>
-<li><a href="https://developer.apple.com/library/ios/documentation/Foundation/Reference/NSURLSession_class/">NSURLSession</a> is Apple’s standard iOS HTTP library (and is all most projects need).</li>
-<li><a href="http://bustoutsolutions.github.io/siesta/">Siesta</a> untangles state problems with an observable resource cache.</li>
-<li><a href="https://github.com/Alamofire/Alamofire">Alamofire</a> provides a Swifty, modern-feeling wrapper for NSURLSession.</li>
+<li><a href="https://developer.apple.com/reference/foundation/urlsession">URLSession</a> is Apple’s standard iOS HTTP library (and is all most projects need).</li>
+<li><a href="https://bustoutsolutions.github.io/siesta/">Siesta</a> untangles state problems with an observable resource cache.</li>
+<li><a href="https://github.com/Alamofire/Alamofire">Alamofire</a> provides a Swifty, modern-feeling wrapper for URLSession.</li>
 <li><a href="https://github.com/Moya/Moya">Moya</a> wraps Alamofire to hide HTTP URLs and parameters.</li>
 <li><a href="https://github.com/RestKit/RestKit">RestKit</a> couples HTTP with JSON ↔ object model ↔ Core Data mapping.</li>
 <li><a href="https://github.com/AFNetworking/AFNetworking">AFNetworking</a> is a modern-feeling Obj-C wrapper for Apple’s network APIs, plus a suite of related utilities.</li>
@@ -547,7 +581,7 @@ git submodule update --init
 <th style="text-align: center">RestKit</th>
 <th style="text-align: center">Moya</th>
 <th style="text-align: center">AFNetworking</th>
-<th style="text-align: center">NSURLSession</th>
+<th style="text-align: center">URLSession</th>
 </tr>
 </thead><tbody>
 <tr>
@@ -629,7 +663,7 @@ git submodule update --init
 <td style="text-align: center">~</td>
 <td style="text-align: center"></td>
 <td style="text-align: center">✓</td>
-<td style="text-align: center"></td>
+<td style="text-align: center">✓</td>
 </tr>
 <tr>
 <td style="text-align: left">Object model mapping</td>
@@ -678,17 +712,17 @@ git submodule update --init
 </tr>
 <tr>
 <td style="text-align: left">Nontrivial lines of code²</td>
-<td style="text-align: center">2013</td>
-<td style="text-align: center">1695</td>
-<td style="text-align: center">10651</td>
-<td style="text-align: center">557</td>
-<td style="text-align: center">4055</td>
+<td style="text-align: center">2424</td>
+<td style="text-align: center">2455</td>
+<td style="text-align: center">13276</td>
+<td style="text-align: center">831</td>
+<td style="text-align: center">4025</td>
 <td style="text-align: center">?</td>
 </tr>
 <tr>
 <td style="text-align: left">Built on top of</td>
 <td style="text-align: center"><small>any (injectable)</small></td>
-<td style="text-align: center"><small>NSURLSession</small></td>
+<td style="text-align: center"><small>URLSession</small></td>
 <td style="text-align: center"><small>AFNetworking</small></td>
 <td style="text-align: center"><small>Alamofire</small></td>
 <td style="text-align: center"><small>NSURLSession / NSURLConnection</small></td>
@@ -700,7 +734,7 @@ git submodule update --init
 <br>
 <small>2. “Trivial” means lines containing only whitespace, comments, parens, semicolons, and braces.</small></p>
 
-<p>Despite this capabilities list, Siesta is a relatively small codebase — about the same size as Alamofire, and 5.5x smaller than RestKit.</p>
+<p>Despite this capabilities list, Siesta is a relatively lean codebase — about the same weight as Alamofire, and 5.5x lighter than RestKit.</p>
 <a href='#what-sets-siesta-apart' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='what-sets-siesta-apart'>What sets Siesta apart?</h3>
 
 <p>It’s not just the features. Siesta <strong>solves a different problem</strong> than other REST frameworks.</p>
@@ -721,7 +755,12 @@ git submodule update --init
 </ul>
 <a href='#examples' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='examples'>Examples</h2>
 
-<p>This repo includes a <a href="https://github.com/bustoutsolutions/siesta/tree/master/Examples/GithubBrowser">simple example project</a>. Use Carthage to build its dependencies.</p>
+<p>This repo includes a <a href="https://github.com/bustoutsolutions/siesta/tree/master/Examples/GithubBrowser">simple example project</a>. To download the example project, install its dependencies, and run it locally:</p>
+
+<ol>
+<li>Install CocoaPods ≥ 1.0 if you haven’t already.</li>
+<li><code>pod try Siesta</code> (Note that there’s no need to download/clone Siesta locally first; this command does that for you.)</li>
+</ol>
 <a href='#contributing-and-getting-help' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='contributing-and-getting-help'>Contributing and Getting Help</h2>
 
 <p>To report a bug, <a href="https://github.com/bustoutsolutions/siesta/issues/new">file an issue</a>.</p>
@@ -736,22 +775,24 @@ git submodule update --init
 <p>Want to <em>do</em> something instead of just talking about it? Fantastic! Be bold.</p>
 
 <ul>
-<li>If you have trouble building or testing the project, please file an issue about it — even if you resolve the problem. This will help improve the docs.</li>
 <li>If you are proposing a design change or nontrivial new functionality, please float your idea as an issue first so you don’t end up doing wasted work.</li>
-<li>Please follow the formatting conventions of the existing code. Yes, including Paul’s idiosyncratic taste in brace placement.</li>
-<li>Please make sure the tests pass locally before pushing (cmd-U in Xcode).</li>
+<li>Please follow the formatting conventions of the existing code. Yes, including Paul’s idiosyncratic taste in brace placement. (Matching braces always go in either the same row or the same column, and always align with the code they enclose.)</li>
+<li>Please make sure the tests pass locally (cmd-U in Xcode).</li>
 <li>Expect a little back and forth on your PR before it’s accepted. Don’t be discouraged. Nit-picking is not a sign of bad work; it’s a sign of interest!</li>
+<li>If you have trouble building or testing the project, please submit an issue or PR about it — even if you resolve the problem. This will help improve the docs.</li>
 <li>If you want to update the user guide, note that the guide is generated from the <code>Docs</code> directory in <code>master</code>, so that’s where you should make your change. Do not submit pull requests against <code>gh-pages</code>.</li>
 </ul>
 
-          </section>
+          </div>
         </section>
-        <section id="footer">
-          <p>© 2016 <a class="link" href="http://bustoutsolutions.com" target="_blank" rel="external">Bust Out Solutions</a> under <a class="link" href="https://github.com/bustoutsolutions/siesta/blob/master/LICENSE" target="_blank" rel="external">open source license</a>.</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
-        </section>
+
+
       </article>
     </div>
+    <section class="footer">
+      <p>© 2016 <a class="link" href="http://bustoutsolutions.com" target="_blank" rel="external">Bust Out Solutions</a> under <a class="link" href="https://github.com/bustoutsolutions/siesta/blob/master/LICENSE" target="_blank" rel="external">open source license</a>.</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
   </body>
 </div>
 </html>

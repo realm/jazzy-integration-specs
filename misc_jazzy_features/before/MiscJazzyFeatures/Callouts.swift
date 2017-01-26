@@ -12,14 +12,14 @@
 ///     - aParameter: A parameter
 ///
 /// - Returns: A result
-public func functionA(aParameter: Bool) -> Bool {
+public func functionA(_ aParameter: Bool) -> Bool {
     return true
 }
 
 /// Function (alternate documentation comment style)
 ///
 /// - Parameter: aParameter: A parameter
-public func functionB(aParameter: Bool) -> Bool {
+public func functionB(_ aParameter: Bool) -> Bool {
     return true
 }
 
@@ -29,13 +29,13 @@ public func functionB(aParameter: Bool) -> Bool {
 ///     - aParameter: A parameter
 ///
 /// - returns: A result
-public func functionC(aParameter: Bool) -> Bool {
+public func functionC(_ aParameter: Bool) -> Bool {
     return true
 }
 
 /// Function (alternate non‐standard documentation comment style)
 ///
 /// - parameter: aParameter: A parameter
-public func functionD(aParameter: Bool) -> Bool {
+public func functionD(_ aParameter: Bool) -> Bool {
     return true
 }

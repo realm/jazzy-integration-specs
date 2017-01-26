@@ -32,7 +32,7 @@
       <div class="content-wrapper">
         <p><a href="index.html">RealmSwift Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F1%2E0%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F2%2E3%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -70,10 +70,16 @@
                 <a href="Classes/Property.html">Property</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/RLMGenerator.html">RLMGenerator</a>
+                <a href="Classes/RLMIterator.html">RLMIterator</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/Realm.html">Realm</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Realm/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/Realm/Notification.html">– Notification</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/Realm/Configuration.html">– Configuration</a>
@@ -87,19 +93,51 @@
               <li class="nav-group-task">
                 <a href="Classes/Schema.html">Schema</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Classes/SyncPermissionChange.html">SyncPermissionChange</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SyncPermissionOffer.html">SyncPermissionOffer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/SyncPermissionOfferResponse.html">SyncPermissionOfferResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/ThreadSafeReference.html">ThreadSafeReference</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
             <a href="Enums.html">Enums</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Enums/Error.html">Error</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Enums/Notification.html">Notification</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Enums/RealmCollectionChange.html">RealmCollectionChange</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Extensions/SyncError.html">SyncError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/SyncManager.html">SyncManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/SyncSession.html">SyncSession</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/SyncSession/ProgressDirection.html">– ProgressDirection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/SyncSession/ProgressMode.html">– ProgressMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/SyncSession/Progress.html">– Progress</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/SyncUser.html">SyncUser</a>
               </li>
             </ul>
           </li>
@@ -107,31 +145,13 @@
             <a href="Functions.html">Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Functions.html#/s:ZF10RealmSwiftoi2eeFTCS_12ObjectSchemaS0__Sb">==(_:_:)</a>
+                <a href="Functions.html#/s:F10RealmSwiftoi2eeFTPs5Error_PS0___Sb">==(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:ZF10RealmSwiftoi2eeFTCS_5RealmS0__Sb">==(_:_:)</a>
+                <a href="Functions.html#/s:F10RealmSwift18schemaVersionAtURLFzTV10Foundation3URL13encryptionKeyGSqVS0_4Data__Vs6UInt64">schemaVersionAtURL(_:encryptionKey:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="Functions.html#/s:ZF10RealmSwiftoi2eeFTCS_6SchemaS0__Sb">==(_:_:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Functions.html#/s:ZF10RealmSwiftoi2eeFTCS_8PropertyS0__Sb">==(_:_:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Functions.html#/s:ZF10RealmSwiftoi2eeFTPs9ErrorType_PS0___Sb">==(_:_:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Functions.html#/s:ZF10RealmSwiftoi2eeFTVS_14SortDescriptorS0__Sb">==(_:_:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Functions.html#/s:F10RealmSwift12migrateRealmFTVCS_5Realm13Configuration_GSqCSo7NSError_">migrateRealm(_:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Functions.html#/s:F10RealmSwift18schemaVersionAtURLFzTCSo5NSURL13encryptionKeyGSqCSo6NSData__Vs6UInt64">schemaVersionAtURL(_:encryptionKey:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Functions.html#/s:ZF10RealmSwiftoi2teFTOS_5ErrorPs9ErrorType__Sb">~=(_:_:)</a>
+                <a href="Functions.html#/s:F10RealmSwiftoi2teFTVCS_5Realm5ErrorPs5Error__Sb">~=(_:_:)</a>
               </li>
             </ul>
           </li>
@@ -145,10 +165,13 @@
                 <a href="Protocols.html#/s:P10RealmSwift10MinMaxType">MinMaxType</a>
               </li>
               <li class="nav-group-task">
-                <a href="Protocols/RealmCollectionType.html">RealmCollectionType</a>
+                <a href="Protocols/RealmCollection.html">RealmCollection</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols.html#/s:P10RealmSwift17RealmOptionalType">RealmOptionalType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/ThreadConfined.html">ThreadConfined</a>
               </li>
             </ul>
           </li>
@@ -158,11 +181,20 @@
               <li class="nav-group-task">
                 <a href="Structs/SortDescriptor.html">SortDescriptor</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Structs/SyncConfiguration.html">SyncConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Structs/SyncCredentials.html">SyncCredentials</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
             <a href="Typealiases.html">Typealiases</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10RealmSwift19ErrorReportingBlock">ErrorReportingBlock</a>
+              </li>
               <li class="nav-group-task">
                 <a href="Typealiases.html#/s:10RealmSwift14MigrationBlock">MigrationBlock</a>
               </li>
@@ -180,6 +212,30 @@
               </li>
               <li class="nav-group-task">
                 <a href="Typealiases.html#/s:10RealmSwift12PropertyType">PropertyType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10RealmSwift8Provider">Provider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10RealmSwift9SyncError">SyncError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10RealmSwift12SyncLogLevel">SyncLogLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10RealmSwift26SyncManagementObjectStatus">SyncManagementObjectStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10RealmSwift11SyncManager">SyncManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10RealmSwift11SyncSession">SyncSession</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10RealmSwift8SyncUser">SyncUser</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10RealmSwift19UserCompletionBlock">UserCompletionBlock</a>
               </li>
             </ul>
           </li>
@@ -217,6 +273,12 @@
                       <div class="abstract">
                         <p>An opaque token which is returned from methods which subscribe to changes to a Realm.</p>
 
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <code>addNotificationBlock(_:)</code>
+
+</div>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -227,7 +289,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Aliases.swift#L53">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Aliases.swift#L57">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -266,7 +328,7 @@
 <li><code>Date</code></li>
 </ul>
 
-<p><a href='#relationships-list-code-array-code-and-code-object-code-types' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='relationships-list-code-array-code-and-code-object-code-types'>Relationships: List (<code>Array</code>) and <code><a href="Classes/Object.html">Object</a></code> types</h3></p>
+<p><a href='#relationships-array-in-swift-code-list-code-and-code-object-code-types' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='relationships-array-in-swift-code-list-code-and-code-object-code-types'>Relationships: Array (in Swift, <code><a href="Classes/List.html">List</a></code>) and <code><a href="Classes/Object.html">Object</a></code> types</h3></p>
 
 <ul>
 <li><code><a href="Classes/Object.html">Object</a></code></li>
@@ -283,7 +345,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Aliases.swift#L50">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Aliases.swift#L50">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -317,7 +379,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Migration.swift#L35">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Migration.swift#L36">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -342,7 +404,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">MigrationBlock</span> <span class="o">=</span> <span class="p">(</span><span class="nv">migration</span><span class="p">:</span> <span class="kt"><a href="Classes/Migration.html">Migration</a></span><span class="p">,</span> <span class="nv">oldSchemaVersion</span><span class="p">:</span> <span class="kt">UInt64</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">MigrationBlock</span> <span class="o">=</span> <span class="p">(</span><span class="n">_</span> <span class="nv">migration</span><span class="p">:</span> <span class="kt"><a href="Classes/Migration.html">Migration</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">oldSchemaVersion</span><span class="p">:</span> <span class="kt">UInt64</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
 
                         </div>
                       </div>
@@ -358,7 +420,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>A <code>RLMMigration</code> object used to perform the migration. The migration object allows you to enumerate and alter any existing objects which require migration.</p>
+                                  <p>A <code>Migration</code> object used to perform the migration. The migration object allows you to enumerate and alter any existing objects which require migration.</p>
 
                                 </div>
                               </td>
@@ -380,7 +442,7 @@
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Migration.swift#L32">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Migration.swift#L33">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -406,7 +468,7 @@ properties can only be accessed using subscripting.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">MigrationObjectEnumerateBlock</span> <span class="o">=</span> <span class="p">(</span><span class="nv">oldObject</span><span class="p">:</span> <span class="kt"><a href="Typealiases.html#/s:10RealmSwift15MigrationObject">MigrationObject</a></span><span class="p">?,</span> <span class="nv">newObject</span><span class="p">:</span> <span class="kt"><a href="Typealiases.html#/s:10RealmSwift15MigrationObject">MigrationObject</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">MigrationObjectEnumerateBlock</span> <span class="o">=</span> <span class="p">(</span><span class="n">_</span> <span class="nv">oldObject</span><span class="p">:</span> <span class="kt"><a href="Typealiases.html#/s:10RealmSwift15MigrationObject">MigrationObject</a></span><span class="p">?,</span> <span class="n">_</span> <span class="nv">newObject</span><span class="p">:</span> <span class="kt"><a href="Typealiases.html#/s:10RealmSwift15MigrationObject">MigrationObject</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
 
                         </div>
                       </div>
@@ -444,7 +506,7 @@ properties can only be accessed using subscripting.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Migration.swift#L44">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Migration.swift#L45">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -473,12 +535,340 @@ properties can only be accessed using subscripting.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">NotificationBlock</span> <span class="o">=</span> <span class="p">(</span><span class="nv">notification</span><span class="p">:</span> <span class="kt"><a href="Enums/Notification.html">Notification</a></span><span class="p">,</span> <span class="nv">realm</span><span class="p">:</span> <span class="kt"><a href="Classes/Realm.html">Realm</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">NotificationBlock</span> <span class="o">=</span> <span class="p">(</span><span class="n">_</span> <span class="nv">notification</span><span class="p">:</span> <span class="kt"><a href="Classes/Realm.html">Realm</a></span><span class="o">.</span><span class="kt">Notification</span><span class="p">,</span> <span class="n">_</span> <span class="nv">realm</span><span class="p">:</span> <span class="kt"><a href="Classes/Realm.html">Realm</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Realm.swift#L619">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Realm.swift#L656">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RealmSwift11SyncSession"></a>
+                    <a name="//apple_ref/swift/Alias/SyncSession" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RealmSwift11SyncSession">SyncSession</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A session object which represents communication between the client and server for a specific Realm.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <code>RLMSyncSession</code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">SyncSession</span> <span class="o">=</span> <span class="kt">RLMSyncSession</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Sync.swift#L56">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RealmSwift11SyncManager"></a>
+                    <a name="//apple_ref/swift/Alias/SyncManager" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RealmSwift11SyncManager">SyncManager</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A singleton which configures and manages the Realm Object Server synchronization-related functionality.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <code>RLMSyncManager</code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">SyncManager</span> <span class="o">=</span> <span class="kt">RLMSyncManager</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Sync.swift#L35">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RealmSwift9SyncError"></a>
+                    <a name="//apple_ref/swift/Alias/SyncError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RealmSwift9SyncError">SyncError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An error associated with the SDK&rsquo;s synchronization functionality.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <code>RLMSyncError</code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">SyncError</span> <span class="o">=</span> <span class="kt">RLMSyncError</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Sync.swift#L77">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RealmSwift8Provider"></a>
+                    <a name="//apple_ref/swift/Alias/Provider" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RealmSwift8Provider">Provider</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A data type whose values represent different authentication providers that can be used with the Realm Object Server.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <code>RLMIdentityProvider</code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Provider</span> <span class="o">=</span> <span class="kt">RLMIdentityProvider</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Sync.swift#L100">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RealmSwift26SyncManagementObjectStatus"></a>
+                    <a name="//apple_ref/swift/Alias/SyncManagementObjectStatus" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RealmSwift26SyncManagementObjectStatus">SyncManagementObjectStatus</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An enum representing the different states a sync management object can take.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <code>RLMSyncManagementObjectStatus</code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">SyncManagementObjectStatus</span> <span class="o">=</span> <span class="kt">RLMSyncManagementObjectStatus</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Sync.swift#L91">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RealmSwift12SyncLogLevel"></a>
+                    <a name="//apple_ref/swift/Alias/SyncLogLevel" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RealmSwift12SyncLogLevel">SyncLogLevel</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An enum which can be used to specify the level of logging.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <code>RLMSyncLogLevel</code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">SyncLogLevel</span> <span class="o">=</span> <span class="kt">RLMSyncLogLevel</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Sync.swift#L84">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RealmSwift19ErrorReportingBlock"></a>
+                    <a name="//apple_ref/swift/Alias/ErrorReportingBlock" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RealmSwift19ErrorReportingBlock">ErrorReportingBlock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A closure type for a closure which can be set on the <code>SyncManager</code> to allow errors to be reported to the application.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <code>RLMSyncErrorReportingBlock</code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">ErrorReportingBlock</span> <span class="o">=</span> <span class="kt">RLMSyncErrorReportingBlock</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Sync.swift#L63">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RealmSwift8SyncUser"></a>
+                    <a name="//apple_ref/swift/Alias/SyncUser" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RealmSwift8SyncUser">SyncUser</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>An object representing a Realm Object Server user.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <code>SyncUser</code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">SyncUser</span> <span class="o">=</span> <span class="kt">RLMSyncUser</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Sync.swift#L28">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RealmSwift19UserCompletionBlock"></a>
+                    <a name="//apple_ref/swift/Alias/UserCompletionBlock" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RealmSwift19UserCompletionBlock">UserCompletionBlock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A closure type for a closure which is used by certain APIs to asynchronously return a <code>User</code> object to the application.</p>
+
+<div class="aside aside-see">
+    <p class="aside-title">See</p>
+    <code>RLMUserCompletionBlock</code>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">UserCompletionBlock</span> <span class="o">=</span> <span class="kt">RLMUserCompletionBlock</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Sync.swift#L70">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

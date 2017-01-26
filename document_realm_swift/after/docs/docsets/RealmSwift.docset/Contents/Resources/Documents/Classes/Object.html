@@ -33,7 +33,7 @@
       <div class="content-wrapper">
         <p><a href="../index.html">RealmSwift Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F1%2E0%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F2%2E3%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -71,10 +71,16 @@
                 <a href="../Classes/Property.html">Property</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/RLMGenerator.html">RLMGenerator</a>
+                <a href="../Classes/RLMIterator.html">RLMIterator</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/Realm.html">Realm</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Realm/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Realm/Notification.html">– Notification</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/Realm/Configuration.html">– Configuration</a>
@@ -88,19 +94,51 @@
               <li class="nav-group-task">
                 <a href="../Classes/Schema.html">Schema</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SyncPermissionChange.html">SyncPermissionChange</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SyncPermissionOffer.html">SyncPermissionOffer</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SyncPermissionOfferResponse.html">SyncPermissionOfferResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ThreadSafeReference.html">ThreadSafeReference</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
             <a href="../Enums.html">Enums</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Enums/Error.html">Error</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Enums/Notification.html">Notification</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Enums/RealmCollectionChange.html">RealmCollectionChange</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/SyncError.html">SyncError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/SyncManager.html">SyncManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/SyncSession.html">SyncSession</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/SyncSession/ProgressDirection.html">– ProgressDirection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/SyncSession/ProgressMode.html">– ProgressMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/SyncSession/Progress.html">– Progress</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/SyncUser.html">SyncUser</a>
               </li>
             </ul>
           </li>
@@ -108,31 +146,13 @@
             <a href="../Functions.html">Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:ZF10RealmSwiftoi2eeFTCS_12ObjectSchemaS0__Sb">==(_:_:)</a>
+                <a href="../Functions.html#/s:F10RealmSwiftoi2eeFTPs5Error_PS0___Sb">==(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:ZF10RealmSwiftoi2eeFTCS_5RealmS0__Sb">==(_:_:)</a>
+                <a href="../Functions.html#/s:F10RealmSwift18schemaVersionAtURLFzTV10Foundation3URL13encryptionKeyGSqVS0_4Data__Vs6UInt64">schemaVersionAtURL(_:encryptionKey:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:ZF10RealmSwiftoi2eeFTCS_6SchemaS0__Sb">==(_:_:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Functions.html#/s:ZF10RealmSwiftoi2eeFTCS_8PropertyS0__Sb">==(_:_:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Functions.html#/s:ZF10RealmSwiftoi2eeFTPs9ErrorType_PS0___Sb">==(_:_:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Functions.html#/s:ZF10RealmSwiftoi2eeFTVS_14SortDescriptorS0__Sb">==(_:_:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Functions.html#/s:F10RealmSwift12migrateRealmFTVCS_5Realm13Configuration_GSqCSo7NSError_">migrateRealm(_:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Functions.html#/s:F10RealmSwift18schemaVersionAtURLFzTCSo5NSURL13encryptionKeyGSqCSo6NSData__Vs6UInt64">schemaVersionAtURL(_:encryptionKey:)</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Functions.html#/s:ZF10RealmSwiftoi2teFTOS_5ErrorPs9ErrorType__Sb">~=(_:_:)</a>
+                <a href="../Functions.html#/s:F10RealmSwiftoi2teFTVCS_5Realm5ErrorPs5Error__Sb">~=(_:_:)</a>
               </li>
             </ul>
           </li>
@@ -146,10 +166,13 @@
                 <a href="../Protocols.html#/s:P10RealmSwift10MinMaxType">MinMaxType</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/RealmCollectionType.html">RealmCollectionType</a>
+                <a href="../Protocols/RealmCollection.html">RealmCollection</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols.html#/s:P10RealmSwift17RealmOptionalType">RealmOptionalType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ThreadConfined.html">ThreadConfined</a>
               </li>
             </ul>
           </li>
@@ -159,11 +182,20 @@
               <li class="nav-group-task">
                 <a href="../Structs/SortDescriptor.html">SortDescriptor</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SyncConfiguration.html">SyncConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SyncCredentials.html">SyncCredentials</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
             <a href="../Typealiases.html">Typealiases</a>
             <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift19ErrorReportingBlock">ErrorReportingBlock</a>
+              </li>
               <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:10RealmSwift14MigrationBlock">MigrationBlock</a>
               </li>
@@ -182,6 +214,30 @@
               <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:10RealmSwift12PropertyType">PropertyType</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift8Provider">Provider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift9SyncError">SyncError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift12SyncLogLevel">SyncLogLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift26SyncManagementObjectStatus">SyncManagementObjectStatus</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift11SyncManager">SyncManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift11SyncSession">SyncSession</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift8SyncUser">SyncUser</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift19UserCompletionBlock">UserCompletionBlock</a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -192,13 +248,13 @@
             <h1>Object</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Object</span><span class="p">:</span> <span class="kt">RLMObjectBase</span></code></pre>
+                  <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">Object</span><span class="p">:</span> <span class="kt">RLMObjectBase</span><span class="p">,</span> <span class="kt"><a href="../Protocols/ThreadConfined.html">ThreadConfined</a></span></code></pre>
 
                 </div>
               </div>
             <p><code>Object</code> is a class used to define Realm model objects.</p>
 
-<p>In Realm you define your model classes by subclassing <code>Object</code> and adding properties to be persisted.
+<p>In Realm you define your model classes by subclassing <code>Object</code> and adding properties to be managed.
 You then instantiate and use your custom subclasses instead of using the <code>Object</code> class directly.</p>
 
 <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">Dog</span><span class="p">:</span> <span class="kt">Object</span> <span class="p">{</span>
@@ -217,20 +273,22 @@ You then instantiate and use your custom subclasses instead of using the <code>O
 <li><code>Float</code></li>
 <li><code>Double</code></li>
 <li><code>Bool</code></li>
-<li><code>NSDate</code></li>
-<li><code>NSData</code></li>
+<li><code>Date</code>, <code>NSDate</code></li>
+<li><code>Data</code>, <code>NSData</code></li>
 <li><code><a href="../Classes/RealmOptional.html">RealmOptional&lt;T&gt;</a></code> for optional numeric properties</li>
 <li><code>Object</code> subclasses, to model many-to-one relationships</li>
-<li><code>List&lt;T: Object&gt;</code>, to model many-to-many relationships</li>
+<li><code><a href="../Classes/List.html">List&lt;T&gt;</a></code>, to model many-to-many relationships</li>
 </ul>
 
-<p><code>String</code>, <code>NSString</code>, <code>NSDate</code>, <code>NSData</code> and <code>Object</code> subclass properties can be declared as optional. <code>Int</code>, <code>Int8</code>,
-Int16<code>, Int32</code>, <code>Int64</code>, <code>Float</code>, <code>Double</code>, <code>Bool</code>, and <code><a href="../Classes/List.html">List</a></code> properties cannot. To store an optional number, use
-<code><a href="../Classes/RealmOptional.html">RealmOptional&lt;Int&gt;</a></code>, <code><a href="../Classes/RealmOptional.html">RealmOptional&lt;Float&gt;</a></code>, <code><a href="../Classes/RealmOptional.html">RealmOptional&lt;Double&gt;</a></code>, or <code><a href="../Classes/RealmOptional.html">RealmOptional&lt;Bool&gt;</a></code> instead, which wraps an
-optional numeric value.</p>
+<p><code>String</code>, <code>NSString</code>, <code>Date</code>, <code>NSDate</code>, <code>Data</code>, <code>NSData</code> and <code>Object</code> subclass properties can be declared as optional.
+<code>Int</code>, <code>Int8</code>, <code>Int16</code>, <code>Int32</code>, <code>Int64</code>, <code>Float</code>, <code>Double</code>, <code>Bool</code>, and <code><a href="../Classes/List.html">List</a></code> properties cannot. To store an optional
+number, use <code><a href="../Classes/RealmOptional.html">RealmOptional&lt;Int&gt;</a></code>, <code><a href="../Classes/RealmOptional.html">RealmOptional&lt;Float&gt;</a></code>, <code><a href="../Classes/RealmOptional.html">RealmOptional&lt;Double&gt;</a></code>, or <code><a href="../Classes/RealmOptional.html">RealmOptional&lt;Bool&gt;</a></code> instead,
+which wraps an optional numeric value.</p>
 
 <p>All property types except for <code><a href="../Classes/List.html">List</a></code> and <code><a href="../Classes/RealmOptional.html">RealmOptional</a></code> <em>must</em> be declared as <code>dynamic var</code>. <code><a href="../Classes/List.html">List</a></code> and
-<code><a href="../Classes/RealmOptional.html">RealmOptional</a></code> properties must be declared as non-dynamic <code>let</code> properties.</p>
+<code><a href="../Classes/RealmOptional.html">RealmOptional</a></code> properties must be declared as non-dynamic <code>let</code> properties. Swift <code>lazy</code> properties are not allowed.</p>
+
+<p>Note that none of the restrictions listed above apply to properties that are configured to be ignored by Realm.</p>
 
 <p><a href='#querying' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='querying'>Querying</h3></p>
 
@@ -254,9 +312,9 @@ optional numeric value.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:iC10RealmSwift6Object9subscriptFSSGSqPs9AnyObject__"></a>
+                    <a name="/s:iC10RealmSwift6Object9subscriptFSSGSqP__"></a>
                     <a name="//apple_ref/swift/Method/subscript(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:iC10RealmSwift6Object9subscriptFSSGSqPs9AnyObject__">subscript(_:)</a>
+                    <a class="token" href="#/s:iC10RealmSwift6Object9subscriptFSSGSqP__">subscript(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -271,12 +329,12 @@ optional numeric value.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">subscript</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AnyObject</span><span class="p">?</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="nf">subscript</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Object.swift#L181">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Object.swift#L182">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -294,7 +352,7 @@ optional numeric value.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Initializes an unmanaged instance of a Realm object.</p>
+                        <p>Creates an unmanaged instance of a Realm object.</p>
 
 <p>Call <code>add(_:)</code> on a <code><a href="../Classes/Realm.html">Realm</a></code> instance to add an unmanaged object into that Realm.</p>
 
@@ -314,7 +372,7 @@ optional numeric value.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Object.swift#L79-L81">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Object.swift#L83-L85">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -322,9 +380,9 @@ optional numeric value.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC10RealmSwift6ObjectcFT5valuePs9AnyObject__S0_"></a>
+                    <a name="/s:FC10RealmSwift6ObjectcFT5valueP__S0_"></a>
                     <a name="//apple_ref/swift/Method/init(value:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC10RealmSwift6ObjectcFT5valuePs9AnyObject__S0_">init(value:)</a>
+                    <a class="token" href="#/s:FC10RealmSwift6ObjectcFT5valueP__S0_">init(value:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -332,10 +390,15 @@ optional numeric value.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Initializes an unmanaged instance of a Realm object.</p>
+                        <p>Creates an unmanaged instance of a Realm object.</p>
 
-<p>Pass in an <code>Array&lt;AnyObject&gt;</code> or <code>Dictionary&lt;String, AnyObject&gt;</code> instance to set the values of the object&rsquo;s
-properties, or any other valid object as described below.</p>
+<p>The <code>value</code> argument is used to populate the object. It can be a key-value coding compliant object, an array or
+dictionary returned from the methods in <code>NSJSONSerialization</code>, or an <code>Array</code> containing one element for each
+managed property. An exception will be thrown if any required properties are not present and those properties were
+not defined with default values.</p>
+
+<p>When passing in an <code>Array</code> as the <code>value</code> argument, all properties must be present, valid and in the same order as
+the properties defined in the model.</p>
 
 <p>Call <code>add(_:)</code> on a <code><a href="../Classes/Realm.html">Realm</a></code> instance to add an unmanaged object into that Realm.</p>
 
@@ -344,7 +407,7 @@ properties, or any other valid object as described below.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">)</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">value</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -360,8 +423,7 @@ properties, or any other valid object as described below.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The value used to populate the object. This can be any key-value coding compliant object, or an array or dictionary returned from the methods in <code>NSJSONSerialization</code>, or an <code>Array</code> containing one element for each persisted property. An exception will be thrown if any required properties are not present and those properties were not defined with default values.</p>
-<pre class="highlight plaintext"><code></code></pre>
+                                  <p>The value used to populate the object.</p>
 
                                 </div>
                               </td>
@@ -370,7 +432,7 @@ properties, or any other valid object as described below.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Object.swift#L100-L103">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Object.swift#L102-L105">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -411,7 +473,7 @@ properties, or any other valid object as described below.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Object.swift#L109-L114">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Object.swift#L111-L116">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -429,7 +491,7 @@ properties, or any other valid object as described below.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The object schema which lists the persisted properties for the object.</p>
+                        <p>The object schema which lists the managed properties for the object.</p>
 
                       </div>
                       <div class="declaration">
@@ -441,7 +503,7 @@ properties, or any other valid object as described below.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Object.swift#L117-L119">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Object.swift#L119-L121">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -449,9 +511,9 @@ properties, or any other valid object as described below.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC10RealmSwift6Object11invalidatedSb"></a>
-                    <a name="//apple_ref/swift/Property/invalidated" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC10RealmSwift6Object11invalidatedSb">invalidated</a>
+                    <a name="/s:vC10RealmSwift6Object13isInvalidatedSb"></a>
+                    <a name="//apple_ref/swift/Property/isInvalidated" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC10RealmSwift6Object13isInvalidatedSb">isInvalidated</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -462,19 +524,19 @@ properties, or any other valid object as described below.</p>
                         <p>Indicates if the object can no longer be accessed because it is now invalid.</p>
 
 <p>An object can no longer be accessed if the object has been deleted from the Realm that manages it, or if
-<code>invalidate</code> is called on that Realm.</p>
+<code>invalidate()</code> is called on that Realm.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">override</span> <span class="k">var</span> <span class="nv">invalidated</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">override</span> <span class="k">var</span> <span class="nv">isInvalidated</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Object.swift#L125">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Object.swift#L127">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -492,19 +554,19 @@ properties, or any other valid object as described below.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns a human-readable description of the object.</p>
+                        <p>A human-readable description of the object.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">override</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">override</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Object.swift#L128">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Object.swift#L130">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -522,7 +584,7 @@ properties, or any other valid object as described below.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A helper property that returns the class name for an <code>Object</code> subclass.</p>
+                        <p>Helper to return the class name for an Object subclass.</p>
 
                       </div>
                       <div class="declaration">
@@ -534,7 +596,7 @@ properties, or any other valid object as described below.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Object.swift#L132">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Object.swift#L134">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -559,7 +621,7 @@ properties, or any other valid object as described below.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">Object</span><span class="p">:</span> <span class="kt">RLMObjectBase</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">Object</span><span class="p">:</span> <span class="kt">RLMObjectBase</span><span class="p">,</span> <span class="kt"><a href="../Protocols/ThreadConfined.html">ThreadConfined</a></span></code></pre>
 
                         </div>
                       </div>
@@ -601,7 +663,7 @@ automatically for primary key properties.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">primaryKey</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">primaryKey</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -611,7 +673,7 @@ automatically for primary key properties.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Object.swift#L158">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Object.swift#L160">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -629,7 +691,7 @@ automatically for primary key properties.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Override this method to specify the names of properties to ignore. These properties will not be persisted within
+                        <p>Override this method to specify the names of properties to ignore. These properties will not be managed by
 the Realm that manages the object.</p>
 
                       </div>
@@ -637,7 +699,7 @@ the Realm that manages the object.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">ignoredProperties</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">ignoredProperties</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
@@ -647,7 +709,7 @@ the Realm that manages the object.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Object.swift#L166">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Object.swift#L168">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -667,14 +729,14 @@ the Realm that manages the object.</p>
                       <div class="abstract">
                         <p>Returns an array of property names for properties which should be indexed.</p>
 
-<p>Only string, integer, boolean, and <code>NSDate</code> properties are supported.</p>
+<p>Only string, integer, boolean, <code>Date</code>, and <code>NSDate</code> properties are supported.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">indexedProperties</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">indexedProperties</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
@@ -684,7 +746,7 @@ the Realm that manages the object.</p>
 
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Object.swift#L175">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Object.swift#L177">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -703,9 +765,9 @@ the Realm that manages the object.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC10RealmSwift6Object7isEqualFGSqPs9AnyObject__Sb"></a>
+                    <a name="/s:FC10RealmSwift6Object7isEqualFGSqP__Sb"></a>
                     <a name="//apple_ref/swift/Method/isEqual(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC10RealmSwift6Object7isEqualFGSqPs9AnyObject__Sb">isEqual(_:)</a>
+                    <a class="token" href="#/s:FC10RealmSwift6Object7isEqualFGSqP__Sb">isEqual(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -723,7 +785,7 @@ underlying object in the database.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">isEqual</span><span class="p">(</span><span class="nv">object</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">isEqual</span><span class="p">(</span><span class="n">_</span> <span class="nv">object</span><span class="p">:</span> <span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -748,7 +810,7 @@ underlying object in the database.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v1.0.0/RealmSwift-swift2.2/Object.swift#L232-L234">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Object.swift#L228-L230">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

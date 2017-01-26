@@ -1,24 +1,29 @@
-COCOAPODS_SKIP_UPDATE_MESSAGE=TRUE JAZZY_FAKE_DATE=YYYY-MM-DD JAZZY_FAKE_VERSION=X.X.X JAZZY_INTEGRATION_SPECS=TRUE ruby ROOT/bin/jazzy -m Alamofire -a Alamofire -u https://nshipster.com/alamofire -x -project,Alamofire.xcodeproj,-dry-run -g https://github.com/Alamofire/Alamofire --github-file-prefix https://github.com/Alamofire/Alamofire/blob/3.4.0 --module-version 3.4.0 -r http://static.realm.io/jazzy_demo/Alamofire/ --skip-undocumented 2>&1
+COCOAPODS_SKIP_UPDATE_MESSAGE=TRUE JAZZY_FAKE_DATE=YYYY-MM-DD JAZZY_FAKE_VERSION=X.X.X JAZZY_INTEGRATION_SPECS=TRUE ruby ROOT/bin/jazzy -m Alamofire -a Alamofire -u https://nshipster.com/alamofire -x -project,Alamofire.xcodeproj,-dry-run -g https://github.com/Alamofire/Alamofire --github-file-prefix https://github.com/Alamofire/Alamofire/blob/4.3.0 --module-version 4.3.0 --root-url https://static.realm.io/jazzy_demo/Alamofire/ --skip-undocumented 2>&1
 Running xcodebuild
 Parsing Timeline.swift (1/17)
-Parsing Upload.swift (2/17)
+Parsing SessionDelegate.swift (2/17)
 Parsing ParameterEncoding.swift (3/17)
 Parsing Request.swift (4/17)
 Parsing ResponseSerialization.swift (5/17)
-Parsing Error.swift (6/17)
-Parsing Manager.swift (7/17)
+Parsing AFError.swift (6/17)
+Parsing SessionManager.swift (7/17)
 Parsing Response.swift (8/17)
 Parsing Alamofire.swift (9/17)
 Parsing MultipartFormData.swift (10/17)
 Parsing ServerTrustPolicy.swift (11/17)
-Parsing NetworkReachabilityManager.swift (12/17)
-Parsing Stream.swift (13/17)
-Parsing Download.swift (14/17)
+Parsing DispatchQueue+Alamofire.swift (12/17)
+Parsing NetworkReachabilityManager.swift (13/17)
+Parsing TaskDelegate.swift (14/17)
 Parsing Validation.swift (15/17)
 Parsing Notifications.swift (16/17)
 Parsing Result.swift (17/17)
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable streamTaskReadClosed, instance variable streamTaskReadClosed
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable streamTaskWriteClosed, instance variable streamTaskWriteClosed
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable streamTaskBetterRouteDiscovered, instance variable streamTaskBetterRouteDiscovered
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance variable streamTaskDidBecomeInputAndOutputStreams, instance variable streamTaskDidBecomeInputAndOutputStreams
+Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method urlSession(_:task:didFinishCollecting:), instance method urlSession(_:task:didFinishCollecting:)
 building site
 building search index
-85% documentation coverage with 42 undocumented symbols
+86% documentation coverage with 62 undocumented symbols
 downloading coverage badge
 jam out ♪♫ to your fresh new docs in `docs`
