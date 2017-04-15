@@ -284,7 +284,6 @@
 
 <p>Define your model classes by subclassing <code>RLMObject</code> and adding properties to be managed.
 Then instantiate and use your custom subclasses instead of using the <code>RLMObject</code> class directly.</p>
-
 <pre class="highlight objective_c"><code><span class="c1">// Dog.h
 </span><span class="k">@interface</span> <span class="nc">Dog</span> <span class="p">:</span> <span class="nc">RLMObject</span>
 <span class="k">@property</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">name</span><span class="p">;</span>
@@ -295,8 +294,7 @@ Then instantiate and use your custom subclasses instead of using the <code>RLMOb
 </span><span class="k">@implementation</span> <span class="nc">Dog</span>
 <span class="k">@end</span> <span class="c1">//none needed
 </span></code></pre>
-
-<p><a href='#supported-property-types' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='supported-property-types'>Supported property types</h3></p>
+<h3 id='supported-property-types' class='heading'>Supported property types</h3>
 
 <ul>
 <li><code>NSString</code></li>
@@ -308,26 +306,22 @@ Then instantiate and use your custom subclasses instead of using the <code>RLMOb
 <li><code>RLMObject</code> subclasses, to model many-to-one relationships.</li>
 <li><code><a href="../Classes/RLMArray.html">RLMArray&lt;X&gt;</a></code>, where <code>X</code> is an <code>RLMObject</code> subclass, to model many-to-many relationships.</li>
 </ul>
-
-<p><a href='#querying' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='querying'>Querying</h3></p>
+<h3 id='querying' class='heading'>Querying</h3>
 
 <p>You can initiate queries directly via the class methods: <code>allObjects</code>, <code>objectsWhere:</code>, and <code>objectsWithPredicate:</code>.
 These methods allow you to easily query a custom subclass for instances of that class in the default Realm.</p>
 
 <p>To search in a Realm other than the default Realm, use the <code>allObjectsInRealm:</code>, <code>objectsInRealm:where:</code>,
 and <code>objectsInRealm:withPredicate:</code> class methods.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code>
 
 </div>
-
-<p><a href='#relationships' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='relationships'>Relationships</h3></p>
+<h3 id='relationships' class='heading'>Relationships</h3>
 
 <p>See our <a href="https://realm.io/docs/objc/latest#relationships">Cocoa guide</a> for more details.</p>
-
-<p><a href='#key-value-observing' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='key-value-observing'>Key-Value Observing</h3></p>
+<h3 id='key-value-observing' class='heading'>Key-Value Observing</h3>
 
 <p>All <code>RLMObject</code> properties (including properties you create in subclasses) are
 <a href="https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/KeyValueObserving/KeyValueObserving.html">Key-Value Observing compliant</a>,
@@ -378,7 +372,6 @@ times when you <em>cannot</em> begin a write transaction.</li>
                         <p>Creates an unmanaged instance of a Realm object.</p>
 
 <p>Call <code>addObject:</code> on an <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> instance to add an unmanaged object into that Realm.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <code>[RLMRealm addObject:]</code>
@@ -423,7 +416,6 @@ times when you <em>cannot</em> begin a write transaction.</li>
 <p>Pass in an <code>NSArray</code> or <code>NSDictionary</code> instance to set the values of the object&rsquo;s properties.</p>
 
 <p>Call <code>addObject:</code> on an <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> instance to add an unmanaged object into that Realm.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <code>[RLMRealm addObject:]</code>
@@ -464,7 +456,6 @@ times when you <em>cannot</em> begin a write transaction.</li>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the class name for a Realm object subclass.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>Do not override. Realm relies on this method returning the exact class
@@ -521,7 +512,6 @@ any required properties are not present and those properties were not defined wi
 
 <p>When passing in an array as the <code>value</code> argument, all properties must be present, valid and in the same order as the
 properties defined in the model.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p><code>defaultPropertyValues</code></p>
@@ -592,7 +582,6 @@ required properties are not present and those properties were not defined with d
 
 <p>When passing in an array as the <code>value</code> argument, all properties must be present, valid and in the same order as the
 properties defined in the model.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p><code>defaultPropertyValues</code></p>
@@ -685,7 +674,6 @@ with default values.</p>
 
 <p>When passing in an array as the <code>value</code> argument, all properties must be present, valid and in the same order as the
 properties defined in the model.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p><code>defaultPropertyValues</code>, <code>primaryKey</code></p>
@@ -764,7 +752,6 @@ with default values.</p>
 
 <p>When passing in an array as the <code>value</code> argument, all properties must be present, valid and in the same order as the
 properties defined in the model.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p><code>defaultPropertyValues</code>, <code>primaryKey</code></p>
@@ -1188,7 +1175,6 @@ if you want a non-optional number you should instead use the primitive type.</p>
 <p>Each property of type <code><a href="../Classes.html#/c:objc(cs)RLMLinkingObjects">RLMLinkingObjects</a></code> must have a key in the dictionary returned by this method consisting
 of the property name. The corresponding value must be an instance of <code><a href="../Classes/RLMPropertyDescriptor.html">RLMPropertyDescriptor</a></code> that describes the class
 and property that the property is linked to.</p>
-
 <pre class="highlight plaintext"><code>return @{ @"owners": [RLMPropertyDescriptor descriptorWithClass:Owner.class propertyName:@"dogs"] };
 </code></pre>
 
@@ -1404,7 +1390,6 @@ and property that the property is linked to.</p>
 equivalent <code>[[SubclassName objectsWhere:@&quot;primaryKeyPropertyName = %@&quot;, key] firstObject]</code>.</p>
 
 <p>This method requires that <code>primaryKey</code> be overridden on the receiving subclass.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <code>-primaryKey</code>
@@ -1670,7 +1655,6 @@ equivalent <code>[[SubclassName objectsWhere:@&quot;primaryKeyPropertyName = %@&
 equivalent <code>[[SubclassName objectsInRealm:realm where:@&quot;primaryKeyPropertyName = %@&quot;, key] firstObject]</code>.</p>
 
 <p>This method requires that <code>primaryKey</code> be overridden on the receiving subclass.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <code>-primaryKey</code>

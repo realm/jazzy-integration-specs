@@ -827,7 +827,6 @@ accessed, but will always be empty.</p>
                       <div class="abstract">
                         <p>Invokes <code>setValue(_:forKey:)</code> on each of the objects represented by the results using the specified <code>value</code> and
 <code>key</code>.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method may only be called during a write transaction.</p>
@@ -1022,7 +1021,6 @@ accessed, but will always be empty.</p>
 <p>Objects are sorted based on the values of the given key path. For example, to sort a collection of <code>Student</code>s from
 youngest to oldest based on their <code>age</code> property, you might call
 <code>students.sorted(byKeyPath: &quot;age&quot;, ascending: true)</code>.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>Collections may only be sorted by properties of boolean, <code>Date</code>, <code>NSDate</code>, single and double-precision
@@ -1096,7 +1094,6 @@ youngest to oldest based on their <code>age</code> property, you might call
 <p>Objects are sorted based on the values of the given property. For example, to sort a collection of <code>Student</code>s from
 youngest to oldest based on their <code>age</code> property, you might call
 <code>students.sorted(byProperty: &quot;age&quot;, ascending: true)</code>.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>Collections may only be sorted by properties of boolean, <code>Date</code>, <code>NSDate</code>, single and double-precision
@@ -1166,14 +1163,12 @@ youngest to oldest based on their <code>age</code> property, you might call
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns a <code>Results</code> containing the objects represented by the results, but sorted.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>Collections may only be sorted by properties of boolean, <code>Date</code>, <code>NSDate</code>, single and double-precision
        floating point, integer, and string types.</p>
 
 </div>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p><code><a href="../Classes/Results.html#/s:FC10RealmSwift7Results6sortedFT9byKeyPathSS9ascendingSb_GS0_x_">sorted(byKeyPath:ascending:)</a></code></p>
@@ -1240,7 +1235,6 @@ youngest to oldest based on their <code>age</code> property, you might call
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the minimum (lowest) value of the given property among all the results, or <code>nil</code> if the results are empty.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>Only a property whose type conforms to the <code><a href="../Protocols.html#/s:P10RealmSwift10MinMaxType">MinMaxType</a></code> protocol can be specified.</p>
@@ -1296,7 +1290,6 @@ youngest to oldest based on their <code>age</code> property, you might call
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the maximum (highest) value of the given property among all the results, or <code>nil</code> if the results are empty.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>Only a property whose type conforms to the <code><a href="../Protocols.html#/s:P10RealmSwift10MinMaxType">MinMaxType</a></code> protocol can be specified.</p>
@@ -1352,7 +1345,6 @@ youngest to oldest based on their <code>age</code> property, you might call
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the sum of the values of a given property over all the results.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>Only a property whose type conforms to the <code><a href="../Protocols.html#/s:P10RealmSwift11AddableType">AddableType</a></code> protocol can be specified.</p>
@@ -1408,7 +1400,6 @@ youngest to oldest based on their <code>age</code> property, you might call
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the average value of a given property over all the results, or <code>nil</code> if the results are empty.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>Only the name of a property whose type conforms to the <code><a href="../Protocols.html#/s:P10RealmSwift11AddableType">AddableType</a></code> protocol can be specified.</p>
@@ -1495,7 +1486,6 @@ single notification. This can include the notification with the initial collecti
 <p>For example, the following code performs a write transaction immediately after adding the notification block, so
 there is no opportunity for the initial notification to be delivered first. As a result, the initial notification
 will reflect the state of the Realm after the write transaction.</p>
-
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">results</span> <span class="o">=</span> <span class="n">realm</span><span class="o">.</span><span class="nf">objects</span><span class="p">(</span><span class="kt">Dog</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
 <span class="nf">print</span><span class="p">(</span><span class="s">"dogs.count: </span><span class="se">\(</span><span class="n">dogs</span><span class="p">?</span><span class="o">.</span><span class="n">count</span><span class="se">)</span><span class="s">"</span><span class="p">)</span> <span class="c1">// =&gt; 0</span>
 <span class="k">let</span> <span class="nv">token</span> <span class="o">=</span> <span class="n">dogs</span><span class="o">.</span><span class="n">addNotificationBlock</span> <span class="p">{</span> <span class="n">changes</span> <span class="k">in</span>
@@ -1521,7 +1511,6 @@ will reflect the state of the Realm after the write transaction.</p>
 
 <p>You must retain the returned token for as long as you want updates to be sent to the block. To stop receiving
 updates, call <code>stop()</code> on the token.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method cannot be called during a write transaction, or when the containing Realm is read-only.</p>

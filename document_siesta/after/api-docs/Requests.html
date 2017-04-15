@@ -269,7 +269,6 @@ and <code>overrideLocalData(...)</code>.</p>
 <p><code>Request</code> guarantees that it will call any given callback <em>at most</em> one time.</p>
 
 <p>Callbacks are always called on the main thread.</p>
-
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
     There is no race condition between a callback being added and a response arriving. If you add a callback after the
@@ -446,7 +445,6 @@ because network implementations may sometimes provide <em>both</em> an underlyin
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The possible actions a chained request may take after the underlying request completes.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <code><a href="Protocols/Request.html#/s:FE6SiestaPS_7Request7chainedFT13whenCompletedFVS_12ResponseInfoOS_18RequestChainAction_PS0__">Request.chained(...)</a></code>

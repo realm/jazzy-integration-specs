@@ -268,7 +268,6 @@ custom stages, and customize their order. Each stage has zero or more <code><a h
 <code><a href="Protocols/EntityCache.html">EntityCache</a></code>.</p>
 
 <p>The pipeline is a part of a <code><a href="Structs/Configuration.html">Configuration</a></code>, so you can thus customize the pipeline per API or per resource.</p>
-
 <pre class="highlight plaintext"><code>service.configure {
   $0.pipeline[.parsing].add(SwiftyJSONTransformer, contentTypes: ["*​/json"])
   $0.pipeline[.cleanup].add(GithubErrorMessageExtractor())
@@ -316,16 +315,15 @@ passing <code>useDefaultTransformers: false</code> when creating a <code><a href
                         <p>A logical grouping of transformers and a cache.</p>
 
 <p>Why create separate stages?</p>
-
-<p><li>To be able to append, replace, or remove some transformations independently of others, e.g. override the model
+<li>To be able to append, replace, or remove some transformations independently of others, e.g. override the model
 transform without disabling JSON parsing.</li>
 <li>To cache entities at any intermediate stage of processing.</li>
 <li><p>To maintain multiple caches.</p></li>
 <div class="aside aside-see">
     <p class="aside-title">See</p>
-    <p><code><a href="Structs/Pipeline.html">Pipeline</a></code></p></p>
+    <p><code><a href="Structs/Pipeline.html">Pipeline</a></code></p>
 
-<p></div></p>
+</div>
 
                         <a href="Structs/PipelineStage.html" class="slightly-smaller">See more</a>
                       </div>
@@ -361,7 +359,6 @@ comprehensibility, and Siesta does not enforce them in any way (e.g. it does not
 <code>rawData</code> stage to output something other than <code>Data</code>).</p>
 
 <p>Because this is not an enum, you can add custom stages:</p>
-
 <pre class="highlight plaintext"><code>extension PipelineStageKey {
   static let
     munging   = PipelineStageKey(description: "munging"),
@@ -407,7 +404,6 @@ service.configure {
                       <div class="abstract">
                         <p>Transforms a response from a less parsed form (e.g. <code>Data</code>) to a more parsed data structure. Responses pass through
 a chain of transformers before being sent to response hooks or observers.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     Transformers run in a GCD background queue, and <strong>must be thread-safe</strong>. You’re in the clear if your
@@ -487,13 +483,11 @@ surrounding metadata.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Action to take when actual input type at runtime does not match expected input type declared in code.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <code><a href="Structs/ResponseContentTransformer.html#/s:FV6Siesta26ResponseContentTransformercFT19onInputTypeMismatchOS_23InputTypeMismatchAction15transformErrorsSb9processorFzGVS_6Entityx_GSqq___GS0_xq__">ResponseContentTransformer.init(...)</a></code>
 
 </div>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <code><a href="Classes/Service.html#/s:FC6Siesta7Service20configureTransformeru0_rFTPS_31ConfigurationPatternConvertible_14requestMethodsGSqGSaOS_13RequestMethod__7atStageCS_16PipelineStageKey6actionOVS_13PipelineStage14MutationAction19onInputTypeMismatchOS_23InputTypeMismatchAction15transformErrorsSb11descriptionGSqSS_16contentTransformFzGVS_6Entityx_GSqq___T_">Service.configureTransformer(...)</a></code>

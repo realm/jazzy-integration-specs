@@ -262,7 +262,6 @@ path or identifier) produces limited overhead.</p>
 <p>If you specifically want to ensure a <code>Realm</code> instance is destroyed (for example, if you wish to open a Realm, check
 some property, and then possibly delete the Realm file and re-open it), place the code which uses the Realm within an
 <code>autoreleasepool {}</code> and ensure you have no other strong references to it.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <code>Realm</code> instances are not thread safe and cannot be shared across threads or dispatch queues. You must
@@ -404,7 +403,6 @@ in your application&rsquo;s <em>Application Support</em> directory on OS X.</p>
 
 <p>The default Realm is created using the default <code><a href="../Classes/Realm/Configuration.html">Configuration</a></code>, which can be changed by setting the
 <code><a href="../Classes/Realm/Configuration.html#/s:ZvVC10RealmSwift5Realm13Configuration20defaultConfigurationS1_">Realm.Configuration.defaultConfiguration</a></code> property to a new value.</p>
-
 <div class="aside aside-throws">
     <p class="aside-title">Throws</p>
     An <code>NSError</code> if the Realm could not be initialized.
@@ -440,7 +438,6 @@ in your application&rsquo;s <em>Application Support</em> directory on OS X.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Obtains a <code>Realm</code> instance with the given configuration.</p>
-
 <div class="aside aside-throws">
     <p class="aside-title">Throws</p>
     <p>An <code>NSError</code> if the Realm could not be initialized.</p>
@@ -496,7 +493,6 @@ in your application&rsquo;s <em>Application Support</em> directory on OS X.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Obtains a <code>Realm</code> instance persisted at a specified file URL.</p>
-
 <div class="aside aside-throws">
     <p class="aside-title">Throws</p>
     <p>An <code>NSError</code> if the Realm could not be initialized.</p>
@@ -578,7 +574,6 @@ completes or is cancelled.</p>
 instance to the latest Realm version, as if <code><a href="../Classes/Realm.html#/s:FC10RealmSwift5Realm7refreshFT_Sb">refresh()</a></code> had been called,
 and generates notifications if applicable. This has no effect if the Realm
 was already up to date.</p>
-
 <div class="aside aside-throws">
     <p class="aside-title">Throws</p>
     <p>An <code>NSError</code> if the transaction could not be completed successfully.
@@ -700,13 +695,11 @@ block attempt to re-apply the same changes.</p>
 which were added on the same thread as the write transaction is being
 performed on. Notifications for different threads cannot be skipped using
 this method.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method may only be called during a write transaction.</p>
 
 </div>
-
 <div class="aside aside-throws">
     <p class="aside-title">Throws</p>
     <p>An <code>NSError</code> if the transaction could not be written due to
@@ -752,7 +745,6 @@ object instances. Any <code><a href="../Classes/Object.html">Object</a></code>s 
 invalidated rather than becoming unmanaged.</p>
 
 <p>Given the following code:</p>
-
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">oldObject</span> <span class="o">=</span> <span class="nf">objects</span><span class="p">(</span><span class="kt">ObjectType</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="o">!</span>
 <span class="k">let</span> <span class="nv">newObject</span> <span class="o">=</span> <span class="kt">ObjectType</span><span class="p">()</span>
 
@@ -769,7 +761,6 @@ the valid object.</p>
 <p>KVO observers on any objects which were modified during the transaction
 will be notified about the change back to their initial values, but no
 other notifcations are produced by a cancelled write transaction.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     This method may only be called during a write transaction.
@@ -805,7 +796,6 @@ other notifcations are produced by a cancelled write transaction.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Indicates whether the Realm is currently in a write transaction.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     Do not simply check this property and then start a write transaction whenever an object needs to be
@@ -927,13 +917,11 @@ must be <code>false</code>).</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Adds or updates all the objects in a collection into the Realm.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p><code><a href="../Classes/Realm.html#/s:FC10RealmSwift5Realm3addFTCS_6Object6updateSb_T_">add(_:update:)</a></code></p>
 
 </div>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method may only be called during a write transaction.</p>
@@ -1014,7 +1002,6 @@ pass in a <code><a href="../Classes/LinkingObjects.html">LinkingObjects</a></cod
 
 <p>When passing in an <code>Array</code> as the <code>value</code> argument, all properties must be present, valid and in the same order as
 the properties defined in the model.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method may only be called during a write transaction.</p>
@@ -1112,7 +1099,6 @@ the properties defined in the model.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Deletes an object from the Realm. Once the object is deleted it is considered invalidated.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method may only be called during a write transaction.</p>
@@ -1168,7 +1154,6 @@ the properties defined in the model.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Deletes zero or more objects from the Realm.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method may only be called during a write transaction.</p>
@@ -1224,7 +1209,6 @@ the properties defined in the model.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Deletes all objects from the Realm.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     This method may only be called during a write transaction.
@@ -1328,7 +1312,6 @@ the properties defined in the model.</p>
                         <p>Retrieves the single instance of a given object type with the given primary key from the Realm.</p>
 
 <p>This method requires that <code>primaryKey()</code> be overridden on the given object class.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p><code><a href="../Classes/Object.html#/s:ZFC10RealmSwift6Object10primaryKeyFT_GSqSS_">Object.primaryKey()</a></code></p>
@@ -1649,7 +1632,6 @@ may not be called on a read-only Realm.</p>
 
 <p>Note that if this method is called from within a write transaction, the <em>current</em> data is written, not the data
 from the point when the previous write transaction was committed.</p>
-
 <div class="aside aside-throws">
     <p class="aside-title">Throws</p>
     <p>An <code>NSError</code> if the copy could not be written.</p>
@@ -1724,7 +1706,6 @@ from the point when the previous write transaction was committed.</p>
                         <p>Struct that describes the error codes within the Realm error domain.
 The values can be used to catch a variety of <em>recoverable</em> errors, especially those
 happening when initializing a Realm instance.</p>
-
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">realm</span><span class="p">:</span> <span class="kt">Realm</span><span class="p">?</span>
 <span class="k">do</span> <span class="p">{</span>
     <span class="n">realm</span> <span class="o">=</span> <span class="kt">Realm</span><span class="p">()</span>
@@ -1826,7 +1807,6 @@ explicitly. You can choose to call this method to control exactly when and how m
                         <p>Returns the same object as the one referenced when the <code><a href="../Classes/ThreadSafeReference.html">ThreadSafeReference</a></code> was first
 created, but resolved for the current Realm for this thread. Returns <code>nil</code> if this object was
 deleted after the reference was created.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>A <code><a href="../Classes/ThreadSafeReference.html">ThreadSafeReference</a></code> object must be resolved at most once.
@@ -1835,19 +1815,16 @@ deleted after the reference was created.</p>
        An exception will be thrown if a reference is resolved more than once.</p>
 
 </div>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>Cannot call within a write transaction.</p>
 
 </div>
-
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
     <p>Will refresh this Realm if the source Realm was at a later version than this one.</p>
 
 </div>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p><code>ThreadSafeReference(to:)</code></p>

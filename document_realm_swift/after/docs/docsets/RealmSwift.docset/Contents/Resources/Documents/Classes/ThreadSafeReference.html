@@ -257,7 +257,6 @@ thread-confined object.</p>
 
 <p>To resolve a thread-safe reference on a target Realm on a different thread, pass to
 <code><a href="../Classes/Realm.html#/s:FC10RealmSwift5Realm7resolveuRxS_14ThreadConfinedrFGCS_19ThreadSafeReferencex_GSqx_">Realm.resolve(_:)</a></code>.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>A <code>ThreadSafeReference</code> object must be resolved at most once.
@@ -265,20 +264,17 @@ thread-confined object.</p>
        Realm being pinned until the reference is deallocated.</p>
 
 </div>
-
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
     <p>Prefer short-lived <code>ThreadSafeReference</code>s as the data for the version of the source Realm
     will be retained until all references have been resolved or deallocated.</p>
 
 </div>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p><code><a href="../Protocols/ThreadConfined.html">ThreadConfined</a></code></p>
 
 </div>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p><code><a href="../Classes/Realm.html#/s:FC10RealmSwift5Realm7resolveuRxS_14ThreadConfinedrFGCS_19ThreadSafeReferencex_GSqx_">Realm.resolve(_:)</a></code></p>
@@ -334,7 +330,6 @@ already occurred. References can only be resolved once.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Create a thread-safe reference to the thread-confined object.</p>
-
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
     <p>You may continue to use and access the thread-confined object after passing it to this

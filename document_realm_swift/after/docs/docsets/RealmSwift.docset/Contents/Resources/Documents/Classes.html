@@ -274,7 +274,6 @@ path or identifier) produces limited overhead.</p>
 <p>If you specifically want to ensure a <code>Realm</code> instance is destroyed (for example, if you wish to open a Realm, check
 some property, and then possibly delete the Realm file and re-open it), place the code which uses the Realm within an
 <code>autoreleasepool {}</code> and ensure you have no other strong references to it.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <code>Realm</code> instances are not thread safe and cannot be shared across threads or dispatch queues. You must
@@ -450,15 +449,13 @@ modifying the Realm during the migration.</p>
 
 <p>In Realm you define your model classes by subclassing <code>Object</code> and adding properties to be managed.
 You then instantiate and use your custom subclasses instead of using the <code>Object</code> class directly.</p>
-
 <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">Dog</span><span class="p">:</span> <span class="kt">Object</span> <span class="p">{</span>
     <span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span>
     <span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">adopted</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span>
     <span class="k">let</span> <span class="nv">siblings</span> <span class="o">=</span> <span class="kt">List</span><span class="o">&lt;</span><span class="kt">Dog</span><span class="o">&gt;</span><span class="p">()</span>
 <span class="p">}</span>
 </code></pre>
-
-<p><a href='#supported-property-types' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='supported-property-types'>Supported property types</h3></p>
+<h3 id='supported-property-types' class='heading'>Supported property types</h3>
 
 <ul>
 <li><code>String</code>, <code>NSString</code></li>
@@ -483,12 +480,10 @@ which wraps an optional numeric value.</p>
 <code><a href="Classes/RealmOptional.html">RealmOptional</a></code> properties must be declared as non-dynamic <code>let</code> properties. Swift <code>lazy</code> properties are not allowed.</p>
 
 <p>Note that none of the restrictions listed above apply to properties that are configured to be ignored by Realm.</p>
-
-<p><a href='#querying' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='querying'>Querying</h3></p>
+<h3 id='querying' class='heading'>Querying</h3>
 
 <p>You can retrieve all objects of a given type from a Realm by calling the <code>objects(_:)</code> instance method.</p>
-
-<p><a href='#relationships' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='relationships'>Relationships</h3></p>
+<h3 id='relationships' class='heading'>Relationships</h3>
 
 <p>See our <a href="http://realm.io/docs/cocoa">Cocoa guide</a> for more details.</p>
 
@@ -530,7 +525,6 @@ thread-confined object.</p>
 
 <p>To resolve a thread-safe reference on a target Realm on a different thread, pass to
 <code><a href="Classes/Realm.html#/s:FC10RealmSwift5Realm7resolveuRxS_14ThreadConfinedrFGCS_19ThreadSafeReferencex_GSqx_">Realm.resolve(_:)</a></code>.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>A <code>ThreadSafeReference</code> object must be resolved at most once.
@@ -538,20 +532,17 @@ thread-confined object.</p>
        Realm being pinned until the reference is deallocated.</p>
 
 </div>
-
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
     <p>Prefer short-lived <code>ThreadSafeReference</code>s as the data for the version of the source Realm
     will be retained until all references have been resolved or deallocated.</p>
 
 </div>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p><code><a href="Protocols/ThreadConfined.html">ThreadConfined</a></code></p>
 
 </div>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p><code><a href="Classes/Realm.html#/s:FC10RealmSwift5Realm7resolveuRxS_14ThreadConfinedrFGCS_19ThreadSafeReferencex_GSqx_">Realm.resolve(_:)</a></code></p>

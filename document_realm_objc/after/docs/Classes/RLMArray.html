@@ -289,7 +289,6 @@ This is referred to in these docs as the “type” of the array.</p>
 protocol by the same name as the objects it should contain (see the
 <code>RLM_ARRAY_TYPE</code> macro). In addition, the property can be declared using Objective-C
 generics for better compile-time type safety.</p>
-
 <pre class="highlight objective_c"><code><span class="n">RLM_ARRAY_TYPE</span><span class="p">(</span><span class="n">ObjectType</span><span class="p">)</span>
 <span class="p">...</span>
 <span class="k">@property</span> <span class="n">RLMArray</span><span class="o">&lt;</span><span class="n">ObjectType</span> <span class="o">*&gt;&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="n">arrayOfObjectTypes</span><span class="p">;</span>
@@ -299,8 +298,7 @@ generics for better compile-time type safety.</p>
 
 <p><code>RLMArray</code>s cannot be created directly. <code>RLMArray</code> properties on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>s are
 lazily created when accessed, or can be obtained by querying a Realm.</p>
-
-<p><a href='#key-value-observing' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='key-value-observing'>Key-Value Observing</h3></p>
+<h3 id='key-value-observing' class='heading'>Key-Value Observing</h3>
 
 <p><code>RLMArray</code> supports array key-value observing on <code>RLMArray</code> properties on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>
 subclasses, and the <code>invalidated</code> property on <code>RLMArray</code> instances themselves is
@@ -643,7 +641,6 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Adds an object to the end of the array.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method may only be called during a write transaction.</p>
@@ -704,7 +701,6 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Adds an array of objects to the end of the array.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method may only be called during a write transaction.</p>
@@ -768,7 +764,6 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                         <p>Inserts an object at the given index.</p>
 
 <p>Throws an exception if the index exceeds the bounds of the array.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method may only be called during a write transaction.</p>
@@ -844,7 +839,6 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                         <p>Removes an object at the given index.</p>
 
 <p>Throws an exception if the index exceeds the bounds of the array.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method may only be called during a write transaction.</p>
@@ -905,7 +899,6 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Removes the last object in the array.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     This method may only be called during a write transaction.
@@ -946,7 +939,6 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Removes all objects from the array.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     This method may only be called during a write transaction.
@@ -989,7 +981,6 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                         <p>Replaces an object at the given index with a new object.</p>
 
 <p>Throws an exception if the index exceeds the bounds of the array.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method may only be called during a write transaction.</p>
@@ -1066,7 +1057,6 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                         <p>Moves the object at the given source index to the given destination index.</p>
 
 <p>Throws an exception if the index exceeds the bounds of the array.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method may only be called during a write transaction.</p>
@@ -1143,7 +1133,6 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                         <p>Exchanges the objects in the array at given indices.</p>
 
 <p>Throws an exception if either index exceeds the bounds of the array.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method may only be called during a write transaction.</p>
@@ -1766,7 +1755,6 @@ transaction immediately after adding the notification block, so there is no
 opportunity for the initial notification to be delivered first. As a
 result, the initial notification will reflect the state of the Realm after
 the write transaction.</p>
-
 <pre class="highlight plaintext"><code>Person *person = [[Person allObjectsInRealm:realm] firstObject];
 NSLog(@"person.dogs.count: %zu", person.dogs.count); // =&gt; 0
 self.token = [person.dogs addNotificationBlock(RLMArray&lt;Dog *&gt; *dogs,
@@ -1785,14 +1773,12 @@ self.token = [person.dogs addNotificationBlock(RLMArray&lt;Dog *&gt; *dogs,
 
 <p>You must retain the returned token for as long as you want updates to continue
 to be sent to the block. To stop receiving updates, call <code>-stop</code> on the token.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     This method cannot be called during a write transaction, or when the
      containing Realm is read-only.
 
 </div>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method may only be called on a managed array.</p>

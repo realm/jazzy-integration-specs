@@ -288,7 +288,6 @@ is opened as read-only.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the object at the given index (get), or replaces the object at the given index (set).</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>You can only set an object during a write transaction.</p>
@@ -800,7 +799,6 @@ collection&rsquo;s objects.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Invokes <code>setValue(_:forKey:)</code> on each of the collection&rsquo;s objects using the specified <code>value</code> and <code>key</code>.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method can only be called during a write transaction.</p>
@@ -995,7 +993,6 @@ collection&rsquo;s objects.</p>
 <p>Objects are sorted based on the values of the given key path. For example, to sort a list of <code>Student</code>s from
 youngest to oldest based on their <code>age</code> property, you might call
 <code>students.sorted(byKeyPath: &quot;age&quot;, ascending: true)</code>.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>Lists may only be sorted by properties of boolean, <code>Date</code>, <code>NSDate</code>, single and double-precision
@@ -1069,7 +1066,6 @@ youngest to oldest based on their <code>age</code> property, you might call
 <p>Objects are sorted based on the values of the given property. For example, to sort a list of <code>Student</code>s from
 youngest to oldest based on their <code>age</code> property, you might call
 <code>students.sorted(byProperty: &quot;age&quot;, ascending: true)</code>.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>Lists may only be sorted by properties of boolean, <code>Date</code>, <code>NSDate</code>, single and double-precision
@@ -1139,14 +1135,12 @@ youngest to oldest based on their <code>age</code> property, you might call
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns a <code><a href="../Classes/Results.html">Results</a></code> containing the objects in the list, but sorted.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>Lists may only be sorted by properties of boolean, <code>Date</code>, <code>NSDate</code>, single and double-precision
        floating point, integer, and string types.</p>
 
 </div>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p><code><a href="../Classes/List.html#/s:FC10RealmSwift4List6sortedFT9byKeyPathSS9ascendingSb_GCS_7Resultsx_">sorted(byKeyPath:ascending:)</a></code></p>
@@ -1194,7 +1188,6 @@ youngest to oldest based on their <code>age</code> property, you might call
                       <div class="abstract">
                         <p>Returns the minimum (lowest) value of the given property among all the objects in the list, or <code>nil</code> if the list is
 empty.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>Only a property whose type conforms to the <code><a href="../Protocols.html#/s:P10RealmSwift10MinMaxType">MinMaxType</a></code> protocol can be specified.</p>
@@ -1251,7 +1244,6 @@ empty.</p>
                       <div class="abstract">
                         <p>Returns the maximum (highest) value of the given property among all the objects in the list, or <code>nil</code> if the list
 is empty.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>Only a property whose type conforms to the <code><a href="../Protocols.html#/s:P10RealmSwift10MinMaxType">MinMaxType</a></code> protocol can be specified.</p>
@@ -1307,7 +1299,6 @@ is empty.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the sum of the values of a given property over all the objects in the list.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>Only a property whose type conforms to the <code><a href="../Protocols.html#/s:P10RealmSwift11AddableType">AddableType</a></code> protocol can be specified.</p>
@@ -1363,7 +1354,6 @@ is empty.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the average value of a given property over all the objects in the list, or <code>nil</code> if the list is empty.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>Only a property whose type conforms to the <code><a href="../Protocols.html#/s:P10RealmSwift11AddableType">AddableType</a></code> protocol can be specified.</p>
@@ -1433,7 +1423,6 @@ is empty.</p>
 
 <p>If the object is managed by a different Realm than the receiver, a copy is made and added to the Realm managing
 the receiver.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method may only be called during a write transaction.</p>
@@ -1489,7 +1478,6 @@ the receiver.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Appends the objects in the given sequence to the end of the list.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     This method may only be called during a write transaction.
@@ -1525,13 +1513,11 @@ the receiver.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Inserts an object at the given index.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method may only be called during a write transaction.</p>
 
 </div>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method will throw an exception if called with an invalid index.</p>
@@ -1600,13 +1586,11 @@ the receiver.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Removes an object at the given index. The object is not removed from the Realm that manages it.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method may only be called during a write transaction.</p>
 
 </div>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method will throw an exception if called with an invalid index.</p>
@@ -1662,7 +1646,6 @@ the receiver.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Removes the last object in the list. The object is not removed from the Realm that manages it.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     This method may only be called during a write transaction.
@@ -1698,7 +1681,6 @@ the receiver.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Removes all objects from the list. The objects are not removed from the Realm that manages them.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     This method may only be called during a write transaction.
@@ -1734,13 +1716,11 @@ the receiver.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Replaces an object at the given index with a new object.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method may only be called during a write transaction.</p>
 
 </div>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method will throw an exception if called with an invalid index.</p>
@@ -1809,13 +1789,11 @@ the receiver.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Moves the object at the given source index to the given destination index.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method may only be called during a write transaction.</p>
 
 </div>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method will throw an exception if called with invalid indices.</p>
@@ -1884,13 +1862,11 @@ the receiver.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Exchanges the objects in the list at given indices.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method may only be called during a write transaction.</p>
 
 </div>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method will throw an exception if called with invalid indices.</p>
@@ -1990,7 +1966,6 @@ single notification. This can include the notification with the initial collecti
 <p>For example, the following code performs a write transaction immediately after adding the notification block, so
 there is no opportunity for the initial notification to be delivered first. As a result, the initial notification
 will reflect the state of the Realm after the write transaction.</p>
-
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">results</span> <span class="o">=</span> <span class="n">realm</span><span class="o">.</span><span class="nf">objects</span><span class="p">(</span><span class="kt">Dog</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
 <span class="nf">print</span><span class="p">(</span><span class="s">"dogs.count: </span><span class="se">\(</span><span class="n">dogs</span><span class="p">?</span><span class="o">.</span><span class="n">count</span><span class="se">)</span><span class="s">"</span><span class="p">)</span> <span class="c1">// =&gt; 0</span>
 <span class="k">let</span> <span class="nv">token</span> <span class="o">=</span> <span class="n">dogs</span><span class="o">.</span><span class="n">addNotificationBlock</span> <span class="p">{</span> <span class="n">changes</span> <span class="k">in</span>
@@ -2016,7 +1991,6 @@ will reflect the state of the Realm after the write transaction.</p>
 
 <p>You must retain the returned token for as long as you want updates to be sent to the block. To stop receiving
 updates, call <code>stop()</code> on the token.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method cannot be called during a write transaction, or when the containing Realm is read-only.</p>

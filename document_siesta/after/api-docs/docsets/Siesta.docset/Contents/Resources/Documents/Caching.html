@@ -288,14 +288,12 @@ exhibit the behavior we want; the logic involved is far more tangled and brittle
 </ul>
 
 <p>Siesta currently does not include any implementations of <code>EntityCache</code>, but a future version will.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>Siesta calls <code>EntityCache</code> methods on a GCD background queue, so your implementation <strong>must be
        thread-safe</strong>.</p>
 
 </div>
-
 <div class="aside aside-see-also">
     <p class="aside-title">See also</p>
     <p><code><a href="Structs/PipelineStage.html#/s:FV6Siesta13PipelineStage10cacheUsinguRxS_11EntityCacherFxT_">PipelineStage.cacheUsing(_:)</a></code></p>

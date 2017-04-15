@@ -386,11 +386,9 @@ If you want to feed your service arbitrary URLs with no common root, use <code>r
                         <p>Returns the unique resource with the given path appended to the path component of <code><a href="../Classes/Service.html#/s:vC6Siesta7Service7baseURLGSqV10Foundation3URL_">baseURL</a></code>.</p>
 
 <p>A leading slash is optional, and has no effect:</p>
-
 <pre class="highlight plaintext"><code>service.resource("users")   // same
 service.resource("/users")  // thing
 </code></pre>
-
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
     <p>The <code>path</code> parameter is simply appended to <code><a href="../Classes/Service.html#/s:vC6Siesta7Service7baseURLGSqV10Foundation3URL_">baseURL</a></code>’s path, and is <em>never</em> interpreted as a URL. Strings
@@ -470,7 +468,6 @@ query string or a relative URL.</li>
 the context of a <code>Service</code> as long as anyone retains a reference to that resource.
 Unreferenced resources remain in memory (with their cached data) until a low memory event
 occurs, at which point they are summarily evicted.</p>
-
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
     This method always returns a <code><a href="../Classes/Resource.html">Resource</a></code>, and does not throw errors. If <code>url</code> is nil (likely because it
@@ -517,7 +514,6 @@ occurs, at which point they are summarily evicted.</p>
                         <p>Applies configuration to resources whose URLs match a given pattern.</p>
 
 <p>Examples:</p>
-
 <pre class="highlight plaintext"><code>configure { $0.expirationTime = 10 }  // global default
 
 configure("/items")    { $0.expirationTime = 5 }
@@ -535,20 +531,17 @@ means that you will usually want to add your global configuration first, then re
 
 <p>If you want to provide global configuration, or if you need more fine-grained URL matching, use the other flavor
 of this method that takes a predicate as its first argument.</p>
-
 <div class="aside aside-see-also">
     <p class="aside-title">See also</p>
     <p><code><a href="../Classes/Service.html#/s:FC6Siesta7Service9configureFT14whenURLMatchesFV10Foundation3URLSb14requestMethodsGSqGSaOS_13RequestMethod__11descriptionGSqSS_10configurerFRVS_13ConfigurationT__T_">configure(whenURLMatches:requestMethods:description:configurer:)</a></code>
 for global config and more fine-grained matching</p>
 
 </div>
-
 <div class="aside aside-see-also">
     <p class="aside-title">See also</p>
     <p><code><a href="../Classes/Service.html#/s:FC6Siesta7Service23invalidateConfigurationFT_T_">invalidateConfiguration()</a></code></p>
 
 </div>
-
 <div class="aside aside-see-also">
     <p class="aside-title">See also</p>
     <p>For more details about the rules of pattern matching:</p>
@@ -640,14 +633,12 @@ for global config and more fine-grained matching</p>
 Use this if the wildcards in other flavor of <code><a href="../Classes/Service.html#/s:FC6Siesta7Service9configureFTPS_31ConfigurationPatternConvertible_14requestMethodsGSqGSaOS_13RequestMethod__11descriptionGSqSS_10configurerFRVS_13ConfigurationT__T_">configure(...)</a></code> aren’t robust enough.</p>
 
 <p>If you do not supply a predicate, then the configuration applies globally to all resources in this service.</p>
-
 <div class="aside aside-see-also">
     <p class="aside-title">See also</p>
     <p><code><a href="../Classes/Service.html#/s:FC6Siesta7Service9configureFTPS_31ConfigurationPatternConvertible_14requestMethodsGSqGSaOS_13RequestMethod__11descriptionGSqSS_10configurerFRVS_13ConfigurationT__T_">configure(_:requestMethods:description:configurer:)</a></code>
 for pattern-based matching, and for details about the parameters.</p>
 
 </div>
-
 <div class="aside aside-see-also">
     <p class="aside-title">See also</p>
     <p><code><a href="../Classes/Service.html#/s:FC6Siesta7Service23invalidateConfigurationFT_T_">invalidateConfiguration()</a></code></p>
@@ -707,7 +698,6 @@ for pattern-based matching, and for details about the parameters.</p>
 <code><a href="../Structs/ResponseContentTransformer.html">ResponseContentTransformer</a></code> to the <code><a href="../Structs/Configuration.html#/s:vV6Siesta13Configuration8pipelineVS_8Pipeline">Configuration.pipeline</a></code>.</p>
 
 <p>Useful for transformers that create model objects. For example:</p>
-
 <pre class="highlight plaintext"><code>configureTransformer("/foo/​*") {
   FooModel(json: $0.content)
 }
@@ -719,19 +709,16 @@ at that point has produced a <code>String</code>, then the transformer outputs a
 
 <p>You can use this behavior to configure a service to refuse all server responses not of a specific type by passing
 a transformer that passes the content through unmodified, but requires a specific type:</p>
-
 <pre class="highlight plaintext"><code>service.configureTransformer("**") {
   $0.content as JSONConvertible
 }
 </code></pre>
-
 <div class="aside aside-see-also">
     <p class="aside-title">See also</p>
     <code><a href="../Classes/Service.html#/s:FC6Siesta7Service9configureFTPS_31ConfigurationPatternConvertible_14requestMethodsGSqGSaOS_13RequestMethod__11descriptionGSqSS_10configurerFRVS_13ConfigurationT__T_">configure(_:requestMethods:description:configurer:)</a></code>
 for more into about the parameters and configuration pattern matching.
 
 </div>
-
 <div class="aside aside-see-also">
     <p class="aside-title">See also</p>
     <code><a href="../Structs/ResponseContentTransformer.html">ResponseContentTransformer</a></code>
@@ -785,7 +772,6 @@ if you do anything that would change the result of a configuration closure, you 
 You only need to call it if one of the previously passed closures will now behave differently.</p>
 
 <p>For example, to make a header track the value of a modifiable property:</p>
-
 <pre class="highlight plaintext"><code>var flavor: String? {
   didSet { invalidateConfiguration() }
 }
@@ -868,7 +854,6 @@ over subsequent resource interactions.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Wipes resources based on a URL pattern. For example:</p>
-
 <pre class="highlight plaintext"><code>service.wipeResources(matching: "/secure/​**")
 service.wipeResources(matching: profileResource)
 </code></pre>

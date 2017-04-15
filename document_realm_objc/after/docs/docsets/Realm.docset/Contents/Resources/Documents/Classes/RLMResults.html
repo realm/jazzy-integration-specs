@@ -1180,7 +1180,6 @@ transaction immediately after adding the notification block, so there is no
 opportunity for the initial notification to be delivered first. As a
 result, the initial notification will reflect the state of the Realm after
 the write transaction.</p>
-
 <pre class="highlight plaintext"><code>RLMResults&lt;Dog *&gt; *results = [Dog allObjects];
 NSLog(@"dogs.count: %zu", dogs.count); // =&gt; 0
 self.token = [results addNotificationBlock:^(RLMResults *dogs,
@@ -1199,7 +1198,6 @@ self.token = [results addNotificationBlock:^(RLMResults *dogs,
 
 <p>You must retain the returned token for as long as you want updates to continue
 to be sent to the block. To stop receiving updates, call <code>-stop</code> on the token.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method cannot be called during a write transaction, or when the
@@ -1280,10 +1278,8 @@ to be sent to the block. To stop receiving updates, call <code>-stop</code> on t
                       <div class="abstract">
                         <p>Returns the minimum (lowest) value of the given property among all the objects
 represented by the results collection.</p>
-
 <pre class="highlight plaintext"><code>NSNumber *min = [results minOfProperty:@"age"];
 </code></pre>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>You cannot use this method on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>, <code><a href="../Classes/RLMArray.html">RLMArray</a></code>, and <code>NSData</code> properties.</p>
@@ -1350,10 +1346,8 @@ represented by the results collection.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the maximum (highest) value of the given property among all the objects represented by the results collection.</p>
-
 <pre class="highlight plaintext"><code>NSNumber *max = [results maxOfProperty:@"age"];
 </code></pre>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>You cannot use this method on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>, <code><a href="../Classes/RLMArray.html">RLMArray</a></code>, and <code>NSData</code> properties.</p>
@@ -1420,10 +1414,8 @@ represented by the results collection.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the sum of the values of a given property over all the objects represented by the results collection.</p>
-
 <pre class="highlight plaintext"><code>NSNumber *sum = [results sumOfProperty:@"age"];
 </code></pre>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>You cannot use this method on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>, <code><a href="../Classes/RLMArray.html">RLMArray</a></code>, and <code>NSData</code> properties.</p>
@@ -1490,10 +1482,8 @@ represented by the results collection.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the average value of a given property over the objects represented by the results collection.</p>
-
 <pre class="highlight plaintext"><code>NSNumber *average = [results averageOfProperty:@"age"];
 </code></pre>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>You cannot use this method on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>, <code><a href="../Classes/RLMArray.html">RLMArray</a></code>, and <code>NSData</code> properties.</p>

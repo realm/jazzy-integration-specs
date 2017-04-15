@@ -301,7 +301,6 @@ This is referred to in these docs as the “type” of the array.</p>
 protocol by the same name as the objects it should contain (see the
 <code>RLM_ARRAY_TYPE</code> macro). In addition, the property can be declared using Objective-C
 generics for better compile-time type safety.</p>
-
 <pre class="highlight objective_c"><code><span class="n">RLM_ARRAY_TYPE</span><span class="p">(</span><span class="n">ObjectType</span><span class="p">)</span>
 <span class="p">...</span>
 <span class="k">@property</span> <span class="n">RLMArray</span><span class="o">&lt;</span><span class="n">ObjectType</span> <span class="o">*&gt;&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="n">arrayOfObjectTypes</span><span class="p">;</span>
@@ -311,8 +310,7 @@ generics for better compile-time type safety.</p>
 
 <p><code>RLMArray</code>s cannot be created directly. <code>RLMArray</code> properties on <code><a href="Classes/RLMObject.html">RLMObject</a></code>s are
 lazily created when accessed, or can be obtained by querying a Realm.</p>
-
-<p><a href='#key-value-observing' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='key-value-observing'>Key-Value Observing</h3></p>
+<h3 id='key-value-observing' class='heading'>Key-Value Observing</h3>
 
 <p><code>RLMArray</code> supports array key-value observing on <code>RLMArray</code> properties on <code><a href="Classes/RLMObject.html">RLMObject</a></code>
 subclasses, and the <code>invalidated</code> property on <code>RLMArray</code> instances themselves is
@@ -414,7 +412,6 @@ collection changed since the last time the notification block was called.</p>
 indices in the collection for each type of change, and an array of index paths
 in a requested section suitable for passing directly to <code>UITableView</code>&lsquo;s batch
 update methods. A complete example of updating a <code>UITableView</code> named <code>tv</code>:</p>
-
 <pre class="highlight plaintext"><code>[tv beginUpdates];
 [tv deleteRowsAtIndexPaths:[changes deletionsInSection:0] withRowAnimation:UITableViewRowAnimationAutomatic];
 [tv insertRowsAtIndexPaths:[changes insertionsInSection:0] withRowAnimation:UITableViewRowAnimationAutomatic];
@@ -510,7 +507,6 @@ objects in the Realm, and provides functionality for modifying the Realm during 
 
 <p>Define your model classes by subclassing <code>RLMObject</code> and adding properties to be managed.
 Then instantiate and use your custom subclasses instead of using the <code>RLMObject</code> class directly.</p>
-
 <pre class="highlight objective_c"><code><span class="c1">// Dog.h
 </span><span class="k">@interface</span> <span class="nc">Dog</span> <span class="p">:</span> <span class="nc">RLMObject</span>
 <span class="k">@property</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">name</span><span class="p">;</span>
@@ -521,8 +517,7 @@ Then instantiate and use your custom subclasses instead of using the <code>RLMOb
 </span><span class="k">@implementation</span> <span class="nc">Dog</span>
 <span class="k">@end</span> <span class="c1">//none needed
 </span></code></pre>
-
-<p><a href='#supported-property-types' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='supported-property-types'>Supported property types</h3></p>
+<h3 id='supported-property-types' class='heading'>Supported property types</h3>
 
 <ul>
 <li><code>NSString</code></li>
@@ -534,26 +529,22 @@ Then instantiate and use your custom subclasses instead of using the <code>RLMOb
 <li><code>RLMObject</code> subclasses, to model many-to-one relationships.</li>
 <li><code><a href="Classes/RLMArray.html">RLMArray&lt;X&gt;</a></code>, where <code>X</code> is an <code>RLMObject</code> subclass, to model many-to-many relationships.</li>
 </ul>
-
-<p><a href='#querying' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='querying'>Querying</h3></p>
+<h3 id='querying' class='heading'>Querying</h3>
 
 <p>You can initiate queries directly via the class methods: <code>allObjects</code>, <code>objectsWhere:</code>, and <code>objectsWithPredicate:</code>.
 These methods allow you to easily query a custom subclass for instances of that class in the default Realm.</p>
 
 <p>To search in a Realm other than the default Realm, use the <code>allObjectsInRealm:</code>, <code>objectsInRealm:where:</code>,
 and <code>objectsInRealm:withPredicate:</code> class methods.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <code><a href="Classes/RLMRealm.html">RLMRealm</a></code>
 
 </div>
-
-<p><a href='#relationships' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='relationships'>Relationships</h3></p>
+<h3 id='relationships' class='heading'>Relationships</h3>
 
 <p>See our <a href="https://realm.io/docs/objc/latest#relationships">Cocoa guide</a> for more details.</p>
-
-<p><a href='#key-value-observing' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='key-value-observing'>Key-Value Observing</h3></p>
+<h3 id='key-value-observing' class='heading'>Key-Value Observing</h3>
 
 <p>All <code>RLMObject</code> properties (including properties you create in subclasses) are
 <a href="https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/KeyValueObserving/KeyValueObserving.html">Key-Value Observing compliant</a>,
@@ -757,7 +748,6 @@ destroyed (for example, if you wish to open a Realm, check some property, and
 then possibly delete the Realm file and re-open it), place the code which uses
 the Realm within an <code>@autoreleasepool {}</code> and ensure you have no other
 strong references to it.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <code>RLMRealm</code> instances are not thread safe and cannot be shared across
@@ -1433,7 +1423,6 @@ thread-confined object.</p>
 
 <p>To resolve a thread-safe reference on a target Realm on a different thread, pass to
 <code><a href="Classes/RLMRealm.html#/c:objc(cs)RLMRealm(im)resolveThreadSafeReference:">-[RLMRealm resolveThreadSafeReference:]</a></code>.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>A <code>RLMThreadSafeReference</code> object must be resolved at most once.
@@ -1441,20 +1430,17 @@ thread-confined object.</p>
      Realm being pinned until the reference is deallocated.</p>
 
 </div>
-
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
     <p>Prefer short-lived <code>RLMThreadSafeReference</code>s as the data for the version of the source Realm
   will be retained until all references have been resolved or deallocated.</p>
 
 </div>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p><code><a href="Protocols/RLMThreadConfined.html">RLMThreadConfined</a></code></p>
 
 </div>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p><code><a href="Classes/RLMRealm.html#/c:objc(cs)RLMRealm(im)resolveThreadSafeReference:">-[RLMRealm resolveThreadSafeReference:]</a></code></p>

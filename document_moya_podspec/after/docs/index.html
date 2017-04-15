@@ -217,16 +217,16 @@ to abstract away the nitty gritty of URLs, parameters, etc?</p>
 <li>Lets you define a clear usage of different endpoints with associated enum values.</li>
 <li>Treats test stubs as first-class citizens so unit testing is super-easy.</li>
 </ul>
-<a href='#sample-project' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='sample-project'>Sample Project</h2>
+<h2 id='sample-project' class='heading'>Sample Project</h2>
 
 <p>There&rsquo;s a sample project in the Demo directory. To use it, run <code>pod install</code> to download the required libraries. Have fun!</p>
-<a href='#project-status' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='project-status'>Project Status</h2>
+<h2 id='project-status' class='heading'>Project Status</h2>
 
 <p>This project is actively under development, and is being used in <a href="https://github.com/Artsy/eidolon">Artsy&rsquo;s
 new auction app</a>. We consider it
 ready for production use.</p>
-<a href='#installation' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='installation'>Installation</h2>
-<a href='#moya-version-vs-swift-version' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='moya-version-vs-swift-version'>Moya version vs Swift version.</h3>
+<h2 id='installation' class='heading'>Installation</h2>
+<h3 id='moya-version-vs-swift-version' class='heading'>Moya version vs Swift version.</h3>
 
 <p>Because of the many Swift versions Moya supports, it might be confusing to
 find the version of Moya that you need. Below is a table that shows which version of Moya
@@ -251,7 +251,7 @@ you should use for your Swift version.</p>
 <td>&lt;= 7.0.1</td>
 </tr>
 </tbody></table>
-<a href='#swift-package-manager' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='swift-package-manager'>Swift Package Manager</h3>
+<h3 id='swift-package-manager' class='heading'>Swift Package Manager</h3>
 
 <p>To integrate using Apple&rsquo;s Swift package manager, add the following as a dependency to your <code>Package.swift</code>:</p>
 <pre class="highlight swift"><code><span class="o">.</span><span class="kt">Package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/Moya/Moya"</span><span class="p">,</span> <span class="nv">majorVersion</span><span class="p">:</span> <span class="mi">8</span><span class="p">)</span>
@@ -268,7 +268,7 @@ Here&rsquo;s an example <code>PackageDescription</code>:</p>
   <span class="p">]</span>
 <span class="p">)</span>
 </code></pre>
-<a href='#cocoapods' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='cocoapods'>CocoaPods</h3>
+<h3 id='cocoapods' class='heading'>CocoaPods</h3>
 
 <p>For Moya, use the following entry in your Podfile:</p>
 <pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'Moya'</span><span class="p">,</span> <span class="s1">'8.0.0'</span>
@@ -288,7 +288,7 @@ need to include the pre-release versions of RxSwift or ReactiveSwift manually.</
 </code></pre>
 
 <p>Then run <code>pod install</code>.</p>
-<a href='#carthage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='carthage'>Carthage</h3>
+<h3 id='carthage' class='heading'>Carthage</h3>
 
 <p>Carthage users can point to this repository and use whichever
 generated framework they&rsquo;d like, <code>Moya</code>, <code>RxMoya</code>, or <code>ReactiveMoya</code>.
@@ -296,7 +296,7 @@ When linking frameworks remember to always link <code>Moya</code> along with <co
 <code>ReactiveMoya</code>, if you use any of these.</p>
 <pre class="highlight plaintext"><code>github "Moya/Moya"
 </code></pre>
-<a href='#manually' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='manually'>Manually</h3>
+<h3 id='manually' class='heading'>Manually</h3>
 
 <ul>
 <li>Open up Terminal, <code>cd</code> into your top-level project directory, and run the following command <em>if</em> your project is not initialized as a git repository:</li>
@@ -349,7 +349,7 @@ When linking frameworks remember to always link <code>Moya</code> along with <co
 <blockquote>
 <p>The three frameworks are automagically added as a target dependency, linked framework and embedded framework in a copy files build phase which is all you need to build on the simulator and a device.</p>
 </blockquote>
-<a href='#usage' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='usage'>Usage</h2>
+<h2 id='usage' class='heading'>Usage</h2>
 
 <p>After <a href="docs/Examples/Basic.md">some setup</a>, using Moya is really simple. You can access an API like this:</p>
 <pre class="highlight swift"><code><span class="n">provider</span> <span class="o">=</span> <span class="kt">MoyaProvider</span><span class="o">&lt;</span><span class="kt">GitHub</span><span class="o">&gt;</span><span class="p">()</span>
@@ -380,12 +380,12 @@ into the enum you use to access the endpoint, like this:</p>
 parameter encoding.</p>
 
 <p>For more examples, see the <a href="docs/Examples">documentation</a>.</p>
-<a href='#reactive-extensions' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='reactive-extensions'>Reactive Extensions</h2>
+<h2 id='reactive-extensions' class='heading'>Reactive Extensions</h2>
 
 <p>Even cooler are the reactive extensions. Moya provides reactive extensions for
 <a href="https://github.com/ReactiveCocoa/ReactiveSwift">ReactiveSwift</a> and
 <a href="https://github.com/ReactiveX/RxSwift">RxSwift</a>.</p>
-<a href='#reactiveswift' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='reactiveswift'>ReactiveSwift</h2>
+<h2 id='reactiveswift' class='heading'>ReactiveSwift</h2>
 
 <p>After <code>ReactiveSwift</code> <a href="docs/ReactiveSwift.md">setup</a>, <code>request(:)</code> method
 immediately returns a <code>SignalProducer</code> (<code>RACSignal</code> is also available if needed)
@@ -403,7 +403,7 @@ for instance, we could do the following:</p>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
-<a href='#rxswift' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='rxswift'>RxSwift</h2>
+<h2 id='rxswift' class='heading'>RxSwift</h2>
 
 <p>After <code>RxSwift</code> <a href="docs/RxSwift.md">setup</a>, <code>request(:)</code> method immediately
 returns an <code>Observable</code> that you can subscribe to or bind or map or whatever you
@@ -430,7 +430,7 @@ or a string, with <code>mapImage()</code>, <code>mapJSON()</code>, and <code>map
 for filtering out certain status codes. This means that you can place your code for
 handling API errors like 400&rsquo;s in the same places as code for handling invalid
 responses.</p>
-<a href='#community-extensions' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='community-extensions'>Community Extensions</h2>
+<h2 id='community-extensions' class='heading'>Community Extensions</h2>
 
 <p>Moya has a great community around it and some people have created some very helpful extensions.</p>
 
@@ -448,7 +448,7 @@ responses.</p>
 </ul>
 
 <p>We appreciate all the work being done by the community around Moya. If you would like to have your extension featured in the list above, simply create a pull request adding your extensions to the list.</p>
-<a href='#contributing' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='contributing'>Contributing</h2>
+<h2 id='contributing' class='heading'>Contributing</h2>
 
 <p>Hey! Like Moya? Awesome! We could actually really use your help!</p>
 
@@ -472,10 +472,10 @@ requests and help steer the ship :ship: You can read more details about that <a 
 <p>Moya&rsquo;s community has a tremendous positive energy, and the maintainers are committed to keeping things awesome. Like <a href="https://github.com/CocoaPods/CocoaPods/wiki/Communication-&-Design-Rules">in the CocoaPods community</a>, always assume positive intent; even if a comment sounds mean-spirited, give the person the benefit of the doubt.</p>
 
 <p>Please note that this project is released with a Contributor Code of Conduct. By participating in this project you agree to abide by <a href="https://github.com/Moya/contributors/blob/master/Code%20of%20Conduct.md">its terms</a>.</p>
-<a href='#adding-new-source-files' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h3 id='adding-new-source-files'>Adding new source files</h3>
+<h3 id='adding-new-source-files' class='heading'>Adding new source files</h3>
 
 <p>If you add or remove a source file from Moya, a corresponding change needs to be made to the <code>Moya.xcodeproj</code> project at the root of this repository. This project is used for Carthage. Don&rsquo;t worry, you&rsquo;ll get an automated warning when submitting a pull request if you forget.</p>
-<a href='#license' class='anchor' aria-hidden=true><span class="header-anchor"></span></a><h2 id='license'>License</h2>
+<h2 id='license' class='heading'>License</h2>
 
 <p>Moya is released under an MIT license. See License.md for more information.</p>
 

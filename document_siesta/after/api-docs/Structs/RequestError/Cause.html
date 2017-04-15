@@ -254,7 +254,6 @@ but they can be useful if you want to add special handling for specific errors.<
 <p>For example, if you’re working with an API that sometimes returns garbled text data that isn’t decodable,
 and you want to show users a placeholder message instead of an error, then (1) gee, that’s weird, and
 (2) you can turn that one specific error into a success by adding a transformer:</p>
-
 <pre class="highlight plaintext"><code>configure {
   $0.pipeline[.parsing].add(GarbledResponseHandler())
 }

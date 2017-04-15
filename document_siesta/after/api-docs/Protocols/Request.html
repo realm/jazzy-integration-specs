@@ -255,7 +255,6 @@ and <code>overrideLocalData(...)</code>.</p>
 <p><code>Request</code> guarantees that it will call any given callback <em>at most</em> one time.</p>
 
 <p>Callbacks are always called on the main thread.</p>
-
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
     There is no race condition between a callback being added and a response arriving. If you add a callback after the
@@ -592,7 +591,6 @@ ignored and not trigger any callbacks.</p>
                         <p>Send the same request again, returning a new <code>Request</code> instance for the new attempt.</p>
 
 <p>The return request is not already started. You must call <code><a href="../Protocols/Request.html#/s:FP6Siesta7Request5startFT_x">start()</a></code> when you are ready for it to begin.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     Use with caution! Repeating a failed request for any HTTP method other than GET is potentially unsafe,
@@ -612,7 +610,6 @@ retry its nested request without triggering a brain-bending hall of mirrors effe
 </ul>
 
 <p>Note that this means the new request may not be indentical to the original one.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>Because <code>repeated()</code> will pick up header changes from configuration, it is possible for a request to run
@@ -621,7 +618,6 @@ method is automatically retrying a request with an updated auth token. However, 
 that you do not hold on to and repeat a request after a user logs out. Put those safety goggles on.</p>
 
 </div>
-
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
     <p>The new <code>Request</code> does <strong>not</strong> attach all the callbacks (e.g. <code><a href="../Protocols/Request.html#/s:FP6Siesta7Request12onCompletionFFVS_12ResponseInfoT_x">onCompletion(_:)</a></code>) from the old one.
@@ -671,7 +667,6 @@ resource’s state to be updated again with the result.</p>
                         <p>Gathers multiple requests into a <strong>request chain</strong>, a wrapper that appears from the outside to be a single
 request. You can use this to add behavior to a request in a way that is transparent to outside observers. For
 example, you can transparently renew expired tokens.</p>
-
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
     This returns a new <code>Request</code>, and does not alter the original one (thus <code>chained</code> and not <code>chain</code>). Any
@@ -681,7 +676,6 @@ chaining behavior.
 </div>
 
 <p>In this pseudocode:</p>
-
 <pre class="highlight plaintext"><code>let chainedRequest = underlyingRequest.chained {
   response in …whenCompleted…
 }
@@ -705,7 +699,6 @@ and yield whatever repsonse it produces.</li>
 <p>Calling <code><a href="../Protocols/Request.html#/s:FP6Siesta7Request6cancelFT_T_">cancel()</a></code> on <code>chainedRequest</code> cancels the currently executing request and immediately stops the chain,
 never executing your <code>whenCompleted</code> closure. (Note, however, that calling <code><a href="../Protocols/Request.html#/s:FP6Siesta7Request6cancelFT_T_">cancel()</a></code> on <code>underlyingRequest</code>
 does <em>not</em> stop the chain; instead, the cancellation error is passed to your <code>whenCompleted</code> just like any other error.)</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This cancellation behavior means that your <code>whenCompleted</code> closure may never execute.
@@ -720,7 +713,6 @@ request
 
 <p>Chained requests currently do not support progress. If you are reading these words and want that feature, please
 file an issue on Github!</p>
-
 <div class="aside aside-see-also">
     <p class="aside-title">See also</p>
     <code><a href="../Structs/Configuration.html#/s:FV6Siesta13Configuration16decorateRequestsFT4withFTCS_8ResourcePS_7Request__PS2___T_">Configuration.decorateRequests(...)</a></code>

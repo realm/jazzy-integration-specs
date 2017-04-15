@@ -273,7 +273,6 @@
                         <p>Start the given request asynchronously, and return a <code><a href="../Protocols/RequestNetworking.html">RequestNetworking</a></code> to control the request.</p>
 
 <p>If the request is cancelled, call the response closure with an error.</p>
-
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
     
@@ -283,7 +282,6 @@
   network requests run asynchronously.</p>
 
 <p>Implementations may call the <code>completion</code> from a background thread.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     Implementations <strong>must</strong> guarante that they will call the <code>completion</code> closure exactly once.

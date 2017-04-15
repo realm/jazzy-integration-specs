@@ -296,7 +296,6 @@ destroyed (for example, if you wish to open a Realm, check some property, and
 then possibly delete the Realm file and re-open it), place the code which uses
 the Realm within an <code>@autoreleasepool {}</code> and ensure you have no other
 strong references to it.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <code>RLMRealm</code> instances are not thread safe and cannot be shared across
@@ -554,7 +553,6 @@ can be changed via <code><a href="../Classes/RLMRealmConfiguration.html#/c:objc(
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Indicates if the Realm is currently engaged in a write transaction.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     Do not simply check this property and then start a write transaction whenever an object needs to be
@@ -688,7 +686,6 @@ specifically creating and running a run loop on a background thread, this will
 normally only be the main thread.</p>
 
 <p>The block has the following definition:</p>
-
 <pre class="highlight plaintext"><code>typedef void(^RLMNotificationBlock)(RLMNotification notification, RLMRealm *realm);
 </code></pre>
 
@@ -837,7 +834,6 @@ want to receive a specific notification for this write tranaction, see
 writes made, or due to unexpected i/o errors. This version of the method throws
 an exception when errors occur. Use the version with a <code>NSError</code> out parameter
 instead if you wish to handle errors.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     This method may only be called during a write transaction.
@@ -883,7 +879,6 @@ want to receive a specific notification for this write tranaction, see
 
 <p>This method can fail if there is insufficient disk space available to save the
 writes made, or due to unexpected i/o errors.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method may only be called during a write transaction.</p>
@@ -969,7 +964,6 @@ using this method.</p>
 
 <p>This method can fail if there is insufficient disk space available to save the
 writes made, or due to unexpected i/o errors.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method may only be called during a write transaction.</p>
@@ -1063,7 +1057,6 @@ beginning of the write transaction, and then ends the transaction.</p>
 object instances. Any <code><a href="../Classes/RLMObject.html">RLMObject</a></code>s which were added to the Realm will be
 invalidated rather than becoming unmanaged.
 Given the following code:</p>
-
 <pre class="highlight plaintext"><code>ObjectType *oldObject = [[ObjectType objectsWhere:@"..."] firstObject];
 ObjectType *newObject = [[ObjectType alloc] init];
 
@@ -1080,7 +1073,6 @@ the valid object.</p>
 <p>KVO observers on any objects which were modified during the transaction will
 be notified about the change back to their initial values, but no other
 notifcations are produced by a cancelled write transaction.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     This method may only be called during a write transaction.
@@ -1121,7 +1113,6 @@ notifcations are produced by a cancelled write transaction.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Performs actions contained within the given block inside a write transaction.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <code>[RLMRealm transactionWithBlock:error:]</code>
@@ -1513,7 +1504,6 @@ may not be called on a read-only Realm.</p>
                         <p>Returns the same object as the one referenced when the <code><a href="../Classes/RLMThreadSafeReference.html">RLMThreadSafeReference</a></code> was first created,
 but resolved for the current Realm for this thread. Returns <code>nil</code> if this object was deleted after
 the reference was created.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>A <code><a href="../Classes/RLMThreadSafeReference.html">RLMThreadSafeReference</a></code> object must be resolved at most once.
@@ -1522,19 +1512,16 @@ the reference was created.</p>
      An exception will be thrown if a reference is resolved more than once.</p>
 
 </div>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>Cannot call within a write transaction.</p>
 
 </div>
-
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
     <p>Will refresh this Realm if the source Realm was at a later version than this one.</p>
 
 </div>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p><code><a href="../Classes/RLMThreadSafeReference.html#/c:objc(cs)RLMThreadSafeReference(cm)referenceWithThreadConfined:">+[RLMThreadSafeReference referenceWithThreadConfined:]</a></code></p>
@@ -1620,7 +1607,6 @@ into a different Realm.</p>
 
 <p>The object to be added must be valid and cannot have been previously deleted
 from a Realm (i.e. <code>isInvalidated</code> must be <code>NO</code>).</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method may only be called during a write transaction.</p>
@@ -1683,13 +1669,11 @@ from a Realm (i.e. <code>isInvalidated</code> must be <code>NO</code>).</p>
                         <p>Adds all the objects in a collection to the Realm.</p>
 
 <p>This is the equivalent of calling <code>addObject:</code> for every object in a collection.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method may only be called during a write transaction.</p>
 
 </div>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p><code>addObject:</code></p>
@@ -1759,7 +1743,6 @@ updated with any changed values.</p>
 <p>As with <code>addObject:</code>, the object cannot already be managed by a different
 Realm. Use <code>-[RLMObject createOrUpdateInRealm:withValue:]</code> to copy values to
 a different Realm.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method may only be called during a write transaction.</p>
@@ -1822,13 +1805,11 @@ a different Realm.</p>
                         <p>Adds or updates all the objects in a collection into the Realm.</p>
 
 <p>This is the equivalent of calling <code>addOrUpdateObject:</code> for every object in a collection.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method may only be called during a write transaction.</p>
 
 </div>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p><code>addOrUpdateObject:</code></p>
@@ -1889,7 +1870,6 @@ a different Realm.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Deletes an object from the Realm. Once the object is deleted it is considered invalidated.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method may only be called during a write transaction.</p>
@@ -1952,13 +1932,11 @@ a different Realm.</p>
                         <p>Deletes one or more objects from the Realm.</p>
 
 <p>This is the equivalent of calling <code>deleteObject:</code> for every object in a collection.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method may only be called during a write transaction.</p>
 
 </div>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p><code>deleteObject:</code></p>
@@ -2019,13 +1997,11 @@ a different Realm.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Deletes all objects from the Realm.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>This method may only be called during a write transaction.</p>
 
 </div>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p><code>deleteObject:</code></p>
@@ -2171,7 +2147,6 @@ a different Realm.</p>
 <p>This method is called automatically when opening a Realm for the first time and does
 not need to be called explicitly. You can choose to call this method to control
 exactly when and how migrations are performed.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p>RLMMigration</p>
@@ -2242,7 +2217,6 @@ exactly when and how migrations are performed.</p>
 <p>This method is called automatically when opening a Realm for the first time and does
 not need to be called explicitly. You can choose to call this method to control
 exactly when and how migrations are performed.</p>
-
 <div class="aside aside-see">
     <p class="aside-title">See</p>
     <p>RLMMigration</p>

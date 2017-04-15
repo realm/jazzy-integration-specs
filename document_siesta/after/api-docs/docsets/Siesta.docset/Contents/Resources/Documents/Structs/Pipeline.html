@@ -254,7 +254,6 @@ custom stages, and customize their order. Each stage has zero or more <code><a h
 <code><a href="../Protocols/EntityCache.html">EntityCache</a></code>.</p>
 
 <p>The pipeline is a part of a <code><a href="../Structs/Configuration.html">Configuration</a></code>, so you can thus customize the pipeline per API or per resource.</p>
-
 <pre class="highlight plaintext"><code>service.configure {
   $0.pipeline[.parsing].add(SwiftyJSONTransformer, contentTypes: ["*​/json"])
   $0.pipeline[.cleanup].add(GithubErrorMessageExtractor())
@@ -332,13 +331,11 @@ passing <code>useDefaultTransformers: false</code> when creating a <code><a href
 
 <p>Stage keys do not have semantic significance — they are just arbitrary identifiers — so you are free arbitrarily
 add or reorder stages if you have complex response processing needs.</p>
-
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
     Stages <strong>must</strong> be unique. Adding a duplicate stage key will cause a precondition failure.
 
 </div>
-
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
     Any stage not present in the order will not run, even if it has transformers and/or cache configured.
@@ -400,7 +397,6 @@ add or reorder stages if you have complex response processing needs.</p>
                         <p>Removes all caches from all stages in the pipeline. Leaves transformers intact.</p>
 
 <p>You can use this to prevent sensitive resources from being cached:</p>
-
 <pre class="highlight plaintext"><code>service.configure("/secret") {
   $0.pipeline.removeAllCaches()
 }

@@ -274,14 +274,12 @@ exhibit the behavior we want; the logic involved is far more tangled and brittle
 </ul>
 
 <p>Siesta currently does not include any implementations of <code>EntityCache</code>, but a future version will.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     <p>Siesta calls <code>EntityCache</code> methods on a GCD background queue, so your implementation <strong>must be
        thread-safe</strong>.</p>
 
 </div>
-
 <div class="aside aside-see-also">
     <p class="aside-title">See also</p>
     <p><code><a href="../Structs/PipelineStage.html#/s:FV6Siesta13PipelineStage10cacheUsinguRxS_11EntityCacherFxT_">PipelineStage.cacheUsing(_:)</a></code></p>
@@ -316,7 +314,6 @@ exhibit the behavior we want; the logic involved is far more tangled and brittle
 any content. Implementations will almost always examine <code>resource.url</code>. (Cache keys should be <em>at least</em> as unique
 as URLs except in very unusual circumstances.) Implementations may also want to examine <code>resource.configuration</code>,
 for example to take authentication into account.</p>
-
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
     This method is always called on the <strong>main thread</strong>. However, the key it returns will be passed repeatedly
@@ -382,7 +379,6 @@ opaque to Siesta.</p>
 <p>If this method returns an entity, it does <em>not</em> pass through the transformer pipeline. Implementations should
 return the entity as if already fully parsed and transformed — with the same type of <code>entity.content</code> that was
 originally sent to <code><a href="../Protocols/EntityCache.html#/s:FP6Siesta11EntityCache11writeEntityFTGVS_6EntityP__6forKeywx3Key_T_">writeEntity(...)</a></code>.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     This method may be called on a background thread. Make sure your implementation is threadsafe.
@@ -426,7 +422,6 @@ type of the entity’s <code>content</code> and/or its header values, and ignore
 
 <p>Note that this method does not receive a URL as input; if you need to limit caching to specific resources, use
 Siesta’s configuration mechanism to control which resources are cacheable.</p>
-
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     The method may be called on a background thread. Make sure your implementation is threadsafe.
