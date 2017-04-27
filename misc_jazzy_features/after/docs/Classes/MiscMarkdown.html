@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>ImplicitlyInternalTopLevelClass Class Reference</title>
+    <title>MiscMarkdown Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Class/ImplicitlyInternalTopLevelClass" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Class/MiscMarkdown" class="dashAnchor"></a>
 
-    <a title="ImplicitlyInternalTopLevelClass Class Reference"></a>
+    <a title="MiscMarkdown Class Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -44,7 +44,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">MiscJazzyFeatures Reference</a>
       <img class="carat" src="../img/carat.png" />
-      ImplicitlyInternalTopLevelClass Class Reference
+      MiscMarkdown Class Reference
     </p>
 
     <div class="content-wrapper">
@@ -157,14 +157,14 @@
 
         <section class="section">
           <div class="section-content">
-            <h1>ImplicitlyInternalTopLevelClass</h1>
+            <h1>MiscMarkdown</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">class</span> <span class="kt">ImplicitlyInternalTopLevelClass</span></code></pre>
+                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">MiscMarkdown</span></code></pre>
 
                 </div>
               </div>
-            <p>SUPPORTED: implicitly internal top-level class</p>
+            <p>A class to demonstrate miscellaneous markdown formatting behaviors</p>
 
           </div>
         </section>
@@ -176,9 +176,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:CC17MiscJazzyFeatures31ImplicitlyInternalTopLevelClass11NestedClass"></a>
-                    <a name="//apple_ref/swift/Class/NestedClass" class="dashAnchor"></a>
-                    <a class="token" href="#/s:CC17MiscJazzyFeatures31ImplicitlyInternalTopLevelClass11NestedClass">NestedClass</a>
+                    <a name="/s:FC17MiscJazzyFeatures12MiscMarkdown11linespacingFT_T_"></a>
+                    <a name="//apple_ref/swift/Method/linespacing()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC17MiscJazzyFeatures12MiscMarkdown11linespacingFT_T_">linespacing()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -186,14 +186,62 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>SUPPORTED: Nested class</p>
+                        <p>Blank line not required before:</p>
+
+<ul>
+<li>lists,</li>
+</ul>
+
+<p>&hellip;code fence blocks:</p>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">aVar</span> <span class="o">=</span> <span class="mi">2</span>
+</code></pre>
+
+<p>&hellip;or html blocks:</p>
+
+<div>
+No *markdown formatting*
+</div>
+
+<p>Callouts are lists too.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>So no blank line needed before this one.</p>
+
+<p>Second paragraph of the note.</p>
+
+</div>
+
+<p>However:</p>
+
+<ul>
+<li>Still need a blank line before a code fence
+inside a list item of a <q>tight list</q></li>
+</ul>
+<pre class="highlight swift"><code>  <span class="k">var</span> <span class="nv">aVar</span> <span class="o">=</span> <span class="mi">3</span>
+</code></pre>
+
+<ul>
+<li><q>tight</q> is when no blank between <em>this</em> bullet and the
+end of the previous bullet&rsquo;s content.</li>
+</ul>
+
+<p>But if you use a <q>loose list</q></p>
+
+<ul>
+<li><p>&hellip;then&hellip;</p>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">aVar</span> <span class="o">=</span> <span class="mi">4</span>
+</code></pre></li>
+<li><p>&hellip;then you can skip the blank line before the code block.</p>
+
+<p>Simple.</p></li>
+</ul>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">NestedClass</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">linespacing</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
