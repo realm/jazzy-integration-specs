@@ -17,7 +17,8 @@
 /**
  Always returns `SomeEnumFoo`
  
- @return `SomeEnumFoo` even if `-[NSObject load]` fails
+ @param param An important parameter
+ @return `SomeEnumFoo` *even if* `-[NSObject load]` fails
  */
 - (SomeEnum)methodReturningEnum:(NSString*)param;
 @end

@@ -466,7 +466,6 @@ in your application&rsquo;s <em>Application Support</em> directory on OS X.</p>
                               <td>
                                 <div>
                                   <p>A configuration value to use when creating the Realm.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -521,7 +520,6 @@ in your application&rsquo;s <em>Application Support</em> directory on OS X.</p>
                               <td>
                                 <div>
                                   <p>The local URL of the file the Realm should be saved at.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -603,7 +601,6 @@ was already up to date.</p>
                               <td>
                                 <div>
                                   <p>The block containing actions to perform.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -877,7 +874,6 @@ must be <code>false</code>).</p>
                               <td>
                                 <div>
                                   <p>The object to be added to this Realm.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -889,8 +885,8 @@ must be <code>false</code>).</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>If <code>true</code>, the Realm will try to find an existing copy of the object (with the same primary key), and update it. Otherwise, the object will be added.</p>
-
+                                  <p>If <code>true</code>, the Realm will try to find an existing copy of the object (with the same primary
+                key), and update it. Otherwise, the object will be added.</p>
                                 </div>
                               </td>
                             </tr>
@@ -950,7 +946,6 @@ must be <code>false</code>).</p>
                               <td>
                                 <div>
                                   <p>A sequence which contains objects to be added to the Realm.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -963,7 +958,6 @@ must be <code>false</code>).</p>
                               <td>
                                 <div>
                                   <p>If <code>true</code>, objects that are already in the Realm will be updated instead of added anew.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1030,7 +1024,6 @@ the properties defined in the model.</p>
                               <td>
                                 <div>
                                   <p>The type of the object to create.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1043,7 +1036,6 @@ the properties defined in the model.</p>
                               <td>
                                 <div>
                                   <p>The value used to populate the object.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1055,8 +1047,8 @@ the properties defined in the model.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>If <code>true</code>, the Realm will try to find an existing copy of the object (with the same primary key), and update it. Otherwise, the object will be added.</p>
-
+                                  <p>If <code>true</code>, the Realm will try to find an existing copy of the object (with the same primary
+                key), and update it. Otherwise, the object will be added.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1066,7 +1058,6 @@ the properties defined in the model.</p>
                       <div>
                         <h4>Return Value</h4>
                         <p>The newly created object.</p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Realm.swift#L302-L308">Show on GitHub</a>
@@ -1127,7 +1118,6 @@ the properties defined in the model.</p>
                               <td>
                                 <div>
                                   <p>The object to be deleted.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1181,8 +1171,8 @@ the properties defined in the model.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The objects to be deleted. This can be a <code>List&lt;Object&gt;</code>, <code>Results&lt;Object&gt;</code>, or any other Swift <code>Sequence</code> whose elements are <code>Object</code>s.</p>
-
+                                  <p>The objects to be deleted. This can be a <code>List&lt;Object&gt;</code>, <code>Results&lt;Object&gt;</code>, or any other
+                   Swift <code>Sequence</code> whose elements are <code>Object</code>s.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1278,7 +1268,6 @@ the properties defined in the model.</p>
                               <td>
                                 <div>
                                   <p>The type of the objects to be returned.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1288,7 +1277,6 @@ the properties defined in the model.</p>
                       <div>
                         <h4>Return Value</h4>
                         <p>A <code><a href="../Classes/Results.html">Results</a></code> containing the objects.</p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Realm.swift#L419-L421">Show on GitHub</a>
@@ -1340,7 +1328,6 @@ the properties defined in the model.</p>
                               <td>
                                 <div>
                                   <p>The type of the object to be returned.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1353,7 +1340,6 @@ the properties defined in the model.</p>
                               <td>
                                 <div>
                                   <p>The primary key of the desired object.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1363,7 +1349,6 @@ the properties defined in the model.</p>
                       <div>
                         <h4>Return Value</h4>
                         <p>An object of type <code>type</code>, or <code>nil</code> if no instance with the given primary key exists.</p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Realm.swift#L451-L455">Show on GitHub</a>
@@ -1430,8 +1415,9 @@ updates, call <code>stop()</code> on the token.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>A block which is called to process Realm notifications. It receives the following parameters: <code>notification</code>: the incoming notification; <code>realm</code>: the Realm for which the notification occurred.</p>
-
+                                  <p>A block which is called to process Realm notifications. It receives the following parameters:
+               <code>notification</code>: the incoming notification; <code>realm</code>: the Realm for which the notification
+               occurred.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1441,7 +1427,6 @@ updates, call <code>stop()</code> on the token.</p>
                       <div>
                         <h4>Return Value</h4>
                         <p>A token which must be held for as long as you wish to continue receiving change notifications.</p>
-
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Realm.swift#L506-L517">Show on GitHub</a>
@@ -1536,8 +1521,8 @@ means that there is nothing to refresh (as managed <code><a href="../Classes/Obj
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>Whether there were any updates for the Realm. Note that <code>true</code> may be returned even if no data actually changed.</p>
-
+                        <p>Whether there were any updates for the Realm. Note that <code>true</code> may be returned even if no data actually
+changed.</p>
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Realm.swift#L560-L562">Show on GitHub</a>
@@ -1660,7 +1645,6 @@ from the point when the previous write transaction was committed.</p>
                               <td>
                                 <div>
                                   <p>Local URL to save the Realm to.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1673,7 +1657,6 @@ from the point when the previous write transaction was committed.</p>
                               <td>
                                 <div>
                                   <p>Optional 64-byte encryption key to encrypt the new file with.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1774,7 +1757,6 @@ explicitly. You can choose to call this method to control exactly when and how m
                               <td>
                                 <div>
                                   <p>The Realm configuration used to open and migrate the Realm.</p>
-
                                 </div>
                               </td>
                             </tr>
@@ -1852,8 +1834,8 @@ deleted after the reference was created.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The thread-safe reference to the thread-confined object to resolve in this Realm.</p>
-
+                                  <p>The thread-safe reference to the thread-confined object to resolve in
+                   this Realm.</p>
                                 </div>
                               </td>
                             </tr>
