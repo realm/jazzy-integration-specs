@@ -282,7 +282,8 @@
 <a href="https://img.shields.io/cocoapods/v/Alamofire.svg"><img src="https://img.shields.io/cocoapods/v/Alamofire.svg" alt="CocoaPods Compatible"></a>
 <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage Compatible"></a>
 <a href="http://cocoadocs.org/docsets/Alamofire"><img src="https://img.shields.io/cocoapods/p/Alamofire.svg?style=flat" alt="Platform"></a>
-<a href="http://twitter.com/AlamofireSF"><img src="https://img.shields.io/badge/twitter-@AlamofireSF-blue.svg?style=flat" alt="Twitter"></a></p>
+<a href="http://twitter.com/AlamofireSF"><img src="https://img.shields.io/badge/twitter-@AlamofireSF-blue.svg?style=flat" alt="Twitter"></a>
+<a href="https://gitter.im/Alamofire/Alamofire?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge"><img src="https://badges.gitter.im/Alamofire/Alamofire.svg" alt="Gitter"></a></p>
 
 <p>Alamofire is an HTTP networking library written in Swift.</p>
 
@@ -380,7 +381,7 @@
 <span class="n">use_frameworks!</span>
 
 <span class="n">target</span> <span class="s1">'&lt;Your Target Name&gt;'</span> <span class="k">do</span>
-    <span class="n">pod</span> <span class="s1">'Alamofire'</span><span class="p">,</span> <span class="s1">'~&gt; 4.3'</span>
+    <span class="n">pod</span> <span class="s1">'Alamofire'</span><span class="p">,</span> <span class="s1">'~&gt; 4.4'</span>
 <span class="k">end</span>
 </code></pre>
 
@@ -397,13 +398,13 @@
 </code></pre>
 
 <p>To integrate Alamofire into your Xcode project using Carthage, specify it in your <code>Cartfile</code>:</p>
-<pre class="highlight plaintext"><code>github "Alamofire/Alamofire" ~&gt; 4.3
+<pre class="highlight plaintext"><code>github "Alamofire/Alamofire" ~&gt; 4.4
 </code></pre>
 
 <p>Run <code>carthage update</code> to build the framework and drag the built <code>Alamofire.framework</code> into your Xcode project.</p>
-<h3 id='swift-pacakge-manager' class='heading'>Swift Pacakge Manager</h3>
+<h3 id='swift-package-manager' class='heading'>Swift Package Manager</h3>
 
-<p>The <a href="https://swift.org/package-manager/">Swift Pacakage Manager</a> is a tool for automating the distribution of Swift code and is integrated into the <code>swift</code> compiler. It is in early development, but Alamofire does support its use on supported platforms. </p>
+<p>The <a href="https://swift.org/package-manager/">Swift Package Manager</a> is a tool for automating the distribution of Swift code and is integrated into the <code>swift</code> compiler. It is in early development, but Alamofire does support its use on supported platforms. </p>
 
 <p>Once you have your Swift package set up, adding Alamofire as a dependency is as easy as adding it to the <code>dependencies</code> value of your <code>Package.swift</code>.</p>
 <pre class="highlight swift"><code><span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
@@ -697,9 +698,9 @@
 <span class="p">]</span>
 
 <span class="c1">// All three of these calls are equivalent</span>
-<span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://httpbin.org/post"</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="n">parameters</span><span class="p">)</span>
-<span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://httpbin.org/post"</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="n">parameters</span><span class="p">,</span> <span class="nv">encoding</span><span class="p">:</span> <span class="kt">URLEncoding</span><span class="o">.</span><span class="k">default</span><span class="p">)</span>
-<span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://httpbin.org/post"</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="n">parameters</span><span class="p">,</span> <span class="nv">encoding</span><span class="p">:</span> <span class="kt">URLEncoding</span><span class="o">.</span><span class="n">httpBody</span><span class="p">)</span>
+<span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://httpbin.org/post"</span><span class="p">,</span> <span class="nv">method</span><span class="p">:</span> <span class="o">.</span><span class="n">post</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="n">parameters</span><span class="p">)</span>
+<span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://httpbin.org/post"</span><span class="p">,</span> <span class="nv">method</span><span class="p">:</span> <span class="o">.</span><span class="n">post</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="n">parameters</span><span class="p">,</span> <span class="nv">encoding</span><span class="p">:</span> <span class="kt">URLEncoding</span><span class="o">.</span><span class="k">default</span><span class="p">)</span>
+<span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://httpbin.org/post"</span><span class="p">,</span> <span class="nv">method</span><span class="p">:</span> <span class="o">.</span><span class="n">post</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="n">parameters</span><span class="p">,</span> <span class="nv">encoding</span><span class="p">:</span> <span class="kt">URLEncoding</span><span class="o">.</span><span class="n">httpBody</span><span class="p">)</span>
 
 <span class="c1">// HTTP body: foo=bar&amp;baz[]=a&amp;baz[]=1&amp;qux[x]=1&amp;qux[y]=2&amp;qux[z]=3</span>
 </code></pre>
@@ -1099,7 +1100,7 @@
 <span class="k">let</span> <span class="nv">sessionManager</span> <span class="o">=</span> <span class="kt">Alamofire</span><span class="o">.</span><span class="kt">SessionManager</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="n">configuration</span><span class="p">)</span>
 </code></pre>
 <h4 id='modifying-the-session-configuration' class='heading'>Modifying the Session Configuration</h4>
-<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">defaultHeaders</span> <span class="o">=</span> <span class="kt">Alamofire</span><span class="o">.</span><span class="kt">SessionManager</span><span class="o">.</span><span class="k">default</span><span class="o">.</span><span class="n">defaultHTTPHeaders</span>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">defaultHeaders</span> <span class="o">=</span> <span class="kt">Alamofire</span><span class="o">.</span><span class="kt">SessionManager</span><span class="o">.</span><span class="n">defaultHTTPHeaders</span>
 <span class="n">defaultHeaders</span><span class="p">[</span><span class="s">"DNT"</span><span class="p">]</span> <span class="o">=</span> <span class="s">"1 (Do Not Track Enabled)"</span>
 
 <span class="k">let</span> <span class="nv">configuration</span> <span class="o">=</span> <span class="kt">URLSessionConfiguration</span><span class="o">.</span><span class="k">default</span>
@@ -1503,6 +1504,85 @@
 
 <p>Another important note is that this authentication system could be shared between multiple session managers. For example, you may need to use both a <code>default</code> and <code>ephemeral</code> session configuration for the same set of web services. The example above allows the same <code>oauthHandler</code> instance to be shared across multiple session managers to manage the single refresh flow.</p>
 <h3 id='custom-response-serialization' class='heading'>Custom Response Serialization</h3>
+
+<p>Alamofire provides built-in response serialization for data, strings, JSON, and property lists:</p>
+<pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">...</span><span class="p">)</span><span class="o">.</span><span class="n">responseData</span> <span class="p">{</span> <span class="p">(</span><span class="nv">resp</span><span class="p">:</span> <span class="kt">DataResponse</span><span class="o">&lt;</span><span class="kt">Data</span><span class="o">&gt;</span><span class="p">)</span> <span class="k">in</span> <span class="o">...</span> <span class="p">}</span>
+<span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">...</span><span class="p">)</span><span class="o">.</span><span class="n">responseString</span> <span class="p">{</span> <span class="p">(</span><span class="nv">resp</span><span class="p">:</span> <span class="kt">DataResponse</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">)</span> <span class="k">in</span> <span class="o">...</span> <span class="p">}</span>
+<span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">...</span><span class="p">)</span><span class="o">.</span><span class="n">responseJSON</span> <span class="p">{</span> <span class="p">(</span><span class="nv">resp</span><span class="p">:</span> <span class="kt">DataResponse</span><span class="o">&lt;</span><span class="kt">Any</span><span class="o">&gt;</span><span class="p">)</span> <span class="k">in</span> <span class="o">...</span> <span class="p">}</span>
+<span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">...</span><span class="p">)</span><span class="o">.</span><span class="n">responsePropertyList</span> <span class="p">{</span> <span class="nv">resp</span><span class="p">:</span> <span class="kt">DataResponse</span><span class="o">&lt;</span><span class="kt">Any</span><span class="o">&gt;</span><span class="p">)</span> <span class="k">in</span> <span class="o">...</span> <span class="p">}</span>
+</code></pre>
+
+<p>Those responses wrap deserialized <em>values</em> (Data, String, Any) or <em>errors</em> (network, validation errors), as well as <em>meta-data</em> (URL request, HTTP headers, status code, <a href="#statistical-metrics">metrics</a>, &hellip;).</p>
+
+<p>You have several ways to customize all of those response elements:</p>
+
+<ul>
+<li><a href="#response-mapping">Response Mapping</a></li>
+<li><a href="#handling-errors">Handling Errors</a></li>
+<li><a href="#creating-a-custom-response-serializer">Creating a Custom Response Serializer</a></li>
+<li><a href="#generic-response-object-serialization">Generic Response Object Serialization</a></li>
+</ul>
+<h4 id='response-mapping' class='heading'>Response Mapping</h4>
+
+<p>Response mapping is the simplest way to produce customized responses. It transforms the value of a response, while preserving eventual errors and meta-data. For example, you can turn a json response <code>DataResponse&lt;Any&gt;</code> into a response that holds an application model, such as <code>DataResponse&lt;User&gt;</code>. You perform response mapping with the <code>DataResponse.map</code> method:</p>
+<pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://example.com/users/mattt"</span><span class="p">)</span><span class="o">.</span><span class="n">responseJSON</span> <span class="p">{</span> <span class="p">(</span><span class="nv">response</span><span class="p">:</span> <span class="kt">DataResponse</span><span class="o">&lt;</span><span class="kt">Any</span><span class="o">&gt;</span><span class="p">)</span> <span class="k">in</span>
+    <span class="k">let</span> <span class="nv">userResponse</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="n">json</span> <span class="k">in</span>
+        <span class="c1">// We assume an existing User(json: Any) initializer</span>
+        <span class="k">return</span> <span class="kt">User</span><span class="p">(</span><span class="nv">json</span><span class="p">:</span> <span class="n">json</span><span class="p">)</span>
+    <span class="p">}</span>
+
+    <span class="c1">// Process userResponse, of type DataResponse&lt;User&gt;:</span>
+    <span class="k">if</span> <span class="k">let</span> <span class="nv">user</span> <span class="o">=</span> <span class="n">userResponse</span><span class="o">.</span><span class="n">value</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"User: { username: </span><span class="se">\(</span><span class="n">user</span><span class="o">.</span><span class="n">username</span><span class="se">)</span><span class="s">, name: </span><span class="se">\(</span><span class="n">user</span><span class="o">.</span><span class="n">name</span><span class="se">)</span><span class="s"> }"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>When the transformation may throw an error, use <code>flatMap</code> instead:</p>
+<pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://example.com/users/mattt"</span><span class="p">)</span><span class="o">.</span><span class="n">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+    <span class="k">let</span> <span class="nv">userResponse</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">flatMap</span> <span class="p">{</span> <span class="n">json</span> <span class="k">in</span>
+        <span class="k">try</span> <span class="kt">User</span><span class="p">(</span><span class="nv">json</span><span class="p">:</span> <span class="n">json</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>Response mapping is a good fit for your custom completion handlers:</p>
+<pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">loadUser</span><span class="p">(</span><span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">DataResponse</span><span class="o">&lt;</span><span class="kt">User</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Alamofire</span><span class="o">.</span><span class="kt">DataRequest</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://example.com/users/mattt"</span><span class="p">)</span><span class="o">.</span><span class="n">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+        <span class="k">let</span> <span class="nv">userResponse</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">flatMap</span> <span class="p">{</span> <span class="n">json</span> <span class="k">in</span>
+            <span class="k">try</span> <span class="kt">User</span><span class="p">(</span><span class="nv">json</span><span class="p">:</span> <span class="n">json</span><span class="p">)</span>
+        <span class="p">}</span>
+
+        <span class="nf">completionHandler</span><span class="p">(</span><span class="n">userResponse</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+
+<span class="n">loadUser</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+    <span class="k">if</span> <span class="k">let</span> <span class="nv">user</span> <span class="o">=</span> <span class="n">userResponse</span><span class="o">.</span><span class="n">value</span> <span class="p">{</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"User: { username: </span><span class="se">\(</span><span class="n">user</span><span class="o">.</span><span class="n">username</span><span class="se">)</span><span class="s">, name: </span><span class="se">\(</span><span class="n">user</span><span class="o">.</span><span class="n">name</span><span class="se">)</span><span class="s"> }"</span><span class="p">)</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p>When the map/flatMap closure may process a big amount of data, make sure you execute it outside of the main thread:</p>
+<pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">func</span> <span class="nf">loadUser</span><span class="p">(</span><span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">DataResponse</span><span class="o">&lt;</span><span class="kt">User</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Alamofire</span><span class="o">.</span><span class="kt">DataRequest</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">utilityQueue</span> <span class="o">=</span> <span class="kt">DispatchQueue</span><span class="o">.</span><span class="nf">global</span><span class="p">(</span><span class="nv">qos</span><span class="p">:</span> <span class="o">.</span><span class="n">utility</span><span class="p">)</span>
+
+    <span class="k">return</span> <span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://example.com/users/mattt"</span><span class="p">)</span><span class="o">.</span><span class="nf">responseJSON</span><span class="p">(</span><span class="nv">queue</span><span class="p">:</span> <span class="n">utilityQueue</span><span class="p">)</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+        <span class="k">let</span> <span class="nv">userResponse</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">flatMap</span> <span class="p">{</span> <span class="n">json</span> <span class="k">in</span>
+            <span class="k">try</span> <span class="kt">User</span><span class="p">(</span><span class="nv">json</span><span class="p">:</span> <span class="n">json</span><span class="p">)</span>
+        <span class="p">}</span>
+
+        <span class="kt">DispatchQueue</span><span class="o">.</span><span class="n">main</span><span class="o">.</span><span class="n">async</span> <span class="p">{</span>
+            <span class="nf">completionHandler</span><span class="p">(</span><span class="n">userResponse</span><span class="p">)</span>
+        <span class="p">}</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+</code></pre>
+
+<p><code>map</code> and <code>flatMap</code> are also available for <a href="#downloading-data-to-a-file">download responses</a>.</p>
 <h4 id='handling-errors' class='heading'>Handling Errors</h4>
 
 <p>Before implementing custom response serializers or object serialization methods, it&rsquo;s important to consider how to handle any errors that may occur. There are two basic options: passing existing errors along unmodified, to be dealt with at response time; or, wrapping all errors in an <code>Error</code> type specific to your app.</p>
@@ -1705,7 +1785,7 @@
 
 <p>The <code>ServerTrustPolicy</code> enumeration evaluates the server trust generally provided by an <code>URLAuthenticationChallenge</code> when connecting to a server over a secure HTTPS connection.</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">serverTrustPolicy</span> <span class="o">=</span> <span class="kt">ServerTrustPolicy</span><span class="o">.</span><span class="nf">pinCertificates</span><span class="p">(</span>
-    <span class="nv">certificates</span><span class="p">:</span> <span class="kt">ServerTrustPolicy</span><span class="o">.</span><span class="nf">certificatesInBundle</span><span class="p">(),</span>
+    <span class="nv">certificates</span><span class="p">:</span> <span class="kt">ServerTrustPolicy</span><span class="o">.</span><span class="nf">certificates</span><span class="p">(),</span>
     <span class="nv">validateCertificateChain</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
     <span class="nv">validateHost</span><span class="p">:</span> <span class="kc">true</span>
 <span class="p">)</span>
@@ -1725,7 +1805,7 @@
 <p>The <code>ServerTrustPolicyManager</code> is responsible for storing an internal mapping of server trust policies to a particular host. This allows Alamofire to evaluate each host against a different server trust policy.</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">serverTrustPolicies</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">ServerTrustPolicy</span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span>
     <span class="s">"test.example.com"</span><span class="p">:</span> <span class="o">.</span><span class="nf">pinCertificates</span><span class="p">(</span>
-        <span class="nv">certificates</span><span class="p">:</span> <span class="kt">ServerTrustPolicy</span><span class="o">.</span><span class="nf">certificatesInBundle</span><span class="p">(),</span>
+        <span class="nv">certificates</span><span class="p">:</span> <span class="kt">ServerTrustPolicy</span><span class="o">.</span><span class="nf">certificates</span><span class="p">(),</span>
         <span class="nv">validateCertificateChain</span><span class="p">:</span> <span class="kc">true</span><span class="p">,</span>
         <span class="nv">validateHost</span><span class="p">:</span> <span class="kc">true</span>
     <span class="p">),</span>
@@ -1828,7 +1908,8 @@
 </code></pre>
 
 <blockquote>
-<p>Make sure to remember to retain the <code>manager</code> in the above example, or no status changes will be reported.</p>
+<p>Make sure to remember to retain the <code>manager</code> in the above example, or no status changes will be reported.
+Also, do not include the scheme in the <code>host</code> string or reachability won&rsquo;t function correctly.</p>
 </blockquote>
 
 <p>There are some important things to remember when using network reachability to determine what to do next.</p>

@@ -178,7 +178,7 @@
         <section>
           <section class="section">
             
-            <p><a href="https://circleci.com/gh/Moya/Moya/tree/master"><img src="https://circleci.com/gh/Moya/Moya/tree/master.svg?style=svg" alt="CircleCI"></a>
+            <p><a href="https://circleci.com/gh/Moya/Moya/tree/master"><img src="https://img.shields.io/circleci/project/github/Moya/Moya/master.svg" alt="CircleCI"></a>
 <a href="https://codecov.io/github/Moya/Moya?branch=master"><img src="https://codecov.io/github/Moya/Moya/coverage.svg?branch=master" alt="codecov.io"></a>
 <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a>
 <a href="https://cocoapods.org/pods/Moya"><img src="https://img.shields.io/cocoapods/v/Moya.svg" alt="CocoaPods compatible"></a>
@@ -247,7 +247,7 @@ you should use for your Swift version.</p>
 </tr>
 <tr>
 <td>2.3</td>
-<td>7.0.2 - 7.0.3</td>
+<td>7.0.2 - 7.0.4</td>
 </tr>
 <tr>
 <td>2.2</td>
@@ -274,16 +274,11 @@ Here&rsquo;s an example <code>PackageDescription</code>:</p>
 <h3 id='cocoapods' class='heading'>CocoaPods</h3>
 
 <p>For Moya, use the following entry in your Podfile:</p>
-<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'Moya'</span><span class="p">,</span> <span class="s1">'8.0.0'</span>
-</code></pre>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'Moya'</span>
 
-<p>In any file you&rsquo;d like to use Moya in, don&rsquo;t forget to
-import the framework with <code>import Moya</code>.</p>
+<span class="c1"># or </span>
 
-<p>For RxSwift or ReactiveSwift extensions, this project will include
-them as dependencies. You can do this via CocoaPods subspecs, but you will also
-need to include the pre-release versions of RxSwift or ReactiveSwift manually.</p>
-<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'Moya/RxSwift'</span>
+<span class="n">pod</span> <span class="s1">'Moya/RxSwift'</span>
 
 <span class="c1"># or</span>
 
@@ -291,12 +286,13 @@ need to include the pre-release versions of RxSwift or ReactiveSwift manually.</
 </code></pre>
 
 <p>Then run <code>pod install</code>.</p>
+
+<p>In any file you&rsquo;d like to use Moya in, don&rsquo;t forget to
+import the framework with <code>import Moya</code>.</p>
 <h3 id='carthage' class='heading'>Carthage</h3>
 
 <p>Carthage users can point to this repository and use whichever
-generated framework they&rsquo;d like, <code>Moya</code>, <code>RxMoya</code>, or <code>ReactiveMoya</code>.
-When linking frameworks remember to always link <code>Moya</code> along with <code>RxMoya</code> and 
-<code>ReactiveMoya</code>, if you use any of these.</p>
+generated framework they&rsquo;d like, <code>Moya</code>, <code>RxMoya</code>, or <code>ReactiveMoya</code>.</p>
 <pre class="highlight plaintext"><code>github "Moya/Moya"
 </code></pre>
 <h3 id='manually' class='heading'>Manually</h3>
@@ -448,6 +444,7 @@ responses.</p>
 <li><a href="https://github.com/RyogaK/Moya-Unbox">Moya-Unbox</a> - Unbox bindings for Moya for easier JSON serialization</li>
 <li><a href="https://github.com/devxoul/MoyaSugar">MoyaSugar</a> – Syntactic sugar for Moya</li>
 <li><a href="https://github.com/evermeer/EVReflection/tree/master/Source/Alamofire/Moya">Moya-EVReflection</a> - EVReflection bindings for Moya for easier JSON serialization (including subspecs for <a href="https://github.com/evermeer/EVReflection/tree/master/Source/Alamofire/Moya/RxSwift">RxSwift</a> and <a href="https://github.com/evermeer/EVReflection/tree/master/Source/Alamofire/Moya/ReactiveCocoa">ReactiveCocoa</a>)</li>
+<li><a href="https://github.com/JARMourato/Moya-Marshal">Moya-Marshal</a> - Marshal bindings for Moya for easier JSON serialization</li>
 </ul>
 
 <p>We appreciate all the work being done by the community around Moya. If you would like to have your extension featured in the list above, simply create a pull request adding your extensions to the list.</p>

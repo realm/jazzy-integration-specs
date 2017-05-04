@@ -33,7 +33,7 @@
       <div class="content-wrapper">
         <p><a href="../index.html">RealmSwift Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F2%2E3%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F2%2E7%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -95,6 +95,9 @@
                 <a href="../Classes/Schema.html">Schema</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/SyncPermission.html">SyncPermission</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/SyncPermissionChange.html">SyncPermissionChange</a>
               </li>
               <li class="nav-group-task">
@@ -112,6 +115,9 @@
             <a href="../Enums.html">Enums</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Enums/ObjectChange.html">ObjectChange</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/RealmCollectionChange.html">RealmCollectionChange</a>
               </li>
             </ul>
@@ -124,6 +130,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/SyncManager.html">SyncManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/SyncPermissionResults.html">SyncPermissionResults</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/SyncSession.html">SyncSession</a>
@@ -180,6 +189,9 @@
             <a href="../Structs.html">Structs</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Structs/PropertyChange.html">PropertyChange</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/SortDescriptor.html">SortDescriptor</a>
               </li>
               <li class="nav-group-task">
@@ -218,6 +230,12 @@
                 <a href="../Typealiases.html#/s:10RealmSwift8Provider">Provider</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift15SyncAccessLevel">SyncAccessLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift13SyncAuthError">SyncAuthError</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:10RealmSwift9SyncError">SyncError</a>
               </li>
               <li class="nav-group-task">
@@ -228,6 +246,15 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:10RealmSwift11SyncManager">SyncManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift19SyncPermissionError">SyncPermissionError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift21SyncPermissionResults">SyncPermissionResults</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift19SyncPermissionValue">SyncPermissionValue</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:10RealmSwift11SyncSession">SyncSession</a>
@@ -270,8 +297,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Given credentials and a server URL, log in a user and asynchronously return a <code><a href="../Typealiases.html#/s:10RealmSwift8SyncUser">SyncUser</a></code> object which can be used to
-open Realms and Sessions.</p>
+                        <p>Given credentials and a server URL, log in a user and asynchronously return a <code><a href="../Typealiases.html#/s:10RealmSwift8SyncUser">SyncUser</a></code>
+object which can be used to open <code><a href="../Classes/Realm.html">Realm</a></code>s and retrieve <code><a href="../Typealiases.html#/s:10RealmSwift11SyncSession">SyncSession</a></code>s.</p>
 
                       </div>
                       <div class="declaration">
@@ -286,7 +313,7 @@ open Realms and Sessions.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Sync.swift#L215-L223">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.7.0/RealmSwift/Sync.swift#L253-L261">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -316,7 +343,7 @@ open Realms and Sessions.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Sync.swift#L226-L228">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.7.0/RealmSwift/Sync.swift#L264-L266">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -334,7 +361,8 @@ open Realms and Sessions.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The logged-in user. <code>nil</code> if none exists.</p>
+                        <p>The logged-in user. <code>nil</code> if none exists. Only use this property if your application expects
+no more than one logged-in user at any given time.</p>
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     Throws an Objective-C exception if more than one logged-in user exists.
@@ -351,7 +379,7 @@ open Realms and Sessions.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Sync.swift#L235-L237">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.7.0/RealmSwift/Sync.swift#L274-L276">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -384,7 +412,40 @@ This includes granting other users access to Realms.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Sync.swift#L245-L249">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.7.0/RealmSwift/Sync.swift#L284-L293">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FE10RealmSwiftCSo11RLMSyncUser15permissionRealmFzT_CS_5Realm"></a>
+                    <a name="//apple_ref/swift/Method/permissionRealm()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FE10RealmSwiftCSo11RLMSyncUser15permissionRealmFzT_CS_5Realm">permissionRealm()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns an instance of the Permission Realm owned by the user.</p>
+
+<p>This read-only Realm contains <code><a href="../Classes/SyncPermission.html">SyncPermission</a></code> objects reflecting the
+synchronized Realms and permission details this user has access to.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">permissionRealm</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Realm.html">Realm</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.7.0/RealmSwift/Sync.swift#L302-L306">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

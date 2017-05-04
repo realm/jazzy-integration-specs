@@ -33,7 +33,7 @@
       <div class="content-wrapper">
         <p><a href="../../index.html">RealmSwift Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="../../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F2%2E3%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F2%2E7%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -95,6 +95,9 @@
                 <a href="../../Classes/Schema.html">Schema</a>
               </li>
               <li class="nav-group-task">
+                <a href="../../Classes/SyncPermission.html">SyncPermission</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../../Classes/SyncPermissionChange.html">SyncPermissionChange</a>
               </li>
               <li class="nav-group-task">
@@ -112,6 +115,9 @@
             <a href="../../Enums.html">Enums</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../../Enums/ObjectChange.html">ObjectChange</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../../Enums/RealmCollectionChange.html">RealmCollectionChange</a>
               </li>
             </ul>
@@ -124,6 +130,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../../Extensions/SyncManager.html">SyncManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Extensions/SyncPermissionResults.html">SyncPermissionResults</a>
               </li>
               <li class="nav-group-task">
                 <a href="../../Extensions/SyncSession.html">SyncSession</a>
@@ -180,6 +189,9 @@
             <a href="../../Structs.html">Structs</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../../Structs/PropertyChange.html">PropertyChange</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../../Structs/SortDescriptor.html">SortDescriptor</a>
               </li>
               <li class="nav-group-task">
@@ -218,6 +230,12 @@
                 <a href="../../Typealiases.html#/s:10RealmSwift8Provider">Provider</a>
               </li>
               <li class="nav-group-task">
+                <a href="../../Typealiases.html#/s:10RealmSwift15SyncAccessLevel">SyncAccessLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Typealiases.html#/s:10RealmSwift13SyncAuthError">SyncAuthError</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../../Typealiases.html#/s:10RealmSwift9SyncError">SyncError</a>
               </li>
               <li class="nav-group-task">
@@ -228,6 +246,15 @@
               </li>
               <li class="nav-group-task">
                 <a href="../../Typealiases.html#/s:10RealmSwift11SyncManager">SyncManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Typealiases.html#/s:10RealmSwift19SyncPermissionError">SyncPermissionError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Typealiases.html#/s:10RealmSwift21SyncPermissionResults">SyncPermissionResults</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../../Typealiases.html#/s:10RealmSwift19SyncPermissionValue">SyncPermissionValue</a>
               </li>
               <li class="nav-group-task">
                 <a href="../../Typealiases.html#/s:10RealmSwift11SyncSession">SyncSession</a>
@@ -257,7 +284,7 @@ The values can be used to catch a variety of <em>recoverable</em> errors, especi
 happening when initializing a Realm instance.</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">realm</span><span class="p">:</span> <span class="kt">Realm</span><span class="p">?</span>
 <span class="k">do</span> <span class="p">{</span>
-    <span class="n">realm</span> <span class="o">=</span> <span class="kt">Realm</span><span class="p">()</span>
+    <span class="n">realm</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">Realm</span><span class="p">()</span>
 <span class="p">}</span> <span class="k">catch</span> <span class="kt">Realm</span><span class="o">.</span><span class="kt">Error</span><span class="o">.</span><span class="n">incompatibleLockFile</span> <span class="p">{</span>
     <span class="nf">print</span><span class="p">(</span><span class="s">"Realm Browser app may be attached to Realm on device?"</span><span class="p">)</span>
 <span class="p">}</span>
@@ -270,39 +297,9 @@ happening when initializing a Realm instance.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:P10Foundation21_BridgedStoredNSError4Code"></a>
-                    <a name="//apple_ref/swift/Enum/Code" class="dashAnchor"></a>
-                    <a class="token" href="#/s:P10Foundation21_BridgedStoredNSError4Code">Code</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        
-                        <a href="../../Classes/Realm/Error/Code.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Code</span><span class="p">:</span> <span class="kt">Int</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Error.swift#L41-L68">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:ZvVC10RealmSwift5Realm5Error4failOS1_4Code"></a>
+                    <a name="/s:ZvVC10RealmSwift5Realm5Error4failOVSC8RLMError4Code"></a>
                     <a name="//apple_ref/swift/Variable/fail" class="dashAnchor"></a>
-                    <a class="token" href="#/s:ZvVC10RealmSwift5Realm5Error4failOS1_4Code">fail</a>
+                    <a class="token" href="#/s:ZvVC10RealmSwift5Realm5Error4failOVSC8RLMError4Code">fail</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -317,12 +314,12 @@ happening when initializing a Realm instance.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">fail</span><span class="p">:</span> <span class="kt"><a href="../../Classes/Realm/Error/Code.html">Code</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">fail</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">fail</span><span class="p">:</span> <span class="kt">Code</span> <span class="o">=</span> <span class="o">.</span><span class="n">fail</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Error.swift#L71">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.7.0/RealmSwift/Error.swift#L41">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -330,9 +327,9 @@ happening when initializing a Realm instance.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:ZvVC10RealmSwift5Realm5Error10fileAccessOS1_4Code"></a>
+                    <a name="/s:ZvVC10RealmSwift5Realm5Error10fileAccessOVSC8RLMError4Code"></a>
                     <a name="//apple_ref/swift/Variable/fileAccess" class="dashAnchor"></a>
-                    <a class="token" href="#/s:ZvVC10RealmSwift5Realm5Error10fileAccessOS1_4Code">fileAccess</a>
+                    <a class="token" href="#/s:ZvVC10RealmSwift5Realm5Error10fileAccessOVSC8RLMError4Code">fileAccess</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -347,12 +344,12 @@ happening when initializing a Realm instance.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">fileAccess</span><span class="p">:</span> <span class="kt"><a href="../../Classes/Realm/Error/Code.html">Code</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">fileAccess</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">fileAccess</span><span class="p">:</span> <span class="kt">Code</span> <span class="o">=</span> <span class="o">.</span><span class="n">fileAccess</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Error.swift#L74">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.7.0/RealmSwift/Error.swift#L44">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -360,9 +357,9 @@ happening when initializing a Realm instance.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:ZvVC10RealmSwift5Realm5Error20filePermissionDeniedOS1_4Code"></a>
+                    <a name="/s:ZvVC10RealmSwift5Realm5Error20filePermissionDeniedOVSC8RLMError4Code"></a>
                     <a name="//apple_ref/swift/Variable/filePermissionDenied" class="dashAnchor"></a>
-                    <a class="token" href="#/s:ZvVC10RealmSwift5Realm5Error20filePermissionDeniedOS1_4Code">filePermissionDenied</a>
+                    <a class="token" href="#/s:ZvVC10RealmSwift5Realm5Error20filePermissionDeniedOVSC8RLMError4Code">filePermissionDenied</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -378,12 +375,12 @@ the specified file in the specified access mode when the realm is opened.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">filePermissionDenied</span><span class="p">:</span> <span class="kt"><a href="../../Classes/Realm/Error/Code.html">Code</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">filePermissionDenied</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">filePermissionDenied</span><span class="p">:</span> <span class="kt">Code</span> <span class="o">=</span> <span class="o">.</span><span class="n">filePermissionDenied</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Error.swift#L78">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.7.0/RealmSwift/Error.swift#L48">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -391,9 +388,9 @@ the specified file in the specified access mode when the realm is opened.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:ZvVC10RealmSwift5Realm5Error10fileExistsOS1_4Code"></a>
+                    <a name="/s:ZvVC10RealmSwift5Realm5Error10fileExistsOVSC8RLMError4Code"></a>
                     <a name="//apple_ref/swift/Variable/fileExists" class="dashAnchor"></a>
-                    <a class="token" href="#/s:ZvVC10RealmSwift5Realm5Error10fileExistsOS1_4Code">fileExists</a>
+                    <a class="token" href="#/s:ZvVC10RealmSwift5Realm5Error10fileExistsOVSC8RLMError4Code">fileExists</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -408,12 +405,12 @@ the specified file in the specified access mode when the realm is opened.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">fileExists</span><span class="p">:</span> <span class="kt"><a href="../../Classes/Realm/Error/Code.html">Code</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">fileExists</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">fileExists</span><span class="p">:</span> <span class="kt">Code</span> <span class="o">=</span> <span class="o">.</span><span class="n">fileExists</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Error.swift#L81">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.7.0/RealmSwift/Error.swift#L51">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -421,9 +418,9 @@ the specified file in the specified access mode when the realm is opened.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:ZvVC10RealmSwift5Realm5Error12fileNotFoundOS1_4Code"></a>
+                    <a name="/s:ZvVC10RealmSwift5Realm5Error12fileNotFoundOVSC8RLMError4Code"></a>
                     <a name="//apple_ref/swift/Variable/fileNotFound" class="dashAnchor"></a>
-                    <a class="token" href="#/s:ZvVC10RealmSwift5Realm5Error12fileNotFoundOS1_4Code">fileNotFound</a>
+                    <a class="token" href="#/s:ZvVC10RealmSwift5Realm5Error12fileNotFoundOVSC8RLMError4Code">fileNotFound</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -440,12 +437,12 @@ when a copy should be written.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">fileNotFound</span><span class="p">:</span> <span class="kt"><a href="../../Classes/Realm/Error/Code.html">Code</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">fileNotFound</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">fileNotFound</span><span class="p">:</span> <span class="kt">Code</span> <span class="o">=</span> <span class="o">.</span><span class="n">fileNotFound</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Error.swift#L86">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.7.0/RealmSwift/Error.swift#L56">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -453,9 +450,9 @@ when a copy should be written.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:ZvVC10RealmSwift5Realm5Error20incompatibleLockFileOS1_4Code"></a>
+                    <a name="/s:ZvVC10RealmSwift5Realm5Error20incompatibleLockFileOVSC8RLMError4Code"></a>
                     <a name="//apple_ref/swift/Variable/incompatibleLockFile" class="dashAnchor"></a>
-                    <a class="token" href="#/s:ZvVC10RealmSwift5Realm5Error20incompatibleLockFileOS1_4Code">incompatibleLockFile</a>
+                    <a class="token" href="#/s:ZvVC10RealmSwift5Realm5Error20incompatibleLockFileOVSC8RLMError4Code">incompatibleLockFile</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -471,12 +468,12 @@ cannot share with the current process due to an architecture mismatch.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">incompatibleLockFile</span><span class="p">:</span> <span class="kt"><a href="../../Classes/Realm/Error/Code.html">Code</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">incompatibleLockFile</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">incompatibleLockFile</span><span class="p">:</span> <span class="kt">Code</span> <span class="o">=</span> <span class="o">.</span><span class="n">incompatibleLockFile</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Error.swift#L90">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.7.0/RealmSwift/Error.swift#L60">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -484,9 +481,9 @@ cannot share with the current process due to an architecture mismatch.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:ZvVC10RealmSwift5Realm5Error25fileFormatUpgradeRequiredOS1_4Code"></a>
+                    <a name="/s:ZvVC10RealmSwift5Realm5Error25fileFormatUpgradeRequiredOVSC8RLMError4Code"></a>
                     <a name="//apple_ref/swift/Variable/fileFormatUpgradeRequired" class="dashAnchor"></a>
-                    <a class="token" href="#/s:ZvVC10RealmSwift5Realm5Error25fileFormatUpgradeRequiredOS1_4Code">fileFormatUpgradeRequired</a>
+                    <a class="token" href="#/s:ZvVC10RealmSwift5Realm5Error25fileFormatUpgradeRequiredOVSC8RLMError4Code">fileFormatUpgradeRequired</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -502,12 +499,12 @@ but upgrades were explicitly disabled.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">fileFormatUpgradeRequired</span><span class="p">:</span> <span class="kt"><a href="../../Classes/Realm/Error/Code.html">Code</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">fileFormatUpgradeRequired</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">fileFormatUpgradeRequired</span><span class="p">:</span> <span class="kt">Code</span> <span class="o">=</span> <span class="o">.</span><span class="n">fileFormatUpgradeRequired</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Error.swift#L94">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.7.0/RealmSwift/Error.swift#L64">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -515,9 +512,9 @@ but upgrades were explicitly disabled.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:ZvVC10RealmSwift5Realm5Error21addressSpaceExhaustedOS1_4Code"></a>
+                    <a name="/s:ZvVC10RealmSwift5Realm5Error21addressSpaceExhaustedOVSC8RLMError4Code"></a>
                     <a name="//apple_ref/swift/Variable/addressSpaceExhausted" class="dashAnchor"></a>
-                    <a class="token" href="#/s:ZvVC10RealmSwift5Realm5Error21addressSpaceExhaustedOS1_4Code">addressSpaceExhausted</a>
+                    <a class="token" href="#/s:ZvVC10RealmSwift5Realm5Error21addressSpaceExhaustedOVSC8RLMError4Code">addressSpaceExhausted</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -532,12 +529,12 @@ but upgrades were explicitly disabled.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">addressSpaceExhausted</span><span class="p">:</span> <span class="kt"><a href="../../Classes/Realm/Error/Code.html">Code</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">addressSpaceExhausted</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">addressSpaceExhausted</span><span class="p">:</span> <span class="kt">Code</span> <span class="o">=</span> <span class="o">.</span><span class="n">addressSpaceExhausted</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Error.swift#L97">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.7.0/RealmSwift/Error.swift#L67">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -545,9 +542,9 @@ but upgrades were explicitly disabled.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:ZvVC10RealmSwift5Realm5Error14schemaMismatchOS1_4Code"></a>
+                    <a name="/s:ZvVC10RealmSwift5Realm5Error14schemaMismatchOVSC8RLMError4Code"></a>
                     <a name="//apple_ref/swift/Variable/schemaMismatch" class="dashAnchor"></a>
-                    <a class="token" href="#/s:ZvVC10RealmSwift5Realm5Error14schemaMismatchOS1_4Code">schemaMismatch</a>
+                    <a class="token" href="#/s:ZvVC10RealmSwift5Realm5Error14schemaMismatchOVSC8RLMError4Code">schemaMismatch</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -562,12 +559,12 @@ but upgrades were explicitly disabled.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">schemaMismatch</span><span class="p">:</span> <span class="kt"><a href="../../Classes/Realm/Error/Code.html">Code</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">schemaMismatch</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">schemaMismatch</span><span class="p">:</span> <span class="kt">Code</span> <span class="o">=</span> <span class="o">.</span><span class="n">schemaMismatch</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Error.swift#L100">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.7.0/RealmSwift/Error.swift#L70">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

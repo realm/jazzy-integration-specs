@@ -32,7 +32,7 @@
       <div class="content-wrapper">
         <p><a href="index.html">RealmSwift Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F2%2E3%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F2%2E7%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -94,6 +94,9 @@
                 <a href="Classes/Schema.html">Schema</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/SyncPermission.html">SyncPermission</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/SyncPermissionChange.html">SyncPermissionChange</a>
               </li>
               <li class="nav-group-task">
@@ -111,6 +114,9 @@
             <a href="Enums.html">Enums</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="Enums/ObjectChange.html">ObjectChange</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Enums/RealmCollectionChange.html">RealmCollectionChange</a>
               </li>
             </ul>
@@ -123,6 +129,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Extensions/SyncManager.html">SyncManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/SyncPermissionResults.html">SyncPermissionResults</a>
               </li>
               <li class="nav-group-task">
                 <a href="Extensions/SyncSession.html">SyncSession</a>
@@ -179,6 +188,9 @@
             <a href="Structs.html">Structs</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="Structs/PropertyChange.html">PropertyChange</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Structs/SortDescriptor.html">SortDescriptor</a>
               </li>
               <li class="nav-group-task">
@@ -217,6 +229,12 @@
                 <a href="Typealiases.html#/s:10RealmSwift8Provider">Provider</a>
               </li>
               <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10RealmSwift15SyncAccessLevel">SyncAccessLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10RealmSwift13SyncAuthError">SyncAuthError</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Typealiases.html#/s:10RealmSwift9SyncError">SyncError</a>
               </li>
               <li class="nav-group-task">
@@ -227,6 +245,15 @@
               </li>
               <li class="nav-group-task">
                 <a href="Typealiases.html#/s:10RealmSwift11SyncManager">SyncManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10RealmSwift19SyncPermissionError">SyncPermissionError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10RealmSwift21SyncPermissionResults">SyncPermissionResults</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10RealmSwift19SyncPermissionValue">SyncPermissionValue</a>
               </li>
               <li class="nav-group-task">
                 <a href="Typealiases.html#/s:10RealmSwift11SyncSession">SyncSession</a>
@@ -254,6 +281,42 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:O10RealmSwift12ObjectChange"></a>
+                    <a name="//apple_ref/swift/Enum/ObjectChange" class="dashAnchor"></a>
+                    <a class="token" href="#/s:O10RealmSwift12ObjectChange">ObjectChange</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Information about the changes made to an object which is passed to <code><a href="Classes/Object.html">Object</a></code>&lsquo;s
+notification blocks.</p>
+
+                        <a href="Enums/ObjectChange.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ObjectChange</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.7.0/RealmSwift/Object.swift#L338-L353">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:O10RealmSwift21RealmCollectionChange"></a>
                     <a name="//apple_ref/swift/Enum/RealmCollectionChange" class="dashAnchor"></a>
                     <a class="token" href="#/s:O10RealmSwift21RealmCollectionChange">RealmCollectionChange</a>
@@ -272,7 +335,7 @@ indices in the collection for each type of change, and an array of index paths
 in a requested section suitable for passing directly to <code>UITableView</code>&lsquo;s batch
 update methods.</p>
 
-<p>The arrays of indices in the <code>.Update</code> case follow <code>UITableView</code>&rsquo;s batching
+<p>The arrays of indices in the <code>.update</code> case follow <code>UITableView</code>&rsquo;s batching
 conventions, and can be passed as-is to a table view&rsquo;s batch update functions after being converted to index paths.
 For example, for a simple one-section table view, you can do the following:</p>
 <pre class="highlight swift"><code><span class="k">self</span><span class="o">.</span><span class="n">notificationToken</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">addNotificationBlock</span> <span class="p">{</span> <span class="n">changes</span> <span class="k">in</span>
@@ -311,7 +374,7 @@ For example, for a simple one-section table view, you can do the following:</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/RealmCollection.swift#L84-L122">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.7.0/RealmSwift/RealmCollection.swift#L82-L124">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

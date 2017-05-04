@@ -678,6 +678,132 @@ response, the server data, the response serialization result and the timeline.</
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:FV9Alamofire12DataResponse3mapurFFxqd__GS0_qd___"></a>
+                    <a name="//apple_ref/swift/Method/map(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FV9Alamofire12DataResponse3mapurFFxqd__GS0_qd___">map(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Evaluates the specified closure when the result of this <code>DataResponse</code> is a success, passing the unwrapped
+result value as a parameter.</p>
+
+<p>Use the <code>map</code> method with a closure that does not throw. For example:</p>
+<pre class="highlight plaintext"><code>let possibleData: DataResponse&lt;Data&gt; = ...
+let possibleInt = possibleData.map { $0.count }
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">map</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">transform</span><span class="p">:</span> <span class="p">(</span><span class="kt">Value</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">DataResponse</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>transform</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A closure that takes the success value of the instance&rsquo;s result.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A <code>DataResponse</code> whose result wraps the value returned by the given closure. If this instance&rsquo;s
+       result is a failure, returns a response wrapping the same failure.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/Response.swift#L161-L173">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FV9Alamofire12DataResponse7flatMapurFFzxqd__GS0_qd___"></a>
+                    <a name="//apple_ref/swift/Method/flatMap(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FV9Alamofire12DataResponse7flatMapurFFzxqd__GS0_qd___">flatMap(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Evaluates the given closure when the result of this <code>DataResponse</code> is a success, passing the unwrapped result
+value as a parameter.</p>
+
+<p>Use the <code>flatMap</code> method with a closure that may throw an error. For example:</p>
+<pre class="highlight plaintext"><code>let possibleData: DataResponse&lt;Data&gt; = ...
+let possibleObject = possibleData.flatMap {
+    try JSONSerialization.jsonObject(with: $0)
+}
+</code></pre>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">flatMap</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">transform</span><span class="p">:</span> <span class="p">(</span><span class="kt">Value</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">T</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">DataResponse</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>transform</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A closure that takes the success value of the instance&rsquo;s result.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A success or failure <code>DataResponse</code> depending on the result of the given closure. If this instance&rsquo;s
+       result is a failure, returns the same failure.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/Response.swift#L189-L201">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:vV9Alamofire12DataResponse7metricsGSqCSo21URLSessionTaskMetrics_"></a>
                     <a name="//apple_ref/swift/Property/metrics" class="dashAnchor"></a>
                     <a class="token" href="#/s:vV9Alamofire12DataResponse7metricsGSqCSo21URLSessionTaskMetrics_">metrics</a>
@@ -700,7 +826,7 @@ response, the server data, the response serialization result and the timeline.</
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/Response.swift#L327">Show on GitHub</a>
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/Response.swift#L447">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

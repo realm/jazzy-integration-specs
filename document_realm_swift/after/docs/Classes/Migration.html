@@ -33,7 +33,7 @@
       <div class="content-wrapper">
         <p><a href="../index.html">RealmSwift Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F2%2E3%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F2%2E7%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -95,6 +95,9 @@
                 <a href="../Classes/Schema.html">Schema</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/SyncPermission.html">SyncPermission</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/SyncPermissionChange.html">SyncPermissionChange</a>
               </li>
               <li class="nav-group-task">
@@ -112,6 +115,9 @@
             <a href="../Enums.html">Enums</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Enums/ObjectChange.html">ObjectChange</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/RealmCollectionChange.html">RealmCollectionChange</a>
               </li>
             </ul>
@@ -124,6 +130,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/SyncManager.html">SyncManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/SyncPermissionResults.html">SyncPermissionResults</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/SyncSession.html">SyncSession</a>
@@ -180,6 +189,9 @@
             <a href="../Structs.html">Structs</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Structs/PropertyChange.html">PropertyChange</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/SortDescriptor.html">SortDescriptor</a>
               </li>
               <li class="nav-group-task">
@@ -218,6 +230,12 @@
                 <a href="../Typealiases.html#/s:10RealmSwift8Provider">Provider</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift15SyncAccessLevel">SyncAccessLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift13SyncAuthError">SyncAuthError</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:10RealmSwift9SyncError">SyncError</a>
               </li>
               <li class="nav-group-task">
@@ -228,6 +246,15 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:10RealmSwift11SyncManager">SyncManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift19SyncPermissionError">SyncPermissionError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift21SyncPermissionResults">SyncPermissionResults</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift19SyncPermissionValue">SyncPermissionValue</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:10RealmSwift11SyncSession">SyncSession</a>
@@ -294,7 +321,7 @@ modifying the Realm during the migration.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Migration.swift#L90">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.7.0/RealmSwift/Migration.swift#L88">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -324,7 +351,7 @@ modifying the Realm during the migration.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Migration.swift#L93">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.7.0/RealmSwift/Migration.swift#L91">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -397,7 +424,7 @@ Properties on an object can be accessed using subscripting.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Migration.swift#L106-L111">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.7.0/RealmSwift/Migration.swift#L104-L109">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -470,7 +497,7 @@ the properties defined in the model.</p>
                         <p>The newly created object.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Migration.swift#L130-L132">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.7.0/RealmSwift/Migration.swift#L128-L130">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -521,7 +548,7 @@ the properties defined in the model.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Migration.swift#L141-L143">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.7.0/RealmSwift/Migration.swift#L139-L141">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -577,7 +604,7 @@ remaining metadata for the class will be removed from the Realm file.</p>
                         <p>A Boolean value indicating whether there was any data to delete.</p>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Migration.swift#L156-L158">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.7.0/RealmSwift/Migration.swift#L154-L156">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -653,7 +680,7 @@ remaining metadata for the class will be removed from the Realm file.</p>
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Migration.swift#L170-L172">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.7.0/RealmSwift/Migration.swift#L168-L170">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

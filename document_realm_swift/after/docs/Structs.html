@@ -32,7 +32,7 @@
       <div class="content-wrapper">
         <p><a href="index.html">RealmSwift Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F2%2E3%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F2%2E7%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -94,6 +94,9 @@
                 <a href="Classes/Schema.html">Schema</a>
               </li>
               <li class="nav-group-task">
+                <a href="Classes/SyncPermission.html">SyncPermission</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Classes/SyncPermissionChange.html">SyncPermissionChange</a>
               </li>
               <li class="nav-group-task">
@@ -111,6 +114,9 @@
             <a href="Enums.html">Enums</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="Enums/ObjectChange.html">ObjectChange</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Enums/RealmCollectionChange.html">RealmCollectionChange</a>
               </li>
             </ul>
@@ -123,6 +129,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Extensions/SyncManager.html">SyncManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/SyncPermissionResults.html">SyncPermissionResults</a>
               </li>
               <li class="nav-group-task">
                 <a href="Extensions/SyncSession.html">SyncSession</a>
@@ -179,6 +188,9 @@
             <a href="Structs.html">Structs</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="Structs/PropertyChange.html">PropertyChange</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Structs/SortDescriptor.html">SortDescriptor</a>
               </li>
               <li class="nav-group-task">
@@ -217,6 +229,12 @@
                 <a href="Typealiases.html#/s:10RealmSwift8Provider">Provider</a>
               </li>
               <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10RealmSwift15SyncAccessLevel">SyncAccessLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10RealmSwift13SyncAuthError">SyncAuthError</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Typealiases.html#/s:10RealmSwift9SyncError">SyncError</a>
               </li>
               <li class="nav-group-task">
@@ -227,6 +245,15 @@
               </li>
               <li class="nav-group-task">
                 <a href="Typealiases.html#/s:10RealmSwift11SyncManager">SyncManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10RealmSwift19SyncPermissionError">SyncPermissionError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10RealmSwift21SyncPermissionResults">SyncPermissionResults</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:10RealmSwift19SyncPermissionValue">SyncPermissionValue</a>
               </li>
               <li class="nav-group-task">
                 <a href="Typealiases.html#/s:10RealmSwift11SyncSession">SyncSession</a>
@@ -249,6 +276,41 @@
 
           </section>
           <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:V10RealmSwift14PropertyChange"></a>
+                    <a name="//apple_ref/swift/Struct/PropertyChange" class="dashAnchor"></a>
+                    <a class="token" href="#/s:V10RealmSwift14PropertyChange">PropertyChange</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Information about a specific property which changed in an <code><a href="Classes/Object.html">Object</a></code> change notification.</p>
+
+                        <a href="Structs/PropertyChange.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">PropertyChange</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.7.0/RealmSwift/Object.swift#L308-L332">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
             <div class="task-group">
               <ul>
                 <li class="item">
@@ -278,7 +340,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/SortDescriptor.swift#L28-L77">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.7.0/RealmSwift/SortDescriptor.swift#L26-L75">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -300,7 +362,8 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A <code>SyncConfiguration</code> represents configuration parameters for Realms intended to sync with a Realm Object Server.</p>
+                        <p>A <code>SyncConfiguration</code> represents configuration parameters for Realms intended to sync with
+a Realm Object Server.</p>
 
                         <a href="Structs/SyncConfiguration.html" class="slightly-smaller">See more</a>
                       </div>
@@ -313,7 +376,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Sync.swift#L115-L154">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.7.0/RealmSwift/Sync.swift#L131-L188">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -344,7 +407,7 @@
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/Sync.swift#L157-L204">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.7.0/RealmSwift/Sync.swift#L191-L240">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

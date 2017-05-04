@@ -33,7 +33,7 @@
       <div class="content-wrapper">
         <p><a href="../index.html">RealmSwift Docs</a> (100% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F2%2E3%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F2%2E7%2E0%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -95,6 +95,9 @@
                 <a href="../Classes/Schema.html">Schema</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Classes/SyncPermission.html">SyncPermission</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Classes/SyncPermissionChange.html">SyncPermissionChange</a>
               </li>
               <li class="nav-group-task">
@@ -112,6 +115,9 @@
             <a href="../Enums.html">Enums</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Enums/ObjectChange.html">ObjectChange</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Enums/RealmCollectionChange.html">RealmCollectionChange</a>
               </li>
             </ul>
@@ -124,6 +130,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/SyncManager.html">SyncManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/SyncPermissionResults.html">SyncPermissionResults</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/SyncSession.html">SyncSession</a>
@@ -180,6 +189,9 @@
             <a href="../Structs.html">Structs</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Structs/PropertyChange.html">PropertyChange</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Structs/SortDescriptor.html">SortDescriptor</a>
               </li>
               <li class="nav-group-task">
@@ -218,6 +230,12 @@
                 <a href="../Typealiases.html#/s:10RealmSwift8Provider">Provider</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift15SyncAccessLevel">SyncAccessLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift13SyncAuthError">SyncAuthError</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:10RealmSwift9SyncError">SyncError</a>
               </li>
               <li class="nav-group-task">
@@ -228,6 +246,15 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:10RealmSwift11SyncManager">SyncManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift19SyncPermissionError">SyncPermissionError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift21SyncPermissionResults">SyncPermissionResults</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift19SyncPermissionValue">SyncPermissionValue</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:10RealmSwift11SyncSession">SyncSession</a>
@@ -260,7 +287,7 @@ indices in the collection for each type of change, and an array of index paths
 in a requested section suitable for passing directly to <code>UITableView</code>&lsquo;s batch
 update methods.</p>
 
-<p>The arrays of indices in the <code>.Update</code> case follow <code>UITableView</code>&rsquo;s batching
+<p>The arrays of indices in the <code>.update</code> case follow <code>UITableView</code>&rsquo;s batching
 conventions, and can be passed as-is to a table view&rsquo;s batch update functions after being converted to index paths.
 For example, for a simple one-section table view, you can do the following:</p>
 <pre class="highlight swift"><code><span class="k">self</span><span class="o">.</span><span class="n">notificationToken</span> <span class="o">=</span> <span class="n">results</span><span class="o">.</span><span class="n">addNotificationBlock</span> <span class="p">{</span> <span class="n">changes</span> <span class="k">in</span>
@@ -305,8 +332,9 @@ For example, for a simple one-section table view, you can do the following:</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p><code>.initial</code> indicates that the initial run of the query has completed (if applicable), and the collection can now be
-used without performing any blocking work.</p>
+                        <p><code>.initial</code> indicates that the initial run of the query has completed (if
+applicable), and the collection can now be used without performing any
+blocking work.</p>
 
                       </div>
                       <div class="declaration">
@@ -318,7 +346,7 @@ used without performing any blocking work.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/RealmCollection.swift#L89">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.7.0/RealmSwift/RealmCollection.swift#L88">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -340,8 +368,9 @@ used without performing any blocking work.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p><code>.update</code> indicates that a write transaction has been committed which either changed which objects
-are in the collection, and/or modified one or more of the objects in the collection.</p>
+                        <p><code>.update</code> indicates that a write transaction has been committed which
+either changed which objects are in the collection, and/or modified one
+or more of the objects in the collection.</p>
 
 <p>All three of the change arrays are always sorted in ascending order.</p>
 
@@ -398,7 +427,7 @@ are in the collection, and/or modified one or more of the objects in the collect
                         </table>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/RealmCollection.swift#L101">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.7.0/RealmSwift/RealmCollection.swift#L101">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -420,9 +449,11 @@ are in the collection, and/or modified one or more of the objects in the collect
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>If an error occurs, notification blocks are called one time with a <code>.error</code> result and an <code>NSError</code> containing
-details about the error. This can only currently happen if the Realm is opened on a background worker thread to
-calculate the change set.</p>
+                        <p>If an error occurs, notification blocks are called one time with a <code>.error</code>
+result and an <code>NSError</code> containing details about the error. This can only
+currently happen if opening the Realm on a background thread to calcuate
+the change set fails. The callback will never be called again after it is
+invoked with a .error value.</p>
 
                       </div>
                       <div class="declaration">
@@ -434,7 +465,7 @@ calculate the change set.</p>
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v2.3.0/RealmSwift/RealmCollection.swift#L108">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v2.7.0/RealmSwift/RealmCollection.swift#L110">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

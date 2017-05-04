@@ -366,22 +366,22 @@
 <h3 id='cocoapods' class='heading'>CocoaPods</h3>
 
 <p>In your <code>Podfile</code>:</p>
-<pre class="highlight plaintext"><code>pod 'Siesta', '&gt;=1.0.1'
+<pre class="highlight plaintext"><code>pod 'Siesta', '~&gt; 1.0'
 </code></pre>
 
 <p>If you want to use the UI helpers:</p>
-<pre class="highlight plaintext"><code>pod 'Siesta/UI', '&gt;=1.0.1'
+<pre class="highlight plaintext"><code>pod 'Siesta/UI', '~&gt; 1.0'
 </code></pre>
 
 <p>If you want to use Alamofire as your networking provider instead of Foundation’s <code>URLSession</code>:</p>
-<pre class="highlight plaintext"><code>pod 'Siesta/Alamofire', '&gt;=1.0.1'
+<pre class="highlight plaintext"><code>pod 'Siesta/Alamofire', '~&gt; 1.0'
 </code></pre>
 
 <p>(You’ll also need to pass an <code>Alamofire.Manager</code> when you configure your <code>Siesta.Service</code>. See the <a href="https://bustoutsolutions.github.io/siesta/api/Classes/Service.html#//apple_ref/swift/Method/init(baseURL:useDefaultTransformers:networking:)">API docs</a> for more info.)</p>
 <h3 id='carthage' class='heading'>Carthage</h3>
 
 <p>In your <code>Cartfile</code>:</p>
-<pre class="highlight plaintext"><code>github "bustoutsolutions/siesta" "1.0.1"
+<pre class="highlight plaintext"><code>github "bustoutsolutions/siesta" ~&gt; 1.0
 </code></pre>
 
 <p>Follow the <a href="https://github.com/Carthage/Carthage#adding-frameworks-to-an-application">Carthage instructions</a> to add <code>Siesta.framework</code> to your project. If you want to use the UI helpers, you will also need to add <code>SiestaUI.framework</code> to your project as well.</p>
