@@ -194,9 +194,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:vC4Moya12MoyaProvider15endpointClosureFxGCS_8Endpointx_"></a>
-                    <a name="//apple_ref/swift/Property/endpointClosure" class="dashAnchor"></a>
-                    <a class="token" href="#/s:vC4Moya12MoyaProvider15endpointClosureFxGCS_8Endpointx_">endpointClosure</a>
+                    <a name="/s:C4Moya12MoyaProvider15EndpointClosure"></a>
+                    <a name="//apple_ref/swift/Alias/EndpointClosure" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C4Moya12MoyaProvider15EndpointClosure">EndpointClosure</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -204,68 +204,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Closure that defines the endpoints for the provider.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">MoyaProvider</span><span class="o">&lt;</span><span class="kt">Target</span><span class="p">:</span> <span class="kt"><a href="../Protocols/TargetType.html">TargetType</a></span><span class="o">&gt;</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:C4Moya12MoyaProvider11StubClosure"></a>
-                    <a name="//apple_ref/swift/Alias/StubClosure" class="dashAnchor"></a>
-                    <a class="token" href="#/s:C4Moya12MoyaProvider11StubClosure">StubClosure</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Closure that decides if/how a request should be stubbed.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">StubClosure</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Target</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Moya</span><span class="o">.</span><span class="kt"><a href="../Enums/StubBehavior.html">StubBehavior</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:C4Moya12MoyaProvider14RequestClosure"></a>
-                    <a name="//apple_ref/swift/Alias/RequestClosure" class="dashAnchor"></a>
-                    <a class="token" href="#/s:C4Moya12MoyaProvider14RequestClosure">RequestClosure</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Closure that resolves an <code><a href="../Classes/Endpoint.html">Endpoint</a></code> into a <code>RequestResult</code>.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">RequestClosure</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="../Classes/Endpoint.html">Endpoint</a></span><span class="o">&lt;</span><span class="kt">Target</span><span class="o">&gt;</span><span class="p">,</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/MoyaProvider.html#/s:C4Moya12MoyaProvider20RequestResultClosure">RequestResultClosure</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">EndpointClosure</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Target</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Endpoint.html">Endpoint</a></span><span class="o">&lt;</span><span class="kt">Target</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -302,9 +248,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:C4Moya12MoyaProvider15EndpointClosure"></a>
-                    <a name="//apple_ref/swift/Alias/EndpointClosure" class="dashAnchor"></a>
-                    <a class="token" href="#/s:C4Moya12MoyaProvider15EndpointClosure">EndpointClosure</a>
+                    <a name="/s:C4Moya12MoyaProvider14RequestClosure"></a>
+                    <a name="//apple_ref/swift/Alias/RequestClosure" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C4Moya12MoyaProvider14RequestClosure">RequestClosure</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -312,14 +258,68 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Closure that defines the endpoints for the provider.</p>
+                        <p>Closure that resolves an <code><a href="../Classes/Endpoint.html">Endpoint</a></code> into a <code>RequestResult</code>.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">EndpointClosure</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Target</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Endpoint.html">Endpoint</a></span><span class="o">&lt;</span><span class="kt">Target</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">RequestClosure</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="../Classes/Endpoint.html">Endpoint</a></span><span class="o">&lt;</span><span class="kt">Target</span><span class="o">&gt;</span><span class="p">,</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/MoyaProvider.html#/s:C4Moya12MoyaProvider20RequestResultClosure">RequestResultClosure</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:C4Moya12MoyaProvider11StubClosure"></a>
+                    <a name="//apple_ref/swift/Alias/StubClosure" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C4Moya12MoyaProvider11StubClosure">StubClosure</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Closure that decides if/how a request should be stubbed.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">StubClosure</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Target</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Moya</span><span class="o">.</span><span class="kt"><a href="../Enums/StubBehavior.html">StubBehavior</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:vC4Moya12MoyaProvider15endpointClosureFxGCS_8Endpointx_"></a>
+                    <a name="//apple_ref/swift/Property/endpointClosure" class="dashAnchor"></a>
+                    <a class="token" href="#/s:vC4Moya12MoyaProvider15endpointClosureFxGCS_8Endpointx_">endpointClosure</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">MoyaProvider</span><span class="o">&lt;</span><span class="kt">Target</span><span class="p">:</span> <span class="kt"><a href="../Protocols/TargetType.html">TargetType</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>

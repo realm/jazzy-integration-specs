@@ -263,12 +263,6 @@
               <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:9Alamofire22RequestRetryCompletion">RequestRetryCompletion</a>
               </li>
-              <li class="nav-group-task">
-                <a href="../Typealiases.html#/s:C9Alamofire11DataRequest10Validation">Validation</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Typealiases.html#/s:C9Alamofire15DownloadRequest10Validation">Validation</a>
-              </li>
             </ul>
           </li>
         </ul>
@@ -299,6 +293,38 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:VC9Alamofire15DownloadRequest15DownloadOptions"></a>
+                    <a name="//apple_ref/swift/Struct/DownloadOptions" class="dashAnchor"></a>
+                    <a class="token" href="#/s:VC9Alamofire15DownloadRequest15DownloadOptions">DownloadOptions</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A collection of options to be executed prior to moving a downloaded file from the temporary URL to the
+destination URL.</p>
+
+                        <a href="../Classes/DownloadRequest/DownloadOptions.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DownloadOptions</span><span class="p">:</span> <span class="kt">OptionSet</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/Request.swift#L422-L440">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:C9Alamofire15DownloadRequest23DownloadFileDestination"></a>
                     <a name="//apple_ref/swift/Alias/DownloadFileDestination" class="dashAnchor"></a>
                     <a class="token" href="#/s:C9Alamofire15DownloadRequest23DownloadFileDestination">DownloadFileDestination</a>
@@ -325,38 +351,6 @@ the options defining how the file should be moved.</p>
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/Request.swift#L446">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:VC9Alamofire15DownloadRequest15DownloadOptions"></a>
-                    <a name="//apple_ref/swift/Struct/DownloadOptions" class="dashAnchor"></a>
-                    <a class="token" href="#/s:VC9Alamofire15DownloadRequest15DownloadOptions">DownloadOptions</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A collection of options to be executed prior to moving a downloaded file from the temporary URL to the
-destination URL.</p>
-
-                        <a href="../Classes/DownloadRequest/DownloadOptions.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DownloadOptions</span><span class="p">:</span> <span class="kt">OptionSet</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/Request.swift#L422-L440">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1302,6 +1296,37 @@ the specified string encoding.</p>
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:C9Alamofire15DownloadRequest10Validation"></a>
+                    <a name="//apple_ref/swift/Alias/Validation" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C9Alamofire15DownloadRequest10Validation">Validation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A closure used to validate a request that takes a URL request, a URL response, a temporary URL and a
+destination URL, and returns whether the request was valid.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Validation</span> <span class="o">=</span> <span class="p">(</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/Validation.swift#L225">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:FC9Alamofire15DownloadRequest8validateFFTGSqV10Foundation10URLRequest_CSo15HTTPURLResponseGSqVS1_3URL_GSqS4___OCS_7Request16ValidationResultDS0_"></a>
                     <a name="//apple_ref/swift/Method/validate(_:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:FC9Alamofire15DownloadRequest8validateFFTGSqV10Foundation10URLRequest_CSo15HTTPURLResponseGSqVS1_3URL_GSqS4___OCS_7Request16ValidationResultDS0_">validate(_:)</a>
@@ -1321,7 +1346,7 @@ the specified string encoding.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">validate</span><span class="p">(</span><span class="n">_</span> <span class="nv">validation</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:C9Alamofire11DataRequest10Validation">Validation</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">validate</span><span class="p">(</span><span class="n">_</span> <span class="nv">validation</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/DownloadRequest.html#/s:C9Alamofire15DownloadRequest10Validation">Validation</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
