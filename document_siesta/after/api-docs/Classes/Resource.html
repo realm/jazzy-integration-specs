@@ -275,64 +275,6 @@ questions changes.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:C6Siesta8Resource15RequestMutation"></a>
-                    <a name="//apple_ref/swift/Alias/RequestMutation" class="dashAnchor"></a>
-                    <a class="token" href="#/s:C6Siesta8Resource15RequestMutation">RequestMutation</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Allows callers to arbitrarily alter the HTTP details of a request before it is sent. For example:</p>
-<pre class="highlight plaintext"><code>resource.request(.post) {
-  $0.httpBody = imageData
-  $0.addValue("image/png", forHTTPHeaderField: "Content-Type")
-}
-</code></pre>
-
-<p>Siesta provides helpers that make this custom <code>RequestMutation</code> unnecessary in many common cases.
-<a href="http://bustoutsolutions.github.io/siesta/guide/configuration/">Configuration</a> lets you set request headers, and
-helpers such as <code><a href="../Classes/Resource.html#/s:FC6Siesta8Resource7requestFTOS_13RequestMethod4jsonPS_15JSONConvertible_11contentTypeSS15requestMutationFRV10Foundation10URLRequestT__PS_7Request_">Resource.request(_:json:contentType:requestMutation:)</a></code> will encode common request body types for
-you. Custom mutation is the “full control” option for cases when:</p>
-
-<ol>
-<li>you need to alter the request in ways Siesta doesn’t provide helpers for, or</li>
-<li>you want to alter <em>one</em> individual request instead of configuring <em>all</em> requests for a resource.</li>
-</ol>
-
-<p>The <code>RequestMutation</code> receives a <code>URLRequest</code> <em>after</em> Siesta has already applied all of its normal configuration.
-The <code>URLRequest</code> is mutable, and any changes it makes are the last stop before the request is sent to the network.
-What you return is what Siesta sends.</p>
-<div class="aside aside-note">
-    <p class="aside-title">Note</p>
-    <p>Why is <code>RequestMutation</code> marked <code>@escaping</code> everywhere it’s used? Because <code><a href="../Protocols/Request.html#/s:FP6Siesta7Request8repeatedFT_PS0__">Request.repeated()</a></code> does
-not repeat the original request verbatim; instead, it recomputes the request headers using the latest
-configuration, then reapplies your <code>RequestMutation</code>.</p>
-
-</div>
-<div class="aside aside-see-also">
-    <p class="aside-title">See also</p>
-    <p><code><a href="../Classes/Resource.html#/s:FC6Siesta8Resource7requestFTOS_13RequestMethod15requestMutationFRV10Foundation10URLRequestT__PS_7Request_">Resource.request(...)</a></code></p>
-
-</div>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">RequestMutation</span> <span class="o">=</span> <span class="p">(</span><span class="k">inout</span> <span class="kt">URLRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">()</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
                     <a name="/s:vC6Siesta8Resource7serviceCS_7Service"></a>
                     <a name="//apple_ref/swift/Property/service" class="dashAnchor"></a>
                     <a class="token" href="#/s:vC6Siesta8Resource7serviceCS_7Service">service</a>
@@ -688,6 +630,64 @@ for this resource are in progress.</p>
                 </a>
               </div>
               <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:C6Siesta8Resource15RequestMutation"></a>
+                    <a name="//apple_ref/swift/Alias/RequestMutation" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C6Siesta8Resource15RequestMutation">RequestMutation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Allows callers to arbitrarily alter the HTTP details of a request before it is sent. For example:</p>
+<pre class="highlight plaintext"><code>resource.request(.post) {
+  $0.httpBody = imageData
+  $0.addValue("image/png", forHTTPHeaderField: "Content-Type")
+}
+</code></pre>
+
+<p>Siesta provides helpers that make this custom <code>RequestMutation</code> unnecessary in many common cases.
+<a href="http://bustoutsolutions.github.io/siesta/guide/configuration/">Configuration</a> lets you set request headers, and
+helpers such as <code><a href="../Classes/Resource.html#/s:FC6Siesta8Resource7requestFTOS_13RequestMethod4jsonPS_15JSONConvertible_11contentTypeSS15requestMutationFRV10Foundation10URLRequestT__PS_7Request_">Resource.request(_:json:contentType:requestMutation:)</a></code> will encode common request body types for
+you. Custom mutation is the “full control” option for cases when:</p>
+
+<ol>
+<li>you need to alter the request in ways Siesta doesn’t provide helpers for, or</li>
+<li>you want to alter <em>one</em> individual request instead of configuring <em>all</em> requests for a resource.</li>
+</ol>
+
+<p>The <code>RequestMutation</code> receives a <code>URLRequest</code> <em>after</em> Siesta has already applied all of its normal configuration.
+The <code>URLRequest</code> is mutable, and any changes it makes are the last stop before the request is sent to the network.
+What you return is what Siesta sends.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Why is <code>RequestMutation</code> marked <code>@escaping</code> everywhere it’s used? Because <code><a href="../Protocols/Request.html#/s:FP6Siesta7Request8repeatedFT_PS0__">Request.repeated()</a></code> does
+not repeat the original request verbatim; instead, it recomputes the request headers using the latest
+configuration, then reapplies your <code>RequestMutation</code>.</p>
+
+</div>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p><code><a href="../Classes/Resource.html#/s:FC6Siesta8Resource7requestFTOS_13RequestMethod15requestMutationFRV10Foundation10URLRequestT__PS_7Request_">Resource.request(...)</a></code></p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">RequestMutation</span> <span class="o">=</span> <span class="p">(</span><span class="k">inout</span> <span class="kt">URLRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
                 <li class="item">
                   <div>
                     <code>

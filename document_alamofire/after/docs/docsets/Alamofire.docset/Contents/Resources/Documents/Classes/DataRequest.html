@@ -263,12 +263,6 @@
               <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:9Alamofire22RequestRetryCompletion">RequestRetryCompletion</a>
               </li>
-              <li class="nav-group-task">
-                <a href="../Typealiases.html#/s:C9Alamofire11DataRequest10Validation">Validation</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Typealiases.html#/s:C9Alamofire15DownloadRequest10Validation">Validation</a>
-              </li>
             </ul>
           </li>
         </ul>
@@ -1140,6 +1134,37 @@ the specified string encoding.</p>
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:C9Alamofire11DataRequest10Validation"></a>
+                    <a name="//apple_ref/swift/Alias/Validation" class="dashAnchor"></a>
+                    <a class="token" href="#/s:C9Alamofire11DataRequest10Validation">Validation</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A closure used to validate a request that takes a URL request, a URL response and data, and returns whether the
+request was valid.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Validation</span> <span class="o">=</span> <span class="p">(</span><span class="kt">URLRequest</span><span class="p">?,</span> <span class="kt">HTTPURLResponse</span><span class="p">,</span> <span class="kt">Data</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">ValidationResult</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/Validation.swift#L154">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:FC9Alamofire11DataRequest8validateFFTGSqV10Foundation10URLRequest_CSo15HTTPURLResponseGSqVS1_4Data__OCS_7Request16ValidationResultDS0_"></a>
                     <a name="//apple_ref/swift/Method/validate(_:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:FC9Alamofire11DataRequest8validateFFTGSqV10Foundation10URLRequest_CSo15HTTPURLResponseGSqVS1_4Data__OCS_7Request16ValidationResultDS0_">validate(_:)</a>
@@ -1159,7 +1184,7 @@ the specified string encoding.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">validate</span><span class="p">(</span><span class="n">_</span> <span class="nv">validation</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Typealiases.html#/s:C9Alamofire11DataRequest10Validation">Validation</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">validate</span><span class="p">(</span><span class="n">_</span> <span class="nv">validation</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/DataRequest.html#/s:C9Alamofire11DataRequest10Validation">Validation</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>

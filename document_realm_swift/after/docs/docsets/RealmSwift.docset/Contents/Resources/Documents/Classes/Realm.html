@@ -77,9 +77,6 @@
                 <a href="../Classes/Realm.html">Realm</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/Realm/Error.html">– Error</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Classes/Realm/Notification.html">– Notification</a>
               </li>
               <li class="nav-group-task">
@@ -606,7 +603,7 @@ operation began to be downloaded and available locally.</p>
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">asyncOpen</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="kt">Realm</span><span class="o">.</span><span class="kt"><a href="../Classes/Realm/Configuration.html">Configuration</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">defaultConfiguration</span><span class="p">,</span>
                                  <span class="nv">callbackQueue</span><span class="p">:</span> <span class="kt">DispatchQueue</span> <span class="o">=</span> <span class="o">.</span><span class="n">main</span><span class="p">,</span>
-                                 <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Realm</span><span class="p">?,</span> <span class="kt">Swift</span><span class="o">.</span><span class="kt"><a href="../Classes/Realm/Error.html">Error</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                                 <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Realm</span><span class="p">?,</span> <span class="kt">Swift</span><span class="o">.</span><span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1802,50 +1799,6 @@ from the point when the previous write transaction was committed.</p>
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/realm/realm-cocoa/tree/v2.7.0/RealmSwift/Realm.swift#L641-L643">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:VC10RealmSwift5Realm5Error"></a>
-                    <a name="//apple_ref/swift/Struct/Error" class="dashAnchor"></a>
-                    <a class="token" href="#/s:VC10RealmSwift5Realm5Error">Error</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Struct that describes the error codes within the Realm error domain.
-The values can be used to catch a variety of <em>recoverable</em> errors, especially those
-happening when initializing a Realm instance.</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">realm</span><span class="p">:</span> <span class="kt">Realm</span><span class="p">?</span>
-<span class="k">do</span> <span class="p">{</span>
-    <span class="n">realm</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">Realm</span><span class="p">()</span>
-<span class="p">}</span> <span class="k">catch</span> <span class="kt">Realm</span><span class="o">.</span><span class="kt">Error</span><span class="o">.</span><span class="n">incompatibleLockFile</span> <span class="p">{</span>
-    <span class="nf">print</span><span class="p">(</span><span class="s">"Realm Browser app may be attached to Realm on device?"</span><span class="p">)</span>
-<span class="p">}</span>
-</code></pre>
-
-                        <a href="../Classes/Realm/Error.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Error</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v2.7.0/RealmSwift/Error.swift#L37-L84">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
