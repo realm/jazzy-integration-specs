@@ -713,7 +713,7 @@ does not yet exist. Not enabled for Realm Object Server configured for productio
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">let</span> <span class="nv">RLMIdentityProviderDebug</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">debug</span><span class="p">:</span> <span class="kt"><a href="Type Definitions.html#/c:RLMSyncCredentials.h@T@RLMIdentityProvider">RLMIdentityProvider</a></span></code></pre>
 
                         </div>
                       </div>
@@ -749,7 +749,7 @@ involvement of a third-party identity provider.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">let</span> <span class="nv">RLMIdentityProviderUsernamePassword</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">usernamePassword</span><span class="p">:</span> <span class="kt"><a href="Type Definitions.html#/c:RLMSyncCredentials.h@T@RLMIdentityProvider">RLMIdentityProvider</a></span></code></pre>
 
                         </div>
                       </div>
@@ -784,7 +784,7 @@ involvement of a third-party identity provider.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">let</span> <span class="nv">RLMIdentityProviderFacebook</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">facebook</span><span class="p">:</span> <span class="kt"><a href="Type Definitions.html#/c:RLMSyncCredentials.h@T@RLMIdentityProvider">RLMIdentityProvider</a></span></code></pre>
 
                         </div>
                       </div>
@@ -819,7 +819,7 @@ involvement of a third-party identity provider.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">let</span> <span class="nv">RLMIdentityProviderGoogle</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">google</span><span class="p">:</span> <span class="kt"><a href="Type Definitions.html#/c:RLMSyncCredentials.h@T@RLMIdentityProvider">RLMIdentityProvider</a></span></code></pre>
 
                         </div>
                       </div>
@@ -854,7 +854,7 @@ involvement of a third-party identity provider.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">let</span> <span class="nv">RLMIdentityProviderCloudKit</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">static</span> <span class="k">let</span> <span class="nv">cloudKit</span><span class="p">:</span> <span class="kt"><a href="Type Definitions.html#/c:RLMSyncCredentials.h@T@RLMIdentityProvider">RLMIdentityProvider</a></span></code></pre>
 
                         </div>
                       </div>
@@ -891,6 +891,11 @@ involvement of a third-party identity provider.</p>
                           <pre class="highlight"><code><span class="k">extern</span> <span class="n">NSString</span> <span class="o">*</span><span class="k">const</span> <span class="n">_Nonnull</span> <span class="n">kRLMSyncPathOfRealmBackupCopyKey</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="k">let</span> <span class="nv">kRLMSyncPathOfRealmBackupCopyKey</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+
+                        </div>
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/realm/realm-cocoa/tree/v2.7.0/Realm/RLMSyncUtil.h#L27">Show on GitHub</a>
@@ -923,7 +928,7 @@ involvement of a third-party identity provider.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">let</span> <span class="nv">kRLMSyncInitiateClientResetBlockKey</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="kt">Int32</span><span class="o">&gt;!</span></code></pre>
+                          <pre class="highlight"><code><span class="k">let</span> <span class="nv">kRLMSyncInitiateClientResetBlockKey</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -960,7 +965,7 @@ errors that don&rsquo;t fall into any of the other categories.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">let</span> <span class="nv">RLMSyncErrorDomain</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="kt">Int32</span><span class="o">&gt;!</span></code></pre>
+                          <pre class="highlight"><code><span class="k">let</span> <span class="nv">RLMSyncErrorDomain</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -996,7 +1001,7 @@ endpoint.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">let</span> <span class="nv">RLMSyncAuthErrorDomain</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="kt">Int32</span><span class="o">&gt;!</span></code></pre>
+                          <pre class="highlight"><code><span class="k">let</span> <span class="nv">RLMSyncAuthErrorDomain</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -1032,7 +1037,7 @@ system and APIs.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">let</span> <span class="nv">RLMSyncPermissionErrorDomain</span><span class="p">:</span> <span class="kt">UnsafeMutablePointer</span><span class="o">&lt;</span><span class="kt">Int32</span><span class="o">&gt;!</span></code></pre>
+                          <pre class="highlight"><code><span class="k">let</span> <span class="nv">RLMSyncPermissionErrorDomain</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
