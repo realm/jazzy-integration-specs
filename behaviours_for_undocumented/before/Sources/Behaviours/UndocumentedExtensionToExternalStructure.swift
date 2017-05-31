@@ -13,7 +13,7 @@ extension Bool {
     ///
     /// However, when a user leaves the other extensions blank, they still likely want the methods of those other extensions to be listed. This is why extension methods should be visible even they are located in an extension that has no documentation comment of its own.
     ///
-    /// Note: If a user really wants to hide an entire extension, they still have the option of explicitly opting out with `/// :nodoc:`.
+    /// Note: If a user really wants to hide an entire extension, they still have the option of explicitly opting out with `nodoc`.
     ///
     /// Methods from different extensions should be merged into a single list.
     public func should_be_VISIBLE_because_documentation_exists_for_method_and_external_structure_declaration_is_outside_user_control() {}

@@ -7,7 +7,7 @@
 ///
 /// However, when a user leaves the other extensions blank, they still likely want the methods of those other extensions to be listed. This is why extension methods should be visible even they are located in an extension that has no documentation comment of its own.
 ///
-/// Note: If a user really wants to hide an entire extension, they still have the option of explicitly opting out with `/// :nodoc:`.
+/// Note: If a user really wants to hide an entire extension, they still have the option of explicitly opting out with `nodoc`.
 public struct UndocumentedExtension_Should_NOT_WARN<Component> {}
 
 extension UndocumentedExtension_Should_NOT_WARN {
