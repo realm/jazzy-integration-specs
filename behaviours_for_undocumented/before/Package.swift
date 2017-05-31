@@ -3,9 +3,9 @@
 import PackageDescription
 
 let package = Package(
-    name: "behaviours_for_undocumented",
+    name: "behaviors_for_undocumented",
     targets: [
         Target(name: "Dependency"),
-        Target(name: "Behaviours", dependencies: ["Dependency"])
+        Target(name: "Behaviors", dependencies: ["Dependency"])
     ]
 )
