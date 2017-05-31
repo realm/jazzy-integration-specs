@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>UndocumentedExtension_Should_NOT_WARN Extension Reference</title>
+    <title>UndocumentedExtension_Should_NOT_WARN Struct Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,50 +10,28 @@
     
   </head>
   <body>
-    <a name="//apple_ref/swift/Extension/UndocumentedExtension_Should_NOT_WARN" class="dashAnchor"></a>
-    <a title="UndocumentedExtension_Should_NOT_WARN Extension Reference"></a>
+    <a name="//apple_ref/swift/Struct/UndocumentedExtension_Should_NOT_WARN" class="dashAnchor"></a>
+    <a title="UndocumentedExtension_Should_NOT_WARN Struct Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html"> Docs</a> (66% documented)</p>
+        <p><a href="../index.html"> Docs</a> (70% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
       <p id="breadcrumbs">
         <a href="../index.html"> Reference</a>
         <img id="carat" src="../img/carat.png" />
-        UndocumentedExtension_Should_NOT_WARN Extension Reference
+        UndocumentedExtension_Should_NOT_WARN Struct Reference
       </p>
     </div>
     <div class="content-wrapper">
       <nav class="sidebar">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a href="../Classes.html">Classes</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Classes/Should_be_VISIBLE_because_documentation_exists_for_class.html">Should_be_VISIBLE_because_documentation_exists_for_class</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a href="../Enums.html">Enums</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a href="../Enums/Should_be_VISIBLE_because_documentation_exists_for_enumeration.html">Should_be_VISIBLE_because_documentation_exists_for_enumeration</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
             <a href="../Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Extensions/Bool.html">Bool</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Extensions/LocalOptedOutStructure.html">LocalOptedOutStructure</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Extensions/UndocumentedExtension_Should_NOT_WARN.html">UndocumentedExtension_Should_NOT_WARN</a>
               </li>
             </ul>
           </li>
@@ -74,6 +52,9 @@
               <li class="nav-group-task">
                 <a href="../Structs/Should_be_VISIBLE_because_documentation_exists_for_structure.html">Should_be_VISIBLE_because_documentation_exists_for_structure</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Structs/UndocumentedExtension_Should_NOT_WARN.html">UndocumentedExtension_Should_NOT_WARN</a>
+              </li>
             </ul>
           </li>
         </ul>
@@ -88,7 +69,16 @@
 
                 </div>
               </div>
-            
+            <p>The user should not be required to document each extension. The user may have or even need several extensions, especially when constraints or where statements are involved.</p>
+
+<p>Since the various documentation comments get merged using a currently undefined strategy, the user cannot write documentation that they can be sure will appear as they intend. For example, they may write documentation for one extension only to have a different blank extension squash it, or copy and paste to all extensions only to have the documentation repeated.</p>
+
+<p>The user should still be able to reasonably assume that if they only write documentation for one extension, that is precisely what they will get.</p>
+
+<p>However, when a user leaves the other extensions blank, they still likely want the methods of those other extensions to be listed. This is why extension methods should be visible even they are located in an extension that has no documentation comment of its own.</p>
+
+<p>Note: If a user really wants to hide an entire extension, they still have the option of explicitly opting out with <code>nodoc</code>.</p>
+
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -96,9 +86,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FV10Behaviours37UndocumentedExtension_Should_NOT_WARN15extensionMethodFT_T_"></a>
+                    <a name="/s:FV9Behaviors37UndocumentedExtension_Should_NOT_WARN15extensionMethodFT_T_"></a>
                     <a name="//apple_ref/swift/Method/extensionMethod()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FV10Behaviours37UndocumentedExtension_Should_NOT_WARN15extensionMethodFT_T_">extensionMethod()</a>
+                    <a class="token" href="#/s:FV9Behaviors37UndocumentedExtension_Should_NOT_WARN15extensionMethodFT_T_">extensionMethod()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -127,9 +117,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:Fe10BehavioursRxs9EquatablerVS_37UndocumentedExtension_Should_NOT_WARN15extensionMethodFT_T_"></a>
+                    <a name="/s:Fe9BehaviorsRxs9EquatablerVS_37UndocumentedExtension_Should_NOT_WARN15extensionMethodFT_T_"></a>
                     <a name="//apple_ref/swift/Method/extensionMethod()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:Fe10BehavioursRxs9EquatablerVS_37UndocumentedExtension_Should_NOT_WARN15extensionMethodFT_T_">extensionMethod()</a>
+                    <a class="token" href="#/s:Fe9BehaviorsRxs9EquatablerVS_37UndocumentedExtension_Should_NOT_WARN15extensionMethodFT_T_">extensionMethod()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -158,9 +148,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:Fe10BehavioursRxs10ComparablerVS_37UndocumentedExtension_Should_NOT_WARN15extensionMethodFT_T_"></a>
+                    <a name="/s:Fe9BehaviorsRxs10ComparablerVS_37UndocumentedExtension_Should_NOT_WARN15extensionMethodFT_T_"></a>
                     <a name="//apple_ref/swift/Method/extensionMethod()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:Fe10BehavioursRxs10ComparablerVS_37UndocumentedExtension_Should_NOT_WARN15extensionMethodFT_T_">extensionMethod()</a>
+                    <a class="token" href="#/s:Fe9BehaviorsRxs10ComparablerVS_37UndocumentedExtension_Should_NOT_WARN15extensionMethodFT_T_">extensionMethod()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -189,9 +179,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:Fe10BehavioursRxzSbrVS_37UndocumentedExtension_Should_NOT_WARN15extensionMethodFT_T_"></a>
+                    <a name="/s:Fe9BehaviorsRxzSbrVS_37UndocumentedExtension_Should_NOT_WARN15extensionMethodFT_T_"></a>
                     <a name="//apple_ref/swift/Method/extensionMethod()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:Fe10BehavioursRxzSbrVS_37UndocumentedExtension_Should_NOT_WARN15extensionMethodFT_T_">extensionMethod()</a>
+                    <a class="token" href="#/s:Fe9BehaviorsRxzSbrVS_37UndocumentedExtension_Should_NOT_WARN15extensionMethodFT_T_">extensionMethod()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -220,9 +210,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:Fe10BehavioursRxzSirVS_37UndocumentedExtension_Should_NOT_WARN15extensionMethodFT_T_"></a>
+                    <a name="/s:Fe9BehaviorsRxzSirVS_37UndocumentedExtension_Should_NOT_WARN15extensionMethodFT_T_"></a>
                     <a name="//apple_ref/swift/Method/extensionMethod()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:Fe10BehavioursRxzSirVS_37UndocumentedExtension_Should_NOT_WARN15extensionMethodFT_T_">extensionMethod()</a>
+                    <a class="token" href="#/s:Fe9BehaviorsRxzSirVS_37UndocumentedExtension_Should_NOT_WARN15extensionMethodFT_T_">extensionMethod()</a>
                     </code>
                   </div>
                   <div class="height-container">
