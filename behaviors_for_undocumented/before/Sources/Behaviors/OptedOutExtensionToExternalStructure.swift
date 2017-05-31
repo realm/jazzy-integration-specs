@@ -1,6 +1,8 @@
 
+import Cocoa
+
 /// :nodoc:
-extension Bool {
+extension NSView {
     
     /// Should be HIDDEN because parent extension is opted out.
     public func should_be_HIDDEN_because_parent_extension_is_opted_out_o() {}

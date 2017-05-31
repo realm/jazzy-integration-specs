@@ -15,17 +15,17 @@ extension EmptyExtensionToExternalType_Should_be_HIDDEN where Component == Bool 
     public func extensionMethod() {}
 }
 
-import Foundation
+import Cocoa
 
-extension NSBundle {
+extension NSView {
     /// An extension method (but private, so the extension is still empty.)
     private func extensionMethodPrivate() {}
 }
-extension NSBundle {
+extension NSView {
     /// An extension method (but internal, so the extension is still empty.)
     internal func extensionMethodInternal() {}
 }
-extension NSBundle {
+extension NSView {
     // The extension is still empty.
     /// :nodoc:
     public func extensionMethodOptedOut() {}

@@ -1,4 +1,6 @@
 
+import Cocoa
+
 /// This extension documentation should be VISIBLE.
 ///
 /// Rationale:
@@ -6,7 +8,7 @@
 /// Regardless of whether symbols from other modules have documentation or not, their main declarations are out of the user’s control. The only place available to add documentation is on an extension.
 ///
 /// Note: This documentation also clashes with that of another extension. For this, the merge strategy is currently undefined.
-extension Bool {
+extension NSView {
     
     /// Should be VISIBLE because documentation exists for method and the extended type is external.
     ///
@@ -26,7 +28,7 @@ extension Bool {
 /// Regardless of whether symbols from other modules have documentation or not, their main declarations are out of the user’s control. The only place available to add documentation is on an extension.
 ///
 /// Note: This documentation also clashes with that of another extension. For this, the merge strategy is currently undefined.
-extension Bool {
+extension NSView {
     
     /// An extension method (to ensure the extension is not empty.)
     public func extensionMethod() {}

@@ -1,5 +1,7 @@
 
-extension Bool {
+import Cocoa
+
+extension NSView {
     
     /// Should be VISIBLE, because documentation exists for the method and the external structure declaration is outside the user’s control.
     ///
