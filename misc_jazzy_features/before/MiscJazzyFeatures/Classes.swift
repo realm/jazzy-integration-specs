@@ -74,3 +74,51 @@ enum UndocumentedEnum {
     // UNSUPPORTED: undocumented enum element
     case undocumentedValue
 }
+
+// MARK: Extensions
+
+/// Extension of a top-level class in this module
+extension ClassWithInitializers {
+    /// Method from an extension
+    func ee() {}
+}
+
+/// Extension of a nested class in this module
+extension ImplicitlyInternalTopLevelClass.NestedClass {
+    /// Method from an extension
+    func ee() {}
+}
+
+/// Extension of top-level external class
+extension NSObject {
+    /// Method from an extension
+    func ee() {}
+}
+
+/// Extension of a nested external class
+extension String.CharacterView {
+    /// Method from an extension
+    func ee() {}
+}
+
+/// Class with multiple nesting levels
+class TopLevelClass {
+    /// Top level method
+    func tt() {}
+
+    class NestedLevel1 {
+        /// Nested method
+        func nn1() {}
+
+        class NestedLevel2 {
+            /// Nested-2 method
+            func nn2() {}
+        }
+    }
+}
+
+/// Extension of doubly-nested class
+extension TopLevelClass.NestedLevel1.NestedLevel2 {
+    /// Method from a doubly-nested extension
+    func ff() {}
+}
