@@ -334,7 +334,7 @@ If you want to feed your service arbitrary URLs with no common root, use <code>r
                               <td>
                                 <div>
                                   <p>The URL underneath which the API exposes its endpoints. If nil, there is no base URL, and thus you must use
-only <code>resource(absoluteURL:)</code> and <code>resource(baseURL:path:)</code> to acquire resources.</p>
+only <code><a href="../Classes/Service.html#/s:FC6Siesta7Service8resourceFT11absoluteURLGSqPS_14URLConvertible___CS_8Resource">resource(absoluteURL:)</a></code> and <code><a href="../Classes/Service.html#/s:FC6Siesta7Service8resourceFT7baseURLGSqPS_14URLConvertible__4pathSS_CS_8Resource">resource(baseURL:path:)</a></code> to acquire resources.</p>
                                 </div>
                               </td>
                             </tr>
@@ -347,7 +347,7 @@ only <code>resource(absoluteURL:)</code> and <code>resource(baseURL:path:)</code
                               <td>
                                 <div>
                                   <p>If true, include handling for JSON, text, and images. If false, leave all responses as <code>Data</code> (unless you
-add your own <code>ResponseTransformer</code> using <code>configure(...)</code>).</p>
+add your own <code><a href="../Protocols/ResponseTransformer.html">ResponseTransformer</a></code> using <code><a href="../Classes/Service.html#/s:FC6Siesta7Service9configureFTPS_31ConfigurationPatternConvertible_14requestMethodsGSqGSaOS_13RequestMethod__11descriptionGSqSS_10configurerFRVS_13ConfigurationT__T_">configure(...)</a></code>).</p>
                                 </div>
                               </td>
                             </tr>
@@ -361,7 +361,7 @@ add your own <code>ResponseTransformer</code> using <code>configure(...)</code>)
                                 <div>
                                   <p>The handler to use for networking. The default is <code>URLSession</code> with ephemeral session configuration. You can
 pass an <code>URLSession</code>, <code>URLSessionConfiguration</code>, or <code>Alamofire.Manager</code> to use an existing provider with
-custom configuration. You can also use your own networking library of choice by implementing <code>NetworkingProvider</code>.</p>
+custom configuration. You can also use your own networking library of choice by implementing <code><a href="../Protocols/NetworkingProvider.html">NetworkingProvider</a></code>.</p>
                                 </div>
                               </td>
                             </tr>
@@ -580,9 +580,9 @@ for global config and more fine-grained matching</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>Selects the subset of resources to which this configuration applies. You can pass a <code>String</code>, <code>Resource</code>, or
+                                  <p>Selects the subset of resources to which this configuration applies. You can pass a <code>String</code>, <code><a href="../Classes/Resource.html">Resource</a></code>, or
 <code>NSRegularExpression</code> for the <code>pattern</code> argument — or write your own custom implementation of
-<code>ConfigurationPatternConvertible</code>.</p>
+<code><a href="../Protocols/ConfigurationPatternConvertible.html">ConfigurationPatternConvertible</a></code>.</p>
                                 </div>
                               </td>
                             </tr>
@@ -606,7 +606,7 @@ for global config and more fine-grained matching</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>A closure that receives a mutable <code>Configuration</code>, referenced as <code>$0</code>, which it may modify as it
+                                  <p>A closure that receives a mutable <code><a href="../Structs/Configuration.html">Configuration</a></code>, referenced as <code>$0</code>, which it may modify as it
 sees fit. This closure will be called whenever Siesta needs to generate or refresh configuration. You should
 not rely on it being called at any particular time, and should avoid making it cause side effects.</p>
                                 </div>

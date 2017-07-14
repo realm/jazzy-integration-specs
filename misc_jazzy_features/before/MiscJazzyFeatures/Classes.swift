@@ -122,3 +122,10 @@ extension TopLevelClass.NestedLevel1.NestedLevel2 {
     /// Method from a doubly-nested extension
     func ff() {}
 }
+
+// MARK: Generics
+
+/// A generic structure.
+struct GenericStruct<T> {
+    var t: T
+}
