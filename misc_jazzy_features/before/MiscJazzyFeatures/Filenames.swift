@@ -8,3 +8,10 @@
 
 /// Function with characters unsafe for filenames.
 public func /<T>(lhs: T, rhs: T) {}
+
+class Operators {
+    /// Function with characters unsafe for html.
+    public static func <(lhs: DocumentedEnum, rhs: DocumentedEnum) : Bool {
+        return false
+    }
+}

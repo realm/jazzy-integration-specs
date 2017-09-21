@@ -15,6 +15,7 @@
 ///         ```swift
 ///         aParameter
 ///         ```
+///         Also see `functionB(_:)` and `DocumentedEnum.documentedValue`
 ///     - bParameter: Another parameter
 ///
 /// - Returns: A result
