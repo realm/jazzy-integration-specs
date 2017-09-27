@@ -1,5 +1,4 @@
-Wrapping the **request -> result** cycle into own adapter
-=========================================================
+# Wrapping the **request -> result** cycle into own adapter
 
 Moving towards a real-world example, you might want to wrap the **request ->
 result** cycle in your own network adapter, to make it a little easier to
@@ -8,7 +7,7 @@ failures.
 
 ```swift
 struct Network {
-    static let provider = MoyaProvider(endpointClosure: endpointClosure)
+    static let provider = MoyaProvider<MyService>(endpointClosure: endpointClosure)
 
     static func request(
         target: MyService,

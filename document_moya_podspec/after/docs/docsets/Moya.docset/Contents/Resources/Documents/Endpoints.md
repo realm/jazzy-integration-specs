@@ -1,5 +1,4 @@
-Endpoints
-=========
+# Endpoints
 
 An endpoint is a semi-internal data structure that Moya uses to reason about
 the network request that will ultimately be made. An endpoint stores the
@@ -7,9 +6,8 @@ following data:
 
 - The url.
 - The HTTP method (`GET`, `POST`, etc).
-- The request parameters.
-- The parameter encoding (`URL`, `JSON`, custom, etc).
 - The HTTP request header fields.
+- `Task` to differentiate `upload`, `download` or `request`.
 - The sample response (for unit testing).
 
 [Providers](Providers.md) map [Targets](Targets.md) to Endpoints, then map
@@ -24,15 +22,16 @@ The first might resemble the following:
 
 ```swift
 let endpointClosure = { (target: MyTarget) -> Endpoint<MyTarget> in
-    let url = target.baseURL.appendingPathComponent(target.path).absoluteString
-    return Endpoint(url: url, sampleResponseClosure: {.networkResponse(200, target.sampleData)}, method: target.method, parameters: target.parameters)
+    let url = URL(target: target).absoluteString
+    return Endpoint(url: url, sampleResponseClosure: {.networkResponse(200, target.sampleData)}, method: target.method, task: target.task)
 }
 ```
 
 This is actually the default implementation Moya provides. If you need something
-custom, like if your API requires custom parameter mapping, or if you're
-creating a test provider that returns non-200 HTTP statuses in unit tests, this
-is where you would do it.
+custom, or if you're creating a test provider that returns non-200 HTTP statuses in unit tests,
+this is where you would do it.
+
+Notice the `URL(target:)` initializer, Moya provides a convenient extension to create a `URL` from any `TargetType`.
 
 The second use is very uncommon. Moya tries to prevent you from having to worry
 about low-level details. But it's there if you need it. Its use is covered
@@ -41,27 +40,11 @@ further below.
 Let's take a look at an example of the flexibility mapping from a Target to
 an Endpoint can provide.
 
-From Target to Endpoint
------------------------
+## From Target to Endpoint
 
-By default, `Endpoint` instances use the `URLEncoding.default` type parameter
-encoding. You can specify how you'd like to encode parameters on a
-target-by-target basis in the `endpointClosure` using the optional
-`parameterEncoding` parameter of the `Endpoint` initializer in your
-`endpointClosure` when setting up the provider.
-
-There are three parameter encoding types: `URLEncoding`, `JSONEncoding`,
-`PropertyListEncoding`,  which map directly to the corresponding types in
-Alamofire. Each of these types has `.default` property, that gives you a default
-instance of a specific `ParameterEncoding` type. Additionally if you want to
-create your custom type, just implement the `ParameterEncoding` protocol and you
-are good to go. Usually you just want `URLEncoding.default`, but you can use
-whichever you like. These are mapped directly to the [Alamofire parameter encodings](https://github.com/Alamofire/Alamofire/blob/95a0ad51be27d99416401e186dc390063b4a85cf/Source/ParameterEncoding.swift#L48). If you want to get more information about the
-`ParameterEncoding` types and how to create your own,
-[check out this awesome documentation piece on that matter, by Alamofire](https://github.com/Alamofire/Alamofire/blob/95a0ad51be27d99416401e186dc390063b4a85cf/README.md#parameter-encoding).
-
-You can add parameters or HTTP header fields in this closure. For example, we
-may wish to set our application name in the HTTP header fields for server-side
+In this closure you have absolute power over converting from `Target` to `Endpoint`.
+You can change the `task`, `method`, `url`, `headers` or `sampleResponse`.
+For example, we may wish to set our application name in the HTTP header fields for server-side
 analytics.
 
 ```swift
@@ -72,9 +55,11 @@ let endpointClosure = { (target: MyTarget) -> Endpoint<MyTarget> in
 let provider = MoyaProvider<GitHub>(endpointClosure: endpointClosure)
 ```
 
+*Note that header fields can also be added as part of the [Target](Targets.md) definition.*
+
 This also means that you can provide additional parameters to some or all of
 your endpoints. For example, say that there is an authentication token we need
-for  all values of the hypothetical `MyTarget` target, with the exception of the
+for all values of the hypothetical `MyTarget` target, with the exception of the
 target that actually does the authentication. We could construct an
 `endpointClosure` resembling the following.
 
@@ -96,22 +81,21 @@ let provider = MoyaProvider<GitHub>(endpointClosure: endpointClosure)
 Awesome.
 
 Note that we can rely on the existing behavior of Moya and extend – instead
-of replace – it. The `adding(newParameters:)` and `adding(newHttpHeaderFields:)`
-functions allow you to rely on the existing Moya code and add your own custom
-values.
+of replace – it. The `adding(newHttpHeaderFields:)` function allows you to
+rely on the existing Moya code and add your own custom values.
 
 Sample responses are a requirement of the `TargetType` protocol. However, they
 only specify the data returned. The Target-to-Endpoint mapping closure is where
 you can specify more details, which is useful for unit testing.
 
-Sample responses have one of two values:
+Sample responses have one of these values:
 
-- `NetworkError`, with an `NSError?` optional error type.
-- `NetworkResponse`, with an `Int` status code and an `Data` returned data.
+- `.networkError(NSError)` when network failed to send the request, or failed to retrieve a response (eg a timeout).
+- `.networkResponse(Int, Data)` where `Int` is a status code and `Data` is the returned data.
+- `.response(HTTPURLResponse, Data)` where `HTTPURLResponse` is the response and `Data` is the returned data. This one can be used to fully stub a response.
 
 
-Request Mapping
----------------
+## Request Mapping
 
 As we mentioned earlier, the purpose of this library is not really to provide a
 coding framework with which to access the network – that's Alamofire's job.
@@ -124,7 +108,7 @@ that Moya will use to reason about the network API call. At some point, that
 That's what the `requestClosure` parameter is for.
 
 The `requestClosure` is an optional, last-minute way to modify the request
-that hits the network. It has a default value of `MoyaProvider.DefaultRequestMapper`,
+that hits the network. It has a default value of `MoyaProvider.defaultRequestMapping`,
 which simply uses the `urlRequest` property of the `Endpoint` instance.
 
 This closure receives an `Endpoint` instance and is responsible for invoking a

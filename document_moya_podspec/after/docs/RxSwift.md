@@ -1,25 +1,41 @@
-RxSwift
-=======
+# RxSwift
 
-Moya provides an optional `RxMoyaProvider` subclass of
+Moya provides an optional `RxSwift` implementation of
 `MoyaProvider` that does a few interesting things. Instead of
 calling the `request()` method and providing a callback closure
 to be executed when the request completes, we use `Observable`s.
 
-A `RxMoyaProvider` can be created much like a
-[`MoyaProvider`](Providers.md) and can be used as follows:
+To use reactive extensions you don't need any additional setup.
+Just use your `MoyaProvider` instance.
 
 ```swift
-let provider = RxMoyaProvider<GitHub>()
+let provider = MoyaProvider<GitHub>()
 ```
 
 After that simple setup, you're off to the races:
 
 ```swift
-provider.request(.zen).subscribe { event in
+provider.rx.request(.zen).subscribe { event in
     switch event {
-    case .next(let response):
+    case .success(let response):
         // do something with the data
+    case .error(let error):
+        // handle the error
+    }
+}
+```
+
+You can also use `requestWithProgress` to track progress of 
+your request:
+```swift
+provider.rx.requestWithProgress(.zen).subscribe { event in
+    switch event {
+    case .next(let progressResponse):
+        if let response = progressResponse.response {
+            // do something with response
+        } else {
+            print("Progress: \(progressResponse.progress)")
+        }
     case .error(let error):
         // handle the error
     default:
@@ -28,9 +44,9 @@ provider.request(.zen).subscribe { event in
 }
 ```
 
-For `RxMoyaProvider`, the network request is not started
+It's important to remember that network request is not started
 until the signal is subscribed to. If the subscription to the signal
-is disposed of before the request completes, the request is cancelled.
+is disposed of before the request completes, the request is canceled.
 
 If the request completes normally, two things happen:
 
@@ -42,11 +58,11 @@ then it sends an error, instead. The error's `code` is the failing
 request's status code, if any, and the response data, if any.
 
 The `Moya.Response` class contains a `statusCode`, some `data`,
-and a(n optional) `URLResponse`. You can use these values however
-you like in `subscribeNext` or `map` calls.
+and a(n optional) `HTTPURLResponse`. You can use these values however
+you like in `subscribe` or `map` calls.
 
 To make things even awesomer, Moya provides some extensions to
-`Observable` that make dealing with `MoyaResponses`really easy.
+`Single` and `Observable` that make dealing with `MoyaResponses`really easy.
 
 - `filter(statusCodes:)` takes a range of status codes. If the
   response's status code is not within that range, an error is

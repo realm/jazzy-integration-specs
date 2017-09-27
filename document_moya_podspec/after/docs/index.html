@@ -13,7 +13,7 @@
     <a title="Moya  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">Moya Docs</a> (72% documented)</p>
+        <p><a href="index.html">Moya Docs</a> (70% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -62,7 +62,7 @@
             <a href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Enums/DownloadType.html">DownloadType</a>
+                <a href="Enums/AuthorizationType.html">AuthorizationType</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/EndpointSampleResponse.html">EndpointSampleResponse</a>
@@ -82,9 +82,6 @@
               <li class="nav-group-task">
                 <a href="Enums/Task.html">Task</a>
               </li>
-              <li class="nav-group-task">
-                <a href="Enums/UploadType.html">UploadType</a>
-              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -97,7 +94,19 @@
                 <a href="Extensions/ObservableType.html">ObservableType</a>
               </li>
               <li class="nav-group-task">
+                <a href="Extensions/PrimitiveSequence.html">PrimitiveSequence</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Reactive.html">Reactive</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Reactive.html">Reactive</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="Extensions/SignalProducerProtocol.html">SignalProducerProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/URL.html">URL</a>
               </li>
             </ul>
           </li>
@@ -117,6 +126,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/Cancellable.html">Cancellable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/MoyaProviderType.html">MoyaProviderType</a>
               </li>
               <li class="nav-group-task">
                 <a href="Protocols/PluginType.html">PluginType</a>
@@ -220,6 +232,8 @@ to abstract away the nitty gritty of URLs, parameters, etc?</p>
 <li>Lets you define a clear usage of different endpoints with associated enum values.</li>
 <li>Treats test stubs as first-class citizens so unit testing is super-easy.</li>
 </ul>
+
+<p>You can check out more about the project direction in the <a href="Vision.md">vision document</a>.</p>
 <h2 id='sample-project' class='heading'>Sample Project</h2>
 
 <p>There&rsquo;s a sample project in the Demo directory. To use it, run <code>pod install</code> to download the required libraries. Have fun!</p>
@@ -257,7 +271,7 @@ you should use for your Swift version.</p>
 <h3 id='swift-package-manager' class='heading'>Swift Package Manager</h3>
 
 <p>To integrate using Apple&rsquo;s Swift package manager, add the following as a dependency to your <code>Package.swift</code>:</p>
-<pre class="highlight swift"><code><span class="o">.</span><span class="kt">Package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/Moya/Moya"</span><span class="p">,</span> <span class="nv">majorVersion</span><span class="p">:</span> <span class="mi">8</span><span class="p">)</span>
+<pre class="highlight swift"><code><span class="o">.</span><span class="kt">Package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/Moya/Moya.git"</span><span class="p">,</span> <span class="nv">majorVersion</span><span class="p">:</span> <span class="mi">8</span><span class="p">)</span>
 </code></pre>
 
 <p>and then specify <code>.Target(name: &quot;Moya&quot;)</code> as a dependency of the Target in which you wish to use Moya.
@@ -265,10 +279,10 @@ Here&rsquo;s an example <code>PackageDescription</code>:</p>
 <pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">PackageDescription</span>
 
 <span class="k">let</span> <span class="nv">package</span> <span class="o">=</span> <span class="kt">Package</span><span class="p">(</span>
-  <span class="nv">name</span><span class="p">:</span> <span class="s">"MyApp"</span><span class="p">,</span>
-  <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
-    <span class="o">.</span><span class="kt">Package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/Moya/Moya"</span><span class="p">,</span> <span class="nv">majorVersion</span><span class="p">:</span> <span class="mi">8</span><span class="p">)</span>
-  <span class="p">]</span>
+    <span class="nv">name</span><span class="p">:</span> <span class="s">"MyApp"</span><span class="p">,</span>
+    <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
+        <span class="o">.</span><span class="kt">Package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/Moya/Moya.git"</span><span class="p">,</span> <span class="nv">majorVersion</span><span class="p">:</span> <span class="mi">8</span><span class="p">)</span>
+    <span class="p">]</span>
 <span class="p">)</span>
 </code></pre>
 <h3 id='cocoapods' class='heading'>CocoaPods</h3>
@@ -293,8 +307,14 @@ import the framework with <code>import Moya</code>.</p>
 
 <p>Carthage users can point to this repository and use whichever
 generated framework they&rsquo;d like, <code>Moya</code>, <code>RxMoya</code>, or <code>ReactiveMoya</code>.</p>
+
+<p>Make the following entry in your Cartfile:</p>
 <pre class="highlight plaintext"><code>github "Moya/Moya"
 </code></pre>
+
+<p>Then run <code>carthage update</code>.</p>
+
+<p>If this is your first time using Carthage in the project, you&rsquo;ll need to go through some additional steps as explained <a href="https://github.com/Carthage/Carthage#adding-frameworks-to-an-application">over at Carthage</a>.</p>
 <h3 id='manually' class='heading'>Manually</h3>
 
 <ul>
@@ -384,14 +404,14 @@ parameter encoding.</p>
 <p>Even cooler are the reactive extensions. Moya provides reactive extensions for
 <a href="https://github.com/ReactiveCocoa/ReactiveSwift">ReactiveSwift</a> and
 <a href="https://github.com/ReactiveX/RxSwift">RxSwift</a>.</p>
-<h2 id='reactiveswift' class='heading'>ReactiveSwift</h2>
+<h3 id='reactiveswift' class='heading'>ReactiveSwift</h3>
 
-<p>After <code>ReactiveSwift</code> <a href="docs/ReactiveSwift.md">setup</a>, <code>request(:)</code> method
-immediately returns a <code>SignalProducer</code> (<code>RACSignal</code> is also available if needed)
-that you can start or bind or map or whatever you want to do. To handle errors,
-for instance, we could do the following:</p>
-<pre class="highlight swift"><code><span class="n">provider</span> <span class="o">=</span> <span class="kt">ReactiveSwiftMoyaProvider</span><span class="o">&lt;</span><span class="kt">GitHub</span><span class="o">&gt;</span><span class="p">()</span>
-<span class="n">provider</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="nf">userProfile</span><span class="p">(</span><span class="s">"ashfurrow"</span><span class="p">))</span><span class="o">.</span><span class="n">start</span> <span class="p">{</span> <span class="n">event</span> <span class="k">in</span>
+<p><a href="docs/ReactiveSwift.md"><code>ReactiveSwift</code> extension</a> provides both <code>reactive.request(:callbackQueue:)</code> and 
+<code>reactive.requestWithProgress(:callbackQueue:)</code> methods that immediately return 
+<code>SignalProducer</code>s that you can start, bind, map, or whatever you want to do. 
+To handle errors, for instance, we could do the following:</p>
+<pre class="highlight swift"><code><span class="n">provider</span> <span class="o">=</span> <span class="kt">MoyaProvider</span><span class="o">&lt;</span><span class="kt">GitHub</span><span class="o">&gt;</span><span class="p">()</span>
+<span class="n">provider</span><span class="o">.</span><span class="n">reactive</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="nf">userProfile</span><span class="p">(</span><span class="s">"ashfurrow"</span><span class="p">))</span><span class="o">.</span><span class="n">start</span> <span class="p">{</span> <span class="n">event</span> <span class="k">in</span>
     <span class="k">switch</span> <span class="n">event</span> <span class="p">{</span>
     <span class="k">case</span> <span class="kd">let</span> <span class="o">.</span><span class="nf">value</span><span class="p">(</span><span class="n">response</span><span class="p">):</span>
         <span class="n">image</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="n">response</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
@@ -402,25 +422,27 @@ for instance, we could do the following:</p>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
-<h2 id='rxswift' class='heading'>RxSwift</h2>
+<h3 id='rxswift' class='heading'>RxSwift</h3>
 
-<p>After <code>RxSwift</code> <a href="docs/RxSwift.md">setup</a>, <code>request(:)</code> method immediately
-returns an <code>Observable</code> that you can subscribe to or bind or map or whatever you
-want to do. To handle errors, for instance, we could do the following:</p>
-<pre class="highlight swift"><code><span class="n">provider</span> <span class="o">=</span> <span class="kt">RxMoyaProvider</span><span class="o">&lt;</span><span class="kt">GitHub</span><span class="o">&gt;</span><span class="p">()</span>
-<span class="n">provider</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="nf">userProfile</span><span class="p">(</span><span class="s">"ashfurrow"</span><span class="p">))</span><span class="o">.</span><span class="n">subscribe</span> <span class="p">{</span> <span class="n">event</span> <span class="k">in</span>
+<p><a href="docs/RxSwift.md"><code>RxSwift</code> extension</a> also provide both <code>rx.request(:callbackQueue:)</code> and 
+<code>rx.requestWithProgress(:callbackQueue:)</code> methods, but return type is 
+different for both. In case of a normal <code>rx.request(:callbackQueue)</code>, the
+return type is <code>Single&lt;Response&gt;</code> which emits either single element or an
+error. In case of a <code>rx.requestWithProgress(:callbackQueue:)</code>, the return 
+type is <code>Observable&lt;ProgressResponse&gt;</code>, since we may get multiple events
+from progress and one last event which is a response.</p>
+
+<p>To handle errors, for instance, we could do the following:</p>
+<pre class="highlight swift"><code><span class="n">provider</span> <span class="o">=</span> <span class="kt">MoyaProvider</span><span class="o">&lt;</span><span class="kt">GitHub</span><span class="o">&gt;</span><span class="p">()</span>
+<span class="n">provider</span><span class="o">.</span><span class="n">rx</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="nf">userProfile</span><span class="p">(</span><span class="s">"ashfurrow"</span><span class="p">))</span><span class="o">.</span><span class="n">subscribe</span> <span class="p">{</span> <span class="n">event</span> <span class="k">in</span>
     <span class="k">switch</span> <span class="n">event</span> <span class="p">{</span>
-    <span class="k">case</span> <span class="kd">let</span> <span class="o">.</span><span class="nf">next</span><span class="p">(</span><span class="n">response</span><span class="p">):</span>
+    <span class="k">case</span> <span class="kd">let</span> <span class="o">.</span><span class="nf">success</span><span class="p">(</span><span class="n">response</span><span class="p">):</span>
         <span class="n">image</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="n">response</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
     <span class="k">case</span> <span class="kd">let</span> <span class="o">.</span><span class="nf">error</span><span class="p">(</span><span class="n">error</span><span class="p">):</span>
         <span class="nf">print</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
-    <span class="k">default</span><span class="p">:</span>
-        <span class="k">break</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
-
-<hr>
 
 <p>In addition to the option of using signals instead of callback blocks, there are
 also a series of signal operators for RxSwift and ReactiveSwift that will attempt
@@ -429,28 +451,12 @@ or a string, with <code>mapImage()</code>, <code>mapJSON()</code>, and <code>map
 for filtering out certain status codes. This means that you can place your code for
 handling API errors like 400&rsquo;s in the same places as code for handling invalid
 responses.</p>
-<h2 id='community-extensions' class='heading'>Community Extensions</h2>
+<h2 id='community-projects' class='heading'>Community Projects</h2>
 
-<p>Moya has a great community around it and some people have created some very helpful extensions.</p>
-
-<ul>
-<li><a href="https://github.com/ivanbruel/Moya-ObjectMapper">Moya-ObjectMapper</a> - ObjectMapper bindings for Moya for easier JSON serialization</li>
-<li><a href="https://github.com/AvdLee/Moya-SwiftyJSONMapper">Moya-SwiftyJSONMapper</a> - SwiftyJSON bindings for Moya for easier JSON serialization</li>
-<li><a href="https://github.com/wattson12/Moya-Argo">Moya-Argo</a> - Argo bindings for Moya for easier JSON serialization</li>
-<li><a href="https://github.com/sunshinejr/Moya-ModelMapper">Moya-ModelMapper</a> - ModelMapper bindings for Moya for easier JSON serialization</li>
-<li><a href="https://github.com/spxrogers/Moya-Gloss">Moya-Gloss</a> - Gloss bindings for Moya for easier JSON serialization</li>
-<li><a href="https://github.com/DroidsOnRoids/Moya-JASON">Moya-JASON</a> - JASON bindings for Moya for easier JSON serialization</li>
-<li><a href="https://github.com/AvdLee/Moya-JASONMapper">Moya-JASONMapper</a> - JASON bindings for Moya for easier JSON serialization</li>
-<li><a href="https://github.com/RyogaK/Moya-Unbox">Moya-Unbox</a> - Unbox bindings for Moya for easier JSON serialization</li>
-<li><a href="https://github.com/devxoul/MoyaSugar">MoyaSugar</a> – Syntactic sugar for Moya</li>
-<li><a href="https://github.com/evermeer/EVReflection/tree/master/Source/Alamofire/Moya">Moya-EVReflection</a> - EVReflection bindings for Moya for easier JSON serialization (including subspecs for <a href="https://github.com/evermeer/EVReflection/tree/master/Source/Alamofire/Moya/RxSwift">RxSwift</a> and <a href="https://github.com/evermeer/EVReflection/tree/master/Source/Alamofire/Moya/ReactiveCocoa">ReactiveCocoa</a>)</li>
-<li><a href="https://github.com/JARMourato/Moya-Marshal">Moya-Marshal</a> - Marshal bindings for Moya for easier JSON serialization</li>
-</ul>
-
-<p>We appreciate all the work being done by the community around Moya. If you would like to have your extension featured in the list above, simply create a pull request adding your extensions to the list.</p>
+<p><a href="https://github.com/Moya/Moya/blob/master/docs/CommunityProjects.md">Moya has a great community around it and some people have created some very helpful extensions.</a></p>
 <h2 id='contributing' class='heading'>Contributing</h2>
 
-<p>Hey! Like Moya? Awesome! We could actually really use your help!</p>
+<p>Hey! Do you like Moya? Awesome! We could actually really use your help!</p>
 
 <p>Open source isn&rsquo;t just writing code. Moya could use your help with any of the
 following:</p>
@@ -477,7 +483,7 @@ requests and help steer the ship :ship: You can read more details about that <a 
 <p>If you add or remove a source file from Moya, a corresponding change needs to be made to the <code>Moya.xcodeproj</code> project at the root of this repository. This project is used for Carthage. Don&rsquo;t worry, you&rsquo;ll get an automated warning when submitting a pull request if you forget.</p>
 <h2 id='license' class='heading'>License</h2>
 
-<p>Moya is released under an MIT license. See License.md for more information.</p>
+<p>Moya is released under an MIT license. See <a href="License.md">License.md</a> for more information.</p>
 
           </section>
         </section>

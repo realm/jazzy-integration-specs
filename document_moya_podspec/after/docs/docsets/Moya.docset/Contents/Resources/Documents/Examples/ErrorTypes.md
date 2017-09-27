@@ -1,5 +1,4 @@
-Handling different error types
-==============================
+# Handling different error types
 
 In case of an error you may need to handle it:
 
@@ -17,17 +16,15 @@ provider.request(target) { result in
 Or RxSwift way:
 
 ```swift
-.doOnError { error in
+.do(onError: { error in
     // Handle error here
-}
+})
 ```
 
-You can do that by a `switch` on different `cases` of `MoyaError`. In case of an `.Underlying` error you can also get the original `NSError` and its properties, e.g. `code` to be informed about `NSURLError` types like `NSURLErrorTimedOut` or `NSURLErrorNotConnectedToInternet`
+You can do that by a `switch` on different `cases` of `MoyaError`. In case of an `.underlying` error you can also get the original `Error` and its properties. e.g. `code` to be informed about `URLError` types like `NSURLErrorTimedOut` or `NSURLErrorNotConnectedToInternet`
 
 ```swift
-switch error {
-case .data(let response):
-    print(response)
+switch moyaError {
 case .imageMapping(let response):
     print(response)
 case .jsonMapping(let response):
@@ -36,10 +33,16 @@ case .statusCode(let response):
     print(response)
 case .stringMapping(let response):
     print(response)
-case .underlying(let nsError):
+case .underlying(let nsError as NSError, let response):
     // now can access NSError error.code or whatever
     // e.g. NSURLErrorTimedOut or NSURLErrorNotConnectedToInternet
     print(nsError.code)
     print(nsError.domain)
+    print(response)
+case .underlying(let error, let response):
+    print(error)
+    print(response)
+case .requestMapping:
+    print("nil")
 }
 ```

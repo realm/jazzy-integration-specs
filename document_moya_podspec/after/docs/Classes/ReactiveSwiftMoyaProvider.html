@@ -14,7 +14,7 @@
     <a title="ReactiveSwiftMoyaProvider Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Moya Docs</a> (72% documented)</p>
+        <p><a href="../index.html">Moya Docs</a> (70% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -63,7 +63,7 @@
             <a href="../Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Enums/DownloadType.html">DownloadType</a>
+                <a href="../Enums/AuthorizationType.html">AuthorizationType</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Enums/EndpointSampleResponse.html">EndpointSampleResponse</a>
@@ -83,9 +83,6 @@
               <li class="nav-group-task">
                 <a href="../Enums/Task.html">Task</a>
               </li>
-              <li class="nav-group-task">
-                <a href="../Enums/UploadType.html">UploadType</a>
-              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -98,7 +95,19 @@
                 <a href="../Extensions/ObservableType.html">ObservableType</a>
               </li>
               <li class="nav-group-task">
+                <a href="../Extensions/PrimitiveSequence.html">PrimitiveSequence</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Reactive.html">Reactive</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Reactive.html">Reactive</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Extensions/SignalProducerProtocol.html">SignalProducerProtocol</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/URL.html">URL</a>
               </li>
             </ul>
           </li>
@@ -118,6 +127,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/Cancellable.html">Cancellable</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/MoyaProviderType.html">MoyaProviderType</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/PluginType.html">PluginType</a>
@@ -215,7 +227,8 @@
                 <span class="nv">requestClosure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">RequestClosure</span> <span class="o">=</span> <span class="kt"><a href="../Classes/MoyaProvider.html">MoyaProvider</a></span><span class="o">.</span><span class="n">defaultRequestMapping</span><span class="p">,</span>
                 <span class="nv">stubClosure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">StubClosure</span> <span class="o">=</span> <span class="kt"><a href="../Classes/MoyaProvider.html">MoyaProvider</a></span><span class="o">.</span><span class="n">neverStub</span><span class="p">,</span>
                 <span class="nv">manager</span><span class="p">:</span> <span class="kt">Manager</span> <span class="o">=</span> <span class="kt">ReactiveSwiftMoyaProvider</span><span class="o">&lt;</span><span class="kt">Target</span><span class="o">&gt;.</span><span class="nf">defaultAlamofireManager</span><span class="p">(),</span>
-                <span class="nv">plugins</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/PluginType.html">PluginType</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[],</span> <span class="nv">stubScheduler</span><span class="p">:</span> <span class="kt">DateSchedulerProtocol</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                <span class="nv">plugins</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/PluginType.html">PluginType</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[],</span>
+                <span class="nv">stubScheduler</span><span class="p">:</span> <span class="kt">DateScheduler</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
                 <span class="nv">trackInflights</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span></code></pre>
 
                         </div>
@@ -226,9 +239,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC4Moya25ReactiveSwiftMoyaProvider7requestFxGV13ReactiveSwift14SignalProducerCS_8ResponseOS_9MoyaError_"></a>
-                    <a name="//apple_ref/swift/Method/request(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC4Moya25ReactiveSwiftMoyaProvider7requestFxGV13ReactiveSwift14SignalProducerCS_8ResponseOS_9MoyaError_">request(_:)</a>
+                    <a name="/s:FC4Moya25ReactiveSwiftMoyaProvider7requestFTx13callbackQueueGSqCSo13DispatchQueue__GV13ReactiveSwift14SignalProducerCS_8ResponseOS_9MoyaError_"></a>
+                    <a name="//apple_ref/swift/Method/request(_:callbackQueue:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC4Moya25ReactiveSwiftMoyaProvider7requestFTx13callbackQueueGSqCSo13DispatchQueue__GV13ReactiveSwift14SignalProducerCS_8ResponseOS_9MoyaError_">request(_:callbackQueue:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -243,7 +256,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">request</span><span class="p">(</span><span class="n">_</span> <span class="nv">token</span><span class="p">:</span> <span class="kt">Target</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SignalProducer</span><span class="o">&lt;</span><span class="kt"><a href="../Classes/Response.html">Response</a></span><span class="p">,</span> <span class="kt"><a href="../Enums/MoyaError.html">MoyaError</a></span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">request</span><span class="p">(</span><span class="n">_</span> <span class="nv">token</span><span class="p">:</span> <span class="kt">Target</span><span class="p">,</span> <span class="nv">callbackQueue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SignalProducer</span><span class="o">&lt;</span><span class="kt"><a href="../Classes/Response.html">Response</a></span><span class="p">,</span> <span class="kt"><a href="../Enums/MoyaError.html">MoyaError</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -253,9 +266,36 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:FC4Moya25ReactiveSwiftMoyaProvider11stubRequestFTx7requestV10Foundation10URLRequest10completionFGO6Result6ResultCS_8ResponseOS_9MoyaError_T_8endpointGCS_8Endpointx_12stubBehaviorOS_12StubBehavior_CS_16CancellableToken"></a>
-                    <a name="//apple_ref/swift/Method/stubRequest(_:request:completion:endpoint:stubBehavior:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC4Moya25ReactiveSwiftMoyaProvider11stubRequestFTx7requestV10Foundation10URLRequest10completionFGO6Result6ResultCS_8ResponseOS_9MoyaError_T_8endpointGCS_8Endpointx_12stubBehaviorOS_12StubBehavior_CS_16CancellableToken">stubRequest(_:request:completion:endpoint:stubBehavior:)</a>
+                    <a name="/s:FC4Moya25ReactiveSwiftMoyaProvider19requestWithProgressFTx13callbackQueueGSqCSo13DispatchQueue__GV13ReactiveSwift14SignalProducerVS_16ProgressResponseOS_9MoyaError_"></a>
+                    <a name="//apple_ref/swift/Method/requestWithProgress(_:callbackQueue:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC4Moya25ReactiveSwiftMoyaProvider19requestWithProgressFTx13callbackQueueGSqCSo13DispatchQueue__GV13ReactiveSwift14SignalProducerVS_16ProgressResponseOS_9MoyaError_">requestWithProgress(_:callbackQueue:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Designated request-making method with progress.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">func</span> <span class="nf">requestWithProgress</span><span class="p">(</span><span class="n">_</span> <span class="nv">token</span><span class="p">:</span> <span class="kt">Target</span><span class="p">,</span> <span class="nv">callbackQueue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SignalProducer</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/ProgressResponse.html">ProgressResponse</a></span><span class="p">,</span> <span class="kt"><a href="../Enums/MoyaError.html">MoyaError</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:FC4Moya25ReactiveSwiftMoyaProvider11stubRequestFTx7requestV10Foundation10URLRequest13callbackQueueGSqCSo13DispatchQueue_10completionFGO6Result6ResultCS_8ResponseOS_9MoyaError_T_8endpointGCS_8Endpointx_12stubBehaviorOS_12StubBehavior_CS_16CancellableToken"></a>
+                    <a name="//apple_ref/swift/Method/stubRequest(_:request:callbackQueue:completion:endpoint:stubBehavior:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:FC4Moya25ReactiveSwiftMoyaProvider11stubRequestFTx7requestV10Foundation10URLRequest13callbackQueueGSqCSo13DispatchQueue_10completionFGO6Result6ResultCS_8ResponseOS_9MoyaError_T_8endpointGCS_8Endpointx_12stubBehaviorOS_12StubBehavior_CS_16CancellableToken">stubRequest(_:request:callbackQueue:completion:endpoint:stubBehavior:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -269,38 +309,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">stubRequest</span><span class="p">(</span><span class="n">_</span> <span class="nv">target</span><span class="p">:</span> <span class="kt">Target</span><span class="p">,</span> <span class="nv">request</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">Moya</span><span class="o">.</span><span class="kt"><a href="../Typealiases.html#/s:4Moya10Completion">Completion</a></span><span class="p">,</span> <span class="nv">endpoint</span><span class="p">:</span> <span class="kt"><a href="../Classes/Endpoint.html">Endpoint</a></span><span class="o">&lt;</span><span class="kt">Target</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">stubBehavior</span><span class="p">:</span> <span class="kt">Moya</span><span class="o">.</span><span class="kt"><a href="../Enums/StubBehavior.html">StubBehavior</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/CancellableToken.html">CancellableToken</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:FC4Moya25ReactiveSwiftMoyaProvider19requestWithProgressFT5tokenx_GV13ReactiveSwift14SignalProducerVS_16ProgressResponseOS_9MoyaError_"></a>
-                    <a name="//apple_ref/swift/Method/requestWithProgress(token:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:FC4Moya25ReactiveSwiftMoyaProvider19requestWithProgressFT5tokenx_GV13ReactiveSwift14SignalProducerVS_16ProgressResponseOS_9MoyaError_">requestWithProgress(token:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Undocumented</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">ReactiveSwiftMoyaProvider</span><span class="o">&lt;</span><span class="kt">Target</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt"><a href="../Classes/MoyaProvider.html">MoyaProvider</a></span><span class="o">&lt;</span><span class="kt">Target</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">Target</span><span class="p">:</span> <span class="kt"><a href="../Protocols/TargetType.html">TargetType</a></span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">override</span> <span class="kd">func</span> <span class="nf">stubRequest</span><span class="p">(</span><span class="n">_</span> <span class="nv">target</span><span class="p">:</span> <span class="kt">Target</span><span class="p">,</span> <span class="nv">request</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">,</span> <span class="nv">callbackQueue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">Moya</span><span class="o">.</span><span class="kt"><a href="../Typealiases.html#/s:4Moya10Completion">Completion</a></span><span class="p">,</span> <span class="nv">endpoint</span><span class="p">:</span> <span class="kt"><a href="../Classes/Endpoint.html">Endpoint</a></span><span class="o">&lt;</span><span class="kt">Target</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">stubBehavior</span><span class="p">:</span> <span class="kt">Moya</span><span class="o">.</span><span class="kt"><a href="../Enums/StubBehavior.html">StubBehavior</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/CancellableToken.html">CancellableToken</a></span></code></pre>
 
                         </div>
                       </div>
