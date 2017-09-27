@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Structures  Reference</title>
+    <title>Enumerations  Reference</title>
     <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,7 +10,7 @@
     
   </head>
   <body>
-    <a title="Structures  Reference"></a>
+    <a title="Enumerations  Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="index.html">Alamofire Docs</a> (86% documented)</p>
@@ -22,7 +22,7 @@
       <p id="breadcrumbs">
         <a href="index.html">Alamofire Reference</a>
         <img id="carat" src="img/carat.png" />
-        Structures  Reference
+        Enumerations  Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -82,7 +82,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Enumerations.html">Enumerations</a>
+            <a href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Enums/AFError.html">AFError</a>
@@ -100,7 +100,7 @@
                 <a href="Enums/AFError.html#/s:OO9Alamofire7AFError34ResponseSerializationFailureReason">– ResponseSerializationFailureReason</a>
               </li>
               <li class="nav-group-task">
-                <a href="Enumerations.html#/s:O9Alamofire10HTTPMethod">HTTPMethod</a>
+                <a href="Enums.html#/s:O9Alamofire10HTTPMethod">HTTPMethod</a>
               </li>
               <li class="nav-group-task">
                 <a href="Enums/Result.html">Result</a>
@@ -216,7 +216,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Structures.html">Structures</a>
+            <a href="Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Structs/DataResponse.html">DataResponse</a>
@@ -254,16 +254,16 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Type Aliases.html">Type Aliases</a>
+            <a href="Typealiases.html">Type Aliases</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Type Aliases.html#/s:9Alamofire11HTTPHeaders">HTTPHeaders</a>
+                <a href="Typealiases.html#/s:9Alamofire11HTTPHeaders">HTTPHeaders</a>
               </li>
               <li class="nav-group-task">
-                <a href="Type Aliases.html#/s:9Alamofire10Parameters">Parameters</a>
+                <a href="Typealiases.html#/s:9Alamofire10Parameters">Parameters</a>
               </li>
               <li class="nav-group-task">
-                <a href="Type Aliases.html#/s:9Alamofire22RequestRetryCompletion">RequestRetryCompletion</a>
+                <a href="Typealiases.html#/s:9Alamofire22RequestRetryCompletion">RequestRetryCompletion</a>
               </li>
             </ul>
           </li>
@@ -272,8 +272,8 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Structures</h1>
-            <p>The following structures are available globally.</p>
+            <h1>Enumerations</h1>
+            <p>The following enumerations are available globally.</p>
 
           </section>
           <section class="section task-group-section">
@@ -282,9 +282,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:V9Alamofire8Timeline"></a>
-                    <a name="//apple_ref/swift/Struct/Timeline" class="dashAnchor"></a>
-                    <a class="token" href="#/s:V9Alamofire8Timeline">Timeline</a>
+                    <a name="/s:O9Alamofire10HTTPMethod"></a>
+                    <a name="//apple_ref/swift/Enum/HTTPMethod" class="dashAnchor"></a>
+                    <a class="token" href="#/s:O9Alamofire10HTTPMethod">HTTPMethod</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -292,20 +292,21 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Responsible for computing the timing metrics for the complete lifecycle of a <code><a href="Classes/Request.html">Request</a></code>.</p>
+                        <p>HTTP method definitions.</p>
 
-                        <a href="Structs/Timeline.html" class="slightly-smaller">See more</a>
+<p>See <a href="https://tools.ietf.org/html/rfc7231#section-4.3">https://tools.ietf.org/html/rfc7231#section-4.3</a></p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Timeline</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">HTTPMethod</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/Timeline.swift#L28-L79">Show on GitHub</a>
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/ParameterEncoding.swift#L30-L40">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -317,9 +318,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:V9Alamofire11URLEncoding"></a>
-                    <a name="//apple_ref/swift/Struct/URLEncoding" class="dashAnchor"></a>
-                    <a class="token" href="#/s:V9Alamofire11URLEncoding">URLEncoding</a>
+                    <a name="/s:O9Alamofire7AFError"></a>
+                    <a name="//apple_ref/swift/Enum/AFError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:O9Alamofire7AFError">AFError</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -327,27 +328,104 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Creates a url-encoded query string to be set as or appended to any existing URL query string or set as the HTTP
-body of the URL request. Whether the query string is set or appended to any existing URL query string or set as
-the HTTP body depends on the destination of the encoding.</p>
+                        <p><code>AFError</code> is the error type returned by Alamofire. It encompasses a few different types of errors, each with
+their own associated reasons.</p>
 
-<p>The <code>Content-Type</code> HTTP header field of an encoded request with HTTP body is set to
-<code>application/x-www-form-urlencoded; charset=utf-8</code>. Since there is no published specification for how to encode
-collection types, the convention of appending <code>[]</code> to the key for array values (<code>foo[]=1&amp;foo[]=2</code>), and appending
-the key surrounded by square brackets for nested dictionary values (<code>foo[bar]=baz</code>).</p>
+<ul>
+<li>invalidURL:                  Returned when a <code><a href="Protocols/URLConvertible.html">URLConvertible</a></code> type fails to create a valid <code>URL</code>.</li>
+<li>parameterEncodingFailed:     Returned when a parameter encoding object throws an error during the encoding process.</li>
+<li>multipartEncodingFailed:     Returned when some step in the multipart encoding process fails.</li>
+<li>responseValidationFailed:    Returned when a <code>validate()</code> call fails.</li>
+<li>responseSerializationFailed: Returned when a response serializer encounters an error in the serialization process.</li>
+</ul>
 
-                        <a href="Structs/URLEncoding.html" class="slightly-smaller">See more</a>
+                        <a href="Enums/AFError.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">URLEncoding</span><span class="p">:</span> <span class="kt"><a href="Protocols/ParameterEncoding.html">ParameterEncoding</a></span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">AFError</span><span class="p">:</span> <span class="kt">Error</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/ParameterEncoding.swift#L70-L265">Show on GitHub</a>
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/AFError.swift#L35-L133">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/ServerTrustPolicy"></a>
+                <a name="//apple_ref/swift/Section/ServerTrustPolicy" class="dashAnchor"></a>
+                <a href="#/ServerTrustPolicy">
+                  <h3 class="section-name">ServerTrustPolicy</h3>
+                </a>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:O9Alamofire17ServerTrustPolicy"></a>
+                    <a name="//apple_ref/swift/Enum/ServerTrustPolicy" class="dashAnchor"></a>
+                    <a class="token" href="#/s:O9Alamofire17ServerTrustPolicy">ServerTrustPolicy</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The <code>ServerTrustPolicy</code> evaluates the server trust generally provided by an <code>NSURLAuthenticationChallenge</code> when
+connecting to a server over a secure HTTPS connection. The policy configuration then evaluates the server trust
+with a given set of criteria to determine whether the server trust is valid and the connection should be made.</p>
+
+<p>Using pinned certificates or public keys for evaluation helps prevent man-in-the-middle (MITM) attacks and other
+vulnerabilities. Applications dealing with sensitive customer data or financial information are strongly encouraged
+to route all communication over an HTTPS connection with pinning enabled.</p>
+
+<ul>
+<li><p>performDefaultEvaluation: Uses the default server trust evaluation while allowing you to control whether to
+                        validate the host provided by the challenge. Applications are encouraged to always
+                        validate the host in production environments to guarantee the validity of the server&rsquo;s
+                        certificate chain.</p></li>
+<li><p>performRevokedEvaluation: Uses the default and revoked server trust evaluations allowing you to control whether to
+                        validate the host provided by the challenge as well as specify the revocation flags for
+                        testing for revoked certificates. Apple platforms did not start testing for revoked
+                        certificates automatically until iOS 10.1, macOS 10.12 and tvOS 10.1 which is
+                        demonstrated in our TLS tests. Applications are encouraged to always validate the host
+                        in production environments to guarantee the validity of the server&rsquo;s certificate chain.</p></li>
+<li><p>pinCertificates:          Uses the pinned certificates to validate the server trust. The server trust is
+                        considered valid if one of the pinned certificates match one of the server certificates.
+                        By validating both the certificate chain and host, certificate pinning provides a very
+                        secure form of server trust validation mitigating most, if not all, MITM attacks.
+                        Applications are encouraged to always validate the host and require a valid certificate
+                        chain in production environments.</p></li>
+<li><p>pinPublicKeys:            Uses the pinned public keys to validate the server trust. The server trust is considered
+                        valid if one of the pinned public keys match one of the server certificate public keys.
+                        By validating both the certificate chain and host, public key pinning provides a very
+                        secure form of server trust validation mitigating most, if not all, MITM attacks.
+                        Applications are encouraged to always validate the host and require a valid certificate
+                        chain in production environments.</p></li>
+<li><p>disableEvaluation:        Disables all evaluation which in turn will always consider any server trust as valid.</p></li>
+<li><p>customEvaluation:         Uses the associated closure to evaluate the validity of the server trust.</p></li>
+</ul>
+
+                        <a href="Enums/ServerTrustPolicy.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">ServerTrustPolicy</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/ServerTrustPolicy.swift#L115-L307">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -359,9 +437,9 @@ the key surrounded by square brackets for nested dictionary values (<code>foo[ba
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:V9Alamofire12JSONEncoding"></a>
-                    <a name="//apple_ref/swift/Struct/JSONEncoding" class="dashAnchor"></a>
-                    <a class="token" href="#/s:V9Alamofire12JSONEncoding">JSONEncoding</a>
+                    <a name="/s:O9Alamofire6Result"></a>
+                    <a name="//apple_ref/swift/Enum/Result" class="dashAnchor"></a>
+                    <a class="token" href="#/s:O9Alamofire6Result">Result</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -369,268 +447,27 @@ the key surrounded by square brackets for nested dictionary values (<code>foo[ba
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Uses <code>JSONSerialization</code> to create a JSON representation of the parameters object, which is set as the body of the
-request. The <code>Content-Type</code> HTTP header field of an encoded request is set to <code>application/json</code>.</p>
+                        <p>Used to represent whether a request was successful or encountered an error.</p>
 
-                        <a href="Structs/JSONEncoding.html" class="slightly-smaller">See more</a>
+<ul>
+<li><p>success: The request and all post processing operations were successful resulting in the serialization of the
+       provided associated value.</p></li>
+<li><p>failure: The request encountered an error resulting in a failure. The associated values are the original data
+       provided by the server as well as the error that caused the failure.</p></li>
+</ul>
+
+                        <a href="Enums/Result.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">JSONEncoding</span><span class="p">:</span> <span class="kt"><a href="Protocols/ParameterEncoding.html">ParameterEncoding</a></span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">Result</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/ParameterEncoding.swift#L271-L352">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:V9Alamofire20PropertyListEncoding"></a>
-                    <a name="//apple_ref/swift/Struct/PropertyListEncoding" class="dashAnchor"></a>
-                    <a class="token" href="#/s:V9Alamofire20PropertyListEncoding">PropertyListEncoding</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Uses <code>PropertyListSerialization</code> to create a plist representation of the parameters object, according to the
-associated format and write options values, which is set as the body of the request. The <code>Content-Type</code> HTTP header
-field of an encoded request is set to <code>application/x-plist</code>.</p>
-
-                        <a href="Structs/PropertyListEncoding.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">PropertyListEncoding</span><span class="p">:</span> <span class="kt"><a href="Protocols/ParameterEncoding.html">ParameterEncoding</a></span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/ParameterEncoding.swift#L359-L427">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:V9Alamofire22DataResponseSerializer"></a>
-                    <a name="//apple_ref/swift/Struct/DataResponseSerializer" class="dashAnchor"></a>
-                    <a class="token" href="#/s:V9Alamofire22DataResponseSerializer">DataResponseSerializer</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A generic <code>DataResponseSerializerType</code> used to serialize a request, response, and data into a serialized object.</p>
-
-                        <a href="Structs/DataResponseSerializer.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DataResponseSerializer</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt"><a href="Protocols/DataResponseSerializerProtocol.html">DataResponseSerializerProtocol</a></span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/ResponseSerialization.swift#L39-L54">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:V9Alamofire26DownloadResponseSerializer"></a>
-                    <a name="//apple_ref/swift/Struct/DownloadResponseSerializer" class="dashAnchor"></a>
-                    <a class="token" href="#/s:V9Alamofire26DownloadResponseSerializer">DownloadResponseSerializer</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A generic <code>DownloadResponseSerializerType</code> used to serialize a request, response, and data into a serialized object.</p>
-
-                        <a href="Structs/DownloadResponseSerializer.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DownloadResponseSerializer</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">:</span> <span class="kt"><a href="Protocols/DownloadResponseSerializerProtocol.html">DownloadResponseSerializerProtocol</a></span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/ResponseSerialization.swift#L70-L85">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:V9Alamofire19DefaultDataResponse"></a>
-                    <a name="//apple_ref/swift/Struct/DefaultDataResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:V9Alamofire19DefaultDataResponse">DefaultDataResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Used to store all data associated with an non-serialized response of a data or upload request.</p>
-
-                        <a href="Structs/DefaultDataResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DefaultDataResponse</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/Response.swift#L28-L69">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:V9Alamofire12DataResponse"></a>
-                    <a name="//apple_ref/swift/Struct/DataResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:V9Alamofire12DataResponse">DataResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Used to store all data associated with a serialized response of a data or upload request.</p>
-
-                        <a href="Structs/DataResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DataResponse</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/Response.swift#L74-L120">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:V9Alamofire23DefaultDownloadResponse"></a>
-                    <a name="//apple_ref/swift/Struct/DefaultDownloadResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:V9Alamofire23DefaultDownloadResponse">DefaultDownloadResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Used to store all data associated with an non-serialized response of a download request.</p>
-
-                        <a href="Structs/DefaultDownloadResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DefaultDownloadResponse</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/Response.swift#L207-L260">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:V9Alamofire16DownloadResponse"></a>
-                    <a name="//apple_ref/swift/Struct/DownloadResponse" class="dashAnchor"></a>
-                    <a class="token" href="#/s:V9Alamofire16DownloadResponse">DownloadResponse</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Used to store all data associated with a serialized response of a download request.</p>
-
-                        <a href="Structs/DownloadResponse.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DownloadResponse</span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/Response.swift#L265-L323">Show on GitHub</a>
+                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/Result.swift#L34-L72">Show on GitHub</a>
                       </div>
                     </section>
                   </div>

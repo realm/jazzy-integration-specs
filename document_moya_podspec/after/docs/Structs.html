@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Type Aliases  Reference</title>
+    <title>Structures  Reference</title>
     <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="css/highlight.css" />
     <meta charset='utf-8'>
@@ -10,7 +10,7 @@
     
   </head>
   <body>
-    <a title="Type Aliases  Reference"></a>
+    <a title="Structures  Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="index.html">Moya Docs</a> (72% documented)</p>
@@ -20,7 +20,7 @@
       <p id="breadcrumbs">
         <a href="index.html">Moya Reference</a>
         <img id="carat" src="img/carat.png" />
-        Type Aliases  Reference
+        Structures  Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -59,7 +59,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Enumerations.html">Enumerations</a>
+            <a href="Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Enums/DownloadType.html">DownloadType</a>
@@ -130,7 +130,7 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Structures.html">Structures</a>
+            <a href="Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Structs/AccessTokenPlugin.html">AccessTokenPlugin</a>
@@ -147,28 +147,28 @@
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="Type Aliases.html">Type Aliases</a>
+            <a href="Typealiases.html">Type Aliases</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Type Aliases.html#/s:4Moya10Completion">Completion</a>
+                <a href="Typealiases.html#/s:4Moya10Completion">Completion</a>
               </li>
               <li class="nav-group-task">
-                <a href="Type Aliases.html#/s:4Moya5Image">Image</a>
+                <a href="Typealiases.html#/s:4Moya5Image">Image</a>
               </li>
               <li class="nav-group-task">
-                <a href="Type Aliases.html#/s:4Moya6Method">Method</a>
+                <a href="Typealiases.html#/s:4Moya6Method">Method</a>
               </li>
               <li class="nav-group-task">
-                <a href="Type Aliases.html#/s:4Moya31MultipartFormDataEncodingResult">MultipartFormDataEncodingResult</a>
+                <a href="Typealiases.html#/s:4Moya31MultipartFormDataEncodingResult">MultipartFormDataEncodingResult</a>
               </li>
               <li class="nav-group-task">
-                <a href="Type Aliases.html#/s:4Moya17ParameterEncoding">ParameterEncoding</a>
+                <a href="Typealiases.html#/s:4Moya17ParameterEncoding">ParameterEncoding</a>
               </li>
               <li class="nav-group-task">
-                <a href="Type Aliases.html#/s:4Moya13ProgressBlock">ProgressBlock</a>
+                <a href="Typealiases.html#/s:4Moya13ProgressBlock">ProgressBlock</a>
               </li>
               <li class="nav-group-task">
-                <a href="Type Aliases.html#/s:4Moya24RequestMultipartFormData">RequestMultipartFormData</a>
+                <a href="Typealiases.html#/s:4Moya24RequestMultipartFormData">RequestMultipartFormData</a>
               </li>
             </ul>
           </li>
@@ -177,19 +177,26 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Type Aliases</h1>
-            <p>The following type aliases are available globally.</p>
+            <h1>Structures</h1>
+            <p>The following structures are available globally.</p>
 
           </section>
           <section class="section task-group-section">
             <div class="task-group">
+              <div class="task-name-container">
+                <a name="/AccessTokenPlugin"></a>
+                <a name="//apple_ref/swift/Section/AccessTokenPlugin" class="dashAnchor"></a>
+                <a href="#/AccessTokenPlugin">
+                  <h3 class="section-name">AccessTokenPlugin</h3>
+                </a>
+              </div>
               <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Moya5Image"></a>
-                    <a name="//apple_ref/swift/Alias/Image" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Moya5Image">Image</a>
+                    <a name="/s:V4Moya17AccessTokenPlugin"></a>
+                    <a name="//apple_ref/swift/Struct/AccessTokenPlugin" class="dashAnchor"></a>
+                    <a class="token" href="#/s:V4Moya17AccessTokenPlugin">AccessTokenPlugin</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -197,14 +204,23 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>An alias for the SDK&rsquo;s image type.</p>
+                        <p>A plugin for adding bearer-type authorization headers to requests. Example:</p>
+<pre class="highlight plaintext"><code>Authorization: Bearer &lt;token&gt;
+</code></pre>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    By default, requests to all <code><a href="Protocols/TargetType.html">TargetType</a></code>s will receive this header. You can control this
+behvaior by conforming to <code><a href="Protocols/AccessTokenAuthorizable.html">AccessTokenAuthorizable</a></code>.
 
+</div>
+
+                        <a href="Structs/AccessTokenPlugin.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Image</span> <span class="o">=</span> <span class="kt">ImageType</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AccessTokenPlugin</span><span class="p">:</span> <span class="kt"><a href="Protocols/PluginType.html">PluginType</a></span></code></pre>
 
                         </div>
                       </div>
@@ -218,9 +234,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Moya6Method"></a>
-                    <a name="//apple_ref/swift/Alias/Method" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Moya6Method">Method</a>
+                    <a name="/s:V4Moya16ProgressResponse"></a>
+                    <a name="//apple_ref/swift/Struct/ProgressResponse" class="dashAnchor"></a>
+                    <a class="token" href="#/s:V4Moya16ProgressResponse">ProgressResponse</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -228,97 +244,9 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Represents an HTTP method.</p>
+                        <p>Undocumented</p>
 
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Method</span> <span class="o">=</span> <span class="kt">Alamofire</span><span class="o">.</span><span class="kt">HTTPMethod</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:4Moya17ParameterEncoding"></a>
-                    <a name="//apple_ref/swift/Alias/ParameterEncoding" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Moya17ParameterEncoding">ParameterEncoding</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Choice of parameter encoding.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">ParameterEncoding</span> <span class="o">=</span> <span class="kt">Alamofire</span><span class="o">.</span><span class="kt">ParameterEncoding</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:4Moya24RequestMultipartFormData"></a>
-                    <a name="//apple_ref/swift/Alias/RequestMultipartFormData" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Moya24RequestMultipartFormData">RequestMultipartFormData</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Multipart form</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">RequestMultipartFormData</span> <span class="o">=</span> <span class="kt">Alamofire</span><span class="o">.</span><span class="kt"><a href="Structs/MultipartFormData.html">MultipartFormData</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:4Moya31MultipartFormDataEncodingResult"></a>
-                    <a name="//apple_ref/swift/Alias/MultipartFormDataEncodingResult" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Moya31MultipartFormDataEncodingResult">MultipartFormDataEncodingResult</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Multipart form data encoding result.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">MultipartFormDataEncodingResult</span> <span class="o">=</span> <span class="kt">Manager</span><span class="o">.</span><span class="kt">MultipartFormDataEncodingResult</span></code></pre>
-
-                        </div>
+                        <a href="Structs/ProgressResponse.html" class="slightly-smaller">See more</a>
                       </div>
                     </section>
                   </div>
@@ -330,9 +258,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Moya10Completion"></a>
-                    <a name="//apple_ref/swift/Alias/Completion" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Moya10Completion">Completion</a>
+                    <a name="/s:V4Moya17MultipartFormData"></a>
+                    <a name="//apple_ref/swift/Struct/MultipartFormData" class="dashAnchor"></a>
+                    <a class="token" href="#/s:V4Moya17MultipartFormData">MultipartFormData</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -340,41 +268,15 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Closure to be executed when a request has completed.</p>
+                        <p>Represents <q>multipart/form-data</q> for an upload.</p>
 
+                        <a href="Structs/MultipartFormData.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Completion</span> <span class="o">=</span> <span class="p">(</span><span class="n">_</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Result</span><span class="o">&lt;</span><span class="kt">Moya</span><span class="o">.</span><span class="kt"><a href="Classes/Response.html">Response</a></span><span class="p">,</span> <span class="kt"><a href="Enums/MoyaError.html">MoyaError</a></span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:4Moya13ProgressBlock"></a>
-                    <a name="//apple_ref/swift/Alias/ProgressBlock" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Moya13ProgressBlock">ProgressBlock</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Closure to be executed when progress changes.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">ProgressBlock</span> <span class="o">=</span> <span class="p">(</span><span class="n">_</span> <span class="nv">progress</span><span class="p">:</span> <span class="kt"><a href="Structs/ProgressResponse.html">ProgressResponse</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">MultipartFormData</span></code></pre>
 
                         </div>
                       </div>
