@@ -319,7 +319,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">MoyaProvider</span><span class="o">&lt;</span><span class="kt">Target</span><span class="p">:</span> <span class="kt"><a href="../Protocols/TargetType.html">TargetType</a></span><span class="o">&gt;</span><span class="p">:</span> <span class="kt"><a href="../Protocols/MoyaProviderType.html">MoyaProviderType</a></span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">let</span> <span class="nv">endpointClosure</span><span class="p">:</span> <span class="kt"><a href="../Classes/MoyaProvider.html#/s:4Moya0A8ProviderC15EndpointClosurea">EndpointClosure</a></span></code></pre>
 
                         </div>
                       </div>
@@ -346,7 +346,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">MoyaProvider</span><span class="o">&lt;</span><span class="kt">Target</span><span class="p">:</span> <span class="kt"><a href="../Protocols/TargetType.html">TargetType</a></span><span class="o">&gt;</span><span class="p">:</span> <span class="kt"><a href="../Protocols/MoyaProviderType.html">MoyaProviderType</a></span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">let</span> <span class="nv">requestClosure</span><span class="p">:</span> <span class="kt"><a href="../Classes/MoyaProvider.html#/s:4Moya0A8ProviderC14RequestClosurea">RequestClosure</a></span></code></pre>
 
                         </div>
                       </div>
@@ -373,7 +373,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">MoyaProvider</span><span class="o">&lt;</span><span class="kt">Target</span><span class="p">:</span> <span class="kt"><a href="../Protocols/TargetType.html">TargetType</a></span><span class="o">&gt;</span><span class="p">:</span> <span class="kt"><a href="../Protocols/MoyaProviderType.html">MoyaProviderType</a></span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">let</span> <span class="nv">stubClosure</span><span class="p">:</span> <span class="kt"><a href="../Classes/MoyaProvider.html#/s:4Moya0A8ProviderC11StubClosurea">StubClosure</a></span></code></pre>
 
                         </div>
                       </div>
@@ -400,7 +400,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">MoyaProvider</span><span class="o">&lt;</span><span class="kt">Target</span><span class="p">:</span> <span class="kt"><a href="../Protocols/TargetType.html">TargetType</a></span><span class="o">&gt;</span><span class="p">:</span> <span class="kt"><a href="../Protocols/MoyaProviderType.html">MoyaProviderType</a></span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">let</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt">Manager</span></code></pre>
 
                         </div>
                       </div>
@@ -455,7 +455,7 @@ e.g. for logging, network activity indicator or credentials</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">MoyaProvider</span><span class="o">&lt;</span><span class="kt">Target</span><span class="p">:</span> <span class="kt"><a href="../Protocols/TargetType.html">TargetType</a></span><span class="o">&gt;</span><span class="p">:</span> <span class="kt"><a href="../Protocols/MoyaProviderType.html">MoyaProviderType</a></span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="k">let</span> <span class="nv">trackInflights</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -482,7 +482,7 @@ e.g. for logging, network activity indicator or credentials</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">MoyaProvider</span><span class="o">&lt;</span><span class="kt">Target</span><span class="p">:</span> <span class="kt"><a href="../Protocols/TargetType.html">TargetType</a></span><span class="o">&gt;</span><span class="p">:</span> <span class="kt"><a href="../Protocols/MoyaProviderType.html">MoyaProviderType</a></span></code></pre>
+                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">internal(set)</span> <span class="k">var</span> <span class="nv">inflightRequests</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/Endpoint.html">Endpoint</a></span><span class="o">&lt;</span><span class="kt">Target</span><span class="o">&gt;</span><span class="p">:</span> <span class="p">[</span><span class="kt">Moya</span><span class="o">.</span><span class="kt"><a href="../Typealiases.html#/s:4Moya10Completiona">Completion</a></span><span class="p">]]</span> <span class="o">=</span> <span class="p">[:]</span></code></pre>
 
                         </div>
                       </div>
@@ -631,7 +631,7 @@ Note: this was previously in an extension, however it must be in the original cl
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">MoyaProvider</span><span class="o">&lt;</span><span class="kt">Target</span><span class="p">:</span> <span class="kt"><a href="../Protocols/TargetType.html">TargetType</a></span><span class="o">&gt;</span><span class="p">:</span> <span class="kt"><a href="../Protocols/MoyaProviderType.html">MoyaProviderType</a></span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">defaultEndpointMapping</span><span class="p">(</span><span class="k">for</span> <span class="nv">target</span><span class="p">:</span> <span class="kt">Target</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Endpoint.html">Endpoint</a></span><span class="o">&lt;</span><span class="kt">Target</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -658,7 +658,7 @@ Note: this was previously in an extension, however it must be in the original cl
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">MoyaProvider</span><span class="o">&lt;</span><span class="kt">Target</span><span class="p">:</span> <span class="kt"><a href="../Protocols/TargetType.html">TargetType</a></span><span class="o">&gt;</span><span class="p">:</span> <span class="kt"><a href="../Protocols/MoyaProviderType.html">MoyaProviderType</a></span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">defaultRequestMapping</span><span class="p">(</span><span class="k">for</span> <span class="nv">endpoint</span><span class="p">:</span> <span class="kt"><a href="../Classes/Endpoint.html">Endpoint</a></span><span class="o">&lt;</span><span class="kt">Target</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">closure</span><span class="p">:</span> <span class="kt"><a href="../Classes/MoyaProvider.html#/s:4Moya0A8ProviderC20RequestResultClosurea">RequestResultClosure</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -685,7 +685,7 @@ Note: this was previously in an extension, however it must be in the original cl
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">MoyaProvider</span><span class="o">&lt;</span><span class="kt">Target</span><span class="p">:</span> <span class="kt"><a href="../Protocols/TargetType.html">TargetType</a></span><span class="o">&gt;</span><span class="p">:</span> <span class="kt"><a href="../Protocols/MoyaProviderType.html">MoyaProviderType</a></span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">defaultAlamofireManager</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Manager</span></code></pre>
 
                         </div>
                       </div>
@@ -743,7 +743,7 @@ Note: this was previously in an extension, however it must be in the original cl
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">MoyaProvider</span><span class="o">&lt;</span><span class="kt">Target</span><span class="p">:</span> <span class="kt"><a href="../Protocols/TargetType.html">TargetType</a></span><span class="o">&gt;</span><span class="p">:</span> <span class="kt"><a href="../Protocols/MoyaProviderType.html">MoyaProviderType</a></span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">cancelCompletion</span><span class="p">(</span><span class="n">_</span> <span class="nv">completion</span><span class="p">:</span> <span class="kt">Moya</span><span class="o">.</span><span class="kt"><a href="../Typealiases.html#/s:4Moya10Completiona">Completion</a></span><span class="p">,</span> <span class="nv">target</span><span class="p">:</span> <span class="kt">Target</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -828,7 +828,7 @@ Note: this was previously in an extension, however it must be in the original cl
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">MoyaProvider</span><span class="o">&lt;</span><span class="kt">Target</span><span class="p">:</span> <span class="kt"><a href="../Protocols/TargetType.html">TargetType</a></span><span class="o">&gt;</span><span class="p">:</span> <span class="kt"><a href="../Protocols/MoyaProviderType.html">MoyaProviderType</a></span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">neverStub</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">Target</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Moya</span><span class="o">.</span><span class="kt"><a href="../Enums/StubBehavior.html">StubBehavior</a></span></code></pre>
 
                         </div>
                       </div>
@@ -855,7 +855,7 @@ Note: this was previously in an extension, however it must be in the original cl
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">MoyaProvider</span><span class="o">&lt;</span><span class="kt">Target</span><span class="p">:</span> <span class="kt"><a href="../Protocols/TargetType.html">TargetType</a></span><span class="o">&gt;</span><span class="p">:</span> <span class="kt"><a href="../Protocols/MoyaProviderType.html">MoyaProviderType</a></span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">immediatelyStub</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">Target</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Moya</span><span class="o">.</span><span class="kt"><a href="../Enums/StubBehavior.html">StubBehavior</a></span></code></pre>
 
                         </div>
                       </div>
@@ -882,7 +882,7 @@ Note: this was previously in an extension, however it must be in the original cl
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">MoyaProvider</span><span class="o">&lt;</span><span class="kt">Target</span><span class="p">:</span> <span class="kt"><a href="../Protocols/TargetType.html">TargetType</a></span><span class="o">&gt;</span><span class="p">:</span> <span class="kt"><a href="../Protocols/MoyaProviderType.html">MoyaProviderType</a></span></code></pre>
+                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">delayedStub</span><span class="p">(</span><span class="n">_</span> <span class="nv">seconds</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">Target</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Moya</span><span class="o">.</span><span class="kt"><a href="../Enums/StubBehavior.html">StubBehavior</a></span></code></pre>
 
                         </div>
                       </div>

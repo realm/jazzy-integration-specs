@@ -115,6 +115,14 @@ class TopLevelClass {
             func nn2() {}
         }
     }
+
+#if os(tvOS)
+    /// Documented method that is not compiled
+    func noDeclaration() {}
+
+    // Undocumented method that is not compiled
+    func noDeclarationToo() {}
+#endif
 }
 
 /// Extension of doubly-nested class
