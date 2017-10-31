@@ -315,9 +315,9 @@ If you want to feed your service arbitrary URLs with no common root, use <code>r
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span>
-            <span class="nv">baseURL</span><span class="p">:</span> <span class="kt"><a href="../Protocols/URLConvertible.html">URLConvertible</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-            <span class="nv">useDefaultTransformers</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
-            <span class="nv">networking</span><span class="p">:</span> <span class="kt"><a href="../Protocols/NetworkingProviderConvertible.html">NetworkingProviderConvertible</a></span> <span class="o">=</span> <span class="kt">URLSessionConfiguration</span><span class="o">.</span><span class="n">ephemeral</span><span class="p">)</span></code></pre>
+        <span class="nv">baseURL</span><span class="p">:</span> <span class="kt"><a href="../Protocols/URLConvertible.html">URLConvertible</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+        <span class="nv">useDefaultTransformers</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">,</span>
+        <span class="nv">networking</span><span class="p">:</span> <span class="kt"><a href="../Protocols/NetworkingProviderConvertible.html">NetworkingProviderConvertible</a></span> <span class="o">=</span> <span class="kt">URLSessionConfiguration</span><span class="o">.</span><span class="n">ephemeral</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -561,10 +561,10 @@ for global config and more fine-grained matching</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span>
-            <span class="n">_</span> <span class="nv">pattern</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ConfigurationPatternConvertible.html">ConfigurationPatternConvertible</a></span><span class="p">,</span>
-            <span class="nv">requestMethods</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Enums/RequestMethod.html">RequestMethod</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-            <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-            <span class="nv">configurer</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="k">inout</span> <span class="kt"><a href="../Structs/Configuration.html">Configuration</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+        <span class="n">_</span> <span class="nv">pattern</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ConfigurationPatternConvertible.html">ConfigurationPatternConvertible</a></span><span class="p">,</span>
+        <span class="nv">requestMethods</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Enums/RequestMethod.html">RequestMethod</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+        <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+        <span class="nv">configurer</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="k">inout</span> <span class="kt"><a href="../Structs/Configuration.html">Configuration</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -653,10 +653,10 @@ for pattern-based matching, and for details about the parameters.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">func</span> <span class="nf">configure</span><span class="p">(</span>
-            <span class="n">whenURLMatches</span> <span class="nv">configurationPattern</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">URL</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="p">{</span> <span class="n">_</span> <span class="k">in</span> <span class="kc">true</span> <span class="p">},</span>
-            <span class="nv">requestMethods</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Enums/RequestMethod.html">RequestMethod</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-            <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-            <span class="nv">configurer</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="k">inout</span> <span class="kt"><a href="../Structs/Configuration.html">Configuration</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+        <span class="n">whenURLMatches</span> <span class="nv">configurationPattern</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">URL</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="p">{</span> <span class="n">_</span> <span class="k">in</span> <span class="kc">true</span> <span class="p">},</span>
+        <span class="nv">requestMethods</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Enums/RequestMethod.html">RequestMethod</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+        <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+        <span class="nv">configurer</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="k">inout</span> <span class="kt"><a href="../Structs/Configuration.html">Configuration</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -733,14 +733,14 @@ for more robust transformation options.
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">func</span> <span class="n">configureTransformer</span><span class="o">&lt;</span><span class="kt">I</span><span class="p">,</span> <span class="kt">O</span><span class="o">&gt;</span><span class="p">(</span>
-            <span class="n">_</span> <span class="nv">pattern</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ConfigurationPatternConvertible.html">ConfigurationPatternConvertible</a></span><span class="p">,</span>
-            <span class="nv">requestMethods</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Enums/RequestMethod.html">RequestMethod</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-            <span class="n">atStage</span> <span class="nv">stage</span><span class="p">:</span> <span class="kt"><a href="../Classes/PipelineStageKey.html">PipelineStageKey</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">model</span><span class="p">,</span>
-            <span class="nv">action</span><span class="p">:</span> <span class="kt"><a href="../Structs/PipelineStage.html">PipelineStage</a></span><span class="o">.</span><span class="kt">MutationAction</span> <span class="o">=</span> <span class="o">.</span><span class="n">replaceExisting</span><span class="p">,</span>
-            <span class="n">onInputTypeMismatch</span> <span class="nv">mismatchAction</span><span class="p">:</span> <span class="kt"><a href="../Enums/InputTypeMismatchAction.html">InputTypeMismatchAction</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">error</span><span class="p">,</span>
-            <span class="nv">transformErrors</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
-            <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-            <span class="nv">contentTransform</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Structs/ResponseContentTransformer.html">ResponseContentTransformer</a></span><span class="o">&lt;</span><span class="kt">I</span><span class="p">,</span> <span class="kt">O</span><span class="o">&gt;.</span><span class="kt">Processor</span><span class="p">)</span></code></pre>
+        <span class="n">_</span> <span class="nv">pattern</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ConfigurationPatternConvertible.html">ConfigurationPatternConvertible</a></span><span class="p">,</span>
+        <span class="nv">requestMethods</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Enums/RequestMethod.html">RequestMethod</a></span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+        <span class="n">atStage</span> <span class="nv">stage</span><span class="p">:</span> <span class="kt"><a href="../Classes/PipelineStageKey.html">PipelineStageKey</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">model</span><span class="p">,</span>
+        <span class="nv">action</span><span class="p">:</span> <span class="kt"><a href="../Structs/PipelineStage.html">PipelineStage</a></span><span class="o">.</span><span class="kt">MutationAction</span> <span class="o">=</span> <span class="o">.</span><span class="n">replaceExisting</span><span class="p">,</span>
+        <span class="n">onInputTypeMismatch</span> <span class="nv">mismatchAction</span><span class="p">:</span> <span class="kt"><a href="../Enums/InputTypeMismatchAction.html">InputTypeMismatchAction</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">error</span><span class="p">,</span>
+        <span class="nv">transformErrors</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span>
+        <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+        <span class="nv">contentTransform</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Structs/ResponseContentTransformer.html">ResponseContentTransformer</a></span><span class="o">&lt;</span><span class="kt">I</span><span class="p">,</span> <span class="kt">O</span><span class="o">&gt;.</span><span class="kt">Processor</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
