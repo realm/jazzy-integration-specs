@@ -378,7 +378,7 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">RLMArray</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">RLMArray</span><span class="o">&lt;</span><span class="kt">RLMObjectType</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt"><a href="Protocols/RLMCollection.html">RLMCollection</a></span><span class="p">,</span> <span class="kt">NSFastEnumeration</span> <span class="k">where</span> <span class="kt">RLMObjectType</span> <span class="p">:</span> <span class="kt"><a href="Classes/RLMObject.html">RLMObject</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1005,7 +1005,7 @@ up-to-date done on a background thread whenever possible.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">RLMResults</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">RLMResults</span><span class="o">&lt;</span><span class="kt">RLMObjectType</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt"><a href="Protocols/RLMCollection.html">RLMCollection</a></span><span class="p">,</span> <span class="kt">NSFastEnumeration</span> <span class="k">where</span> <span class="kt">RLMObjectType</span> <span class="p">:</span> <span class="kt"><a href="Classes/RLMObject.html">RLMObject</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1044,7 +1044,7 @@ parent object.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">RLMLinkingObjects</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">RLMLinkingObjects</span><span class="o">&lt;</span><span class="kt">RLMObjectType</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Classes/RLMResults.html">RLMResults</a></span><span class="o">&lt;</span><span class="kt"><a href="Classes/RLMObject.html">RLMObject</a></span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">RLMObjectType</span> <span class="p">:</span> <span class="kt"><a href="Classes/RLMObject.html">RLMObject</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1692,7 +1692,7 @@ thread-confined object.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">RLMThreadSafeReference</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">class</span> <span class="kt">RLMThreadSafeReference</span><span class="o">&lt;</span><span class="kt">Confined</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">NSObject</span> <span class="k">where</span> <span class="kt">Confined</span> <span class="p">:</span> <span class="kt"><a href="Protocols/RLMThreadConfined.html">RLMThreadConfined</a></span></code></pre>
 
                         </div>
                       </div>

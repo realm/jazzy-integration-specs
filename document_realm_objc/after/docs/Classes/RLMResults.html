@@ -912,7 +912,7 @@ An invalidated results collection can be accessed, but will always be empty.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">objects</span><span class="p">(</span><span class="n">with</span> <span class="nv">predicate</span><span class="p">:</span> <span class="kt">NSPredicate</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">RLMResults</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">objects</span><span class="p">(</span><span class="n">with</span> <span class="nv">predicate</span><span class="p">:</span> <span class="kt">NSPredicate</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">RLMResults</span><span class="o">&lt;</span><span class="kt">RLMObjectType</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -972,7 +972,7 @@ An invalidated results collection can be accessed, but will always be empty.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">sortedResults</span><span class="p">(</span><span class="n">usingKeyPath</span> <span class="nv">keyPath</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">ascending</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">RLMResults</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">sortedResults</span><span class="p">(</span><span class="n">usingKeyPath</span> <span class="nv">keyPath</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">ascending</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">RLMResults</span><span class="o">&lt;</span><span class="kt">RLMObjectType</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -1044,7 +1044,7 @@ An invalidated results collection can be accessed, but will always be empty.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">sortedResults</span><span class="p">(</span><span class="n">usingProperty</span> <span class="nv">property</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">ascending</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">RLMResults</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">sortedResults</span><span class="p">(</span><span class="n">usingProperty</span> <span class="nv">property</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">ascending</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">RLMResults</span><span class="o">&lt;</span><span class="kt">RLMObjectType</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -1115,7 +1115,7 @@ An invalidated results collection can be accessed, but will always be empty.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">sortedResults</span><span class="p">(</span><span class="n">using</span> <span class="nv">properties</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/RLMSortDescriptor.html">RLMSortDescriptor</a></span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">RLMResults</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">sortedResults</span><span class="p">(</span><span class="n">using</span> <span class="nv">properties</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/RLMSortDescriptor.html">RLMSortDescriptor</a></span><span class="p">])</span> <span class="o">-&gt;</span> <span class="kt">RLMResults</span><span class="o">&lt;</span><span class="kt">RLMObjectType</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -1241,7 +1241,7 @@ to be sent to the block. To stop receiving updates, call <code>-stop</code> on t
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">addNotificationBlock</span><span class="p">(</span><span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">RLMResults</span></code></pre>
+                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">addNotificationBlock</span><span class="p">(</span><span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">RLMResults</span><span class="o">&lt;</span><span class="kt">RLMObjectType</span><span class="o">&gt;</span><span class="p">?,</span> <span class="kt"><a href="../Classes/RLMCollectionChange.html">RLMCollectionChange</a></span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RLMNotificationToken.html">RLMNotificationToken</a></span></code></pre>
 
                         </div>
                       </div>
