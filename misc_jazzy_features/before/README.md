@@ -4,6 +4,6 @@
 
 Autolink to `DocumentedEnum.documentedValue`.
 
-Autolink to `Operators.<(...)`.
+Autolink to `Operators_Namespace.<(...)`.
 
 Autolink to `GenericStruct<Anything>` links to `GenericStruct`.
