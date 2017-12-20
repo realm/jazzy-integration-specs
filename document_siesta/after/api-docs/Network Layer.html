@@ -270,7 +270,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">NetworkingProvider</span><span class="p">:</span> <span class="kt"><a href="Protocols/NetworkingProviderConvertible.html">NetworkingProviderConvertible</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">NetworkingProvider</span><span class="p">:</span> <span class="kt"><a href="Protocols/NetworkingProviderConvertible.html">NetworkingProviderConvertible</a></span></code></pre>
 
                         </div>
                       </div>
@@ -294,15 +294,15 @@
 Used by the <code><a href="Classes/Service.html">Service</a></code> initializer.</p>
 
 <p>For example, instead of having to do this:</p>
-<pre class="highlight plaintext"><code>Service(baseURL: "http://foo.bar", networking:
-  URLSessionProvider(session:
-      URLSession(configuration:
-          URLSessionConfiguration.default)))
+<pre class="highlight swift"><code><span class="kt">Service</span><span class="p">(</span><span class="nv">baseURL</span><span class="p">:</span> <span class="s">"http://foo.bar"</span><span class="p">,</span> <span class="nv">networking</span><span class="p">:</span>
+  <span class="kt">URLSessionProvider</span><span class="p">(</span><span class="nv">session</span><span class="p">:</span>
+      <span class="kt">URLSession</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span>
+          <span class="kt">URLSessionConfiguration</span><span class="o">.</span><span class="k">default</span><span class="p">)))</span>
 </code></pre>
 
 <p>…you can do this:</p>
-<pre class="highlight plaintext"><code>Service(baseURL: "http://foo.bar", networking:
-  URLSessionConfiguration.default)
+<pre class="highlight swift"><code><span class="kt">Service</span><span class="p">(</span><span class="nv">baseURL</span><span class="p">:</span> <span class="s">"http://foo.bar"</span><span class="p">,</span> <span class="nv">networking</span><span class="p">:</span>
+  <span class="kt">URLSessionConfiguration</span><span class="o">.</span><span class="k">default</span><span class="p">)</span>
 </code></pre>
 
 <p>Siesta supports conversion of the following types into a networking provider:</p>
@@ -321,7 +321,7 @@ Used by the <code><a href="Classes/Service.html">Service</a></code> initializer.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">NetworkingProviderConvertible</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">NetworkingProviderConvertible</span></code></pre>
 
                         </div>
                       </div>
@@ -355,7 +355,7 @@ Used by the <code><a href="Classes/Service.html">Service</a></code> initializer.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">RequestNetworking</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">RequestNetworking</span></code></pre>
 
                         </div>
                       </div>
@@ -382,7 +382,7 @@ Used by the <code><a href="Classes/Service.html">Service</a></code> initializer.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">RequestNetworkingCompletionCallback</span> <span class="o">=</span> <span class="p">(</span><span class="kt">HTTPURLResponse</span><span class="p">?,</span> <span class="kt">Data</span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">RequestNetworkingCompletionCallback</span> <span class="o">=</span> <span class="p">(</span><span class="kt">HTTPURLResponse</span><span class="p">?,</span> <span class="kt">Data</span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
 
                         </div>
                       </div>
@@ -410,7 +410,7 @@ Used by the <code><a href="Classes/Service.html">Service</a></code> initializer.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RequestTransferMetrics</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RequestTransferMetrics</span></code></pre>
 
                         </div>
                       </div>
@@ -442,7 +442,7 @@ Used by the <code><a href="Classes/Service.html">Service</a></code> initializer.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">SessionTaskContainer</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">SessionTaskContainer</span></code></pre>
 
                         </div>
                       </div>

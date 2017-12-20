@@ -365,7 +365,7 @@
 <h3 id='cocoapods' class='heading'>CocoaPods</h3>
 
 <p><a href="http://cocoapods.org">CocoaPods</a> is a dependency manager for Cocoa projects. You can install it with the following command:</p>
-<pre class="highlight shell"><code><span class="gp">$ </span>gem install cocoapods
+<pre class="highlight shell"><code><span class="nv">$ </span>gem install cocoapods
 </code></pre>
 
 <blockquote>
@@ -383,15 +383,15 @@
 </code></pre>
 
 <p>Then, run the following command:</p>
-<pre class="highlight shell"><code><span class="gp">$ </span>pod install
+<pre class="highlight shell"><code><span class="nv">$ </span>pod install
 </code></pre>
 <h3 id='carthage' class='heading'>Carthage</h3>
 
 <p><a href="https://github.com/Carthage/Carthage">Carthage</a> is a decentralized dependency manager that builds your dependencies and provides you with binary frameworks.</p>
 
 <p>You can install Carthage with <a href="http://brew.sh/">Homebrew</a> using the following command:</p>
-<pre class="highlight shell"><code><span class="gp">$ </span>brew update
-<span class="gp">$ </span>brew install carthage
+<pre class="highlight shell"><code><span class="nv">$ </span>brew update
+<span class="nv">$ </span>brew install carthage
 </code></pre>
 
 <p>To integrate Alamofire into your Xcode project using Carthage, specify it in your <code>Cartfile</code>:</p>
@@ -416,13 +416,13 @@
 <ul>
 <li>Open up Terminal, <code>cd</code> into your top-level project directory, and run the following command <q>if</q> your project is not initialized as a git repository:</li>
 </ul>
-<pre class="highlight shell"><code><span class="gp">$ </span>git init
+<pre class="highlight shell"><code><span class="nv">$ </span>git init
 </code></pre>
 
 <ul>
 <li>Add Alamofire as a git <a href="http://git-scm.com/docs/git-submodule">submodule</a> by running the following command:</li>
 </ul>
-<pre class="highlight shell"><code><span class="gp">$ </span>git submodule add https://github.com/Alamofire/Alamofire.git
+<pre class="highlight shell"><code><span class="nv">$ </span>git submodule add https://github.com/Alamofire/Alamofire.git
 </code></pre>
 
 <ul>
@@ -1052,10 +1052,10 @@
 </code></pre>
 
 <p>Outputs:</p>
-<pre class="highlight shell"><code><span class="gp">$ </span>curl -i <span class="se">\</span>
-    -H <span class="s2">"User-Agent: Alamofire/4.0.0"</span> <span class="se">\</span>
-    -H <span class="s2">"Accept-Encoding: gzip;q=1.0, compress;q=0.5"</span> <span class="se">\</span>
-    -H <span class="s2">"Accept-Language: en;q=1.0,fr;q=0.9,de;q=0.8,zh-Hans;q=0.7,zh-Hant;q=0.6,ja;q=0.5"</span> <span class="se">\</span>
+<pre class="highlight shell"><code><span class="nv">$ </span>curl <span class="nt">-i</span> <span class="se">\</span>
+    <span class="nt">-H</span> <span class="s2">"User-Agent: Alamofire/4.0.0"</span> <span class="se">\</span>
+    <span class="nt">-H</span> <span class="s2">"Accept-Encoding: gzip;q=1.0, compress;q=0.5"</span> <span class="se">\</span>
+    <span class="nt">-H</span> <span class="s2">"Accept-Language: en;q=1.0,fr;q=0.9,de;q=0.8,zh-Hans;q=0.7,zh-Hant;q=0.6,ja;q=0.5"</span> <span class="se">\</span>
     <span class="s2">"https://httpbin.org/get?foo=bar"</span>
 </code></pre>
 
@@ -1116,16 +1116,16 @@
 
 <p>The first way to customize the <code><a href="Classes/SessionDelegate.html">SessionDelegate</a></code> behavior is through the use of the override closures. Each closure gives you the ability to override the implementation of the matching <code><a href="Classes/SessionDelegate.html">SessionDelegate</a></code> API, yet still use the default implementation for all other APIs. This makes it easy to customize subsets of the delegate functionality. Here are a few examples of some of the override closures available:</p>
 <pre class="highlight swift"><code><span class="c1">/// Overrides default behavior for URLSessionDelegate method `urlSession(_:didReceive:completionHandler:)`.</span>
-<span class="n">open</span> <span class="k">var</span> <span class="nv">sessionDidReceiveChallenge</span><span class="p">:</span> <span class="p">((</span><span class="kt">URLSession</span><span class="p">,</span> <span class="kt">URLAuthenticationChallenge</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">URLSession</span><span class="o">.</span><span class="kt">AuthChallengeDisposition</span><span class="p">,</span> <span class="kt">URLCredential</span><span class="p">?))?</span>
+<span class="kd">open</span> <span class="k">var</span> <span class="nv">sessionDidReceiveChallenge</span><span class="p">:</span> <span class="p">((</span><span class="kt">URLSession</span><span class="p">,</span> <span class="kt">URLAuthenticationChallenge</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">URLSession</span><span class="o">.</span><span class="kt">AuthChallengeDisposition</span><span class="p">,</span> <span class="kt">URLCredential</span><span class="p">?))?</span>
 
 <span class="c1">/// Overrides default behavior for URLSessionDelegate method `urlSessionDidFinishEvents(forBackgroundURLSession:)`.</span>
-<span class="n">open</span> <span class="k">var</span> <span class="nv">sessionDidFinishEventsForBackgroundURLSession</span><span class="p">:</span> <span class="p">((</span><span class="kt">URLSession</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span>
+<span class="kd">open</span> <span class="k">var</span> <span class="nv">sessionDidFinishEventsForBackgroundURLSession</span><span class="p">:</span> <span class="p">((</span><span class="kt">URLSession</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span>
 
 <span class="c1">/// Overrides default behavior for URLSessionTaskDelegate method `urlSession(_:task:willPerformHTTPRedirection:newRequest:completionHandler:)`.</span>
-<span class="n">open</span> <span class="k">var</span> <span class="nv">taskWillPerformHTTPRedirection</span><span class="p">:</span> <span class="p">((</span><span class="kt">URLSession</span><span class="p">,</span> <span class="kt">URLSessionTask</span><span class="p">,</span> <span class="kt">HTTPURLResponse</span><span class="p">,</span> <span class="kt">URLRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">URLRequest</span><span class="p">?)?</span>
+<span class="kd">open</span> <span class="k">var</span> <span class="nv">taskWillPerformHTTPRedirection</span><span class="p">:</span> <span class="p">((</span><span class="kt">URLSession</span><span class="p">,</span> <span class="kt">URLSessionTask</span><span class="p">,</span> <span class="kt">HTTPURLResponse</span><span class="p">,</span> <span class="kt">URLRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">URLRequest</span><span class="p">?)?</span>
 
 <span class="c1">/// Overrides default behavior for URLSessionDataDelegate method `urlSession(_:dataTask:willCacheResponse:completionHandler:)`.</span>
-<span class="n">open</span> <span class="k">var</span> <span class="nv">dataTaskWillCacheResponse</span><span class="p">:</span> <span class="p">((</span><span class="kt">URLSession</span><span class="p">,</span> <span class="kt">URLSessionDataTask</span><span class="p">,</span> <span class="kt">CachedURLResponse</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CachedURLResponse</span><span class="p">?)?</span>
+<span class="kd">open</span> <span class="k">var</span> <span class="nv">dataTaskWillCacheResponse</span><span class="p">:</span> <span class="p">((</span><span class="kt">URLSession</span><span class="p">,</span> <span class="kt">URLSessionDataTask</span><span class="p">,</span> <span class="kt">CachedURLResponse</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">CachedURLResponse</span><span class="p">?)?</span>
 </code></pre>
 
 <p>The following is a short example of how to use the <code>taskWillPerformHTTPRedirection</code> to avoid following redirects to any <code>apple.com</code> domains.</p>
