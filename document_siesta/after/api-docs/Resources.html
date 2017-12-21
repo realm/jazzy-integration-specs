@@ -280,7 +280,7 @@ If you want to feed your service arbitrary URLs with no common root, use <code>r
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="n">open</span> <span class="kd">class</span> <span class="kt">Service</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">Service</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                         </div>
                       </div>
@@ -323,7 +323,7 @@ questions changes.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Resource</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Resource</span><span class="p">:</span> <span class="kt">NSObject</span></code></pre>
 
                         </div>
                       </div>
@@ -358,7 +358,7 @@ the content’s type and freshness.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Entity</span><span class="o">&lt;</span><span class="kt">ContentType</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Entity</span><span class="o">&lt;</span><span class="kt">ContentType</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -381,21 +381,21 @@ the content’s type and freshness.</p>
                         <p>Mixin that provides convenience accessors for the content of an optional contained entity.</p>
 
 <p>Allows you to replace the following:</p>
-<pre class="highlight plaintext"><code>resource.latestData?.content as? String
-(resource.latestError?.entity?.content as? [String:AnyObject])?["error.detail"]
+<pre class="highlight swift"><code><span class="n">resource</span><span class="o">.</span><span class="n">latestData</span><span class="p">?</span><span class="o">.</span><span class="n">content</span> <span class="k">as?</span> <span class="kt">String</span>
+<span class="p">(</span><span class="n">resource</span><span class="o">.</span><span class="n">latestError</span><span class="p">?</span><span class="o">.</span><span class="n">entity</span><span class="p">?</span><span class="o">.</span><span class="n">content</span> <span class="k">as?</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span><span class="kt">AnyObject</span><span class="p">])?[</span><span class="s">"error.detail"</span><span class="p">]</span>
 </code></pre>
 
 <p>…with:</p>
-<pre class="highlight plaintext"><code>resource.text
-resource.latestError?.jsonDict["error.detail"]
+<pre class="highlight swift"><code><span class="n">resource</span><span class="o">.</span><span class="n">text</span>
+<span class="n">resource</span><span class="o">.</span><span class="n">latestError</span><span class="p">?</span><span class="o">.</span><span class="n">jsonDict</span><span class="p">[</span><span class="s">"error.detail"</span><span class="p">]</span>
 </code></pre>
 
 <p>You can extend this protocol to provide your own convenience accessors. For example:</p>
-<pre class="highlight plaintext"><code>extension TypedContentAccessors {
-  var doorknob: UIDoorknob {
-    return typedContent(ifNone: placeholderKnob)
-  }
-}
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">TypedContentAccessors</span> <span class="p">{</span>
+  <span class="k">var</span> <span class="nv">doorknob</span><span class="p">:</span> <span class="kt">UIDoorknob</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="nf">typedContent</span><span class="p">(</span><span class="nv">ifNone</span><span class="p">:</span> <span class="n">placeholderKnob</span><span class="p">)</span>
+  <span class="p">}</span>
+<span class="p">}</span>
 </code></pre>
 
 <p>Note that the sample code above is <em>only</em> a convenience accessor. It checks whether the entity already has a
@@ -408,7 +408,7 @@ a custom <code><a href="Protocols/ResponseTransformer.html">ResponseTransformer<
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">TypedContentAccessors</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">TypedContentAccessors</span></code></pre>
 
                         </div>
                       </div>
@@ -445,7 +445,7 @@ a custom <code><a href="Protocols/ResponseTransformer.html">ResponseTransformer<
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Configuration</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Configuration</span></code></pre>
 
                         </div>
                       </div>
@@ -495,7 +495,7 @@ one specific resource).</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ConfigurationPatternConvertible</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ConfigurationPatternConvertible</span></code></pre>
 
                         </div>
                       </div>

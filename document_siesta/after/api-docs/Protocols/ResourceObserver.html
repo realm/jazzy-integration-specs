@@ -241,7 +241,7 @@
             <h1>ResourceObserver</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ResourceObserver</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ResourceObserver</span></code></pre>
 
                 </div>
               </div>
@@ -279,7 +279,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">resourceChanged</span><span class="p">(</span><span class="n">_</span> <span class="nv">resource</span><span class="p">:</span> <span class="kt"><a href="../Classes/Resource.html">Resource</a></span><span class="p">,</span> <span class="nv">event</span><span class="p">:</span> <span class="kt"><a href="../Enums/ResourceEvent.html">ResourceEvent</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">resourceChanged</span><span class="p">(</span><span class="n">_</span> <span class="nv">resource</span><span class="p">:</span> <span class="kt"><a href="../Classes/Resource.html">Resource</a></span><span class="p">,</span> <span class="nv">event</span><span class="p">:</span> <span class="kt"><a href="../Enums/ResourceEvent.html">ResourceEvent</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -315,7 +315,7 @@ Will <em>always</em> receive a call with a value of 1 when the request completes
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">resourceRequestProgress</span><span class="p">(</span><span class="k">for</span> <span class="nv">resource</span><span class="p">:</span> <span class="kt"><a href="../Classes/Resource.html">Resource</a></span><span class="p">,</span> <span class="nv">progress</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">resourceRequestProgress</span><span class="p">(</span><span class="k">for</span> <span class="nv">resource</span><span class="p">:</span> <span class="kt"><a href="../Classes/Resource.html">Resource</a></span><span class="p">,</span> <span class="nv">progress</span><span class="p">:</span> <span class="kt">Double</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -347,10 +347,10 @@ what caused it to stop observing. This is because there is no way for Siesta to 
 to be deallocated; it can only check whether the observer is already gone.</p>
 
 <p>For example:</p>
-<pre class="highlight plaintext"><code>var myObserver: MyObserver? = MyObserver()
-resource.addObserver(myObserver!)  // myObserver is self-owned, so...
-myObserver = nil                   // this deallocates it, but...
-// ...myObserver never receives stoppedObserving(resource:).
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">myObserver</span><span class="p">:</span> <span class="kt">MyObserver</span><span class="p">?</span> <span class="o">=</span> <span class="kt">MyObserver</span><span class="p">()</span>
+<span class="n">resource</span><span class="o">.</span><span class="nf">addObserver</span><span class="p">(</span><span class="n">myObserver</span><span class="o">!</span><span class="p">)</span>  <span class="c1">// myObserver is self-owned, so...</span>
+<span class="n">myObserver</span> <span class="o">=</span> <span class="kc">nil</span>                   <span class="c1">// this deallocates it, but...</span>
+<span class="c1">// ...myObserver never receives stoppedObserving(resource:).</span>
 </code></pre>
 
 <p>In the situation above, <code>MyObserver</code> should implement any end-of-lifcycle cleanup using <code>deinit</code>.</p>
@@ -367,7 +367,7 @@ myObserver = nil                   // this deallocates it, but...
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">func</span> <span class="nf">stoppedObserving</span><span class="p">(</span><span class="nv">resource</span><span class="p">:</span> <span class="kt"><a href="../Classes/Resource.html">Resource</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">stoppedObserving</span><span class="p">(</span><span class="nv">resource</span><span class="p">:</span> <span class="kt"><a href="../Classes/Resource.html">Resource</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -403,7 +403,7 @@ has an identity equals to a new observer, then <code><a href="../Classes/Resourc
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="k">var</span> <span class="nv">observerIdentity</span><span class="p">:</span> <span class="kt">AnyHashable</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">observerIdentity</span><span class="p">:</span> <span class="kt">AnyHashable</span></code></pre>
 
                         </div>
                       </div>

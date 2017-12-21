@@ -351,12 +351,12 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">typedef</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">RLMNotification</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">RLMNotification</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">struct</span> <span class="kt">RLMNotification</span> <span class="p">:</span> <span class="kt">RawRepresentable</span><span class="p">,</span> <span class="n">_SwiftNewtypeWrapper</span><span class="p">,</span> <span class="kt">Equatable</span><span class="p">,</span> <span class="kt">Hashable</span><span class="p">,</span> <span class="n">_ObjectiveCBridgeable</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">RLMNotification</span> <span class="p">:</span> <span class="kt">RawRepresentable</span><span class="p">,</span> <span class="n">_SwiftNewtypeWrapper</span><span class="p">,</span> <span class="kt">Equatable</span><span class="p">,</span> <span class="kt">Hashable</span><span class="p">,</span> <span class="n">_ObjectiveCBridgeable</span></code></pre>
 
                         </div>
                       </div>
@@ -396,13 +396,13 @@ properties can only be accessed using keyed subscripting.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">RLMObjectMigrationBlock</span><span class="p">)(</span><span class="n"><a href="Classes/RLMObject.html">RLMObject</a></span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">,</span>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">RLMObjectMigrationBlock</span><span class="p">)(</span><span class="n"><a href="Classes/RLMObject.html">RLMObject</a></span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">,</span>
                                         <span class="n"><a href="Classes/RLMObject.html">RLMObject</a></span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">typealias</span> <span class="kt">RLMObjectMigrationBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="Classes/RLMObject.html">RLMObject</a></span><span class="p">?,</span> <span class="kt"><a href="Classes/RLMObject.html">RLMObject</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">RLMObjectMigrationBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="Classes/RLMObject.html">RLMObject</a></span><span class="p">?,</span> <span class="kt"><a href="Classes/RLMObject.html">RLMObject</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
 
                         </div>
                       </div>
@@ -479,14 +479,14 @@ called again after an error occurs.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">RLMObjectChangeBlock</span><span class="p">)(</span><span class="n">BOOL</span><span class="p">,</span>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">RLMObjectChangeBlock</span><span class="p">)(</span><span class="n">BOOL</span><span class="p">,</span>
                                      <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="Classes/RLMPropertyChange.html">RLMPropertyChange</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">,</span>
                                      <span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">typealias</span> <span class="kt">RLMObjectChangeBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Bool</span><span class="p">,</span> <span class="p">[</span><span class="kt"><a href="Classes/RLMPropertyChange.html">RLMPropertyChange</a></span><span class="p">]?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">RLMObjectChangeBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Bool</span><span class="p">,</span> <span class="p">[</span><span class="kt"><a href="Classes/RLMPropertyChange.html">RLMPropertyChange</a></span><span class="p">]?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
 
                         </div>
                       </div>
@@ -522,13 +522,13 @@ called again after an error occurs.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">RLMAsyncOpenRealmCallback</span><span class="p">)(</span><span class="n"><a href="Classes/RLMRealm.html">RLMRealm</a></span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">,</span>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">RLMAsyncOpenRealmCallback</span><span class="p">)(</span><span class="n"><a href="Classes/RLMRealm.html">RLMRealm</a></span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">,</span>
                                           <span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">typealias</span> <span class="kt">RLMAsyncOpenRealmCallback</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="Classes/RLMRealm.html">RLMRealm</a></span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">RLMAsyncOpenRealmCallback</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="Classes/RLMRealm.html">RLMRealm</a></span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
 
                         </div>
                       </div>
@@ -563,13 +563,13 @@ called again after an error occurs.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">RLMNotificationBlock</span><span class="p">)(</span><span class="n"><a href="Type Definitions.html#/c:RLMConstants.h@T@RLMNotification">RLMNotification</a></span> <span class="n">_Nonnull</span><span class="p">,</span>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">RLMNotificationBlock</span><span class="p">)(</span><span class="n"><a href="Type Definitions.html#/c:RLMConstants.h@T@RLMNotification">RLMNotification</a></span> <span class="n">_Nonnull</span><span class="p">,</span>
                                      <span class="n"><a href="Classes/RLMRealm.html">RLMRealm</a></span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">)</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">typealias</span> <span class="kt">RLMNotificationBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="Type Definitions.html#/c:RLMConstants.h@T@RLMNotification">RLMNotification</a></span><span class="p">,</span> <span class="kt"><a href="Classes/RLMRealm.html">RLMRealm</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">RLMNotificationBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="Type Definitions.html#/c:RLMConstants.h@T@RLMNotification">RLMNotification</a></span><span class="p">,</span> <span class="kt"><a href="Classes/RLMRealm.html">RLMRealm</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
 
                         </div>
                       </div>
@@ -599,12 +599,12 @@ called again after an error occurs.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">RLMMigrationBlock</span><span class="p">)(</span><span class="n"><a href="Classes/RLMMigration.html">RLMMigration</a></span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">,</span> <span class="kt">uint64_t</span><span class="p">)</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">RLMMigrationBlock</span><span class="p">)(</span><span class="n"><a href="Classes/RLMMigration.html">RLMMigration</a></span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">,</span> <span class="kt">uint64_t</span><span class="p">)</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">typealias</span> <span class="kt">RLMMigrationBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="Classes/RLMMigration.html">RLMMigration</a></span><span class="p">,</span> <span class="kt">UInt64</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">RLMMigrationBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="Classes/RLMMigration.html">RLMMigration</a></span><span class="p">,</span> <span class="kt">UInt64</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
 
                         </div>
                       </div>
@@ -677,12 +677,12 @@ The compaction will be skipped if another process is accessing it.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">typedef</span> <span class="n">BOOL</span> <span class="p">(</span><span class="o">^</span><span class="n">RLMShouldCompactOnLaunchBlock</span><span class="p">)(</span><span class="n">NSUInteger</span><span class="p">,</span> <span class="n">NSUInteger</span><span class="p">)</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="n">BOOL</span> <span class="p">(</span><span class="o">^</span><span class="n">RLMShouldCompactOnLaunchBlock</span><span class="p">)(</span><span class="n">NSUInteger</span><span class="p">,</span> <span class="n">NSUInteger</span><span class="p">)</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">typealias</span> <span class="kt">RLMShouldCompactOnLaunchBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">UInt</span><span class="p">,</span> <span class="kt">UInt</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">RLMShouldCompactOnLaunchBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">UInt</span><span class="p">,</span> <span class="kt">UInt</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -716,12 +716,12 @@ The compaction will be skipped if another process is accessing it.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">typedef</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">RLMSyncCredentialsToken</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">RLMSyncCredentialsToken</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">typealias</span> <span class="kt">RLMSyncCredentialsToken</span> <span class="o">=</span> <span class="kt">NSString</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">RLMSyncCredentialsToken</span> <span class="o">=</span> <span class="kt">NSString</span></code></pre>
 
                         </div>
                       </div>
@@ -751,12 +751,12 @@ The compaction will be skipped if another process is accessing it.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">typedef</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">RLMIdentityProvider</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">RLMIdentityProvider</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">struct</span> <span class="kt">RLMIdentityProvider</span> <span class="p">:</span> <span class="kt">RawRepresentable</span><span class="p">,</span> <span class="n">_SwiftNewtypeWrapper</span><span class="p">,</span> <span class="kt">Equatable</span><span class="p">,</span> <span class="kt">Hashable</span><span class="p">,</span> <span class="n">_ObjectiveCBridgeable</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">RLMIdentityProvider</span> <span class="p">:</span> <span class="kt">RawRepresentable</span><span class="p">,</span> <span class="n">_SwiftNewtypeWrapper</span><span class="p">,</span> <span class="kt">Equatable</span><span class="p">,</span> <span class="kt">Hashable</span><span class="p">,</span> <span class="n">_ObjectiveCBridgeable</span></code></pre>
 
                         </div>
                       </div>
@@ -791,13 +791,13 @@ pertains to a specific session, that session will also be passed into the block.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">RLMSyncErrorReportingBlock</span><span class="p">)(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">,</span>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">RLMSyncErrorReportingBlock</span><span class="p">)(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nonnull</span><span class="p">,</span>
                                            <span class="n"><a href="Classes/RLMSyncSession.html">RLMSyncSession</a></span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">typealias</span> <span class="kt">RLMSyncErrorReportingBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Error</span><span class="p">,</span> <span class="kt"><a href="Classes/RLMSyncSession.html">RLMSyncSession</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">RLMSyncErrorReportingBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Error</span><span class="p">,</span> <span class="kt"><a href="Classes/RLMSyncSession.html">RLMSyncSession</a></span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
 
                         </div>
                       </div>
@@ -835,12 +835,12 @@ activity to the user.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">RLMProgressNotificationBlock</span><span class="p">)(</span><span class="n">NSUInteger</span><span class="p">,</span> <span class="n">NSUInteger</span><span class="p">)</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">RLMProgressNotificationBlock</span><span class="p">)(</span><span class="n">NSUInteger</span><span class="p">,</span> <span class="n">NSUInteger</span><span class="p">)</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">typealias</span> <span class="kt">RLMProgressNotificationBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">UInt</span><span class="p">,</span> <span class="kt">UInt</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">RLMProgressNotificationBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">UInt</span><span class="p">,</span> <span class="kt">UInt</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
 
                         </div>
                       </div>
@@ -874,13 +874,13 @@ activity to the user.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">RLMUserCompletionBlock</span><span class="p">)(</span><span class="n"><a href="Classes/RLMSyncUser.html">RLMSyncUser</a></span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">,</span>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">RLMUserCompletionBlock</span><span class="p">)(</span><span class="n"><a href="Classes/RLMSyncUser.html">RLMSyncUser</a></span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">,</span>
                                        <span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">typealias</span> <span class="kt">RLMUserCompletionBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="Classes/RLMSyncUser.html">RLMSyncUser</a></span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">RLMUserCompletionBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="Classes/RLMSyncUser.html">RLMSyncUser</a></span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
 
                         </div>
                       </div>
@@ -911,12 +911,12 @@ If the <code>NSError</code> argument is nil, the operation succeeded.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">RLMPasswordChangeStatusBlock</span><span class="p">)(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">RLMPasswordChangeStatusBlock</span><span class="p">)(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">typealias</span> <span class="kt">RLMPasswordChangeStatusBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">RLMPasswordChangeStatusBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
 
                         </div>
                       </div>
@@ -947,12 +947,12 @@ If the <code>NSError</code> argument is nil, the operation succeeded.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">RLMPermissionStatusBlock</span><span class="p">)(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">RLMPermissionStatusBlock</span><span class="p">)(</span><span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">typealias</span> <span class="kt">RLMPermissionStatusBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">RLMPermissionStatusBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
 
                         </div>
                       </div>
@@ -983,13 +983,13 @@ Exactly one of the two arguments will be populated.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">RLMPermissionResultsBlock</span><span class="p">)(</span><span class="n"><a href="Classes/RLMSyncPermissionResults.html">RLMSyncPermissionResults</a></span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">,</span>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">RLMPermissionResultsBlock</span><span class="p">)(</span><span class="n"><a href="Classes/RLMSyncPermissionResults.html">RLMSyncPermissionResults</a></span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">,</span>
                                           <span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">typealias</span> <span class="kt">RLMPermissionResultsBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="Classes/RLMSyncPermissionResults.html">RLMSyncPermissionResults</a></span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">RLMPermissionResultsBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="Classes/RLMSyncPermissionResults.html">RLMSyncPermissionResults</a></span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
 
                         </div>
                       </div>
@@ -1023,12 +1023,12 @@ Exactly one of the two arguments will be populated.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight"><code><span class="k">typedef</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">RLMServerToken</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">RLMServerToken</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">typealias</span> <span class="kt">RLMServerToken</span> <span class="o">=</span> <span class="kt">NSString</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">RLMServerToken</span> <span class="o">=</span> <span class="kt">NSString</span></code></pre>
 
                         </div>
                       </div>

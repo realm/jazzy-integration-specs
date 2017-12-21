@@ -275,7 +275,7 @@
             <h1>Configuration</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Configuration</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Configuration</span></code></pre>
 
                 </div>
               </div>
@@ -320,7 +320,7 @@ rather than creating a new value each time you open a Realm.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">defaultConfiguration</span><span class="p">:</span> <span class="kt">Configuration</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">var</span> <span class="nv">defaultConfiguration</span><span class="p">:</span> <span class="kt">Configuration</span></code></pre>
 
                         </div>
                       </div>
@@ -367,7 +367,7 @@ rather than creating a new value each time you open a Realm.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">fileURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?</span> <span class="o">=</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">fileURLWithPath</span><span class="p">:</span> <span class="kt">RLMRealmPathForFile</span><span class="p">(</span><span class="s">"default.realm"</span><span class="p">),</span> <span class="nv">isDirectory</span><span class="p">:</span> <span class="kc">false</span><span class="p">),</span>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">fileURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?</span> <span class="o">=</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">fileURLWithPath</span><span class="p">:</span> <span class="kt">RLMRealmPathForFile</span><span class="p">(</span><span class="s">"default.realm"</span><span class="p">),</span> <span class="nv">isDirectory</span><span class="p">:</span> <span class="kc">false</span><span class="p">),</span>
             <span class="nv">inMemoryIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
             <span class="nv">syncConfiguration</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SyncConfiguration.html">SyncConfiguration</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
             <span class="nv">encryptionKey</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
@@ -493,8 +493,8 @@ rather than creating a new value each time you open a Realm.</p>
                                life of a process to determine if it should be compacted before being
                                returned to the user. It is passed the total file size (data + free space)
                                and the total bytes used by data in the file.</p>
-<pre class="highlight plaintext"><code>                           Return `true ` to indicate that an attempt to compact the file should be made.
-                           The compaction will be skipped if another process is accessing it.
+<pre class="highlight swift"><code>                           <span class="kt">Return</span> <span class="err">`</span><span class="kc">true</span> <span class="err">`</span> <span class="n">to</span> <span class="n">indicate</span> <span class="n">that</span> <span class="n">an</span> <span class="n">attempt</span> <span class="n">to</span> <span class="n">compact</span> <span class="n">the</span> <span class="n">file</span> <span class="n">should</span> <span class="n">be</span> <span class="n">made</span><span class="o">.</span>
+                           <span class="kt">The</span> <span class="n">compaction</span> <span class="n">will</span> <span class="n">be</span> <span class="n">skipped</span> <span class="k">if</span> <span class="n">another</span> <span class="n">process</span> <span class="k">is</span> <span class="n">accessing</span> <span class="n">it</span><span class="o">.</span>
 </code></pre>
                                 </div>
                               </td>
@@ -552,7 +552,7 @@ exclusive with <code><a href="../../Classes/Realm/Configuration.html#/s:10RealmS
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">syncConfiguration</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SyncConfiguration.html">SyncConfiguration</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">syncConfiguration</span><span class="p">:</span> <span class="kt"><a href="../../Structs/SyncConfiguration.html">SyncConfiguration</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -582,7 +582,7 @@ exclusive with <code><a href="../../Classes/Realm/Configuration.html#/s:10RealmS
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">fileURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">fileURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -613,7 +613,7 @@ exclusive with <code><a href="../../Classes/Realm/Configuration.html#/s:10RealmS
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">inMemoryIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">inMemoryIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -643,7 +643,7 @@ exclusive with <code><a href="../../Classes/Realm/Configuration.html#/s:10RealmS
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">encryptionKey</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">encryptionKey</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -679,7 +679,7 @@ another process will result in crashes.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">readOnly</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">readOnly</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
 
                         </div>
                       </div>
@@ -709,7 +709,7 @@ another process will result in crashes.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">schemaVersion</span><span class="p">:</span> <span class="kt">UInt64</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">schemaVersion</span><span class="p">:</span> <span class="kt">UInt64</span> <span class="o">=</span> <span class="mi">0</span></code></pre>
 
                         </div>
                       </div>
@@ -739,7 +739,7 @@ another process will result in crashes.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">migrationBlock</span><span class="p">:</span> <span class="kt"><a href="../../Typealiases.html#/s:10RealmSwift14MigrationBlocka">MigrationBlock</a></span><span class="p">?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">migrationBlock</span><span class="p">:</span> <span class="kt"><a href="../../Typealiases.html#/s:10RealmSwift14MigrationBlocka">MigrationBlock</a></span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -777,7 +777,7 @@ or executed.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">deleteRealmIfMigrationNeeded</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">deleteRealmIfMigrationNeeded</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span></code></pre>
 
                         </div>
                       </div>
@@ -813,7 +813,7 @@ The compaction will be skipped if another process is accessing it.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">shouldCompactOnLaunch</span><span class="p">:</span> <span class="p">((</span><span class="kt">Int</span><span class="p">,</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">shouldCompactOnLaunch</span><span class="p">:</span> <span class="p">((</span><span class="kt">Int</span><span class="p">,</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span><span class="p">)?</span></code></pre>
 
                         </div>
                       </div>
@@ -843,7 +843,7 @@ The compaction will be skipped if another process is accessing it.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">objectTypes</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Classes/Object.html">Object</a></span><span class="o">.</span><span class="k">Type</span><span class="p">]?</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">objectTypes</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../../Classes/Object.html">Object</a></span><span class="o">.</span><span class="k">Type</span><span class="p">]?</span></code></pre>
 
                         </div>
                       </div>
@@ -877,7 +877,7 @@ The compaction will be skipped if another process is accessing it.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>

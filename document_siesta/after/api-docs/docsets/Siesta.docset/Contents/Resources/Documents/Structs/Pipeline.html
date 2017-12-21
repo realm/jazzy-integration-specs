@@ -241,7 +241,7 @@
             <h1>Pipeline</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Pipeline</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Pipeline</span></code></pre>
 
                 </div>
               </div>
@@ -254,15 +254,15 @@ custom stages, and customize their order. Each stage has zero or more <code><a h
 <code><a href="../Protocols/EntityCache.html">EntityCache</a></code>.</p>
 
 <p>The pipeline is a part of a <code><a href="../Structs/Configuration.html">Configuration</a></code>, so you can thus customize the pipeline per API or per resource.</p>
-<pre class="highlight plaintext"><code>service.configure {
-  $0.pipeline[.parsing].add(SwiftyJSONTransformer, contentTypes: ["*​/json"])
-  $0.pipeline[.cleanup].add(GithubErrorMessageExtractor())
-  $0.pipeline[.model].cacheUsing(myRealmCache)
-}
+<pre class="highlight swift"><code><span class="n">service</span><span class="o">.</span><span class="n">configure</span> <span class="p">{</span>
+  <span class="nv">$0</span><span class="o">.</span><span class="n">pipeline</span><span class="p">[</span><span class="o">.</span><span class="n">parsing</span><span class="p">]</span><span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="kt">SwiftyJSONTransformer</span><span class="p">,</span> <span class="nv">contentTypes</span><span class="p">:</span> <span class="p">[</span><span class="s">"*​/json"</span><span class="p">])</span>
+  <span class="nv">$0</span><span class="o">.</span><span class="n">pipeline</span><span class="p">[</span><span class="o">.</span><span class="n">cleanup</span><span class="p">]</span><span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="kt">GithubErrorMessageExtractor</span><span class="p">())</span>
+  <span class="nv">$0</span><span class="o">.</span><span class="n">pipeline</span><span class="p">[</span><span class="o">.</span><span class="n">model</span><span class="p">]</span><span class="o">.</span><span class="nf">cacheUsing</span><span class="p">(</span><span class="n">myRealmCache</span><span class="p">)</span>
+<span class="p">}</span>
 
-service.configureTransformer("/item/​*") {  // Replaces .model stage by default
-  Item(json: $0.content)
-}
+<span class="n">service</span><span class="o">.</span><span class="nf">configureTransformer</span><span class="p">(</span><span class="s">"/item/​*"</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// Replaces .model stage by default</span>
+  <span class="kt">Item</span><span class="p">(</span><span class="nv">json</span><span class="p">:</span> <span class="nv">$0</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+<span class="p">}</span>
 </code></pre>
 
 <p>By default, Siesta pipelines start with parsers for common data types (JSON, text, image) configured at the
@@ -320,7 +320,7 @@ add or reorder stages if you have complex response processing needs.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">order</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/PipelineStageKey.html">PipelineStageKey</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="o">.</span><span class="n">rawData</span><span class="p">,</span> <span class="o">.</span><span class="n">decoding</span><span class="p">,</span> <span class="o">.</span><span class="n">parsing</span><span class="p">,</span> <span class="o">.</span><span class="n">model</span><span class="p">,</span> <span class="o">.</span><span class="n">cleanup</span><span class="p">]</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">order</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/PipelineStageKey.html">PipelineStageKey</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="o">.</span><span class="n">rawData</span><span class="p">,</span> <span class="o">.</span><span class="n">decoding</span><span class="p">,</span> <span class="o">.</span><span class="n">parsing</span><span class="p">,</span> <span class="o">.</span><span class="n">model</span><span class="p">,</span> <span class="o">.</span><span class="n">cleanup</span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
@@ -347,7 +347,7 @@ add or reorder stages if you have complex response processing needs.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="nf">subscript</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt"><a href="../Classes/PipelineStageKey.html">PipelineStageKey</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/PipelineStage.html">PipelineStage</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">subscript</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt"><a href="../Classes/PipelineStageKey.html">PipelineStageKey</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/PipelineStage.html">PipelineStage</a></span></code></pre>
 
                         </div>
                       </div>
@@ -374,7 +374,7 @@ add or reorder stages if you have complex response processing needs.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">removeAllTransformers</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">removeAllTransformers</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -397,9 +397,9 @@ add or reorder stages if you have complex response processing needs.</p>
                         <p>Removes all caches from all stages in the pipeline. Leaves transformers intact.</p>
 
 <p>You can use this to prevent sensitive resources from being cached:</p>
-<pre class="highlight plaintext"><code>service.configure("/secret") {
-  $0.pipeline.removeAllCaches()
-}
+<pre class="highlight swift"><code><span class="n">service</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="s">"/secret"</span><span class="p">)</span> <span class="p">{</span>
+  <span class="nv">$0</span><span class="o">.</span><span class="n">pipeline</span><span class="o">.</span><span class="nf">removeAllCaches</span><span class="p">()</span>
+<span class="p">}</span>
 </code></pre>
 
                       </div>
@@ -407,7 +407,7 @@ add or reorder stages if you have complex response processing needs.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">removeAllCaches</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">removeAllCaches</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -434,7 +434,7 @@ add or reorder stages if you have complex response processing needs.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight"><code><span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">clear</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">clear</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
