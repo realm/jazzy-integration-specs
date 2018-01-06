@@ -27,6 +27,8 @@ public class MiscMarkdown {
     ///
     ///     Second paragraph of the note.
     ///
+    /// ### Redcarpet behaviors, preserved for compatibility
+    ///
     /// However:
     /// * Still need a blank line before a code fence
     ///   inside a list item of a "tight list"
@@ -46,6 +48,36 @@ public class MiscMarkdown {
     /// * ...then you can skip the blank line before the code block.
     ///
     ///     Simple.
+    ///
+    /// ### Commonmarker behaviors
+    ///
+    /// * With commonmarker there's no need for blank lines:
+    ///   ```swift
+    ///   var aVar = 5
+    ///   ```
+    /// * ...and no need to worry about list tightness.
+    ///
     public func linespacing() {
+    }
+
+    /// Hard linebreaks via a backslash \
+    /// or two spaces  
+    /// at the end of the line.
+    public func linebreak() {
+    }
+
+    /// * Changing the markdown bullet symbol
+    /// + Causes a new list to start
+    /// + Item 2
+    /// - List 3
+    public func lists() {
+    }
+
+    /// * Lists
+    ///   * Indent
+    ///     * With two spaces
+    ///       * As deep as you like
+    ///         * Which is seldom practical
+    public func listNesting() {
     }
 }

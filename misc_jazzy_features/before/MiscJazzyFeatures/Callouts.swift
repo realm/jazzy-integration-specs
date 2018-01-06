@@ -62,3 +62,17 @@ public func functionD(_ aParameter: Bool) -> Bool {
 public func functionE(_ aParameter: Bool) -> Bool {
     return true
 }
+
+/// Function with callouts
+///
+/// * A bullet that is not part of the callout
+/// * note: This callout appears before the '*' bullet list like Xcode.
+///   ```swift
+///   let result = doSomething()
+///   ```
+/// * Another bullet that is not part of the callout
+///
+/// - callout(Special Note): Take care of this function.
+///
+public func functionF() {
+}
