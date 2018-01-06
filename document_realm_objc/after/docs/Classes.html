@@ -319,7 +319,6 @@
           <section class="section">
             <h1>Classes</h1>
             <p>The following classes are available globally.</p>
-
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -338,10 +337,8 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p><code>RLMArray</code> is the container type in Realm used to define to-many relationships.</p>
-
 <p>Unlike an <code>NSArray</code>, <code>RLMArray</code>s hold a single type, specified by the <code>objectClassName</code> property.
 This is referred to in these docs as the “type” of the array.</p>
-
 <p>When declaring an <code>RLMArray</code> property, the type must be marked as conforming to a
 protocol by the same name as the objects it should contain (see the
 <code>RLM_ARRAY_TYPE</code> macro). In addition, the property can be declared using Objective-C
@@ -350,23 +347,18 @@ generics for better compile-time type safety.</p>
 <span class="p">...</span>
 <span class="k">@property</span> <span class="n">RLMArray</span><span class="o">&lt;</span><span class="n">ObjectType</span> <span class="o">*&gt;&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="n">arrayOfObjectTypes</span><span class="p">;</span>
 </code></pre>
-
 <p><code>RLMArray</code>s can be queried with the same predicates as <code><a href="Classes/RLMObject.html">RLMObject</a></code> and <code>RLMResult</code>s.</p>
-
 <p><code>RLMArray</code>s cannot be created directly. <code>RLMArray</code> properties on <code><a href="Classes/RLMObject.html">RLMObject</a></code>s are
 lazily created when accessed, or can be obtained by querying a Realm.</p>
 <h3 id='key-value-observing' class='heading'>Key-Value Observing</h3>
-
 <p><code>RLMArray</code> supports array key-value observing on <code>RLMArray</code> properties on <code><a href="Classes/RLMObject.html">RLMObject</a></code>
 subclasses, and the <code>invalidated</code> property on <code>RLMArray</code> instances themselves is
 key-value observing compliant when the <code>RLMArray</code> is attached to a managed
 <code><a href="Classes/RLMObject.html">RLMObject</a></code> (<code>RLMArray</code>s on unmanaged <code><a href="Classes/RLMObject.html">RLMObject</a></code>s will never become invalidated).</p>
-
 <p>Because <code>RLMArray</code>s are attached to the object which they are a property of, they
 do not require using the mutable collection proxy objects from
 <code>-mutableArrayValueForKey:</code> or KVC-compatible mutation methods on the containing
 object. Instead, you can call the mutation methods on the <code>RLMArray</code> directly.</p>
-
                         <a href="Classes/RLMArray.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -407,11 +399,9 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                       <div class="abstract">
                         <p>An <code>RLMSortDescriptor</code> stores a property name and a sort order for use with
 <code>sortedResultsUsingDescriptors:</code>. It is similar to <code>NSSortDescriptor</code>, but supports
-only the subset of functionality which can be efficiently run by Realm&rsquo;s query
+only the subset of functionality which can be efficiently run by Realm’s query
 engine.</p>
-
 <p><code>RLMSortDescriptor</code> instances are immutable.</p>
-
                         <a href="Classes/RLMSortDescriptor.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -448,14 +438,12 @@ engine.</p>
                       <div class="abstract">
                         <p>A <code>RLMCollectionChange</code> object encapsulates information about changes to collections
 that are reported by Realm notifications.</p>
-
 <p><code>RLMCollectionChange</code> is passed to the notification blocks registered with
 <code>-addNotificationBlock</code> on <code><a href="Classes/RLMArray.html">RLMArray</a></code> and <code><a href="Classes/RLMResults.html">RLMResults</a></code>, and reports what rows in the
 collection changed since the last time the notification block was called.</p>
-
 <p>The change information is available in two formats: a simple array of row
 indices in the collection for each type of change, and an array of index paths
-in a requested section suitable for passing directly to <code>UITableView</code>&lsquo;s batch
+in a requested section suitable for passing directly to <code>UITableView</code>’s batch
 update methods. A complete example of updating a <code>UITableView</code> named <code>tv</code>:</p>
 <pre class="highlight objective_c"><code><span class="p">[</span><span class="n">tv</span> <span class="nf">beginUpdates</span><span class="p">];</span>
 <span class="p">[</span><span class="n">tv</span> <span class="nf">deleteRowsAtIndexPaths</span><span class="p">:[</span><span class="n">changes</span> <span class="nf">deletionsInSection</span><span class="p">:</span><span class="mi">0</span><span class="p">]</span> <span class="nf">withRowAnimation</span><span class="p">:</span><span class="n">UITableViewRowAnimationAutomatic</span><span class="p">];</span>
@@ -463,9 +451,7 @@ update methods. A complete example of updating a <code>UITableView</code> named 
 <span class="p">[</span><span class="n">tv</span> <span class="nf">reloadRowsAtIndexPaths</span><span class="p">:[</span><span class="n">changes</span> <span class="nf">modificationsInSection</span><span class="p">:</span><span class="mi">0</span><span class="p">]</span> <span class="nf">withRowAnimation</span><span class="p">:</span><span class="n">UITableViewRowAnimationAutomatic</span><span class="p">];</span>
 <span class="p">[</span><span class="n">tv</span> <span class="nf">endUpdates</span><span class="p">];</span>
 </code></pre>
-
 <p>All of the arrays in an <code>RLMCollectionChange</code> are always sorted in ascending order.</p>
-
                         <a href="Classes/RLMCollectionChange.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -505,11 +491,9 @@ update methods. A complete example of updating a <code>UITableView</code> named 
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p><code>RLMMigration</code> instances encapsulate information intended to facilitate a schema migration.</p>
-
 <p>A <code>RLMMigration</code> instance is passed into a user-defined <code><a href="Type Definitions.html#/c:RLMRealm.h@T@RLMMigrationBlock">RLMMigrationBlock</a></code> block when updating
 the version of a Realm. This instance provides access to the old and new database schemas, the
 objects in the Realm, and provides functionality for modifying the Realm during the migration.</p>
-
                         <a href="Classes/RLMMigration.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -549,7 +533,6 @@ objects in the Realm, and provides functionality for modifying the Realm during 
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p><code>RLMObject</code> is a base class for model objects representing data stored in Realms.</p>
-
 <p>Define your model classes by subclassing <code>RLMObject</code> and adding properties to be managed.
 Then instantiate and use your custom subclasses instead of using the <code>RLMObject</code> class directly.</p>
 <pre class="highlight objective_c"><code><span class="c1">// Dog.h
@@ -563,7 +546,6 @@ Then instantiate and use your custom subclasses instead of using the <code>RLMOb
 <span class="k">@end</span> <span class="c1">//none needed
 </span></code></pre>
 <h3 id='supported-property-types' class='heading'>Supported property types</h3>
-
 <ul>
 <li><code>NSString</code></li>
 <li><code>NSInteger</code>, <code>int</code>, <code>long</code>, <code>float</code>, and <code>double</code></li>
@@ -575,28 +557,21 @@ Then instantiate and use your custom subclasses instead of using the <code>RLMOb
 <li><code><a href="Classes/RLMArray.html">RLMArray&lt;X&gt;</a></code>, where <code>X</code> is an <code>RLMObject</code> subclass, to model many-to-many relationships.</li>
 </ul>
 <h3 id='querying' class='heading'>Querying</h3>
-
 <p>You can initiate queries directly via the class methods: <code>allObjects</code>, <code>objectsWhere:</code>, and <code>objectsWithPredicate:</code>.
 These methods allow you to easily query a custom subclass for instances of that class in the default Realm.</p>
-
 <p>To search in a Realm other than the default Realm, use the <code>allObjectsInRealm:</code>, <code>objectsInRealm:where:</code>,
 and <code>objectsInRealm:withPredicate:</code> class methods.</p>
 <div class="aside aside-see">
-    <p class="aside-title">See</p>
-    <code><a href="Classes/RLMRealm.html">RLMRealm</a></code>
-
+<p class="aside-title">See</p>
+<p><code><a href="Classes/RLMRealm.html">RLMRealm</a></code></p>
 </div>
 <h3 id='relationships' class='heading'>Relationships</h3>
-
 <p>See our <a href="https://realm.io/docs/objc/latest#relationships">Cocoa guide</a> for more details.</p>
 <h3 id='key-value-observing' class='heading'>Key-Value Observing</h3>
-
 <p>All <code>RLMObject</code> properties (including properties you create in subclasses) are
 <a href="https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/KeyValueObserving/KeyValueObserving.html">Key-Value Observing compliant</a>,
 except for <code>realm</code> and <code>objectSchema</code>.</p>
-
 <p>Keep the following tips in mind when observing Realm objects:</p>
-
 <ol>
 <li>Unlike <code>NSMutableArray</code> properties, <code><a href="Classes/RLMArray.html">RLMArray</a></code> properties do not require
 using the proxy object returned from <code>-mutableArrayValueForKey:</code>, or defining
@@ -612,7 +587,6 @@ are made on a different thread), and notifications sent prior to the change
 being applied (when <code>NSKeyValueObservingOptionPrior</code> is used) may be sent at
 times when you <em>cannot</em> begin a write transaction.</li>
 </ol>
-
                         <a href="Classes/RLMObject.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -648,7 +622,6 @@ times when you <em>cannot</em> begin a write transaction.</li>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Information about a specific property which changed in an <code><a href="Classes/RLMObject.html">RLMObject</a></code> change notification.</p>
-
                         <a href="Classes/RLMPropertyChange.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -688,12 +661,9 @@ times when you <em>cannot</em> begin a write transaction.</li>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>This class represents Realm model object schemas.</p>
-
 <p>When using Realm, <code>RLMObjectSchema</code> instances allow performing migrations and
-introspecting the database&rsquo;s schema.</p>
-
+introspecting the database’s schema.</p>
 <p>Object schemas map to tables in the core database.</p>
-
                         <a href="Classes/RLMObjectSchema.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -734,11 +704,8 @@ introspecting the database&rsquo;s schema.</p>
                       <div class="abstract">
                         <p><code>RLMProperty</code> instances represent properties managed by a Realm in the context of an object schema. Such properties may
 be persisted to a Realm file or computed from other data from the Realm.</p>
-
-<p>When using Realm, <code>RLMProperty</code> instances allow performing migrations and introspecting the database&rsquo;s schema.</p>
-
+<p>When using Realm, <code>RLMProperty</code> instances allow performing migrations and introspecting the database’s schema.</p>
 <p>These property instances map to columns in the core database.</p>
-
                         <a href="Classes/RLMProperty.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -774,7 +741,6 @@ be persisted to a Realm file or computed from other data from the Realm.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>An <code>RLMPropertyDescriptor</code> instance represents a specific property on a given class.</p>
-
                         <a href="Classes/RLMPropertyDescriptor.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -813,33 +779,28 @@ be persisted to a Realm file or computed from other data from the Realm.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>An <code>RLMRealm</code> instance (also referred to as <q>a Realm</q>) represents a Realm
+                        <p>An <code>RLMRealm</code> instance (also referred to as “a Realm”) represents a Realm
 database.</p>
-
 <p>Realms can either be stored on disk (see <code><a href="Classes/RLMRealm.html#/c:objc(cs)RLMRealm(cm)realmWithURL:">+[RLMRealm realmWithURL:]</a></code>) or in
 memory (see <code><a href="Classes/RLMRealmConfiguration.html">RLMRealmConfiguration</a></code>).</p>
-
 <p><code>RLMRealm</code> instances are cached internally, and constructing equivalent <code>RLMRealm</code>
 objects (for example, by using the same path or identifier) multiple times on a single thread
 within a single iteration of the run loop will normally return the same
 <code>RLMRealm</code> object.</p>
-
 <p>If you specifically want to ensure an <code>RLMRealm</code> instance is
 destroyed (for example, if you wish to open a Realm, check some property, and
 then possibly delete the Realm file and re-open it), place the code which uses
 the Realm within an <code>@autoreleasepool {}</code> and ensure you have no other
 strong references to it.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <code>RLMRealm</code> instances are not thread safe and cannot be shared across
+<p class="aside-title">Warning</p>
+<p><code>RLMRealm</code> instances are not thread safe and cannot be shared across
 threads or dispatch queues. Trying to do so will cause an exception to be thrown.
 You must call this method on each thread you want
 to interact with the Realm on. For dispatch queues, this means that you must
 call it in each block which is dispatched, as a queue is not guaranteed to run
-all of its blocks on the same thread.
-
+all of its blocks on the same thread.</p>
 </div>
-
                         <a href="Classes/RLMRealm.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -875,13 +836,11 @@ all of its blocks on the same thread.
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A token which is returned from methods which subscribe to changes to a Realm.</p>
-
 <p>Change subscriptions in Realm return an <code>RLMNotificationToken</code> instance,
 which can be used to unsubscribe from the changes. You must store a strong
 reference to the token for as long as you want to continue to receive notifications.
 When you wish to stop, call the <code><a href="Classes/RLMNotificationToken.html#/c:objc(cs)RLMNotificationToken(im)stop">-stop</a></code> method. Notifications are also stopped if
 the token is deallocated.</p>
-
                         <a href="Classes/RLMNotificationToken.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -922,16 +881,13 @@ the token is deallocated.</p>
                       <div class="abstract">
                         <p>An <code>RLMRealmConfiguration</code> instance describes the different options used to
 create an instance of a Realm.</p>
-
 <p><code>RLMRealmConfiguration</code> instances are just plain <code>NSObject</code>s. Unlike <code><a href="Classes/RLMRealm.html">RLMRealm</a></code>s
 and <code><a href="Classes/RLMObject.html">RLMObject</a></code>s, they can be freely shared between threads as long as you do not
 mutate them.</p>
-
 <p>Creating configuration objects for class subsets (by setting the
 <code>objectClasses</code> property) can be expensive. Because of this, you will normally want to
-cache and reuse a single configuration object for each distinct configuration rather than 
+cache and reuse a single configuration object for each distinct configuration rather than
 creating a new object each time you open a Realm.</p>
-
                         <a href="Classes/RLMRealmConfiguration.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -972,28 +928,22 @@ creating a new object each time you open a Realm.</p>
                       <div class="abstract">
                         <p><code>RLMResults</code> is an auto-updating container type in Realm returned from object
 queries. It represents the results of the query in the form of a collection of objects.</p>
-
 <p><code>RLMResults</code> can be queried using the same predicates as <code><a href="Classes/RLMObject.html">RLMObject</a></code> and <code><a href="Classes/RLMArray.html">RLMArray</a></code>,
 and you can chain queries to further filter results.</p>
-
 <p><code>RLMResults</code> always reflect the current state of the Realm on the current thread,
 including during write transactions on the current thread. The one exception to
 this is when using <code>for...in</code> fast enumeration, which will always enumerate
 over the objects which matched the query when the enumeration is begun, even if
 some of them are deleted or modified to be excluded by the filter during the
 enumeration.</p>
-
 <p><code>RLMResults</code> are lazily evaluated the first time they are accessed; they only
-run queries when the result of the query is requested. This means that 
-chaining several temporary <code>RLMResults</code> to sort and filter your data does not 
+run queries when the result of the query is requested. This means that
+chaining several temporary <code>RLMResults</code> to sort and filter your data does not
 perform any extra work processing the intermediate state.</p>
-
 <p>Once the results have been evaluated or a notification block has been added,
 the results are eagerly kept up-to-date, with the work done to keep them
 up-to-date done on a background thread whenever possible.</p>
-
 <p><code>RLMResults</code> cannot be directly instantiated.</p>
-
                         <a href="Classes/RLMResults.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -1030,10 +980,8 @@ up-to-date done on a background thread whenever possible.</p>
                       <div class="abstract">
                         <p><code>RLMLinkingObjects</code> is an auto-updating container type. It represents a collection of objects that link to its
 parent object.</p>
-
-<p>For more information, please see the <q>Inverse Relationships</q> section in the
+<p>For more information, please see the “Inverse Relationships” section in the
 <a href="https://realm.io/docs/objc/latest/#relationships">documentation</a>.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1072,12 +1020,9 @@ parent object.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p><code>RLMSchema</code> instances represent collections of model object schemas managed by a Realm.</p>
-
 <p>When using Realm, <code>RLMSchema</code> instances allow performing migrations and
-introspecting the database&rsquo;s schema.</p>
-
+introspecting the database’s schema.</p>
 <p>Schemas map to collections of tables in the core database.</p>
-
                         <a href="Classes/RLMSchema.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -1118,7 +1063,6 @@ introspecting the database&rsquo;s schema.</p>
                       <div class="abstract">
                         <p>A configuration object representing configuration state for a Realm which is intended to sync with a Realm Object
 Server.</p>
-
                         <a href="Classes/RLMSyncConfiguration.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -1158,7 +1102,6 @@ Server.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Opaque credentials representing a specific Realm Object Server user.</p>
-
                         <a href="Classes/RLMSyncCredentials.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -1198,7 +1141,6 @@ Server.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A singleton manager which serves as a central point for sync-related configuration.</p>
-
                         <a href="Classes/RLMSyncManager.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -1238,14 +1180,11 @@ Server.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>This model is used to reflect permissions.</p>
-
-<p>It should be used in conjunction with a <code><a href="Classes/RLMSyncUser.html">RLMSyncUser</a></code>&lsquo;s Permission Realm.
+<p>It should be used in conjunction with a <code><a href="Classes/RLMSyncUser.html">RLMSyncUser</a></code>’s Permission Realm.
 You can only read this Realm. Use the objects in Management Realm to
 make request for modifications of permissions.</p>
-
 <p>See <a href="https://realm.io/docs/realm-object-server/#permissions">https://realm.io/docs/realm-object-server/#permissions</a> for general
 documentation.</p>
-
                         <a href="Classes/RLMSyncPermission.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -1285,13 +1224,10 @@ documentation.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This model is used for requesting changes to a Realm&rsquo;s permissions.</p>
-
-<p>It should be used in conjunction with an <code><a href="Classes/RLMSyncUser.html">RLMSyncUser</a></code>&lsquo;s Management Realm.</p>
-
+                        <p>This model is used for requesting changes to a Realm’s permissions.</p>
+<p>It should be used in conjunction with an <code><a href="Classes/RLMSyncUser.html">RLMSyncUser</a></code>’s Management Realm.</p>
 <p>See <a href="https://realm.io/docs/realm-object-server/#permissions">https://realm.io/docs/realm-object-server/#permissions</a> for general
 documentation.</p>
-
                         <a href="Classes/RLMSyncPermissionChange.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -1332,12 +1268,9 @@ documentation.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>This model is used for offering permission changes to other users.</p>
-
-<p>It should be used in conjunction with an <code><a href="Classes/RLMSyncUser.html">RLMSyncUser</a></code>&lsquo;s Management Realm.</p>
-
+<p>It should be used in conjunction with an <code><a href="Classes/RLMSyncUser.html">RLMSyncUser</a></code>’s Management Realm.</p>
 <p>See <a href="https://realm.io/docs/realm-object-server/#permissions">https://realm.io/docs/realm-object-server/#permissions</a> for general
 documentation.</p>
-
                         <a href="Classes/RLMSyncPermissionOffer.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -1377,14 +1310,11 @@ documentation.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>This model is used to apply permission changes defined in the permission offer
-object represented by the specified token, which was created by another user&rsquo;s
+object represented by the specified token, which was created by another user’s
 <code><a href="Classes/RLMSyncPermissionOffer.html">RLMSyncPermissionOffer</a></code> object.</p>
-
-<p>It should be used in conjunction with an <code><a href="Classes/RLMSyncUser.html">RLMSyncUser</a></code>&lsquo;s Management Realm.</p>
-
+<p>It should be used in conjunction with an <code><a href="Classes/RLMSyncUser.html">RLMSyncUser</a></code>’s Management Realm.</p>
 <p>See <a href="https://realm.io/docs/realm-object-server/#permissions">https://realm.io/docs/realm-object-server/#permissions</a> for general
 documentation.</p>
-
                         <a href="Classes/RLMSyncPermissionOfferResponse.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -1424,19 +1354,15 @@ documentation.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A collection object representing the results of a permissions query.</p>
-
 <p>This collection will automatically update its contents at the start of each runloop
 iteration, but the objects it vends are immutable.</p>
-
 <p>Permission results objects are thread-confined, and should not be shared across
 threads.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    Permission results must only be fetched on threads that have an active
-     run loop. In most cases this will be the main thread.
-
+<p class="aside-title">Warning</p>
+<p>Permission results must only be fetched on threads that have an active
+run loop. In most cases this will be the main thread.</p>
 </div>
-
                         <a href="Classes/RLMSyncPermissionResults.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -1476,11 +1402,8 @@ threads.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A value representing a permission granted to the specified user(s) to access the specified Realm(s).</p>
-
 <p><code>RLMSyncPermissionValue</code> is immutable and can be accessed from any thread.</p>
-
 <p>See <a href="https://realm.io/docs/realm-object-server/#permissions">https://realm.io/docs/realm-object-server/#permissions</a> for general documentation.</p>
-
                         <a href="Classes/RLMSyncPermissionValue.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -1520,10 +1443,8 @@ threads.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A token object corresponding to a progress notification block on a session object.</p>
-
 <p>To stop notifications manually, call <code>-stop</code> on it. Notifications should be stopped before
 the token goes out of scope or is destroyed.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1557,14 +1478,12 @@ the token goes out of scope or is destroyed.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>An object encapsulating a Realm Object Server <q>session</q>. Sessions represent the
+                        <p>An object encapsulating a Realm Object Server “session”. Sessions represent the
 communication between the client (and a local Realm file on disk), and the server
 (and a remote Realm at a given URL stored on a Realm Object Server).</p>
-
 <p>Sessions are always created by the SDK and vended out through various APIs. The
 lifespans of sessions associated with Realms are managed automatically. Session
 objects can be accessed from any thread.</p>
-
                         <a href="Classes/RLMSyncSession.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -1604,14 +1523,11 @@ objects can be accessed from any thread.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A <code>RLMSyncUser</code> instance represents a single Realm Object Server user account.</p>
-
 <p>A user may have one or more credentials associated with it. These credentials
 uniquely identify the user to the authentication provider, and are used to sign
 into a Realm Object Server user account.</p>
-
 <p>Note that user objects are only vended out via SDK APIs, and cannot be directly
 initialized. User objects can be accessed from any thread.</p>
-
                         <a href="Classes/RLMSyncUser.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -1652,33 +1568,27 @@ initialized. User objects can be accessed from any thread.</p>
                       <div class="abstract">
                         <p>An object intended to be passed between threads containing a thread-safe reference to its
 thread-confined object.</p>
-
 <p>To resolve a thread-safe reference on a target Realm on a different thread, pass to
 <code><a href="Classes/RLMRealm.html#/c:objc(cs)RLMRealm(im)resolveThreadSafeReference:">-[RLMRealm resolveThreadSafeReference:]</a></code>.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>A <code>RLMThreadSafeReference</code> object must be resolved at most once.
-     Failing to resolve a <code>RLMThreadSafeReference</code> will result in the source version of the
-     Realm being pinned until the reference is deallocated.</p>
-
+<p class="aside-title">Warning</p>
+<p>A <code>RLMThreadSafeReference</code> object must be resolved at most once.
+Failing to resolve a <code>RLMThreadSafeReference</code> will result in the source version of the
+Realm being pinned until the reference is deallocated.</p>
 </div>
 <div class="aside aside-note">
-    <p class="aside-title">Note</p>
-    <p>Prefer short-lived <code>RLMThreadSafeReference</code>s as the data for the version of the source Realm
-  will be retained until all references have been resolved or deallocated.</p>
-
+<p class="aside-title">Note</p>
+<p>Prefer short-lived <code>RLMThreadSafeReference</code>s as the data for the version of the source Realm
+will be retained until all references have been resolved or deallocated.</p>
 </div>
 <div class="aside aside-see">
-    <p class="aside-title">See</p>
-    <p><code><a href="Protocols/RLMThreadConfined.html">RLMThreadConfined</a></code></p>
-
+<p class="aside-title">See</p>
+<p><code><a href="Protocols/RLMThreadConfined.html">RLMThreadConfined</a></code></p>
 </div>
 <div class="aside aside-see">
-    <p class="aside-title">See</p>
-    <p><code><a href="Classes/RLMRealm.html#/c:objc(cs)RLMRealm(im)resolveThreadSafeReference:">-[RLMRealm resolveThreadSafeReference:]</a></code></p>
-
+<p class="aside-title">See</p>
+<p><code><a href="Classes/RLMRealm.html#/c:objc(cs)RLMRealm(im)resolveThreadSafeReference:">-[RLMRealm resolveThreadSafeReference:]</a></code></p>
 </div>
-
                         <a href="Classes/RLMThreadSafeReference.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -1707,7 +1617,7 @@ thread-confined object.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; YYYY <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
+          <p>© YYYY <a class="link" href="https://realm.io target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -326,7 +326,6 @@
                 </div>
               </div>
             <p><code>RLMObject</code> is a base class for model objects representing data stored in Realms.</p>
-
 <p>Define your model classes by subclassing <code>RLMObject</code> and adding properties to be managed.
 Then instantiate and use your custom subclasses instead of using the <code>RLMObject</code> class directly.</p>
 <pre class="highlight objective_c"><code><span class="c1">// Dog.h
@@ -340,7 +339,6 @@ Then instantiate and use your custom subclasses instead of using the <code>RLMOb
 <span class="k">@end</span> <span class="c1">//none needed
 </span></code></pre>
 <h3 id='supported-property-types' class='heading'>Supported property types</h3>
-
 <ul>
 <li><code>NSString</code></li>
 <li><code>NSInteger</code>, <code>int</code>, <code>long</code>, <code>float</code>, and <code>double</code></li>
@@ -352,28 +350,21 @@ Then instantiate and use your custom subclasses instead of using the <code>RLMOb
 <li><code><a href="../Classes/RLMArray.html">RLMArray&lt;X&gt;</a></code>, where <code>X</code> is an <code>RLMObject</code> subclass, to model many-to-many relationships.</li>
 </ul>
 <h3 id='querying' class='heading'>Querying</h3>
-
 <p>You can initiate queries directly via the class methods: <code>allObjects</code>, <code>objectsWhere:</code>, and <code>objectsWithPredicate:</code>.
 These methods allow you to easily query a custom subclass for instances of that class in the default Realm.</p>
-
 <p>To search in a Realm other than the default Realm, use the <code>allObjectsInRealm:</code>, <code>objectsInRealm:where:</code>,
 and <code>objectsInRealm:withPredicate:</code> class methods.</p>
 <div class="aside aside-see">
-    <p class="aside-title">See</p>
-    <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code>
-
+<p class="aside-title">See</p>
+<p><code><a href="../Classes/RLMRealm.html">RLMRealm</a></code></p>
 </div>
 <h3 id='relationships' class='heading'>Relationships</h3>
-
 <p>See our <a href="https://realm.io/docs/objc/latest#relationships">Cocoa guide</a> for more details.</p>
 <h3 id='key-value-observing' class='heading'>Key-Value Observing</h3>
-
 <p>All <code>RLMObject</code> properties (including properties you create in subclasses) are
 <a href="https://developer.apple.com/library/mac/documentation/Cocoa/Conceptual/KeyValueObserving/KeyValueObserving.html">Key-Value Observing compliant</a>,
 except for <code>realm</code> and <code>objectSchema</code>.</p>
-
 <p>Keep the following tips in mind when observing Realm objects:</p>
-
 <ol>
 <li>Unlike <code>NSMutableArray</code> properties, <code><a href="../Classes/RLMArray.html">RLMArray</a></code> properties do not require
 using the proxy object returned from <code>-mutableArrayValueForKey:</code>, or defining
@@ -389,7 +380,6 @@ are made on a different thread), and notifications sent prior to the change
 being applied (when <code>NSKeyValueObservingOptionPrior</code> is used) may be sent at
 times when you <em>cannot</em> begin a write transaction.</li>
 </ol>
-
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -415,14 +405,11 @@ times when you <em>cannot</em> begin a write transaction.</li>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Creates an unmanaged instance of a Realm object.</p>
-
 <p>Call <code>addObject:</code> on an <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> instance to add an unmanaged object into that Realm.</p>
 <div class="aside aside-see">
-    <p class="aside-title">See</p>
-    <code>[RLMRealm addObject:]</code>
-
+<p class="aside-title">See</p>
+<p><code>[RLMRealm addObject:]</code></p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -457,16 +444,12 @@ times when you <em>cannot</em> begin a write transaction.</li>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Creates an unmanaged instance of a Realm object.</p>
-
-<p>Pass in an <code>NSArray</code> or <code>NSDictionary</code> instance to set the values of the object&rsquo;s properties.</p>
-
+<p>Pass in an <code>NSArray</code> or <code>NSDictionary</code> instance to set the values of the object’s properties.</p>
 <p>Call <code>addObject:</code> on an <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code> instance to add an unmanaged object into that Realm.</p>
 <div class="aside aside-see">
-    <p class="aside-title">See</p>
-    <code>[RLMRealm addObject:]</code>
-
+<p class="aside-title">See</p>
+<p><code>[RLMRealm addObject:]</code></p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -502,12 +485,10 @@ times when you <em>cannot</em> begin a write transaction.</li>
                       <div class="abstract">
                         <p>Returns the class name for a Realm object subclass.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>Do not override. Realm relies on this method returning the exact class
-     name.</p>
-
+<p class="aside-title">Warning</p>
+<p>Do not override. Realm relies on this method returning the exact class
+name.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -546,22 +527,17 @@ times when you <em>cannot</em> begin a write transaction.</li>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Creates an instance of a Realm object with a given value, and adds it to the default Realm.</p>
-
 <p>If nested objects are included in the argument, <code>createInDefaultRealmWithValue:</code> will be recursively called
 on them.</p>
-
 <p>The <code>value</code> argument can be a key-value coding compliant object, an array or dictionary returned from the methods in
 <code>NSJSONSerialization</code>, or an array containing one element for each managed property. An exception will be thrown if
 any required properties are not present and those properties were not defined with default values.</p>
-
 <p>When passing in an array as the <code>value</code> argument, all properties must be present, valid and in the same order as the
 properties defined in the model.</p>
 <div class="aside aside-see">
-    <p class="aside-title">See</p>
-    <p><code>defaultPropertyValues</code></p>
-
+<p class="aside-title">See</p>
+<p><code>defaultPropertyValues</code></p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -615,22 +591,17 @@ properties defined in the model.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Creates an instance of a Realm object with a given value, and adds it to the specified Realm.</p>
-
 <p>If nested objects are included in the argument, <code>createInRealm:withValue:</code> will be recursively called
 on them.</p>
-
 <p>The <code>value</code> argument can be a key-value coding compliant object, an array or dictionary returned from the methods in
 <code>NSJSONSerialization</code>, or an array containing one element for each managed property. An exception will be thrown if any
 required properties are not present and those properties were not defined with default values.</p>
-
 <p>When passing in an array as the <code>value</code> argument, all properties must be present, valid and in the same order as the
 properties defined in the model.</p>
 <div class="aside aside-see">
-    <p class="aside-title">See</p>
-    <p><code>defaultPropertyValues</code></p>
-
+<p class="aside-title">See</p>
+<p><code>defaultPropertyValues</code></p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -697,30 +668,23 @@ properties defined in the model.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Creates or updates a Realm object within the default Realm.</p>
-
 <p>This method may only be called on Realm object types with a primary key defined. If there is already
 an object with the same primary key value in the default Realm, its values are updated and the object
 is returned. Otherwise, this method creates and populates a new instance of the object in the default Realm.</p>
-
 <p>If nested objects are included in the argument, <code>createOrUpdateInDefaultRealmWithValue:</code> will be
 recursively called on them if they have primary keys, <code>createInDefaultRealmWithValue:</code> if they do not.</p>
-
-<p>If the argument is a Realm object already managed by the default Realm, the argument&rsquo;s type is the same
+<p>If the argument is a Realm object already managed by the default Realm, the argument’s type is the same
 as the receiver, and the objects have identical values for their managed properties, this method does nothing.</p>
-
 <p>The <code>value</code> argument is used to populate the object. It can be a key-value coding compliant object, an array or
 dictionary returned from the methods in <code>NSJSONSerialization</code>, or an array containing one element for each managed
 property. An exception will be thrown if any required properties are not present and those properties were not defined
 with default values.</p>
-
 <p>When passing in an array as the <code>value</code> argument, all properties must be present, valid and in the same order as the
 properties defined in the model.</p>
 <div class="aside aside-see">
-    <p class="aside-title">See</p>
-    <p><code>defaultPropertyValues</code>, <code>primaryKey</code></p>
-
+<p class="aside-title">See</p>
+<p><code>defaultPropertyValues</code>, <code>primaryKey</code></p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -774,30 +738,23 @@ properties defined in the model.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Creates or updates an Realm object within a specified Realm.</p>
-
 <p>This method may only be called on Realm object types with a primary key defined. If there is already
 an object with the same primary key value in the given Realm, its values are updated and the object
 is returned. Otherwise this method creates and populates a new instance of this object in the given Realm.</p>
-
 <p>If nested objects are included in the argument, <code>createOrUpdateInRealm:withValue:</code> will be
 recursively called on them if they have primary keys, <code>createInRealm:withValue:</code> if they do not.</p>
-
-<p>If the argument is a Realm object already managed by the given Realm, the argument&rsquo;s type is the same
+<p>If the argument is a Realm object already managed by the given Realm, the argument’s type is the same
 as the receiver, and the objects have identical values for their managed properties, this method does nothing.</p>
-
 <p>The <code>value</code> argument is used to populate the object. It can be a key-value coding compliant object, an array or
 dictionary returned from the methods in <code>NSJSONSerialization</code>, or an array containing one element for each managed
 property. An exception will be thrown if any required properties are not present and those properties were not defined
 with default values.</p>
-
 <p>When passing in an array as the <code>value</code> argument, all properties must be present, valid and in the same order as the
 properties defined in the model.</p>
 <div class="aside aside-see">
-    <p class="aside-title">See</p>
-    <p><code>defaultPropertyValues</code>, <code>primaryKey</code></p>
-
+<p class="aside-title">See</p>
+<p><code>defaultPropertyValues</code>, <code>primaryKey</code></p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -875,7 +832,6 @@ properties defined in the model.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The Realm which manages the object, or <code>nil</code> if the object is unmanaged.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -910,7 +866,6 @@ properties defined in the model.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The object schema which lists the managed properties for the object.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -945,10 +900,8 @@ properties defined in the model.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Indicates if the object can no longer be accessed because it is now invalid.</p>
-
 <p>An object can no longer be accessed if the object has been deleted from the Realm that manages it, or
 if <code>invalidate</code> is called on that Realm.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -994,9 +947,7 @@ if <code>invalidate</code> is called on that Realm.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns an array of property names for properties which should be indexed.</p>
-
 <p>Only string, integer, boolean, and <code>NSDate</code> properties are supported.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1035,7 +986,6 @@ if <code>invalidate</code> is called on that Realm.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Override this method to specify the default values to be used for each property.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1074,11 +1024,9 @@ if <code>invalidate</code> is called on that Realm.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Override this method to specify the name of a property to be used as the primary key.</p>
-
 <p>Only properties of types <code>RLMPropertyTypeString</code> and <code>RLMPropertyTypeInt</code> can be designated as the primary key.
 Primary key properties enforce uniqueness for each value whenever the property is set, which incurs minor overhead.
 Indexes are created automatically for primary key properties.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1118,7 +1066,6 @@ Indexes are created automatically for primary key properties.</p>
                       <div class="abstract">
                         <p>Override this method to specify the names of properties to ignore. These properties will not be managed by the Realm
 that manages the object.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1157,15 +1104,12 @@ that manages the object.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Override this method to specify the names of properties that are non-optional (i.e. cannot be assigned a <code>nil</code> value).</p>
-
 <p>By default, all properties of a type whose values can be set to <code>nil</code> are considered optional properties.
 To require that an object in a Realm always store a non-<code>nil</code> value for a property,
 add the name of the property to the array returned from this method.</p>
-
 <p>Properties of <code>RLMObject</code> type cannot be non-optional. Array and <code>NSNumber</code> properties
 can be non-optional, but there is no reason to do so: arrays do not support storing nil, and
 if you want a non-optional number you should instead use the primitive type.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1204,13 +1148,11 @@ if you want a non-optional number you should instead use the primitive type.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Override this method to provide information related to properties containing linking objects.</p>
-
 <p>Each property of type <code><a href="../Classes.html#/c:objc(cs)RLMLinkingObjects">RLMLinkingObjects</a></code> must have a key in the dictionary returned by this method consisting
 of the property name. The corresponding value must be an instance of <code><a href="../Classes/RLMPropertyDescriptor.html">RLMPropertyDescriptor</a></code> that describes the class
 and property that the property is linked to.</p>
 <pre class="highlight objective_c"><code><span class="k">return</span> <span class="p">@{</span> <span class="s">@"owners"</span><span class="o">:</span> <span class="p">[</span><span class="n">RLMPropertyDescriptor</span> <span class="nf">descriptorWithClass</span><span class="p">:</span><span class="n">Owner</span><span class="p">.</span><span class="n">class</span> <span class="nf">propertyName</span><span class="p">:</span><span class="s">@"dogs"</span><span class="p">]</span> <span class="p">};</span>
 </code></pre>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1261,7 +1203,6 @@ and property that the property is linked to.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns all objects of this object type from the default Realm.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1300,7 +1241,6 @@ and property that the property is linked to.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns all objects of this object type matching the given predicate from the default Realm.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1353,7 +1293,6 @@ and property that the property is linked to.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns all objects of this object type matching the given predicate from the default Realm.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1411,18 +1350,14 @@ and property that the property is linked to.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Retrieves the single instance of this object type with the given primary key from the default Realm.</p>
-
 <p>Returns the object from the default Realm which has the given primary key, or
 <code>nil</code> if the object does not exist. This is slightly faster than the otherwise
 equivalent <code>[[SubclassName objectsWhere:@&quot;primaryKeyPropertyName = %@&quot;, key] firstObject]</code>.</p>
-
 <p>This method requires that <code>primaryKey</code> be overridden on the receiving subclass.</p>
 <div class="aside aside-see">
-    <p class="aside-title">See</p>
-    <code>-primaryKey</code>
-
+<p class="aside-title">See</p>
+<p><code>-primaryKey</code></p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1472,7 +1407,6 @@ equivalent <code>[[SubclassName objectsWhere:@&quot;primaryKeyPropertyName = %@&
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns all objects of this object type from the specified Realm.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1530,7 +1464,6 @@ equivalent <code>[[SubclassName objectsWhere:@&quot;primaryKeyPropertyName = %@&
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns all objects of this object type matching the given predicate from the specified Realm.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1596,7 +1529,6 @@ equivalent <code>[[SubclassName objectsWhere:@&quot;primaryKeyPropertyName = %@&
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns all objects of this object type matching the given predicate from the specified Realm.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1667,18 +1599,14 @@ equivalent <code>[[SubclassName objectsWhere:@&quot;primaryKeyPropertyName = %@&
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Retrieves the single instance of this object type with the given primary key from the specified Realm.</p>
-
 <p>Returns the object from the specified Realm which has the given primary key, or
 <code>nil</code> if the object does not exist. This is slightly faster than the otherwise
 equivalent <code>[[SubclassName objectsInRealm:realm where:@&quot;primaryKeyPropertyName = %@&quot;, key] firstObject]</code>.</p>
-
 <p>This method requires that <code>primaryKey</code> be overridden on the receiving subclass.</p>
 <div class="aside aside-see">
-    <p class="aside-title">See</p>
-    <code>-primaryKey</code>
-
+<p class="aside-title">See</p>
+<p><code>-primaryKey</code></p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1729,39 +1657,31 @@ equivalent <code>[[SubclassName objectsInRealm:realm where:@&quot;primaryKeyProp
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Registers a block to be called each time the object changes.</p>
-
 <p>The block will be asynchronously called after each write transaction which
 deletes the object or modifies any of the managed properties of the object,
 including self-assignments that set a property to its existing value.</p>
-
 <p>For write transactions performed on different threads or in differen
 processes, the block will be called when the managing Realm is
 (auto)refreshed to a version including the changes, while for local write
 transactions it will be called at some point in the future after the write
 transaction is committed.</p>
-
-<p>Notifications are delivered via the standard run loop, and so can&rsquo;t be
+<p>Notifications are delivered via the standard run loop, and so can’t be
 delivered while the run loop is blocked by other activity. When notifications
-can&rsquo;t be delivered instantly, multiple notifications may be coalesced into a
+can’t be delivered instantly, multiple notifications may be coalesced into a
 single notification.</p>
-
-<p>Unlike with <code><a href="../Classes/RLMArray.html">RLMArray</a></code> and <code><a href="../Classes/RLMResults.html">RLMResults</a></code>, there is no <q>initial</q> callback made
+<p>Unlike with <code><a href="../Classes/RLMArray.html">RLMArray</a></code> and <code><a href="../Classes/RLMResults.html">RLMResults</a></code>, there is no “initial” callback made
 after you add a new notification block.</p>
-
 <p>Only objects which are managed by a Realm can be observed in this way. You
 must retain the returned token for as long as you want updates to be sent to
 the block. To stop receiving updates, call <code>stop</code> on the token.</p>
-
 <p>It is safe to capture a strong reference to the observed object within the
 callback block. There is no retain cycle due to that the callback is retained
 by the returned token and not by the object itself.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>This method cannot be called during a write transaction, when the
-     containing Realm is read-only, or on an unmanaged object.</p>
-
+<p class="aside-title">Warning</p>
+<p>This method cannot be called during a write transaction, when the
+containing Realm is read-only, or on an unmanaged object.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1832,10 +1752,8 @@ by the returned token and not by the object itself.</p>
                       <div class="abstract">
                         <p>Returns YES if another Realm object instance points to the same object as the receiver in the Realm managing
 the receiver.</p>
-
 <p>For object types with a primary, key, <code>isEqual:</code> is overridden to use this method (along with a corresponding
 implementation for <code>hash</code>).</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1884,7 +1802,7 @@ implementation for <code>hash</code>).</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; YYYY <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
+          <p>© YYYY <a class="link" href="https://realm.io target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

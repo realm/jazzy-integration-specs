@@ -246,18 +246,23 @@
                 </div>
               </div>
             <p>A logical grouping of transformers and a cache.</p>
-
 <p>Why create separate stages?</p>
-<li>To be able to append, replace, or remove some transformations independently of others, e.g. override the model
-transform without disabling JSON parsing.</li>
-<li>To cache entities at any intermediate stage of processing.</li>
-<li><p>To maintain multiple caches.</p></li>
 <div class="aside aside-see">
-    <p class="aside-title">See</p>
-    <p><code><a href="../Structs/Pipeline.html">Pipeline</a></code></p>
-
+<p class="aside-title">See</p>
+<p><code><a href="../Structs/Pipeline.html">Pipeline</a></code></p>
 </div>
-
+<ul>
+<li>
+<p>To be able to append, replace, or remove some transformations independently of others, e.g. override the model
+transform without disabling JSON parsing.</p>
+</li>
+<li>
+<p>To cache entities at any intermediate stage of processing.</p>
+</li>
+<li>
+<p>To maintain multiple caches.</p>
+</li>
+</ul>
           </div>
         </section>
 
@@ -279,7 +284,6 @@ transform without disabling JSON parsing.</li>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Appends the given transformer to this stage.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -307,15 +311,12 @@ transform without disabling JSON parsing.</li>
                       <div class="abstract">
                         <p>Appends the given transformer to this stage, applying it only if the server’s <code>Content-type</code> header matches any of
 the <code>contentTypes</code>. The content type matching applies regardles of whether the response is a success or failure.</p>
-
 <p>Content type patterns can use * to match subsequences. The wildcard does not cross <code>/</code> or <code>+</code> boundaries. Examples:</p>
 <pre class="highlight swift"><code><span class="s">"text/plain"</span>
 <span class="s">"text/​*"</span>
 <span class="s">"application/​*+json"</span>
 </code></pre>
-
-<p>The pattern does not match MIME parameters, so <q>text/plain</q> matches <q>text/plain; charset=utf-8</q>.</p>
-
+<p>The pattern does not match MIME parameters, so “text/plain” matches “text/plain; charset=utf-8”.</p>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -349,7 +350,6 @@ transformers for specific resources:</p>
   <span class="nv">$0</span><span class="o">.</span><span class="n">pipeline</span><span class="p">[</span><span class="o">.</span><span class="n">parsing</span><span class="p">]</span><span class="o">.</span><span class="nf">removeTransformers</span><span class="p">()</span>
 <span class="p">}</span>
 </code></pre>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -376,19 +376,15 @@ transformers for specific resources:</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>An optional persistent cache for this stage.</p>
-
 <p>When processing a response, the cache will receive the resulting entity after this stage’s transformers have run.</p>
-
 <p>When inflating a new resource, Siesta will ask caches if it has any content for the resource, starting with the
 <em>last</em> cache in the pipeline and working backwards. If there is a cache hit, the resulting entity runs through all
 the pipeline stages <em>after</em> the one that provided the cache hit.</p>
 <div class="aside aside-note">
-    <p class="aside-title">Note</p>
-    Siesta may ask your cache for content before any load requests run. This means that your observer may
-    initially see an empty resources and then get a <code>newData(Cache)</code> event — even if you never call <code>load()</code>.
-
+<p class="aside-title">Note</p>
+<p>Siesta may ask your cache for content before any load requests run. This means that your observer may
+initially see an empty resources and then get a <code>newData(Cache)</code> event — even if you never call <code>load()</code>.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -415,7 +411,6 @@ the pipeline stages <em>after</em> the one that provided the cache hit.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Removes any caching that had been configured at this stage.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -446,7 +441,6 @@ the pipeline stages <em>after</em> the one that provided the cache hit.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Ways of modifying a stage’s transformers. Used by <code><a href="../Classes/Service.html#/s:6Siesta7ServiceC20configureTransformeryAA31ConfigurationPatternConvertible_p_SayAA13RequestMethodOGSg14requestMethodsAA16PipelineStageKeyC02atM0AA0lM0V14MutationActionO6actionAA017InputTypeMismatchQ0O02onstU0Sb15transformErrorsSSSg11descriptionq_SgAA6EntityVyxGKc16contentTransformtr0_lF">Service.configureTransformer(...)</a></code>.</p>
-
                         <a href="../Structs/PipelineStage/MutationAction.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -468,7 +462,7 @@ the pipeline stages <em>after</em> the one that provided the cache hit.</p>
       </article>
     </div>
     <section class="footer">
-      <p>© 2016 <a class="link" href="http://bustoutsolutions.com" target="_blank" rel="external">Bust Out Solutions</a> under <a class="link" href="https://github.com/bustoutsolutions/siesta/blob/master/LICENSE" target="_blank" rel="external">open source license</a>.</p>
+      <p>© 2016 <a class="link" href="http://bustoutsolutions.com target="_blank" rel="external">Bust Out Solutions</a> under <a class="link" href="https://github.com/bustoutsolutions/siesta/blob/master/LICENSE target="_blank" rel="external">open source license</a>.</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

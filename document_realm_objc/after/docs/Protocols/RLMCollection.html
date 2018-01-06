@@ -327,7 +327,6 @@
               </div>
             <p>A homogenous collection of <code><a href="../Classes/RLMObject.html">RLMObject</a></code> instances. Examples of conforming types include <code><a href="../Classes/RLMArray.html">RLMArray</a></code>,
 <code><a href="../Classes/RLMResults.html">RLMResults</a></code>, and <code><a href="../Classes.html#/c:objc(cs)RLMLinkingObjects">RLMLinkingObjects</a></code>.</p>
-
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -353,7 +352,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The number of objects in the collection.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -389,7 +387,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The class name (i.e. type) of the <code><a href="../Classes/RLMObject.html">RLMObject</a></code>s contained in the collection.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -425,7 +422,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The Realm which manages the collection, or <code>nil</code> for unmanaged collections.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -472,7 +468,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the object at the index specified.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -530,9 +525,7 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the first object in the collection.</p>
-
 <p>Returns <code>nil</code> if called on an empty collection.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -571,9 +564,7 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the last object in the collection.</p>
-
 <p>Returns <code>nil</code> if called on an empty collection.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -623,9 +614,7 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the index of an object in the collection.</p>
-
 <p>Returns <code>NSNotFound</code> if the object is not found in the collection.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -679,7 +668,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the index of the first object in the collection matching the predicate.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -732,7 +720,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the index of the first object in the collection matching the predicate.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -790,7 +777,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns all objects matching the given predicate in the collection.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -843,7 +829,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns all objects matching the given predicate in the collection.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -901,7 +886,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns a sorted <code><a href="../Classes/RLMResults.html">RLMResults</a></code> from the collection.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -972,7 +956,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns a sorted <code><a href="../Classes/RLMResults.html">RLMResults</a></code> from the collection.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1043,7 +1026,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns a sorted <code><a href="../Classes/RLMResults.html">RLMResults</a></code> from the collection.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1101,8 +1083,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns an <code>NSArray</code> containing the results of invoking <code>valueForKey:</code> using <code>key</code> on each of the collection&rsquo;s objects.</p>
-
+                        <p>Returns an <code>NSArray</code> containing the results of invoking <code>valueForKey:</code> using <code>key</code> on each of the collection’s objects.</p>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1159,13 +1140,11 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Invokes <code>setValue:forKey:</code> on each of the collection&rsquo;s objects using the specified <code>value</code> and <code>key</code>.</p>
+                        <p>Invokes <code>setValue:forKey:</code> on each of the collection’s objects using the specified <code>value</code> and <code>key</code>.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>This method may only be called during a write transaction.</p>
-
+<p class="aside-title">Warning</p>
+<p>This method may only be called during a write transaction.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1242,30 +1221,25 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Registers a block to be called each time the collection changes.</p>
-
 <p>The block will be asynchronously called with the initial collection, and then
 called again after each write transaction which changes either any of the
 objects in the collection, or which objects are in the collection.</p>
-
 <p>The <code>change</code> parameter will be <code>nil</code> the first time the block is called.
 For each call after that, it will contain information about
 which rows in the collection were added, removed or modified. If a write transaction
 did not modify any objects in this collection, the block is not called at all.
 See the <code><a href="../Classes/RLMCollectionChange.html">RLMCollectionChange</a></code> documentation for information on how the changes
 are reported and an example of updating a <code>UITableView</code>.</p>
-
 <p>If an error occurs the block will be called with <code>nil</code> for the collection
 parameter and a non-<code>nil</code> error. Currently the only errors that can occur are
 when opening the Realm on the background worker thread.</p>
-
 <p>At the time when the block is called, the collection object will be fully
 evaluated and up-to-date, and as long as you do not perform a write transaction
 on the same thread or explicitly call <code><a href="../Classes/RLMRealm.html#/c:objc(cs)RLMRealm(im)refresh">-[RLMRealm refresh]</a></code>, accessing it will
 never perform blocking work.</p>
-
-<p>Notifications are delivered via the standard run loop, and so can&rsquo;t be
+<p>Notifications are delivered via the standard run loop, and so can’t be
 delivered while the run loop is blocked by other activity. When
-notifications can&rsquo;t be delivered instantly, multiple notifications may be
+notifications can’t be delivered instantly, multiple notifications may be
 coalesced into a single notification. This can include the notification
 with the initial collection. For example, the following code performs a write
 transaction immediately after adding the notification block, so there is no
@@ -1287,16 +1261,13 @@ the write transaction.</p>
 <span class="p">}];</span>
 <span class="c1">// end of run loop execution context
 </span></code></pre>
-
 <p>You must retain the returned token for as long as you want updates to continue
 to be sent to the block. To stop receiving updates, call <code>-stop</code> on the token.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>This method cannot be called during a write transaction, or when the
-     containing Realm is read-only.</p>
-
+<p class="aside-title">Warning</p>
+<p>This method cannot be called during a write transaction, or when the
+containing Realm is read-only.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1371,11 +1342,9 @@ in the collection.</p>
 <pre class="highlight objective_c"><code><span class="n">NSNumber</span> <span class="o">*</span><span class="n">min</span> <span class="o">=</span> <span class="p">[</span><span class="n">results</span> <span class="nf">minOfProperty</span><span class="p">:</span><span class="s">@"age"</span><span class="p">];</span>
 </code></pre>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>You cannot use this method on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>, <code><a href="../Classes/RLMArray.html">RLMArray</a></code>, and <code>NSData</code> properties.</p>
-
+<p class="aside-title">Warning</p>
+<p>You cannot use this method on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>, <code><a href="../Classes/RLMArray.html">RLMArray</a></code>, and <code>NSData</code> properties.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1403,7 +1372,7 @@ in the collection.</p>
                               <td>
                                 <div>
                                   <p>The property whose minimum value is desired. Only properties of
-            types <code>int</code>, <code>float</code>, <code>double</code>, and <code>NSDate</code> are supported.</p>
+types <code>int</code>, <code>float</code>, <code>double</code>, and <code>NSDate</code> are supported.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1438,11 +1407,9 @@ in the collection.</p>
 <pre class="highlight objective_c"><code><span class="n">NSNumber</span> <span class="o">*</span><span class="n">max</span> <span class="o">=</span> <span class="p">[</span><span class="n">results</span> <span class="nf">maxOfProperty</span><span class="p">:</span><span class="s">@"age"</span><span class="p">];</span>
 </code></pre>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>You cannot use this method on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>, <code><a href="../Classes/RLMArray.html">RLMArray</a></code>, and <code>NSData</code> properties.</p>
-
+<p class="aside-title">Warning</p>
+<p>You cannot use this method on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>, <code><a href="../Classes/RLMArray.html">RLMArray</a></code>, and <code>NSData</code> properties.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1470,7 +1437,7 @@ in the collection.</p>
                               <td>
                                 <div>
                                   <p>The property whose maximum value is desired. Only properties of
-            types <code>int</code>, <code>float</code>, <code>double</code>, and <code>NSDate</code> are supported.</p>
+types <code>int</code>, <code>float</code>, <code>double</code>, and <code>NSDate</code> are supported.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1504,11 +1471,9 @@ in the collection.</p>
 <pre class="highlight objective_c"><code><span class="n">NSNumber</span> <span class="o">*</span><span class="n">sum</span> <span class="o">=</span> <span class="p">[</span><span class="n">results</span> <span class="nf">sumOfProperty</span><span class="p">:</span><span class="s">@"age"</span><span class="p">];</span>
 </code></pre>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>You cannot use this method on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>, <code><a href="../Classes/RLMArray.html">RLMArray</a></code>, and <code>NSData</code> properties.</p>
-
+<p class="aside-title">Warning</p>
+<p>You cannot use this method on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>, <code><a href="../Classes/RLMArray.html">RLMArray</a></code>, and <code>NSData</code> properties.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1536,7 +1501,7 @@ in the collection.</p>
                               <td>
                                 <div>
                                   <p>The property whose values should be summed. Only properties of
-            types <code>int</code>, <code>float</code>, and <code>double</code> are supported.</p>
+types <code>int</code>, <code>float</code>, and <code>double</code> are supported.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1570,11 +1535,9 @@ in the collection.</p>
 <pre class="highlight objective_c"><code><span class="n">NSNumber</span> <span class="o">*</span><span class="n">average</span> <span class="o">=</span> <span class="p">[</span><span class="n">results</span> <span class="nf">averageOfProperty</span><span class="p">:</span><span class="s">@"age"</span><span class="p">];</span>
 </code></pre>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>You cannot use this method on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>, <code><a href="../Classes/RLMArray.html">RLMArray</a></code>, and <code>NSData</code> properties.</p>
-
+<p class="aside-title">Warning</p>
+<p>You cannot use this method on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>, <code><a href="../Classes/RLMArray.html">RLMArray</a></code>, and <code>NSData</code> properties.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1602,7 +1565,7 @@ in the collection.</p>
                               <td>
                                 <div>
                                   <p>The property whose average value should be calculated. Only
-            properties of types <code>int</code>, <code>float</code>, and <code>double</code> are supported.</p>
+properties of types <code>int</code>, <code>float</code>, and <code>double</code> are supported.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1624,7 +1587,7 @@ in the collection.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; YYYY <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
+          <p>© YYYY <a class="link" href="https://realm.io target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

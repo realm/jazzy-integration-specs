@@ -281,14 +281,16 @@
                 </div>
               </div>
             <p>Used to represent whether a request was successful or encountered an error.</p>
-
 <ul>
-<li><p>success: The request and all post processing operations were successful resulting in the serialization of the
-       provided associated value.</p></li>
-<li><p>failure: The request encountered an error resulting in a failure. The associated values are the original data
-       provided by the server as well as the error that caused the failure.</p></li>
+<li>
+<p>success: The request and all post processing operations were successful resulting in the serialization of the
+provided associated value.</p>
+</li>
+<li>
+<p>failure: The request encountered an error resulting in a failure. The associated values are the original data
+provided by the server as well as the error that caused the failure.</p>
+</li>
 </ul>
-
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -307,7 +309,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns <code>true</code> if the result is a success, <code>false</code> otherwise.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -337,7 +338,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns <code>true</code> if the result is a failure, <code>false</code> otherwise.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -367,7 +367,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the associated value if the result is a success, <code>nil</code> otherwise.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -397,7 +396,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the associated error value if the result is a failure, <code>nil</code> otherwise.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -432,7 +430,6 @@
                       <div class="abstract">
                         <p>The textual representation used when written to an output stream, which includes whether the result was a
 success or failure.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -467,7 +464,6 @@ success or failure.</p>
                       <div class="abstract">
                         <p>The debug textual representation used when written to an output stream, which includes whether the result was a
 success or failure in addition to the value or error.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -501,7 +497,6 @@ success or failure in addition to the value or error.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Creates a <code>Result</code> instance from the result of a closure.</p>
-
 <p>A failure result is created when the closure throws, and a success result is created when the closure
 succeeds without throwing an error.</p>
 <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">someString</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">String</span> <span class="p">{</span> <span class="o">...</span> <span class="p">}</span>
@@ -512,11 +507,9 @@ succeeds without throwing an error.</p>
 
 <span class="c1">// The type of result is Result&lt;String&gt;</span>
 </code></pre>
-
 <p>The trailing closure syntax is also supported:</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">result</span> <span class="o">=</span> <span class="kt">Result</span> <span class="p">{</span> <span class="k">try</span> <span class="nf">someString</span><span class="p">()</span> <span class="p">}</span>
 </code></pre>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -573,7 +566,6 @@ succeeds without throwing an error.</p>
 <span class="k">try</span> <span class="nf">print</span><span class="p">(</span><span class="n">noString</span><span class="o">.</span><span class="nf">unwrap</span><span class="p">())</span>
 <span class="c1">// Throws error</span>
 </code></pre>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -603,7 +595,6 @@ succeeds without throwing an error.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Evaluates the specified closure when the <code>Result</code> is a success, passing the unwrapped value as a parameter.</p>
-
 <p>Use the <code>map</code> method with a closure that does not throw. For example:</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">possibleData</span><span class="p">:</span> <span class="kt">Result</span><span class="o">&lt;</span><span class="kt">Data</span><span class="o">&gt;</span> <span class="o">=</span> <span class="o">.</span><span class="nf">success</span><span class="p">(</span><span class="kt">Data</span><span class="p">())</span>
 <span class="k">let</span> <span class="nv">possibleInt</span> <span class="o">=</span> <span class="n">possibleData</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="nv">$0</span><span class="o">.</span><span class="n">count</span> <span class="p">}</span>
@@ -615,7 +606,6 @@ succeeds without throwing an error.</p>
 <span class="k">try</span> <span class="nf">print</span><span class="p">(</span><span class="n">noInt</span><span class="o">.</span><span class="nf">unwrap</span><span class="p">())</span>
 <span class="c1">// Throws error</span>
 </code></pre>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -647,7 +637,7 @@ succeeds without throwing an error.</p>
                       <div>
                         <h4>Return Value</h4>
                         <p>A <code>Result</code> containing the result of the given closure. If this instance is a failure, returns the
-       same failure.</p>
+same failure.</p>
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/Result.swift#L169-L176">Show on GitHub</a>
@@ -669,14 +659,12 @@ succeeds without throwing an error.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Evaluates the specified closure when the <code>Result</code> is a success, passing the unwrapped value as a parameter.</p>
-
 <p>Use the <code>flatMap</code> method with a closure that may throw an error. For example:</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">possibleData</span><span class="p">:</span> <span class="kt">Result</span><span class="o">&lt;</span><span class="kt">Data</span><span class="o">&gt;</span> <span class="o">=</span> <span class="o">.</span><span class="nf">success</span><span class="p">(</span><span class="kt">Data</span><span class="p">(</span><span class="o">...</span><span class="p">))</span>
 <span class="k">let</span> <span class="nv">possibleObject</span> <span class="o">=</span> <span class="n">possibleData</span><span class="o">.</span><span class="n">flatMap</span> <span class="p">{</span>
     <span class="k">try</span> <span class="kt">JSONSerialization</span><span class="o">.</span><span class="nf">jsonObject</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="nv">$0</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -708,7 +696,7 @@ succeeds without throwing an error.</p>
                       <div>
                         <h4>Return Value</h4>
                         <p>A <code>Result</code> containing the result of the given closure. If this instance is a failure, returns the
-       same failure.</p>
+same failure.</p>
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/Result.swift#L191-L202">Show on GitHub</a>
@@ -721,7 +709,7 @@ succeeds without throwing an error.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; YYYY <a class="link" href="https://nshipster.com/alamofire" target="_blank" rel="external">Alamofire</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
+          <p>© YYYY <a class="link" href="https://nshipster.com/alamofire target="_blank" rel="external">Alamofire</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

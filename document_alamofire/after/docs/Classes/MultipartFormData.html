@@ -285,16 +285,13 @@ multipart form data. The first way is to encode the data directly in memory. Thi
 to memory issues if the dataset is too large. The second way is designed for larger datasets and will write all the
 data to a single file on disk with all the proper boundary segmentation. The second approach MUST be used for
 larger datasets such as video content, otherwise your app may run out of memory when trying to encode the dataset.</p>
-
 <p>For more information on <code>multipart/form-data</code> in general, please refer to the RFC-2388 and RFC-2045 specs as well
 and the w3 form documentation.</p>
-
 <ul>
 <li><a href="https://www.ietf.org/rfc/rfc2388.txt">https://www.ietf.org/rfc/rfc2388.txt</a></li>
 <li><a href="https://www.ietf.org/rfc/rfc2045.txt">https://www.ietf.org/rfc/rfc2045.txt</a></li>
 <li><a href="https://www.w3.org/TR/html401/interact/forms.html#h-17.13">https://www.w3.org/TR/html401/interact/forms.html#h-17.13</a></li>
 </ul>
-
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -320,7 +317,6 @@ and the w3 form documentation.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The <code>Content-Type</code> header value containing the boundary used to generate the <code>multipart/form-data</code>.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -350,7 +346,6 @@ and the w3 form documentation.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The content length of all body parts used to generate the <code>multipart/form-data</code> not including the boundaries.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -380,7 +375,6 @@ and the w3 form documentation.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The boundary used to separate the body parts in the encoded form data.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -421,7 +415,6 @@ and the w3 form documentation.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Creates a multipart form data object.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -466,15 +459,18 @@ and the w3 form documentation.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Creates a body part from the data and appends it to the multipart form data object.</p>
-
 <p>The body part data will be encoded using the following format:</p>
-
 <ul>
-<li><code>Content-Disposition: form-data; name=#{name}</code> (HTTP Header)</li>
-<li>Encoded data</li>
-<li><p>Multipart form boundary</p></li>
+<li>
+<p><code>Content-Disposition: form-data; name=#{name}</code> (HTTP Header)</p>
+</li>
+<li>
+<p>Encoded data</p>
+</li>
+<li>
+<p>Multipart form boundary</p>
+</li>
 </ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -535,16 +531,21 @@ and the w3 form documentation.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Creates a body part from the data and appends it to the multipart form data object.</p>
-
 <p>The body part data will be encoded using the following format:</p>
-
 <ul>
-<li><code>Content-Disposition: form-data; name=#{name}</code> (HTTP Header)</li>
-<li><code>Content-Type: #{generated mimeType}</code> (HTTP Header)</li>
-<li>Encoded data</li>
-<li><p>Multipart form boundary</p></li>
+<li>
+<p><code>Content-Disposition: form-data; name=#{name}</code> (HTTP Header)</p>
+</li>
+<li>
+<p><code>Content-Type: #{generated mimeType}</code> (HTTP Header)</p>
+</li>
+<li>
+<p>Encoded data</p>
+</li>
+<li>
+<p>Multipart form boundary</p>
+</li>
 </ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -617,16 +618,21 @@ and the w3 form documentation.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Creates a body part from the data and appends it to the multipart form data object.</p>
-
 <p>The body part data will be encoded using the following format:</p>
-
 <ul>
-<li><code>Content-Disposition: form-data; name=#{name}; filename=#{filename}</code> (HTTP Header)</li>
-<li><code>Content-Type: #{mimeType}</code> (HTTP Header)</li>
-<li>Encoded file data</li>
-<li><p>Multipart form boundary</p></li>
+<li>
+<p><code>Content-Disposition: form-data; name=#{name}; filename=#{filename}</code> (HTTP Header)</p>
+</li>
+<li>
+<p><code>Content-Type: #{mimeType}</code> (HTTP Header)</p>
+</li>
+<li>
+<p>Encoded file data</p>
+</li>
+<li>
+<p>Multipart form boundary</p>
+</li>
 </ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -711,20 +717,16 @@ and the w3 form documentation.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Creates a body part from the file and appends it to the multipart form data object.</p>
-
 <p>The body part data will be encoded using the following format:</p>
-
 <ul>
 <li><code>Content-Disposition: form-data; name=#{name}; filename=#{generated filename}</code> (HTTP Header)</li>
 <li><code>Content-Type: #{generated mimeType}</code> (HTTP Header)</li>
 <li>Encoded file data</li>
 <li>Multipart form boundary</li>
 </ul>
-
 <p>The filename in the <code>Content-Disposition</code> HTTP header is generated from the last path component of the
 <code>fileURL</code>. The <code>Content-Type</code> HTTP header MIME type is generated by mapping the <code>fileURL</code> extension to the
 system associated MIME type.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -785,16 +787,21 @@ system associated MIME type.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Creates a body part from the file and appends it to the multipart form data object.</p>
-
 <p>The body part data will be encoded using the following format:</p>
-
 <ul>
-<li>Content-Disposition: form-data; name=#{name}; filename=#{filename} (HTTP Header)</li>
-<li>Content-Type: #{mimeType} (HTTP Header)</li>
-<li>Encoded file data</li>
-<li><p>Multipart form boundary</p></li>
+<li>
+<p>Content-Disposition: form-data; name=#{name}; filename=#{filename} (HTTP Header)</p>
+</li>
+<li>
+<p>Content-Type: #{mimeType} (HTTP Header)</p>
+</li>
+<li>
+<p>Encoded file data</p>
+</li>
+<li>
+<p>Multipart form boundary</p>
+</li>
 </ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -879,16 +886,21 @@ system associated MIME type.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Creates a body part from the stream and appends it to the multipart form data object.</p>
-
 <p>The body part data will be encoded using the following format:</p>
-
 <ul>
-<li><code>Content-Disposition: form-data; name=#{name}; filename=#{filename}</code> (HTTP Header)</li>
-<li><code>Content-Type: #{mimeType}</code> (HTTP Header)</li>
-<li>Encoded stream data</li>
-<li><p>Multipart form boundary</p></li>
+<li>
+<p><code>Content-Disposition: form-data; name=#{name}; filename=#{filename}</code> (HTTP Header)</p>
+</li>
+<li>
+<p><code>Content-Type: #{mimeType}</code> (HTTP Header)</p>
+</li>
+<li>
+<p>Encoded stream data</p>
+</li>
+<li>
+<p>Multipart form boundary</p>
+</li>
 </ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -990,15 +1002,18 @@ system associated MIME type.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Creates a body part with the headers, stream and length and appends it to the multipart form data object.</p>
-
 <p>The body part data will be encoded using the following format:</p>
-
 <ul>
-<li>HTTP headers</li>
-<li>Encoded stream data</li>
-<li><p>Multipart form boundary</p></li>
+<li>
+<p>HTTP headers</p>
+</li>
+<li>
+<p>Encoded stream data</p>
+</li>
+<li>
+<p>Multipart form boundary</p>
+</li>
 </ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1082,16 +1097,13 @@ system associated MIME type.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Encodes all the appended body parts into a single <code>Data</code> value.</p>
-
 <p>It is important to note that this method will load all the appended body parts into memory all at the same
 time. This method should only be used when the encoded data will have a small memory footprint. For large data
 cases, please use the <code>writeEncodedDataToDisk(fileURL:completionHandler:)</code> method.</p>
 <div class="aside aside-throws">
-    <p class="aside-title">Throws</p>
-    <p>An <code><a href="../Enums/AFError.html">AFError</a></code> if encoding encounters an error.</p>
-
+<p class="aside-title">Throws</p>
+<p>An <code><a href="../Enums/AFError.html">AFError</a></code> if encoding encounters an error.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1125,15 +1137,12 @@ cases, please use the <code>writeEncodedDataToDisk(fileURL:completionHandler:)</
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Writes the appended body parts into the given file URL.</p>
-
 <p>This process is facilitated by reading and writing with input and output streams, respectively. Thus,
 this approach is very memory efficient and should be used for large body part data.</p>
 <div class="aside aside-throws">
-    <p class="aside-title">Throws</p>
-    <p>An <code><a href="../Enums/AFError.html">AFError</a></code> if encoding encounters an error.</p>
-
+<p class="aside-title">Throws</p>
+<p>An <code><a href="../Enums/AFError.html">AFError</a></code> if encoding encounters an error.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1173,7 +1182,7 @@ this approach is very memory efficient and should be used for large body part da
           </section>
         </section>
         <section id="footer">
-          <p>&copy; YYYY <a class="link" href="https://nshipster.com/alamofire" target="_blank" rel="external">Alamofire</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
+          <p>© YYYY <a class="link" href="https://nshipster.com/alamofire target="_blank" rel="external">Alamofire</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

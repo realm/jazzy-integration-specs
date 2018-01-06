@@ -274,7 +274,6 @@
           <section class="section">
             <h1>Functions</h1>
             <p>The following functions are available globally.</p>
-
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -301,7 +300,6 @@
                       <div class="abstract">
                         <p>Creates a <code><a href="Classes/DataRequest.html">DataRequest</a></code> using the default <code><a href="Classes/SessionManager.html">SessionManager</a></code> to retrieve the contents of the specified <code>url</code>,
 <code>method</code>, <code>parameters</code>, <code>encoding</code> and <code>headers</code>.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -409,7 +407,6 @@
                       <div class="abstract">
                         <p>Creates a <code><a href="Classes/DataRequest.html">DataRequest</a></code> using the default <code><a href="Classes/SessionManager.html">SessionManager</a></code> to retrieve the contents of a URL based on the
 specified <code>urlRequest</code>.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -474,10 +471,8 @@ specified <code>urlRequest</code>.</p>
                       <div class="abstract">
                         <p>Creates a <code><a href="Classes/DownloadRequest.html">DownloadRequest</a></code> using the default <code><a href="Classes/SessionManager.html">SessionManager</a></code> to retrieve the contents of the specified <code>url</code>,
 <code>method</code>, <code>parameters</code>, <code>encoding</code>, <code>headers</code> and save them to the <code>destination</code>.</p>
-
 <p>If <code>destination</code> is not specified, the contents will remain in the temporary location determined by the
 underlying URL session.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -598,10 +593,8 @@ underlying URL session.</p>
                       <div class="abstract">
                         <p>Creates a <code><a href="Classes/DownloadRequest.html">DownloadRequest</a></code> using the default <code><a href="Classes/SessionManager.html">SessionManager</a></code> to retrieve the contents of a URL based on the
 specified <code>urlRequest</code> and save them to the <code>destination</code>.</p>
-
 <p>If <code>destination</code> is not specified, the contents will remain in the temporary location determined by the
 underlying URL session.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -681,19 +674,17 @@ underlying URL session.</p>
                       <div class="abstract">
                         <p>Creates a <code><a href="Classes/DownloadRequest.html">DownloadRequest</a></code> using the default <code><a href="Classes/SessionManager.html">SessionManager</a></code> from the <code>resumeData</code> produced from a
 previous request cancellation to retrieve the contents of the original request and save them to the <code>destination</code>.</p>
-
 <p>If <code>destination</code> is not specified, the contents will remain in the temporary location determined by the
 underlying URL session.</p>
-
 <p>On the latest release of all the Apple platforms (iOS 10, macOS 10.12, tvOS 10, watchOS 3), <code>resumeData</code> is broken
-on background URL session configurations. There&rsquo;s an underlying bug in the <code>resumeData</code> generation logic where the
+on background URL session configurations. There’s an underlying bug in the <code>resumeData</code> generation logic where the
 data is written incorrectly and will always fail to resume the download. For more information about the bug and
 possible workarounds, please refer to the following Stack Overflow post:</p>
-
 <ul>
-<li><p><a href="http://stackoverflow.com/a/39347461/1342462">http://stackoverflow.com/a/39347461/1342462</a></p></li>
+<li>
+<p><a href="http://stackoverflow.com/a/39347461/1342462">http://stackoverflow.com/a/39347461/1342462</a></p>
+</li>
 </ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -719,8 +710,8 @@ possible workarounds, please refer to the following Stack Overflow post:</p>
                               <td>
                                 <div>
                                   <p>The resume data. This is an opaque data blob produced by <code>URLSessionDownloadTask</code>
-                 when a task is cancelled. See <code>URLSession -downloadTask(withResumeData:)</code> for additional
-                 information.</p>
+when a task is cancelled. See <code>URLSession -downloadTask(withResumeData:)</code> for additional
+information.</p>
                                 </div>
                               </td>
                             </tr>
@@ -775,7 +766,6 @@ possible workarounds, please refer to the following Stack Overflow post:</p>
                       <div class="abstract">
                         <p>Creates an <code><a href="Classes/UploadRequest.html">UploadRequest</a></code> using the default <code><a href="Classes/SessionManager.html">SessionManager</a></code> from the specified <code>url</code>, <code>method</code> and <code>headers</code>
 for uploading the <code>file</code>.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -870,7 +860,6 @@ for uploading the <code>file</code>.</p>
                       <div class="abstract">
                         <p>Creates a <code><a href="Classes/UploadRequest.html">UploadRequest</a></code> using the default <code><a href="Classes/SessionManager.html">SessionManager</a></code> from the specified <code>urlRequest</code> for
 uploading the <code>file</code>.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -947,7 +936,6 @@ uploading the <code>file</code>.</p>
                       <div class="abstract">
                         <p>Creates an <code><a href="Classes/UploadRequest.html">UploadRequest</a></code> using the default <code><a href="Classes/SessionManager.html">SessionManager</a></code> from the specified <code>url</code>, <code>method</code> and <code>headers</code>
 for uploading the <code>data</code>.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1042,7 +1030,6 @@ for uploading the <code>data</code>.</p>
                       <div class="abstract">
                         <p>Creates an <code><a href="Classes/UploadRequest.html">UploadRequest</a></code> using the default <code><a href="Classes/SessionManager.html">SessionManager</a></code> from the specified <code>urlRequest</code> for
 uploading the <code>data</code>.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1119,7 +1106,6 @@ uploading the <code>data</code>.</p>
                       <div class="abstract">
                         <p>Creates an <code><a href="Classes/UploadRequest.html">UploadRequest</a></code> using the default <code><a href="Classes/SessionManager.html">SessionManager</a></code> from the specified <code>url</code>, <code>method</code> and <code>headers</code>
 for uploading the <code>stream</code>.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1214,7 +1200,6 @@ for uploading the <code>stream</code>.</p>
                       <div class="abstract">
                         <p>Creates an <code><a href="Classes/UploadRequest.html">UploadRequest</a></code> using the default <code><a href="Classes/SessionManager.html">SessionManager</a></code> from the specified <code>urlRequest</code> for
 uploading the <code>stream</code>.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1291,20 +1276,17 @@ uploading the <code>stream</code>.</p>
                       <div class="abstract">
                         <p>Encodes <code>multipartFormData</code> using <code>encodingMemoryThreshold</code> with the default <code><a href="Classes/SessionManager.html">SessionManager</a></code> and calls
 <code>encodingCompletion</code> with new <code><a href="Classes/UploadRequest.html">UploadRequest</a></code> using the <code>url</code>, <code>method</code> and <code>headers</code>.</p>
-
 <p>It is important to understand the memory implications of uploading <code><a href="Classes/MultipartFormData.html">MultipartFormData</a></code>. If the cummulative
 payload is small, encoding the data in-memory and directly uploading to a server is the by far the most
 efficient approach. However, if the payload is too large, encoding the data in-memory could cause your app to
 be terminated. Larger payloads must first be written to disk using input and output streams to keep the memory
 footprint low, then the data can be uploaded as a stream from the resulting file. Streaming from disk MUST be
 used for larger payloads such as video content.</p>
-
 <p>The <code>encodingMemoryThreshold</code> parameter allows Alamofire to automatically determine whether to encode in-memory
 or stream from disk. If the content length of the <code><a href="Classes/MultipartFormData.html">MultipartFormData</a></code> is below the <code>encodingMemoryThreshold</code>,
 encoding takes place in-memory. If the content length exceeds the threshold, the data is streamed to disk
 during the encoding process. Then the result is uploaded as data or as a stream depending on which encoding
 technique was used.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1345,7 +1327,7 @@ technique was used.</p>
                               <td>
                                 <div>
                                   <p>The encoding memory threshold in bytes.
-                                 <code>multipartFormDataEncodingMemoryThreshold</code> by default.</p>
+<code>multipartFormDataEncodingMemoryThreshold</code> by default.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1421,20 +1403,17 @@ technique was used.</p>
                       <div class="abstract">
                         <p>Encodes <code>multipartFormData</code> using <code>encodingMemoryThreshold</code> and the default <code><a href="Classes/SessionManager.html">SessionManager</a></code> and
 calls <code>encodingCompletion</code> with new <code><a href="Classes/UploadRequest.html">UploadRequest</a></code> using the <code>urlRequest</code>.</p>
-
 <p>It is important to understand the memory implications of uploading <code><a href="Classes/MultipartFormData.html">MultipartFormData</a></code>. If the cummulative
 payload is small, encoding the data in-memory and directly uploading to a server is the by far the most
 efficient approach. However, if the payload is too large, encoding the data in-memory could cause your app to
 be terminated. Larger payloads must first be written to disk using input and output streams to keep the memory
 footprint low, then the data can be uploaded as a stream from the resulting file. Streaming from disk MUST be
 used for larger payloads such as video content.</p>
-
 <p>The <code>encodingMemoryThreshold</code> parameter allows Alamofire to automatically determine whether to encode in-memory
 or stream from disk. If the content length of the <code><a href="Classes/MultipartFormData.html">MultipartFormData</a></code> is below the <code>encodingMemoryThreshold</code>,
 encoding takes place in-memory. If the content length exceeds the threshold, the data is streamed to disk
 during the encoding process. Then the result is uploaded as data or as a stream depending on which encoding
 technique was used.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1473,7 +1452,7 @@ technique was used.</p>
                               <td>
                                 <div>
                                   <p>The encoding memory threshold in bytes.
-                                 <code>multipartFormDataEncodingMemoryThreshold</code> by default.</p>
+<code>multipartFormDataEncodingMemoryThreshold</code> by default.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1536,9 +1515,7 @@ technique was used.</p>
                       <div class="abstract">
                         <p>Creates a <code><a href="Classes.html#/s:9Alamofire13StreamRequestC">StreamRequest</a></code> using the default <code><a href="Classes/SessionManager.html">SessionManager</a></code> for bidirectional streaming with the <code>hostname</code>
 and <code>port</code>.</p>
-
 <p>If <code>startRequestsImmediately</code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1614,9 +1591,7 @@ and <code>port</code>.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Creates a <code><a href="Classes.html#/s:9Alamofire13StreamRequestC">StreamRequest</a></code> using the default <code><a href="Classes/SessionManager.html">SessionManager</a></code> for bidirectional streaming with the <code>netService</code>.</p>
-
 <p>If <code>startRequestsImmediately</code> is <code>true</code>, the request will have <code>resume()</code> called before being returned.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1673,7 +1648,6 @@ and <code>port</code>.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns whether the two network reachability status values are equal.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1732,7 +1706,7 @@ and <code>port</code>.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; YYYY <a class="link" href="https://nshipster.com/alamofire" target="_blank" rel="external">Alamofire</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
+          <p>© YYYY <a class="link" href="https://nshipster.com/alamofire target="_blank" rel="external">Alamofire</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

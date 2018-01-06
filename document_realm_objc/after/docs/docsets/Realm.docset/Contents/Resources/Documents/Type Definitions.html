@@ -319,7 +319,6 @@
           <section class="section">
             <h1>Type Definitions</h1>
             <p>The following type definitions are available globally.</p>
-
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -345,7 +344,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A notification indicating that changes were made to a Realm.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -383,14 +381,12 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A block type which provides both the old and new versions of an object in the Realm. Object 
+                        <p>A block type which provides both the old and new versions of an object in the Realm. Object
 properties can only be accessed using keyed subscripting.</p>
 <div class="aside aside-see">
-    <p class="aside-title">See</p>
-    <p><code><a href="Classes/RLMMigration.html#/c:objc(cs)RLMMigration(im)enumerateObjects:block:">-[RLMMigration enumerateObjects:block:]</a></code></p>
-
+<p class="aside-title">See</p>
+<p><code><a href="Classes/RLMMigration.html#/c:objc(cs)RLMMigration(im)enumerateObjects:block:">-[RLMMigration enumerateObjects:block:]</a></code></p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -461,19 +457,15 @@ properties can only be accessed using keyed subscripting.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A callback block for <code><a href="Classes/RLMObject.html">RLMObject</a></code> notifications.</p>
-
 <p>If the object is deleted from the managing Realm, the block is called with
 <code>deleted</code> set to <code>YES</code> and the other two arguments are <code>nil</code>. The block will
 never be called again after this.</p>
-
 <p>If the object is modified, the block will be called with <code>deleted</code> set to
 <code>NO</code>, a <code>nil</code> error, and an array of <code><a href="Classes/RLMPropertyChange.html">RLMPropertyChange</a></code> objects which
 indicate which properties of the objects were modified.</p>
-
 <p>If an error occurs, <code>deleted</code> will be <code>NO</code>, <code>changes</code> will be <code>nil</code>, and
 <code>error</code> will include information about the error. The block will never be
 called again after an error occurs.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -514,9 +506,7 @@ called again after an error occurs.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A callback block for opening Realms asynchronously.</p>
-
 <p>Returns the Realm if the open was successful, or an error otherwise.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -553,11 +543,9 @@ called again after an error occurs.</p>
                       <div class="abstract">
                         <p>The type of a block to run whenever the data within the Realm is modified.</p>
 <div class="aside aside-see">
-    <p class="aside-title">See</p>
-    <code><a href="Classes/RLMRealm.html#/c:objc(cs)RLMRealm(im)addNotificationBlock:">-[RLMRealm addNotificationBlock:]</a></code>
-
+<p class="aside-title">See</p>
+<p><code><a href="Classes/RLMRealm.html#/c:objc(cs)RLMRealm(im)addNotificationBlock:">-[RLMRealm addNotificationBlock:]</a></code></p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -593,7 +581,6 @@ called again after an error occurs.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The type of a migration block used to migrate a Realm.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -621,8 +608,8 @@ called again after an error occurs.</p>
                               <td>
                                 <div>
                                   <p>A <code><a href="Classes/RLMMigration.html">RLMMigration</a></code> object used to perform the migration. The
-               migration object allows you to enumerate and alter any
-               existing objects which require migration.</p>
+migration object allows you to enumerate and alter any
+existing objects which require migration.</p>
                                 </div>
                               </td>
                             </tr>
@@ -668,10 +655,8 @@ called again after an error occurs.</p>
 of a process to determine if it should be compacted before being returned
 to the user. It is passed the total file size (data + free space) and the total
 bytes used by data in the file.</p>
-
 <p>Return <code>YES</code> to indicate that an attempt to compact the file should be made.
 The compaction will be skipped if another process is accessing it.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -709,8 +694,7 @@ The compaction will be skipped if another process is accessing it.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A token representing an identity provider&rsquo;s credentials.</p>
-
+                        <p>A token representing an identity provider’s credentials.</p>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -745,7 +729,6 @@ The compaction will be skipped if another process is accessing it.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A type representing the unique identifier of a Realm Object Server identity provider.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -785,7 +768,6 @@ The compaction will be skipped if another process is accessing it.</p>
                       <div class="abstract">
                         <p>A block type representing a block which can be used to report a sync-related error to the application. If the error
 pertains to a specific session, that session will also be passed into the block.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -824,12 +806,10 @@ pertains to a specific session, that session will also be passed into the block.
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The type of a progress notification block intended for reporting a session&rsquo;s network
+                        <p>The type of a progress notification block intended for reporting a session’s network
 activity to the user.</p>
-
 <p><code>transferredBytes</code> refers to the number of bytes that have been uploaded or downloaded.
 <code>transferrableBytes</code> refers to the total number of bytes transferred, and pending transfer.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -868,7 +848,6 @@ activity to the user.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A block type used for APIs which asynchronously vend an <code><a href="Classes/RLMSyncUser.html">RLMSyncUser</a></code>.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -905,7 +884,6 @@ activity to the user.</p>
                       <div class="abstract">
                         <p>A block type used to report the status of a password change operation.
 If the <code>NSError</code> argument is nil, the operation succeeded.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -941,7 +919,6 @@ If the <code>NSError</code> argument is nil, the operation succeeded.</p>
                       <div class="abstract">
                         <p>A block type used to report the status of a permission apply or revoke operation.
 If the <code>NSError</code> argument is nil, the operation succeeded.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -977,7 +954,6 @@ If the <code>NSError</code> argument is nil, the operation succeeded.</p>
                       <div class="abstract">
                         <p>A block type used to asynchronously report results of a permissions get operation.
 Exactly one of the two arguments will be populated.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1017,7 +993,6 @@ Exactly one of the two arguments will be populated.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A token originating from the Realm Object Server.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1043,7 +1018,7 @@ Exactly one of the two arguments will be populated.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; YYYY <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
+          <p>© YYYY <a class="link" href="https://realm.io target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

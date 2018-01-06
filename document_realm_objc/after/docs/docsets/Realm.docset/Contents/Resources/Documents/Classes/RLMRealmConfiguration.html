@@ -327,16 +327,13 @@
               </div>
             <p>An <code>RLMRealmConfiguration</code> instance describes the different options used to
 create an instance of a Realm.</p>
-
 <p><code>RLMRealmConfiguration</code> instances are just plain <code>NSObject</code>s. Unlike <code><a href="../Classes/RLMRealm.html">RLMRealm</a></code>s
 and <code><a href="../Classes/RLMObject.html">RLMObject</a></code>s, they can be freely shared between threads as long as you do not
 mutate them.</p>
-
 <p>Creating configuration objects for class subsets (by setting the
 <code>objectClasses</code> property) can be expensive. Because of this, you will normally want to
-cache and reuse a single configuration object for each distinct configuration rather than 
+cache and reuse a single configuration object for each distinct configuration rather than
 creating a new object each time you open a Realm.</p>
-
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -363,7 +360,6 @@ creating a new object each time you open a Realm.</p>
                       <div class="abstract">
                         <p>Returns the default configuration used to create Realms when no other
 configuration is explicitly specified (i.e. <code><a href="../Classes/RLMRealm.html#/c:objc(cs)RLMRealm(cm)defaultRealm">+[RLMRealm defaultRealm]</a></code>).</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -402,7 +398,6 @@ configuration is explicitly specified (i.e. <code><a href="../Classes/RLMRealm.h
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Sets the default configuration to the given <code>RLMRealmConfiguration</code>.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -467,7 +462,6 @@ configuration is explicitly specified (i.e. <code><a href="../Classes/RLMRealm.h
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The local URL of the Realm file. Mutually exclusive with <code><a href="../Classes/RLMRealmConfiguration.html#/c:objc(cs)RLMRealmConfiguration(py)inMemoryIdentifier">inMemoryIdentifier</a></code>.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -502,7 +496,6 @@ configuration is explicitly specified (i.e. <code><a href="../Classes/RLMRealm.h
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A string used to identify a particular in-memory Realm. Mutually exclusive with <code><a href="../Classes/RLMRealmConfiguration.html#/c:objc(cs)RLMRealmConfiguration(py)fileURL">fileURL</a></code>.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -537,7 +530,6 @@ configuration is explicitly specified (i.e. <code><a href="../Classes/RLMRealm.h
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A 64-byte key to use to encrypt the data, or <code>nil</code> if encryption is not enabled.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -572,15 +564,13 @@ configuration is explicitly specified (i.e. <code><a href="../Classes/RLMRealm.h
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Whether to open the Realm in read-only mode.</p>
-
 <p>This is required to be able to open Realm files which are not writeable or
 are in a directory which is not writeable. This should only be used on files
 which will not be modified by anyone while they are open, and not just to
 get a read-only view of a file which may be written to by another thread or
-process. Opening in read-only mode requires disabling Realm&rsquo;s reader/writer
+process. Opening in read-only mode requires disabling Realm’s reader/writer
 coordination, so committing a write transaction from another process will
 result in crashes.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -615,7 +605,6 @@ result in crashes.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The current schema version.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -650,7 +639,6 @@ result in crashes.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The block which migrates the Realm to the current version.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -690,11 +678,9 @@ This is the case when the stored schema differs from the provided schema or
 the stored schema version differs from the version on this configuration.
 Setting this property to <code>YES</code> deletes the file if a migration would otherwise be required or executed.</p>
 <div class="aside aside-note">
-    <p class="aside-title">Note</p>
-    Setting this property to <code>YES</code> doesn&rsquo;t disable file format migrations.
-
+<p class="aside-title">Note</p>
+<p>Setting this property to <code>YES</code> doesn’t disable file format migrations.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -732,10 +718,8 @@ Setting this property to <code>YES</code> deletes the file if a migration would 
 of a process to determine if it should be compacted before being returned
 to the user. It is passed the total file size (data + free space) and the total
 bytes used by data in the file.</p>
-
 <p>Return <code>YES</code> to indicate that an attempt to compact the file should be made.
 The compaction will be skipped if another process is accessing it.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -771,7 +755,6 @@ The compaction will be skipped if another process is accessing it.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The classes managed by the Realm.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -797,7 +780,7 @@ The compaction will be skipped if another process is accessing it.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; YYYY <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
+          <p>© YYYY <a class="link" href="https://realm.io target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

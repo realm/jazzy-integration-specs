@@ -326,10 +326,8 @@
                 </div>
               </div>
             <p><code>RLMArray</code> is the container type in Realm used to define to-many relationships.</p>
-
 <p>Unlike an <code>NSArray</code>, <code>RLMArray</code>s hold a single type, specified by the <code>objectClassName</code> property.
 This is referred to in these docs as the “type” of the array.</p>
-
 <p>When declaring an <code>RLMArray</code> property, the type must be marked as conforming to a
 protocol by the same name as the objects it should contain (see the
 <code>RLM_ARRAY_TYPE</code> macro). In addition, the property can be declared using Objective-C
@@ -338,23 +336,18 @@ generics for better compile-time type safety.</p>
 <span class="p">...</span>
 <span class="k">@property</span> <span class="n">RLMArray</span><span class="o">&lt;</span><span class="n">ObjectType</span> <span class="o">*&gt;&lt;</span><span class="n">ObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="n">arrayOfObjectTypes</span><span class="p">;</span>
 </code></pre>
-
 <p><code>RLMArray</code>s can be queried with the same predicates as <code><a href="../Classes/RLMObject.html">RLMObject</a></code> and <code>RLMResult</code>s.</p>
-
 <p><code>RLMArray</code>s cannot be created directly. <code>RLMArray</code> properties on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>s are
 lazily created when accessed, or can be obtained by querying a Realm.</p>
 <h3 id='key-value-observing' class='heading'>Key-Value Observing</h3>
-
 <p><code>RLMArray</code> supports array key-value observing on <code>RLMArray</code> properties on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>
 subclasses, and the <code>invalidated</code> property on <code>RLMArray</code> instances themselves is
 key-value observing compliant when the <code>RLMArray</code> is attached to a managed
 <code><a href="../Classes/RLMObject.html">RLMObject</a></code> (<code>RLMArray</code>s on unmanaged <code><a href="../Classes/RLMObject.html">RLMObject</a></code>s will never become invalidated).</p>
-
 <p>Because <code>RLMArray</code>s are attached to the object which they are a property of, they
 do not require using the mutable collection proxy objects from
 <code>-mutableArrayValueForKey:</code> or KVC-compatible mutation methods on the containing
 object. Instead, you can call the mutation methods on the <code>RLMArray</code> directly.</p>
-
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -380,7 +373,6 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The number of objects in the array.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -415,7 +407,6 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The class name (i.e. type) of the <code><a href="../Classes/RLMObject.html">RLMObject</a></code>s contained in the array.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -450,7 +441,6 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The Realm which manages the array. Returns <code>nil</code> for unmanaged arrays.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -485,7 +475,6 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Indicates if the array can no longer be accessed.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -531,7 +520,6 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the object at the index specified.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -589,9 +577,7 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the first object in the array.</p>
-
 <p>Returns <code>nil</code> if called on an empty array.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -630,9 +616,7 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the last object in the array.</p>
-
 <p>Returns <code>nil</code> if called on an empty array.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -683,11 +667,9 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                       <div class="abstract">
                         <p>Adds an object to the end of the array.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>This method may only be called during a write transaction.</p>
-
+<p class="aside-title">Warning</p>
+<p>This method may only be called during a write transaction.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -742,11 +724,9 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                       <div class="abstract">
                         <p>Adds an array of objects to the end of the array.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>This method may only be called during a write transaction.</p>
-
+<p class="aside-title">Warning</p>
+<p>This method may only be called during a write transaction.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -774,7 +754,7 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                               <td>
                                 <div>
                                   <p>An enumerable object such as <code>NSArray</code> or <code><a href="../Classes/RLMResults.html">RLMResults</a></code> which contains objects of the
-               same class as the array.</p>
+same class as the array.</p>
                                 </div>
                               </td>
                             </tr>
@@ -801,14 +781,11 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Inserts an object at the given index.</p>
-
 <p>Throws an exception if the index exceeds the bounds of the array.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>This method may only be called during a write transaction.</p>
-
+<p class="aside-title">Warning</p>
+<p>This method may only be called during a write transaction.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -874,14 +851,11 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Removes an object at the given index.</p>
-
 <p>Throws an exception if the index exceeds the bounds of the array.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>This method may only be called during a write transaction.</p>
-
+<p class="aside-title">Warning</p>
+<p>This method may only be called during a write transaction.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -936,11 +910,9 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                       <div class="abstract">
                         <p>Removes the last object in the array.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    This method may only be called during a write transaction.
-
+<p class="aside-title">Warning</p>
+<p>This method may only be called during a write transaction.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -976,11 +948,9 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                       <div class="abstract">
                         <p>Removes all objects from the array.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    This method may only be called during a write transaction.
-
+<p class="aside-title">Warning</p>
+<p>This method may only be called during a write transaction.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1015,14 +985,11 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Replaces an object at the given index with a new object.</p>
-
 <p>Throws an exception if the index exceeds the bounds of the array.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>This method may only be called during a write transaction.</p>
-
+<p class="aside-title">Warning</p>
+<p>This method may only be called during a write transaction.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1089,14 +1056,11 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Moves the object at the given source index to the given destination index.</p>
-
 <p>Throws an exception if the index exceeds the bounds of the array.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>This method may only be called during a write transaction.</p>
-
+<p class="aside-title">Warning</p>
+<p>This method may only be called during a write transaction.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1163,14 +1127,11 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Exchanges the objects in the array at given indices.</p>
-
 <p>Throws an exception if either index exceeds the bounds of the array.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>This method may only be called during a write transaction.</p>
-
+<p class="aside-title">Warning</p>
+<p>This method may only be called during a write transaction.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1248,9 +1209,7 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the index of an object in the array.</p>
-
 <p>Returns <code>NSNotFound</code> if the object is not found in the array.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1304,7 +1263,6 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the index of the first object in the array matching the predicate.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1357,7 +1315,6 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the index of the first object in the array matching the predicate.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1415,7 +1372,6 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns all the objects matching the given predicate in the array.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1469,7 +1425,6 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns all the objects matching the given predicate in the array.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1528,7 +1483,6 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns a sorted <code><a href="../Classes/RLMResults.html">RLMResults</a></code> from the array.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1600,7 +1554,6 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns a sorted <code><a href="../Classes/RLMResults.html">RLMResults</a></code> from the array.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1672,7 +1625,6 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns a sorted <code><a href="../Classes/RLMResults.html">RLMResults</a></code> from the array.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1742,26 +1694,22 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Registers a block to be called each time the array changes.</p>
-
 <p>The block will be asynchronously called with the initial array, and then
 called again after each write transaction which changes any of the objects in
 the array, which objects are in the results, or the order of the objects in the
 array.</p>
-
 <p>The <code>changes</code> parameter will be <code>nil</code> the first time the block is called.
 For each call after that, it will contain information about
 which rows in the array were added, removed or modified. If a write transaction
 did not modify any objects in the array, the block is not called at all.
 See the <code><a href="../Classes/RLMCollectionChange.html">RLMCollectionChange</a></code> documentation for information on how the changes
 are reported and an example of updating a <code>UITableView</code>.</p>
-
 <p>If an error occurs the block will be called with <code>nil</code> for the results
 parameter and a non-<code>nil</code> error. Currently the only errors that can occur are
 when opening the Realm on the background worker thread.</p>
-
-<p>Notifications are delivered via the standard run loop, and so can&rsquo;t be
+<p>Notifications are delivered via the standard run loop, and so can’t be
 delivered while the run loop is blocked by other activity. When
-notifications can&rsquo;t be delivered instantly, multiple notifications may be
+notifications can’t be delivered instantly, multiple notifications may be
 coalesced into a single notification. This can include the notification
 with the initial results. For example, the following code performs a write
 transaction immediately after adding the notification block, so there is no
@@ -1783,21 +1731,17 @@ the write transaction.</p>
 <span class="p">}];</span>
 <span class="c1">// end of run loop execution context
 </span></code></pre>
-
 <p>You must retain the returned token for as long as you want updates to continue
 to be sent to the block. To stop receiving updates, call <code>-stop</code> on the token.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    This method cannot be called during a write transaction, or when the
-     containing Realm is read-only.
-
+<p class="aside-title">Warning</p>
+<p>This method cannot be called during a write transaction, or when the
+containing Realm is read-only.</p>
 </div>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>This method may only be called on a managed array.</p>
-
+<p class="aside-title">Warning</p>
+<p>This method may only be called on a managed array.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1871,11 +1815,9 @@ to be sent to the block. To stop receiving updates, call <code>-stop</code> on t
 <pre class="highlight objective_c"><code><span class="n">NSNumber</span> <span class="o">*</span><span class="n">min</span> <span class="o">=</span> <span class="p">[</span><span class="n">object</span><span class="p">.</span><span class="n">arrayProperty</span> <span class="nf">minOfProperty</span><span class="p">:</span><span class="s">@"age"</span><span class="p">];</span>
 </code></pre>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>You cannot use this method on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>, <code>RLMArray</code>, and <code>NSData</code> properties.</p>
-
+<p class="aside-title">Warning</p>
+<p>You cannot use this method on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>, <code>RLMArray</code>, and <code>NSData</code> properties.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1903,7 +1845,7 @@ to be sent to the block. To stop receiving updates, call <code>-stop</code> on t
                               <td>
                                 <div>
                                   <p>The property whose minimum value is desired. Only properties of
-            types <code>int</code>, <code>float</code>, <code>double</code>, and <code>NSDate</code> are supported.</p>
+types <code>int</code>, <code>float</code>, <code>double</code>, and <code>NSDate</code> are supported.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1937,11 +1879,9 @@ to be sent to the block. To stop receiving updates, call <code>-stop</code> on t
 <pre class="highlight objective_c"><code><span class="n">NSNumber</span> <span class="o">*</span><span class="n">max</span> <span class="o">=</span> <span class="p">[</span><span class="n">object</span><span class="p">.</span><span class="n">arrayProperty</span> <span class="nf">maxOfProperty</span><span class="p">:</span><span class="s">@"age"</span><span class="p">];</span>
 </code></pre>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>You cannot use this method on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>, <code>RLMArray</code>, and <code>NSData</code> properties.</p>
-
+<p class="aside-title">Warning</p>
+<p>You cannot use this method on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>, <code>RLMArray</code>, and <code>NSData</code> properties.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1969,7 +1909,7 @@ to be sent to the block. To stop receiving updates, call <code>-stop</code> on t
                               <td>
                                 <div>
                                   <p>The property whose maximum value is desired. Only properties of
-            types <code>int</code>, <code>float</code>, <code>double</code>, and <code>NSDate</code> are supported.</p>
+types <code>int</code>, <code>float</code>, <code>double</code>, and <code>NSDate</code> are supported.</p>
                                 </div>
                               </td>
                             </tr>
@@ -2003,11 +1943,9 @@ to be sent to the block. To stop receiving updates, call <code>-stop</code> on t
 <pre class="highlight objective_c"><code><span class="n">NSNumber</span> <span class="o">*</span><span class="n">sum</span> <span class="o">=</span> <span class="p">[</span><span class="n">object</span><span class="p">.</span><span class="n">arrayProperty</span> <span class="nf">sumOfProperty</span><span class="p">:</span><span class="s">@"age"</span><span class="p">];</span>
 </code></pre>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>You cannot use this method on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>, <code>RLMArray</code>, and <code>NSData</code> properties.</p>
-
+<p class="aside-title">Warning</p>
+<p>You cannot use this method on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>, <code>RLMArray</code>, and <code>NSData</code> properties.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -2035,7 +1973,7 @@ to be sent to the block. To stop receiving updates, call <code>-stop</code> on t
                               <td>
                                 <div>
                                   <p>The property whose values should be summed. Only properties of
-            types <code>int</code>, <code>float</code>, and <code>double</code> are supported.</p>
+types <code>int</code>, <code>float</code>, and <code>double</code> are supported.</p>
                                 </div>
                               </td>
                             </tr>
@@ -2069,11 +2007,9 @@ to be sent to the block. To stop receiving updates, call <code>-stop</code> on t
 <pre class="highlight objective_c"><code><span class="n">NSNumber</span> <span class="o">*</span><span class="n">average</span> <span class="o">=</span> <span class="p">[</span><span class="n">object</span><span class="p">.</span><span class="n">arrayProperty</span> <span class="nf">averageOfProperty</span><span class="p">:</span><span class="s">@"age"</span><span class="p">];</span>
 </code></pre>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>You cannot use this method on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>, <code>RLMArray</code>, and <code>NSData</code> properties.</p>
-
+<p class="aside-title">Warning</p>
+<p>You cannot use this method on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>, <code>RLMArray</code>, and <code>NSData</code> properties.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -2101,7 +2037,7 @@ to be sent to the block. To stop receiving updates, call <code>-stop</code> on t
                               <td>
                                 <div>
                                   <p>The property whose average value should be calculated. Only
-            properties of types <code>int</code>, <code>float</code>, and <code>double</code> are supported.</p>
+properties of types <code>int</code>, <code>float</code>, and <code>double</code> are supported.</p>
                                 </div>
                               </td>
                             </tr>
@@ -2144,7 +2080,6 @@ to be sent to the block. To stop receiving updates, call <code>-stop</code> on t
                       <div class="abstract">
                         <p><code>-[RLMArray init]</code> is not available because <code>RLMArray</code>s cannot be created directly.
 <code>RLMArray</code> properties on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>s are lazily created when accessed, or can be obtained by querying a Realm.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -2175,7 +2110,6 @@ to be sent to the block. To stop receiving updates, call <code>-stop</code> on t
                       <div class="abstract">
                         <p><code>+[RLMArray new]</code> is not available because <code>RLMArray</code>s cannot be created directly.
 <code>RLMArray</code> properties on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>s are lazily created when accessed, or can be obtained by querying a Realm.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -2196,7 +2130,7 @@ to be sent to the block. To stop receiving updates, call <code>-stop</code> on t
           </section>
         </section>
         <section id="footer">
-          <p>&copy; YYYY <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
+          <p>© YYYY <a class="link" href="https://realm.io target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

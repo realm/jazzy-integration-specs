@@ -298,10 +298,8 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The transfer direction (upload or download) tracked by a given progress notification block.</p>
-
 <p>Progress notification blocks can be registered on sessions if your app wishes to be informed
 how many bytes have been uploaded or downloaded, for example to show progress indicator UIs.</p>
-
                         <a href="../Extensions/SyncSession/ProgressDirection.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -332,10 +330,8 @@ how many bytes have been uploaded or downloaded, for example to show progress in
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The desired behavior of a progress notification block.</p>
-
 <p>Progress notification blocks can be registered on sessions if your app wishes to be informed
 how many bytes have been uploaded or downloaded, for example to show progress indicator UIs.</p>
-
                         <a href="../Extensions/SyncSession/ProgressMode.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -366,11 +362,9 @@ how many bytes have been uploaded or downloaded, for example to show progress in
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A token corresponding to a progress notification block.</p>
-
 <p>Call <code>stop()</code> on the token to stop notifications. If the notification block has already
 been automatically stopped, calling <code>stop()</code> does nothing. <code>stop()</code> should be called
 before the token is destroyed.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -400,7 +394,6 @@ before the token is destroyed.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A struct encapsulating progress information, as well as useful helper methods.</p>
-
                         <a href="../Extensions/SyncSession/Progress.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -431,18 +424,14 @@ before the token is destroyed.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Register a progress notification block.</p>
-
 <p>If the session has already received progress information from the
 synchronization subsystem, the block will be called immediately. Otherwise, it
 will be called as soon as progress information becomes available.</p>
-
 <p>Multiple blocks can be registered with the same session at once. Each block
 will be invoked on a side queue devoted to progress notifications.</p>
-
 <p>The token returned by this method must be retained as long as progress
 notifications are desired, and the <code>stop()</code> method should be called on it
 when notifications are no longer needed and before the token is destroyed.</p>
-
 <p>If no token is returned, the notification block will never be called again.
 There are a number of reasons this might be true. If the session has previously
 experienced a fatal error it will not accept progress notification blocks. If
@@ -450,11 +439,9 @@ the block was configured in the <code>forCurrentlyOutstandingWork</code> mode bu
 is no additional progress to report (for example, the number of transferrable bytes
 and transferred bytes are equal), the block will not be called again.</p>
 <div class="aside aside-see">
-    <p class="aside-title">See</p>
-    <p><code><a href="../Extensions/SyncSession/ProgressDirection.html">ProgressDirection</a></code>, <code><a href="../Extensions/SyncSession/Progress.html">Progress</a></code>, <code><a href="../Extensions/SyncSession.html#/s:So14RLMSyncSessionC10RealmSwiftE25ProgressNotificationTokena">ProgressNotificationToken</a></code></p>
-
+<p class="aside-title">See</p>
+<p><code><a href="../Extensions/SyncSession/ProgressDirection.html">ProgressDirection</a></code>, <code><a href="../Extensions/SyncSession/Progress.html">Progress</a></code>, <code><a href="../Extensions/SyncSession.html#/s:So14RLMSyncSessionC10RealmSwiftE25ProgressNotificationTokena">ProgressNotificationToken</a></code></p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -524,7 +511,7 @@ and transferred bytes are equal), the block will not be called again.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; YYYY <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
+          <p>© YYYY <a class="link" href="https://realm.io target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

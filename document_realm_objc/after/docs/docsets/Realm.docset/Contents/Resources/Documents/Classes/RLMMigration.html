@@ -326,11 +326,9 @@
                 </div>
               </div>
             <p><code>RLMMigration</code> instances encapsulate information intended to facilitate a schema migration.</p>
-
 <p>A <code>RLMMigration</code> instance is passed into a user-defined <code><a href="../Type Definitions.html#/c:RLMRealm.h@T@RLMMigrationBlock">RLMMigrationBlock</a></code> block when updating
 the version of a Realm. This instance provides access to the old and new database schemas, the
 objects in the Realm, and provides functionality for modifying the Realm during the migration.</p>
-
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -357,7 +355,6 @@ objects in the Realm, and provides functionality for modifying the Realm during 
                       <div class="abstract">
                         <p>Returns the old <code><a href="../Classes/RLMSchema.html">RLMSchema</a></code>. This is the schema which describes the Realm before the
 migration is applied.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -393,7 +390,6 @@ migration is applied.</p>
                       <div class="abstract">
                         <p>Returns the new <code><a href="../Classes/RLMSchema.html">RLMSchema</a></code>. This is the schema which describes the Realm after the
 migration is applied.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -441,13 +437,11 @@ migration is applied.</p>
                         <p>Enumerates all the objects of a given type in the Realm, providing both the old and new versions
 of each object. Within the block, object properties can only be accessed using keyed subscripting.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>All objects returned are of a type specific to the current migration and should not be cast
-       to <code>className</code>. Instead, treat them as <code><a href="../Classes/RLMObject.html">RLMObject</a></code>s and use keyed subscripting to access
-       properties.</p>
-
+<p class="aside-title">Warning</p>
+<p>All objects returned are of a type specific to the current migration and should not be cast
+to <code>className</code>. Instead, treat them as <code><a href="../Classes/RLMObject.html">RLMObject</a></code>s and use keyed subscripting to access
+properties.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -502,15 +496,12 @@ of each object. Within the block, object properties can only be accessed using k
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Creates and returns an <code><a href="../Classes/RLMObject.html">RLMObject</a></code> instance of type <code>className</code> in the Realm being migrated.</p>
-
-<p>The <code>value</code> argument is used to populate the object. It can be a key-value coding compliant object, an array or 
+<p>The <code>value</code> argument is used to populate the object. It can be a key-value coding compliant object, an array or
 dictionary returned from the methods in <code>NSJSONSerialization</code>, or an array containing one element for each managed
 property. An exception will be thrown if any required properties are not present and those properties were not defined
 with default values.</p>
-
 <p>When passing in an <code>NSArray</code> as the <code>value</code> argument, all properties must be present, valid and in the same order as
 the properties defined in the model.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -577,9 +568,7 @@ the properties defined in the model.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Deletes an object from a Realm during a migration.</p>
-
 <p>It is permitted to call this method from within the block passed to <code>-[enumerateObjects:block:]</code>.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -633,10 +622,8 @@ the properties defined in the model.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Deletes the data for the class with the given name.</p>
-
 <p>All objects of the given class will be deleted. If the <code><a href="../Classes/RLMObject.html">RLMObject</a></code> subclass no longer exists in your program,
 any remaining metadata for the class will be removed from the Realm file.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -694,7 +681,6 @@ any remaining metadata for the class will be removed from the Realm file.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Renames a property of the given class from <code>oldName</code> to <code>newName</code>.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -724,7 +710,7 @@ any remaining metadata for the class will be removed from the Realm file.</p>
                               <td>
                                 <div>
                                   <p>The name of the class whose property should be renamed. This class must be present
-             in both the old and new Realm schemas.</p>
+in both the old and new Realm schemas.</p>
                                 </div>
                               </td>
                             </tr>
@@ -737,7 +723,7 @@ any remaining metadata for the class will be removed from the Realm file.</p>
                               <td>
                                 <div>
                                   <p>The old name for the property to be renamed. There must not be a property with this name in the
-             class as defined by the new Realm schema.</p>
+class as defined by the new Realm schema.</p>
                                 </div>
                               </td>
                             </tr>
@@ -750,7 +736,7 @@ any remaining metadata for the class will be removed from the Realm file.</p>
                               <td>
                                 <div>
                                   <p>The new name for the property to be renamed. There must not be a property with this name in the
-             class as defined by the old Realm schema.</p>
+class as defined by the old Realm schema.</p>
                                 </div>
                               </td>
                             </tr>
@@ -768,7 +754,7 @@ any remaining metadata for the class will be removed from the Realm file.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; YYYY <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
+          <p>© YYYY <a class="link" href="https://realm.io target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -319,7 +319,6 @@
           <section class="section">
             <h1>Constants</h1>
             <p>The following constants are available globally.</p>
-
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -345,7 +344,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>An error domain identifying Realm-specific errors.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -380,7 +378,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>An error domain identifying non-specific system errors.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -426,12 +423,10 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>This notification is posted by a Realm when the data in that Realm has changed.</p>
-
 <p>More specifically, this notification is posted after a Realm has been refreshed to
 reflect a write transaction. This can happen when an autorefresh occurs, when
 <code><a href="Classes/RLMRealm.html#/c:objc(cs)RLMRealm(im)refresh">-[RLMRealm refresh]</a></code> is called, after an implicit refresh from <code><a href="Classes/RLMRealm.html#/c:objc(cs)RLMRealm(im)beginWriteTransaction">-[RLMRealm beginWriteTransaction]</a></code>,
 or after a local write transaction is completed.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -467,16 +462,13 @@ or after a local write transaction is completed.</p>
                       <div class="abstract">
                         <p>This notification is posted by a Realm when a write transaction has been
 committed to a Realm on a different thread for the same file.</p>
-
 <p>It is not posted if <code>-[RLMRealm autorefresh]</code> is enabled, or if the Realm is
 refreshed before the notification has a chance to run.</p>
-
 <p>Realms with autorefresh disabled should normally install a handler for this
 notification which calls <code><a href="Classes/RLMRealm.html#/c:objc(cs)RLMRealm(im)refresh">-[RLMRealm refresh]</a></code> after doing some work. Refreshing
 the Realm is optional, but not refreshing the Realm may lead to large Realm
 files. This is because Realm must keep an extra copy of the data for the stale
 Realm.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -522,7 +514,6 @@ Realm.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The schema version used for uninitialized Realms</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -557,7 +548,6 @@ Realm.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The corresponding value is the name of an exception thrown by Realm.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -592,7 +582,6 @@ Realm.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The corresponding value is a Realm file version.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -627,7 +616,6 @@ Realm.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The corresponding key is the version of the underlying database engine.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -662,7 +650,6 @@ Realm.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The corresponding key is the Realm invalidated property name.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -702,7 +689,6 @@ Realm.</p>
                       <div class="abstract">
                         <p>The debug identity provider, which accepts any token string and creates a user associated with that token if one
 does not yet exist. Not enabled for Realm Object Server configured for production.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -738,7 +724,6 @@ does not yet exist. Not enabled for Realm Object Server configured for productio
                       <div class="abstract">
                         <p>The username/password identity provider. User accounts are handled by the Realm Object Server directly without the
 involvement of a third-party identity provider.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -773,7 +758,6 @@ involvement of a third-party identity provider.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A Facebook account as an identity provider.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -808,7 +792,6 @@ involvement of a third-party identity provider.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A Google account as an identity provider.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -843,7 +826,6 @@ involvement of a third-party identity provider.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A CloudKit account as an identity provider.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -882,7 +864,6 @@ involvement of a third-party identity provider.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A user info key for use with <code>RLMSyncErrorClientResetError</code>.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -917,7 +898,6 @@ involvement of a third-party identity provider.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A user info key for use with <code>RLMSyncErrorClientResetError</code>.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -953,8 +933,7 @@ involvement of a third-party identity provider.</p>
                       <div class="abstract">
                         <p>The error domain string for all SDK errors related to errors reported
 by the synchronization manager error handler, as well as general sync
-errors that don&rsquo;t fall into any of the other categories.</p>
-
+errors that don’t fall into any of the other categories.</p>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -990,7 +969,6 @@ errors that don&rsquo;t fall into any of the other categories.</p>
                       <div class="abstract">
                         <p>The error domain string for all SDK errors related to the authentication
 endpoint.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1026,7 +1004,6 @@ endpoint.</p>
                       <div class="abstract">
                         <p>The error domain string for all SDK errors related to the permissions
 system and APIs.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1052,7 +1029,7 @@ system and APIs.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; YYYY <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
+          <p>© YYYY <a class="link" href="https://realm.io target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -325,33 +325,28 @@
 
                 </div>
               </div>
-            <p>An <code>RLMRealm</code> instance (also referred to as <q>a Realm</q>) represents a Realm
+            <p>An <code>RLMRealm</code> instance (also referred to as “a Realm”) represents a Realm
 database.</p>
-
 <p>Realms can either be stored on disk (see <code><a href="../Classes/RLMRealm.html#/c:objc(cs)RLMRealm(cm)realmWithURL:">+[RLMRealm realmWithURL:]</a></code>) or in
 memory (see <code><a href="../Classes/RLMRealmConfiguration.html">RLMRealmConfiguration</a></code>).</p>
-
 <p><code>RLMRealm</code> instances are cached internally, and constructing equivalent <code>RLMRealm</code>
 objects (for example, by using the same path or identifier) multiple times on a single thread
 within a single iteration of the run loop will normally return the same
 <code>RLMRealm</code> object.</p>
-
 <p>If you specifically want to ensure an <code>RLMRealm</code> instance is
 destroyed (for example, if you wish to open a Realm, check some property, and
 then possibly delete the Realm file and re-open it), place the code which uses
 the Realm within an <code>@autoreleasepool {}</code> and ensure you have no other
 strong references to it.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <code>RLMRealm</code> instances are not thread safe and cannot be shared across
+<p class="aside-title">Warning</p>
+<p><code>RLMRealm</code> instances are not thread safe and cannot be shared across
 threads or dispatch queues. Trying to do so will cause an exception to be thrown.
 You must call this method on each thread you want
 to interact with the Realm on. For dispatch queues, this means that you must
 call it in each block which is dispatched, as a queue is not guaranteed to run
-all of its blocks on the same thread.
-
+all of its blocks on the same thread.</p>
 </div>
-
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -377,16 +372,13 @@ all of its blocks on the same thread.
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Obtains an instance of the default Realm.</p>
-
 <p>The default Realm is used by the <code><a href="../Classes/RLMObject.html">RLMObject</a></code> class methods
 which do not take an <code>RLMRealm</code> parameter, but is otherwise not special. The
 default Realm is persisted as <em>default.realm</em> under the <em>Documents</em> directory of
-your Application on iOS, and in your application&rsquo;s <em>Application Support</em>
+your Application on iOS, and in your application’s <em>Application Support</em>
 directory on OS X.</p>
-
 <p>The default Realm is created using the default <code><a href="../Classes/RLMRealmConfiguration.html">RLMRealmConfiguration</a></code>, which
 can be changed via <code><a href="../Classes/RLMRealmConfiguration.html#/c:objc(cs)RLMRealmConfiguration(cm)setDefaultConfiguration:">+[RLMRealmConfiguration setDefaultConfiguration:]</a></code>.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -425,7 +417,6 @@ can be changed via <code><a href="../Classes/RLMRealmConfiguration.html#/c:objc(
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Obtains an <code>RLMRealm</code> instance with the given configuration.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -467,8 +458,8 @@ can be changed via <code><a href="../Classes/RLMRealmConfiguration.html#/c:objc(
                               <td>
                                 <div>
                                   <p>If an error occurs, upon return contains an <code>NSError</code> object
-                 that describes the problem. If you are not interested in
-                 possible errors, pass in <code>NULL</code>.</p>
+that describes the problem. If you are not interested in
+possible errors, pass in <code>NULL</code>.</p>
                                 </div>
                               </td>
                             </tr>
@@ -499,7 +490,6 @@ can be changed via <code><a href="../Classes/RLMRealmConfiguration.html#/c:objc(
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Obtains an <code>RLMRealm</code> instance persisted at a specified file URL.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -557,21 +547,18 @@ can be changed via <code><a href="../Classes/RLMRealmConfiguration.html#/c:objc(
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Asynchronously open a Realm and deliver it to a block on the given queue.</p>
-
 <p>Opening a Realm asynchronously will perform all work needed to get the Realm to
 a usable state (such as running potentially time-consuming migrations) on a
 background thread before dispatching to the given queue. In addition,
 synchronized Realms wait for all remote content available at the time the
 operation began to be downloaded and available locally.</p>
 <div class="aside aside-note">
-    <p class="aside-title">Note</p>
-    <p>The returned Realm is confined to the thread on which it was created.
-  Because GCD does not guarantee that queues will always use the same
-  thread, accessing the returned Realm outside the callback block (even if
-  accessed from <code>callbackQueue</code>) is unsafe.</p>
-
+<p class="aside-title">Note</p>
+<p>The returned Realm is confined to the thread on which it was created.
+Because GCD does not guarantee that queues will always use the same
+thread, accessing the returned Realm outside the callback block (even if
+accessed from <code>callbackQueue</code>) is unsafe.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -626,9 +613,9 @@ operation began to be downloaded and available locally.</p>
                               <td>
                                 <div>
                                   <p>A callback block. If the Realm was successfully opened,
-                 it will be passed in as an argument.
-                 Otherwise, an <code>NSError</code> describing what went wrong will be
-                 passed to the block instead.</p>
+it will be passed in as an argument.
+Otherwise, an <code>NSError</code> describing what went wrong will be
+passed to the block instead.</p>
                                 </div>
                               </td>
                             </tr>
@@ -655,7 +642,6 @@ operation began to be downloaded and available locally.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The <code><a href="../Classes/RLMSchema.html">RLMSchema</a></code> used by the Realm.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -691,13 +677,11 @@ operation began to be downloaded and available locally.</p>
                       <div class="abstract">
                         <p>Indicates if the Realm is currently engaged in a write transaction.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    Do not simply check this property and then start a write transaction whenever an object needs to be
-       created, updated, or removed. Doing so might cause a large number of write transactions to be created,
-       degrading performance. Instead, always prefer performing multiple updates during a single transaction.
-
+<p class="aside-title">Warning</p>
+<p>Do not simply check this property and then start a write transaction whenever an object needs to be
+created, updated, or removed. Doing so might cause a large number of write transactions to be created,
+degrading performance. Instead, always prefer performing multiple updates during a single transaction.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -732,7 +716,6 @@ operation began to be downloaded and available locally.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The <code><a href="../Classes/RLMRealmConfiguration.html">RLMRealmConfiguration</a></code> object that was used to create this <code>RLMRealm</code> instance.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -767,7 +750,6 @@ operation began to be downloaded and available locally.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Indicates if this Realm contains any objects.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -813,28 +795,26 @@ operation began to be downloaded and available locally.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Adds a notification handler for changes in this Realm, and returns a notification token.</p>
-
 <p>Notification handlers are called after each write transaction is committed,
 either on the current thread or other threads.</p>
-
 <p>Handler blocks are called on the same thread that they were added on, and may
 only be added on threads which are currently within a run loop. Unless you are
 specifically creating and running a run loop on a background thread, this will
 normally only be the main thread.</p>
-
 <p>The block has the following definition:</p>
 <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span><span class="p">(</span><span class="o">^</span><span class="n">RLMNotificationBlock</span><span class="p">)(</span><span class="n">RLMNotification</span> <span class="n">notification</span><span class="p">,</span> <span class="n">RLMRealm</span> <span class="o">*</span><span class="n">realm</span><span class="p">);</span>
 </code></pre>
-
 <p>It receives the following parameters:</p>
-
 <ul>
-<li><code>NSString</code> *<strong>notification</strong>:    The name of the incoming notification. See
-                                <code>RLMRealmNotification</code> for information on what
-                                notifications are sent.</li>
-<li><p><code>RLMRealm</code> *<strong>realm</strong>:           The Realm for which this notification occurred.</p></li>
+<li>
+<p><code>NSString</code> *<strong>notification</strong>:    The name of the incoming notification. See
+<code>RLMRealmNotification</code> for information on what
+notifications are sent.</p>
+</li>
+<li>
+<p><code>RLMRealm</code> *<strong>realm</strong>:           The Realm for which this notification occurred.</p>
+</li>
 </ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -872,7 +852,7 @@ normally only be the main thread.</p>
                       <div>
                         <h4>Return Value</h4>
                         <p>A token object which must be retained as long as you wish to continue
-    receiving change notifications.</p>
+receiving change notifications.</p>
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/realm/realm-cocoa/tree/v2.7.0/Realm/RLMRealm.h#L187">Show on GitHub</a>
@@ -905,24 +885,20 @@ normally only be the main thread.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Begins a write transaction on the Realm.</p>
-
 <p>Only one write transaction can be open at a time for each Realm file. Write
 transactions cannot be nested, and trying to begin a write transaction on a
 Realm which is already in a write transaction will throw an exception. Calls to
 <code>beginWriteTransaction</code> from <code>RLMRealm</code> instances for the same Realm file in
 other threads or other processes will block until the current write transaction
 completes or is cancelled.</p>
-
 <p>Before beginning the write transaction, <code>beginWriteTransaction</code> updates the
 <code>RLMRealm</code> instance to the latest Realm version, as if <code>refresh</code> had been
 called, and generates notifications if applicable. This has no effect if the
 Realm was already up to date.</p>
-
 <p>It is rarely a good idea to have write transactions span multiple cycles of
 the run loop, but if you do wish to do so you will need to ensure that the
 Realm participating in the write transaction is kept alive until the write
 transaction is committed.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -958,23 +934,19 @@ transaction is committed.</p>
                       <div class="abstract">
                         <p>Commits all write operations in the current write transaction, and ends the
 transaction.</p>
-
 <p>After saving the changes, all notification blocks registered on this specific
 <code>RLMRealm</code> instance are invoked synchronously. Notification blocks registered
 on other threads or on collections are invoked asynchronously. If you do not
 want to receive a specific notification for this write tranaction, see
 <code>commitWriteTransactionWithoutNotifying:error:</code>.</p>
-
 <p>This method can fail if there is insufficient disk space available to save the
 writes made, or due to unexpected i/o errors. This version of the method throws
 an exception when errors occur. Use the version with a <code>NSError</code> out parameter
 instead if you wish to handle errors.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    This method may only be called during a write transaction.
-
+<p class="aside-title">Warning</p>
+<p>This method may only be called during a write transaction.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1005,21 +977,17 @@ instead if you wish to handle errors.</p>
                       <div class="abstract">
                         <p>Commits all write operations in the current write transaction, and ends the
 transaction.</p>
-
 <p>After saving the changes, all notification blocks registered on this specific
 <code>RLMRealm</code> instance are invoked synchronously. Notification blocks registered
 on other threads or on collections are invoked asynchronously. If you do not
 want to receive a specific notification for this write tranaction, see
 <code>commitWriteTransactionWithoutNotifying:error:</code>.</p>
-
 <p>This method can fail if there is insufficient disk space available to save the
 writes made, or due to unexpected i/o errors.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>This method may only be called during a write transaction.</p>
-
+<p class="aside-title">Warning</p>
+<p>This method may only be called during a write transaction.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1047,8 +1015,8 @@ writes made, or due to unexpected i/o errors.</p>
                               <td>
                                 <div>
                                   <p>If an error occurs, upon return contains an <code>NSError</code> object
-         that describes the problem. If you are not interested in
-         possible errors, pass in <code>NULL</code>.</p>
+that describes the problem. If you are not interested in
+possible errors, pass in <code>NULL</code>.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1080,29 +1048,23 @@ writes made, or due to unexpected i/o errors.</p>
                       <div class="abstract">
                         <p>Commits all write operations in the current write transaction, without
 notifying specific notification blocks of the changes.</p>
-
 <p>After saving the changes, all notification blocks registered on this specific
 <code>RLMRealm</code> instance are invoked synchronously. Notification blocks registered
 on other threads or on collections are scheduled to be invoked asynchronously.</p>
-
 <p>You can skip notifiying specific notification blocks about the changes made
 in this write transaction by passing in their associated notification tokens.
 This is primarily useful when the write transaction is saving changes already
 made in the UI and you do not want to have the notification block attempt to
 re-apply the same changes.</p>
-
 <p>The tokens passed to this method must be for notifications for this specific
 <code>RLMRealm</code> instance. Notifications for different threads cannot be skipped
 using this method.</p>
-
 <p>This method can fail if there is insufficient disk space available to save the
 writes made, or due to unexpected i/o errors.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>This method may only be called during a write transaction.</p>
-
+<p class="aside-title">Warning</p>
+<p>This method may only be called during a write transaction.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1133,8 +1095,8 @@ writes made, or due to unexpected i/o errors.</p>
                               <td>
                                 <div>
                                   <p>An array of notification tokens which were returned from adding
-          callbacks which you do not want to be notified for the changes
-          made in this write transaction.</p>
+callbacks which you do not want to be notified for the changes
+made in this write transaction.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1147,8 +1109,8 @@ writes made, or due to unexpected i/o errors.</p>
                               <td>
                                 <div>
                                   <p>If an error occurs, upon return contains an <code>NSError</code> object
-         that describes the problem. If you are not interested in
-         possible errors, pass in <code>NULL</code>.</p>
+that describes the problem. If you are not interested in
+possible errors, pass in <code>NULL</code>.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1179,10 +1141,8 @@ writes made, or due to unexpected i/o errors.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Reverts all writes made during the current write transaction and ends the transaction.</p>
-
 <p>This rolls back all objects in the Realm to the state they were in at the
 beginning of the write transaction, and then ends the transaction.</p>
-
 <p>This restores the data for deleted objects, but does not revive invalidated
 object instances. Any <code><a href="../Classes/RLMObject.html">RLMObject</a></code>s which were added to the Realm will be
 invalidated rather than becoming unmanaged.
@@ -1195,20 +1155,16 @@ Given the following code:</p>
 <span class="p">[</span><span class="n">realm</span> <span class="nf">deleteObject</span><span class="p">:</span><span class="n">oldObject</span><span class="p">];</span>
 <span class="p">[</span><span class="n">realm</span> <span class="nf">cancelWriteTransaction</span><span class="p">];</span>
 </code></pre>
-
 <p>Both <code>oldObject</code> and <code>newObject</code> will return <code>YES</code> for <code>isInvalidated</code>,
 but re-running the query which provided <code>oldObject</code> will once again return
 the valid object.</p>
-
 <p>KVO observers on any objects which were modified during the transaction will
 be notified about the change back to their initial values, but no other
 notifcations are produced by a cancelled write transaction.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    This method may only be called during a write transaction.
-
+<p class="aside-title">Warning</p>
+<p>This method may only be called during a write transaction.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1244,11 +1200,9 @@ notifcations are produced by a cancelled write transaction.</p>
                       <div class="abstract">
                         <p>Performs actions contained within the given block inside a write transaction.</p>
 <div class="aside aside-see">
-    <p class="aside-title">See</p>
-    <code>[RLMRealm transactionWithBlock:error:]</code>
-
+<p class="aside-title">See</p>
+<p><code>[RLMRealm transactionWithBlock:error:]</code></p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1278,17 +1232,14 @@ notifcations are produced by a cancelled write transaction.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Performs actions contained within the given block inside a write transaction.</p>
-
 <p>Write transactions cannot be nested, and trying to execute a write transaction
 on a Realm which is already participating in a write transaction will throw an
 exception. Calls to <code>transactionWithBlock:</code> from <code>RLMRealm</code> instances in other
 threads will block until the current write transaction completes.</p>
-
 <p>Before beginning the write transaction, <code>transactionWithBlock:</code> updates the
 <code>RLMRealm</code> instance to the latest Realm version, as if <code>refresh</code> had been called, and
 generates notifications if applicable. This has no effect if the Realm
 was already up to date.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1329,8 +1280,8 @@ was already up to date.</p>
                               <td>
                                 <div>
                                   <p>If an error occurs, upon return contains an <code>NSError</code> object
-         that describes the problem. If you are not interested in
-         possible errors, pass in <code>NULL</code>.</p>
+that describes the problem. If you are not interested in
+possible errors, pass in <code>NULL</code>.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1362,12 +1313,10 @@ was already up to date.</p>
                       <div class="abstract">
                         <p>Updates the Realm and outstanding objects managed by the Realm to point to the
 most recent data.</p>
-
 <p>If the version of the Realm is actually changed, Realm and collection
 notifications will be sent to reflect the changes. This may take some time, as
 collection notifications are prepared on a background thread. As a result,
 calling this method on the main thread is not advisable.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1385,7 +1334,7 @@ calling this method on the main thread is not advisable.</p>
                       <div>
                         <h4>Return Value</h4>
                         <p>Whether there were any updates for the Realm. Note that <code>YES</code> may be
-    returned even if no data actually changed.</p>
+returned even if no data actually changed.</p>
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/realm/realm-cocoa/tree/v2.7.0/Realm/RLMRealm.h#L364">Show on GitHub</a>
@@ -1408,22 +1357,17 @@ calling this method on the main thread is not advisable.</p>
                       <div class="abstract">
                         <p>Set this property to <code>YES</code> to automatically update this Realm when changes
 happen in other threads.</p>
-
 <p>If set to <code>YES</code> (the default), changes made on other threads will be reflected
 in this Realm on the next cycle of the run loop after the changes are
 committed.  If set to <code>NO</code>, you must manually call <code><a href="../Classes/RLMRealm.html#/c:objc(cs)RLMRealm(im)refresh">-refresh</a></code> on the Realm to
 update it to get the latest data.</p>
-
 <p>Note that by default, background threads do not have an active run loop and you
 will need to manually call <code><a href="../Classes/RLMRealm.html#/c:objc(cs)RLMRealm(im)refresh">-refresh</a></code> in order to update to the latest version,
 even if <code>autorefresh</code> is set to <code>YES</code>.</p>
-
 <p>Even with this property enabled, you can still call <code><a href="../Classes/RLMRealm.html#/c:objc(cs)RLMRealm(im)refresh">-refresh</a></code> at any time to
 update the Realm before the automatic refresh would occur.</p>
-
 <p>Write transactions will still always advance a Realm to the latest version and
 produce local notifications on commit even if autorefresh is disabled.</p>
-
 <p>Disabling <code>autorefresh</code> on a Realm without any strong references to it will not
 have any effect, and <code>autorefresh</code> will revert back to <code>YES</code> the next time the
 Realm is created. This is normally irrelevant as it means that there is nothing
@@ -1432,9 +1376,7 @@ references to the Realm that manages them), but it means that setting
 <code>RLMRealm.defaultRealm.autorefresh = NO</code> in
 <code>application:didFinishLaunchingWithOptions:</code> and only later storing Realm
 objects will not work.</p>
-
 <p>Defaults to <code>YES</code>.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1469,13 +1411,10 @@ objects will not work.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Writes a compacted and optionally encrypted copy of the Realm to the given local URL.</p>
-
 <p>The destination file cannot already exist.</p>
-
 <p>Note that if this method is called from within a write transaction, the
 <em>current</em> data is written, not the data from the point when the previous write
 transaction was committed.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1529,8 +1468,8 @@ transaction was committed.</p>
                               <td>
                                 <div>
                                   <p>If an error occurs, upon return contains an <code>NSError</code> object
-           that describes the problem. If you are not interested in
-           possible errors, pass in <code>NULL</code>.</p>
+that describes the problem. If you are not interested in
+possible errors, pass in <code>NULL</code>.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1561,7 +1500,6 @@ transaction was committed.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Invalidates all <code><a href="../Classes/RLMObject.html">RLMObject</a></code>s, <code><a href="../Classes/RLMResults.html">RLMResults</a></code>, <code><a href="../Classes.html#/c:objc(cs)RLMLinkingObjects">RLMLinkingObjects</a></code>, and <code><a href="../Classes/RLMArray.html">RLMArray</a></code>s managed by the Realm.</p>
-
 <p>A Realm holds a read lock on the version of the data accessed by it, so
 that changes made to the Realm on different threads do not modify or delete the
 data seen by this Realm. Calling this method releases the read lock,
@@ -1569,16 +1507,13 @@ allowing the space used on disk to be reused by later write transactions rather
 than growing the file. This method should be called before performing long
 blocking operations on a background thread on which you previously read data
 from the Realm which you no longer need.</p>
-
 <p>All <code><a href="../Classes/RLMObject.html">RLMObject</a></code>, <code><a href="../Classes/RLMResults.html">RLMResults</a></code> and <code><a href="../Classes/RLMArray.html">RLMArray</a></code> instances obtained from this
 <code>RLMRealm</code> instance on the current thread are invalidated. <code><a href="../Classes/RLMObject.html">RLMObject</a></code>s and <code><a href="../Classes/RLMArray.html">RLMArray</a></code>s
 cannot be used. <code><a href="../Classes/RLMResults.html">RLMResults</a></code> will become empty. The Realm itself remains valid,
 and a new read transaction is implicitly begun the next time data is read from the Realm.</p>
-
 <p>Calling this method multiple times in a row without reading any data from the
 Realm, or before ever reading any data from the Realm, is a no-op. This method
 may not be called on a read-only Realm.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1627,29 +1562,24 @@ may not be called on a read-only Realm.</p>
 but resolved for the current Realm for this thread. Returns <code>nil</code> if this object was deleted after
 the reference was created.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>A <code><a href="../Classes/RLMThreadSafeReference.html">RLMThreadSafeReference</a></code> object must be resolved at most once.
-     Failing to resolve a <code><a href="../Classes/RLMThreadSafeReference.html">RLMThreadSafeReference</a></code> will result in the source version of the
-     Realm being pinned until the reference is deallocated.
-     An exception will be thrown if a reference is resolved more than once.</p>
-
+<p class="aside-title">Warning</p>
+<p>A <code><a href="../Classes/RLMThreadSafeReference.html">RLMThreadSafeReference</a></code> object must be resolved at most once.
+Failing to resolve a <code><a href="../Classes/RLMThreadSafeReference.html">RLMThreadSafeReference</a></code> will result in the source version of the
+Realm being pinned until the reference is deallocated.
+An exception will be thrown if a reference is resolved more than once.</p>
 </div>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>Cannot call within a write transaction.</p>
-
+<p class="aside-title">Warning</p>
+<p>Cannot call within a write transaction.</p>
 </div>
 <div class="aside aside-note">
-    <p class="aside-title">Note</p>
-    <p>Will refresh this Realm if the source Realm was at a later version than this one.</p>
-
+<p class="aside-title">Note</p>
+<p>Will refresh this Realm if the source Realm was at a later version than this one.</p>
 </div>
 <div class="aside aside-see">
-    <p class="aside-title">See</p>
-    <p><code><a href="../Classes/RLMThreadSafeReference.html#/c:objc(cs)RLMThreadSafeReference(cm)referenceWithThreadConfined:">+[RLMThreadSafeReference referenceWithThreadConfined:]</a></code></p>
-
+<p class="aside-title">See</p>
+<p><code><a href="../Classes/RLMThreadSafeReference.html#/c:objc(cs)RLMThreadSafeReference(cm)referenceWithThreadConfined:">+[RLMThreadSafeReference referenceWithThreadConfined:]</a></code></p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1715,25 +1645,19 @@ the reference was created.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Adds an object to the Realm.</p>
-
 <p>Once added, this object is considered to be managed by the Realm. It can be retrieved
 using the <code>objectsWhere:</code> selectors on <code>RLMRealm</code> and on subclasses of <code><a href="../Classes/RLMObject.html">RLMObject</a></code>.</p>
-
 <p>When added, all child relationships referenced by this object will also be added to
 the Realm if they are not already in it.</p>
-
 <p>If the object or any related objects are already being managed by a different Realm
 an exception will be thrown. Use <code>-[RLMObject createInRealm:withObject:]</code> to insert a copy of a managed object
 into a different Realm.</p>
-
 <p>The object to be added must be valid and cannot have been previously deleted
 from a Realm (i.e. <code>isInvalidated</code> must be <code>NO</code>).</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>This method may only be called during a write transaction.</p>
-
+<p class="aside-title">Warning</p>
+<p>This method may only be called during a write transaction.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1787,19 +1711,15 @@ from a Realm (i.e. <code>isInvalidated</code> must be <code>NO</code>).</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Adds all the objects in a collection to the Realm.</p>
-
 <p>This is the equivalent of calling <code>addObject:</code> for every object in a collection.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>This method may only be called during a write transaction.</p>
-
+<p class="aside-title">Warning</p>
+<p>This method may only be called during a write transaction.</p>
 </div>
 <div class="aside aside-see">
-    <p class="aside-title">See</p>
-    <p><code>addObject:</code></p>
-
+<p class="aside-title">See</p>
+<p><code>addObject:</code></p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1827,7 +1747,7 @@ from a Realm (i.e. <code>isInvalidated</code> must be <code>NO</code>).</p>
                               <td>
                                 <div>
                                   <p>An enumerable object such as <code>NSArray</code> or <code><a href="../Classes/RLMResults.html">RLMResults</a></code> which contains objects to be added to
-           the Realm.</p>
+the Realm.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1854,20 +1774,16 @@ from a Realm (i.e. <code>isInvalidated</code> must be <code>NO</code>).</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Adds or updates an existing object into the Realm.</p>
-
 <p>The object provided must have a designated primary key. If no objects exist in the Realm
 with the same primary key value, the object is inserted. Otherwise, the existing object is
 updated with any changed values.</p>
-
 <p>As with <code>addObject:</code>, the object cannot already be managed by a different
 Realm. Use <code>-[RLMObject createOrUpdateInRealm:withValue:]</code> to copy values to
 a different Realm.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>This method may only be called during a write transaction.</p>
-
+<p class="aside-title">Warning</p>
+<p>This method may only be called during a write transaction.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1921,19 +1837,15 @@ a different Realm.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Adds or updates all the objects in a collection into the Realm.</p>
-
 <p>This is the equivalent of calling <code>addOrUpdateObject:</code> for every object in a collection.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>This method may only be called during a write transaction.</p>
-
+<p class="aside-title">Warning</p>
+<p>This method may only be called during a write transaction.</p>
 </div>
 <div class="aside aside-see">
-    <p class="aside-title">See</p>
-    <p><code>addOrUpdateObject:</code></p>
-
+<p class="aside-title">See</p>
+<p><code>addOrUpdateObject:</code></p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1988,11 +1900,9 @@ a different Realm.</p>
                       <div class="abstract">
                         <p>Deletes an object from the Realm. Once the object is deleted it is considered invalidated.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>This method may only be called during a write transaction.</p>
-
+<p class="aside-title">Warning</p>
+<p>This method may only be called during a write transaction.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -2046,19 +1956,15 @@ a different Realm.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Deletes one or more objects from the Realm.</p>
-
 <p>This is the equivalent of calling <code>deleteObject:</code> for every object in a collection.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>This method may only be called during a write transaction.</p>
-
+<p class="aside-title">Warning</p>
+<p>This method may only be called during a write transaction.</p>
 </div>
 <div class="aside aside-see">
-    <p class="aside-title">See</p>
-    <p><code>deleteObject:</code></p>
-
+<p class="aside-title">See</p>
+<p><code>deleteObject:</code></p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -2113,16 +2019,13 @@ a different Realm.</p>
                       <div class="abstract">
                         <p>Deletes all objects from the Realm.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>This method may only be called during a write transaction.</p>
-
+<p class="aside-title">Warning</p>
+<p>This method may only be called during a write transaction.</p>
 </div>
 <div class="aside aside-see">
-    <p class="aside-title">See</p>
-    <p><code>deleteObject:</code></p>
-
+<p class="aside-title">See</p>
+<p><code>deleteObject:</code></p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -2168,7 +2071,6 @@ a different Realm.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the schema version for a Realm at a given local URL.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -2222,8 +2124,8 @@ a different Realm.</p>
                               <td>
                                 <div>
                                   <p>If an error occurs, upon return contains an <code>NSError</code> object
-           that describes the problem. If you are not interested in
-           possible errors, pass in <code>NULL</code>.</p>
+that describes the problem. If you are not interested in
+possible errors, pass in <code>NULL</code>.</p>
                                 </div>
                               </td>
                             </tr>
@@ -2253,17 +2155,14 @@ a different Realm.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Performs the given Realm configuration&rsquo;s migration block on a Realm at the given path.</p>
-
+                        <p>Performs the given Realm configuration’s migration block on a Realm at the given path.</p>
 <p>This method is called automatically when opening a Realm for the first time and does
 not need to be called explicitly. You can choose to call this method to control
 exactly when and how migrations are performed.</p>
 <div class="aside aside-see">
-    <p class="aside-title">See</p>
-    <p>RLMMigration</p>
-
+<p class="aside-title">See</p>
+<p>RLMMigration</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -2321,17 +2220,14 @@ exactly when and how migrations are performed.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Performs the given Realm configuration&rsquo;s migration block on a Realm at the given path.</p>
-
+                        <p>Performs the given Realm configuration’s migration block on a Realm at the given path.</p>
 <p>This method is called automatically when opening a Realm for the first time and does
 not need to be called explicitly. You can choose to call this method to control
 exactly when and how migrations are performed.</p>
 <div class="aside aside-see">
-    <p class="aside-title">See</p>
-    <p>RLMMigration</p>
-
+<p class="aside-title">See</p>
+<p>RLMMigration</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -2402,10 +2298,8 @@ exactly when and how migrations are performed.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>RLMRealm instances are cached internally by Realm and cannot be created directly.</p>
-
 <p>Use <code><a href="../Classes/RLMRealm.html#/c:objc(cs)RLMRealm(cm)defaultRealm">+[RLMRealm defaultRealm]</a></code>, <code><a href="../Classes/RLMRealm.html#/c:objc(cs)RLMRealm(cm)realmWithConfiguration:error:">+[RLMRealm realmWithConfiguration:error:]</a></code> or
 <code>+[RLMRealm realmWithURL]</code> to obtain a reference to an RLMRealm.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -2435,10 +2329,8 @@ exactly when and how migrations are performed.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>RLMRealm instances are cached internally by Realm and cannot be created directly.</p>
-
 <p>Use <code><a href="../Classes/RLMRealm.html#/c:objc(cs)RLMRealm(cm)defaultRealm">+[RLMRealm defaultRealm]</a></code>, <code><a href="../Classes/RLMRealm.html#/c:objc(cs)RLMRealm(cm)realmWithConfiguration:error:">+[RLMRealm realmWithConfiguration:error:]</a></code> or
 <code>+[RLMRealm realmWithURL]</code> to obtain a reference to an RLMRealm.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -2459,7 +2351,7 @@ exactly when and how migrations are performed.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; YYYY <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
+          <p>© YYYY <a class="link" href="https://realm.io target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

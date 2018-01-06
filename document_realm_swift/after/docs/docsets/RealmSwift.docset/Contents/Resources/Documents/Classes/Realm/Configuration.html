@@ -280,14 +280,11 @@
                 </div>
               </div>
             <p>A <code>Configuration</code> instance describes the different options used to create an instance of a Realm.</p>
-
 <p><code>Configuration</code> instances are just plain Swift structs. Unlike <code><a href="../../Classes/Realm.html">Realm</a></code>s and <code><a href="../../Classes/Object.html">Object</a></code>s, they can be freely shared
 between threads as long as you do not mutate them.</p>
-
 <p>Creating configuration values for class subsets (by setting the <code>objectClasses</code> property) can be expensive. Because
 of this, you will normally want to cache and reuse a single configuration value for each distinct configuration
 rather than creating a new value each time you open a Realm.</p>
-
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -314,7 +311,6 @@ rather than creating a new value each time you open a Realm.</p>
                       <div class="abstract">
                         <p>The default <code>Configuration</code> used to create Realms when no configuration is explicitly specified (i.e.
 <code>Realm()</code>)</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -356,12 +352,10 @@ rather than creating a new value each time you open a Realm.</p>
                       <div class="abstract">
                         <p>Creates a <code>Configuration</code> which can be used to create new <code><a href="../../Classes/Realm.html">Realm</a></code> instances.</p>
 <div class="aside aside-note">
-    <p class="aside-title">Note</p>
-    <p>The <code><a href="../../Classes/Realm/Configuration.html#/s:10RealmSwift0A0C13ConfigurationV7fileURL10Foundation0E0VSgv">fileURL</a></code>, <code><a href="../../Classes/Realm/Configuration.html#/s:10RealmSwift0A0C13ConfigurationV18inMemoryIdentifierSSSgv">inMemoryIdentifier</a></code>, and <code><a href="../../Classes/Realm/Configuration.html#/s:10RealmSwift0A0C13ConfigurationV04syncC0AA04SyncC0VSgv">syncConfiguration</a></code> parameters are mutually exclusive. Only
-    set one of them, or none if you wish to use the default file URL.</p>
-
+<p class="aside-title">Note</p>
+<p>The <code><a href="../../Classes/Realm/Configuration.html#/s:10RealmSwift0A0C13ConfigurationV7fileURL10Foundation0E0VSgv">fileURL</a></code>, <code><a href="../../Classes/Realm/Configuration.html#/s:10RealmSwift0A0C13ConfigurationV18inMemoryIdentifierSSSgv">inMemoryIdentifier</a></code>, and <code><a href="../../Classes/Realm/Configuration.html#/s:10RealmSwift0A0C13ConfigurationV04syncC0AA04SyncC0VSgv">syncConfiguration</a></code> parameters are mutually exclusive. Only
+set one of them, or none if you wish to use the default file URL.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -477,7 +471,7 @@ rather than creating a new value each time you open a Realm.</p>
                               <td>
                                 <div>
                                   <p>If <code>true</code>, recreate the Realm file with the provided
-                                      schema if a migration is required.</p>
+schema if a migration is required.</p>
                                 </div>
                               </td>
                             </tr>
@@ -490,11 +484,11 @@ rather than creating a new value each time you open a Realm.</p>
                               <td>
                                 <div>
                                   <p>A block called when opening a Realm for the first time during the
-                               life of a process to determine if it should be compacted before being
-                               returned to the user. It is passed the total file size (data + free space)
-                               and the total bytes used by data in the file.</p>
-<pre class="highlight swift"><code>                           <span class="kt">Return</span> <span class="err">`</span><span class="kc">true</span> <span class="err">`</span> <span class="n">to</span> <span class="n">indicate</span> <span class="n">that</span> <span class="n">an</span> <span class="n">attempt</span> <span class="n">to</span> <span class="n">compact</span> <span class="n">the</span> <span class="n">file</span> <span class="n">should</span> <span class="n">be</span> <span class="n">made</span><span class="o">.</span>
-                           <span class="kt">The</span> <span class="n">compaction</span> <span class="n">will</span> <span class="n">be</span> <span class="n">skipped</span> <span class="k">if</span> <span class="n">another</span> <span class="n">process</span> <span class="k">is</span> <span class="n">accessing</span> <span class="n">it</span><span class="o">.</span>
+life of a process to determine if it should be compacted before being
+returned to the user. It is passed the total file size (data + free space)
+and the total bytes used by data in the file.</p>
+<pre class="highlight swift"><code>                             <span class="kt">Return</span> <span class="err">`</span><span class="kc">true</span> <span class="err">`</span> <span class="n">to</span> <span class="n">indicate</span> <span class="n">that</span> <span class="n">an</span> <span class="n">attempt</span> <span class="n">to</span> <span class="n">compact</span> <span class="n">the</span> <span class="n">file</span> <span class="n">should</span> <span class="n">be</span> <span class="n">made</span><span class="o">.</span>
+                             <span class="kt">The</span> <span class="n">compaction</span> <span class="n">will</span> <span class="n">be</span> <span class="n">skipped</span> <span class="k">if</span> <span class="n">another</span> <span class="n">process</span> <span class="k">is</span> <span class="n">accessing</span> <span class="n">it</span><span class="o">.</span>
 </code></pre>
                                 </div>
                               </td>
@@ -546,7 +540,6 @@ rather than creating a new value each time you open a Realm.</p>
                       <div class="abstract">
                         <p>A configuration value used to configure a Realm for synchronization with the Realm Object Server. Mutually
 exclusive with <code><a href="../../Classes/Realm/Configuration.html#/s:10RealmSwift0A0C13ConfigurationV18inMemoryIdentifierSSSgv">inMemoryIdentifier</a></code> and <code><a href="../../Classes/Realm/Configuration.html#/s:10RealmSwift0A0C13ConfigurationV7fileURL10Foundation0E0VSgv">fileURL</a></code>.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -576,7 +569,6 @@ exclusive with <code><a href="../../Classes/Realm/Configuration.html#/s:10RealmS
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The local URL of the Realm file. Mutually exclusive with <code><a href="../../Classes/Realm/Configuration.html#/s:10RealmSwift0A0C13ConfigurationV18inMemoryIdentifierSSSgv">inMemoryIdentifier</a></code> and <code><a href="../../Classes/Realm/Configuration.html#/s:10RealmSwift0A0C13ConfigurationV04syncC0AA04SyncC0VSgv">syncConfiguration</a></code>.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -607,7 +599,6 @@ exclusive with <code><a href="../../Classes/Realm/Configuration.html#/s:10RealmS
                       <div class="abstract">
                         <p>A string used to identify a particular in-memory Realm. Mutually exclusive with <code><a href="../../Classes/Realm/Configuration.html#/s:10RealmSwift0A0C13ConfigurationV7fileURL10Foundation0E0VSgv">fileURL</a></code> and
 <code><a href="../../Classes/Realm/Configuration.html#/s:10RealmSwift0A0C13ConfigurationV04syncC0AA04SyncC0VSgv">syncConfiguration</a></code>.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -637,7 +628,6 @@ exclusive with <code><a href="../../Classes/Realm/Configuration.html#/s:10RealmS
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A 64-byte key to use to encrypt the data, or <code>nil</code> if encryption is not enabled.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -667,13 +657,11 @@ exclusive with <code><a href="../../Classes/Realm/Configuration.html#/s:10RealmS
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Whether to open the Realm in read-only mode.</p>
-
 <p>This is required to be able to open Realm files which are not writeable or are in a directory which is not
 writeable. This should only be used on files which will not be modified by anyone while they are open, and not
 just to get a read-only view of a file which may be written to by another thread or process. Opening in
-read-only mode requires disabling Realm&rsquo;s reader/writer coordination, so committing a write transaction from
+read-only mode requires disabling Realm’s reader/writer coordination, so committing a write transaction from
 another process will result in crashes.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -703,7 +691,6 @@ another process will result in crashes.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The current schema version.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -733,7 +720,6 @@ another process will result in crashes.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The block which migrates the Realm to the current version.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -767,11 +753,9 @@ the stored schema differs from the provided schema or the stored schema version 
 this configuration. Setting this property to <code>true</code> deletes the file if a migration would otherwise be required
 or executed.</p>
 <div class="aside aside-note">
-    <p class="aside-title">Note</p>
-    Setting this property to <code>true</code> doesn&rsquo;t disable file format migrations.
-
+<p class="aside-title">Note</p>
+<p>Setting this property to <code>true</code> doesn’t disable file format migrations.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -804,10 +788,8 @@ or executed.</p>
 life of a process to determine if it should be compacted before being
 returned to the user. It is passed the total file size (data + free space)
 and the total bytes used by data in the file.</p>
-
 <p>Return <code>true</code> to indicate that an attempt to compact the file should be made.
 The compaction will be skipped if another process is accessing it.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -837,7 +819,6 @@ The compaction will be skipped if another process is accessing it.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The classes managed by the Realm.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -871,7 +852,6 @@ The compaction will be skipped if another process is accessing it.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A human-readable description of the configuration value.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -892,7 +872,7 @@ The compaction will be skipped if another process is accessing it.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; YYYY <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
+          <p>© YYYY <a class="link" href="https://realm.io target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

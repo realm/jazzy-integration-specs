@@ -327,7 +327,6 @@
               </div>
             <p>An error related to a problem that might be reported by the synchronization manager
 error handler, or a callback on a sync-related API that performs asynchronous work.</p>
-
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -348,12 +347,10 @@ error handler, or a callback on a sync-related API that performs asynchronous wo
                         <p>An error that indicates that the response received from the
 authentication server was malformed.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    This error is deprecated, and has been replaced by
-     <code>RLMSyncAuthErrorBadResponse</code>.
-
+<p class="aside-title">Warning</p>
+<p>This error is deprecated, and has been replaced by
+<code>RLMSyncAuthErrorBadResponse</code>.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -388,7 +385,6 @@ authentication server was malformed.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>An error that indicates a problem with the session (a specific Realm opened for sync).</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -423,7 +419,6 @@ authentication server was malformed.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>An error that indicates a problem with a specific user.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -459,7 +454,6 @@ authentication server was malformed.</p>
                       <div class="abstract">
                         <p>An error that indicates an internal, unrecoverable problem
 with the underlying synchronization engine.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -494,41 +488,33 @@ with the underlying synchronization engine.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>An error that indicates the Realm needs to be reset.</p>
-
 <p>A synced Realm may need to be reset because the Realm Object Server encountered an
 error and had to be restored from a backup. If the backup copy of the remote Realm
 is of an earlier version than the local copy of the Realm, the server will ask the
 client to reset the Realm.</p>
-
 <p>The reset process is as follows: the local copy of the Realm is copied into a recovery
 directory for safekeeping, and then deleted from the original location. The next time
 the Realm for that URL is opened, the Realm will automatically be re-downloaded from the
 Realm Object Server, and can be used as normal.</p>
-
 <p>Data written to the Realm after the local copy of the Realm diverged from the backup
 remote copy will be present in the local recovery copy of the Realm file. The
 re-downloaded Realm will initially contain only the data present at the time the Realm
 was backed up on the server.</p>
-
 <p>The client reset process can be initiated in one of two ways. The block provided in the
 <code>userInfo</code> dictionary under <code><a href="../Constants.html#/c:@kRLMSyncInitiateClientResetBlockKey">kRLMSyncInitiateClientResetBlockKey</a></code> can be called to
 initiate the reset process. This block can be called any time after the error is
 received, but should only be called if and when your app closes and invalidates every
 instance of the offending Realm on all threads (note that autorelease pools may make this
 difficult to guarantee).</p>
-
 <p>If the block is not called, the client reset process will be automatically carried out
 the next time the app is launched and the <code><a href="../Classes/RLMSyncManager.html">RLMSyncManager</a></code> singleton is accessed.</p>
-
 <p>The value for the <code><a href="../Constants.html#/c:@kRLMSyncPathOfRealmBackupCopyKey">kRLMSyncPathOfRealmBackupCopyKey</a></code> key in the <code>userInfo</code> dictionary
 describes the path of the recovered copy of the Realm. This copy will not actually be
 created until the client reset process is initiated.</p>
 <div class="aside aside-see">
-    <p class="aside-title">See</p>
-    <code>-[NSError rlmSync_clientResetBlock]</code>, <code>-[NSError rlmSync_clientResetBackedUpRealmPath]</code>
-
+<p class="aside-title">See</p>
+<p><code>-[NSError rlmSync_clientResetBlock]</code>, <code>-[NSError rlmSync_clientResetBackedUpRealmPath]</code></p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -563,11 +549,9 @@ created until the client reset process is initiated.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>An error that indicates an authentication error occurred.</p>
-
 <p>The <code>kRLMSyncUnderlyingErrorKey</code> key in the user info dictionary will contain the
 underlying error, which is guaranteed to be under the <code><a href="../Constants.html#/c:@RLMSyncAuthErrorDomain">RLMSyncAuthErrorDomain</a></code>
 error domain.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -593,7 +577,7 @@ error domain.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; YYYY <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
+          <p>© YYYY <a class="link" href="https://realm.io target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

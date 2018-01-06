@@ -246,17 +246,14 @@
                 </div>
               </div>
             <p>Mixin that provides convenience accessors for the content of an optional contained entity.</p>
-
 <p>Allows you to replace the following:</p>
 <pre class="highlight swift"><code><span class="n">resource</span><span class="o">.</span><span class="n">latestData</span><span class="p">?</span><span class="o">.</span><span class="n">content</span> <span class="k">as?</span> <span class="kt">String</span>
 <span class="p">(</span><span class="n">resource</span><span class="o">.</span><span class="n">latestError</span><span class="p">?</span><span class="o">.</span><span class="n">entity</span><span class="p">?</span><span class="o">.</span><span class="n">content</span> <span class="k">as?</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span><span class="kt">AnyObject</span><span class="p">])?[</span><span class="s">"error.detail"</span><span class="p">]</span>
 </code></pre>
-
 <p>…with:</p>
 <pre class="highlight swift"><code><span class="n">resource</span><span class="o">.</span><span class="n">text</span>
 <span class="n">resource</span><span class="o">.</span><span class="n">latestError</span><span class="p">?</span><span class="o">.</span><span class="n">jsonDict</span><span class="p">[</span><span class="s">"error.detail"</span><span class="p">]</span>
 </code></pre>
-
 <p>You can extend this protocol to provide your own convenience accessors. For example:</p>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">TypedContentAccessors</span> <span class="p">{</span>
   <span class="k">var</span> <span class="nv">doorknob</span><span class="p">:</span> <span class="kt">UIDoorknob</span> <span class="p">{</span>
@@ -264,11 +261,9 @@
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
-
 <p>Note that the sample code above is <em>only</em> a convenience accessor. It checks whether the entity already has a
 <code>UIDoorknob</code>, but does not do any parsing to put a <code>UIDoorknob</code> there in the first place. You’d need to pair this with
 a custom <code><a href="../Protocols/ResponseTransformer.html">ResponseTransformer</a></code> that converts raw doorknob responses to <code>UIDoorknob</code>s.</p>
-
           </div>
         </section>
 
@@ -290,7 +285,6 @@ a custom <code><a href="../Protocols/ResponseTransformer.html">ResponseTransform
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The type of entity content the implementing type provides. Often <code>Any</code>.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -317,7 +311,6 @@ a custom <code><a href="../Protocols/ResponseTransformer.html">ResponseTransform
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The entity to which the convenience accessors will apply.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -354,17 +347,14 @@ a custom <code><a href="../Protocols/ResponseTransformer.html">ResponseTransform
 For example, if you expect the content to be a UIImage:</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">image</span> <span class="o">=</span> <span class="n">resource</span><span class="o">.</span><span class="nf">typedContent</span><span class="p">(</span><span class="nv">ifNone</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="s">"placeholder.png"</span><span class="p">))</span>
 </code></pre>
-<div class="aside aside-see-also">
-    <p class="aside-title">See also</p>
-    <p><code><a href="../Protocols/TypedContentAccessors.html#/s:6Siesta21TypedContentAccessorsPAAE05typedC0qd__SgylF">typedContent()</a></code></p>
-
+<div class="aside aside-seealso">
+<p class="aside-title">Seealso</p>
+<p><code><a href="../Protocols/TypedContentAccessors.html#/s:6Siesta21TypedContentAccessorsPAAE05typedC0qd__SgylF">typedContent()</a></code></p>
 </div>
-<div class="aside aside-see-also">
-    <p class="aside-title">See also</p>
-    <p><code><a href="../Protocols/ResponseTransformer.html">ResponseTransformer</a></code></p>
-
+<div class="aside aside-seealso">
+<p class="aside-title">Seealso</p>
+<p><code><a href="../Protocols/ResponseTransformer.html">ResponseTransformer</a></code></p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -377,7 +367,7 @@ For example, if you expect the content to be a UIImage:</p>
                       <div>
                         <h4>Return Value</h4>
                         <p>The content if it is present <em>and</em> can be downcast to a type matching both the <code>ifNone</code> parameter
-       and the inferred return type; otherwise returns <code>ifNone</code>.</p>
+and the inferred return type; otherwise returns <code>ifNone</code>.</p>
                       </div>
                     </section>
                   </div>
@@ -399,7 +389,6 @@ For example, if you expect the content to be a UIImage:</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Variant of <code><a href="../Protocols/TypedContentAccessors.html#/s:6Siesta21TypedContentAccessorsPAAE05typedC0qd__qd__yXK6ifNone_tlF">typedContent(ifNone:)</a></code> with optional input &amp; output.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -436,7 +425,6 @@ content is either not present or cannot be cast to that type. For example:</p>
 
 <span class="nf">showUser</span><span class="p">(</span><span class="n">resource</span><span class="o">.</span><span class="nf">typedContent</span><span class="p">())</span>  <span class="c1">// Infers that desired type is User</span>
 </code></pre>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -466,7 +454,6 @@ content is either not present or cannot be cast to that type. For example:</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns content if it is a dictionary with string keys; otherwise returns an empty dictionary.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -496,7 +483,6 @@ content is either not present or cannot be cast to that type. For example:</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns content if it is an array; otherwise returns an empty array.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -526,7 +512,6 @@ content is either not present or cannot be cast to that type. For example:</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns content if it is a string; otherwise returns an empty string.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -547,7 +532,7 @@ content is either not present or cannot be cast to that type. For example:</p>
       </article>
     </div>
     <section class="footer">
-      <p>© 2016 <a class="link" href="http://bustoutsolutions.com" target="_blank" rel="external">Bust Out Solutions</a> under <a class="link" href="https://github.com/bustoutsolutions/siesta/blob/master/LICENSE" target="_blank" rel="external">open source license</a>.</p>
+      <p>© 2016 <a class="link" href="http://bustoutsolutions.com target="_blank" rel="external">Bust Out Solutions</a> under <a class="link" href="https://github.com/bustoutsolutions/siesta/blob/master/LICENSE target="_blank" rel="external">open source license</a>.</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

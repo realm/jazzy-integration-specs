@@ -247,11 +247,9 @@
               </div>
             <p>An unique identifier for a <code><a href="../Structs/PipelineStage.html">PipelineStage</a></code> within a <code><a href="../Structs/Pipeline.html">Pipeline</a></code>. Transformers and stages have no intrinsic notion of
 identity or equality, so these keys are the only way to alter transformers after they’re configured.</p>
-
 <p>Stage keys are arbitrary, and have no intrinsic meaning. The descriptions of the default stages are for human
 comprehensibility, and Siesta does not enforce them in any way (e.g. it does not prevent you from configuring the
 <code>rawData</code> stage to output something other than <code>Data</code>).</p>
-
 <p>Because this is not an enum, you can add custom stages:</p>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">PipelineStageKey</span> <span class="p">{</span>
   <span class="kd">static</span> <span class="k">let</span>
@@ -265,7 +263,6 @@ comprehensibility, and Siesta does not enforce them in any way (e.g. it does not
     <span class="nv">$0</span><span class="o">.</span><span class="n">pipeline</span><span class="o">.</span><span class="n">order</span> <span class="o">=</span> <span class="p">[</span><span class="o">.</span><span class="n">rawData</span><span class="p">,</span> <span class="o">.</span><span class="n">munging</span><span class="p">,</span> <span class="o">.</span><span class="n">twiddling</span><span class="p">,</span> <span class="o">.</span><span class="n">cleanup</span><span class="p">]</span>
 <span class="p">}</span>
 </code></pre>
-
           </div>
         </section>
 
@@ -287,7 +284,6 @@ comprehensibility, and Siesta does not enforce them in any way (e.g. it does not
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A human-readable name for this key. Does not affect uniqueness, or any other logical behavior.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -314,7 +310,6 @@ comprehensibility, and Siesta does not enforce them in any way (e.g. it does not
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Creates a custom pipeline stage.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -345,7 +340,6 @@ comprehensibility, and Siesta does not enforce them in any way (e.g. it does not
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Response data still unprocessed. The stage typically contains no transformers.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -372,7 +366,6 @@ comprehensibility, and Siesta does not enforce them in any way (e.g. it does not
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Any bytes-to-bytes processing, such as decryption or decompression, not already performed by the network lib.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -399,7 +392,6 @@ comprehensibility, and Siesta does not enforce them in any way (e.g. it does not
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Transformation of bytes to an ADT or other generic data structure, e.g. a string, dictionary, or image.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -426,7 +418,6 @@ comprehensibility, and Siesta does not enforce them in any way (e.g. it does not
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Transformation from an ADT to a domain-specific model.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -453,7 +444,6 @@ comprehensibility, and Siesta does not enforce them in any way (e.g. it does not
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Error handling, validation, or any other general mop-up.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -474,7 +464,7 @@ comprehensibility, and Siesta does not enforce them in any way (e.g. it does not
       </article>
     </div>
     <section class="footer">
-      <p>© 2016 <a class="link" href="http://bustoutsolutions.com" target="_blank" rel="external">Bust Out Solutions</a> under <a class="link" href="https://github.com/bustoutsolutions/siesta/blob/master/LICENSE" target="_blank" rel="external">open source license</a>.</p>
+      <p>© 2016 <a class="link" href="http://bustoutsolutions.com target="_blank" rel="external">Bust Out Solutions</a> under <a class="link" href="https://github.com/bustoutsolutions/siesta/blob/master/LICENSE target="_blank" rel="external">open source license</a>.</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

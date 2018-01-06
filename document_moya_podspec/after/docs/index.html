@@ -178,71 +178,59 @@
         <section>
           <section class="section">
             
-            <p><a href="https://circleci.com/gh/Moya/Moya/tree/master"><img src="https://img.shields.io/circleci/project/github/Moya/Moya/master.svg" alt="CircleCI"></a>
-<a href="https://codecov.io/github/Moya/Moya?branch=master"><img src="https://codecov.io/github/Moya/Moya/coverage.svg?branch=master" alt="codecov.io"></a>
-<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a>
-<a href="https://cocoapods.org/pods/Moya"><img src="https://img.shields.io/cocoapods/v/Moya.svg" alt="CocoaPods compatible"></a>
-<a href="https://github.com/apple/swift-package-manager"><img src="https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg" alt="Swift Package Manager compatible"></a></p>
-
+            <p><a href="https://circleci.com/gh/Moya/Moya/tree/master"><img src="https://img.shields.io/circleci/project/github/Moya/Moya/master.svg" alt="CircleCI" /></a>
+<a href="https://codecov.io/github/Moya/Moya?branch=master"><img src="https://codecov.io/github/Moya/Moya/coverage.svg?branch=master" alt="codecov.io" /></a>
+<a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible" /></a>
+<a href="https://cocoapods.org/pods/Moya"><img src="https://img.shields.io/cocoapods/v/Moya.svg" alt="CocoaPods compatible" /></a>
+<a href="https://github.com/apple/swift-package-manager"><img src="https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg" alt="Swift Package Manager compatible" /></a></p>
 <p align="center">
   <img height="160" src="web/logo_github.png" />
 </p>
-
-<p>You&rsquo;re a smart developer. You probably use <a href="https://github.com/Alamofire/Alamofire">Alamofire</a> to abstract away access to
-<code>URLSession</code> and all those nasty details you don&rsquo;t really care about. But then,
+<p>You’re a smart developer. You probably use <a href="https://github.com/Alamofire/Alamofire">Alamofire</a> to abstract away access to
+<code>URLSession</code> and all those nasty details you don’t really care about. But then,
 like lots of smart developers, you write ad hoc network abstraction layers. They
-are probably called <q>APIManager</q> or <q>NetworkModel</q>, and they always end in tears.</p>
-
-<p><img src="web/diagram.png" alt="Moya Overview"></p>
-
-<p>Ad hoc network layers are common in iOS apps. They&rsquo;re bad for a few reasons:</p>
-
+are probably called “APIManager” or “NetworkModel”, and they always end in tears.</p>
+<p><img src="web/diagram.png" alt="Moya Overview" /></p>
+<p>Ad hoc network layers are common in iOS apps. They’re bad for a few reasons:</p>
 <ul>
-<li>Makes it hard to write new apps (<q>where do I begin?</q>)</li>
-<li>Makes it hard to maintain existing apps (<q>oh my god, this mess&hellip;</q>)</li>
-<li>Makes it hard to write unit tests (<q>how do I do this again?</q>)</li>
+<li>Makes it hard to write new apps (“where do I begin?”)</li>
+<li>Makes it hard to maintain existing apps (“oh my god, this mess…”)</li>
+<li>Makes it hard to write unit tests (“how do I do this again?”)</li>
 </ul>
-
 <p>So the basic idea of Moya is that we want some network abstraction layer that
 sufficiently encapsulates actually calling Alamofire directly. It should be simple
 enough that common things are easy, but comprehensive enough that complicated things
 are also easy.</p>
-
 <blockquote>
 <p>If you use Alamofire to abstract away <code>URLSession</code>, why not use something
 to abstract away the nitty gritty of URLs, parameters, etc?</p>
 </blockquote>
-
 <p>Some awesome features of Moya:</p>
-
 <ul>
 <li>Compile-time checking for correct API endpoint accesses.</li>
 <li>Lets you define a clear usage of different endpoints with associated enum values.</li>
 <li>Treats test stubs as first-class citizens so unit testing is super-easy.</li>
 </ul>
-
 <p>You can check out more about the project direction in the <a href="Vision.md">vision document</a>.</p>
 <h2 id='sample-project' class='heading'>Sample Project</h2>
-
-<p>There&rsquo;s a sample project in the Demo directory. To use it, run <code>pod install</code> to download the required libraries. Have fun!</p>
+<p>There’s a sample project in the Demo directory. To use it, run <code>pod install</code> to download the required libraries. Have fun!</p>
 <h2 id='project-status' class='heading'>Project Status</h2>
-
-<p>This project is actively under development, and is being used in <a href="https://github.com/Artsy/eidolon">Artsy&rsquo;s
+<p>This project is actively under development, and is being used in <a href="https://github.com/Artsy/eidolon">Artsy’s
 new auction app</a>. We consider it
 ready for production use.</p>
 <h2 id='installation' class='heading'>Installation</h2>
 <h3 id='moya-version-vs-swift-version' class='heading'>Moya version vs Swift version.</h3>
-
 <p>Because of the many Swift versions Moya supports, it might be confusing to
 find the version of Moya that you need. Below is a table that shows which version of Moya
 you should use for your Swift version.</p>
-
-<table><thead>
+<table>
+<thead>
 <tr>
 <th>Swift version</th>
 <th>Moya version</th>
 </tr>
-</thead><tbody>
+</thead>
+<tbody>
 <tr>
 <td>3.X</td>
 <td>&gt;= 8.0.0</td>
@@ -254,16 +242,13 @@ you should use for your Swift version.</p>
 <tr>
 <td>2.2</td>
 <td>&lt;= 7.0.1</td>
-</tr>
-</tbody></table>
+</tr></tbody></table>
 <h3 id='swift-package-manager' class='heading'>Swift Package Manager</h3>
-
-<p>To integrate using Apple&rsquo;s Swift package manager, add the following as a dependency to your <code>Package.swift</code>:</p>
+<p>To integrate using Apple’s Swift package manager, add the following as a dependency to your <code>Package.swift</code>:</p>
 <pre class="highlight swift"><code><span class="o">.</span><span class="kt">Package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/Moya/Moya.git"</span><span class="p">,</span> <span class="nv">majorVersion</span><span class="p">:</span> <span class="mi">8</span><span class="p">)</span>
 </code></pre>
-
 <p>and then specify <code>.Target(name: &quot;Moya&quot;)</code> as a dependency of the Target in which you wish to use Moya.
-Here&rsquo;s an example <code>PackageDescription</code>:</p>
+Here’s an example <code>PackageDescription</code>:</p>
 <pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">PackageDescription</span>
 
 <span class="k">let</span> <span class="nv">package</span> <span class="o">=</span> <span class="kt">Package</span><span class="p">(</span>
@@ -274,7 +259,6 @@ Here&rsquo;s an example <code>PackageDescription</code>:</p>
 <span class="p">)</span>
 </code></pre>
 <h3 id='cocoapods' class='heading'>CocoaPods</h3>
-
 <p>For Moya, use the following entry in your Podfile:</p>
 <pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'Moya'</span>
 
@@ -286,31 +270,23 @@ Here&rsquo;s an example <code>PackageDescription</code>:</p>
 
 <span class="n">pod</span> <span class="s1">'Moya/ReactiveSwift'</span>
 </code></pre>
-
 <p>Then run <code>pod install</code>.</p>
-
-<p>In any file you&rsquo;d like to use Moya in, don&rsquo;t forget to
+<p>In any file you’d like to use Moya in, don’t forget to
 import the framework with <code>import Moya</code>.</p>
 <h3 id='carthage' class='heading'>Carthage</h3>
-
 <p>Carthage users can point to this repository and use whichever
-generated framework they&rsquo;d like, <code>Moya</code>, <code>RxMoya</code>, or <code>ReactiveMoya</code>.</p>
-
+generated framework they’d like, <code>Moya</code>, <code>RxMoya</code>, or <code>ReactiveMoya</code>.</p>
 <p>Make the following entry in your Cartfile:</p>
 <pre class="highlight plaintext"><code>github "Moya/Moya"
 </code></pre>
-
 <p>Then run <code>carthage update</code>.</p>
-
-<p>If this is your first time using Carthage in the project, you&rsquo;ll need to go through some additional steps as explained <a href="https://github.com/Carthage/Carthage#adding-frameworks-to-an-application">over at Carthage</a>.</p>
+<p>If this is your first time using Carthage in the project, you’ll need to go through some additional steps as explained <a href="https://github.com/Carthage/Carthage#adding-frameworks-to-an-application">over at Carthage</a>.</p>
 <h3 id='manually' class='heading'>Manually</h3>
-
 <ul>
 <li>Open up Terminal, <code>cd</code> into your top-level project directory, and run the following command <em>if</em> your project is not initialized as a git repository:</li>
 </ul>
 <pre class="highlight shell"><code><span class="nv">$ </span>git init
 </code></pre>
-
 <ul>
 <li>Add Alamofire, Result &amp; Moya as a git <a href="http://git-scm.com/docs/git-submodule">submodule</a> by running the following commands:</li>
 </ul>
@@ -318,46 +294,43 @@ generated framework they&rsquo;d like, <code>Moya</code>, <code>RxMoya</code>, o
 <span class="nv">$ </span>git submodule add https://github.com/antitypical/Result.git
 <span class="nv">$ </span>git submodule add https://github.com/Moya/Moya.git
 </code></pre>
-
 <ul>
-<li>Open the new <code>Alamofire</code> folder, and drag the <code>Alamofire.xcodeproj</code> into the Project Navigator of your application&rsquo;s Xcode project. Do the same with the <code>Result.xcodeproj</code> in the <code>Result</code> folder and <code>Moya.xcodeproj</code> in the <code>Moya</code> folder.</li>
+<li>Open the new <code>Alamofire</code> folder, and drag the <code>Alamofire.xcodeproj</code> into the Project Navigator of your application’s Xcode project. Do the same with the <code>Result.xcodeproj</code> in the <code>Result</code> folder and <code>Moya.xcodeproj</code> in the <code>Moya</code> folder.</li>
 </ul>
-
 <blockquote>
-<p>They should appear nested underneath your application&rsquo;s blue project icon. Whether it is above or below all the other Xcode groups does not matter.</p>
+<p>They should appear nested underneath your application’s blue project icon. Whether it is above or below all the other Xcode groups does not matter.</p>
 </blockquote>
-
 <ul>
 <li>Verify that the deployment targets of the <code>xcodeproj</code>s match that of your application target in the Project Navigator.</li>
-<li>Next, select your application project in the Project Navigator (blue project icon) to navigate to the target configuration window and select the application target under the <q>Targets</q> heading in the sidebar.</li>
-<li>In the tab bar at the top of that window, open the <q>General</q> panel.</li>
-<li>Click on the <code>+</code> button under the <q>Embedded Binaries</q> section.</li>
+<li>Next, select your application project in the Project Navigator (blue project icon) to navigate to the target configuration window and select the application target under the “Targets” heading in the sidebar.</li>
+<li>In the tab bar at the top of that window, open the “General” panel.</li>
+<li>Click on the <code>+</code> button under the “Embedded Binaries” section.</li>
 <li>You will see two different <code>Alamofire.xcodeproj</code> folders each with two different versions of the <code>Alamofire.framework</code> nested inside a <code>Products</code> folder.</li>
 </ul>
-
 <blockquote>
 <p>It does not matter which <code>Products</code> folder you choose from, but it does matter whether you choose the top or bottom <code>Alamofire.framework</code>.</p>
 </blockquote>
-
 <ul>
 <li>Select the top <code>Alamofire.framework</code> for iOS and the bottom one for OS X.</li>
 </ul>
-
 <blockquote>
 <p>You can verify which one you selected by inspecting the build log for your project. The build target for <code>Alamofire</code> will be listed as either <code>Alamofire iOS</code>, <code>Alamofire macOS</code>, <code>Alamofire tvOS</code> or <code>Alamofire watchOS</code>.</p>
 </blockquote>
-
 <ul>
-<li>Click on the <code>+</code> button under <q>Embedded Binaries</q> again and add the build target you need for <code>Result</code>.</li>
-<li><p>Click on the <code>+</code> button again and add the correct build target for <code>Moya</code>.</p></li>
-<li><p>And that&rsquo;s it!</p></li>
+<li>
+<p>Click on the <code>+</code> button under “Embedded Binaries” again and add the build target you need for <code>Result</code>.</p>
+</li>
+<li>
+<p>Click on the <code>+</code> button again and add the correct build target for <code>Moya</code>.</p>
+</li>
+<li>
+<p>And that’s it!</p>
+</li>
 </ul>
-
 <blockquote>
 <p>The three frameworks are automagically added as a target dependency, linked framework and embedded framework in a copy files build phase which is all you need to build on the simulator and a device.</p>
 </blockquote>
 <h2 id='usage' class='heading'>Usage</h2>
-
 <p>After <a href="docs/Examples/Basic.md">some setup</a>, using Moya is really simple. You can access an API like this:</p>
 <pre class="highlight swift"><code><span class="n">provider</span> <span class="o">=</span> <span class="kt">MoyaProvider</span><span class="o">&lt;</span><span class="kt">GitHub</span><span class="o">&gt;</span><span class="p">()</span>
 <span class="n">provider</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="n">zen</span><span class="p">)</span> <span class="p">{</span> <span class="n">result</span> <span class="k">in</span>
@@ -374,29 +347,24 @@ generated framework they&rsquo;d like, <code>Moya</code>, <code>RxMoya</code>, o
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
-
-<p>That&rsquo;s a basic example. Many API requests need parameters. Moya encodes these
+<p>That’s a basic example. Many API requests need parameters. Moya encodes these
 into the enum you use to access the endpoint, like this:</p>
 <pre class="highlight swift"><code><span class="n">provider</span> <span class="o">=</span> <span class="kt">MoyaProvider</span><span class="o">&lt;</span><span class="kt">GitHub</span><span class="o">&gt;</span><span class="p">()</span>
 <span class="n">provider</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="nf">userProfile</span><span class="p">(</span><span class="s">"ashfurrow"</span><span class="p">))</span> <span class="p">{</span> <span class="n">result</span> <span class="k">in</span>
     <span class="c1">// do something with the result</span>
 <span class="p">}</span>
 </code></pre>
-
 <p>No more typos in URLs. No more missing parameter values. No more messing with
 parameter encoding.</p>
-
 <p>For more examples, see the <a href="docs/Examples">documentation</a>.</p>
 <h2 id='reactive-extensions' class='heading'>Reactive Extensions</h2>
-
 <p>Even cooler are the reactive extensions. Moya provides reactive extensions for
 <a href="https://github.com/ReactiveCocoa/ReactiveSwift">ReactiveSwift</a> and
 <a href="https://github.com/ReactiveX/RxSwift">RxSwift</a>.</p>
 <h3 id='reactiveswift' class='heading'>ReactiveSwift</h3>
-
-<p><a href="docs/ReactiveSwift.md"><code>ReactiveSwift</code> extension</a> provides both <code>reactive.request(:callbackQueue:)</code> and 
-<code>reactive.requestWithProgress(:callbackQueue:)</code> methods that immediately return 
-<code>SignalProducer</code>s that you can start, bind, map, or whatever you want to do. 
+<p><a href="docs/ReactiveSwift.md"><code>ReactiveSwift</code> extension</a> provides both <code>reactive.request(:callbackQueue:)</code> and
+<code>reactive.requestWithProgress(:callbackQueue:)</code> methods that immediately return
+<code>SignalProducer</code>s that you can start, bind, map, or whatever you want to do.
 To handle errors, for instance, we could do the following:</p>
 <pre class="highlight swift"><code><span class="n">provider</span> <span class="o">=</span> <span class="kt">MoyaProvider</span><span class="o">&lt;</span><span class="kt">GitHub</span><span class="o">&gt;</span><span class="p">()</span>
 <span class="n">provider</span><span class="o">.</span><span class="n">reactive</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="nf">userProfile</span><span class="p">(</span><span class="s">"ashfurrow"</span><span class="p">))</span><span class="o">.</span><span class="n">start</span> <span class="p">{</span> <span class="n">event</span> <span class="k">in</span>
@@ -411,15 +379,13 @@ To handle errors, for instance, we could do the following:</p>
 <span class="p">}</span>
 </code></pre>
 <h3 id='rxswift' class='heading'>RxSwift</h3>
-
-<p><a href="docs/RxSwift.md"><code>RxSwift</code> extension</a> also provide both <code>rx.request(:callbackQueue:)</code> and 
-<code>rx.requestWithProgress(:callbackQueue:)</code> methods, but return type is 
+<p><a href="docs/RxSwift.md"><code>RxSwift</code> extension</a> also provide both <code>rx.request(:callbackQueue:)</code> and
+<code>rx.requestWithProgress(:callbackQueue:)</code> methods, but return type is
 different for both. In case of a normal <code>rx.request(:callbackQueue)</code>, the
 return type is <code>Single&lt;Response&gt;</code> which emits either single element or an
-error. In case of a <code>rx.requestWithProgress(:callbackQueue:)</code>, the return 
+error. In case of a <code>rx.requestWithProgress(:callbackQueue:)</code>, the return
 type is <code>Observable&lt;ProgressResponse&gt;</code>, since we may get multiple events
 from progress and one last event which is a response.</p>
-
 <p>To handle errors, for instance, we could do the following:</p>
 <pre class="highlight swift"><code><span class="n">provider</span> <span class="o">=</span> <span class="kt">MoyaProvider</span><span class="o">&lt;</span><span class="kt">GitHub</span><span class="o">&gt;</span><span class="p">()</span>
 <span class="n">provider</span><span class="o">.</span><span class="n">rx</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="nf">userProfile</span><span class="p">(</span><span class="s">"ashfurrow"</span><span class="p">))</span><span class="o">.</span><span class="n">subscribe</span> <span class="p">{</span> <span class="n">event</span> <span class="k">in</span>
@@ -431,24 +397,19 @@ from progress and one last event which is a response.</p>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
-
 <p>In addition to the option of using signals instead of callback blocks, there are
 also a series of signal operators for RxSwift and ReactiveSwift that will attempt
 to map the data received from the network response into either an image, some JSON,
-or a string, with <code>mapImage()</code>, <code>mapJSON()</code>, and <code>mapString()</code>, respectively. If the mapping is unsuccessful, you&rsquo;ll get an error on the signal. You also get handy methods
+or a string, with <code>mapImage()</code>, <code>mapJSON()</code>, and <code>mapString()</code>, respectively. If the mapping is unsuccessful, you’ll get an error on the signal. You also get handy methods
 for filtering out certain status codes. This means that you can place your code for
-handling API errors like 400&rsquo;s in the same places as code for handling invalid
+handling API errors like 400’s in the same places as code for handling invalid
 responses.</p>
 <h2 id='community-projects' class='heading'>Community Projects</h2>
-
 <p><a href="https://github.com/Moya/Moya/blob/master/docs/CommunityProjects.md">Moya has a great community around it and some people have created some very helpful extensions.</a></p>
 <h2 id='contributing' class='heading'>Contributing</h2>
-
 <p>Hey! Do you like Moya? Awesome! We could actually really use your help!</p>
-
-<p>Open source isn&rsquo;t just writing code. Moya could use your help with any of the
+<p>Open source isn’t just writing code. Moya could use your help with any of the
 following:</p>
-
 <ul>
 <li>Finding (and reporting!) bugs.</li>
 <li>New feature suggestions.</li>
@@ -458,25 +419,19 @@ following:</p>
 <li>Helping to manage issue priorities.</li>
 <li>Fixing bugs/new features.</li>
 </ul>
-
 <p>If any of that sounds cool to you, send a pull request! After a few
-contributions, we&rsquo;ll add you as an admin to the repo so you can merge pull
+contributions, we’ll add you as an admin to the repo so you can merge pull
 requests and help steer the ship :ship: You can read more details about that <a href="https://github.com/Moya/contributors">in our contributor guidelines</a>.</p>
-
-<p>Moya&rsquo;s community has a tremendous positive energy, and the maintainers are committed to keeping things awesome. Like <a href="https://github.com/CocoaPods/CocoaPods/wiki/Communication-&-Design-Rules">in the CocoaPods community</a>, always assume positive intent; even if a comment sounds mean-spirited, give the person the benefit of the doubt.</p>
-
+<p>Moya’s community has a tremendous positive energy, and the maintainers are committed to keeping things awesome. Like <a href="https://github.com/CocoaPods/CocoaPods/wiki/Communication-&amp;-Design-Rules">in the CocoaPods community</a>, always assume positive intent; even if a comment sounds mean-spirited, give the person the benefit of the doubt.</p>
 <p>Please note that this project is released with a Contributor Code of Conduct. By participating in this project you agree to abide by <a href="https://github.com/Moya/contributors/blob/master/Code%20of%20Conduct.md">its terms</a>.</p>
 <h3 id='adding-new-source-files' class='heading'>Adding new source files</h3>
-
-<p>If you add or remove a source file from Moya, a corresponding change needs to be made to the <code>Moya.xcodeproj</code> project at the root of this repository. This project is used for Carthage. Don&rsquo;t worry, you&rsquo;ll get an automated warning when submitting a pull request if you forget.</p>
+<p>If you add or remove a source file from Moya, a corresponding change needs to be made to the <code>Moya.xcodeproj</code> project at the root of this repository. This project is used for Carthage. Don’t worry, you’ll get an automated warning when submitting a pull request if you forget.</p>
 <h2 id='license' class='heading'>License</h2>
-
 <p>Moya is released under an MIT license. See <a href="License.md">License.md</a> for more information.</p>
-
           </section>
         </section>
         <section id="footer">
-          <p>&copy; YYYY <a class="link" href="https://github.com/Moya/Moya" target="_blank" rel="external">Ash Furrow</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
+          <p>© YYYY <a class="link" href="https://github.com/Moya/Moya target="_blank" rel="external">Ash Furrow</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

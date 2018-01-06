@@ -248,11 +248,9 @@
             <p>A sequence of transformation and cache operations that Siesta applies to server responses. A raw response comes in the
 pipeline, and the appropriate data structure for your app comes out the other end. Apps may optionally cache responses
 in one or more of their intermediate forms along the way.</p>
-
 <p>A pipeline has sequence of <strong>stages</strong>, each of which is uniquely identified by a <code><a href="../Classes/PipelineStageKey.html">PipelineStageKey</a></code>. Apps can create
 custom stages, and customize their order. Each stage has zero or more <code><a href="../Protocols/ResponseTransformer.html">ResponseTransformer</a></code>s, followed by an optional
 <code><a href="../Protocols/EntityCache.html">EntityCache</a></code>.</p>
-
 <p>The pipeline is a part of a <code><a href="../Structs/Configuration.html">Configuration</a></code>, so you can thus customize the pipeline per API or per resource.</p>
 <pre class="highlight swift"><code><span class="n">service</span><span class="o">.</span><span class="n">configure</span> <span class="p">{</span>
   <span class="nv">$0</span><span class="o">.</span><span class="n">pipeline</span><span class="p">[</span><span class="o">.</span><span class="n">parsing</span><span class="p">]</span><span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="kt">SwiftyJSONTransformer</span><span class="p">,</span> <span class="nv">contentTypes</span><span class="p">:</span> <span class="p">[</span><span class="s">"*​/json"</span><span class="p">])</span>
@@ -264,14 +262,11 @@ custom stages, and customize their order. Each stage has zero or more <code><a h
   <span class="kt">Item</span><span class="p">(</span><span class="nv">json</span><span class="p">:</span> <span class="nv">$0</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre>
-
 <p>By default, Siesta pipelines start with parsers for common data types (JSON, text, image) configured at the
 <code><a href="../Classes/PipelineStageKey.html#/s:6Siesta16PipelineStageKeyC7parsingACvZ">PipelineStageKey.parsing</a></code> stage. You can remove these default transformers for individual configurations using calls
 such as <code>clear()</code> and <code>PipelineStage.removeAllTransformers()</code>, or you can disable these default parsers entirely by
 passing <code>useDefaultTransformers: false</code> when creating a <code><a href="../Classes/Service.html">Service</a></code>.</p>
-
 <p>Services do not have any persistent caching by default.</p>
-
           </div>
         </section>
 
@@ -293,7 +288,6 @@ passing <code>useDefaultTransformers: false</code> when creating a <code><a href
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The order in which the pipeline’s stages run. The default order is:</p>
-
 <ol>
 <li><code><a href="../Classes/PipelineStageKey.html#/s:6Siesta16PipelineStageKeyC7rawDataACvZ">PipelineStageKey.rawData</a></code></li>
 <li><code>decoding</code></li>
@@ -301,20 +295,16 @@ passing <code>useDefaultTransformers: false</code> when creating a <code><a href
 <li><code>model</code></li>
 <li><code>cleanup</code></li>
 </ol>
-
 <p>Stage keys do not have semantic significance — they are just arbitrary identifiers — so you are free arbitrarily
 add or reorder stages if you have complex response processing needs.</p>
 <div class="aside aside-note">
-    <p class="aside-title">Note</p>
-    Stages <strong>must</strong> be unique. Adding a duplicate stage key will cause a precondition failure.
-
+<p class="aside-title">Note</p>
+<p>Stages <strong>must</strong> be unique. Adding a duplicate stage key will cause a precondition failure.</p>
 </div>
 <div class="aside aside-note">
-    <p class="aside-title">Note</p>
-    Any stage not present in the order will not run, even if it has transformers and/or cache configured.
-
+<p class="aside-title">Note</p>
+<p>Any stage not present in the order will not run, even if it has transformers and/or cache configured.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -341,7 +331,6 @@ add or reorder stages if you have complex response processing needs.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Retrieves the stage for the given key, or an empty one if none yet exists.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -368,7 +357,6 @@ add or reorder stages if you have complex response processing needs.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Removes all transformers from all stages in the pipeline. Leaves caches intact.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -395,13 +383,11 @@ add or reorder stages if you have complex response processing needs.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Removes all caches from all stages in the pipeline. Leaves transformers intact.</p>
-
 <p>You can use this to prevent sensitive resources from being cached:</p>
 <pre class="highlight swift"><code><span class="n">service</span><span class="o">.</span><span class="nf">configure</span><span class="p">(</span><span class="s">"/secret"</span><span class="p">)</span> <span class="p">{</span>
   <span class="nv">$0</span><span class="o">.</span><span class="n">pipeline</span><span class="o">.</span><span class="nf">removeAllCaches</span><span class="p">()</span>
 <span class="p">}</span>
 </code></pre>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -428,7 +414,6 @@ add or reorder stages if you have complex response processing needs.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Removes all transformers and caches from all stages in the pipeline.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -449,7 +434,7 @@ add or reorder stages if you have complex response processing needs.</p>
       </article>
     </div>
     <section class="footer">
-      <p>© 2016 <a class="link" href="http://bustoutsolutions.com" target="_blank" rel="external">Bust Out Solutions</a> under <a class="link" href="https://github.com/bustoutsolutions/siesta/blob/master/LICENSE" target="_blank" rel="external">open source license</a>.</p>
+      <p>© 2016 <a class="link" href="http://bustoutsolutions.com target="_blank" rel="external">Bust Out Solutions</a> under <a class="link" href="https://github.com/bustoutsolutions/siesta/blob/master/LICENSE target="_blank" rel="external">open source license</a>.</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

@@ -283,12 +283,10 @@
             <p>Creates a url-encoded query string to be set as or appended to any existing URL query string or set as the HTTP
 body of the URL request. Whether the query string is set or appended to any existing URL query string or set as
 the HTTP body depends on the destination of the encoding.</p>
-
 <p>The <code>Content-Type</code> HTTP header field of an encoded request with HTTP body is set to
 <code>application/x-www-form-urlencoded; charset=utf-8</code>. Since there is no published specification for how to encode
 collection types, the convention of appending <code>[]</code> to the key for array values (<code>foo[]=1&amp;foo[]=2</code>), and appending
 the key surrounded by square brackets for nested dictionary values (<code>foo[bar]=baz</code>).</p>
-
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -315,14 +313,12 @@ the key surrounded by square brackets for nested dictionary values (<code>foo[ba
                       <div class="abstract">
                         <p>Defines whether the url-encoded query string is applied to the existing query string or HTTP body of the
 resulting URL request.</p>
-
 <ul>
 <li>methodDependent: Applies encoded query string result to existing query string for <code>GET</code>, <code>HEAD</code> and <code>DELETE</code>
-               requests and sets as the HTTP body for requests with any other HTTP method.</li>
+requests and sets as the HTTP body for requests with any other HTTP method.</li>
 <li>queryString:     Sets or appends encoded query string result to existing query string.</li>
 <li>httpBody:        Sets encoded query string result as the HTTP body of the URL request.</li>
 </ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -363,7 +359,6 @@ resulting URL request.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns a default <code>URLEncoding</code> instance.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -393,7 +388,6 @@ resulting URL request.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns a <code>URLEncoding</code> instance with a <code>.methodDependent</code> destination.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -423,7 +417,6 @@ resulting URL request.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns a <code>URLEncoding</code> instance with a <code>.queryString</code> destination.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -453,7 +446,6 @@ resulting URL request.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns a <code>URLEncoding</code> instance with an <code>.httpBody</code> destination.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -483,7 +475,6 @@ resulting URL request.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The destination defining where the encoded query string is to be applied to the URL request.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -524,7 +515,6 @@ resulting URL request.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Creates a <code>URLEncoding</code> instance using the specified destination.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -589,11 +579,9 @@ resulting URL request.</p>
                       <div class="abstract">
                         <p>Creates a URL request by encoding parameters and applying them onto an existing request.</p>
 <div class="aside aside-throws">
-    <p class="aside-title">Throws</p>
-    <p>An <code>Error</code> if the encoding process encounters an error.</p>
-
+<p class="aside-title">Throws</p>
+<p>An <code>Error</code> if the encoding process encounters an error.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -658,7 +646,6 @@ resulting URL request.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Creates percent-escaped, URL encoded query string components from the given key-value pair using recursion.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -723,18 +710,14 @@ resulting URL request.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns a percent-escaped string following RFC 3986 for a query string key or value.</p>
-
-<p>RFC 3986 states that the following characters are <q>reserved</q> characters.</p>
-
+<p>RFC 3986 states that the following characters are “reserved” characters.</p>
 <ul>
-<li>General Delimiters: <q>:</q>, <q>#</q>, <q>[</q>, <q>]</q>, <q>@</q>, <q>?</q>, <q>/</q></li>
-<li>Sub-Delimiters: <q>!</q>, <q>$</q>, <q>&</q>, <q>&lsquo;</q>, <q>(</q>, <q>)</q>, <q>*</q>, <q>+</q>, <q>,</q>, <q>;</q>, <q>=</q></li>
+<li>General Delimiters: “:”, “#”, “[”, “]”, “@”, “?”, “/”</li>
+<li>Sub-Delimiters: “!”, “$”, “&amp;”, “’”, “(”, “)”, “*”, “+”, “,”, “;”, “=”</li>
 </ul>
-
-<p>In RFC 3986 - Section 3.4, it states that the <q>?</q> and <q>/</q> characters should not be escaped to allow
-query strings to include a URL. Therefore, all <q>reserved</q> characters with the exception of <q>?</q> and <q>/</q>
+<p>In RFC 3986 - Section 3.4, it states that the “?” and “/” characters should not be escaped to allow
+query strings to include a URL. Therefore, all “reserved” characters with the exception of “?” and “/”
 should be percent-escaped in the query string.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -778,7 +761,7 @@ should be percent-escaped in the query string.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; YYYY <a class="link" href="https://nshipster.com/alamofire" target="_blank" rel="external">Alamofire</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
+          <p>© YYYY <a class="link" href="https://nshipster.com/alamofire target="_blank" rel="external">Alamofire</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

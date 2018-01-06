@@ -327,28 +327,22 @@
               </div>
             <p><code>RLMResults</code> is an auto-updating container type in Realm returned from object
 queries. It represents the results of the query in the form of a collection of objects.</p>
-
 <p><code>RLMResults</code> can be queried using the same predicates as <code><a href="../Classes/RLMObject.html">RLMObject</a></code> and <code><a href="../Classes/RLMArray.html">RLMArray</a></code>,
 and you can chain queries to further filter results.</p>
-
 <p><code>RLMResults</code> always reflect the current state of the Realm on the current thread,
 including during write transactions on the current thread. The one exception to
 this is when using <code>for...in</code> fast enumeration, which will always enumerate
 over the objects which matched the query when the enumeration is begun, even if
 some of them are deleted or modified to be excluded by the filter during the
 enumeration.</p>
-
 <p><code>RLMResults</code> are lazily evaluated the first time they are accessed; they only
-run queries when the result of the query is requested. This means that 
-chaining several temporary <code>RLMResults</code> to sort and filter your data does not 
+run queries when the result of the query is requested. This means that
+chaining several temporary <code>RLMResults</code> to sort and filter your data does not
 perform any extra work processing the intermediate state.</p>
-
 <p>Once the results have been evaluated or a notification block has been added,
 the results are eagerly kept up-to-date, with the work done to keep them
 up-to-date done on a background thread whenever possible.</p>
-
 <p><code>RLMResults</code> cannot be directly instantiated.</p>
-
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -374,7 +368,6 @@ up-to-date done on a background thread whenever possible.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The number of objects in the results collection.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -409,7 +402,6 @@ up-to-date done on a background thread whenever possible.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The class name (i.e. type) of the <code><a href="../Classes/RLMObject.html">RLMObject</a></code>s contained in the results collection.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -444,7 +436,6 @@ up-to-date done on a background thread whenever possible.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The Realm which manages this results collection.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -479,10 +470,8 @@ up-to-date done on a background thread whenever possible.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Indicates if the results collection is no longer valid.</p>
-
 <p>The results collection becomes invalid if <code>invalidate</code> is called on the containing <code><a href="../Classes/RLMResults.html#/c:objc(cs)RLMResults(py)realm">realm</a></code>.
 An invalidated results collection can be accessed, but will always be empty.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -528,7 +517,6 @@ An invalidated results collection can be accessed, but will always be empty.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the object at the index specified.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -586,9 +574,7 @@ An invalidated results collection can be accessed, but will always be empty.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the first object in the results collection.</p>
-
 <p>Returns <code>nil</code> if called on an empty results collection.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -627,9 +613,7 @@ An invalidated results collection can be accessed, but will always be empty.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the last object in the results collection.</p>
-
 <p>Returns <code>nil</code> if called on an empty results collection.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -679,9 +663,7 @@ An invalidated results collection can be accessed, but will always be empty.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the index of an object in the results collection.</p>
-
 <p>Returns <code>NSNotFound</code> if the object is not found in the results collection.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -735,7 +717,6 @@ An invalidated results collection can be accessed, but will always be empty.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the index of the first object in the results collection matching the predicate.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -788,7 +769,6 @@ An invalidated results collection can be accessed, but will always be empty.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the index of the first object in the results collection matching the predicate.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -846,7 +826,6 @@ An invalidated results collection can be accessed, but will always be empty.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns all the objects matching the given predicate in the results collection.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -900,7 +879,6 @@ An invalidated results collection can be accessed, but will always be empty.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns all the objects matching the given predicate in the results collection.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -959,7 +937,6 @@ An invalidated results collection can be accessed, but will always be empty.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns a sorted <code>RLMResults</code> from an existing results collection.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1031,7 +1008,6 @@ An invalidated results collection can be accessed, but will always be empty.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns a sorted <code>RLMResults</code> from an existing results collection.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1103,7 +1079,6 @@ An invalidated results collection can be accessed, but will always be empty.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns a sorted <code>RLMResults</code> from an existing results collection.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1173,31 +1148,26 @@ An invalidated results collection can be accessed, but will always be empty.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Registers a block to be called each time the results collection changes.</p>
-
 <p>The block will be asynchronously called with the initial results collection,
 and then called again after each write transaction which changes either any
 of the objects in the results, or which objects are in the results.</p>
-
 <p>The <code>change</code> parameter will be <code>nil</code> the first time the block is called.
 For each call after that, it will contain information about
 which rows in the results collection were added, removed or modified. If a
 write transaction did not modify any objects in the results collection,
 the block is not called at all. See the <code><a href="../Classes/RLMCollectionChange.html">RLMCollectionChange</a></code> documentation for
-information on how the changes are reported and an example of updating a 
+information on how the changes are reported and an example of updating a
 <code>UITableView</code>.</p>
-
 <p>If an error occurs the block will be called with <code>nil</code> for the results
 parameter and a non-<code>nil</code> error. Currently the only errors that can occur are
 when opening the Realm on the background worker thread.</p>
-
 <p>At the time when the block is called, the <code>RLMResults</code> object will be fully
 evaluated and up-to-date, and as long as you do not perform a write transaction
 on the same thread or explicitly call <code><a href="../Classes/RLMRealm.html#/c:objc(cs)RLMRealm(im)refresh">-[RLMRealm refresh]</a></code>, accessing it will
 never perform blocking work.</p>
-
-<p>Notifications are delivered via the standard run loop, and so can&rsquo;t be
+<p>Notifications are delivered via the standard run loop, and so can’t be
 delivered while the run loop is blocked by other activity. When
-notifications can&rsquo;t be delivered instantly, multiple notifications may be
+notifications can’t be delivered instantly, multiple notifications may be
 coalesced into a single notification. This can include the notification
 with the initial results. For example, the following code performs a write
 transaction immediately after adding the notification block, so there is no
@@ -1219,16 +1189,13 @@ the write transaction.</p>
 <span class="p">}];</span>
 <span class="c1">// end of run loop execution context
 </span></code></pre>
-
 <p>You must retain the returned token for as long as you want updates to continue
 to be sent to the block. To stop receiving updates, call <code>-stop</code> on the token.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>This method cannot be called during a write transaction, or when the
-     containing Realm is read-only.</p>
-
+<p class="aside-title">Warning</p>
+<p>This method cannot be called during a write transaction, or when the
+containing Realm is read-only.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1303,11 +1270,9 @@ represented by the results collection.</p>
 <pre class="highlight objective_c"><code><span class="n">NSNumber</span> <span class="o">*</span><span class="n">min</span> <span class="o">=</span> <span class="p">[</span><span class="n">results</span> <span class="nf">minOfProperty</span><span class="p">:</span><span class="s">@"age"</span><span class="p">];</span>
 </code></pre>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>You cannot use this method on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>, <code><a href="../Classes/RLMArray.html">RLMArray</a></code>, and <code>NSData</code> properties.</p>
-
+<p class="aside-title">Warning</p>
+<p>You cannot use this method on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>, <code><a href="../Classes/RLMArray.html">RLMArray</a></code>, and <code>NSData</code> properties.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1335,7 +1300,7 @@ represented by the results collection.</p>
                               <td>
                                 <div>
                                   <p>The property whose minimum value is desired. Only properties of types <code>int</code>, <code>float</code>, <code>double</code>, and
-            <code>NSDate</code> are supported.</p>
+<code>NSDate</code> are supported.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1369,11 +1334,9 @@ represented by the results collection.</p>
 <pre class="highlight objective_c"><code><span class="n">NSNumber</span> <span class="o">*</span><span class="n">max</span> <span class="o">=</span> <span class="p">[</span><span class="n">results</span> <span class="nf">maxOfProperty</span><span class="p">:</span><span class="s">@"age"</span><span class="p">];</span>
 </code></pre>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>You cannot use this method on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>, <code><a href="../Classes/RLMArray.html">RLMArray</a></code>, and <code>NSData</code> properties.</p>
-
+<p class="aside-title">Warning</p>
+<p>You cannot use this method on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>, <code><a href="../Classes/RLMArray.html">RLMArray</a></code>, and <code>NSData</code> properties.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1400,8 +1363,8 @@ represented by the results collection.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The property whose maximum value is desired. Only properties of types <code>int</code>, <code>float</code>, <code>double</code>, and 
-            <code>NSDate</code> are supported.</p>
+                                  <p>The property whose maximum value is desired. Only properties of types <code>int</code>, <code>float</code>, <code>double</code>, and
+<code>NSDate</code> are supported.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1435,11 +1398,9 @@ represented by the results collection.</p>
 <pre class="highlight objective_c"><code><span class="n">NSNumber</span> <span class="o">*</span><span class="n">sum</span> <span class="o">=</span> <span class="p">[</span><span class="n">results</span> <span class="nf">sumOfProperty</span><span class="p">:</span><span class="s">@"age"</span><span class="p">];</span>
 </code></pre>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>You cannot use this method on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>, <code><a href="../Classes/RLMArray.html">RLMArray</a></code>, and <code>NSData</code> properties.</p>
-
+<p class="aside-title">Warning</p>
+<p>You cannot use this method on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>, <code><a href="../Classes/RLMArray.html">RLMArray</a></code>, and <code>NSData</code> properties.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1467,7 +1428,7 @@ represented by the results collection.</p>
                               <td>
                                 <div>
                                   <p>The property whose values should be summed. Only properties of types <code>int</code>, <code>float</code>, and <code>double</code> are
-            supported.</p>
+supported.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1501,11 +1462,9 @@ represented by the results collection.</p>
 <pre class="highlight objective_c"><code><span class="n">NSNumber</span> <span class="o">*</span><span class="n">average</span> <span class="o">=</span> <span class="p">[</span><span class="n">results</span> <span class="nf">averageOfProperty</span><span class="p">:</span><span class="s">@"age"</span><span class="p">];</span>
 </code></pre>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>You cannot use this method on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>, <code><a href="../Classes/RLMArray.html">RLMArray</a></code>, and <code>NSData</code> properties.</p>
-
+<p class="aside-title">Warning</p>
+<p>You cannot use this method on <code><a href="../Classes/RLMObject.html">RLMObject</a></code>, <code><a href="../Classes/RLMArray.html">RLMArray</a></code>, and <code>NSData</code> properties.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1533,7 +1492,7 @@ represented by the results collection.</p>
                               <td>
                                 <div>
                                   <p>The property whose average value should be calculated. Only properties of types <code>int</code>, <code>float</code>, and
-            <code>double</code> are supported.</p>
+<code>double</code> are supported.</p>
                                 </div>
                               </td>
                             </tr>
@@ -1576,7 +1535,6 @@ represented by the results collection.</p>
                       <div class="abstract">
                         <p><code>-[RLMResults init]</code> is not available because <code>RLMResults</code> cannot be created directly.
 <code>RLMResults</code> can be obtained by querying a Realm.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1607,7 +1565,6 @@ represented by the results collection.</p>
                       <div class="abstract">
                         <p><code>+[RLMResults new]</code> is not available because <code>RLMResults</code> cannot be created directly.
 <code>RLMResults</code> can be obtained by querying a Realm.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1628,7 +1585,7 @@ represented by the results collection.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; YYYY <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
+          <p>© YYYY <a class="link" href="https://realm.io target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

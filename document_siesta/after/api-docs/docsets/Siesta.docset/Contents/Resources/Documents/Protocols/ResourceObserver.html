@@ -247,10 +247,8 @@
               </div>
             <p>Something that can observe changes to the state of a <code><a href="../Classes/Resource.html">Resource</a></code>.
 “State” means <code>latestData</code>, <code>latestError</code>, and <code>isLoading</code>.</p>
-
 <p>Any code that wants to display or process a resource’s content should register itself as an observer using
 <code><a href="../Classes/Resource.html#/s:6Siesta8ResourceC11addObserverACXDAA0bD0_XlF">Resource.addObserver(...)</a></code>.</p>
-
           </div>
         </section>
 
@@ -273,7 +271,6 @@
                       <div class="abstract">
                         <p>Called when anything happens that might change the value of the reosurce’s <code>latestData</code>, <code>latestError</code>, or
 <code>isLoading</code> flag. The <code>event</code> explains the reason for the notification.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -304,12 +301,10 @@
                       <div class="abstract">
                         <p>Receive updates on progress at regular intervals while a request is in progress.
 Will <em>always</em> receive a call with a value of 1 when the request completes.</p>
-
                       </div>
                       <h4>Default Implementation</h4>
                       <div class="default_impl abstract">
                         <p>Does nothing.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -341,27 +336,22 @@ Will <em>always</em> receive a call with a value of 1 when the request completes
                         <p>Called when this observer stops observing a resource, if the observer itself still exists.
 Use for making <code><a href="../Classes/Resource.html#/c:@CM@Siesta@objc(cs)BOSResource(im)removeObserversOwnedBy:">Resource.removeObservers(ownedBy:)</a></code> trigger other cleanup.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>This method is <strong>not</strong> called for self-owned observers when the observer itself being deallocated is
+<p class="aside-title">Warning</p>
+<p>This method is <strong>not</strong> called for self-owned observers when the observer itself being deallocated is
 what caused it to stop observing. This is because there is no way for Siesta to know that observer is <em>about</em>
 to be deallocated; it can only check whether the observer is already gone.</p>
-
 <p>For example:</p>
-<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">myObserver</span><span class="p">:</span> <span class="kt">MyObserver</span><span class="p">?</span> <span class="o">=</span> <span class="kt">MyObserver</span><span class="p">()</span>
-<span class="n">resource</span><span class="o">.</span><span class="nf">addObserver</span><span class="p">(</span><span class="n">myObserver</span><span class="o">!</span><span class="p">)</span>  <span class="c1">// myObserver is self-owned, so...</span>
-<span class="n">myObserver</span> <span class="o">=</span> <span class="kc">nil</span>                   <span class="c1">// this deallocates it, but...</span>
-<span class="c1">// ...myObserver never receives stoppedObserving(resource:).</span>
+<pre class="highlight swift"><code>  <span class="k">var</span> <span class="nv">myObserver</span><span class="p">:</span> <span class="kt">MyObserver</span><span class="p">?</span> <span class="o">=</span> <span class="kt">MyObserver</span><span class="p">()</span>
+  <span class="n">resource</span><span class="o">.</span><span class="nf">addObserver</span><span class="p">(</span><span class="n">myObserver</span><span class="o">!</span><span class="p">)</span>  <span class="c1">// myObserver is self-owned, so...</span>
+  <span class="n">myObserver</span> <span class="o">=</span> <span class="kc">nil</span>                   <span class="c1">// this deallocates it, but...</span>
+  <span class="c1">// ...myObserver never receives stoppedObserving(resource:).</span>
 </code></pre>
-
 <p>In the situation above, <code>MyObserver</code> should implement any end-of-lifcycle cleanup using <code>deinit</code>.</p>
-
 </div>
-
                       </div>
                       <h4>Default Implementation</h4>
                       <div class="default_impl abstract">
                         <p>Does nothing.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -392,12 +382,10 @@ to be deallocated; it can only check whether the observer is already gone.</p>
                       <div class="abstract">
                         <p>Allows you to prevent redundant observers from being added to the same resource. If an existing observer
 has an identity equals to a new observer, then <code><a href="../Classes/Resource.html#/s:6Siesta8ResourceC11addObserverACXDAA0bD0_XlF">Resource.addObserver(...)</a></code> has no effect.</p>
-
                       </div>
                       <h4>Default Implementation</h4>
                       <div class="default_impl abstract">
                         <p>True iff self and other are (1) both objects and (2) are the <em>same</em> object.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -418,7 +406,7 @@ has an identity equals to a new observer, then <code><a href="../Classes/Resourc
       </article>
     </div>
     <section class="footer">
-      <p>© 2016 <a class="link" href="http://bustoutsolutions.com" target="_blank" rel="external">Bust Out Solutions</a> under <a class="link" href="https://github.com/bustoutsolutions/siesta/blob/master/LICENSE" target="_blank" rel="external">open source license</a>.</p>
+      <p>© 2016 <a class="link" href="http://bustoutsolutions.com target="_blank" rel="external">Bust Out Solutions</a> under <a class="link" href="https://github.com/bustoutsolutions/siesta/blob/master/LICENSE target="_blank" rel="external">open source license</a>.</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

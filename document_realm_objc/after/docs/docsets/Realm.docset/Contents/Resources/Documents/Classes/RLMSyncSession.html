@@ -325,14 +325,12 @@
 
                 </div>
               </div>
-            <p>An object encapsulating a Realm Object Server <q>session</q>. Sessions represent the
+            <p>An object encapsulating a Realm Object Server “session”. Sessions represent the
 communication between the client (and a local Realm file on disk), and the server
 (and a remote Realm at a given URL stored on a Realm Object Server).</p>
-
 <p>Sessions are always created by the SDK and vended out through various APIs. The
 lifespans of sessions associated with Realms are managed automatically. Session
 objects can be accessed from any thread.</p>
-
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -350,8 +348,7 @@ objects can be accessed from any thread.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The session&rsquo;s current state.</p>
-
+                        <p>The session’s current state.</p>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -386,7 +383,6 @@ objects can be accessed from any thread.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The Realm Object Server URL of the remote Realm this session corresponds to.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -421,7 +417,6 @@ objects can be accessed from any thread.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The user that owns this session.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -457,7 +452,6 @@ objects can be accessed from any thread.</p>
                       <div class="abstract">
                         <p>If the session is valid, return a sync configuration that can be used to open the Realm
 associated with this session.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -492,18 +486,14 @@ associated with this session.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Register a progress notification block.</p>
-
 <p>Multiple blocks can be registered with the same session at once. Each block
 will be invoked on a side queue devoted to progress notifications.</p>
-
 <p>If the session has already received progress information from the
 synchronization subsystem, the block will be called immediately. Otherwise, it
 will be called as soon as progress information becomes available.</p>
-
 <p>The token returned by this method must be retained as long as progress
 notifications are desired, and the <code>-stop</code> method should be called on it
 when notifications are no longer needed and before the token is destroyed.</p>
-
 <p>If no token is returned, the notification block will never be called again.
 There are a number of reasons this might be true. If the session has previously
 experienced a fatal error it will not accept progress notification blocks. If
@@ -512,11 +502,9 @@ mode but there is no additional progress to report (for example, the number
 of transferrable bytes and transferred bytes are equal), the block will not be
 called again.</p>
 <div class="aside aside-see">
-    <p class="aside-title">See</p>
-    <p><code><a href="../Enums/RLMSyncProgressDirection.html">RLMSyncProgressDirection</a></code>, <code><a href="../Enums/RLMSyncProgress.html">RLMSyncProgress</a></code>, <code><a href="../Type Definitions.html#/c:RLMSyncSession.h@T@RLMProgressNotificationBlock">RLMProgressNotificationBlock</a></code>, <code><a href="../Classes.html#/c:objc(cs)RLMProgressNotificationToken">RLMProgressNotificationToken</a></code></p>
-
+<p class="aside-title">See</p>
+<p><code><a href="../Enums/RLMSyncProgressDirection.html">RLMSyncProgressDirection</a></code>, <code><a href="../Enums/RLMSyncProgress.html">RLMSyncProgress</a></code>, <code><a href="../Type Definitions.html#/c:RLMSyncSession.h@T@RLMProgressNotificationBlock">RLMProgressNotificationBlock</a></code>, <code><a href="../Classes.html#/c:objc(cs)RLMProgressNotificationToken">RLMProgressNotificationToken</a></code></p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -592,7 +580,7 @@ called again.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; YYYY <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
+          <p>© YYYY <a class="link" href="https://realm.io target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

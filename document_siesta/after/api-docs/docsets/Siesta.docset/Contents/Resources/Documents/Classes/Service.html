@@ -247,19 +247,15 @@
               </div>
             <p>A set of logically connected RESTful resources. Resources within a service share caching, configuration, and a
 “same URL → same resource” uniqueness guarantee.</p>
-
 <p>You will typically create a separate instance of <code>Service</code> for each REST API you use. You can either subclass
 <code>Service</code> or encapsulte it inside a wrapper. Regardless, to reap the benefits of Siesta, you’ll want to ensure that
 all the observers of an API share a single instance.</p>
-
 <p>You can optionally specify a <code>baseURL</code>, which allows you to get endpoints by path: <code>service.resource(&quot;/foo&quot;)</code>.
 Specifying a <code>baseURL</code> does <em>not</em> limit the service only to subpaths of that URL. Its one and only purpose is to be
 the starting point for <code>resource(_:)</code>.</p>
-
 <p>Note that <code>baseURL</code> is only a convenience, and is optional.
 If you want to group multiple base URLs in a single <code>Service</code> instance, use <code>resource(baseURL:path:)</code>.
 If you want to feed your service arbitrary URLs with no common root, use <code>resource(absoluteURL:)</code>.</p>
-
           </div>
         </section>
 
@@ -281,7 +277,6 @@ If you want to feed your service arbitrary URLs with no common root, use <code>r
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The root URL of the API. If nil, then <code><a href="../Classes/Service.html#/c:@M@Siesta@objc(cs)BOSService(im)resource:">resource(_:)</a></code> will only accept absolute URLs.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -308,7 +303,6 @@ If you want to feed your service arbitrary URLs with no common root, use <code>r
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Creates a new service for the given API.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -333,7 +327,8 @@ If you want to feed your service arbitrary URLs with no common root, use <code>r
                               </td>
                               <td>
                                 <div>
-                                  <p>The URL underneath which the API exposes its endpoints. If nil, there is no base URL, and thus you must use
+                                  <p>
+The URL underneath which the API exposes its endpoints. If nil, there is no base URL, and thus you must use
 only <code><a href="../Classes/Service.html#/s:6Siesta7ServiceC8resourceAA8ResourceCAA14URLConvertible_pSg11absoluteURL_tF">resource(absoluteURL:)</a></code> and <code><a href="../Classes/Service.html#/s:6Siesta7ServiceC8resourceAA8ResourceCAA14URLConvertible_pSg7baseURL_SS4pathtF">resource(baseURL:path:)</a></code> to acquire resources.</p>
                                 </div>
                               </td>
@@ -346,7 +341,8 @@ only <code><a href="../Classes/Service.html#/s:6Siesta7ServiceC8resourceAA8Resou
                               </td>
                               <td>
                                 <div>
-                                  <p>If true, include handling for JSON, text, and images. If false, leave all responses as <code>Data</code> (unless you
+                                  <p>
+If true, include handling for JSON, text, and images. If false, leave all responses as <code>Data</code> (unless you
 add your own <code><a href="../Protocols/ResponseTransformer.html">ResponseTransformer</a></code> using <code><a href="../Classes/Service.html#/s:6Siesta7ServiceC9configureyAA31ConfigurationPatternConvertible_p_SayAA13RequestMethodOGSg14requestMethodsSSSg11descriptionyAA0D0Vzc10configurertF">configure(...)</a></code>).</p>
                                 </div>
                               </td>
@@ -359,7 +355,8 @@ add your own <code><a href="../Protocols/ResponseTransformer.html">ResponseTrans
                               </td>
                               <td>
                                 <div>
-                                  <p>The handler to use for networking. The default is <code>URLSession</code> with ephemeral session configuration. You can
+                                  <p>
+The handler to use for networking. The default is <code>URLSession</code> with ephemeral session configuration. You can
 pass an <code>URLSession</code>, <code>URLSessionConfiguration</code>, or <code>Alamofire.Manager</code> to use an existing provider with
 custom configuration. You can also use your own networking library of choice by implementing <code><a href="../Protocols/NetworkingProvider.html">NetworkingProvider</a></code>.</p>
                                 </div>
@@ -385,23 +382,19 @@ custom configuration. You can also use your own networking library of choice by 
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the unique resource with the given path appended to the path component of <code><a href="../Classes/Service.html#/c:@M@Siesta@objc(cs)BOSService(py)baseURL">baseURL</a></code>.</p>
-
 <p>A leading slash is optional, and has no effect:</p>
 <pre class="highlight swift"><code><span class="n">service</span><span class="o">.</span><span class="nf">resource</span><span class="p">(</span><span class="s">"users"</span><span class="p">)</span>   <span class="c1">// same</span>
 <span class="n">service</span><span class="o">.</span><span class="nf">resource</span><span class="p">(</span><span class="s">"/users"</span><span class="p">)</span>  <span class="c1">// thing</span>
 </code></pre>
 <div class="aside aside-note">
-    <p class="aside-title">Note</p>
-    <p>The <code>path</code> parameter is simply appended to <code><a href="../Classes/Service.html#/c:@M@Siesta@objc(cs)BOSService(py)baseURL">baseURL</a></code>’s path, and is <em>never</em> interpreted as a URL. Strings
+<p class="aside-title">Note</p>
+<p>
+The <code>path</code> parameter is simply appended to <code><a href="../Classes/Service.html#/c:@M@Siesta@objc(cs)BOSService(py)baseURL">baseURL</a></code>’s path, and is <em>never</em> interpreted as a URL. Strings
 such as <code>..</code>, <code>//</code>, <code>?</code>, and <code>https:</code> have no special meaning; they go directly into the resulting
 resource’s path, with escaping if necessary.</p>
-
 <p>If you want to pass an absolute URL, use <code><a href="../Classes/Service.html#/s:6Siesta7ServiceC8resourceAA8ResourceCAA14URLConvertible_pSg11absoluteURL_tF">resource(absoluteURL:)</a></code>.</p>
-
 <p>If you want to pass a relative URL to be resolved against <code><a href="../Classes/Service.html#/c:@M@Siesta@objc(cs)BOSService(py)baseURL">baseURL</a></code>, use <code>resource(&quot;/&quot;).relative(relativeURL)</code>.</p>
-
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -429,15 +422,12 @@ resource’s path, with escaping if necessary.</p>
                       <div class="abstract">
                         <p>Returns the unique resource with the given path appended to <code>customBaseURL</code>’s path, ignoring the service’s
 <code><a href="../Classes/Service.html#/c:@M@Siesta@objc(cs)BOSService(py)baseURL">baseURL</a></code> property.</p>
-
 <p>As with <code><a href="../Classes/Service.html#/c:@M@Siesta@objc(cs)BOSService(im)resource:">resource(_:)</a></code>:</p>
-
 <ul>
 <li>leading slashes on <code>path</code> are optional and have no effect, and</li>
 <li><code>path</code> is <em>always</em> escaped if necessary so that it is part of the URL’s path, and is never interpreted as a
 query string or a relative URL.</li>
 </ul>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -464,18 +454,15 @@ query string or a relative URL.</li>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the unique resource with the given URL, ignoring <code><a href="../Classes/Service.html#/c:@M@Siesta@objc(cs)BOSService(py)baseURL">baseURL</a></code>.</p>
-
 <p>This method will <em>always</em> return the same instance of <code><a href="../Classes/Resource.html">Resource</a></code> for the same URL within
 the context of a <code>Service</code> as long as anyone retains a reference to that resource.
 Unreferenced resources remain in memory (with their cached data) until a low memory event
 occurs, at which point they are summarily evicted.</p>
 <div class="aside aside-note">
-    <p class="aside-title">Note</p>
-    This method always returns a <code><a href="../Classes/Resource.html">Resource</a></code>, and does not throw errors. If <code>url</code> is nil (likely because it
-    came from a malformed URL string), this method returns a resource whose requests always fail.
-
+<p class="aside-title">Note</p>
+<p>This method always returns a <code><a href="../Classes/Resource.html">Resource</a></code>, and does not throw errors. If <code>url</code> is nil (likely because it
+came from a malformed URL string), this method returns a resource whose requests always fail.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -513,7 +500,6 @@ occurs, at which point they are summarily evicted.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Applies configuration to resources whose URLs match a given pattern.</p>
-
 <p>Examples:</p>
 <pre class="highlight swift"><code><span class="n">configure</span> <span class="p">{</span> <span class="nv">$0</span><span class="o">.</span><span class="n">expirationTime</span> <span class="o">=</span> <span class="mi">10</span> <span class="p">}</span>  <span class="c1">// global default</span>
 
@@ -526,35 +512,28 @@ occurs, at which point they are summarily evicted.</p>
   <span class="nv">$0</span><span class="o">.</span><span class="n">pipeline</span><span class="p">[</span><span class="o">.</span><span class="n">model</span><span class="p">]</span><span class="o">.</span><span class="nf">cacheUsing</span><span class="p">(</span><span class="n">userProfileCache</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre>
-
 <p>Configuration closures apply to any resource they match, in the order they were added, whether global or not. That
 means that you will usually want to add your global configuration first, then resource-specific configuration.</p>
-
 <p>If you want to provide global configuration, or if you need more fine-grained URL matching, use the other flavor
 of this method that takes a predicate as its first argument.</p>
-<div class="aside aside-see-also">
-    <p class="aside-title">See also</p>
-    <p><code><a href="../Classes/Service.html#/s:6Siesta7ServiceC9configureySb10Foundation3URLVc14whenURLMatches_SayAA13RequestMethodOGSg14requestMethodsSSSg11descriptionyAA13ConfigurationVzc10configurertF">configure(whenURLMatches:requestMethods:description:configurer:)</a></code>
+<div class="aside aside-seealso">
+<p class="aside-title">Seealso</p>
+<p><code><a href="../Classes/Service.html#/s:6Siesta7ServiceC9configureySb10Foundation3URLVc14whenURLMatches_SayAA13RequestMethodOGSg14requestMethodsSSSg11descriptionyAA13ConfigurationVzc10configurertF">configure(whenURLMatches:requestMethods:description:configurer:)</a></code>
 for global config and more fine-grained matching</p>
-
 </div>
-<div class="aside aside-see-also">
-    <p class="aside-title">See also</p>
-    <p><code><a href="../Classes/Service.html#/c:@M@Siesta@objc(cs)BOSService(im)invalidateConfiguration">invalidateConfiguration()</a></code></p>
-
+<div class="aside aside-seealso">
+<p class="aside-title">Seealso</p>
+<p><code><a href="../Classes/Service.html#/c:@M@Siesta@objc(cs)BOSService(im)invalidateConfiguration">invalidateConfiguration()</a></code></p>
 </div>
-<div class="aside aside-see-also">
-    <p class="aside-title">See also</p>
-    <p>For more details about the rules of pattern matching:</p>
-
+<div class="aside aside-seealso">
+<p class="aside-title">Seealso</p>
+<p>For more details about the rules of pattern matching:</p>
 <ul>
 <li><code><a href="../Extensions/String.html#/s:SS6SiestaE20configurationPatternSb10Foundation3URLVcAA7ServiceC3for_tF">String.configurationPattern(for:)</a></code></li>
 <li><code><a href="../Classes/Resource.html#/c:@CM@Siesta@objc(cs)BOSResource(im)configurationPatternFor:">Resource.configurationPattern(for:)</a></code></li>
 <li><code><a href="../Extensions/NSRegularExpression.html#/c:@CM@Siesta@@objc(cs)NSRegularExpression(im)configurationPatternFor:">NSRegularExpression.configurationPattern(for:)</a></code></li>
 </ul>
-
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -580,7 +559,8 @@ for global config and more fine-grained matching</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>Selects the subset of resources to which this configuration applies. You can pass a <code>String</code>, <code><a href="../Classes/Resource.html">Resource</a></code>, or
+                                  <p>
+Selects the subset of resources to which this configuration applies. You can pass a <code>String</code>, <code><a href="../Classes/Resource.html">Resource</a></code>, or
 <code>NSRegularExpression</code> for the <code>pattern</code> argument — or write your own custom implementation of
 <code><a href="../Protocols/ConfigurationPatternConvertible.html">ConfigurationPatternConvertible</a></code>.</p>
                                 </div>
@@ -594,7 +574,8 @@ for global config and more fine-grained matching</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>An optional description of this piece of configuration, for logging and debugging purposes.</p>
+                                  <p>
+An optional description of this piece of configuration, for logging and debugging purposes.</p>
                                 </div>
                               </td>
                             </tr>
@@ -606,7 +587,8 @@ for global config and more fine-grained matching</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>A closure that receives a mutable <code><a href="../Structs/Configuration.html">Configuration</a></code>, referenced as <code>$0</code>, which it may modify as it
+                                  <p>
+A closure that receives a mutable <code><a href="../Structs/Configuration.html">Configuration</a></code>, referenced as <code>$0</code>, which it may modify as it
 sees fit. This closure will be called whenever Siesta needs to generate or refresh configuration. You should
 not rely on it being called at any particular time, and should avoid making it cause side effects.</p>
                                 </div>
@@ -633,20 +615,16 @@ not rely on it being called at any particular time, and should avoid making it c
                       <div class="abstract">
                         <p>Applies configuration to resources whose URL matches an arbitrary predicate.
 Use this if the wildcards in other flavor of <code><a href="../Classes/Service.html#/s:6Siesta7ServiceC9configureyAA31ConfigurationPatternConvertible_p_SayAA13RequestMethodOGSg14requestMethodsSSSg11descriptionyAA0D0Vzc10configurertF">configure(...)</a></code> aren’t robust enough.</p>
-
 <p>If you do not supply a predicate, then the configuration applies globally to all resources in this service.</p>
-<div class="aside aside-see-also">
-    <p class="aside-title">See also</p>
-    <p><code><a href="../Classes/Service.html#/s:6Siesta7ServiceC9configureyAA31ConfigurationPatternConvertible_p_SayAA13RequestMethodOGSg14requestMethodsSSSg11descriptionyAA0D0Vzc10configurertF">configure(_:requestMethods:description:configurer:)</a></code>
+<div class="aside aside-seealso">
+<p class="aside-title">Seealso</p>
+<p><code><a href="../Classes/Service.html#/s:6Siesta7ServiceC9configureyAA31ConfigurationPatternConvertible_p_SayAA13RequestMethodOGSg14requestMethodsSSSg11descriptionyAA0D0Vzc10configurertF">configure(_:requestMethods:description:configurer:)</a></code>
 for pattern-based matching, and for details about the parameters.</p>
-
 </div>
-<div class="aside aside-see-also">
-    <p class="aside-title">See also</p>
-    <p><code><a href="../Classes/Service.html#/c:@M@Siesta@objc(cs)BOSService(im)invalidateConfiguration">invalidateConfiguration()</a></code></p>
-
+<div class="aside aside-seealso">
+<p class="aside-title">Seealso</p>
+<p><code><a href="../Classes/Service.html#/c:@M@Siesta@objc(cs)BOSService(im)invalidateConfiguration">invalidateConfiguration()</a></code></p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -672,7 +650,8 @@ for pattern-based matching, and for details about the parameters.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>A predicate that matches absolute URLs of resources. The default is a predicate that matches anything.</p>
+                                  <p>
+A predicate that matches absolute URLs of resources. The default is a predicate that matches anything.</p>
                                 </div>
                               </td>
                             </tr>
@@ -697,36 +676,30 @@ for pattern-based matching, and for details about the parameters.</p>
                       <div class="abstract">
                         <p>Transforms responses by passing their content through the given closure. This is a shortcut for adding a
 <code><a href="../Structs/ResponseContentTransformer.html">ResponseContentTransformer</a></code> to the <code><a href="../Structs/Configuration.html#/s:6Siesta13ConfigurationV8pipelineAA8PipelineVv">Configuration.pipeline</a></code>.</p>
-
 <p>Useful for transformers that create model objects. For example:</p>
 <pre class="highlight swift"><code><span class="nf">configureTransformer</span><span class="p">(</span><span class="s">"/foo/​*"</span><span class="p">)</span> <span class="p">{</span>
   <span class="kt">FooModel</span><span class="p">(</span><span class="nv">json</span><span class="p">:</span> <span class="nv">$0</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre>
-
 <p>Siesta checks that the incoming <code><a href="../Structs/Entity.html#/s:6Siesta6EntityV7contentxv">Entity.content</a></code> matches the type of the closure’s <code>content</code> parameter. In the
 example code above, if the <code>json</code> parameter of <code>FooModel.init</code> takes a <code>Dictionary</code>, but the transformer pipeline
 at that point has produced a <code>String</code>, then the transformer outputs a failure response.</p>
-
 <p>You can use this behavior to configure a service to refuse all server responses not of a specific type by passing
 a transformer that passes the content through unmodified, but requires a specific type:</p>
 <pre class="highlight swift"><code><span class="n">service</span><span class="o">.</span><span class="nf">configureTransformer</span><span class="p">(</span><span class="s">"**"</span><span class="p">)</span> <span class="p">{</span>
   <span class="nv">$0</span><span class="o">.</span><span class="n">content</span> <span class="k">as</span> <span class="kt">JSONConvertible</span>
 <span class="p">}</span>
 </code></pre>
-<div class="aside aside-see-also">
-    <p class="aside-title">See also</p>
-    <code><a href="../Classes/Service.html#/s:6Siesta7ServiceC9configureyAA31ConfigurationPatternConvertible_p_SayAA13RequestMethodOGSg14requestMethodsSSSg11descriptionyAA0D0Vzc10configurertF">configure(_:requestMethods:description:configurer:)</a></code>
-for more into about the parameters and configuration pattern matching.
-
+<div class="aside aside-seealso">
+<p class="aside-title">Seealso</p>
+<p><code><a href="../Classes/Service.html#/s:6Siesta7ServiceC9configureyAA31ConfigurationPatternConvertible_p_SayAA13RequestMethodOGSg14requestMethodsSSSg11descriptionyAA0D0Vzc10configurertF">configure(_:requestMethods:description:configurer:)</a></code>
+for more into about the parameters and configuration pattern matching.</p>
 </div>
-<div class="aside aside-see-also">
-    <p class="aside-title">See also</p>
-    <code><a href="../Structs/ResponseContentTransformer.html">ResponseContentTransformer</a></code>
-for more robust transformation options.
-
+<div class="aside aside-seealso">
+<p class="aside-title">Seealso</p>
+<p><code><a href="../Structs/ResponseContentTransformer.html">ResponseContentTransformer</a></code>
+for more robust transformation options.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -761,17 +734,13 @@ for more robust transformation options.
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Signals that all resources need to recompute their configuration next time they need it.</p>
-
 <p>Because the <code><a href="../Classes/Service.html#/s:6Siesta7ServiceC9configureyAA31ConfigurationPatternConvertible_p_SayAA13RequestMethodOGSg14requestMethodsSSSg11descriptionyAA0D0Vzc10configurertF">configure(...)</a></code> methods accept an arbitrary closure, it is possible that the results of
 that closure could change over time. However, resources cache their configuration after it is computed. Therefore,
 if you do anything that would change the result of a configuration closure, you must call
 <code>invalidateConfiguration()</code> in order for the changes to take effect.</p>
-
 <p><em>《insert your functional programming purist rant here if you so desire》</em></p>
-
 <p>Note that you do <em>not</em> need to call this method after calling any of the <code><a href="../Classes/Service.html#/s:6Siesta7ServiceC9configureyAA31ConfigurationPatternConvertible_p_SayAA13RequestMethodOGSg14requestMethodsSSSg11descriptionyAA0D0Vzc10configurertF">configure(...)</a></code> methods.
 You only need to call it if one of the previously passed closures will now behave differently.</p>
-
 <p>For example, to make a header track the value of a modifiable property:</p>
 <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">flavor</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span>
   <span class="k">didSet</span> <span class="p">{</span> <span class="nf">invalidateConfiguration</span><span class="p">()</span> <span class="p">}</span>
@@ -784,11 +753,9 @@ You only need to call it if one of the previously passed closures will now behav
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
-
 <p>Note that this method does <em>not</em> immediately recompute all existing configurations. This is an inexpensive call.
 Configurations are computed lazily, and the (still relatively low) performance impact of recomputation is spread
 over subsequent resource interactions.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -826,9 +793,7 @@ over subsequent resource interactions.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Wipes the state of all this service’s resources. Typically used to handle logout.</p>
-
 <p>Applies to resources matching the predicate, or all resources by default.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -858,7 +823,6 @@ over subsequent resource interactions.</p>
 <pre class="highlight swift"><code><span class="n">service</span><span class="o">.</span><span class="nf">wipeResources</span><span class="p">(</span><span class="nv">matching</span><span class="p">:</span> <span class="s">"/secure/​**"</span><span class="p">)</span>
 <span class="n">service</span><span class="o">.</span><span class="nf">wipeResources</span><span class="p">(</span><span class="nv">matching</span><span class="p">:</span> <span class="n">profileResource</span><span class="p">)</span>
 </code></pre>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -885,9 +849,7 @@ over subsequent resource interactions.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Wipes the state of a subset of this service’s resources, matching based on URLs (instead of <code><a href="../Classes/Resource.html">Resource</a></code> instances).</p>
-
 <p>Useful for making shared predicates that you can pass to both <code><a href="../Classes/Service.html#/s:6Siesta7ServiceC9configureyAA31ConfigurationPatternConvertible_p_SayAA13RequestMethodOGSg14requestMethodsSSSg11descriptionyAA0D0Vzc10configurertF">configure(...)</a></code> and this method.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -927,7 +889,6 @@ over subsequent resource interactions.</p>
                         <p>Soft limit on the number of resources cached in memory. If the internal cache size exceeds this limit, Siesta
 flushes all unused resources. Note that any resources still in use — i.e. retained outside of Siesta — will remain
 in the cache, no matter how many there are.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -948,7 +909,7 @@ in the cache, no matter how many there are.</p>
       </article>
     </div>
     <section class="footer">
-      <p>© 2016 <a class="link" href="http://bustoutsolutions.com" target="_blank" rel="external">Bust Out Solutions</a> under <a class="link" href="https://github.com/bustoutsolutions/siesta/blob/master/LICENSE" target="_blank" rel="external">open source license</a>.</p>
+      <p>© 2016 <a class="link" href="http://bustoutsolutions.com target="_blank" rel="external">Bust Out Solutions</a> under <a class="link" href="https://github.com/bustoutsolutions/siesta/blob/master/LICENSE target="_blank" rel="external">open source license</a>.</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

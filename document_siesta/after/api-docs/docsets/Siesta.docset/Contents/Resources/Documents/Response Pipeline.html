@@ -262,11 +262,9 @@
                         <p>A sequence of transformation and cache operations that Siesta applies to server responses. A raw response comes in the
 pipeline, and the appropriate data structure for your app comes out the other end. Apps may optionally cache responses
 in one or more of their intermediate forms along the way.</p>
-
 <p>A pipeline has sequence of <strong>stages</strong>, each of which is uniquely identified by a <code><a href="Classes/PipelineStageKey.html">PipelineStageKey</a></code>. Apps can create
 custom stages, and customize their order. Each stage has zero or more <code><a href="Protocols/ResponseTransformer.html">ResponseTransformer</a></code>s, followed by an optional
 <code><a href="Protocols/EntityCache.html">EntityCache</a></code>.</p>
-
 <p>The pipeline is a part of a <code><a href="Structs/Configuration.html">Configuration</a></code>, so you can thus customize the pipeline per API or per resource.</p>
 <pre class="highlight swift"><code><span class="n">service</span><span class="o">.</span><span class="n">configure</span> <span class="p">{</span>
   <span class="nv">$0</span><span class="o">.</span><span class="n">pipeline</span><span class="p">[</span><span class="o">.</span><span class="n">parsing</span><span class="p">]</span><span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="kt">SwiftyJSONTransformer</span><span class="p">,</span> <span class="nv">contentTypes</span><span class="p">:</span> <span class="p">[</span><span class="s">"*​/json"</span><span class="p">])</span>
@@ -278,14 +276,11 @@ custom stages, and customize their order. Each stage has zero or more <code><a h
   <span class="kt">Item</span><span class="p">(</span><span class="nv">json</span><span class="p">:</span> <span class="nv">$0</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre>
-
 <p>By default, Siesta pipelines start with parsers for common data types (JSON, text, image) configured at the
 <code><a href="Classes/PipelineStageKey.html#/s:6Siesta16PipelineStageKeyC7parsingACvZ">PipelineStageKey.parsing</a></code> stage. You can remove these default transformers for individual configurations using calls
 such as <code>clear()</code> and <code>PipelineStage.removeAllTransformers()</code>, or you can disable these default parsers entirely by
 passing <code>useDefaultTransformers: false</code> when creating a <code><a href="Classes/Service.html">Service</a></code>.</p>
-
 <p>Services do not have any persistent caching by default.</p>
-
                         <a href="Structs/Pipeline.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -313,18 +308,23 @@ passing <code>useDefaultTransformers: false</code> when creating a <code><a href
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A logical grouping of transformers and a cache.</p>
-
 <p>Why create separate stages?</p>
-<li>To be able to append, replace, or remove some transformations independently of others, e.g. override the model
-transform without disabling JSON parsing.</li>
-<li>To cache entities at any intermediate stage of processing.</li>
-<li><p>To maintain multiple caches.</p></li>
 <div class="aside aside-see">
-    <p class="aside-title">See</p>
-    <p><code><a href="Structs/Pipeline.html">Pipeline</a></code></p>
-
+<p class="aside-title">See</p>
+<p><code><a href="Structs/Pipeline.html">Pipeline</a></code></p>
 </div>
-
+<ul>
+<li>
+<p>To be able to append, replace, or remove some transformations independently of others, e.g. override the model
+transform without disabling JSON parsing.</p>
+</li>
+<li>
+<p>To cache entities at any intermediate stage of processing.</p>
+</li>
+<li>
+<p>To maintain multiple caches.</p>
+</li>
+</ul>
                         <a href="Structs/PipelineStage.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -353,11 +353,9 @@ transform without disabling JSON parsing.</li>
                       <div class="abstract">
                         <p>An unique identifier for a <code><a href="Structs/PipelineStage.html">PipelineStage</a></code> within a <code><a href="Structs/Pipeline.html">Pipeline</a></code>. Transformers and stages have no intrinsic notion of
 identity or equality, so these keys are the only way to alter transformers after they’re configured.</p>
-
 <p>Stage keys are arbitrary, and have no intrinsic meaning. The descriptions of the default stages are for human
 comprehensibility, and Siesta does not enforce them in any way (e.g. it does not prevent you from configuring the
 <code>rawData</code> stage to output something other than <code>Data</code>).</p>
-
 <p>Because this is not an enum, you can add custom stages:</p>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">PipelineStageKey</span> <span class="p">{</span>
   <span class="kd">static</span> <span class="k">let</span>
@@ -371,7 +369,6 @@ comprehensibility, and Siesta does not enforce them in any way (e.g. it does not
     <span class="nv">$0</span><span class="o">.</span><span class="n">pipeline</span><span class="o">.</span><span class="n">order</span> <span class="o">=</span> <span class="p">[</span><span class="o">.</span><span class="n">rawData</span><span class="p">,</span> <span class="o">.</span><span class="n">munging</span><span class="p">,</span> <span class="o">.</span><span class="n">twiddling</span><span class="p">,</span> <span class="o">.</span><span class="n">cleanup</span><span class="p">]</span>
 <span class="p">}</span>
 </code></pre>
-
                         <a href="Classes/PipelineStageKey.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -405,13 +402,11 @@ comprehensibility, and Siesta does not enforce them in any way (e.g. it does not
                         <p>Transforms a response from a less parsed form (e.g. <code>Data</code>) to a more parsed data structure. Responses pass through
 a chain of transformers before being sent to response hooks or observers.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    Transformers run in a GCD background queue, and <strong>must be thread-safe</strong>. You’re in the clear if your
-       transformer touches only its input parameters, and those parameters are value types or otherwise
-       exclusively owned.
-
+<p class="aside-title">Warning</p>
+<p>Transformers run in a GCD background queue, and <strong>must be thread-safe</strong>. You’re in the clear if your
+transformer touches only its input parameters, and those parameters are value types or otherwise
+exclusively owned.</p>
 </div>
-
                         <a href="Protocols/ResponseTransformer.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -451,11 +446,8 @@ a chain of transformers before being sent to response hooks or observers.</p>
                       <div class="abstract">
                         <p>A simplified <code><a href="Protocols/ResponseTransformer.html">ResponseTransformer</a></code> that deals only with the content of the response entity, and does not touch the
 surrounding metadata.</p>
-
 <p>If <code>processEntity(_:)</code> throws or returns nil, the output is an error.</p>
-
 <p>If the input entity’s content does not match the <code>InputContentType</code>, the response is an error.</p>
-
                         <a href="Structs/ResponseContentTransformer.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -484,16 +476,13 @@ surrounding metadata.</p>
                       <div class="abstract">
                         <p>Action to take when actual input type at runtime does not match expected input type declared in code.</p>
 <div class="aside aside-see">
-    <p class="aside-title">See</p>
-    <code><a href="Structs/ResponseContentTransformer.html#/s:6Siesta26ResponseContentTransformerVACyxq_GAA23InputTypeMismatchActionO02onefG0_Sb15transformErrorsq_SgAA6EntityVyxGKc9processortcfc">ResponseContentTransformer.init(...)</a></code>
-
+<p class="aside-title">See</p>
+<p><code><a href="Structs/ResponseContentTransformer.html#/s:6Siesta26ResponseContentTransformerVACyxq_GAA23InputTypeMismatchActionO02onefG0_Sb15transformErrorsq_SgAA6EntityVyxGKc9processortcfc">ResponseContentTransformer.init(...)</a></code></p>
 </div>
 <div class="aside aside-see">
-    <p class="aside-title">See</p>
-    <code><a href="Classes/Service.html#/s:6Siesta7ServiceC20configureTransformeryAA31ConfigurationPatternConvertible_p_SayAA13RequestMethodOGSg14requestMethodsAA16PipelineStageKeyC02atM0AA0lM0V14MutationActionO6actionAA017InputTypeMismatchQ0O02onstU0Sb15transformErrorsSSSg11descriptionq_SgAA6EntityVyxGKc16contentTransformtr0_lF">Service.configureTransformer(...)</a></code>
-
+<p class="aside-title">See</p>
+<p><code><a href="Classes/Service.html#/s:6Siesta7ServiceC20configureTransformeryAA31ConfigurationPatternConvertible_p_SayAA13RequestMethodOGSg14requestMethodsAA16PipelineStageKeyC02atM0AA0lM0V14MutationActionO6actionAA017InputTypeMismatchQ0O02onstU0Sb15transformErrorsSSSg11descriptionq_SgAA6EntityVyxGKc16contentTransformtr0_lF">Service.configureTransformer(...)</a></code></p>
 </div>
-
                         <a href="Enums/InputTypeMismatchAction.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -532,7 +521,6 @@ surrounding metadata.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Parses <code>Data</code> content as JSON, outputting either a dictionary or an array.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -559,7 +547,6 @@ surrounding metadata.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Parses <code>Data</code> content as text, using the encoding specified in the content type, or ISO-8859-1 by default.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -586,7 +573,6 @@ surrounding metadata.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Parses <code>Data</code> content as an image, yielding a <code>UIImage</code>.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -607,7 +593,7 @@ surrounding metadata.</p>
       </article>
     </div>
     <section class="footer">
-      <p>© 2016 <a class="link" href="http://bustoutsolutions.com" target="_blank" rel="external">Bust Out Solutions</a> under <a class="link" href="https://github.com/bustoutsolutions/siesta/blob/master/LICENSE" target="_blank" rel="external">open source license</a>.</p>
+      <p>© 2016 <a class="link" href="http://bustoutsolutions.com target="_blank" rel="external">Bust Out Solutions</a> under <a class="link" href="https://github.com/bustoutsolutions/siesta/blob/master/LICENSE target="_blank" rel="external">open source license</a>.</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

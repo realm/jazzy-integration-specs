@@ -175,6 +175,9 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Other Functions.html#/s:17MiscJazzyFeatures9functionES2bF">functionE(_:)</a>
               </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Other Functions.html#/s:17MiscJazzyFeatures9functionFyyF">functionF()</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -199,7 +202,6 @@
                 </div>
               </div>
             <p>A class to demonstrate miscellaneous markdown formatting behaviors</p>
-
           </div>
         </section>
 
@@ -221,61 +223,165 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Blank line not required before:</p>
-
 <ul>
 <li>lists,</li>
 </ul>
-
-<p>&hellip;code fence blocks:</p>
+<p>…code fence blocks:</p>
 <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">aVar</span> <span class="o">=</span> <span class="mi">2</span>
 </code></pre>
-
-<p>&hellip;or html blocks:</p>
-
+<p>…or html blocks:</p>
 <div>
 No *markdown formatting*
 </div>
-
 <p>Callouts are lists too.</p>
 <div class="aside aside-note">
-    <p class="aside-title">Note</p>
-    <p>So no blank line needed before this one.</p>
-
+<p class="aside-title">Note</p>
+<p>So no blank line needed before this one.</p>
 <p>Second paragraph of the note.</p>
-
 </div>
-
+<h3 id='redcarpet-behaviors-preserved-for-compatibility' class='heading'>Redcarpet behaviors, preserved for compatibility</h3>
 <p>However:</p>
-
 <ul>
-<li>Still need a blank line before a code fence
-inside a list item of a <q>tight list</q></li>
-</ul>
-<pre class="highlight swift"><code>  <span class="k">var</span> <span class="nv">aVar</span> <span class="o">=</span> <span class="mi">3</span>
+<li>
+<p>Still need a blank line before a code fence
+inside a list item of a “tight list”</p>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">aVar</span> <span class="o">=</span> <span class="mi">3</span>
 </code></pre>
-
-<ul>
-<li><q>tight</q> is when no blank between <em>this</em> bullet and the
-end of the previous bullet&rsquo;s content.</li>
+</li>
+<li>
+<p>“tight” is when no blank between <em>this</em> bullet and the
+end of the previous bullet’s content.</p>
+</li>
 </ul>
-
-<p>But if you use a <q>loose list</q></p>
-
+<p>But if you use a “loose list”</p>
 <ul>
-<li><p>&hellip;then&hellip;</p>
+<li>
+<p>…then…</p>
 <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">aVar</span> <span class="o">=</span> <span class="mi">4</span>
-</code></pre></li>
-<li><p>&hellip;then you can skip the blank line before the code block.</p>
-
-<p>Simple.</p></li>
+</code></pre>
+</li>
+<li>
+<p>…then you can skip the blank line before the code block.</p>
+<p>Simple.</p>
+</li>
 </ul>
-
+<h3 id='commonmarker-behaviors' class='heading'>Commonmarker behaviors</h3>
+<ul>
+<li>With commonmarker there’s no need for blank lines:<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">aVar</span> <span class="o">=</span> <span class="mi">5</span>
+</code></pre>
+</li>
+<li>…and no need to worry about list tightness.</li>
+</ul>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">linespacing</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17MiscJazzyFeatures0A8MarkdownC9linebreakyyF"></a>
+                    <a name="//apple_ref/swift/Method/linebreak()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17MiscJazzyFeatures0A8MarkdownC9linebreakyyF">linebreak()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Hard linebreaks via a backslash <br />
+or two spaces<br />
+at the end of the line.</p>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">linebreak</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17MiscJazzyFeatures0A8MarkdownC5listsyyF"></a>
+                    <a name="//apple_ref/swift/Method/lists()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17MiscJazzyFeatures0A8MarkdownC5listsyyF">lists()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <ul>
+<li>Changing the markdown bullet symbol</li>
+</ul>
+<ul>
+<li>Causes a new list to start</li>
+<li>Item 2</li>
+</ul>
+<ul>
+<li>List 3</li>
+</ul>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">lists</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:17MiscJazzyFeatures0A8MarkdownC11listNestingyyF"></a>
+                    <a name="//apple_ref/swift/Method/listNesting()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:17MiscJazzyFeatures0A8MarkdownC11listNestingyyF">listNesting()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Lists</p>
+<ul>
+<li>Indent
+<ul>
+<li>With two spaces
+<ul>
+<li>As deep as you like
+<ul>
+<li>Which is seldom practical</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">listNesting</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -290,7 +396,7 @@ end of the previous bullet&rsquo;s content.</li>
       </article>
     </div>
     <section class="footer">
-      <p>&copy; YYYY <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
+      <p>© YYYY <a class="link" href="https://github.com/realm/jazzy target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

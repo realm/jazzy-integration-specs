@@ -246,23 +246,18 @@
                 </div>
               </div>
             <p>A strategy for saving entities between runs of the app. Allows apps to:</p>
-
 <ul>
 <li>launch with the UI in a valid and populated (though possibly stale) state,</li>
 <li>recover from low memory situations with fewer reissued network requests, and</li>
 <li>work offline.</li>
 </ul>
-
 <p>Siesta uses any HTTP request caching provided by the networking layer (e.g. <code>URLCache</code>). Why another type of
 caching, then? Because <code>URLCache</code> has a subtle but significant mismatch with the use cases above:</p>
-
 <ul>
 <li>The purpose of HTTP caching is to <em>prevent</em> network requests, but what we need is a way to show old data <em>while
 issuing new requests</em>. This is the real deal-killer.</li>
 </ul>
-
 <p>Additionally, but less crucially:</p>
-
 <ul>
 <li>HTTP caching is <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec13.html">complex</a>, and was designed around a set of
 goals relating to static assets and shared proxy caches — goals that look very different from reinflating Siesta
@@ -272,20 +267,16 @@ exhibit the behavior we want; the logic involved is far more tangled and brittle
 <li>HTTP caching does not preserve Siesta’s timestamps, which thwarts the staleness logic.</li>
 <li>HTTP caching stores raw responses; storing parsed responses offers the opportunity for faster app launch.</li>
 </ul>
-
 <p>Siesta currently does not include any implementations of <code>EntityCache</code>, but a future version will.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>Siesta calls <code>EntityCache</code> methods on a GCD background queue, so your implementation <strong>must be
-       thread-safe</strong>.</p>
-
+<p class="aside-title">Warning</p>
+<p>Siesta calls <code>EntityCache</code> methods on a GCD background queue, so your implementation <strong>must be
+thread-safe</strong>.</p>
 </div>
-<div class="aside aside-see-also">
-    <p class="aside-title">See also</p>
-    <p><code><a href="../Structs/PipelineStage.html#/s:6Siesta13PipelineStageV10cacheUsingyxAA11EntityCacheRzlF">PipelineStage.cacheUsing(_:)</a></code></p>
-
+<div class="aside aside-seealso">
+<p class="aside-title">Seealso</p>
+<p><code><a href="../Structs/PipelineStage.html#/s:6Siesta13PipelineStageV10cacheUsingyxAA11EntityCacheRzlF">PipelineStage.cacheUsing(_:)</a></code></p>
 </div>
-
           </div>
         </section>
 
@@ -308,7 +299,6 @@ exhibit the behavior we want; the logic involved is far more tangled and brittle
                       <div class="abstract">
                         <p>The type this cache uses to look up cache entries. The structure of keys is entirely up to the cache, and is
 opaque to Siesta.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -335,20 +325,16 @@ opaque to Siesta.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Provides the key appropriate to this cache for the given resource.</p>
-
 <p>A cache may opt out of handling the given resource by returning nil.</p>
-
 <p>This method is called for both cache writes <em>and</em> for cache reads. The <code>resource</code> therefore may not have
 any content. Implementations will almost always examine <code>resource.url</code>. (Cache keys should be <em>at least</em> as unique
 as URLs except in very unusual circumstances.) Implementations may also want to examine <code>resource.configuration</code>,
 for example to take authentication into account.</p>
 <div class="aside aside-note">
-    <p class="aside-title">Note</p>
-    This method is always called on the <strong>main thread</strong>. However, the key it returns will be passed repeatedly
-    across threads. Siesta therefore strongly recommends making <code><a href="../Protocols/EntityCache.html#/s:6Siesta11EntityCacheP3Key">Key</a></code> a value type, i.e. a struct.
-
+<p class="aside-title">Note</p>
+<p>This method is always called on the <strong>main thread</strong>. However, the key it returns will be passed repeatedly
+across threads. Siesta therefore strongly recommends making <code><a href="../Protocols/EntityCache.html#/s:6Siesta11EntityCacheP3Key">Key</a></code> a value type, i.e. a struct.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -375,16 +361,13 @@ for example to take authentication into account.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Return the entity associated with the given key, or nil if it is not in the cache.</p>
-
 <p>If this method returns an entity, it does <em>not</em> pass through the transformer pipeline. Implementations should
 return the entity as if already fully parsed and transformed — with the same type of <code>entity.content</code> that was
 originally sent to <code><a href="../Protocols/EntityCache.html#/s:6Siesta11EntityCacheP05writeB0yAA0B0VyypG_3KeyQz03forE0tF">writeEntity(...)</a></code>.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    This method may be called on a background thread. Make sure your implementation is threadsafe.
-
+<p class="aside-title">Warning</p>
+<p>This method may be called on a background thread. Make sure your implementation is threadsafe.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -413,21 +396,16 @@ originally sent to <code><a href="../Protocols/EntityCache.html#/s:6Siesta11Enti
                         <p>Store the given entity in the cache, associated with the given key. The key’s format is arbitrary, and internal
 to Siesta. (OK, it’s just the resource’s URL, but you should pretend you don’t know that in your implementation.
 Cache implementations should treat the <code>forKey</code> parameter as an opaque value.)</p>
-
 <p>This method receives entities <em>after</em> they have been through the transformer pipeline. The <code>entity.content</code> will
 be a parsed object, not raw data.</p>
-
 <p>Implementations are under no obligation to actually perform the write. This method can — and should — examine the
 type of the entity’s <code>content</code> and/or its header values, and ignore it if it is not encodable.</p>
-
 <p>Note that this method does not receive a URL as input; if you need to limit caching to specific resources, use
 Siesta’s configuration mechanism to control which resources are cacheable.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    The method may be called on a background thread. Make sure your implementation is threadsafe.
-
+<p class="aside-title">Warning</p>
+<p>The method may be called on a background thread. Make sure your implementation is threadsafe.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -457,15 +435,12 @@ Siesta’s configuration mechanism to control which resources are cacheable.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Update the timestamp of the entity for the given key. If there is no such cache entry, do nothing.</p>
-
                       </div>
                       <h4>Default Implementation</h4>
                       <div class="default_impl abstract">
                         <p>Reads the entity from the cache, updates its timestamp, then writes it back.</p>
-
 <p>While this default implementation always gives the correct behavior, cache implementations may choose to override
 it for performance reasons.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -493,7 +468,6 @@ it for performance reasons.</p>
                       <div class="abstract">
                         <p>Remove any entities cached for the given key. After a call to <code>removeEntity(forKey:)</code>, subsequent calls to
 <code><a href="../Protocols/EntityCache.html#/s:6Siesta11EntityCacheP04readB0AA0B0VyypGSg3KeyQz03forE0_tF">readEntity(forKey:)</a></code> for the same key <strong>must</strong> return nil until the next call to <code><a href="../Protocols/EntityCache.html#/s:6Siesta11EntityCacheP05writeB0yAA0B0VyypG_3KeyQz03forE0tF">writeEntity(_:forKey:)</a></code>.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -523,12 +497,10 @@ it for performance reasons.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the GCD queue on which this cache implementation will do its work.</p>
-
                       </div>
                       <h4>Default Implementation</h4>
                       <div class="default_impl abstract">
                         <p>Returns a concurrent queue with priority <code>QOS_CLASS_USER_INITIATED</code>.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -549,7 +521,7 @@ it for performance reasons.</p>
       </article>
     </div>
     <section class="footer">
-      <p>© 2016 <a class="link" href="http://bustoutsolutions.com" target="_blank" rel="external">Bust Out Solutions</a> under <a class="link" href="https://github.com/bustoutsolutions/siesta/blob/master/LICENSE" target="_blank" rel="external">open source license</a>.</p>
+      <p>© 2016 <a class="link" href="http://bustoutsolutions.com target="_blank" rel="external">Bust Out Solutions</a> under <a class="link" href="https://github.com/bustoutsolutions/siesta/blob/master/LICENSE target="_blank" rel="external">open source license</a>.</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

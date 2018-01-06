@@ -273,7 +273,6 @@
           <section class="section">
             <h1>Classes</h1>
             <p>The following classes are available globally.</p>
-
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -291,25 +290,20 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A <code>Realm</code> instance (also referred to as <q>a Realm</q>) represents a Realm database.</p>
-
+                        <p>A <code>Realm</code> instance (also referred to as “a Realm”) represents a Realm database.</p>
 <p>Realms can either be stored on disk (see <code>init(path:)</code>) or in memory (see <code>Configuration</code>).</p>
-
 <p><code>Realm</code> instances are cached internally, and constructing equivalent <code>Realm</code> objects (for example, by using the same
 path or identifier) produces limited overhead.</p>
-
 <p>If you specifically want to ensure a <code>Realm</code> instance is destroyed (for example, if you wish to open a Realm, check
 some property, and then possibly delete the Realm file and re-open it), place the code which uses the Realm within an
 <code>autoreleasepool {}</code> and ensure you have no other strong references to it.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <code>Realm</code> instances are not thread safe and cannot be shared across threads or dispatch queues. You must
+<p class="aside-title">Warning</p>
+<p><code>Realm</code> instances are not thread safe and cannot be shared across threads or dispatch queues. You must
 construct a new instance for each thread in which a Realm will be accessed. For dispatch queues, this means
 that you must construct a new instance in each block which is dispatched, as a queue is not guaranteed to
-run all of its blocks on the same thread.
-
+run all of its blocks on the same thread.</p>
 </div>
-
                         <a href="Classes/Realm.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -345,17 +339,13 @@ run all of its blocks on the same thread.
                       <div class="abstract">
                         <p><code>LinkingObjects</code> is an auto-updating container type. It represents zero or more objects that are linked to its owning
 model object through a property relationship.</p>
-
 <p><code>LinkingObjects</code> can be queried with the same predicates as <code><a href="Classes/List.html">List&lt;T&gt;</a></code> and <code><a href="Classes/Results.html">Results&lt;T&gt;</a></code>.</p>
-
 <p><code>LinkingObjects</code> always reflects the current state of the Realm on the current thread, including during write
 transactions on the current thread. The one exception to this is when using <code>for...in</code> enumeration, which will always
 enumerate over the linking objects that were present when the enumeration is begun, even if some of them are deleted or
 modified to no longer link to the target object during the enumeration.</p>
-
 <p><code>LinkingObjects</code> can only be used as a property on <code><a href="Classes/Object.html">Object</a></code> models. Properties of this type must be declared as <code>let</code>
 and cannot be <code>dynamic</code>.</p>
-
                         <a href="Classes/LinkingObjects.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -390,16 +380,11 @@ and cannot be <code>dynamic</code>.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p><code>List</code> is the container type in Realm used to define to-many relationships.</p>
-
-<p>Like Swift&rsquo;s <code>Array</code>, <code>List</code> is a generic type that is parameterized on the type of <code><a href="Classes/Object.html">Object</a></code> it stores.</p>
-
-<p>Unlike Swift&rsquo;s native collections, <code>List</code>s are reference types, and are only immutable if the Realm that manages them
+<p>Like Swift’s <code>Array</code>, <code>List</code> is a generic type that is parameterized on the type of <code><a href="Classes/Object.html">Object</a></code> it stores.</p>
+<p>Unlike Swift’s native collections, <code>List</code>s are reference types, and are only immutable if the Realm that manages them
 is opened as read-only.</p>
-
 <p>Lists can be filtered and sorted with the same predicates as <code><a href="Classes/Results.html">Results&lt;T&gt;</a></code>.</p>
-
 <p>Properties of <code>List</code> type defined on <code><a href="Classes/Object.html">Object</a></code> subclasses must be declared as <code>let</code> and cannot be <code>dynamic</code>.</p>
-
                         <a href="Classes/List.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -434,11 +419,9 @@ is opened as read-only.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p><code>Migration</code> instances encapsulate information intended to facilitate a schema migration.</p>
-
 <p>A <code>Migration</code> instance is passed into a user-defined <code><a href="Typealiases.html#/s:10RealmSwift14MigrationBlocka">MigrationBlock</a></code> block when updating the version of a Realm. This
 instance provides access to the old and new database schemas, the objects in the Realm, and provides functionality for
 modifying the Realm during the migration.</p>
-
                         <a href="Classes/Migration.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -473,7 +456,6 @@ modifying the Realm during the migration.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p><code>Object</code> is a class used to define Realm model objects.</p>
-
 <p>In Realm you define your model classes by subclassing <code>Object</code> and adding properties to be managed.
 You then instantiate and use your custom subclasses instead of using the <code>Object</code> class directly.</p>
 <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">Dog</span><span class="p">:</span> <span class="kt">Object</span> <span class="p">{</span>
@@ -483,7 +465,6 @@ You then instantiate and use your custom subclasses instead of using the <code>O
 <span class="p">}</span>
 </code></pre>
 <h3 id='supported-property-types' class='heading'>Supported property types</h3>
-
 <ul>
 <li><code>String</code>, <code>NSString</code></li>
 <li><code>Int</code></li>
@@ -497,23 +478,17 @@ You then instantiate and use your custom subclasses instead of using the <code>O
 <li><code>Object</code> subclasses, to model many-to-one relationships</li>
 <li><code><a href="Classes/List.html">List&lt;T&gt;</a></code>, to model many-to-many relationships</li>
 </ul>
-
 <p><code>String</code>, <code>NSString</code>, <code>Date</code>, <code>NSDate</code>, <code>Data</code>, <code>NSData</code> and <code>Object</code> subclass properties can be declared as optional.
 <code>Int</code>, <code>Int8</code>, <code>Int16</code>, <code>Int32</code>, <code>Int64</code>, <code>Float</code>, <code>Double</code>, <code>Bool</code>, and <code><a href="Classes/List.html">List</a></code> properties cannot. To store an optional
 number, use <code><a href="Classes/RealmOptional.html">RealmOptional&lt;Int&gt;</a></code>, <code><a href="Classes/RealmOptional.html">RealmOptional&lt;Float&gt;</a></code>, <code><a href="Classes/RealmOptional.html">RealmOptional&lt;Double&gt;</a></code>, or <code><a href="Classes/RealmOptional.html">RealmOptional&lt;Bool&gt;</a></code> instead,
 which wraps an optional numeric value.</p>
-
 <p>All property types except for <code><a href="Classes/List.html">List</a></code> and <code><a href="Classes/RealmOptional.html">RealmOptional</a></code> <em>must</em> be declared as <code>dynamic var</code>. <code><a href="Classes/List.html">List</a></code> and
 <code><a href="Classes/RealmOptional.html">RealmOptional</a></code> properties must be declared as non-dynamic <code>let</code> properties. Swift <code>lazy</code> properties are not allowed.</p>
-
 <p>Note that none of the restrictions listed above apply to properties that are configured to be ignored by Realm.</p>
 <h3 id='querying' class='heading'>Querying</h3>
-
 <p>You can retrieve all objects of a given type from a Realm by calling the <code>objects(_:)</code> instance method.</p>
 <h3 id='relationships' class='heading'>Relationships</h3>
-
 <p>See our <a href="http://realm.io/docs/cocoa">Cocoa guide</a> for more details.</p>
-
                         <a href="Classes/Object.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -548,11 +523,8 @@ which wraps an optional numeric value.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>This class represents Realm model object schemas.</p>
-
-<p>When using Realm, <code>ObjectSchema</code> instances allow performing migrations and introspecting the database&rsquo;s schema.</p>
-
+<p>When using Realm, <code>ObjectSchema</code> instances allow performing migrations and introspecting the database’s schema.</p>
 <p>Object schemas map to tables in the core database.</p>
-
                         <a href="Classes/ObjectSchema.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -586,11 +558,9 @@ which wraps an optional numeric value.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A <code>RealmOptional</code> instance represents an optional value for types that can&rsquo;t be directly declared as <code>dynamic</code> in Swift,
+                        <p>A <code>RealmOptional</code> instance represents an optional value for types that can’t be directly declared as <code>dynamic</code> in Swift,
 such as <code>Int</code>, <code>Float</code>, <code>Double</code>, and <code>Bool</code>.</p>
-
-<p>To change the underlying value stored by a <code>RealmOptional</code> instance, mutate the instance&rsquo;s <code>value</code> property.</p>
-
+<p>To change the underlying value stored by a <code>RealmOptional</code> instance, mutate the instance’s <code>value</code> property.</p>
                         <a href="Classes/RealmOptional.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -626,11 +596,8 @@ such as <code>Int</code>, <code>Float</code>, <code>Double</code>, and <code>Boo
                       <div class="abstract">
                         <p><code>Property</code> instances represent properties managed by a Realm in the context of an object schema. Such properties may be
 persisted to a Realm file or computed from other data in the Realm.</p>
-
-<p>When using Realm, property instances allow performing migrations and introspecting the database&rsquo;s schema.</p>
-
+<p>When using Realm, property instances allow performing migrations and introspecting the database’s schema.</p>
 <p>Property instances map to columns in the core database.</p>
-
                         <a href="Classes/Property.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -665,7 +632,6 @@ persisted to a Realm file or computed from other data in the Realm.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>An iterator for a <code><a href="Protocols/RealmCollection.html">RealmCollection</a></code> instance.</p>
-
                         <a href="Classes/RLMIterator.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -696,9 +662,7 @@ persisted to a Realm file or computed from other data in the Realm.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A type-erased <code><a href="Protocols/RealmCollection.html">RealmCollection</a></code>.</p>
-
 <p>Instances of <code><a href="Protocols/RealmCollection.html">RealmCollection</a></code> forward operations to an opaque underlying collection having the same <code>Element</code> type.</p>
-
                         <a href="Classes/AnyRealmCollection.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -740,24 +704,18 @@ persisted to a Realm file or computed from other data in the Realm.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p><code>Results</code> is an auto-updating container type in Realm returned from object queries.</p>
-
 <p><code>Results</code> can be queried with the same predicates as <code><a href="Classes/List.html">List&lt;T&gt;</a></code>, and you can chain queries to further filter query
 results.</p>
-
 <p><code>Results</code> always reflect the current state of the Realm on the current thread, including during write transactions on
 the current thread. The one exception to this is when using <code>for...in</code> enumeration, which will always enumerate over
 the objects which matched the query when the enumeration is begun, even if some of them are deleted or modified to be
 excluded by the filter during the enumeration.</p>
-
 <p><code>Results</code> are lazily evaluated the first time they are accessed; they only run queries when the result of the query is
 requested. This means that chaining several temporary <code>Results</code> to sort and filter your data does not perform any
 unnecessary work processing the intermediate state.</p>
-
 <p>Once the results have been evaluated or a notification block has been added, the results are eagerly kept up-to-date,
 with the work done to keep them up-to-date done on a background thread whenever possible.</p>
-
 <p>Results instances cannot be directly instantiated.</p>
-
                         <a href="Classes/Results.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -792,11 +750,8 @@ with the work done to keep them up-to-date done on a background thread whenever 
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p><code>Schema</code> instances represent collections of model object schemas managed by a Realm.</p>
-
-<p>When using Realm, <code>Schema</code> instances allow performing migrations and introspecting the database&rsquo;s schema.</p>
-
+<p>When using Realm, <code>Schema</code> instances allow performing migrations and introspecting the database’s schema.</p>
 <p>Schemas map to collections of tables in the core database.</p>
-
                         <a href="Classes/Schema.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -831,14 +786,11 @@ with the work done to keep them up-to-date done on a background thread whenever 
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>This model is used to reflect permissions.</p>
-
-<p>It should be used in conjunction with a <code><a href="Typealiases.html#/s:10RealmSwift8SyncUsera">SyncUser</a></code>&lsquo;s Permission Realm.
+<p>It should be used in conjunction with a <code><a href="Typealiases.html#/s:10RealmSwift8SyncUsera">SyncUser</a></code>’s Permission Realm.
 You can only read this Realm. Use the objects in Management Realm to
 make request for modifications of permissions.</p>
-
 <p>See <a href="https://realm.io/docs/realm-object-server/#permissions">https://realm.io/docs/realm-object-server/#permissions</a> for general
 documentation.</p>
-
                         <a href="Classes/SyncPermission.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -868,13 +820,10 @@ documentation.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>This model is used for requesting changes to a Realm&rsquo;s permissions.</p>
-
-<p>It should be used in conjunction with a <code><a href="Typealiases.html#/s:10RealmSwift8SyncUsera">SyncUser</a></code>&lsquo;s Management Realm.</p>
-
+                        <p>This model is used for requesting changes to a Realm’s permissions.</p>
+<p>It should be used in conjunction with a <code><a href="Typealiases.html#/s:10RealmSwift8SyncUsera">SyncUser</a></code>’s Management Realm.</p>
 <p>See <a href="https://realm.io/docs/realm-object-server/#permissions">https://realm.io/docs/realm-object-server/#permissions</a> for general
 documentation.</p>
-
                         <a href="Classes/SyncPermissionChange.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -905,12 +854,9 @@ documentation.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>This model is used for offering permission changes to other users.</p>
-
-<p>It should be used in conjunction with a <code><a href="Typealiases.html#/s:10RealmSwift8SyncUsera">SyncUser</a></code>&lsquo;s Management Realm.</p>
-
+<p>It should be used in conjunction with a <code><a href="Typealiases.html#/s:10RealmSwift8SyncUsera">SyncUser</a></code>’s Management Realm.</p>
 <p>See <a href="https://realm.io/docs/realm-object-server/#permissions">https://realm.io/docs/realm-object-server/#permissions</a> for general
 documentation.</p>
-
                         <a href="Classes/SyncPermissionOffer.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -941,14 +887,11 @@ documentation.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>This model is used to apply permission changes defined in the permission offer
-object represented by the specified token, which was created by another user&rsquo;s
+object represented by the specified token, which was created by another user’s
 <code><a href="Classes/SyncPermissionOffer.html">SyncPermissionOffer</a></code> object.</p>
-
-<p>It should be used in conjunction with a <code><a href="Typealiases.html#/s:10RealmSwift8SyncUsera">SyncUser</a></code>&lsquo;s Management Realm.</p>
-
+<p>It should be used in conjunction with a <code><a href="Typealiases.html#/s:10RealmSwift8SyncUsera">SyncUser</a></code>’s Management Realm.</p>
 <p>See <a href="https://realm.io/docs/realm-object-server/#permissions">https://realm.io/docs/realm-object-server/#permissions</a> for general
 documentation.</p>
-
                         <a href="Classes/SyncPermissionOfferResponse.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -984,33 +927,27 @@ documentation.</p>
                       <div class="abstract">
                         <p>An object intended to be passed between threads containing a thread-safe reference to its
 thread-confined object.</p>
-
 <p>To resolve a thread-safe reference on a target Realm on a different thread, pass to
 <code><a href="Classes/Realm.html#/s:10RealmSwift0A0C7resolvexSgAA19ThreadSafeReferenceCyxGAA0D8ConfinedRzlF">Realm.resolve(_:)</a></code>.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>A <code>ThreadSafeReference</code> object must be resolved at most once.
-       Failing to resolve a <code>ThreadSafeReference</code> will result in the source version of the
-       Realm being pinned until the reference is deallocated.</p>
-
+<p class="aside-title">Warning</p>
+<p>A <code>ThreadSafeReference</code> object must be resolved at most once.
+Failing to resolve a <code>ThreadSafeReference</code> will result in the source version of the
+Realm being pinned until the reference is deallocated.</p>
 </div>
 <div class="aside aside-note">
-    <p class="aside-title">Note</p>
-    <p>Prefer short-lived <code>ThreadSafeReference</code>s as the data for the version of the source Realm
-    will be retained until all references have been resolved or deallocated.</p>
-
+<p class="aside-title">Note</p>
+<p>Prefer short-lived <code>ThreadSafeReference</code>s as the data for the version of the source Realm
+will be retained until all references have been resolved or deallocated.</p>
 </div>
 <div class="aside aside-see">
-    <p class="aside-title">See</p>
-    <p><code><a href="Protocols/ThreadConfined.html">ThreadConfined</a></code></p>
-
+<p class="aside-title">See</p>
+<p><code><a href="Protocols/ThreadConfined.html">ThreadConfined</a></code></p>
 </div>
 <div class="aside aside-see">
-    <p class="aside-title">See</p>
-    <p><code><a href="Classes/Realm.html#/s:10RealmSwift0A0C7resolvexSgAA19ThreadSafeReferenceCyxGAA0D8ConfinedRzlF">Realm.resolve(_:)</a></code></p>
-
+<p class="aside-title">See</p>
+<p><code><a href="Classes/Realm.html#/s:10RealmSwift0A0C7resolvexSgAA19ThreadSafeReferenceCyxGAA0D8ConfinedRzlF">Realm.resolve(_:)</a></code></p>
 </div>
-
                         <a href="Classes/ThreadSafeReference.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -1032,7 +969,7 @@ thread-confined object.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; YYYY <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
+          <p>© YYYY <a class="link" href="https://realm.io target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

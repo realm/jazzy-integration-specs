@@ -280,7 +280,6 @@
                 </div>
               </div>
             <p><code>Object</code> is a class used to define Realm model objects.</p>
-
 <p>In Realm you define your model classes by subclassing <code>Object</code> and adding properties to be managed.
 You then instantiate and use your custom subclasses instead of using the <code>Object</code> class directly.</p>
 <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">Dog</span><span class="p">:</span> <span class="kt">Object</span> <span class="p">{</span>
@@ -290,7 +289,6 @@ You then instantiate and use your custom subclasses instead of using the <code>O
 <span class="p">}</span>
 </code></pre>
 <h3 id='supported-property-types' class='heading'>Supported property types</h3>
-
 <ul>
 <li><code>String</code>, <code>NSString</code></li>
 <li><code>Int</code></li>
@@ -304,23 +302,17 @@ You then instantiate and use your custom subclasses instead of using the <code>O
 <li><code>Object</code> subclasses, to model many-to-one relationships</li>
 <li><code><a href="../Classes/List.html">List&lt;T&gt;</a></code>, to model many-to-many relationships</li>
 </ul>
-
 <p><code>String</code>, <code>NSString</code>, <code>Date</code>, <code>NSDate</code>, <code>Data</code>, <code>NSData</code> and <code>Object</code> subclass properties can be declared as optional.
 <code>Int</code>, <code>Int8</code>, <code>Int16</code>, <code>Int32</code>, <code>Int64</code>, <code>Float</code>, <code>Double</code>, <code>Bool</code>, and <code><a href="../Classes/List.html">List</a></code> properties cannot. To store an optional
 number, use <code><a href="../Classes/RealmOptional.html">RealmOptional&lt;Int&gt;</a></code>, <code><a href="../Classes/RealmOptional.html">RealmOptional&lt;Float&gt;</a></code>, <code><a href="../Classes/RealmOptional.html">RealmOptional&lt;Double&gt;</a></code>, or <code><a href="../Classes/RealmOptional.html">RealmOptional&lt;Bool&gt;</a></code> instead,
 which wraps an optional numeric value.</p>
-
 <p>All property types except for <code><a href="../Classes/List.html">List</a></code> and <code><a href="../Classes/RealmOptional.html">RealmOptional</a></code> <em>must</em> be declared as <code>dynamic var</code>. <code><a href="../Classes/List.html">List</a></code> and
 <code><a href="../Classes/RealmOptional.html">RealmOptional</a></code> properties must be declared as non-dynamic <code>let</code> properties. Swift <code>lazy</code> properties are not allowed.</p>
-
 <p>Note that none of the restrictions listed above apply to properties that are configured to be ignored by Realm.</p>
 <h3 id='querying' class='heading'>Querying</h3>
-
 <p>You can retrieve all objects of a given type from a Realm by calling the <code>objects(_:)</code> instance method.</p>
 <h3 id='relationships' class='heading'>Relationships</h3>
-
 <p>See our <a href="http://realm.io/docs/cocoa">Cocoa guide</a> for more details.</p>
-
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -346,14 +338,11 @@ which wraps an optional numeric value.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Creates an unmanaged instance of a Realm object.</p>
-
 <p>Call <code>add(_:)</code> on a <code><a href="../Classes/Realm.html">Realm</a></code> instance to add an unmanaged object into that Realm.</p>
 <div class="aside aside-see">
-    <p class="aside-title">See</p>
-    <code>Realm().add(_:)</code>
-
+<p class="aside-title">See</p>
+<p><code>Realm().add(_:)</code></p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -383,17 +372,13 @@ which wraps an optional numeric value.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Creates an unmanaged instance of a Realm object.</p>
-
 <p>The <code>value</code> argument is used to populate the object. It can be a key-value coding compliant object, an array or
 dictionary returned from the methods in <code>NSJSONSerialization</code>, or an <code>Array</code> containing one element for each
 managed property. An exception will be thrown if any required properties are not present and those properties were
 not defined with default values.</p>
-
 <p>When passing in an <code>Array</code> as the <code>value</code> argument, all properties must be present, valid and in the same order as
 the properties defined in the model.</p>
-
 <p>Call <code>add(_:)</code> on a <code><a href="../Classes/Realm.html">Realm</a></code> instance to add an unmanaged object into that Realm.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -453,7 +438,6 @@ the properties defined in the model.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The Realm which manages the object, or <code>nil</code> if the object is unmanaged.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -483,7 +467,6 @@ the properties defined in the model.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The object schema which lists the managed properties for the object.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -513,10 +496,8 @@ the properties defined in the model.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Indicates if the object can no longer be accessed because it is now invalid.</p>
-
 <p>An object can no longer be accessed if the object has been deleted from the Realm that manages it, or if
 <code>invalidate()</code> is called on that Realm.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -546,7 +527,6 @@ the properties defined in the model.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A human-readable description of the object.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -576,7 +556,6 @@ the properties defined in the model.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Helper to return the class name for an Object subclass.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -606,7 +585,6 @@ the properties defined in the model.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Helper to return the class name for an Object subclass.</p>
-
                       </div>
                     </section>
                   </div>
@@ -636,11 +614,9 @@ the properties defined in the model.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Override this method to specify the name of a property to be used as the primary key.</p>
-
 <p>Only properties of types <code>String</code> and <code>Int</code> can be designated as the primary key. Primary key properties enforce
 uniqueness for each value whenever the property is set, which incurs minor overhead. Indexes are created
 automatically for primary key properties.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -675,7 +651,6 @@ automatically for primary key properties.</p>
                       <div class="abstract">
                         <p>Override this method to specify the names of properties to ignore. These properties will not be managed by
 the Realm that manages the object.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -709,9 +684,7 @@ the Realm that manages the object.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns an array of property names for properties which should be indexed.</p>
-
 <p>Only string, integer, boolean, <code>Date</code>, and <code>NSDate</code> properties are supported.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -756,7 +729,6 @@ the Realm that manages the object.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns or sets the value of the property with the given name.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -797,39 +769,31 @@ the Realm that manages the object.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Registers a block to be called each time the object changes.</p>
-
 <p>The block will be asynchronously called after each write transaction which
 deletes the object or modifies any of the managed properties of the object,
 including self-assignments that set a property to its existing value.</p>
-
 <p>For write transactions performed on different threads or in different
 processes, the block will be called when the managing Realm is
 (auto)refreshed to a version including the changes, while for local write
 transactions it will be called at some point in the future after the write
 transaction is committed.</p>
-
-<p>Notifications are delivered via the standard run loop, and so can&rsquo;t be
+<p>Notifications are delivered via the standard run loop, and so can’t be
 delivered while the run loop is blocked by other activity. When
-notifications can&rsquo;t be delivered instantly, multiple notifications may be
+notifications can’t be delivered instantly, multiple notifications may be
 coalesced into a single notification.</p>
-
-<p>Unlike with <code><a href="../Classes/List.html">List</a></code> and <code><a href="../Classes/Results.html">Results</a></code>, there is no <q>initial</q> callback made after
+<p>Unlike with <code><a href="../Classes/List.html">List</a></code> and <code><a href="../Classes/Results.html">Results</a></code>, there is no “initial” callback made after
 you add a new notification block.</p>
-
 <p>Only objects which are managed by a Realm can be observed in this way. You
 must retain the returned token for as long as you want updates to be sent
 to the block. To stop receiving updates, call <code>stop()</code> on the token.</p>
-
 <p>It is safe to capture a strong reference to the observed object within the
 callback block. There is no retain cycle due to that the callback is
 retained by the returned token and not by the object itself.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>This method cannot be called during a write transaction, or when
-       the containing Realm is read-only.</p>
-
+<p class="aside-title">Warning</p>
+<p>This method cannot be called during a write transaction, or when
+the containing Realm is read-only.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -893,10 +857,8 @@ retained by the returned token and not by the object itself.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns whether two Realm objects are equal.</p>
-
 <p>Objects are considered equal if and only if they are both managed by the same Realm and point to the same
 underlying object in the database.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -936,7 +898,7 @@ underlying object in the database.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; YYYY <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
+          <p>© YYYY <a class="link" href="https://realm.io target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

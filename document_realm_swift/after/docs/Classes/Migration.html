@@ -280,11 +280,9 @@
                 </div>
               </div>
             <p><code>Migration</code> instances encapsulate information intended to facilitate a schema migration.</p>
-
 <p>A <code>Migration</code> instance is passed into a user-defined <code><a href="../Typealiases.html#/s:10RealmSwift14MigrationBlocka">MigrationBlock</a></code> block when updating the version of a Realm. This
 instance provides access to the old and new database schemas, the objects in the Realm, and provides functionality for
 modifying the Realm during the migration.</p>
-
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -310,7 +308,6 @@ modifying the Realm during the migration.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The old schema, describing the Realm before applying a migration.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -340,7 +337,6 @@ modifying the Realm during the migration.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The new schema, describing the Realm after applying a migration.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -382,7 +378,6 @@ modifying the Realm during the migration.</p>
                       <div class="abstract">
                         <p>Enumerates all the objects of a given type in this Realm, providing both the old and new versions of each object.
 Properties on an object can be accessed using subscripting.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -443,15 +438,12 @@ Properties on an object can be accessed using subscripting.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Creates and returns an <code><a href="../Classes/Object.html">Object</a></code> of type <code>className</code> in the Realm being migrated.</p>
-
 <p>The <code>value</code> argument is used to populate the object. It can be a key-value coding compliant object, an array or
 dictionary returned from the methods in <code>NSJSONSerialization</code>, or an <code>Array</code> containing one element for each
 managed property. An exception will be thrown if any required properties are not present and those properties were
 not defined with default values.</p>
-
 <p>When passing in an <code>Array</code> as the <code>value</code> argument, all properties must be present, valid and in the same order as
 the properties defined in the model.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -516,9 +508,7 @@ the properties defined in the model.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Deletes an object from a Realm during a migration.</p>
-
 <p>It is permitted to call this method from within the block passed to <code>enumerate(_:block:)</code>.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -567,10 +557,8 @@ the properties defined in the model.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Deletes the data for the class with the given name.</p>
-
 <p>All objects of the given class will be deleted. If the <code><a href="../Classes/Object.html">Object</a></code> subclass no longer exists in your program, any
 remaining metadata for the class will be removed from the Realm file.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -623,7 +611,6 @@ remaining metadata for the class will be removed from the Realm file.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Renames a property of the given class from <code>oldName</code> to <code>newName</code>.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -646,7 +633,7 @@ remaining metadata for the class will be removed from the Realm file.</p>
                               <td>
                                 <div>
                                   <p>The name of the class whose property should be renamed. This class must be present
-                    in both the old and new Realm schemas.</p>
+in both the old and new Realm schemas.</p>
                                 </div>
                               </td>
                             </tr>
@@ -659,7 +646,7 @@ remaining metadata for the class will be removed from the Realm file.</p>
                               <td>
                                 <div>
                                   <p>The old name for the property to be renamed. There must not be a property with this name in
-                    the class as defined by the new Realm schema.</p>
+the class as defined by the new Realm schema.</p>
                                 </div>
                               </td>
                             </tr>
@@ -672,7 +659,7 @@ remaining metadata for the class will be removed from the Realm file.</p>
                               <td>
                                 <div>
                                   <p>The new name for the property to be renamed. There must not be a property with this name in
-                    the class as defined by the old Realm schema.</p>
+the class as defined by the old Realm schema.</p>
                                 </div>
                               </td>
                             </tr>
@@ -690,7 +677,7 @@ remaining metadata for the class will be removed from the Realm file.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; YYYY <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
+          <p>© YYYY <a class="link" href="https://realm.io target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

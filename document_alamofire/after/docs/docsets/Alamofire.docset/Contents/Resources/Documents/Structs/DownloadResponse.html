@@ -281,7 +281,6 @@
                 </div>
               </div>
             <p>Used to store all data associated with a serialized response of a download request.</p>
-
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -300,7 +299,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The URL request sent to the server.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -329,8 +327,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The server&rsquo;s response to the URL request.</p>
-
+                        <p>The server’s response to the URL request.</p>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -360,7 +357,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The temporary destination URL of the data returned from the server.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -390,7 +386,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The final destination URL of the data returned from the server if it was moved.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -420,7 +415,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The resume data generated if the request was cancelled.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -450,7 +444,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The result of response serialization.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -480,7 +473,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The timeline of the complete lifecycle of the request.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -510,7 +502,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the associated value of the result if it is a success, <code>nil</code> otherwise.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -540,7 +531,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the associated error value if the result if it is a failure, <code>nil</code> otherwise.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -570,7 +560,6 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Creates a <code>DownloadResponse</code> instance with the specified parameters derived from response serialization.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -611,7 +600,7 @@
                               </td>
                               <td>
                                 <div>
-                                  <p>The server&rsquo;s response to the URL request.</p>
+                                  <p>The server’s response to the URL request.</p>
                                 </div>
                               </td>
                             </tr>
@@ -707,7 +696,6 @@
                       <div class="abstract">
                         <p>The textual representation used when written to an output stream, which includes whether the result was a
 success or failure.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -739,7 +727,6 @@ success or failure.</p>
                         <p>The debug textual representation used when written to an output stream, which includes the URL request, the URL
 response, the temporary and destination URLs, the resume data, the response serialization result and the
 timeline.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -774,12 +761,10 @@ timeline.</p>
                       <div class="abstract">
                         <p>Evaluates the given closure when the result of this <code>DownloadResponse</code> is a success, passing the unwrapped
 result value as a parameter.</p>
-
 <p>Use the <code>map</code> method with a closure that does not throw. For example:</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">possibleData</span><span class="p">:</span> <span class="kt">DownloadResponse</span><span class="o">&lt;</span><span class="kt">Data</span><span class="o">&gt;</span> <span class="o">=</span> <span class="o">...</span>
 <span class="k">let</span> <span class="nv">possibleInt</span> <span class="o">=</span> <span class="n">possibleData</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="nv">$0</span><span class="o">.</span><span class="n">count</span> <span class="p">}</span>
 </code></pre>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -801,7 +786,7 @@ result value as a parameter.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>A closure that takes the success value of the instance&rsquo;s result.</p>
+                                  <p>A closure that takes the success value of the instance’s result.</p>
                                 </div>
                               </td>
                             </tr>
@@ -810,8 +795,8 @@ result value as a parameter.</p>
                       </div>
                       <div>
                         <h4>Return Value</h4>
-                        <p>A <code>DownloadResponse</code> whose result wraps the value returned by the given closure. If this instance&rsquo;s
-       result is a failure, returns a response wrapping the same failure.</p>
+                        <p>A <code>DownloadResponse</code> whose result wraps the value returned by the given closure. If this instance’s
+result is a failure, returns a response wrapping the same failure.</p>
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/Response.swift#L367-L381">Show on GitHub</a>
@@ -834,14 +819,12 @@ result value as a parameter.</p>
                       <div class="abstract">
                         <p>Evaluates the given closure when the result of this <code>DownloadResponse</code> is a success, passing the unwrapped
 result value as a parameter.</p>
-
 <p>Use the <code>flatMap</code> method with a closure that may throw an error. For example:</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">possibleData</span><span class="p">:</span> <span class="kt">DownloadResponse</span><span class="o">&lt;</span><span class="kt">Data</span><span class="o">&gt;</span> <span class="o">=</span> <span class="o">...</span>
 <span class="k">let</span> <span class="nv">possibleObject</span> <span class="o">=</span> <span class="n">possibleData</span><span class="o">.</span><span class="n">flatMap</span> <span class="p">{</span>
     <span class="k">try</span> <span class="kt">JSONSerialization</span><span class="o">.</span><span class="nf">jsonObject</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="nv">$0</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -863,7 +846,7 @@ result value as a parameter.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>A closure that takes the success value of the instance&rsquo;s result.</p>
+                                  <p>A closure that takes the success value of the instance’s result.</p>
                                 </div>
                               </td>
                             </tr>
@@ -873,7 +856,7 @@ result value as a parameter.</p>
                       <div>
                         <h4>Return Value</h4>
                         <p>A success or failure <code>DownloadResponse</code> depending on the result of the given closure. If this
-instance&rsquo;s result is a failure, returns the same failure.</p>
+instance’s result is a failure, returns the same failure.</p>
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/Response.swift#L397-L411">Show on GitHub</a>
@@ -899,7 +882,6 @@ instance&rsquo;s result is a failure, returns the same failure.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The task metrics containing the request / response statistics.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -920,7 +902,7 @@ instance&rsquo;s result is a failure, returns the same failure.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; YYYY <a class="link" href="https://nshipster.com/alamofire" target="_blank" rel="external">Alamofire</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
+          <p>© YYYY <a class="link" href="https://nshipster.com/alamofire target="_blank" rel="external">Alamofire</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

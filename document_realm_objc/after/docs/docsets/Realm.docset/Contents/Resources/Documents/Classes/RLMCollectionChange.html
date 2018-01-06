@@ -327,14 +327,12 @@
               </div>
             <p>A <code>RLMCollectionChange</code> object encapsulates information about changes to collections
 that are reported by Realm notifications.</p>
-
 <p><code>RLMCollectionChange</code> is passed to the notification blocks registered with
 <code>-addNotificationBlock</code> on <code><a href="../Classes/RLMArray.html">RLMArray</a></code> and <code><a href="../Classes/RLMResults.html">RLMResults</a></code>, and reports what rows in the
 collection changed since the last time the notification block was called.</p>
-
 <p>The change information is available in two formats: a simple array of row
 indices in the collection for each type of change, and an array of index paths
-in a requested section suitable for passing directly to <code>UITableView</code>&lsquo;s batch
+in a requested section suitable for passing directly to <code>UITableView</code>’s batch
 update methods. A complete example of updating a <code>UITableView</code> named <code>tv</code>:</p>
 <pre class="highlight objective_c"><code><span class="p">[</span><span class="n">tv</span> <span class="nf">beginUpdates</span><span class="p">];</span>
 <span class="p">[</span><span class="n">tv</span> <span class="nf">deleteRowsAtIndexPaths</span><span class="p">:[</span><span class="n">changes</span> <span class="nf">deletionsInSection</span><span class="p">:</span><span class="mi">0</span><span class="p">]</span> <span class="nf">withRowAnimation</span><span class="p">:</span><span class="n">UITableViewRowAnimationAutomatic</span><span class="p">];</span>
@@ -342,9 +340,7 @@ update methods. A complete example of updating a <code>UITableView</code> named 
 <span class="p">[</span><span class="n">tv</span> <span class="nf">reloadRowsAtIndexPaths</span><span class="p">:[</span><span class="n">changes</span> <span class="nf">modificationsInSection</span><span class="p">:</span><span class="mi">0</span><span class="p">]</span> <span class="nf">withRowAnimation</span><span class="p">:</span><span class="n">UITableViewRowAnimationAutomatic</span><span class="p">];</span>
 <span class="p">[</span><span class="n">tv</span> <span class="nf">endUpdates</span><span class="p">];</span>
 </code></pre>
-
 <p>All of the arrays in an <code>RLMCollectionChange</code> are always sorted in ascending order.</p>
-
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -364,7 +360,6 @@ update methods. A complete example of updating a <code>UITableView</code> named 
                       <div class="abstract">
                         <p>The indices of objects in the previous version of the collection which have
 been removed from this one.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -399,7 +394,6 @@ been removed from this one.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The indices in the new version of the collection which were newly inserted.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -434,14 +428,11 @@ been removed from this one.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The indices in the new version of the collection which were modified.</p>
-
 <p>For <code><a href="../Classes/RLMResults.html">RLMResults</a></code>, this means that one or more of the properties of the object at
 that index were modified (or an object linked to by that object was
 modified).</p>
-
 <p>For <code><a href="../Classes/RLMArray.html">RLMArray</a></code>, the array itself being modified to contain a
 different object at that index will also be reported as a modification.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -476,7 +467,6 @@ different object at that index will also be reported as a modification.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the index paths of the deletion indices in the given section.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -511,7 +501,6 @@ different object at that index will also be reported as a modification.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the index paths of the insertion indices in the given section.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -546,7 +535,6 @@ different object at that index will also be reported as a modification.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the index paths of the modification indices in the given section.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -572,7 +560,7 @@ different object at that index will also be reported as a modification.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; YYYY <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
+          <p>© YYYY <a class="link" href="https://realm.io target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

@@ -280,16 +280,11 @@
                 </div>
               </div>
             <p><code>List</code> is the container type in Realm used to define to-many relationships.</p>
-
-<p>Like Swift&rsquo;s <code>Array</code>, <code>List</code> is a generic type that is parameterized on the type of <code><a href="../Classes/Object.html">Object</a></code> it stores.</p>
-
-<p>Unlike Swift&rsquo;s native collections, <code>List</code>s are reference types, and are only immutable if the Realm that manages them
+<p>Like Swift’s <code>Array</code>, <code>List</code> is a generic type that is parameterized on the type of <code><a href="../Classes/Object.html">Object</a></code> it stores.</p>
+<p>Unlike Swift’s native collections, <code>List</code>s are reference types, and are only immutable if the Realm that manages them
 is opened as read-only.</p>
-
 <p>Lists can be filtered and sorted with the same predicates as <code><a href="../Classes/Results.html">Results&lt;T&gt;</a></code>.</p>
-
 <p>Properties of <code>List</code> type defined on <code><a href="../Classes/Object.html">Object</a></code> subclasses must be declared as <code>let</code> and cannot be <code>dynamic</code>.</p>
-
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -308,7 +303,6 @@ is opened as read-only.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The type of the elements contained within the collection.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -349,7 +343,6 @@ is opened as read-only.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The Realm which manages the list, or <code>nil</code> if the list is unmanaged.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -379,7 +372,6 @@ is opened as read-only.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Indicates if the list can no longer be accessed.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -420,7 +412,6 @@ is opened as read-only.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Creates a <code>List</code> that holds Realm model objects of type <code>T</code>.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -461,7 +452,6 @@ is opened as read-only.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the index of an object in the list, or <code>nil</code> if the object is not present.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -510,7 +500,6 @@ is opened as read-only.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the index of the first object in the list matching the predicate, or <code>nil</code> if no objects match.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -559,7 +548,6 @@ is opened as read-only.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the index of the first object in the list matching the predicate, or <code>nil</code> if no objects match.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -620,11 +608,9 @@ is opened as read-only.</p>
                       <div class="abstract">
                         <p>Returns the object at the given index (get), or replaces the object at the given index (set).</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>You can only set an object during a write transaction.</p>
-
+<p class="aside-title">Warning</p>
+<p>You can only set an object during a write transaction.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -673,7 +659,6 @@ is opened as read-only.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the first object in the list, or <code>nil</code> if the list is empty.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -703,7 +688,6 @@ is opened as read-only.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the last object in the list, or <code>nil</code> if the list is empty.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -743,9 +727,8 @@ is opened as read-only.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns an <code>Array</code> containing the results of invoking <code>valueForKey(_:)</code> using <code>key</code> on each of the collection&rsquo;s
+                        <p>Returns an <code>Array</code> containing the results of invoking <code>valueForKey(_:)</code> using <code>key</code> on each of the collection’s
 objects.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -775,8 +758,7 @@ objects.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns an <code>Array</code> containing the results of invoking <code>valueForKeyPath(_:)</code> using <code>keyPath</code> on each of the
-collection&rsquo;s objects.</p>
-
+collection’s objects.</p>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -824,13 +806,11 @@ collection&rsquo;s objects.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Invokes <code>setValue(_:forKey:)</code> on each of the collection&rsquo;s objects using the specified <code>value</code> and <code>key</code>.</p>
+                        <p>Invokes <code>setValue(_:forKey:)</code> on each of the collection’s objects using the specified <code>value</code> and <code>key</code>.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>This method can only be called during a write transaction.</p>
-
+<p class="aside-title">Warning</p>
+<p>This method can only be called during a write transaction.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -902,7 +882,6 @@ collection&rsquo;s objects.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns a <code><a href="../Classes/Results.html">Results</a></code> containing all objects matching the given predicate in the list.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -951,7 +930,6 @@ collection&rsquo;s objects.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns a <code><a href="../Classes/Results.html">Results</a></code> containing all objects matching the given predicate in the list.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1011,17 +989,14 @@ collection&rsquo;s objects.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns a <code><a href="../Classes/Results.html">Results</a></code> containing the objects in the list, but sorted.</p>
-
 <p>Objects are sorted based on the values of the given key path. For example, to sort a list of <code>Student</code>s from
 youngest to oldest based on their <code>age</code> property, you might call
 <code>students.sorted(byKeyPath: &quot;age&quot;, ascending: true)</code>.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>Lists may only be sorted by properties of boolean, <code>Date</code>, <code>NSDate</code>, single and double-precision
-       floating point, integer, and string types.</p>
-
+<p class="aside-title">Warning</p>
+<p>Lists may only be sorted by properties of boolean, <code>Date</code>, <code>NSDate</code>, single and double-precision
+floating point, integer, and string types.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1082,17 +1057,14 @@ youngest to oldest based on their <code>age</code> property, you might call
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns a <code><a href="../Classes/Results.html">Results</a></code> containing the objects in the list, but sorted.</p>
-
 <p>Objects are sorted based on the values of the given property. For example, to sort a list of <code>Student</code>s from
 youngest to oldest based on their <code>age</code> property, you might call
 <code>students.sorted(byProperty: &quot;age&quot;, ascending: true)</code>.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>Lists may only be sorted by properties of boolean, <code>Date</code>, <code>NSDate</code>, single and double-precision
-       floating point, integer, and string types.</p>
-
+<p class="aside-title">Warning</p>
+<p>Lists may only be sorted by properties of boolean, <code>Date</code>, <code>NSDate</code>, single and double-precision
+floating point, integer, and string types.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1154,17 +1126,14 @@ youngest to oldest based on their <code>age</code> property, you might call
                       <div class="abstract">
                         <p>Returns a <code><a href="../Classes/Results.html">Results</a></code> containing the objects in the list, but sorted.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>Lists may only be sorted by properties of boolean, <code>Date</code>, <code>NSDate</code>, single and double-precision
-       floating point, integer, and string types.</p>
-
+<p class="aside-title">Warning</p>
+<p>Lists may only be sorted by properties of boolean, <code>Date</code>, <code>NSDate</code>, single and double-precision
+floating point, integer, and string types.</p>
 </div>
 <div class="aside aside-see">
-    <p class="aside-title">See</p>
-    <p><code><a href="../Classes/List.html#/s:10RealmSwift4ListC6sortedAA7ResultsCyxGSS9byKeyPath_Sb9ascendingtF">sorted(byKeyPath:ascending:)</a></code></p>
-
+<p class="aside-title">See</p>
+<p><code><a href="../Classes/List.html#/s:10RealmSwift4ListC6sortedAA7ResultsCyxGSS9byKeyPath_Sb9ascendingtF">sorted(byKeyPath:ascending:)</a></code></p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1207,11 +1176,9 @@ youngest to oldest based on their <code>age</code> property, you might call
                         <p>Returns the minimum (lowest) value of the given property among all the objects in the list, or <code>nil</code> if the list is
 empty.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>Only a property whose type conforms to the <code><a href="../Protocols.html#/s:10RealmSwift10MinMaxTypeP">MinMaxType</a></code> protocol can be specified.</p>
-
+<p class="aside-title">Warning</p>
+<p>Only a property whose type conforms to the <code><a href="../Protocols.html#/s:10RealmSwift10MinMaxTypeP">MinMaxType</a></code> protocol can be specified.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1262,11 +1229,9 @@ empty.</p>
                         <p>Returns the maximum (highest) value of the given property among all the objects in the list, or <code>nil</code> if the list
 is empty.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>Only a property whose type conforms to the <code><a href="../Protocols.html#/s:10RealmSwift10MinMaxTypeP">MinMaxType</a></code> protocol can be specified.</p>
-
+<p class="aside-title">Warning</p>
+<p>Only a property whose type conforms to the <code><a href="../Protocols.html#/s:10RealmSwift10MinMaxTypeP">MinMaxType</a></code> protocol can be specified.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1316,11 +1281,9 @@ is empty.</p>
                       <div class="abstract">
                         <p>Returns the sum of the values of a given property over all the objects in the list.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>Only a property whose type conforms to the <code><a href="../Protocols.html#/s:10RealmSwift11AddableTypeP">AddableType</a></code> protocol can be specified.</p>
-
+<p class="aside-title">Warning</p>
+<p>Only a property whose type conforms to the <code><a href="../Protocols.html#/s:10RealmSwift11AddableTypeP">AddableType</a></code> protocol can be specified.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1370,11 +1333,9 @@ is empty.</p>
                       <div class="abstract">
                         <p>Returns the average value of a given property over all the objects in the list, or <code>nil</code> if the list is empty.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>Only a property whose type conforms to the <code><a href="../Protocols.html#/s:10RealmSwift11AddableTypeP">AddableType</a></code> protocol can be specified.</p>
-
+<p class="aside-title">Warning</p>
+<p>Only a property whose type conforms to the <code><a href="../Protocols.html#/s:10RealmSwift11AddableTypeP">AddableType</a></code> protocol can be specified.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1434,15 +1395,12 @@ is empty.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Appends the given object to the end of the list.</p>
-
 <p>If the object is managed by a different Realm than the receiver, a copy is made and added to the Realm managing
 the receiver.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>This method may only be called during a write transaction.</p>
-
+<p class="aside-title">Warning</p>
+<p>This method may only be called during a write transaction.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1492,11 +1450,9 @@ the receiver.</p>
                       <div class="abstract">
                         <p>Appends the objects in the given sequence to the end of the list.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    This method may only be called during a write transaction.
-
+<p class="aside-title">Warning</p>
+<p>This method may only be called during a write transaction.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1527,16 +1483,13 @@ the receiver.</p>
                       <div class="abstract">
                         <p>Inserts an object at the given index.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>This method may only be called during a write transaction.</p>
-
+<p class="aside-title">Warning</p>
+<p>This method may only be called during a write transaction.</p>
 </div>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>This method will throw an exception if called with an invalid index.</p>
-
+<p class="aside-title">Warning</p>
+<p>This method will throw an exception if called with an invalid index.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1598,16 +1551,13 @@ the receiver.</p>
                       <div class="abstract">
                         <p>Removes an object at the given index. The object is not removed from the Realm that manages it.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>This method may only be called during a write transaction.</p>
-
+<p class="aside-title">Warning</p>
+<p>This method may only be called during a write transaction.</p>
 </div>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>This method will throw an exception if called with an invalid index.</p>
-
+<p class="aside-title">Warning</p>
+<p>This method will throw an exception if called with an invalid index.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1657,11 +1607,9 @@ the receiver.</p>
                       <div class="abstract">
                         <p>Removes the last object in the list. The object is not removed from the Realm that manages it.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    This method may only be called during a write transaction.
-
+<p class="aside-title">Warning</p>
+<p>This method may only be called during a write transaction.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1692,11 +1640,9 @@ the receiver.</p>
                       <div class="abstract">
                         <p>Removes all objects from the list. The objects are not removed from the Realm that manages them.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    This method may only be called during a write transaction.
-
+<p class="aside-title">Warning</p>
+<p>This method may only be called during a write transaction.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1727,16 +1673,13 @@ the receiver.</p>
                       <div class="abstract">
                         <p>Replaces an object at the given index with a new object.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>This method may only be called during a write transaction.</p>
-
+<p class="aside-title">Warning</p>
+<p>This method may only be called during a write transaction.</p>
 </div>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>This method will throw an exception if called with an invalid index.</p>
-
+<p class="aside-title">Warning</p>
+<p>This method will throw an exception if called with an invalid index.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1798,16 +1741,13 @@ the receiver.</p>
                       <div class="abstract">
                         <p>Moves the object at the given source index to the given destination index.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>This method may only be called during a write transaction.</p>
-
+<p class="aside-title">Warning</p>
+<p>This method may only be called during a write transaction.</p>
 </div>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>This method will throw an exception if called with invalid indices.</p>
-
+<p class="aside-title">Warning</p>
+<p>This method will throw an exception if called with invalid indices.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1869,16 +1809,13 @@ the receiver.</p>
                       <div class="abstract">
                         <p>Exchanges the objects in the list at given indices.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>This method may only be called during a write transaction.</p>
-
+<p class="aside-title">Warning</p>
+<p>This method may only be called during a write transaction.</p>
 </div>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>This method will throw an exception if called with invalid indices.</p>
-
+<p class="aside-title">Warning</p>
+<p>This method will throw an exception if called with invalid indices.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1950,23 +1887,18 @@ the receiver.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Registers a block to be called each time the collection changes.</p>
-
 <p>The block will be asynchronously called with the initial results, and then called again after each write
 transaction which changes either any of the objects in the collection, or which objects are in the collection.</p>
-
 <p>The <code>change</code> parameter that is passed to the block reports, in the form of indices within the collection, which of
 the objects were added, removed, or modified during each write transaction. See the <code><a href="../Enums/RealmCollectionChange.html">RealmCollectionChange</a></code>
 documentation for more information on the change information supplied and an example of how to use it to update a
 <code>UITableView</code>.</p>
-
 <p>At the time when the block is called, the collection will be fully evaluated and up-to-date, and as long as you do
 not perform a write transaction on the same thread or explicitly call <code>realm.refresh()</code>, accessing it will never
 perform blocking work.</p>
-
-<p>Notifications are delivered via the standard run loop, and so can&rsquo;t be delivered while the run loop is blocked by
-other activity. When notifications can&rsquo;t be delivered instantly, multiple notifications may be coalesced into a
+<p>Notifications are delivered via the standard run loop, and so can’t be delivered while the run loop is blocked by
+other activity. When notifications can’t be delivered instantly, multiple notifications may be coalesced into a
 single notification. This can include the notification with the initial collection.</p>
-
 <p>For example, the following code performs a write transaction immediately after adding the notification block, so
 there is no opportunity for the initial notification to be delivered first. As a result, the initial notification
 will reflect the state of the Realm after the write transaction.</p>
@@ -1992,15 +1924,12 @@ will reflect the state of the Realm after the write transaction.</p>
 <span class="p">}</span>
 <span class="c1">// end of run loop execution context</span>
 </code></pre>
-
 <p>You must retain the returned token for as long as you want updates to be sent to the block. To stop receiving
 updates, call <code>stop()</code> on the token.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>This method cannot be called during a write transaction, or when the containing Realm is read-only.</p>
-
+<p class="aside-title">Warning</p>
+<p>This method cannot be called during a write transaction, or when the containing Realm is read-only.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -2064,7 +1993,6 @@ updates, call <code>stop()</code> on the token.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns a <code><a href="../Classes/RLMIterator.html">RLMIterator</a></code> that yields successive elements in the <code>List</code>.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -2105,7 +2033,6 @@ updates, call <code>stop()</code> on the token.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Replace the given <code>subRange</code> of elements with <code>newElements</code>.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -2168,7 +2095,6 @@ updates, call <code>stop()</code> on the token.</p>
                       <div class="abstract">
                         <p>The position of the first element in a non-empty collection.
 Identical to endIndex in an empty collection.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -2197,10 +2123,9 @@ Identical to endIndex in an empty collection.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The collection&rsquo;s <q>past the end</q> position.
+                        <p>The collection’s “past the end” position.
 endIndex is not a valid argument to subscript, and is always reachable from startIndex by
 zero or more applications of successor().</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -2279,7 +2204,7 @@ zero or more applications of successor().</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; YYYY <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
+          <p>© YYYY <a class="link" href="https://realm.io target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

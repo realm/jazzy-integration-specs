@@ -326,14 +326,11 @@
                 </div>
               </div>
             <p>A <code>RLMSyncUser</code> instance represents a single Realm Object Server user account.</p>
-
 <p>A user may have one or more credentials associated with it. These credentials
 uniquely identify the user to the authentication provider, and are used to sign
 into a Realm Object Server user account.</p>
-
 <p>Note that user objects are only vended out via SDK APIs, and cannot be directly
 initialized. User objects can be accessed from any thread.</p>
-
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -352,7 +349,6 @@ initialized. User objects can be accessed from any thread.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A dictionary of all valid, logged-in user identities corresponding to their user objects.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -388,11 +384,9 @@ initialized. User objects can be accessed from any thread.</p>
                       <div class="abstract">
                         <p>The logged-in user. <code>nil</code> if none exists.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    Throws an exception if more than one logged-in user exists.
-
+<p class="aside-title">Warning</p>
+<p>Throws an exception if more than one logged-in user exists.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -427,7 +421,6 @@ initialized. User objects can be accessed from any thread.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The unique Realm Object Server user ID string identifying this user.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -462,7 +455,6 @@ initialized. User objects can be accessed from any thread.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The URL of the authentication server this user will communicate with.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -498,7 +490,6 @@ initialized. User objects can be accessed from any thread.</p>
                       <div class="abstract">
                         <p>Whether the user is a Realm Object Server administrator. Value reflects the
 state at the time of the last successful login of this user.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -533,7 +524,6 @@ state at the time of the last successful login of this user.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The current state of the user.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -581,7 +571,6 @@ state at the time of the last successful login of this user.</p>
                         <p>Create, log in, and asynchronously return a new user object, specifying a custom timeout for the network request.
 Credentials identifying the user must be passed in. The user becomes available in the completion block, at which point
 it is ready for use.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -620,7 +609,6 @@ it is ready for use.</p>
                       <div class="abstract">
                         <p>Create, log in, and asynchronously return a new user object. Credentials identifying the user must be passed in. The
 user becomes available in the completion block, at which point it is ready for use.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -655,12 +643,10 @@ user becomes available in the completion block, at which point it is ready for u
 and removing any synced Realms associated with them from on-disk storage on
 next app launch. If the user is already logged out or in an error state, this
 method does nothing.</p>
-
 <p>This method should be called whenever the application is committed to not using
 a user again unless they are recreated.
 Failing to call this method may result in unused files and metadata needlessly
 taking up space.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -706,7 +692,6 @@ taking up space.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Retrieve a valid session object belonging to this user for a given URL, or <code>nil</code> if no such object exists.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -741,7 +726,6 @@ taking up space.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Retrieve all the valid sessions belonging to this user.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -786,15 +770,13 @@ taking up space.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Change this user&rsquo;s password asynchronously.</p>
+                        <p>Change this user’s password asynchronously.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>Changing a user&rsquo;s password using an authentication server that doesn&rsquo;t
-     use HTTPS is a major security flaw, and should only be done while
-     testing.</p>
-
+<p class="aside-title">Warning</p>
+<p>Changing a user’s password using an authentication server that doesn’t
+use HTTPS is a major security flaw, and should only be done while
+testing.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -822,7 +804,7 @@ taking up space.</p>
                               </td>
                               <td>
                                 <div>
-                                  <p>The user&rsquo;s new password.</p>
+                                  <p>The user’s new password.</p>
                                 </div>
                               </td>
                             </tr>
@@ -835,8 +817,8 @@ taking up space.</p>
                               <td>
                                 <div>
                                   <p>Completion block invoked when login has completed or failed.
-               The callback will be invoked on a background queue provided
-               by <code>NSURLSession</code>.</p>
+The callback will be invoked on a background queue provided
+by <code>NSURLSession</code>.</p>
                                 </div>
                               </td>
                             </tr>
@@ -874,22 +856,18 @@ taking up space.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Asynchronously retrieve all permissions associated with the user calling this method.</p>
-
 <p>The results will be returned through the callback block, or an error if the operation failed.
 The callback block will be run on the same thread the method was called on.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>This method must be called from a thread with a currently active run loop. Unless
-     you have manually configured a run loop on a side thread, this will usually be the
-     main thread.</p>
-
+<p class="aside-title">Warning</p>
+<p>This method must be called from a thread with a currently active run loop. Unless
+you have manually configured a run loop on a side thread, this will usually be the
+main thread.</p>
 </div>
 <div class="aside aside-see">
-    <p class="aside-title">See</p>
-    <p><code><a href="../Classes/RLMSyncPermissionResults.html">RLMSyncPermissionResults</a></code></p>
-
+<p class="aside-title">See</p>
+<p><code><a href="../Classes/RLMSyncPermissionResults.html">RLMSyncPermissionResults</a></code></p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -925,16 +903,13 @@ The callback block will be run on the same thread the method was called on.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Apply a given permission.</p>
-
 <p>The operation will take place asynchronously, and the callback will be used to report whether
 the permission change succeeded or failed. The user calling this method must have the right
 to grant the given permission, or else the operation will fail.</p>
 <div class="aside aside-see">
-    <p class="aside-title">See</p>
-    <code><a href="../Classes/RLMSyncPermissionValue.html">RLMSyncPermissionValue</a></code>
-
+<p class="aside-title">See</p>
+<p><code><a href="../Classes/RLMSyncPermissionValue.html">RLMSyncPermissionValue</a></code></p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -970,16 +945,13 @@ to grant the given permission, or else the operation will fail.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Revoke a given permission.</p>
-
 <p>The operation will take place asynchronously, and the callback will be used to report whether
 the permission change succeeded or failed. The user calling this method must have the right
 to grant the given permission, or else the operation will fail.</p>
 <div class="aside aside-see">
-    <p class="aside-title">See</p>
-    <code><a href="../Classes/RLMSyncPermissionValue.html">RLMSyncPermissionValue</a></code>
-
+<p class="aside-title">See</p>
+<p><code><a href="../Classes/RLMSyncPermissionValue.html">RLMSyncPermissionValue</a></code></p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1026,10 +998,8 @@ to grant the given permission, or else the operation will fail.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns an instance of the Management Realm owned by the user.</p>
-
 <p>This Realm can be used to control access permissions for Realms managed by the user.
 This includes granting other users access to Realms.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1065,10 +1035,8 @@ This includes granting other users access to Realms.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns an instance of the Permission Realm owned by the user.</p>
-
 <p>This read-only Realm contains <code><a href="../Classes/RLMSyncPermission.html">RLMSyncPermission</a></code> objects reflecting the
 synchronized Realms and permission details this user has access to.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1095,7 +1063,7 @@ synchronized Realms and permission details this user has access to.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; YYYY <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
+          <p>© YYYY <a class="link" href="https://realm.io target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

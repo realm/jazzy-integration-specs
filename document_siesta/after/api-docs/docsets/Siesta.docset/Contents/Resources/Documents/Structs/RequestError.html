@@ -246,9 +246,7 @@
                 </div>
               </div>
             <p>Information about a failed resource request.</p>
-
 <p>Siesta can encounter errors from many possible sources, including:</p>
-
 <ul>
 <li>client-side encoding / request creation issues,</li>
 <li>network connectivity problems,</li>
@@ -256,14 +254,11 @@
 <li>server errors (404, 500, etc.), and</li>
 <li>client-side parsing and entity validation failures.</li>
 </ul>
-
 <p><code>RequestError</code> presents all these errors in a uniform structure. Several properties preserve diagnostic information,
 which you can use to intercept specific known errors, but these diagnostic properties are all optional. They are not
 even mutually exclusive: Siesta errors do not break cleanly into HTTP-based vs. Error / NSError-based, for example,
 because network implementations may sometimes provide <em>both</em> an underlying <code>Error</code> <em>and</em> an HTTP diagnostic.</p>
-
 <p>The one ironclad guarantee that <code>RequestError</code> makes is the presence of a <code>userMessage</code>.</p>
-
           </div>
         </section>
 
@@ -287,13 +282,11 @@ because network implementations may sometimes provide <em>both</em> an underlyin
                         <p>A description of this error suitable for showing to the user. Typically messages are brief and in plain language,
 e.g. “Not found,” “Invalid username or password,” or “The internet connection is offline.”</p>
 <div class="aside aside-note">
-    <p class="aside-title">Note</p>
-    This property is similar to Swift’s <code>Error.localizedDescription</code>, but is <strong>not optional</strong>. Siesta
+<p class="aside-title">Note</p>
+<p>This property is similar to Swift’s <code>Error.localizedDescription</code>, but is <strong>not optional</strong>. Siesta
 guarantees the presence of a user-displayable message on a <code>RequestError</code>, so you never have to come up with
-a default error message for your UI.
-
+a default error message for your UI.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -320,7 +313,6 @@ a default error message for your UI.
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The HTTP status code (e.g. 404) if this error came from an HTTP response.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -347,7 +339,6 @@ a default error message for your UI.
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The response body if this error came from an HTTP response. Its meaning is API-specific.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -375,7 +366,6 @@ a default error message for your UI.
                       <div class="abstract">
                         <p>Details about the underlying error. Errors originating from Siesta will have a cause from <code><a href="../Structs/RequestError/Cause.html">RequestError.Cause</a></code>.
 Errors originating from the <code><a href="../Protocols/NetworkingProvider.html">NetworkingProvider</a></code> or custom <code><a href="../Protocols/ResponseTransformer.html">ResponseTransformer</a></code>s have domain-specific causes.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -402,7 +392,6 @@ Errors originating from the <code><a href="../Protocols/NetworkingProvider.html"
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The time at which the error occurred.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -429,10 +418,8 @@ Errors originating from the <code><a href="../Protocols/NetworkingProvider.html"
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Initializes the error using a network response.</p>
-
 <p>If the <code><a href="../Structs/RequestError.html#/s:6Siesta12RequestErrorV11userMessageSSv">userMessage</a></code> parameter is nil, this initializer uses <code>error</code> or the response’s status code to generate
 a user message. That failing, it gives a generic failure message.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -463,7 +450,6 @@ a user message. That failing, it gives a generic failure message.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Initializes the error using an underlying error.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -498,10 +484,8 @@ a user message. That failing, it gives a generic failure message.</p>
                       <div class="abstract">
                         <p>Underlying causes of errors reported by Siesta. You will find these on the <code><a href="../Structs/RequestError.html#/s:6Siesta12RequestErrorV5causes0C0_pSgv">RequestError.cause</a></code> property.
 (Note that <code><a href="../Structs/RequestError.html#/s:6Siesta12RequestErrorV5causes0C0_pSgv">cause</a></code> may also contain errors from the underlying network library that do not appear here.)</p>
-
 <p>The primary purpose of these error causes is to aid debugging. Client code rarely needs to work with them,
 but they can be useful if you want to add special handling for specific errors.</p>
-
 <p>For example, if you’re working with an API that sometimes returns garbled text data that isn’t decodable,
 and you want to show users a placeholder message instead of an error, then (1) gee, that’s weird, and
 (2) you can turn that one specific error into a success by adding a transformer:</p>
@@ -529,7 +513,6 @@ and you want to show users a placeholder message instead of an error, then (1) g
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
-
                         <a href="../Structs/RequestError/Cause.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -561,7 +544,6 @@ and you want to show users a placeholder message instead of an error, then (1) g
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Typed content accessors such as <code>.text</code> and <code>.jsonDict</code> apply to <code>entity?.content</code>.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -582,7 +564,7 @@ and you want to show users a placeholder message instead of an error, then (1) g
       </article>
     </div>
     <section class="footer">
-      <p>© 2016 <a class="link" href="http://bustoutsolutions.com" target="_blank" rel="external">Bust Out Solutions</a> under <a class="link" href="https://github.com/bustoutsolutions/siesta/blob/master/LICENSE" target="_blank" rel="external">open source license</a>.</p>
+      <p>© 2016 <a class="link" href="http://bustoutsolutions.com target="_blank" rel="external">Bust Out Solutions</a> under <a class="link" href="https://github.com/bustoutsolutions/siesta/blob/master/LICENSE target="_blank" rel="external">open source license</a>.</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

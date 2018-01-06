@@ -329,33 +329,27 @@
               </div>
             <p>An object intended to be passed between threads containing a thread-safe reference to its
 thread-confined object.</p>
-
 <p>To resolve a thread-safe reference on a target Realm on a different thread, pass to
 <code><a href="../Classes/RLMRealm.html#/c:objc(cs)RLMRealm(im)resolveThreadSafeReference:">-[RLMRealm resolveThreadSafeReference:]</a></code>.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>A <code>RLMThreadSafeReference</code> object must be resolved at most once.
-     Failing to resolve a <code>RLMThreadSafeReference</code> will result in the source version of the
-     Realm being pinned until the reference is deallocated.</p>
-
+<p class="aside-title">Warning</p>
+<p>A <code>RLMThreadSafeReference</code> object must be resolved at most once.
+Failing to resolve a <code>RLMThreadSafeReference</code> will result in the source version of the
+Realm being pinned until the reference is deallocated.</p>
 </div>
 <div class="aside aside-note">
-    <p class="aside-title">Note</p>
-    <p>Prefer short-lived <code>RLMThreadSafeReference</code>s as the data for the version of the source Realm
-  will be retained until all references have been resolved or deallocated.</p>
-
+<p class="aside-title">Note</p>
+<p>Prefer short-lived <code>RLMThreadSafeReference</code>s as the data for the version of the source Realm
+will be retained until all references have been resolved or deallocated.</p>
 </div>
 <div class="aside aside-see">
-    <p class="aside-title">See</p>
-    <p><code><a href="../Protocols/RLMThreadConfined.html">RLMThreadConfined</a></code></p>
-
+<p class="aside-title">See</p>
+<p><code><a href="../Protocols/RLMThreadConfined.html">RLMThreadConfined</a></code></p>
 </div>
 <div class="aside aside-see">
-    <p class="aside-title">See</p>
-    <p><code><a href="../Classes/RLMRealm.html#/c:objc(cs)RLMRealm(im)resolveThreadSafeReference:">-[RLMRealm resolveThreadSafeReference:]</a></code></p>
-
+<p class="aside-title">See</p>
+<p><code><a href="../Classes/RLMRealm.html#/c:objc(cs)RLMRealm(im)resolveThreadSafeReference:">-[RLMRealm resolveThreadSafeReference:]</a></code></p>
 </div>
-
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -375,12 +369,10 @@ thread-confined object.</p>
                       <div class="abstract">
                         <p>Create a thread-safe reference to the thread-confined object.</p>
 <div class="aside aside-note">
-    <p class="aside-title">Note</p>
-    <p>You may continue to use and access the thread-confined object after passing it to this
-  constructor.</p>
-
+<p class="aside-title">Note</p>
+<p>You may continue to use and access the thread-confined object after passing it to this
+constructor.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -436,7 +428,6 @@ thread-confined object.</p>
                       <div class="abstract">
                         <p>Indicates if the reference can no longer be resolved because an attempt to resolve it has already
 occurred. References can only be resolved once.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -484,7 +475,6 @@ occurred. References can only be resolved once.</p>
                         <p><code>-[RLMThreadSafeReference init]</code> is not available because <code>RLMThreadSafeReference</code> cannot be
 created directly. <code>RLMThreadSafeReference</code> instances must be obtained by calling
 <code><a href="../Classes/RLMRealm.html#/c:objc(cs)RLMRealm(im)resolveThreadSafeReference:">-[RLMRealm resolveThreadSafeReference:]</a></code>.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -516,7 +506,6 @@ created directly. <code>RLMThreadSafeReference</code> instances must be obtained
                         <p><code>-[RLMThreadSafeReference new]</code> is not available because <code>RLMThreadSafeReference</code> cannot be
 created directly. <code>RLMThreadSafeReference</code> instances must be obtained by calling
 <code><a href="../Classes/RLMRealm.html#/c:objc(cs)RLMRealm(im)resolveThreadSafeReference:">-[RLMRealm resolveThreadSafeReference:]</a></code>.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -537,7 +526,7 @@ created directly. <code>RLMThreadSafeReference</code> instances must be obtained
           </section>
         </section>
         <section id="footer">
-          <p>&copy; YYYY <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
+          <p>© YYYY <a class="link" href="https://realm.io target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

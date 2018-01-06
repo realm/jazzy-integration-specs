@@ -280,24 +280,18 @@
                 </div>
               </div>
             <p><code>Results</code> is an auto-updating container type in Realm returned from object queries.</p>
-
 <p><code>Results</code> can be queried with the same predicates as <code><a href="../Classes/List.html">List&lt;T&gt;</a></code>, and you can chain queries to further filter query
 results.</p>
-
 <p><code>Results</code> always reflect the current state of the Realm on the current thread, including during write transactions on
 the current thread. The one exception to this is when using <code>for...in</code> enumeration, which will always enumerate over
 the objects which matched the query when the enumeration is begun, even if some of them are deleted or modified to be
 excluded by the filter during the enumeration.</p>
-
 <p><code>Results</code> are lazily evaluated the first time they are accessed; they only run queries when the result of the query is
 requested. This means that chaining several temporary <code>Results</code> to sort and filter your data does not perform any
 unnecessary work processing the intermediate state.</p>
-
 <p>Once the results have been evaluated or a notification block has been added, the results are eagerly kept up-to-date,
 with the work done to keep them up-to-date done on a background thread whenever possible.</p>
-
 <p>Results instances cannot be directly instantiated.</p>
-
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -316,7 +310,6 @@ with the work done to keep them up-to-date done on a background thread whenever 
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A human-readable description of the objects represented by the results.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -357,7 +350,6 @@ with the work done to keep them up-to-date done on a background thread whenever 
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The type of the objects described by the results.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -398,7 +390,6 @@ with the work done to keep them up-to-date done on a background thread whenever 
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The Realm which manages this results. Note that this property will never return <code>nil</code>.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -428,10 +419,8 @@ with the work done to keep them up-to-date done on a background thread whenever 
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Indicates if the results are no longer valid.</p>
-
 <p>The results becomes invalid if <code>invalidate()</code> is called on the containing <code><a href="../Classes/Results.html#/s:10RealmSwift7ResultsC5realmAA0A0CSgv">realm</a></code>. An invalidated results can be
 accessed, but will always be empty.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -461,7 +450,6 @@ accessed, but will always be empty.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>The number of objects in the results.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -502,7 +490,6 @@ accessed, but will always be empty.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the index of the given object in the results, or <code>nil</code> if the object is not present.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -532,7 +519,6 @@ accessed, but will always be empty.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the index of the first object matching the predicate, or <code>nil</code> if no objects match.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -581,7 +567,6 @@ accessed, but will always be empty.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the index of the first object matching the predicate, or <code>nil</code> if no objects match.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -641,7 +626,6 @@ accessed, but will always be empty.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the object at the given <code>index</code>.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -690,7 +674,6 @@ accessed, but will always be empty.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the first object in the results, or <code>nil</code> if the results are empty.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -720,7 +703,6 @@ accessed, but will always be empty.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns the last object in the results, or <code>nil</code> if the results are empty.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -761,7 +743,6 @@ accessed, but will always be empty.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns an <code>Array</code> containing the results of invoking <code>valueForKey(_:)</code> with <code>key</code> on each of the results.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -810,7 +791,6 @@ accessed, but will always be empty.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns an <code>Array</code> containing the results of invoking <code>valueForKeyPath(_:)</code> with <code>keyPath</code> on each of the results.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -861,11 +841,9 @@ accessed, but will always be empty.</p>
                         <p>Invokes <code>setValue(_:forKey:)</code> on each of the objects represented by the results using the specified <code>value</code> and
 <code>key</code>.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>This method may only be called during a write transaction.</p>
-
+<p class="aside-title">Warning</p>
+<p>This method may only be called during a write transaction.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -937,7 +915,6 @@ accessed, but will always be empty.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns a <code>Results</code> containing all objects matching the given predicate in the collection.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -986,7 +963,6 @@ accessed, but will always be empty.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns a <code>Results</code> containing all objects matching the given predicate in the collection.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1046,17 +1022,14 @@ accessed, but will always be empty.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns a <code>Results</code> containing the objects represented by the results, but sorted.</p>
-
 <p>Objects are sorted based on the values of the given key path. For example, to sort a collection of <code>Student</code>s from
 youngest to oldest based on their <code>age</code> property, you might call
 <code>students.sorted(byKeyPath: &quot;age&quot;, ascending: true)</code>.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>Collections may only be sorted by properties of boolean, <code>Date</code>, <code>NSDate</code>, single and double-precision
-       floating point, integer, and string types.</p>
-
+<p class="aside-title">Warning</p>
+<p>Collections may only be sorted by properties of boolean, <code>Date</code>, <code>NSDate</code>, single and double-precision
+floating point, integer, and string types.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1117,17 +1090,14 @@ youngest to oldest based on their <code>age</code> property, you might call
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns a <code>Results</code> containing the objects represented by the results, but sorted.</p>
-
 <p>Objects are sorted based on the values of the given property. For example, to sort a collection of <code>Student</code>s from
 youngest to oldest based on their <code>age</code> property, you might call
 <code>students.sorted(byProperty: &quot;age&quot;, ascending: true)</code>.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>Collections may only be sorted by properties of boolean, <code>Date</code>, <code>NSDate</code>, single and double-precision
-       floating point, integer, and string types.</p>
-
+<p class="aside-title">Warning</p>
+<p>Collections may only be sorted by properties of boolean, <code>Date</code>, <code>NSDate</code>, single and double-precision
+floating point, integer, and string types.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1189,17 +1159,14 @@ youngest to oldest based on their <code>age</code> property, you might call
                       <div class="abstract">
                         <p>Returns a <code>Results</code> containing the objects represented by the results, but sorted.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>Collections may only be sorted by properties of boolean, <code>Date</code>, <code>NSDate</code>, single and double-precision
-       floating point, integer, and string types.</p>
-
+<p class="aside-title">Warning</p>
+<p>Collections may only be sorted by properties of boolean, <code>Date</code>, <code>NSDate</code>, single and double-precision
+floating point, integer, and string types.</p>
 </div>
 <div class="aside aside-see">
-    <p class="aside-title">See</p>
-    <p><code><a href="../Classes/Results.html#/s:10RealmSwift7ResultsC6sortedACyxGSS9byKeyPath_Sb9ascendingtF">sorted(byKeyPath:ascending:)</a></code></p>
-
+<p class="aside-title">See</p>
+<p><code><a href="../Classes/Results.html#/s:10RealmSwift7ResultsC6sortedACyxGSS9byKeyPath_Sb9ascendingtF">sorted(byKeyPath:ascending:)</a></code></p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1260,11 +1227,9 @@ youngest to oldest based on their <code>age</code> property, you might call
                       <div class="abstract">
                         <p>Returns the minimum (lowest) value of the given property among all the results, or <code>nil</code> if the results are empty.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>Only a property whose type conforms to the <code><a href="../Protocols.html#/s:10RealmSwift10MinMaxTypeP">MinMaxType</a></code> protocol can be specified.</p>
-
+<p class="aside-title">Warning</p>
+<p>Only a property whose type conforms to the <code><a href="../Protocols.html#/s:10RealmSwift10MinMaxTypeP">MinMaxType</a></code> protocol can be specified.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1314,11 +1279,9 @@ youngest to oldest based on their <code>age</code> property, you might call
                       <div class="abstract">
                         <p>Returns the maximum (highest) value of the given property among all the results, or <code>nil</code> if the results are empty.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>Only a property whose type conforms to the <code><a href="../Protocols.html#/s:10RealmSwift10MinMaxTypeP">MinMaxType</a></code> protocol can be specified.</p>
-
+<p class="aside-title">Warning</p>
+<p>Only a property whose type conforms to the <code><a href="../Protocols.html#/s:10RealmSwift10MinMaxTypeP">MinMaxType</a></code> protocol can be specified.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1368,11 +1331,9 @@ youngest to oldest based on their <code>age</code> property, you might call
                       <div class="abstract">
                         <p>Returns the sum of the values of a given property over all the results.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>Only a property whose type conforms to the <code><a href="../Protocols.html#/s:10RealmSwift11AddableTypeP">AddableType</a></code> protocol can be specified.</p>
-
+<p class="aside-title">Warning</p>
+<p>Only a property whose type conforms to the <code><a href="../Protocols.html#/s:10RealmSwift11AddableTypeP">AddableType</a></code> protocol can be specified.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1422,11 +1383,9 @@ youngest to oldest based on their <code>age</code> property, you might call
                       <div class="abstract">
                         <p>Returns the average value of a given property over all the results, or <code>nil</code> if the results are empty.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>Only the name of a property whose type conforms to the <code><a href="../Protocols.html#/s:10RealmSwift11AddableTypeP">AddableType</a></code> protocol can be specified.</p>
-
+<p class="aside-title">Warning</p>
+<p>Only the name of a property whose type conforms to the <code><a href="../Protocols.html#/s:10RealmSwift11AddableTypeP">AddableType</a></code> protocol can be specified.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1486,23 +1445,18 @@ youngest to oldest based on their <code>age</code> property, you might call
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Registers a block to be called each time the collection changes.</p>
-
 <p>The block will be asynchronously called with the initial results, and then called again after each write
 transaction which changes either any of the objects in the collection, or which objects are in the collection.</p>
-
 <p>The <code>change</code> parameter that is passed to the block reports, in the form of indices within the collection, which of
 the objects were added, removed, or modified during each write transaction. See the <code><a href="../Enums/RealmCollectionChange.html">RealmCollectionChange</a></code>
 documentation for more information on the change information supplied and an example of how to use it to update a
 <code>UITableView</code>.</p>
-
 <p>At the time when the block is called, the collection will be fully evaluated and up-to-date, and as long as you do
 not perform a write transaction on the same thread or explicitly call <code>realm.refresh()</code>, accessing it will never
 perform blocking work.</p>
-
-<p>Notifications are delivered via the standard run loop, and so can&rsquo;t be delivered while the run loop is blocked by
-other activity. When notifications can&rsquo;t be delivered instantly, multiple notifications may be coalesced into a
+<p>Notifications are delivered via the standard run loop, and so can’t be delivered while the run loop is blocked by
+other activity. When notifications can’t be delivered instantly, multiple notifications may be coalesced into a
 single notification. This can include the notification with the initial collection.</p>
-
 <p>For example, the following code performs a write transaction immediately after adding the notification block, so
 there is no opportunity for the initial notification to be delivered first. As a result, the initial notification
 will reflect the state of the Realm after the write transaction.</p>
@@ -1528,15 +1482,12 @@ will reflect the state of the Realm after the write transaction.</p>
 <span class="p">}</span>
 <span class="c1">// end of run loop execution context</span>
 </code></pre>
-
 <p>You must retain the returned token for as long as you want updates to be sent to the block. To stop receiving
 updates, call <code>stop()</code> on the token.</p>
 <div class="aside aside-warning">
-    <p class="aside-title">Warning</p>
-    <p>This method cannot be called during a write transaction, or when the containing Realm is read-only.</p>
-
+<p class="aside-title">Warning</p>
+<p>This method cannot be called during a write transaction, or when the containing Realm is read-only.</p>
 </div>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1600,7 +1551,6 @@ updates, call <code>stop()</code> on the token.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Returns a <code><a href="../Classes/RLMIterator.html">RLMIterator</a></code> that yields successive elements in the results.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1642,7 +1592,6 @@ updates, call <code>stop()</code> on the token.</p>
                       <div class="abstract">
                         <p>The position of the first element in a non-empty collection.
 Identical to endIndex in an empty collection.</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1671,10 +1620,9 @@ Identical to endIndex in an empty collection.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The collection&rsquo;s <q>past the end</q> position.
+                        <p>The collection’s “past the end” position.
 endIndex is not a valid argument to subscript, and is always reachable from startIndex by
 zero or more applications of successor().</p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -1753,7 +1701,7 @@ zero or more applications of successor().</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; YYYY <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
+          <p>© YYYY <a class="link" href="https://realm.io target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

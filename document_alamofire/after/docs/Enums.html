@@ -274,7 +274,6 @@
           <section class="section">
             <h1>Enumerations</h1>
             <p>The following enumerations are available globally.</p>
-
           </section>
           <section class="section task-group-section">
             <div class="task-group">
@@ -293,9 +292,7 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>HTTP method definitions.</p>
-
 <p>See <a href="https://tools.ietf.org/html/rfc7231#section-4.3">https://tools.ietf.org/html/rfc7231#section-4.3</a></p>
-
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -330,7 +327,6 @@
                       <div class="abstract">
                         <p><code>AFError</code> is the error type returned by Alamofire. It encompasses a few different types of errors, each with
 their own associated reasons.</p>
-
 <ul>
 <li>invalidURL:                  Returned when a <code><a href="Protocols/URLConvertible.html">URLConvertible</a></code> type fails to create a valid <code>URL</code>.</li>
 <li>parameterEncodingFailed:     Returned when a parameter encoding object throws an error during the encoding process.</li>
@@ -338,7 +334,6 @@ their own associated reasons.</p>
 <li>responseValidationFailed:    Returned when a <code>validate()</code> call fails.</li>
 <li>responseSerializationFailed: Returned when a response serializer encounters an error in the serialization process.</li>
 </ul>
-
                         <a href="Enums/AFError.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -382,38 +377,47 @@ their own associated reasons.</p>
                         <p>The <code>ServerTrustPolicy</code> evaluates the server trust generally provided by an <code>NSURLAuthenticationChallenge</code> when
 connecting to a server over a secure HTTPS connection. The policy configuration then evaluates the server trust
 with a given set of criteria to determine whether the server trust is valid and the connection should be made.</p>
-
 <p>Using pinned certificates or public keys for evaluation helps prevent man-in-the-middle (MITM) attacks and other
 vulnerabilities. Applications dealing with sensitive customer data or financial information are strongly encouraged
 to route all communication over an HTTPS connection with pinning enabled.</p>
-
 <ul>
-<li><p>performDefaultEvaluation: Uses the default server trust evaluation while allowing you to control whether to
-                        validate the host provided by the challenge. Applications are encouraged to always
-                        validate the host in production environments to guarantee the validity of the server&rsquo;s
-                        certificate chain.</p></li>
-<li><p>performRevokedEvaluation: Uses the default and revoked server trust evaluations allowing you to control whether to
-                        validate the host provided by the challenge as well as specify the revocation flags for
-                        testing for revoked certificates. Apple platforms did not start testing for revoked
-                        certificates automatically until iOS 10.1, macOS 10.12 and tvOS 10.1 which is
-                        demonstrated in our TLS tests. Applications are encouraged to always validate the host
-                        in production environments to guarantee the validity of the server&rsquo;s certificate chain.</p></li>
-<li><p>pinCertificates:          Uses the pinned certificates to validate the server trust. The server trust is
-                        considered valid if one of the pinned certificates match one of the server certificates.
-                        By validating both the certificate chain and host, certificate pinning provides a very
-                        secure form of server trust validation mitigating most, if not all, MITM attacks.
-                        Applications are encouraged to always validate the host and require a valid certificate
-                        chain in production environments.</p></li>
-<li><p>pinPublicKeys:            Uses the pinned public keys to validate the server trust. The server trust is considered
-                        valid if one of the pinned public keys match one of the server certificate public keys.
-                        By validating both the certificate chain and host, public key pinning provides a very
-                        secure form of server trust validation mitigating most, if not all, MITM attacks.
-                        Applications are encouraged to always validate the host and require a valid certificate
-                        chain in production environments.</p></li>
-<li><p>disableEvaluation:        Disables all evaluation which in turn will always consider any server trust as valid.</p></li>
-<li><p>customEvaluation:         Uses the associated closure to evaluate the validity of the server trust.</p></li>
+<li>
+<p>performDefaultEvaluation: Uses the default server trust evaluation while allowing you to control whether to
+validate the host provided by the challenge. Applications are encouraged to always
+validate the host in production environments to guarantee the validity of the server’s
+certificate chain.</p>
+</li>
+<li>
+<p>performRevokedEvaluation: Uses the default and revoked server trust evaluations allowing you to control whether to
+validate the host provided by the challenge as well as specify the revocation flags for
+testing for revoked certificates. Apple platforms did not start testing for revoked
+certificates automatically until iOS 10.1, macOS 10.12 and tvOS 10.1 which is
+demonstrated in our TLS tests. Applications are encouraged to always validate the host
+in production environments to guarantee the validity of the server’s certificate chain.</p>
+</li>
+<li>
+<p>pinCertificates:          Uses the pinned certificates to validate the server trust. The server trust is
+considered valid if one of the pinned certificates match one of the server certificates.
+By validating both the certificate chain and host, certificate pinning provides a very
+secure form of server trust validation mitigating most, if not all, MITM attacks.
+Applications are encouraged to always validate the host and require a valid certificate
+chain in production environments.</p>
+</li>
+<li>
+<p>pinPublicKeys:            Uses the pinned public keys to validate the server trust. The server trust is considered
+valid if one of the pinned public keys match one of the server certificate public keys.
+By validating both the certificate chain and host, public key pinning provides a very
+secure form of server trust validation mitigating most, if not all, MITM attacks.
+Applications are encouraged to always validate the host and require a valid certificate
+chain in production environments.</p>
+</li>
+<li>
+<p>disableEvaluation:        Disables all evaluation which in turn will always consider any server trust as valid.</p>
+</li>
+<li>
+<p>customEvaluation:         Uses the associated closure to evaluate the validity of the server trust.</p>
+</li>
 </ul>
-
                         <a href="Enums/ServerTrustPolicy.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -448,14 +452,16 @@ to route all communication over an HTTPS connection with pinning enabled.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Used to represent whether a request was successful or encountered an error.</p>
-
 <ul>
-<li><p>success: The request and all post processing operations were successful resulting in the serialization of the
-       provided associated value.</p></li>
-<li><p>failure: The request encountered an error resulting in a failure. The associated values are the original data
-       provided by the server as well as the error that caused the failure.</p></li>
+<li>
+<p>success: The request and all post processing operations were successful resulting in the serialization of the
+provided associated value.</p>
+</li>
+<li>
+<p>failure: The request encountered an error resulting in a failure. The associated values are the original data
+provided by the server as well as the error that caused the failure.</p>
+</li>
 </ul>
-
                         <a href="Enums/Result.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -477,7 +483,7 @@ to route all communication over an HTTPS connection with pinning enabled.</p>
           </section>
         </section>
         <section id="footer">
-          <p>&copy; YYYY <a class="link" href="https://nshipster.com/alamofire" target="_blank" rel="external">Alamofire</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
+          <p>© YYYY <a class="link" href="https://nshipster.com/alamofire target="_blank" rel="external">Alamofire</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
           <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
         </section>
       </article>

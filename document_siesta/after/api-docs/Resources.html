@@ -261,19 +261,15 @@
                       <div class="abstract">
                         <p>A set of logically connected RESTful resources. Resources within a service share caching, configuration, and a
 “same URL → same resource” uniqueness guarantee.</p>
-
 <p>You will typically create a separate instance of <code>Service</code> for each REST API you use. You can either subclass
 <code>Service</code> or encapsulte it inside a wrapper. Regardless, to reap the benefits of Siesta, you’ll want to ensure that
 all the observers of an API share a single instance.</p>
-
 <p>You can optionally specify a <code>baseURL</code>, which allows you to get endpoints by path: <code>service.resource(&quot;/foo&quot;)</code>.
 Specifying a <code>baseURL</code> does <em>not</em> limit the service only to subpaths of that URL. Its one and only purpose is to be
 the starting point for <code>resource(_:)</code>.</p>
-
 <p>Note that <code>baseURL</code> is only a convenience, and is optional.
 If you want to group multiple base URLs in a single <code>Service</code> instance, use <code>resource(baseURL:path:)</code>.
 If you want to feed your service arbitrary URLs with no common root, use <code>resource(absoluteURL:)</code>.</p>
-
                         <a href="Classes/Service.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -305,18 +301,14 @@ If you want to feed your service arbitrary URLs with no common root, use <code>r
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>An in-memory cache of a RESTful resource, plus information about the status of network requests related to it.</p>
-
 <p>This class answers three basic questions about a resource:</p>
-
 <ul>
 <li>What is the latest data for the resource this device has retrieved, if any?</li>
 <li>Did the last attempt to load it result in an error?</li>
 <li>Is there a request in progress?</li>
 </ul>
-
 <p>…and allows multiple observer to register to be notified whenever the answers to any of these
 questions changes.</p>
-
                         <a href="Classes/Resource.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -349,9 +341,7 @@ questions changes.</p>
                       <div class="abstract">
                         <p>An <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec7.html#">HTTP entity</a>. Consists of data content plus metadata about
 the content’s type and freshness.</p>
-
 <p>Typically extracted from an HTTP message body.</p>
-
                         <a href="Structs/Entity.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -379,17 +369,14 @@ the content’s type and freshness.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Mixin that provides convenience accessors for the content of an optional contained entity.</p>
-
 <p>Allows you to replace the following:</p>
 <pre class="highlight swift"><code><span class="n">resource</span><span class="o">.</span><span class="n">latestData</span><span class="p">?</span><span class="o">.</span><span class="n">content</span> <span class="k">as?</span> <span class="kt">String</span>
 <span class="p">(</span><span class="n">resource</span><span class="o">.</span><span class="n">latestError</span><span class="p">?</span><span class="o">.</span><span class="n">entity</span><span class="p">?</span><span class="o">.</span><span class="n">content</span> <span class="k">as?</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span><span class="kt">AnyObject</span><span class="p">])?[</span><span class="s">"error.detail"</span><span class="p">]</span>
 </code></pre>
-
 <p>…with:</p>
 <pre class="highlight swift"><code><span class="n">resource</span><span class="o">.</span><span class="n">text</span>
 <span class="n">resource</span><span class="o">.</span><span class="n">latestError</span><span class="p">?</span><span class="o">.</span><span class="n">jsonDict</span><span class="p">[</span><span class="s">"error.detail"</span><span class="p">]</span>
 </code></pre>
-
 <p>You can extend this protocol to provide your own convenience accessors. For example:</p>
 <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">TypedContentAccessors</span> <span class="p">{</span>
   <span class="k">var</span> <span class="nv">doorknob</span><span class="p">:</span> <span class="kt">UIDoorknob</span> <span class="p">{</span>
@@ -397,11 +384,9 @@ the content’s type and freshness.</p>
   <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
-
 <p>Note that the sample code above is <em>only</em> a convenience accessor. It checks whether the entity already has a
 <code>UIDoorknob</code>, but does not do any parsing to put a <code>UIDoorknob</code> there in the first place. You’d need to pair this with
 a custom <code><a href="Protocols/ResponseTransformer.html">ResponseTransformer</a></code> that converts raw doorknob responses to <code>UIDoorknob</code>s.</p>
-
                         <a href="Protocols/TypedContentAccessors.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -433,12 +418,10 @@ a custom <code><a href="Protocols/ResponseTransformer.html">ResponseTransformer<
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Options which control the behavior of a <code><a href="Classes/Resource.html">Resource</a></code>.</p>
-<div class="aside aside-see-also">
-    <p class="aside-title">See also</p>
-    <code><a href="Classes/Service.html#/s:6Siesta7ServiceC9configureyAA31ConfigurationPatternConvertible_p_SayAA13RequestMethodOGSg14requestMethodsSSSg11descriptionyAA0D0Vzc10configurertF">Service.configure(...)</a></code>
-
+<div class="aside aside-seealso">
+<p class="aside-title">Seealso</p>
+<p><code><a href="Classes/Service.html#/s:6Siesta7ServiceC9configureyAA31ConfigurationPatternConvertible_p_SayAA13RequestMethodOGSg14requestMethodsSSSg11descriptionyAA0D0Vzc10configurertF">Service.configure(...)</a></code></p>
 </div>
-
                         <a href="Structs/Configuration.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -470,25 +453,20 @@ a custom <code><a href="Protocols/ResponseTransformer.html">ResponseTransformer<
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>A type that can serve as a URL matcher for service configuration.</p>
-
 <p>Siesta provides implementations of this protocol for <code>String</code> (for glob-based matching) and <code><a href="Classes/Resource.html">Resource</a></code> (to configure
 one specific resource).</p>
-<div class="aside aside-see-also">
-    <p class="aside-title">See also</p>
-    <code><a href="Classes/Service.html#/s:6Siesta7ServiceC9configureyAA31ConfigurationPatternConvertible_p_SayAA13RequestMethodOGSg14requestMethodsSSSg11descriptionyAA0D0Vzc10configurertF">Service.configure(...)</a></code>
-
+<div class="aside aside-seealso">
+<p class="aside-title">Seealso</p>
+<p><code><a href="Classes/Service.html#/s:6Siesta7ServiceC9configureyAA31ConfigurationPatternConvertible_p_SayAA13RequestMethodOGSg14requestMethodsSSSg11descriptionyAA0D0Vzc10configurertF">Service.configure(...)</a></code></p>
 </div>
-<div class="aside aside-see-also">
-    <p class="aside-title">See also</p>
-    <code><a href="Extensions/String.html#/s:SS6SiestaE20configurationPatternSb10Foundation3URLVcAA7ServiceC3for_tF">String.configurationPattern(for:)</a></code>
-
+<div class="aside aside-seealso">
+<p class="aside-title">Seealso</p>
+<p><code><a href="Extensions/String.html#/s:SS6SiestaE20configurationPatternSb10Foundation3URLVcAA7ServiceC3for_tF">String.configurationPattern(for:)</a></code></p>
 </div>
-<div class="aside aside-see-also">
-    <p class="aside-title">See also</p>
-    <code><a href="Classes/Resource.html#/c:@CM@Siesta@objc(cs)BOSResource(im)configurationPatternFor:">Resource.configurationPattern(for:)</a></code>
-
+<div class="aside aside-seealso">
+<p class="aside-title">Seealso</p>
+<p><code><a href="Classes/Resource.html#/c:@CM@Siesta@objc(cs)BOSResource(im)configurationPatternFor:">Resource.configurationPattern(for:)</a></code></p>
 </div>
-
                         <a href="Protocols/ConfigurationPatternConvertible.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
@@ -510,7 +488,7 @@ one specific resource).</p>
       </article>
     </div>
     <section class="footer">
-      <p>© 2016 <a class="link" href="http://bustoutsolutions.com" target="_blank" rel="external">Bust Out Solutions</a> under <a class="link" href="https://github.com/bustoutsolutions/siesta/blob/master/LICENSE" target="_blank" rel="external">open source license</a>.</p>
+      <p>© 2016 <a class="link" href="http://bustoutsolutions.com target="_blank" rel="external">Bust Out Solutions</a> under <a class="link" href="https://github.com/bustoutsolutions/siesta/blob/master/LICENSE target="_blank" rel="external">open source license</a>.</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="http://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>
