@@ -391,7 +391,7 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">count</span><span class="p">:</span> <span class="kt">UInt</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">count</span><span class="p">:</span> <span class="nf">UInt</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -426,7 +426,7 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">objectClassName</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">objectClassName</span><span class="p">:</span> <span class="nf">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -461,7 +461,7 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">realm</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMRealm.html">RLMRealm</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">realm</span><span class="p">:</span> <span class="nf">RLMRealm</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -496,7 +496,7 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isInvalidated</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isInvalidated</span><span class="p">:</span> <span class="nf">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1769,20 +1769,20 @@ opportunity for the initial notification to be delivered first. As a
 result, the initial notification will reflect the state of the Realm after
 the write transaction.</p>
 <pre class="highlight objective_c"><code><span class="n">Person</span> <span class="o">*</span><span class="n">person</span> <span class="o">=</span> <span class="p">[[</span><span class="n">Person</span> <span class="nf">allObjectsInRealm</span><span class="p">:</span><span class="n">realm</span><span class="p">]</span> <span class="nf">firstObject</span><span class="p">];</span>
-<span class="n">NSLog</span><span class="p">(</span><span class="s">@"person.dogs.count: %zu"</span><span class="p">,</span> <span class="n">person</span><span class="p">.</span><span class="n">dogs</span><span class="p">.</span><span class="n">count</span><span class="p">);</span> <span class="c1">// =&gt; 0
-</span><span class="n">self</span><span class="p">.</span><span class="n">token</span> <span class="o">=</span> <span class="p">[</span><span class="n">person</span><span class="p">.</span><span class="n">dogs</span> <span class="n">addNotificationBlock</span><span class="p">(</span><span class="n">RLMArray</span><span class="o">&lt;</span><span class="n">Dog</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">dogs</span><span class="p">,</span>
+<span class="n">NSLog</span><span class="p">(</span><span class="s">@"person.dogs.count: %zu"</span><span class="p">,</span> <span class="n">person</span><span class="p">.</span><span class="n">dogs</span><span class="p">.</span><span class="n">count</span><span class="p">);</span> <span class="c1">// =&gt; 0</span>
+<span class="n">self</span><span class="p">.</span><span class="n">token</span> <span class="o">=</span> <span class="p">[</span><span class="n">person</span><span class="p">.</span><span class="n">dogs</span> <span class="n">addNotificationBlock</span><span class="p">(</span><span class="n">RLMArray</span><span class="o">&lt;</span><span class="n">Dog</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="n">dogs</span><span class="p">,</span>
                                                <span class="n">RLMCollectionChange</span> <span class="o">*</span><span class="n">changes</span><span class="p">,</span>
                                                <span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
-    <span class="c1">// Only fired once for the example
-</span>    <span class="n">NSLog</span><span class="p">(</span><span class="s">@"dogs.count: %zu"</span><span class="p">,</span> <span class="n">dogs</span><span class="p">.</span><span class="n">count</span><span class="p">)</span> <span class="c1">// =&gt; 1
-</span><span class="p">}];</span>
+    <span class="c1">// Only fired once for the example</span>
+    <span class="n">NSLog</span><span class="p">(</span><span class="s">@"dogs.count: %zu"</span><span class="p">,</span> <span class="n">dogs</span><span class="p">.</span><span class="n">count</span><span class="p">)</span> <span class="c1">// =&gt; 1</span>
+<span class="p">}];</span>
 <span class="p">[</span><span class="n">realm</span> <span class="nf">transactionWithBlock</span><span class="p">:</span><span class="o">^</span><span class="p">{</span>
     <span class="n">Dog</span> <span class="o">*</span><span class="n">dog</span> <span class="o">=</span> <span class="p">[[</span><span class="n">Dog</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">init</span><span class="p">];</span>
     <span class="n">dog</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="s">@"Rex"</span><span class="p">;</span>
     <span class="p">[</span><span class="n">person</span><span class="p">.</span><span class="n">dogs</span> <span class="nf">addObject</span><span class="p">:</span><span class="n">dog</span><span class="p">];</span>
 <span class="p">}];</span>
-<span class="c1">// end of run loop execution context
-</span></code></pre>
+<span class="c1">// end of run loop execution context</span>
+</code></pre>
 
 <p>You must retain the returned token for as long as you want updates to continue
 to be sent to the block. To stop receiving updates, call <code>-stop</code> on the token.</p>

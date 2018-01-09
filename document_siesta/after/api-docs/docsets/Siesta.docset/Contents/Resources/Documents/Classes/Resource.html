@@ -705,8 +705,8 @@ configuration, then reapplies your <code>RequestMutation</code>.</p>
 
 <p>Handle the result of the request by attaching response handlers:</p>
 <pre class="highlight swift"><code><span class="n">resource</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="k">get</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">onSuccess</span> <span class="p">{</span> <span class="o">...</span> <span class="p">}</span>
-    <span class="o">.</span><span class="n">onFailure</span> <span class="p">{</span> <span class="o">...</span> <span class="p">}</span>
+    <span class="o">.</span><span class="nf">onSuccess</span> <span class="p">{</span> <span class="o">...</span> <span class="p">}</span>
+    <span class="o">.</span><span class="nf">onFailure</span> <span class="p">{</span> <span class="o">...</span> <span class="p">}</span>
 </code></pre>
 
 <p>See <code><a href="../Protocols/Request.html">Request</a></code> for a complete list of hooks.</p>
@@ -1040,17 +1040,17 @@ views a chance to express interest in it before canceling any requests.</p>
 but which still changes the state of the resource. You could handle this by initiating a refresh immedately
 after success:</p>
 <pre class="highlight swift"><code><span class="n">resource</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="n">post</span><span class="p">,</span> <span class="nv">json</span><span class="p">:</span> <span class="p">[</span><span class="s">"name"</span><span class="p">:</span> <span class="s">"Fred"</span><span class="p">])</span>
-  <span class="o">.</span><span class="n">onSuccess</span> <span class="p">{</span> <span class="n">_</span> <span class="k">in</span> <span class="n">resource</span><span class="o">.</span><span class="nf">load</span><span class="p">()</span> <span class="p">}</span>
+  <span class="o">.</span><span class="nf">onSuccess</span> <span class="p">{</span> <span class="n">_</span> <span class="k">in</span> <span class="n">resource</span><span class="o">.</span><span class="nf">load</span><span class="p">()</span> <span class="p">}</span>
 </code></pre>
 
 <p>However, if you already <em>know</em> the resulting state of the resource given a success response, you can avoid the
 second network call by updating the entity yourself:</p>
 <pre class="highlight swift"><code><span class="n">resource</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="n">post</span><span class="p">,</span> <span class="nv">json</span><span class="p">:</span> <span class="p">[</span><span class="s">"name"</span><span class="p">:</span> <span class="s">"Fred"</span><span class="p">])</span>
-  <span class="o">.</span><span class="n">onSuccess</span> <span class="p">{</span>
+  <span class="o">.</span><span class="nf">onSuccess</span> <span class="p">{</span>
       <span class="n">partialEntity</span> <span class="k">in</span>
 
       <span class="c1">// Make a mutable copy of the current content</span>
-      <span class="k">guard</span> <span class="n">resource</span><span class="o">.</span><span class="n">latestData</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="k">else</span> <span class="p">{</span>
+      <span class="k">guard</span> <span class="n">resource</span><span class="o">.</span><span class="n">latestData</span> <span class="o">!=</span> <span class="kc">nil</span> <span class="nf">else</span> <span class="p">{</span>
           <span class="n">resource</span><span class="o">.</span><span class="nf">load</span><span class="p">()</span>  <span class="c1">// No existing entity to update, so refresh</span>
           <span class="k">return</span>
       <span class="p">}</span>

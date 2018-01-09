@@ -515,7 +515,7 @@ occurs, at which point they are summarily evicted.</p>
                         <p>Applies configuration to resources whose URLs match a given pattern.</p>
 
 <p>Examples:</p>
-<pre class="highlight swift"><code><span class="n">configure</span> <span class="p">{</span> <span class="nv">$0</span><span class="o">.</span><span class="n">expirationTime</span> <span class="o">=</span> <span class="mi">10</span> <span class="p">}</span>  <span class="c1">// global default</span>
+<pre class="highlight swift"><code><span class="nf">configure</span> <span class="p">{</span> <span class="nv">$0</span><span class="o">.</span><span class="n">expirationTime</span> <span class="o">=</span> <span class="mi">10</span> <span class="p">}</span>  <span class="c1">// global default</span>
 
 <span class="nf">configure</span><span class="p">(</span><span class="s">"/items"</span><span class="p">)</span>    <span class="p">{</span> <span class="nv">$0</span><span class="o">.</span><span class="n">expirationTime</span> <span class="o">=</span> <span class="mi">5</span> <span class="p">}</span>
 <span class="nf">configure</span><span class="p">(</span><span class="s">"/items/​*"</span><span class="p">)</span>  <span class="p">{</span> <span class="nv">$0</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s">"Funkiness"</span><span class="p">]</span> <span class="o">=</span> <span class="s">"Very"</span> <span class="p">}</span>
@@ -700,7 +700,7 @@ for pattern-based matching, and for details about the parameters.</p>
 
 <p>Useful for transformers that create model objects. For example:</p>
 <pre class="highlight swift"><code><span class="nf">configureTransformer</span><span class="p">(</span><span class="s">"/foo/​*"</span><span class="p">)</span> <span class="p">{</span>
-  <span class="kt">FooModel</span><span class="p">(</span><span class="nv">json</span><span class="p">:</span> <span class="nv">$0</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+  <span class="nf">FooModel</span><span class="p">(</span><span class="nv">json</span><span class="p">:</span> <span class="nv">$0</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre>
 
@@ -773,13 +773,13 @@ if you do anything that would change the result of a configuration closure, you 
 You only need to call it if one of the previously passed closures will now behave differently.</p>
 
 <p>For example, to make a header track the value of a modifiable property:</p>
-<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">flavor</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span>
-  <span class="k">didSet</span> <span class="p">{</span> <span class="nf">invalidateConfiguration</span><span class="p">()</span> <span class="p">}</span>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">flavor</span><span class="p">:</span> <span class="nf">String</span><span class="p">?</span> <span class="p">{</span>
+  <span class="nf">didSet</span> <span class="p">{</span> <span class="nf">invalidateConfiguration</span><span class="p">()</span> <span class="p">}</span>
 <span class="p">}</span>
 
 <span class="nf">init</span><span class="p">()</span> <span class="p">{</span>
   <span class="k">super</span><span class="o">.</span><span class="nf">init</span><span class="p">(</span><span class="nv">baseURL</span><span class="p">:</span> <span class="s">"https://api.github.com"</span><span class="p">)</span>
-  <span class="n">configure</span> <span class="p">{</span>
+  <span class="nf">configure</span> <span class="p">{</span>
     <span class="nv">$0</span><span class="o">.</span><span class="n">headers</span><span class="p">[</span><span class="s">"Flavor-of-the-month"</span><span class="p">]</span> <span class="o">=</span> <span class="k">self</span><span class="o">.</span><span class="n">flavor</span>  <span class="c1">// NB: use weak self if service isn’t a singleton</span>
   <span class="p">}</span>
 <span class="p">}</span>

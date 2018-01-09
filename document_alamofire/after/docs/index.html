@@ -365,7 +365,7 @@
 <h3 id='cocoapods' class='heading'>CocoaPods</h3>
 
 <p><a href="http://cocoapods.org">CocoaPods</a> is a dependency manager for Cocoa projects. You can install it with the following command:</p>
-<pre class="highlight shell"><code><span class="nv">$ </span>gem install cocoapods
+<pre class="highlight shell"><code><span class="nv">$ </span>gem <span class="nb">install </span>cocoapods
 </code></pre>
 
 <blockquote>
@@ -383,7 +383,7 @@
 </code></pre>
 
 <p>Then, run the following command:</p>
-<pre class="highlight shell"><code><span class="nv">$ </span>pod install
+<pre class="highlight shell"><code><span class="nv">$ </span>pod <span class="nb">install</span>
 </code></pre>
 <h3 id='carthage' class='heading'>Carthage</h3>
 
@@ -391,7 +391,7 @@
 
 <p>You can install Carthage with <a href="http://brew.sh/">Homebrew</a> using the following command:</p>
 <pre class="highlight shell"><code><span class="nv">$ </span>brew update
-<span class="nv">$ </span>brew install carthage
+<span class="nv">$ </span>brew <span class="nb">install </span>carthage
 </code></pre>
 
 <p>To integrate Alamofire into your Xcode project using Carthage, specify it in your <code>Cartfile</code>:</p>
@@ -405,7 +405,7 @@
 
 <p>Once you have your Swift package set up, adding Alamofire as a dependency is as easy as adding it to the <code>dependencies</code> value of your <code>Package.swift</code>.</p>
 <pre class="highlight swift"><code><span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
-    <span class="o">.</span><span class="kt">Package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/Alamofire/Alamofire.git"</span><span class="p">,</span> <span class="nv">majorVersion</span><span class="p">:</span> <span class="mi">4</span><span class="p">)</span>
+    <span class="o">.</span><span class="nf">Package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/Alamofire/Alamofire.git"</span><span class="p">,</span> <span class="nv">majorVersion</span><span class="p">:</span> <span class="mi">4</span><span class="p">)</span>
 <span class="p">]</span>
 </code></pre>
 <h3 id='manually' class='heading'>Manually</h3>
@@ -462,13 +462,13 @@
 <h3 id='response-handling' class='heading'>Response Handling</h3>
 
 <p>Handling the <code>Response</code> of a <code><a href="Classes/Request.html">Request</a></code> made in Alamofire involves chaining a response handler onto the <code><a href="Classes/Request.html">Request</a></code>.</p>
-<pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://httpbin.org/get"</span><span class="p">)</span><span class="o">.</span><span class="n">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+<pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://httpbin.org/get"</span><span class="p">)</span><span class="o">.</span><span class="nf">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
     <span class="nf">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">request</span><span class="p">)</span>  <span class="c1">// original URL request</span>
     <span class="nf">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">response</span><span class="p">)</span> <span class="c1">// HTTP URL response</span>
     <span class="nf">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>     <span class="c1">// server data</span>
     <span class="nf">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">result</span><span class="p">)</span>   <span class="c1">// result of response serialization</span>
 
-    <span class="k">if</span> <span class="k">let</span> <span class="nv">JSON</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">value</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="k">let</span> <span class="nv">JSON</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="nf">value</span> <span class="p">{</span>
         <span class="nf">print</span><span class="p">(</span><span class="s">"JSON: </span><span class="se">\(</span><span class="kt">JSON</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -521,12 +521,12 @@
 <h4 id='response-handler' class='heading'>Response Handler</h4>
 
 <p>The <code>response</code> handler does NOT evaluate any of the response data. It merely forwards on all information directly from the URL session delegate. It is the Alamofire equivalent of using <code>cURL</code> to execute a <code><a href="Classes/Request.html">Request</a></code>.</p>
-<pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://httpbin.org/get"</span><span class="p">)</span><span class="o">.</span><span class="n">response</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+<pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://httpbin.org/get"</span><span class="p">)</span><span class="o">.</span><span class="nf">response</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
     <span class="nf">print</span><span class="p">(</span><span class="s">"Request: </span><span class="se">\(</span><span class="n">response</span><span class="o">.</span><span class="n">request</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
     <span class="nf">print</span><span class="p">(</span><span class="s">"Response: </span><span class="se">\(</span><span class="n">response</span><span class="o">.</span><span class="n">response</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
     <span class="nf">print</span><span class="p">(</span><span class="s">"Error: </span><span class="se">\(</span><span class="n">response</span><span class="o">.</span><span class="n">error</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="k">let</span> <span class="nv">utf8Text</span> <span class="o">=</span> <span class="kt">String</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="n">data</span><span class="p">,</span> <span class="nv">encoding</span><span class="p">:</span> <span class="o">.</span><span class="n">utf8</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">data</span><span class="p">,</span> <span class="k">let</span> <span class="nv">utf8Text</span> <span class="o">=</span> <span class="nf">String</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="n">data</span><span class="p">,</span> <span class="nv">encoding</span><span class="p">:</span> <span class="o">.</span><span class="n">utf8</span><span class="p">)</span> <span class="p">{</span>
         <span class="nf">print</span><span class="p">(</span><span class="s">"Data: </span><span class="se">\(</span><span class="n">utf8Text</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -538,10 +538,10 @@
 <h4 id='response-data-handler' class='heading'>Response Data Handler</h4>
 
 <p>The <code>responseData</code> handler uses the <code>responseDataSerializer</code> (the object that serializes the server data into some other type) to extract the <code>Data</code> returned by the server. If no errors occur and <code>Data</code> is returned, the response <code><a href="Enums/Result.html">Result</a></code> will be a <code>.success</code> and the <code>value</code> will be of type <code>Data</code>.</p>
-<pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://httpbin.org/get"</span><span class="p">)</span><span class="o">.</span><span class="n">responseData</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+<pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://httpbin.org/get"</span><span class="p">)</span><span class="o">.</span><span class="nf">responseData</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
     <span class="nf">debugPrint</span><span class="p">(</span><span class="s">"All Response Info: </span><span class="se">\(</span><span class="n">response</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="k">let</span> <span class="nv">utf8Text</span> <span class="o">=</span> <span class="kt">String</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="n">data</span><span class="p">,</span> <span class="nv">encoding</span><span class="p">:</span> <span class="o">.</span><span class="n">utf8</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">value</span><span class="p">,</span> <span class="k">let</span> <span class="nv">utf8Text</span> <span class="o">=</span> <span class="nf">String</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="n">data</span><span class="p">,</span> <span class="nv">encoding</span><span class="p">:</span> <span class="o">.</span><span class="n">utf8</span><span class="p">)</span> <span class="p">{</span>
         <span class="nf">print</span><span class="p">(</span><span class="s">"Data: </span><span class="se">\(</span><span class="n">utf8Text</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -549,7 +549,7 @@
 <h4 id='response-string-handler' class='heading'>Response String Handler</h4>
 
 <p>The <code>responseString</code> handler uses the <code>responseStringSerializer</code> to convert the <code>Data</code> returned by the server into a <code>String</code> with the specified encoding. If no errors occur and the server data is successfully serialized into a <code>String</code>, the response <code><a href="Enums/Result.html">Result</a></code> will be a <code>.success</code> and the <code>value</code> will be of type <code>String</code>.</p>
-<pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://httpbin.org/get"</span><span class="p">)</span><span class="o">.</span><span class="n">responseString</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+<pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://httpbin.org/get"</span><span class="p">)</span><span class="o">.</span><span class="nf">responseString</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
     <span class="nf">print</span><span class="p">(</span><span class="s">"Success: </span><span class="se">\(</span><span class="n">response</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">isSuccess</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
     <span class="nf">print</span><span class="p">(</span><span class="s">"Response String: </span><span class="se">\(</span><span class="n">response</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">value</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
 <span class="p">}</span>
@@ -561,10 +561,10 @@
 <h4 id='response-json-handler' class='heading'>Response JSON Handler</h4>
 
 <p>The <code>responseJSON</code> handler uses the <code>responseJSONSerializer</code> to convert the <code>Data</code> returned by the server into an <code>Any</code> type using the specified <code>JSONSerialization.ReadingOptions</code>. If no errors occur and the server data is successfully serialized into a JSON object, the response <code><a href="Enums/Result.html">Result</a></code> will be a <code>.success</code> and the <code>value</code> will be of type <code>Any</code>.</p>
-<pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://httpbin.org/get"</span><span class="p">)</span><span class="o">.</span><span class="n">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+<pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://httpbin.org/get"</span><span class="p">)</span><span class="o">.</span><span class="nf">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
     <span class="nf">debugPrint</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="k">let</span> <span class="nv">json</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">value</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="k">let</span> <span class="nv">json</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="nf">value</span> <span class="p">{</span>
         <span class="nf">print</span><span class="p">(</span><span class="s">"JSON: </span><span class="se">\(</span><span class="n">json</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -577,10 +577,10 @@
 
 <p>Response handlers can even be chained:</p>
 <pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://httpbin.org/get"</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">responseString</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+    <span class="o">.</span><span class="nf">responseString</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
         <span class="nf">print</span><span class="p">(</span><span class="s">"Response String: </span><span class="se">\(</span><span class="n">response</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">value</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
     <span class="p">}</span>
-    <span class="o">.</span><span class="n">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+    <span class="o">.</span><span class="nf">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
         <span class="nf">print</span><span class="p">(</span><span class="s">"Response JSON: </span><span class="se">\(</span><span class="n">response</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">value</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
     <span class="p">}</span>
 </code></pre>
@@ -604,8 +604,8 @@
 <pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://httpbin.org/get"</span><span class="p">)</span>
     <span class="o">.</span><span class="nf">validate</span><span class="p">(</span><span class="nv">statusCode</span><span class="p">:</span> <span class="mi">200</span><span class="o">..&lt;</span><span class="mi">300</span><span class="p">)</span>
     <span class="o">.</span><span class="nf">validate</span><span class="p">(</span><span class="nv">contentType</span><span class="p">:</span> <span class="p">[</span><span class="s">"application/json"</span><span class="p">])</span>
-    <span class="o">.</span><span class="n">responseData</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
-        <span class="k">switch</span> <span class="n">response</span><span class="o">.</span><span class="n">result</span> <span class="p">{</span>
+    <span class="o">.</span><span class="nf">responseData</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+        <span class="k">switch</span> <span class="n">response</span><span class="o">.</span><span class="nf">result</span> <span class="p">{</span>
         <span class="k">case</span> <span class="o">.</span><span class="nv">success</span><span class="p">:</span>
             <span class="nf">print</span><span class="p">(</span><span class="s">"Validation Successful"</span><span class="p">)</span>
         <span class="k">case</span> <span class="o">.</span><span class="nf">failure</span><span class="p">(</span><span class="k">let</span> <span class="nv">error</span><span class="p">):</span>
@@ -616,8 +616,8 @@
 <h4 id='automatic-validation' class='heading'>Automatic Validation</h4>
 
 <p>Automatically validates status code within <code>200...299</code> range, and that the <code>Content-Type</code> header of the response matches the <code>Accept</code> header of the request, if one is provided.</p>
-<pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://httpbin.org/get"</span><span class="p">)</span><span class="o">.</span><span class="nf">validate</span><span class="p">()</span><span class="o">.</span><span class="n">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
-    <span class="k">switch</span> <span class="n">response</span><span class="o">.</span><span class="n">result</span> <span class="p">{</span>
+<pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://httpbin.org/get"</span><span class="p">)</span><span class="o">.</span><span class="nf">validate</span><span class="p">()</span><span class="o">.</span><span class="nf">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+    <span class="k">switch</span> <span class="n">response</span><span class="o">.</span><span class="nf">result</span> <span class="p">{</span>
     <span class="k">case</span> <span class="o">.</span><span class="nv">success</span><span class="p">:</span>
         <span class="nf">print</span><span class="p">(</span><span class="s">"Validation Successful"</span><span class="p">)</span>
     <span class="k">case</span> <span class="o">.</span><span class="nf">failure</span><span class="p">(</span><span class="k">let</span> <span class="nv">error</span><span class="p">):</span>
@@ -635,7 +635,7 @@
 <h3 id='http-methods' class='heading'>HTTP Methods</h3>
 
 <p>The <code><a href="Enums.html#/s:9Alamofire10HTTPMethodO">HTTPMethod</a></code> enumeration lists the HTTP methods defined in <a href="http://tools.ietf.org/html/rfc7231#section-4.3">RFC 7231 §4.3</a>:</p>
-<pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">HTTPMethod</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span>
+<pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">enum</span> <span class="kt">HTTPMethod</span><span class="p">:</span> <span class="nf">String</span> <span class="p">{</span>
     <span class="k">case</span> <span class="n">options</span> <span class="o">=</span> <span class="s">"OPTIONS"</span>
     <span class="k">case</span> <span class="k">get</span>     <span class="o">=</span> <span class="s">"GET"</span>
     <span class="k">case</span> <span class="n">head</span>    <span class="o">=</span> <span class="s">"HEAD"</span>
@@ -679,7 +679,7 @@
 <span class="c1">// All three of these calls are equivalent</span>
 <span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://httpbin.org/get"</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="n">parameters</span><span class="p">)</span> <span class="c1">// encoding defaults to `URLEncoding.default`</span>
 <span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://httpbin.org/get"</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="n">parameters</span><span class="p">,</span> <span class="nv">encoding</span><span class="p">:</span> <span class="kt">URLEncoding</span><span class="o">.</span><span class="k">default</span><span class="p">)</span>
-<span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://httpbin.org/get"</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="n">parameters</span><span class="p">,</span> <span class="nv">encoding</span><span class="p">:</span> <span class="kt">URLEncoding</span><span class="p">(</span><span class="nv">destination</span><span class="p">:</span> <span class="o">.</span><span class="n">methodDependent</span><span class="p">))</span>
+<span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://httpbin.org/get"</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="n">parameters</span><span class="p">,</span> <span class="nv">encoding</span><span class="p">:</span> <span class="nf">URLEncoding</span><span class="p">(</span><span class="nv">destination</span><span class="p">:</span> <span class="o">.</span><span class="n">methodDependent</span><span class="p">))</span>
 
 <span class="c1">// https://httpbin.org/get?foo=bar</span>
 </code></pre>
@@ -714,7 +714,7 @@
 
 <span class="c1">// Both calls are equivalent</span>
 <span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://httpbin.org/post"</span><span class="p">,</span> <span class="nv">method</span><span class="p">:</span> <span class="o">.</span><span class="n">post</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="n">parameters</span><span class="p">,</span> <span class="nv">encoding</span><span class="p">:</span> <span class="kt">JSONEncoding</span><span class="o">.</span><span class="k">default</span><span class="p">)</span>
-<span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://httpbin.org/post"</span><span class="p">,</span> <span class="nv">method</span><span class="p">:</span> <span class="o">.</span><span class="n">post</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="n">parameters</span><span class="p">,</span> <span class="nv">encoding</span><span class="p">:</span> <span class="kt">JSONEncoding</span><span class="p">(</span><span class="nv">options</span><span class="p">:</span> <span class="p">[]))</span>
+<span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://httpbin.org/post"</span><span class="p">,</span> <span class="nv">method</span><span class="p">:</span> <span class="o">.</span><span class="n">post</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="n">parameters</span><span class="p">,</span> <span class="nv">encoding</span><span class="p">:</span> <span class="nf">JSONEncoding</span><span class="p">(</span><span class="nv">options</span><span class="p">:</span> <span class="p">[]))</span>
 
 <span class="c1">// HTTP body: {"foo": [1, 2, 3], "bar": {"baz": "qux"}}</span>
 </code></pre>
@@ -724,19 +724,19 @@
 <h4 id='custom-encoding' class='heading'>Custom Encoding</h4>
 
 <p>In the event that the provided <code><a href="Protocols/ParameterEncoding.html">ParameterEncoding</a></code> types do not meet your needs, you can create your own custom encoding. Here&rsquo;s a quick example of how you could build a custom <code>JSONStringArrayEncoding</code> type to encode a JSON string array onto a <code><a href="Classes/Request.html">Request</a></code>.</p>
-<pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">JSONStringArrayEncoding</span><span class="p">:</span> <span class="kt">ParameterEncoding</span> <span class="p">{</span>
+<pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">JSONStringArrayEncoding</span><span class="p">:</span> <span class="nf">ParameterEncoding</span> <span class="p">{</span>
     <span class="kd">private</span> <span class="k">let</span> <span class="nv">array</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]</span>
 
     <span class="nf">init</span><span class="p">(</span><span class="nv">array</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">])</span> <span class="p">{</span>
         <span class="k">self</span><span class="o">.</span><span class="n">array</span> <span class="o">=</span> <span class="n">array</span>
     <span class="p">}</span>
 
-    <span class="kd">func</span> <span class="nf">encode</span><span class="p">(</span><span class="n">_</span> <span class="nv">urlRequest</span><span class="p">:</span> <span class="kt">URLRequestConvertible</span><span class="p">,</span> <span class="n">with</span> <span class="nv">parameters</span><span class="p">:</span> <span class="kt">Parameters</span><span class="p">?)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">URLRequest</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">encode</span><span class="p">(</span><span class="n">_</span> <span class="nv">urlRequest</span><span class="p">:</span> <span class="kt">URLRequestConvertible</span><span class="p">,</span> <span class="n">with</span> <span class="nv">parameters</span><span class="p">:</span> <span class="kt">Parameters</span><span class="p">?)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="nf">URLRequest</span> <span class="p">{</span>
         <span class="k">var</span> <span class="nv">urlRequest</span> <span class="o">=</span> <span class="n">urlRequest</span><span class="o">.</span><span class="n">urlRequest</span>
 
         <span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">JSONSerialization</span><span class="o">.</span><span class="nf">data</span><span class="p">(</span><span class="nv">withJSONObject</span><span class="p">:</span> <span class="n">array</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="p">[])</span>
 
-        <span class="k">if</span> <span class="n">urlRequest</span><span class="o">.</span><span class="nf">value</span><span class="p">(</span><span class="nv">forHTTPHeaderField</span><span class="p">:</span> <span class="s">"Content-Type"</span><span class="p">)</span> <span class="o">==</span> <span class="kc">nil</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="n">urlRequest</span><span class="o">.</span><span class="nf">value</span><span class="p">(</span><span class="nv">forHTTPHeaderField</span><span class="p">:</span> <span class="s">"Content-Type"</span><span class="p">)</span> <span class="o">==</span> <span class="nf">nil</span> <span class="p">{</span>
             <span class="n">urlRequest</span><span class="o">.</span><span class="nf">setValue</span><span class="p">(</span><span class="s">"application/json"</span><span class="p">,</span> <span class="nv">forHTTPHeaderField</span><span class="p">:</span> <span class="s">"Content-Type"</span><span class="p">)</span>
         <span class="p">}</span>
 
@@ -749,8 +749,8 @@
 <h4 id='manual-parameter-encoding-of-a-urlrequest' class='heading'>Manual Parameter Encoding of a URLRequest</h4>
 
 <p>The <code><a href="Protocols/ParameterEncoding.html">ParameterEncoding</a></code> APIs can be used outside of making network requests.</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">url</span> <span class="o">=</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"https://httpbin.org/get"</span><span class="p">)</span><span class="o">!</span>
-<span class="k">var</span> <span class="nv">urlRequest</span> <span class="o">=</span> <span class="kt">URLRequest</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="n">url</span><span class="p">)</span>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">url</span> <span class="o">=</span> <span class="nf">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"https://httpbin.org/get"</span><span class="p">)</span><span class="o">!</span>
+<span class="k">var</span> <span class="nv">urlRequest</span> <span class="o">=</span> <span class="nf">URLRequest</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="n">url</span><span class="p">)</span>
 
 <span class="k">let</span> <span class="nv">parameters</span><span class="p">:</span> <span class="kt">Parameters</span> <span class="o">=</span> <span class="p">[</span><span class="s">"foo"</span><span class="p">:</span> <span class="s">"bar"</span><span class="p">]</span>
 <span class="k">let</span> <span class="nv">encodedURLRequest</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">URLEncoding</span><span class="o">.</span><span class="n">queryString</span><span class="o">.</span><span class="nf">encode</span><span class="p">(</span><span class="n">urlRequest</span><span class="p">,</span> <span class="nv">with</span><span class="p">:</span> <span class="n">parameters</span><span class="p">)</span>
@@ -763,7 +763,7 @@
     <span class="s">"Accept"</span><span class="p">:</span> <span class="s">"application/json"</span>
 <span class="p">]</span>
 
-<span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://httpbin.org/headers"</span><span class="p">,</span> <span class="nv">headers</span><span class="p">:</span> <span class="n">headers</span><span class="p">)</span><span class="o">.</span><span class="n">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+<span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://httpbin.org/headers"</span><span class="p">,</span> <span class="nv">headers</span><span class="p">:</span> <span class="n">headers</span><span class="p">)</span><span class="o">.</span><span class="nf">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
     <span class="nf">debugPrint</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre>
@@ -801,7 +801,7 @@
 
 <span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://httpbin.org/basic-auth/</span><span class="se">\(</span><span class="n">user</span><span class="se">)</span><span class="s">/</span><span class="se">\(</span><span class="n">password</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
     <span class="o">.</span><span class="nf">authenticate</span><span class="p">(</span><span class="nv">user</span><span class="p">:</span> <span class="n">user</span><span class="p">,</span> <span class="nv">password</span><span class="p">:</span> <span class="n">password</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+    <span class="o">.</span><span class="nf">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
         <span class="nf">debugPrint</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
     <span class="p">}</span>
 </code></pre>
@@ -817,7 +817,7 @@
 <span class="p">}</span>
 
 <span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://httpbin.org/basic-auth/user/password"</span><span class="p">,</span> <span class="nv">headers</span><span class="p">:</span> <span class="n">headers</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+    <span class="o">.</span><span class="nf">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
         <span class="nf">debugPrint</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
     <span class="p">}</span>
 </code></pre>
@@ -825,11 +825,11 @@
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">user</span> <span class="o">=</span> <span class="s">"user"</span>
 <span class="k">let</span> <span class="nv">password</span> <span class="o">=</span> <span class="s">"password"</span>
 
-<span class="k">let</span> <span class="nv">credential</span> <span class="o">=</span> <span class="kt">URLCredential</span><span class="p">(</span><span class="nv">user</span><span class="p">:</span> <span class="n">user</span><span class="p">,</span> <span class="nv">password</span><span class="p">:</span> <span class="n">password</span><span class="p">,</span> <span class="nv">persistence</span><span class="p">:</span> <span class="o">.</span><span class="n">forSession</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">credential</span> <span class="o">=</span> <span class="nf">URLCredential</span><span class="p">(</span><span class="nv">user</span><span class="p">:</span> <span class="n">user</span><span class="p">,</span> <span class="nv">password</span><span class="p">:</span> <span class="n">password</span><span class="p">,</span> <span class="nv">persistence</span><span class="p">:</span> <span class="o">.</span><span class="n">forSession</span><span class="p">)</span>
 
 <span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://httpbin.org/basic-auth/</span><span class="se">\(</span><span class="n">user</span><span class="se">)</span><span class="s">/</span><span class="se">\(</span><span class="n">password</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
     <span class="o">.</span><span class="nf">authenticate</span><span class="p">(</span><span class="nv">usingCredential</span><span class="p">:</span> <span class="n">credential</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+    <span class="o">.</span><span class="nf">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
         <span class="nf">debugPrint</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
     <span class="p">}</span>
 </code></pre>
@@ -844,9 +844,9 @@
 <blockquote>
 <p>This will only work on <code>macOS</code> as is. Other platforms don&rsquo;t allow access to the filesystem outside of your app&rsquo;s sandbox. To download files on other platforms, see the <a href="#download-file-destination">Download File Destination</a> section.</p>
 </blockquote>
-<pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">download</span><span class="p">(</span><span class="s">"https://httpbin.org/image/png"</span><span class="p">)</span><span class="o">.</span><span class="n">responseData</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
-    <span class="k">if</span> <span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">value</span> <span class="p">{</span>
-        <span class="k">let</span> <span class="nv">image</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="n">data</span><span class="p">)</span>
+<pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">download</span><span class="p">(</span><span class="s">"https://httpbin.org/image/png"</span><span class="p">)</span><span class="o">.</span><span class="nf">responseData</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+    <span class="k">if</span> <span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="nf">value</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">image</span> <span class="o">=</span> <span class="nf">UIImage</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="n">data</span><span class="p">)</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
@@ -869,11 +869,11 @@
     <span class="nf">return</span> <span class="p">(</span><span class="n">fileURL</span><span class="p">,</span> <span class="p">[</span><span class="o">.</span><span class="n">removePreviousFile</span><span class="p">,</span> <span class="o">.</span><span class="n">createIntermediateDirectories</span><span class="p">])</span>
 <span class="p">}</span>
 
-<span class="kt">Alamofire</span><span class="o">.</span><span class="nf">download</span><span class="p">(</span><span class="n">urlString</span><span class="p">,</span> <span class="nv">to</span><span class="p">:</span> <span class="n">destination</span><span class="p">)</span><span class="o">.</span><span class="n">response</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+<span class="kt">Alamofire</span><span class="o">.</span><span class="nf">download</span><span class="p">(</span><span class="n">urlString</span><span class="p">,</span> <span class="nv">to</span><span class="p">:</span> <span class="n">destination</span><span class="p">)</span><span class="o">.</span><span class="nf">response</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
     <span class="nf">print</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">error</span> <span class="o">==</span> <span class="kc">nil</span><span class="p">,</span> <span class="k">let</span> <span class="nv">imagePath</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">destinationURL</span><span class="p">?</span><span class="o">.</span><span class="n">path</span> <span class="p">{</span>
-        <span class="k">let</span> <span class="nv">image</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="p">(</span><span class="nv">contentsOfFile</span><span class="p">:</span> <span class="n">imagePath</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">response</span><span class="o">.</span><span class="n">error</span> <span class="o">==</span> <span class="kc">nil</span><span class="p">,</span> <span class="k">let</span> <span class="nv">imagePath</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">destinationURL</span><span class="p">?</span><span class="o">.</span><span class="nf">path</span> <span class="p">{</span>
+        <span class="k">let</span> <span class="nv">image</span> <span class="o">=</span> <span class="nf">UIImage</span><span class="p">(</span><span class="nv">contentsOfFile</span><span class="p">:</span> <span class="n">imagePath</span><span class="p">)</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
@@ -886,12 +886,12 @@
 
 <p>Many times it can be helpful to report download progress to the user. Any <code><a href="Classes/DownloadRequest.html">DownloadRequest</a></code> can report download progress using the <code>downloadProgress</code> API.</p>
 <pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">download</span><span class="p">(</span><span class="s">"https://httpbin.org/image/png"</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">downloadProgress</span> <span class="p">{</span> <span class="n">progress</span> <span class="k">in</span>
+    <span class="o">.</span><span class="nf">downloadProgress</span> <span class="p">{</span> <span class="n">progress</span> <span class="k">in</span>
         <span class="nf">print</span><span class="p">(</span><span class="s">"Download Progress: </span><span class="se">\(</span><span class="n">progress</span><span class="o">.</span><span class="n">fractionCompleted</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
     <span class="p">}</span>
-    <span class="o">.</span><span class="n">responseData</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
-        <span class="k">if</span> <span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">value</span> <span class="p">{</span>
-            <span class="k">let</span> <span class="nv">image</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="n">data</span><span class="p">)</span>
+    <span class="o">.</span><span class="nf">responseData</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+        <span class="k">if</span> <span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="nf">value</span> <span class="p">{</span>
+            <span class="k">let</span> <span class="nv">image</span> <span class="o">=</span> <span class="nf">UIImage</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="n">data</span><span class="p">)</span>
         <span class="p">}</span>
     <span class="p">}</span>
 </code></pre>
@@ -903,9 +903,9 @@
     <span class="o">.</span><span class="nf">downloadProgress</span><span class="p">(</span><span class="nv">queue</span><span class="p">:</span> <span class="n">utilityQueue</span><span class="p">)</span> <span class="p">{</span> <span class="n">progress</span> <span class="k">in</span>
         <span class="nf">print</span><span class="p">(</span><span class="s">"Download Progress: </span><span class="se">\(</span><span class="n">progress</span><span class="o">.</span><span class="n">fractionCompleted</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
     <span class="p">}</span>
-    <span class="o">.</span><span class="n">responseData</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
-        <span class="k">if</span> <span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">value</span> <span class="p">{</span>
-            <span class="k">let</span> <span class="nv">image</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="n">data</span><span class="p">)</span>
+    <span class="o">.</span><span class="nf">responseData</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+        <span class="k">if</span> <span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="nf">value</span> <span class="p">{</span>
+            <span class="k">let</span> <span class="nv">image</span> <span class="o">=</span> <span class="nf">UIImage</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="n">data</span><span class="p">)</span>
         <span class="p">}</span>
     <span class="p">}</span>
 </code></pre>
@@ -916,12 +916,12 @@
 <blockquote>
 <p><strong>IMPORTANT:</strong> On the latest release of all the Apple platforms (iOS 10, macOS 10.12, tvOS 10, watchOS 3), <code>resumeData</code> is broken on background URL session configurations. There&rsquo;s an underlying bug in the <code>resumeData</code> generation logic where the data is written incorrectly and will always fail to resume the download. For more information about the bug and possible workarounds, please see this Stack Overflow <a href="http://stackoverflow.com/a/39347461/1342462">post</a>.</p>
 </blockquote>
-<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">ImageRequestor</span> <span class="p">{</span>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="nf">ImageRequestor</span> <span class="p">{</span>
     <span class="kd">private</span> <span class="k">var</span> <span class="nv">resumeData</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?</span>
     <span class="kd">private</span> <span class="k">var</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?</span>
 
     <span class="kd">func</span> <span class="nf">fetchImage</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="p">(</span><span class="kt">UIImage</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">guard</span> <span class="n">image</span> <span class="o">==</span> <span class="kc">nil</span> <span class="k">else</span> <span class="p">{</span> <span class="nf">completion</span><span class="p">(</span><span class="n">image</span><span class="p">)</span> <span class="p">;</span> <span class="k">return</span> <span class="p">}</span>
+        <span class="k">guard</span> <span class="n">image</span> <span class="o">==</span> <span class="kc">nil</span> <span class="nf">else</span> <span class="p">{</span> <span class="nf">completion</span><span class="p">(</span><span class="n">image</span><span class="p">)</span> <span class="p">;</span> <span class="k">return</span> <span class="p">}</span>
 
         <span class="k">let</span> <span class="nv">destination</span><span class="p">:</span> <span class="kt">DownloadRequest</span><span class="o">.</span><span class="kt">DownloadFileDestination</span> <span class="o">=</span> <span class="p">{</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span> <span class="k">in</span>
             <span class="k">let</span> <span class="nv">documentsURL</span> <span class="o">=</span> <span class="kt">FileManager</span><span class="o">.</span><span class="k">default</span><span class="o">.</span><span class="nf">urls</span><span class="p">(</span><span class="nv">for</span><span class="p">:</span> <span class="o">.</span><span class="n">documentDirectory</span><span class="p">,</span> <span class="nv">in</span><span class="p">:</span> <span class="o">.</span><span class="n">userDomainMask</span><span class="p">)[</span><span class="mi">0</span><span class="p">]</span>
@@ -932,16 +932,16 @@
 
         <span class="k">let</span> <span class="nv">request</span><span class="p">:</span> <span class="kt">DownloadRequest</span>
 
-        <span class="k">if</span> <span class="k">let</span> <span class="nv">resumeData</span> <span class="o">=</span> <span class="n">resumeData</span> <span class="p">{</span>
+        <span class="k">if</span> <span class="k">let</span> <span class="nv">resumeData</span> <span class="o">=</span> <span class="nf">resumeData</span> <span class="p">{</span>
             <span class="n">request</span> <span class="o">=</span> <span class="kt">Alamofire</span><span class="o">.</span><span class="nf">download</span><span class="p">(</span><span class="nv">resumingWith</span><span class="p">:</span> <span class="n">resumeData</span><span class="p">)</span>
-        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="p">}</span> <span class="nf">else</span> <span class="p">{</span>
             <span class="n">request</span> <span class="o">=</span> <span class="kt">Alamofire</span><span class="o">.</span><span class="nf">download</span><span class="p">(</span><span class="s">"https://httpbin.org/image/png"</span><span class="p">)</span>
         <span class="p">}</span>
 
-        <span class="n">request</span><span class="o">.</span><span class="n">responseData</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
-            <span class="k">switch</span> <span class="n">response</span><span class="o">.</span><span class="n">result</span> <span class="p">{</span>
+        <span class="n">request</span><span class="o">.</span><span class="nf">responseData</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+            <span class="k">switch</span> <span class="n">response</span><span class="o">.</span><span class="nf">result</span> <span class="p">{</span>
             <span class="k">case</span> <span class="o">.</span><span class="nf">success</span><span class="p">(</span><span class="k">let</span> <span class="nv">data</span><span class="p">):</span>
-                <span class="k">self</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="n">data</span><span class="p">)</span>
+                <span class="k">self</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="nf">UIImage</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="n">data</span><span class="p">)</span>
             <span class="k">case</span> <span class="o">.</span><span class="nv">failure</span><span class="p">:</span>
                 <span class="k">self</span><span class="o">.</span><span class="n">resumeData</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">resumeData</span>
             <span class="p">}</span>
@@ -957,16 +957,16 @@
 <p>The <code>Alamofire.upload</code> APIs should also be used if you need to upload data while your app is in the background. For more information, please see the <a href="#session-manager">Session Manager Configurations</a> section.</p>
 </blockquote>
 <h4 id='uploading-data' class='heading'>Uploading Data</h4>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">imageData</span> <span class="o">=</span> <span class="kt">UIPNGRepresentation</span><span class="p">(</span><span class="n">image</span><span class="p">)</span><span class="o">!</span>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">imageData</span> <span class="o">=</span> <span class="nf">UIPNGRepresentation</span><span class="p">(</span><span class="n">image</span><span class="p">)</span><span class="o">!</span>
 
-<span class="kt">Alamofire</span><span class="o">.</span><span class="nf">upload</span><span class="p">(</span><span class="n">imageData</span><span class="p">,</span> <span class="nv">to</span><span class="p">:</span> <span class="s">"https://httpbin.org/post"</span><span class="p">)</span><span class="o">.</span><span class="n">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+<span class="kt">Alamofire</span><span class="o">.</span><span class="nf">upload</span><span class="p">(</span><span class="n">imageData</span><span class="p">,</span> <span class="nv">to</span><span class="p">:</span> <span class="s">"https://httpbin.org/post"</span><span class="p">)</span><span class="o">.</span><span class="nf">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
     <span class="nf">debugPrint</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre>
 <h4 id='uploading-a-file' class='heading'>Uploading a File</h4>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">fileURL</span> <span class="o">=</span> <span class="kt">Bundle</span><span class="o">.</span><span class="n">main</span><span class="o">.</span><span class="nf">url</span><span class="p">(</span><span class="nv">forResource</span><span class="p">:</span> <span class="s">"video"</span><span class="p">,</span> <span class="nv">withExtension</span><span class="p">:</span> <span class="s">"mov"</span><span class="p">)</span>
 
-<span class="kt">Alamofire</span><span class="o">.</span><span class="nf">upload</span><span class="p">(</span><span class="n">fileURL</span><span class="p">,</span> <span class="nv">to</span><span class="p">:</span> <span class="s">"https://httpbin.org/post"</span><span class="p">)</span><span class="o">.</span><span class="n">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+<span class="kt">Alamofire</span><span class="o">.</span><span class="nf">upload</span><span class="p">(</span><span class="n">fileURL</span><span class="p">,</span> <span class="nv">to</span><span class="p">:</span> <span class="s">"https://httpbin.org/post"</span><span class="p">)</span><span class="o">.</span><span class="nf">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
     <span class="nf">debugPrint</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre>
@@ -978,9 +978,9 @@
     <span class="p">},</span>
     <span class="nv">to</span><span class="p">:</span> <span class="s">"https://httpbin.org/post"</span><span class="p">,</span>
     <span class="nv">encodingCompletion</span><span class="p">:</span> <span class="p">{</span> <span class="n">encodingResult</span> <span class="k">in</span>
-        <span class="k">switch</span> <span class="n">encodingResult</span> <span class="p">{</span>
+        <span class="k">switch</span> <span class="nf">encodingResult</span> <span class="p">{</span>
         <span class="k">case</span> <span class="o">.</span><span class="nf">success</span><span class="p">(</span><span class="k">let</span> <span class="nv">upload</span><span class="p">,</span> <span class="n">_</span><span class="p">,</span> <span class="n">_</span><span class="p">):</span>
-            <span class="n">upload</span><span class="o">.</span><span class="n">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+            <span class="n">upload</span><span class="o">.</span><span class="nf">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
                 <span class="nf">debugPrint</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
             <span class="p">}</span>
         <span class="k">case</span> <span class="o">.</span><span class="nf">failure</span><span class="p">(</span><span class="k">let</span> <span class="nv">encodingError</span><span class="p">):</span>
@@ -995,13 +995,13 @@
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">fileURL</span> <span class="o">=</span> <span class="kt">Bundle</span><span class="o">.</span><span class="n">main</span><span class="o">.</span><span class="nf">url</span><span class="p">(</span><span class="nv">forResource</span><span class="p">:</span> <span class="s">"video"</span><span class="p">,</span> <span class="nv">withExtension</span><span class="p">:</span> <span class="s">"mov"</span><span class="p">)</span>
 
 <span class="kt">Alamofire</span><span class="o">.</span><span class="nf">upload</span><span class="p">(</span><span class="n">fileURL</span><span class="p">,</span> <span class="nv">to</span><span class="p">:</span> <span class="s">"https://httpbin.org/post"</span><span class="p">)</span>
-    <span class="o">.</span><span class="n">uploadProgress</span> <span class="p">{</span> <span class="n">progress</span> <span class="k">in</span> <span class="c1">// main queue by default</span>
+    <span class="o">.</span><span class="nf">uploadProgress</span> <span class="p">{</span> <span class="n">progress</span> <span class="k">in</span> <span class="c1">// main queue by default</span>
         <span class="nf">print</span><span class="p">(</span><span class="s">"Upload Progress: </span><span class="se">\(</span><span class="n">progress</span><span class="o">.</span><span class="n">fractionCompleted</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
     <span class="p">}</span>
-    <span class="o">.</span><span class="n">downloadProgress</span> <span class="p">{</span> <span class="n">progress</span> <span class="k">in</span> <span class="c1">// main queue by default</span>
+    <span class="o">.</span><span class="nf">downloadProgress</span> <span class="p">{</span> <span class="n">progress</span> <span class="k">in</span> <span class="c1">// main queue by default</span>
         <span class="nf">print</span><span class="p">(</span><span class="s">"Download Progress: </span><span class="se">\(</span><span class="n">progress</span><span class="o">.</span><span class="n">fractionCompleted</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
     <span class="p">}</span>
-    <span class="o">.</span><span class="n">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+    <span class="o">.</span><span class="nf">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
         <span class="nf">debugPrint</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
     <span class="p">}</span>
 </code></pre>
@@ -1009,7 +1009,7 @@
 <h4 id='timeline' class='heading'>Timeline</h4>
 
 <p>Alamofire collects timings throughout the lifecycle of a <code><a href="Classes/Request.html">Request</a></code> and creates a <code><a href="Structs/Timeline.html">Timeline</a></code> object exposed as a property on all response types.</p>
-<pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://httpbin.org/get"</span><span class="p">)</span><span class="o">.</span><span class="n">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+<pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://httpbin.org/get"</span><span class="p">)</span><span class="o">.</span><span class="nf">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
     <span class="nf">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">timeline</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre>
@@ -1025,13 +1025,13 @@
 <h4 id='url-session-task-metrics' class='heading'>URL Session Task Metrics</h4>
 
 <p>In iOS and tvOS 10 and macOS 10.12, Apple introduced the new <a href="https://developer.apple.com/reference/foundation/urlsessiontaskmetrics">URLSessionTaskMetrics</a> APIs. The task metrics encapsulate some fantastic statistical information about the request and response execution. The API is very similar to the <code><a href="Structs/Timeline.html">Timeline</a></code>, but provides many more statistics that Alamofire doesn&rsquo;t have access to compute. The metrics can be accessed through any response type.</p>
-<pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://httpbin.org/get"</span><span class="p">)</span><span class="o">.</span><span class="n">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+<pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://httpbin.org/get"</span><span class="p">)</span><span class="o">.</span><span class="nf">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
     <span class="nf">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">metrics</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre>
 
 <p>It&rsquo;s important to note that these APIs are only available on iOS and tvOS 10 and macOS 10.12. Therefore, depending on your deployment target, you may need to use these inside availability checks:</p>
-<pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://httpbin.org/get"</span><span class="p">)</span><span class="o">.</span><span class="n">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+<pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://httpbin.org/get"</span><span class="p">)</span><span class="o">.</span><span class="nf">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
     <span class="k">if</span> <span class="kd">#available(iOS 10.0. *)</span> <span class="p">{</span>
         <span class="nf">print</span><span class="p">(</span><span class="n">response</span><span class="o">.</span><span class="n">metrics</span><span class="p">)</span>
     <span class="p">}</span>
@@ -1086,15 +1086,15 @@
 <p>Applications can create session managers for background and ephemeral sessions, as well as new managers that customize the default session configuration, such as for default headers (<code>httpAdditionalHeaders</code>) or timeout interval (<code>timeoutIntervalForRequest</code>).</p>
 <h4 id='creating-a-session-manager-with-default-configuration' class='heading'>Creating a Session Manager with Default Configuration</h4>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">configuration</span> <span class="o">=</span> <span class="kt">URLSessionConfiguration</span><span class="o">.</span><span class="k">default</span>
-<span class="k">let</span> <span class="nv">sessionManager</span> <span class="o">=</span> <span class="kt">Alamofire</span><span class="o">.</span><span class="kt">SessionManager</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="n">configuration</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">sessionManager</span> <span class="o">=</span> <span class="kt">Alamofire</span><span class="o">.</span><span class="nf">SessionManager</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="n">configuration</span><span class="p">)</span>
 </code></pre>
 <h4 id='creating-a-session-manager-with-background-configuration' class='heading'>Creating a Session Manager with Background Configuration</h4>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">configuration</span> <span class="o">=</span> <span class="kt">URLSessionConfiguration</span><span class="o">.</span><span class="nf">background</span><span class="p">(</span><span class="nv">withIdentifier</span><span class="p">:</span> <span class="s">"com.example.app.background"</span><span class="p">)</span>
-<span class="k">let</span> <span class="nv">sessionManager</span> <span class="o">=</span> <span class="kt">Alamofire</span><span class="o">.</span><span class="kt">SessionManager</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="n">configuration</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">sessionManager</span> <span class="o">=</span> <span class="kt">Alamofire</span><span class="o">.</span><span class="nf">SessionManager</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="n">configuration</span><span class="p">)</span>
 </code></pre>
 <h4 id='creating-a-session-manager-with-ephemeral-configuration' class='heading'>Creating a Session Manager with Ephemeral Configuration</h4>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">configuration</span> <span class="o">=</span> <span class="kt">URLSessionConfiguration</span><span class="o">.</span><span class="n">ephemeral</span>
-<span class="k">let</span> <span class="nv">sessionManager</span> <span class="o">=</span> <span class="kt">Alamofire</span><span class="o">.</span><span class="kt">SessionManager</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="n">configuration</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">sessionManager</span> <span class="o">=</span> <span class="kt">Alamofire</span><span class="o">.</span><span class="nf">SessionManager</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="n">configuration</span><span class="p">)</span>
 </code></pre>
 <h4 id='modifying-the-session-configuration' class='heading'>Modifying the Session Configuration</h4>
 <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">defaultHeaders</span> <span class="o">=</span> <span class="kt">Alamofire</span><span class="o">.</span><span class="kt">SessionManager</span><span class="o">.</span><span class="n">defaultHTTPHeaders</span>
@@ -1103,7 +1103,7 @@
 <span class="k">let</span> <span class="nv">configuration</span> <span class="o">=</span> <span class="kt">URLSessionConfiguration</span><span class="o">.</span><span class="k">default</span>
 <span class="n">configuration</span><span class="o">.</span><span class="n">httpAdditionalHeaders</span> <span class="o">=</span> <span class="n">defaultHeaders</span>
 
-<span class="k">let</span> <span class="nv">sessionManager</span> <span class="o">=</span> <span class="kt">Alamofire</span><span class="o">.</span><span class="kt">SessionManager</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="n">configuration</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">sessionManager</span> <span class="o">=</span> <span class="kt">Alamofire</span><span class="o">.</span><span class="nf">SessionManager</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="n">configuration</span><span class="p">)</span>
 </code></pre>
 
 <blockquote>
@@ -1129,7 +1129,7 @@
 </code></pre>
 
 <p>The following is a short example of how to use the <code>taskWillPerformHTTPRedirection</code> to avoid following redirects to any <code>apple.com</code> domains.</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">sessionManager</span> <span class="o">=</span> <span class="kt">Alamofire</span><span class="o">.</span><span class="kt">SessionManager</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="kt">URLSessionConfiguration</span><span class="o">.</span><span class="k">default</span><span class="p">)</span>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">sessionManager</span> <span class="o">=</span> <span class="kt">Alamofire</span><span class="o">.</span><span class="nf">SessionManager</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="kt">URLSessionConfiguration</span><span class="o">.</span><span class="k">default</span><span class="p">)</span>
 <span class="k">let</span> <span class="nv">delegate</span><span class="p">:</span> <span class="kt">Alamofire</span><span class="o">.</span><span class="kt">SessionDelegate</span> <span class="o">=</span> <span class="n">sessionManager</span><span class="o">.</span><span class="n">delegate</span>
 
 <span class="n">delegate</span><span class="o">.</span><span class="n">taskWillPerformHTTPRedirection</span> <span class="o">=</span> <span class="p">{</span> <span class="n">session</span><span class="p">,</span> <span class="n">task</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">request</span> <span class="k">in</span>
@@ -1149,7 +1149,7 @@
 <h4 id='subclassing' class='heading'>Subclassing</h4>
 
 <p>Another way to override the default implementation of the <code><a href="Classes/SessionDelegate.html">SessionDelegate</a></code> is to subclass it. Subclassing allows you completely customize the behavior of the API or to create a proxy for the API and still use the default implementation. Creating a proxy allows you to log events, emit notifications, provide pre and post hook implementations, etc. Here&rsquo;s a quick example of subclassing the <code><a href="Classes/SessionDelegate.html">SessionDelegate</a></code> and logging a message when a redirect occurs.</p>
-<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">LoggingSessionDelegate</span><span class="p">:</span> <span class="kt">SessionDelegate</span> <span class="p">{</span>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">LoggingSessionDelegate</span><span class="p">:</span> <span class="nf">SessionDelegate</span> <span class="p">{</span>
     <span class="k">override</span> <span class="kd">func</span> <span class="nf">urlSession</span><span class="p">(</span>
         <span class="n">_</span> <span class="nv">session</span><span class="p">:</span> <span class="kt">URLSession</span><span class="p">,</span>
         <span class="nv">task</span><span class="p">:</span> <span class="kt">URLSessionTask</span><span class="p">,</span>
@@ -1197,39 +1197,39 @@
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">urlString</span> <span class="o">=</span> <span class="s">"https://httpbin.org/post"</span>
 <span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="n">urlString</span><span class="p">,</span> <span class="nv">method</span><span class="p">:</span> <span class="o">.</span><span class="n">post</span><span class="p">)</span>
 
-<span class="k">let</span> <span class="nv">url</span> <span class="o">=</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="n">urlString</span><span class="p">)</span><span class="o">!</span>
+<span class="k">let</span> <span class="nv">url</span> <span class="o">=</span> <span class="nf">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="n">urlString</span><span class="p">)</span><span class="o">!</span>
 <span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="n">url</span><span class="p">,</span> <span class="nv">method</span><span class="p">:</span> <span class="o">.</span><span class="n">post</span><span class="p">)</span>
 
-<span class="k">let</span> <span class="nv">urlComponents</span> <span class="o">=</span> <span class="kt">URLComponents</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="n">url</span><span class="p">,</span> <span class="nv">resolvingAgainstBaseURL</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span><span class="o">!</span>
+<span class="k">let</span> <span class="nv">urlComponents</span> <span class="o">=</span> <span class="nf">URLComponents</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="n">url</span><span class="p">,</span> <span class="nv">resolvingAgainstBaseURL</span><span class="p">:</span> <span class="kc">true</span><span class="p">)</span><span class="o">!</span>
 <span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="n">urlComponents</span><span class="p">,</span> <span class="nv">method</span><span class="p">:</span> <span class="o">.</span><span class="n">post</span><span class="p">)</span>
 </code></pre>
 
 <p>Applications interacting with web applications in a significant manner are encouraged to have custom types conform to <code><a href="Protocols/URLConvertible.html">URLConvertible</a></code> as a convenient way to map domain-specific models to server resources.</p>
 <h5 id='type-safe-routing' class='heading'>Type-Safe Routing</h5>
-<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">User</span><span class="p">:</span> <span class="kt">URLConvertible</span> <span class="p">{</span>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">User</span><span class="p">:</span> <span class="nf">URLConvertible</span> <span class="p">{</span>
     <span class="kd">static</span> <span class="k">let</span> <span class="nv">baseURLString</span> <span class="o">=</span> <span class="s">"https://example.com"</span>
 
-    <span class="kd">func</span> <span class="nf">asURL</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">URL</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">asURL</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="nf">URL</span> <span class="p">{</span>
         <span class="k">let</span> <span class="nv">urlString</span> <span class="o">=</span> <span class="kt">User</span><span class="o">.</span><span class="n">baseURLString</span> <span class="o">+</span> <span class="s">"/users/</span><span class="se">\(</span><span class="n">username</span><span class="se">)</span><span class="s">/"</span>
         <span class="k">return</span> <span class="k">try</span> <span class="n">urlString</span><span class="o">.</span><span class="nf">asURL</span><span class="p">()</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">user</span> <span class="o">=</span> <span class="kt">User</span><span class="p">(</span><span class="nv">username</span><span class="p">:</span> <span class="s">"mattt"</span><span class="p">)</span>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">user</span> <span class="o">=</span> <span class="nf">User</span><span class="p">(</span><span class="nv">username</span><span class="p">:</span> <span class="s">"mattt"</span><span class="p">)</span>
 <span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="n">user</span><span class="p">)</span> <span class="c1">// https://example.com/users/mattt</span>
 </code></pre>
 <h4 id='urlrequestconvertible' class='heading'>URLRequestConvertible</h4>
 
 <p>Types adopting the <code><a href="Protocols/URLRequestConvertible.html">URLRequestConvertible</a></code> protocol can be used to construct URL requests. <code>URLRequest</code> conforms to <code><a href="Protocols/URLRequestConvertible.html">URLRequestConvertible</a></code> by default, allowing it to be passed into <code>request</code>, <code>upload</code>, and <code>download</code> methods directly (this is the recommended way to specify custom HTTP body for individual requests):</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">url</span> <span class="o">=</span> <span class="kt">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"https://httpbin.org/post"</span><span class="p">)</span><span class="o">!</span>
-<span class="k">var</span> <span class="nv">urlRequest</span> <span class="o">=</span> <span class="kt">URLRequest</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="n">url</span><span class="p">)</span>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">url</span> <span class="o">=</span> <span class="nf">URL</span><span class="p">(</span><span class="nv">string</span><span class="p">:</span> <span class="s">"https://httpbin.org/post"</span><span class="p">)</span><span class="o">!</span>
+<span class="k">var</span> <span class="nv">urlRequest</span> <span class="o">=</span> <span class="nf">URLRequest</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="n">url</span><span class="p">)</span>
 <span class="n">urlRequest</span><span class="o">.</span><span class="n">httpMethod</span> <span class="o">=</span> <span class="s">"POST"</span>
 
 <span class="k">let</span> <span class="nv">parameters</span> <span class="o">=</span> <span class="p">[</span><span class="s">"foo"</span><span class="p">:</span> <span class="s">"bar"</span><span class="p">]</span>
 
-<span class="k">do</span> <span class="p">{</span>
+<span class="nf">do</span> <span class="p">{</span>
     <span class="n">urlRequest</span><span class="o">.</span><span class="n">httpBody</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">JSONSerialization</span><span class="o">.</span><span class="nf">data</span><span class="p">(</span><span class="nv">withJSONObject</span><span class="p">:</span> <span class="n">parameters</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="p">[])</span>
-<span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>
+<span class="p">}</span> <span class="nf">catch</span> <span class="p">{</span>
     <span class="c1">// No-op</span>
 <span class="p">}</span>
 
@@ -1240,7 +1240,7 @@
 
 <p>Applications interacting with web applications in a significant manner are encouraged to have custom types conform to <code><a href="Protocols/URLRequestConvertible.html">URLRequestConvertible</a></code> as a way to ensure consistency of requested endpoints. Such an approach can be used to abstract away server-side inconsistencies and provide type-safe routing, as well as manage authentication credentials and other state.</p>
 <h5 id='api-parameter-abstraction' class='heading'>API Parameter Abstraction</h5>
-<pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">Router</span><span class="p">:</span> <span class="kt">URLRequestConvertible</span> <span class="p">{</span>
+<pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">Router</span><span class="p">:</span> <span class="nf">URLRequestConvertible</span> <span class="p">{</span>
     <span class="k">case</span> <span class="nf">search</span><span class="p">(</span><span class="nv">query</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">page</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span>
 
     <span class="kd">static</span> <span class="k">let</span> <span class="nv">baseURLString</span> <span class="o">=</span> <span class="s">"https://example.com"</span>
@@ -1248,9 +1248,9 @@
 
     <span class="c1">// MARK: URLRequestConvertible</span>
 
-    <span class="kd">func</span> <span class="nf">asURLRequest</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">URLRequest</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">asURLRequest</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="nf">URLRequest</span> <span class="p">{</span>
         <span class="k">let</span> <span class="nv">result</span><span class="p">:</span> <span class="p">(</span><span class="nv">path</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="kt">Parameters</span><span class="p">)</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="k">switch</span> <span class="k">self</span> <span class="p">{</span>
+            <span class="k">switch</span> <span class="nf">self</span> <span class="p">{</span>
             <span class="k">case</span> <span class="kd">let</span> <span class="o">.</span><span class="nf">search</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">page</span><span class="p">)</span> <span class="k">where</span> <span class="n">page</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
                 <span class="nf">return</span> <span class="p">(</span><span class="s">"/search"</span><span class="p">,</span> <span class="p">[</span><span class="s">"q"</span><span class="p">:</span> <span class="n">query</span><span class="p">,</span> <span class="s">"offset"</span><span class="p">:</span> <span class="kt">Router</span><span class="o">.</span><span class="n">perPage</span> <span class="o">*</span> <span class="n">page</span><span class="p">])</span>
             <span class="k">case</span> <span class="kd">let</span> <span class="o">.</span><span class="nf">search</span><span class="p">(</span><span class="n">query</span><span class="p">,</span> <span class="n">_</span><span class="p">):</span>
@@ -1259,7 +1259,7 @@
         <span class="p">}()</span>
 
         <span class="k">let</span> <span class="nv">url</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">Router</span><span class="o">.</span><span class="n">baseURLString</span><span class="o">.</span><span class="nf">asURL</span><span class="p">()</span>
-        <span class="k">let</span> <span class="nv">urlRequest</span> <span class="o">=</span> <span class="kt">URLRequest</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="n">url</span><span class="o">.</span><span class="nf">appendingPathComponent</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">path</span><span class="p">))</span>
+        <span class="k">let</span> <span class="nv">urlRequest</span> <span class="o">=</span> <span class="nf">URLRequest</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="n">url</span><span class="o">.</span><span class="nf">appendingPathComponent</span><span class="p">(</span><span class="n">result</span><span class="o">.</span><span class="n">path</span><span class="p">))</span>
 
         <span class="k">return</span> <span class="k">try</span> <span class="kt">URLEncoding</span><span class="o">.</span><span class="k">default</span><span class="o">.</span><span class="nf">encode</span><span class="p">(</span><span class="n">urlRequest</span><span class="p">,</span> <span class="nv">with</span><span class="p">:</span> <span class="n">result</span><span class="o">.</span><span class="n">parameters</span><span class="p">)</span>
     <span class="p">}</span>
@@ -1270,7 +1270,7 @@
 <h5 id='crud-amp-authorization' class='heading'>CRUD &amp; Authorization</h5>
 <pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">Alamofire</span>
 
-<span class="kd">enum</span> <span class="kt">Router</span><span class="p">:</span> <span class="kt">URLRequestConvertible</span> <span class="p">{</span>
+<span class="kd">enum</span> <span class="kt">Router</span><span class="p">:</span> <span class="nf">URLRequestConvertible</span> <span class="p">{</span>
     <span class="k">case</span> <span class="nf">createUser</span><span class="p">(</span><span class="nv">parameters</span><span class="p">:</span> <span class="kt">Parameters</span><span class="p">)</span>
     <span class="k">case</span> <span class="nf">readUser</span><span class="p">(</span><span class="nv">username</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span>
     <span class="k">case</span> <span class="nf">updateUser</span><span class="p">(</span><span class="nv">username</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="kt">Parameters</span><span class="p">)</span>
@@ -1278,8 +1278,8 @@
 
     <span class="kd">static</span> <span class="k">let</span> <span class="nv">baseURLString</span> <span class="o">=</span> <span class="s">"https://example.com"</span>
 
-    <span class="k">var</span> <span class="nv">method</span><span class="p">:</span> <span class="kt">HTTPMethod</span> <span class="p">{</span>
-        <span class="k">switch</span> <span class="k">self</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">method</span><span class="p">:</span> <span class="nf">HTTPMethod</span> <span class="p">{</span>
+        <span class="k">switch</span> <span class="nf">self</span> <span class="p">{</span>
         <span class="k">case</span> <span class="o">.</span><span class="nv">createUser</span><span class="p">:</span>
             <span class="k">return</span> <span class="o">.</span><span class="n">post</span>
         <span class="k">case</span> <span class="o">.</span><span class="nv">readUser</span><span class="p">:</span>
@@ -1291,8 +1291,8 @@
         <span class="p">}</span>
     <span class="p">}</span>
 
-    <span class="k">var</span> <span class="nv">path</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span>
-        <span class="k">switch</span> <span class="k">self</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">path</span><span class="p">:</span> <span class="nf">String</span> <span class="p">{</span>
+        <span class="k">switch</span> <span class="nf">self</span> <span class="p">{</span>
         <span class="k">case</span> <span class="o">.</span><span class="nv">createUser</span><span class="p">:</span>
             <span class="k">return</span> <span class="s">"/users"</span>
         <span class="k">case</span> <span class="o">.</span><span class="nf">readUser</span><span class="p">(</span><span class="k">let</span> <span class="nv">username</span><span class="p">):</span>
@@ -1306,13 +1306,13 @@
 
     <span class="c1">// MARK: URLRequestConvertible</span>
 
-    <span class="kd">func</span> <span class="nf">asURLRequest</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">URLRequest</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">asURLRequest</span><span class="p">()</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="nf">URLRequest</span> <span class="p">{</span>
         <span class="k">let</span> <span class="nv">url</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">Router</span><span class="o">.</span><span class="n">baseURLString</span><span class="o">.</span><span class="nf">asURL</span><span class="p">()</span>
 
-        <span class="k">var</span> <span class="nv">urlRequest</span> <span class="o">=</span> <span class="kt">URLRequest</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="n">url</span><span class="o">.</span><span class="nf">appendingPathComponent</span><span class="p">(</span><span class="n">path</span><span class="p">))</span>
+        <span class="k">var</span> <span class="nv">urlRequest</span> <span class="o">=</span> <span class="nf">URLRequest</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="n">url</span><span class="o">.</span><span class="nf">appendingPathComponent</span><span class="p">(</span><span class="n">path</span><span class="p">))</span>
         <span class="n">urlRequest</span><span class="o">.</span><span class="n">httpMethod</span> <span class="o">=</span> <span class="n">method</span><span class="o">.</span><span class="n">rawValue</span>
 
-        <span class="k">switch</span> <span class="k">self</span> <span class="p">{</span>
+        <span class="k">switch</span> <span class="nf">self</span> <span class="p">{</span>
         <span class="k">case</span> <span class="o">.</span><span class="nf">createUser</span><span class="p">(</span><span class="k">let</span> <span class="nv">parameters</span><span class="p">):</span>
             <span class="n">urlRequest</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">URLEncoding</span><span class="o">.</span><span class="k">default</span><span class="o">.</span><span class="nf">encode</span><span class="p">(</span><span class="n">urlRequest</span><span class="p">,</span> <span class="nv">with</span><span class="p">:</span> <span class="n">parameters</span><span class="p">)</span>
         <span class="k">case</span> <span class="o">.</span><span class="nf">updateUser</span><span class="p">(</span><span class="n">_</span><span class="p">,</span> <span class="k">let</span> <span class="nv">parameters</span><span class="p">):</span>
@@ -1335,14 +1335,14 @@
 <h4 id='requestadapter' class='heading'>RequestAdapter</h4>
 
 <p>The <code><a href="Protocols/RequestAdapter.html">RequestAdapter</a></code> protocol allows each <code><a href="Classes/Request.html">Request</a></code> made on a <code><a href="Classes/SessionManager.html">SessionManager</a></code> to be inspected and adapted before being created. One very specific way to use an adapter is to append an <code>Authorization</code> header to requests behind a certain type of authentication.</p>
-<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">AccessTokenAdapter</span><span class="p">:</span> <span class="kt">RequestAdapter</span> <span class="p">{</span>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">AccessTokenAdapter</span><span class="p">:</span> <span class="nf">RequestAdapter</span> <span class="p">{</span>
     <span class="kd">private</span> <span class="k">let</span> <span class="nv">accessToken</span><span class="p">:</span> <span class="kt">String</span>
 
     <span class="nf">init</span><span class="p">(</span><span class="nv">accessToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="p">{</span>
         <span class="k">self</span><span class="o">.</span><span class="n">accessToken</span> <span class="o">=</span> <span class="n">accessToken</span>
     <span class="p">}</span>
 
-    <span class="kd">func</span> <span class="nf">adapt</span><span class="p">(</span><span class="n">_</span> <span class="nv">urlRequest</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">URLRequest</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">adapt</span><span class="p">(</span><span class="n">_</span> <span class="nv">urlRequest</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="nf">URLRequest</span> <span class="p">{</span>
         <span class="k">var</span> <span class="nv">urlRequest</span> <span class="o">=</span> <span class="n">urlRequest</span>
 
         <span class="k">if</span> <span class="k">let</span> <span class="nv">urlString</span> <span class="o">=</span> <span class="n">urlRequest</span><span class="o">.</span><span class="n">url</span><span class="p">?</span><span class="o">.</span><span class="n">absoluteString</span><span class="p">,</span> <span class="n">urlString</span><span class="o">.</span><span class="nf">hasPrefix</span><span class="p">(</span><span class="s">"https://httpbin.org"</span><span class="p">)</span> <span class="p">{</span>
@@ -1353,8 +1353,8 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">sessionManager</span> <span class="o">=</span> <span class="kt">SessionManager</span><span class="p">()</span>
-<span class="n">sessionManager</span><span class="o">.</span><span class="n">adapter</span> <span class="o">=</span> <span class="kt">AccessTokenAdapter</span><span class="p">(</span><span class="nv">accessToken</span><span class="p">:</span> <span class="s">"1234"</span><span class="p">)</span>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">sessionManager</span> <span class="o">=</span> <span class="nf">SessionManager</span><span class="p">()</span>
+<span class="n">sessionManager</span><span class="o">.</span><span class="n">adapter</span> <span class="o">=</span> <span class="nf">AccessTokenAdapter</span><span class="p">(</span><span class="nv">accessToken</span><span class="p">:</span> <span class="s">"1234"</span><span class="p">)</span>
 
 <span class="n">sessionManager</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://httpbin.org/get"</span><span class="p">)</span>
 </code></pre>
@@ -1367,17 +1367,17 @@
 
 <p>To reiterate, <strong>do NOT copy</strong> this sample code and drop it into a production application. This is merely an example. Each authentication system must be tailored to a particular platform and authentication type.</p>
 </blockquote>
-<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">OAuth2Handler</span><span class="p">:</span> <span class="kt">RequestAdapter</span><span class="p">,</span> <span class="kt">RequestRetrier</span> <span class="p">{</span>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">OAuth2Handler</span><span class="p">:</span> <span class="kt">RequestAdapter</span><span class="p">,</span> <span class="nf">RequestRetrier</span> <span class="p">{</span>
     <span class="kd">private</span> <span class="kd">typealias</span> <span class="kt">RefreshCompletion</span> <span class="o">=</span> <span class="p">(</span><span class="n">_</span> <span class="nv">succeeded</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="n">_</span> <span class="nv">accessToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">refreshToken</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span>
 
     <span class="kd">private</span> <span class="k">let</span> <span class="nv">sessionManager</span><span class="p">:</span> <span class="kt">SessionManager</span> <span class="o">=</span> <span class="p">{</span>
         <span class="k">let</span> <span class="nv">configuration</span> <span class="o">=</span> <span class="kt">URLSessionConfiguration</span><span class="o">.</span><span class="k">default</span>
         <span class="n">configuration</span><span class="o">.</span><span class="n">httpAdditionalHeaders</span> <span class="o">=</span> <span class="kt">SessionManager</span><span class="o">.</span><span class="n">defaultHTTPHeaders</span>
 
-        <span class="k">return</span> <span class="kt">SessionManager</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="n">configuration</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nf">SessionManager</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="n">configuration</span><span class="p">)</span>
     <span class="p">}()</span>
 
-    <span class="kd">private</span> <span class="k">let</span> <span class="nv">lock</span> <span class="o">=</span> <span class="kt">NSLock</span><span class="p">()</span>
+    <span class="kd">private</span> <span class="k">let</span> <span class="nv">lock</span> <span class="o">=</span> <span class="nf">NSLock</span><span class="p">()</span>
 
     <span class="kd">private</span> <span class="k">var</span> <span class="nv">clientID</span><span class="p">:</span> <span class="kt">String</span>
     <span class="kd">private</span> <span class="k">var</span> <span class="nv">baseURLString</span><span class="p">:</span> <span class="kt">String</span>
@@ -1398,7 +1398,7 @@
 
     <span class="c1">// MARK: - RequestAdapter</span>
 
-    <span class="kd">func</span> <span class="nf">adapt</span><span class="p">(</span><span class="n">_</span> <span class="nv">urlRequest</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">URLRequest</span> <span class="p">{</span>
+    <span class="kd">func</span> <span class="nf">adapt</span><span class="p">(</span><span class="n">_</span> <span class="nv">urlRequest</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="nf">URLRequest</span> <span class="p">{</span>
         <span class="k">if</span> <span class="k">let</span> <span class="nv">urlString</span> <span class="o">=</span> <span class="n">urlRequest</span><span class="o">.</span><span class="n">url</span><span class="p">?</span><span class="o">.</span><span class="n">absoluteString</span><span class="p">,</span> <span class="n">urlString</span><span class="o">.</span><span class="nf">hasPrefix</span><span class="p">(</span><span class="n">baseURLString</span><span class="p">)</span> <span class="p">{</span>
             <span class="k">var</span> <span class="nv">urlRequest</span> <span class="o">=</span> <span class="n">urlRequest</span>
             <span class="n">urlRequest</span><span class="o">.</span><span class="nf">setValue</span><span class="p">(</span><span class="s">"Bearer "</span> <span class="o">+</span> <span class="n">accessToken</span><span class="p">,</span> <span class="nv">forHTTPHeaderField</span><span class="p">:</span> <span class="s">"Authorization"</span><span class="p">)</span>
@@ -1411,27 +1411,27 @@
     <span class="c1">// MARK: - RequestRetrier</span>
 
     <span class="kd">func</span> <span class="nf">should</span><span class="p">(</span><span class="n">_</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt">SessionManager</span><span class="p">,</span> <span class="n">retry</span> <span class="nv">request</span><span class="p">:</span> <span class="kt">Request</span><span class="p">,</span> <span class="n">with</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">RequestRetryCompletion</span><span class="p">)</span> <span class="p">{</span>
-        <span class="n">lock</span><span class="o">.</span><span class="nf">lock</span><span class="p">()</span> <span class="p">;</span> <span class="k">defer</span> <span class="p">{</span> <span class="n">lock</span><span class="o">.</span><span class="nf">unlock</span><span class="p">()</span> <span class="p">}</span>
+        <span class="n">lock</span><span class="o">.</span><span class="nf">lock</span><span class="p">()</span> <span class="p">;</span> <span class="nf">defer</span> <span class="p">{</span> <span class="n">lock</span><span class="o">.</span><span class="nf">unlock</span><span class="p">()</span> <span class="p">}</span>
 
         <span class="k">if</span> <span class="k">let</span> <span class="nv">response</span> <span class="o">=</span> <span class="n">request</span><span class="o">.</span><span class="n">task</span><span class="p">?</span><span class="o">.</span><span class="n">response</span> <span class="k">as?</span> <span class="kt">HTTPURLResponse</span><span class="p">,</span> <span class="n">response</span><span class="o">.</span><span class="n">statusCode</span> <span class="o">==</span> <span class="mi">401</span> <span class="p">{</span>
             <span class="n">requestsToRetry</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="n">completion</span><span class="p">)</span>
 
-            <span class="k">if</span> <span class="o">!</span><span class="n">isRefreshing</span> <span class="p">{</span>
-                <span class="n">refreshTokens</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="n">succeeded</span><span class="p">,</span> <span class="n">accessToken</span><span class="p">,</span> <span class="n">refreshToken</span> <span class="k">in</span>
-                    <span class="k">guard</span> <span class="k">let</span> <span class="nv">strongSelf</span> <span class="o">=</span> <span class="k">self</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
+            <span class="k">if</span> <span class="o">!</span><span class="nf">isRefreshing</span> <span class="p">{</span>
+                <span class="nf">refreshTokens</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="n">succeeded</span><span class="p">,</span> <span class="n">accessToken</span><span class="p">,</span> <span class="n">refreshToken</span> <span class="k">in</span>
+                    <span class="k">guard</span> <span class="k">let</span> <span class="nv">strongSelf</span> <span class="o">=</span> <span class="k">self</span> <span class="nf">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
 
-                    <span class="n">strongSelf</span><span class="o">.</span><span class="n">lock</span><span class="o">.</span><span class="nf">lock</span><span class="p">()</span> <span class="p">;</span> <span class="k">defer</span> <span class="p">{</span> <span class="n">strongSelf</span><span class="o">.</span><span class="n">lock</span><span class="o">.</span><span class="nf">unlock</span><span class="p">()</span> <span class="p">}</span>
+                    <span class="n">strongSelf</span><span class="o">.</span><span class="n">lock</span><span class="o">.</span><span class="nf">lock</span><span class="p">()</span> <span class="p">;</span> <span class="nf">defer</span> <span class="p">{</span> <span class="n">strongSelf</span><span class="o">.</span><span class="n">lock</span><span class="o">.</span><span class="nf">unlock</span><span class="p">()</span> <span class="p">}</span>
 
-                    <span class="k">if</span> <span class="k">let</span> <span class="nv">accessToken</span> <span class="o">=</span> <span class="n">accessToken</span><span class="p">,</span> <span class="k">let</span> <span class="nv">refreshToken</span> <span class="o">=</span> <span class="n">refreshToken</span> <span class="p">{</span>
+                    <span class="k">if</span> <span class="k">let</span> <span class="nv">accessToken</span> <span class="o">=</span> <span class="n">accessToken</span><span class="p">,</span> <span class="k">let</span> <span class="nv">refreshToken</span> <span class="o">=</span> <span class="nf">refreshToken</span> <span class="p">{</span>
                         <span class="n">strongSelf</span><span class="o">.</span><span class="n">accessToken</span> <span class="o">=</span> <span class="n">accessToken</span>
                         <span class="n">strongSelf</span><span class="o">.</span><span class="n">refreshToken</span> <span class="o">=</span> <span class="n">refreshToken</span>
                     <span class="p">}</span>
 
-                    <span class="n">strongSelf</span><span class="o">.</span><span class="n">requestsToRetry</span><span class="o">.</span><span class="n">forEach</span> <span class="p">{</span> <span class="nv">$0</span><span class="p">(</span><span class="n">succeeded</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span> <span class="p">}</span>
+                    <span class="n">strongSelf</span><span class="o">.</span><span class="n">requestsToRetry</span><span class="o">.</span><span class="nf">forEach</span> <span class="p">{</span> <span class="nv">$0</span><span class="p">(</span><span class="n">succeeded</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span> <span class="p">}</span>
                     <span class="n">strongSelf</span><span class="o">.</span><span class="n">requestsToRetry</span><span class="o">.</span><span class="nf">removeAll</span><span class="p">()</span>
                 <span class="p">}</span>
             <span class="p">}</span>
-        <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+        <span class="p">}</span> <span class="nf">else</span> <span class="p">{</span>
             <span class="nf">completion</span><span class="p">(</span><span class="kc">false</span><span class="p">,</span> <span class="mf">0.0</span><span class="p">)</span>
         <span class="p">}</span>
     <span class="p">}</span>
@@ -1439,7 +1439,7 @@
     <span class="c1">// MARK: - Private - Refresh Tokens</span>
 
     <span class="kd">private</span> <span class="kd">func</span> <span class="nf">refreshTokens</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">RefreshCompletion</span><span class="p">)</span> <span class="p">{</span>
-        <span class="k">guard</span> <span class="o">!</span><span class="n">isRefreshing</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
+        <span class="k">guard</span> <span class="o">!</span><span class="n">isRefreshing</span> <span class="nf">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
 
         <span class="n">isRefreshing</span> <span class="o">=</span> <span class="kc">true</span>
 
@@ -1453,16 +1453,16 @@
         <span class="p">]</span>
 
         <span class="n">sessionManager</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="n">urlString</span><span class="p">,</span> <span class="nv">method</span><span class="p">:</span> <span class="o">.</span><span class="n">post</span><span class="p">,</span> <span class="nv">parameters</span><span class="p">:</span> <span class="n">parameters</span><span class="p">,</span> <span class="nv">encoding</span><span class="p">:</span> <span class="kt">JSONEncoding</span><span class="o">.</span><span class="k">default</span><span class="p">)</span>
-            <span class="o">.</span><span class="n">responseJSON</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="n">response</span> <span class="k">in</span>
-                <span class="k">guard</span> <span class="k">let</span> <span class="nv">strongSelf</span> <span class="o">=</span> <span class="k">self</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
+            <span class="o">.</span><span class="nf">responseJSON</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="n">response</span> <span class="k">in</span>
+                <span class="k">guard</span> <span class="k">let</span> <span class="nv">strongSelf</span> <span class="o">=</span> <span class="k">self</span> <span class="nf">else</span> <span class="p">{</span> <span class="k">return</span> <span class="p">}</span>
 
                 <span class="k">if</span> 
                     <span class="k">let</span> <span class="nv">json</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">value</span> <span class="k">as?</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">],</span> 
                     <span class="k">let</span> <span class="nv">accessToken</span> <span class="o">=</span> <span class="n">json</span><span class="p">[</span><span class="s">"access_token"</span><span class="p">]</span> <span class="k">as?</span> <span class="kt">String</span><span class="p">,</span> 
-                    <span class="k">let</span> <span class="nv">refreshToken</span> <span class="o">=</span> <span class="n">json</span><span class="p">[</span><span class="s">"refresh_token"</span><span class="p">]</span> <span class="k">as?</span> <span class="kt">String</span> 
+                    <span class="k">let</span> <span class="nv">refreshToken</span> <span class="o">=</span> <span class="n">json</span><span class="p">[</span><span class="s">"refresh_token"</span><span class="p">]</span> <span class="k">as?</span> <span class="nf">String</span> 
                 <span class="p">{</span>
                     <span class="nf">completion</span><span class="p">(</span><span class="kc">true</span><span class="p">,</span> <span class="n">accessToken</span><span class="p">,</span> <span class="n">refreshToken</span><span class="p">)</span>
-                <span class="p">}</span> <span class="k">else</span> <span class="p">{</span>
+                <span class="p">}</span> <span class="nf">else</span> <span class="p">{</span>
                     <span class="nf">completion</span><span class="p">(</span><span class="kc">false</span><span class="p">,</span> <span class="kc">nil</span><span class="p">,</span> <span class="kc">nil</span><span class="p">)</span>
                 <span class="p">}</span>
 
@@ -1473,20 +1473,20 @@
 </code></pre>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">baseURLString</span> <span class="o">=</span> <span class="s">"https://some.domain-behind-oauth2.com"</span>
 
-<span class="k">let</span> <span class="nv">oauthHandler</span> <span class="o">=</span> <span class="kt">OAuth2Handler</span><span class="p">(</span>
+<span class="k">let</span> <span class="nv">oauthHandler</span> <span class="o">=</span> <span class="nf">OAuth2Handler</span><span class="p">(</span>
     <span class="nv">clientID</span><span class="p">:</span> <span class="s">"12345678"</span><span class="p">,</span>
     <span class="nv">baseURLString</span><span class="p">:</span> <span class="n">baseURLString</span><span class="p">,</span>
     <span class="nv">accessToken</span><span class="p">:</span> <span class="s">"abcd1234"</span><span class="p">,</span>
     <span class="nv">refreshToken</span><span class="p">:</span> <span class="s">"ef56789a"</span>
 <span class="p">)</span>
 
-<span class="k">let</span> <span class="nv">sessionManager</span> <span class="o">=</span> <span class="kt">SessionManager</span><span class="p">()</span>
+<span class="k">let</span> <span class="nv">sessionManager</span> <span class="o">=</span> <span class="nf">SessionManager</span><span class="p">()</span>
 <span class="n">sessionManager</span><span class="o">.</span><span class="n">adapter</span> <span class="o">=</span> <span class="n">oauthHandler</span>
 <span class="n">sessionManager</span><span class="o">.</span><span class="n">retrier</span> <span class="o">=</span> <span class="n">oauthHandler</span>
 
 <span class="k">let</span> <span class="nv">urlString</span> <span class="o">=</span> <span class="s">"</span><span class="se">\(</span><span class="n">baseURLString</span><span class="se">)</span><span class="s">/some/endpoint"</span>
 
-<span class="n">sessionManager</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="n">urlString</span><span class="p">)</span><span class="o">.</span><span class="nf">validate</span><span class="p">()</span><span class="o">.</span><span class="n">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+<span class="n">sessionManager</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="n">urlString</span><span class="p">)</span><span class="o">.</span><span class="nf">validate</span><span class="p">()</span><span class="o">.</span><span class="nf">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
     <span class="nf">debugPrint</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre>
@@ -1503,10 +1503,10 @@
 <h3 id='custom-response-serialization' class='heading'>Custom Response Serialization</h3>
 
 <p>Alamofire provides built-in response serialization for data, strings, JSON, and property lists:</p>
-<pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">...</span><span class="p">)</span><span class="o">.</span><span class="n">responseData</span> <span class="p">{</span> <span class="p">(</span><span class="nv">resp</span><span class="p">:</span> <span class="kt">DataResponse</span><span class="o">&lt;</span><span class="kt">Data</span><span class="o">&gt;</span><span class="p">)</span> <span class="k">in</span> <span class="o">...</span> <span class="p">}</span>
-<span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">...</span><span class="p">)</span><span class="o">.</span><span class="n">responseString</span> <span class="p">{</span> <span class="p">(</span><span class="nv">resp</span><span class="p">:</span> <span class="kt">DataResponse</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">)</span> <span class="k">in</span> <span class="o">...</span> <span class="p">}</span>
-<span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">...</span><span class="p">)</span><span class="o">.</span><span class="n">responseJSON</span> <span class="p">{</span> <span class="p">(</span><span class="nv">resp</span><span class="p">:</span> <span class="kt">DataResponse</span><span class="o">&lt;</span><span class="kt">Any</span><span class="o">&gt;</span><span class="p">)</span> <span class="k">in</span> <span class="o">...</span> <span class="p">}</span>
-<span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">...</span><span class="p">)</span><span class="o">.</span><span class="n">responsePropertyList</span> <span class="p">{</span> <span class="nv">resp</span><span class="p">:</span> <span class="kt">DataResponse</span><span class="o">&lt;</span><span class="kt">Any</span><span class="o">&gt;</span><span class="p">)</span> <span class="k">in</span> <span class="o">...</span> <span class="p">}</span>
+<pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">...</span><span class="p">)</span><span class="o">.</span><span class="nf">responseData</span> <span class="p">{</span> <span class="p">(</span><span class="nv">resp</span><span class="p">:</span> <span class="kt">DataResponse</span><span class="o">&lt;</span><span class="kt">Data</span><span class="o">&gt;</span><span class="p">)</span> <span class="k">in</span> <span class="o">...</span> <span class="p">}</span>
+<span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">...</span><span class="p">)</span><span class="o">.</span><span class="nf">responseString</span> <span class="p">{</span> <span class="p">(</span><span class="nv">resp</span><span class="p">:</span> <span class="kt">DataResponse</span><span class="o">&lt;</span><span class="kt">String</span><span class="o">&gt;</span><span class="p">)</span> <span class="k">in</span> <span class="o">...</span> <span class="p">}</span>
+<span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">...</span><span class="p">)</span><span class="o">.</span><span class="nf">responseJSON</span> <span class="p">{</span> <span class="p">(</span><span class="nv">resp</span><span class="p">:</span> <span class="kt">DataResponse</span><span class="o">&lt;</span><span class="kt">Any</span><span class="o">&gt;</span><span class="p">)</span> <span class="k">in</span> <span class="o">...</span> <span class="p">}</span>
+<span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">...</span><span class="p">)</span><span class="o">.</span><span class="nf">responsePropertyList</span> <span class="p">{</span> <span class="nv">resp</span><span class="p">:</span> <span class="kt">DataResponse</span><span class="o">&lt;</span><span class="kt">Any</span><span class="o">&gt;</span><span class="p">)</span> <span class="k">in</span> <span class="o">...</span> <span class="p">}</span>
 </code></pre>
 
 <p>Those responses wrap deserialized <em>values</em> (Data, String, Any) or <em>errors</em> (network, validation errors), as well as <em>meta-data</em> (URL request, HTTP headers, status code, <a href="#statistical-metrics">metrics</a>, &hellip;).</p>
@@ -1522,41 +1522,41 @@
 <h4 id='response-mapping' class='heading'>Response Mapping</h4>
 
 <p>Response mapping is the simplest way to produce customized responses. It transforms the value of a response, while preserving eventual errors and meta-data. For example, you can turn a json response <code><a href="Structs/DataResponse.html">DataResponse&lt;Any&gt;</a></code> into a response that holds an application model, such as <code><a href="Structs/DataResponse.html">DataResponse&lt;User&gt;</a></code>. You perform response mapping with the <code>DataResponse.map</code> method:</p>
-<pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://example.com/users/mattt"</span><span class="p">)</span><span class="o">.</span><span class="n">responseJSON</span> <span class="p">{</span> <span class="p">(</span><span class="nv">response</span><span class="p">:</span> <span class="kt">DataResponse</span><span class="o">&lt;</span><span class="kt">Any</span><span class="o">&gt;</span><span class="p">)</span> <span class="k">in</span>
-    <span class="k">let</span> <span class="nv">userResponse</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="n">json</span> <span class="k">in</span>
+<pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://example.com/users/mattt"</span><span class="p">)</span><span class="o">.</span><span class="nf">responseJSON</span> <span class="p">{</span> <span class="p">(</span><span class="nv">response</span><span class="p">:</span> <span class="kt">DataResponse</span><span class="o">&lt;</span><span class="kt">Any</span><span class="o">&gt;</span><span class="p">)</span> <span class="k">in</span>
+    <span class="k">let</span> <span class="nv">userResponse</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="nf">map</span> <span class="p">{</span> <span class="n">json</span> <span class="k">in</span>
         <span class="c1">// We assume an existing User(json: Any) initializer</span>
-        <span class="k">return</span> <span class="kt">User</span><span class="p">(</span><span class="nv">json</span><span class="p">:</span> <span class="n">json</span><span class="p">)</span>
+        <span class="k">return</span> <span class="nf">User</span><span class="p">(</span><span class="nv">json</span><span class="p">:</span> <span class="n">json</span><span class="p">)</span>
     <span class="p">}</span>
 
     <span class="c1">// Process userResponse, of type DataResponse&lt;User&gt;:</span>
-    <span class="k">if</span> <span class="k">let</span> <span class="nv">user</span> <span class="o">=</span> <span class="n">userResponse</span><span class="o">.</span><span class="n">value</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="k">let</span> <span class="nv">user</span> <span class="o">=</span> <span class="n">userResponse</span><span class="o">.</span><span class="nf">value</span> <span class="p">{</span>
         <span class="nf">print</span><span class="p">(</span><span class="s">"User: { username: </span><span class="se">\(</span><span class="n">user</span><span class="o">.</span><span class="n">username</span><span class="se">)</span><span class="s">, name: </span><span class="se">\(</span><span class="n">user</span><span class="o">.</span><span class="n">name</span><span class="se">)</span><span class="s"> }"</span><span class="p">)</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
 
 <p>When the transformation may throw an error, use <code>flatMap</code> instead:</p>
-<pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://example.com/users/mattt"</span><span class="p">)</span><span class="o">.</span><span class="n">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
-    <span class="k">let</span> <span class="nv">userResponse</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">flatMap</span> <span class="p">{</span> <span class="n">json</span> <span class="k">in</span>
-        <span class="k">try</span> <span class="kt">User</span><span class="p">(</span><span class="nv">json</span><span class="p">:</span> <span class="n">json</span><span class="p">)</span>
+<pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://example.com/users/mattt"</span><span class="p">)</span><span class="o">.</span><span class="nf">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+    <span class="k">let</span> <span class="nv">userResponse</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="nf">flatMap</span> <span class="p">{</span> <span class="n">json</span> <span class="k">in</span>
+        <span class="k">try</span> <span class="nf">User</span><span class="p">(</span><span class="nv">json</span><span class="p">:</span> <span class="n">json</span><span class="p">)</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
 
 <p>Response mapping is a good fit for your custom completion handlers:</p>
 <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
-<span class="kd">func</span> <span class="nf">loadUser</span><span class="p">(</span><span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">DataResponse</span><span class="o">&lt;</span><span class="kt">User</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Alamofire</span><span class="o">.</span><span class="kt">DataRequest</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://example.com/users/mattt"</span><span class="p">)</span><span class="o">.</span><span class="n">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
-        <span class="k">let</span> <span class="nv">userResponse</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">flatMap</span> <span class="p">{</span> <span class="n">json</span> <span class="k">in</span>
-            <span class="k">try</span> <span class="kt">User</span><span class="p">(</span><span class="nv">json</span><span class="p">:</span> <span class="n">json</span><span class="p">)</span>
+<span class="kd">func</span> <span class="nf">loadUser</span><span class="p">(</span><span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">DataResponse</span><span class="o">&lt;</span><span class="kt">User</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Alamofire</span><span class="o">.</span><span class="nf">DataRequest</span> <span class="p">{</span>
+    <span class="k">return</span> <span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://example.com/users/mattt"</span><span class="p">)</span><span class="o">.</span><span class="nf">responseJSON</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+        <span class="k">let</span> <span class="nv">userResponse</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="nf">flatMap</span> <span class="p">{</span> <span class="n">json</span> <span class="k">in</span>
+            <span class="k">try</span> <span class="nf">User</span><span class="p">(</span><span class="nv">json</span><span class="p">:</span> <span class="n">json</span><span class="p">)</span>
         <span class="p">}</span>
 
         <span class="nf">completionHandler</span><span class="p">(</span><span class="n">userResponse</span><span class="p">)</span>
     <span class="p">}</span>
 <span class="p">}</span>
 
-<span class="n">loadUser</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
-    <span class="k">if</span> <span class="k">let</span> <span class="nv">user</span> <span class="o">=</span> <span class="n">userResponse</span><span class="o">.</span><span class="n">value</span> <span class="p">{</span>
+<span class="nf">loadUser</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
+    <span class="k">if</span> <span class="k">let</span> <span class="nv">user</span> <span class="o">=</span> <span class="n">userResponse</span><span class="o">.</span><span class="nf">value</span> <span class="p">{</span>
         <span class="nf">print</span><span class="p">(</span><span class="s">"User: { username: </span><span class="se">\(</span><span class="n">user</span><span class="o">.</span><span class="n">username</span><span class="se">)</span><span class="s">, name: </span><span class="se">\(</span><span class="n">user</span><span class="o">.</span><span class="n">name</span><span class="se">)</span><span class="s"> }"</span><span class="p">)</span>
     <span class="p">}</span>
 <span class="p">}</span>
@@ -1564,15 +1564,15 @@
 
 <p>When the map/flatMap closure may process a big amount of data, make sure you execute it outside of the main thread:</p>
 <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
-<span class="kd">func</span> <span class="nf">loadUser</span><span class="p">(</span><span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">DataResponse</span><span class="o">&lt;</span><span class="kt">User</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Alamofire</span><span class="o">.</span><span class="kt">DataRequest</span> <span class="p">{</span>
+<span class="kd">func</span> <span class="nf">loadUser</span><span class="p">(</span><span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">DataResponse</span><span class="o">&lt;</span><span class="kt">User</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Alamofire</span><span class="o">.</span><span class="nf">DataRequest</span> <span class="p">{</span>
     <span class="k">let</span> <span class="nv">utilityQueue</span> <span class="o">=</span> <span class="kt">DispatchQueue</span><span class="o">.</span><span class="nf">global</span><span class="p">(</span><span class="nv">qos</span><span class="p">:</span> <span class="o">.</span><span class="n">utility</span><span class="p">)</span>
 
     <span class="k">return</span> <span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://example.com/users/mattt"</span><span class="p">)</span><span class="o">.</span><span class="nf">responseJSON</span><span class="p">(</span><span class="nv">queue</span><span class="p">:</span> <span class="n">utilityQueue</span><span class="p">)</span> <span class="p">{</span> <span class="n">response</span> <span class="k">in</span>
-        <span class="k">let</span> <span class="nv">userResponse</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">flatMap</span> <span class="p">{</span> <span class="n">json</span> <span class="k">in</span>
-            <span class="k">try</span> <span class="kt">User</span><span class="p">(</span><span class="nv">json</span><span class="p">:</span> <span class="n">json</span><span class="p">)</span>
+        <span class="k">let</span> <span class="nv">userResponse</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="nf">flatMap</span> <span class="p">{</span> <span class="n">json</span> <span class="k">in</span>
+            <span class="k">try</span> <span class="nf">User</span><span class="p">(</span><span class="nv">json</span><span class="p">:</span> <span class="n">json</span><span class="p">)</span>
         <span class="p">}</span>
 
-        <span class="kt">DispatchQueue</span><span class="o">.</span><span class="n">main</span><span class="o">.</span><span class="n">async</span> <span class="p">{</span>
+        <span class="kt">DispatchQueue</span><span class="o">.</span><span class="n">main</span><span class="o">.</span><span class="nf">async</span> <span class="p">{</span>
             <span class="nf">completionHandler</span><span class="p">(</span><span class="n">userResponse</span><span class="p">)</span>
         <span class="p">}</span>
     <span class="p">}</span>
@@ -1585,7 +1585,7 @@
 <p>Before implementing custom response serializers or object serialization methods, it&rsquo;s important to consider how to handle any errors that may occur. There are two basic options: passing existing errors along unmodified, to be dealt with at response time; or, wrapping all errors in an <code>Error</code> type specific to your app.</p>
 
 <p>For example, here&rsquo;s a simple <code>BackendError</code> enum which will be used in later examples:</p>
-<pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">BackendError</span><span class="p">:</span> <span class="kt">Error</span> <span class="p">{</span>
+<pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">BackendError</span><span class="p">:</span> <span class="nf">Error</span> <span class="p">{</span>
     <span class="k">case</span> <span class="nf">network</span><span class="p">(</span><span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">)</span> <span class="c1">// Capture any underlying Error from the URLSession API</span>
     <span class="k">case</span> <span class="nf">dataSerialization</span><span class="p">(</span><span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">)</span>
     <span class="k">case</span> <span class="nf">jsonSerialization</span><span class="p">(</span><span class="nv">error</span><span class="p">:</span> <span class="kt">Error</span><span class="p">)</span>
@@ -1598,24 +1598,24 @@
 <p>Alamofire provides built-in response serialization for strings, JSON, and property lists, but others can be added in extensions on <code>Alamofire.DataRequest</code> and / or <code>Alamofire.DownloadRequest</code>.</p>
 
 <p>For example, here&rsquo;s how a response handler using <a href="https://github.com/mattt/Ono">Ono</a> might be implemented:</p>
-<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">DataRequest</span> <span class="p">{</span>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="nf">DataRequest</span> <span class="p">{</span>
     <span class="kd">static</span> <span class="kd">func</span> <span class="nf">xmlResponseSerializer</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">DataResponseSerializer</span><span class="o">&lt;</span><span class="kt">ONOXMLDocument</span><span class="o">&gt;</span> <span class="p">{</span>
-        <span class="k">return</span> <span class="kt">DataResponseSerializer</span> <span class="p">{</span> <span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">error</span> <span class="k">in</span>
+        <span class="k">return</span> <span class="nf">DataResponseSerializer</span> <span class="p">{</span> <span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">error</span> <span class="k">in</span>
             <span class="c1">// Pass through any underlying URLSession error to the .network case.</span>
-            <span class="k">guard</span> <span class="n">error</span> <span class="o">==</span> <span class="kc">nil</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="o">.</span><span class="nf">failure</span><span class="p">(</span><span class="kt">BackendError</span><span class="o">.</span><span class="nf">network</span><span class="p">(</span><span class="nv">error</span><span class="p">:</span> <span class="n">error</span><span class="o">!</span><span class="p">))</span> <span class="p">}</span>
+            <span class="k">guard</span> <span class="n">error</span> <span class="o">==</span> <span class="kc">nil</span> <span class="nf">else</span> <span class="p">{</span> <span class="k">return</span> <span class="o">.</span><span class="nf">failure</span><span class="p">(</span><span class="kt">BackendError</span><span class="o">.</span><span class="nf">network</span><span class="p">(</span><span class="nv">error</span><span class="p">:</span> <span class="n">error</span><span class="o">!</span><span class="p">))</span> <span class="p">}</span>
 
             <span class="c1">// Use Alamofire's existing data serializer to extract the data, passing the error as nil, as it has</span>
             <span class="c1">// already been handled.</span>
             <span class="k">let</span> <span class="nv">result</span> <span class="o">=</span> <span class="kt">Request</span><span class="o">.</span><span class="nf">serializeResponseData</span><span class="p">(</span><span class="nv">response</span><span class="p">:</span> <span class="n">response</span><span class="p">,</span> <span class="nv">data</span><span class="p">:</span> <span class="n">data</span><span class="p">,</span> <span class="nv">error</span><span class="p">:</span> <span class="kc">nil</span><span class="p">)</span>
 
-            <span class="k">guard</span> <span class="k">case</span> <span class="kd">let</span> <span class="o">.</span><span class="nf">success</span><span class="p">(</span><span class="n">validData</span><span class="p">)</span> <span class="o">=</span> <span class="n">result</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">guard</span> <span class="k">case</span> <span class="kd">let</span> <span class="o">.</span><span class="nf">success</span><span class="p">(</span><span class="n">validData</span><span class="p">)</span> <span class="o">=</span> <span class="n">result</span> <span class="nf">else</span> <span class="p">{</span>
                 <span class="k">return</span> <span class="o">.</span><span class="nf">failure</span><span class="p">(</span><span class="kt">BackendError</span><span class="o">.</span><span class="nf">dataSerialization</span><span class="p">(</span><span class="nv">error</span><span class="p">:</span> <span class="n">result</span><span class="o">.</span><span class="n">error</span><span class="o">!</span> <span class="k">as!</span> <span class="kt">AFError</span><span class="p">))</span>
             <span class="p">}</span>
 
-            <span class="k">do</span> <span class="p">{</span>
-                <span class="k">let</span> <span class="nv">xml</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">ONOXMLDocument</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="n">validData</span><span class="p">)</span>
+            <span class="nf">do</span> <span class="p">{</span>
+                <span class="k">let</span> <span class="nv">xml</span> <span class="o">=</span> <span class="k">try</span> <span class="nf">ONOXMLDocument</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="n">validData</span><span class="p">)</span>
                 <span class="k">return</span> <span class="o">.</span><span class="nf">success</span><span class="p">(</span><span class="n">xml</span><span class="p">)</span>
-            <span class="p">}</span> <span class="k">catch</span> <span class="p">{</span>
+            <span class="p">}</span> <span class="nf">catch</span> <span class="p">{</span>
                 <span class="k">return</span> <span class="o">.</span><span class="nf">failure</span><span class="p">(</span><span class="kt">BackendError</span><span class="o">.</span><span class="nf">xmlSerialization</span><span class="p">(</span><span class="nv">error</span><span class="p">:</span> <span class="n">error</span><span class="p">))</span>
             <span class="p">}</span>
         <span class="p">}</span>
@@ -1625,7 +1625,7 @@
     <span class="kd">func</span> <span class="nf">responseXMLDocument</span><span class="p">(</span>
         <span class="nv">queue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
         <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">DataResponse</span><span class="o">&lt;</span><span class="kt">ONOXMLDocument</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span>
-        <span class="o">-&gt;</span> <span class="k">Self</span>
+        <span class="o">-&gt;</span> <span class="nf">Self</span>
     <span class="p">{</span>
         <span class="k">return</span> <span class="nf">response</span><span class="p">(</span>
             <span class="nv">queue</span><span class="p">:</span> <span class="n">queue</span><span class="p">,</span>
@@ -1638,27 +1638,27 @@
 <h4 id='generic-response-object-serialization' class='heading'>Generic Response Object Serialization</h4>
 
 <p>Generics can be used to provide automatic, type-safe response object serialization.</p>
-<pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">ResponseObjectSerializable</span> <span class="p">{</span>
+<pre class="highlight swift"><code><span class="kd">protocol</span> <span class="nf">ResponseObjectSerializable</span> <span class="p">{</span>
     <span class="nf">init</span><span class="p">?(</span><span class="nv">response</span><span class="p">:</span> <span class="kt">HTTPURLResponse</span><span class="p">,</span> <span class="nv">representation</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span>
 <span class="p">}</span>
 
-<span class="kd">extension</span> <span class="kt">DataRequest</span> <span class="p">{</span>
+<span class="kd">extension</span> <span class="nf">DataRequest</span> <span class="p">{</span>
     <span class="kd">func</span> <span class="n">responseObject</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt">ResponseObjectSerializable</span><span class="o">&gt;</span><span class="p">(</span>
         <span class="nv">queue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
         <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">DataResponse</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span>
-        <span class="o">-&gt;</span> <span class="k">Self</span>
+        <span class="o">-&gt;</span> <span class="nf">Self</span>
     <span class="p">{</span>
         <span class="k">let</span> <span class="nv">responseSerializer</span> <span class="o">=</span> <span class="kt">DataResponseSerializer</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span> <span class="p">{</span> <span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">error</span> <span class="k">in</span>
-            <span class="k">guard</span> <span class="n">error</span> <span class="o">==</span> <span class="kc">nil</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="o">.</span><span class="nf">failure</span><span class="p">(</span><span class="kt">BackendError</span><span class="o">.</span><span class="nf">network</span><span class="p">(</span><span class="nv">error</span><span class="p">:</span> <span class="n">error</span><span class="o">!</span><span class="p">))</span> <span class="p">}</span>
+            <span class="k">guard</span> <span class="n">error</span> <span class="o">==</span> <span class="kc">nil</span> <span class="nf">else</span> <span class="p">{</span> <span class="k">return</span> <span class="o">.</span><span class="nf">failure</span><span class="p">(</span><span class="kt">BackendError</span><span class="o">.</span><span class="nf">network</span><span class="p">(</span><span class="nv">error</span><span class="p">:</span> <span class="n">error</span><span class="o">!</span><span class="p">))</span> <span class="p">}</span>
 
             <span class="k">let</span> <span class="nv">jsonResponseSerializer</span> <span class="o">=</span> <span class="kt">DataRequest</span><span class="o">.</span><span class="nf">jsonResponseSerializer</span><span class="p">(</span><span class="nv">options</span><span class="p">:</span> <span class="o">.</span><span class="n">allowFragments</span><span class="p">)</span>
             <span class="k">let</span> <span class="nv">result</span> <span class="o">=</span> <span class="n">jsonResponseSerializer</span><span class="o">.</span><span class="nf">serializeResponse</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="kc">nil</span><span class="p">)</span>
 
-            <span class="k">guard</span> <span class="k">case</span> <span class="kd">let</span> <span class="o">.</span><span class="nf">success</span><span class="p">(</span><span class="n">jsonObject</span><span class="p">)</span> <span class="o">=</span> <span class="n">result</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">guard</span> <span class="k">case</span> <span class="kd">let</span> <span class="o">.</span><span class="nf">success</span><span class="p">(</span><span class="n">jsonObject</span><span class="p">)</span> <span class="o">=</span> <span class="n">result</span> <span class="nf">else</span> <span class="p">{</span>
                 <span class="k">return</span> <span class="o">.</span><span class="nf">failure</span><span class="p">(</span><span class="kt">BackendError</span><span class="o">.</span><span class="nf">jsonSerialization</span><span class="p">(</span><span class="nv">error</span><span class="p">:</span> <span class="n">result</span><span class="o">.</span><span class="n">error</span><span class="o">!</span><span class="p">))</span>
             <span class="p">}</span>
 
-            <span class="k">guard</span> <span class="k">let</span> <span class="nv">response</span> <span class="o">=</span> <span class="n">response</span><span class="p">,</span> <span class="k">let</span> <span class="nv">responseObject</span> <span class="o">=</span> <span class="kt">T</span><span class="p">(</span><span class="nv">response</span><span class="p">:</span> <span class="n">response</span><span class="p">,</span> <span class="nv">representation</span><span class="p">:</span> <span class="n">jsonObject</span><span class="p">)</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">guard</span> <span class="k">let</span> <span class="nv">response</span> <span class="o">=</span> <span class="n">response</span><span class="p">,</span> <span class="k">let</span> <span class="nv">responseObject</span> <span class="o">=</span> <span class="nf">T</span><span class="p">(</span><span class="nv">response</span><span class="p">:</span> <span class="n">response</span><span class="p">,</span> <span class="nv">representation</span><span class="p">:</span> <span class="n">jsonObject</span><span class="p">)</span> <span class="nf">else</span> <span class="p">{</span>
                 <span class="k">return</span> <span class="o">.</span><span class="nf">failure</span><span class="p">(</span><span class="kt">BackendError</span><span class="o">.</span><span class="nf">objectSerialization</span><span class="p">(</span><span class="nv">reason</span><span class="p">:</span> <span class="s">"JSON could not be serialized: </span><span class="se">\(</span><span class="n">jsonObject</span><span class="se">)</span><span class="s">"</span><span class="p">))</span>
             <span class="p">}</span>
 
@@ -1669,11 +1669,11 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
-<pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">User</span><span class="p">:</span> <span class="kt">ResponseObjectSerializable</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span> <span class="p">{</span>
+<pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">User</span><span class="p">:</span> <span class="kt">ResponseObjectSerializable</span><span class="p">,</span> <span class="nf">CustomStringConvertible</span> <span class="p">{</span>
     <span class="k">let</span> <span class="nv">username</span><span class="p">:</span> <span class="kt">String</span>
     <span class="k">let</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span>
 
-    <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="nf">String</span> <span class="p">{</span>
         <span class="k">return</span> <span class="s">"User: { username: </span><span class="se">\(</span><span class="n">username</span><span class="se">)</span><span class="s">, name: </span><span class="se">\(</span><span class="n">name</span><span class="se">)</span><span class="s"> }"</span>
     <span class="p">}</span>
 
@@ -1682,34 +1682,34 @@
             <span class="k">let</span> <span class="nv">username</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">url</span><span class="p">?</span><span class="o">.</span><span class="n">lastPathComponent</span><span class="p">,</span>
             <span class="k">let</span> <span class="nv">representation</span> <span class="o">=</span> <span class="n">representation</span> <span class="k">as?</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">],</span>
             <span class="k">let</span> <span class="nv">name</span> <span class="o">=</span> <span class="n">representation</span><span class="p">[</span><span class="s">"name"</span><span class="p">]</span> <span class="k">as?</span> <span class="kt">String</span>
-        <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="kc">nil</span> <span class="p">}</span>
+        <span class="nf">else</span> <span class="p">{</span> <span class="k">return</span> <span class="kc">nil</span> <span class="p">}</span>
 
         <span class="k">self</span><span class="o">.</span><span class="n">username</span> <span class="o">=</span> <span class="n">username</span>
         <span class="k">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
-<pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://example.com/users/mattt"</span><span class="p">)</span><span class="o">.</span><span class="n">responseObject</span> <span class="p">{</span> <span class="p">(</span><span class="nv">response</span><span class="p">:</span> <span class="kt">DataResponse</span><span class="o">&lt;</span><span class="kt">User</span><span class="o">&gt;</span><span class="p">)</span> <span class="k">in</span>
+<pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://example.com/users/mattt"</span><span class="p">)</span><span class="o">.</span><span class="nf">responseObject</span> <span class="p">{</span> <span class="p">(</span><span class="nv">response</span><span class="p">:</span> <span class="kt">DataResponse</span><span class="o">&lt;</span><span class="kt">User</span><span class="o">&gt;</span><span class="p">)</span> <span class="k">in</span>
     <span class="nf">debugPrint</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="k">let</span> <span class="nv">user</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">value</span> <span class="p">{</span>
+    <span class="k">if</span> <span class="k">let</span> <span class="nv">user</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="nf">value</span> <span class="p">{</span>
         <span class="nf">print</span><span class="p">(</span><span class="s">"User: { username: </span><span class="se">\(</span><span class="n">user</span><span class="o">.</span><span class="n">username</span><span class="se">)</span><span class="s">, name: </span><span class="se">\(</span><span class="n">user</span><span class="o">.</span><span class="n">name</span><span class="se">)</span><span class="s"> }"</span><span class="p">)</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
 
 <p>The same approach can also be used to handle endpoints that return a representation of a collection of objects:</p>
-<pre class="highlight swift"><code><span class="kd">protocol</span> <span class="kt">ResponseCollectionSerializable</span> <span class="p">{</span>
+<pre class="highlight swift"><code><span class="kd">protocol</span> <span class="nf">ResponseCollectionSerializable</span> <span class="p">{</span>
     <span class="kd">static</span> <span class="kd">func</span> <span class="nf">collection</span><span class="p">(</span><span class="n">from</span> <span class="nv">response</span><span class="p">:</span> <span class="kt">HTTPURLResponse</span><span class="p">,</span> <span class="n">withRepresentation</span> <span class="nv">representation</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="k">Self</span><span class="p">]</span>
 <span class="p">}</span>
 
-<span class="kd">extension</span> <span class="kt">ResponseCollectionSerializable</span> <span class="k">where</span> <span class="k">Self</span><span class="p">:</span> <span class="kt">ResponseObjectSerializable</span> <span class="p">{</span>
+<span class="kd">extension</span> <span class="kt">ResponseCollectionSerializable</span> <span class="k">where</span> <span class="k">Self</span><span class="p">:</span> <span class="nf">ResponseObjectSerializable</span> <span class="p">{</span>
     <span class="kd">static</span> <span class="kd">func</span> <span class="nf">collection</span><span class="p">(</span><span class="n">from</span> <span class="nv">response</span><span class="p">:</span> <span class="kt">HTTPURLResponse</span><span class="p">,</span> <span class="n">withRepresentation</span> <span class="nv">representation</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="k">Self</span><span class="p">]</span> <span class="p">{</span>
         <span class="k">var</span> <span class="nv">collection</span><span class="p">:</span> <span class="p">[</span><span class="k">Self</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
 
         <span class="k">if</span> <span class="k">let</span> <span class="nv">representation</span> <span class="o">=</span> <span class="n">representation</span> <span class="k">as?</span> <span class="p">[[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">]]</span> <span class="p">{</span>
-            <span class="k">for</span> <span class="n">itemRepresentation</span> <span class="k">in</span> <span class="n">representation</span> <span class="p">{</span>
-                <span class="k">if</span> <span class="k">let</span> <span class="nv">item</span> <span class="o">=</span> <span class="kt">Self</span><span class="p">(</span><span class="nv">response</span><span class="p">:</span> <span class="n">response</span><span class="p">,</span> <span class="nv">representation</span><span class="p">:</span> <span class="n">itemRepresentation</span><span class="p">)</span> <span class="p">{</span>
+            <span class="k">for</span> <span class="n">itemRepresentation</span> <span class="k">in</span> <span class="nf">representation</span> <span class="p">{</span>
+                <span class="k">if</span> <span class="k">let</span> <span class="nv">item</span> <span class="o">=</span> <span class="nf">Self</span><span class="p">(</span><span class="nv">response</span><span class="p">:</span> <span class="n">response</span><span class="p">,</span> <span class="nv">representation</span><span class="p">:</span> <span class="n">itemRepresentation</span><span class="p">)</span> <span class="p">{</span>
                     <span class="n">collection</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="n">item</span><span class="p">)</span>
                 <span class="p">}</span>
             <span class="p">}</span>
@@ -1719,23 +1719,23 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
-<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">DataRequest</span> <span class="p">{</span>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="nf">DataRequest</span> <span class="p">{</span>
     <span class="kd">@discardableResult</span>
     <span class="kd">func</span> <span class="n">responseCollection</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt">ResponseCollectionSerializable</span><span class="o">&gt;</span><span class="p">(</span>
         <span class="nv">queue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
-        <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">DataResponse</span><span class="o">&lt;</span><span class="p">[</span><span class="kt">T</span><span class="p">]</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span>
+        <span class="nv">completionHandler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">DataResponse</span><span class="o">&lt;</span><span class="p">[</span><span class="kt">T</span><span class="p">]</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nf">Self</span>
     <span class="p">{</span>
         <span class="k">let</span> <span class="nv">responseSerializer</span> <span class="o">=</span> <span class="kt">DataResponseSerializer</span><span class="o">&lt;</span><span class="p">[</span><span class="kt">T</span><span class="p">]</span><span class="o">&gt;</span> <span class="p">{</span> <span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="n">error</span> <span class="k">in</span>
-            <span class="k">guard</span> <span class="n">error</span> <span class="o">==</span> <span class="kc">nil</span> <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="o">.</span><span class="nf">failure</span><span class="p">(</span><span class="kt">BackendError</span><span class="o">.</span><span class="nf">network</span><span class="p">(</span><span class="nv">error</span><span class="p">:</span> <span class="n">error</span><span class="o">!</span><span class="p">))</span> <span class="p">}</span>
+            <span class="k">guard</span> <span class="n">error</span> <span class="o">==</span> <span class="kc">nil</span> <span class="nf">else</span> <span class="p">{</span> <span class="k">return</span> <span class="o">.</span><span class="nf">failure</span><span class="p">(</span><span class="kt">BackendError</span><span class="o">.</span><span class="nf">network</span><span class="p">(</span><span class="nv">error</span><span class="p">:</span> <span class="n">error</span><span class="o">!</span><span class="p">))</span> <span class="p">}</span>
 
             <span class="k">let</span> <span class="nv">jsonSerializer</span> <span class="o">=</span> <span class="kt">DataRequest</span><span class="o">.</span><span class="nf">jsonResponseSerializer</span><span class="p">(</span><span class="nv">options</span><span class="p">:</span> <span class="o">.</span><span class="n">allowFragments</span><span class="p">)</span>
             <span class="k">let</span> <span class="nv">result</span> <span class="o">=</span> <span class="n">jsonSerializer</span><span class="o">.</span><span class="nf">serializeResponse</span><span class="p">(</span><span class="n">request</span><span class="p">,</span> <span class="n">response</span><span class="p">,</span> <span class="n">data</span><span class="p">,</span> <span class="kc">nil</span><span class="p">)</span>
 
-            <span class="k">guard</span> <span class="k">case</span> <span class="kd">let</span> <span class="o">.</span><span class="nf">success</span><span class="p">(</span><span class="n">jsonObject</span><span class="p">)</span> <span class="o">=</span> <span class="n">result</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">guard</span> <span class="k">case</span> <span class="kd">let</span> <span class="o">.</span><span class="nf">success</span><span class="p">(</span><span class="n">jsonObject</span><span class="p">)</span> <span class="o">=</span> <span class="n">result</span> <span class="nf">else</span> <span class="p">{</span>
                 <span class="k">return</span> <span class="o">.</span><span class="nf">failure</span><span class="p">(</span><span class="kt">BackendError</span><span class="o">.</span><span class="nf">jsonSerialization</span><span class="p">(</span><span class="nv">error</span><span class="p">:</span> <span class="n">result</span><span class="o">.</span><span class="n">error</span><span class="o">!</span><span class="p">))</span>
             <span class="p">}</span>
 
-            <span class="k">guard</span> <span class="k">let</span> <span class="nv">response</span> <span class="o">=</span> <span class="n">response</span> <span class="k">else</span> <span class="p">{</span>
+            <span class="k">guard</span> <span class="k">let</span> <span class="nv">response</span> <span class="o">=</span> <span class="n">response</span> <span class="nf">else</span> <span class="p">{</span>
                 <span class="k">let</span> <span class="nv">reason</span> <span class="o">=</span> <span class="s">"Response collection could not be serialized due to nil response."</span>
                 <span class="k">return</span> <span class="o">.</span><span class="nf">failure</span><span class="p">(</span><span class="kt">BackendError</span><span class="o">.</span><span class="nf">objectSerialization</span><span class="p">(</span><span class="nv">reason</span><span class="p">:</span> <span class="n">reason</span><span class="p">))</span>
             <span class="p">}</span>
@@ -1747,11 +1747,11 @@
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
-<pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">User</span><span class="p">:</span> <span class="kt">ResponseObjectSerializable</span><span class="p">,</span> <span class="kt">ResponseCollectionSerializable</span><span class="p">,</span> <span class="kt">CustomStringConvertible</span> <span class="p">{</span>
+<pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">User</span><span class="p">:</span> <span class="kt">ResponseObjectSerializable</span><span class="p">,</span> <span class="kt">ResponseCollectionSerializable</span><span class="p">,</span> <span class="nf">CustomStringConvertible</span> <span class="p">{</span>
     <span class="k">let</span> <span class="nv">username</span><span class="p">:</span> <span class="kt">String</span>
     <span class="k">let</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span>
 
-    <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span>
+    <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="nf">String</span> <span class="p">{</span>
         <span class="k">return</span> <span class="s">"User: { username: </span><span class="se">\(</span><span class="n">username</span><span class="se">)</span><span class="s">, name: </span><span class="se">\(</span><span class="n">name</span><span class="se">)</span><span class="s"> }"</span>
     <span class="p">}</span>
 
@@ -1760,18 +1760,18 @@
             <span class="k">let</span> <span class="nv">username</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">url</span><span class="p">?</span><span class="o">.</span><span class="n">lastPathComponent</span><span class="p">,</span>
             <span class="k">let</span> <span class="nv">representation</span> <span class="o">=</span> <span class="n">representation</span> <span class="k">as?</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span> <span class="kt">Any</span><span class="p">],</span>
             <span class="k">let</span> <span class="nv">name</span> <span class="o">=</span> <span class="n">representation</span><span class="p">[</span><span class="s">"name"</span><span class="p">]</span> <span class="k">as?</span> <span class="kt">String</span>
-        <span class="k">else</span> <span class="p">{</span> <span class="k">return</span> <span class="kc">nil</span> <span class="p">}</span>
+        <span class="nf">else</span> <span class="p">{</span> <span class="k">return</span> <span class="kc">nil</span> <span class="p">}</span>
 
         <span class="k">self</span><span class="o">.</span><span class="n">username</span> <span class="o">=</span> <span class="n">username</span>
         <span class="k">self</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="n">name</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
-<pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://example.com/users"</span><span class="p">)</span><span class="o">.</span><span class="n">responseCollection</span> <span class="p">{</span> <span class="p">(</span><span class="nv">response</span><span class="p">:</span> <span class="kt">DataResponse</span><span class="o">&lt;</span><span class="p">[</span><span class="kt">User</span><span class="p">]</span><span class="o">&gt;</span><span class="p">)</span> <span class="k">in</span>
+<pre class="highlight swift"><code><span class="kt">Alamofire</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="s">"https://example.com/users"</span><span class="p">)</span><span class="o">.</span><span class="nf">responseCollection</span> <span class="p">{</span> <span class="p">(</span><span class="nv">response</span><span class="p">:</span> <span class="kt">DataResponse</span><span class="o">&lt;</span><span class="p">[</span><span class="kt">User</span><span class="p">]</span><span class="o">&gt;</span><span class="p">)</span> <span class="k">in</span>
     <span class="nf">debugPrint</span><span class="p">(</span><span class="n">response</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="k">let</span> <span class="nv">users</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">value</span> <span class="p">{</span>
-        <span class="n">users</span><span class="o">.</span><span class="n">forEach</span> <span class="p">{</span> <span class="nf">print</span><span class="p">(</span><span class="s">"- </span><span class="se">\(</span><span class="nv">$0</span><span class="se">)</span><span class="s">"</span><span class="p">)</span> <span class="p">}</span>
+    <span class="k">if</span> <span class="k">let</span> <span class="nv">users</span> <span class="o">=</span> <span class="n">response</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="nf">value</span> <span class="p">{</span>
+        <span class="n">users</span><span class="o">.</span><span class="nf">forEach</span> <span class="p">{</span> <span class="nf">print</span><span class="p">(</span><span class="s">"- </span><span class="se">\(</span><span class="nv">$0</span><span class="se">)</span><span class="s">"</span><span class="p">)</span> <span class="p">}</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </code></pre>
@@ -1809,8 +1809,8 @@
     <span class="s">"insecure.expired-apis.com"</span><span class="p">:</span> <span class="o">.</span><span class="n">disableEvaluation</span>
 <span class="p">]</span>
 
-<span class="k">let</span> <span class="nv">sessionManager</span> <span class="o">=</span> <span class="kt">SessionManager</span><span class="p">(</span>
-    <span class="nv">serverTrustPolicyManager</span><span class="p">:</span> <span class="kt">ServerTrustPolicyManager</span><span class="p">(</span><span class="nv">policies</span><span class="p">:</span> <span class="n">serverTrustPolicies</span><span class="p">)</span>
+<span class="k">let</span> <span class="nv">sessionManager</span> <span class="o">=</span> <span class="nf">SessionManager</span><span class="p">(</span>
+    <span class="nv">serverTrustPolicyManager</span><span class="p">:</span> <span class="nf">ServerTrustPolicyManager</span><span class="p">(</span><span class="nv">policies</span><span class="p">:</span> <span class="n">serverTrustPolicies</span><span class="p">)</span>
 <span class="p">)</span>
 </code></pre>
 
@@ -1834,8 +1834,8 @@
 <h5 id='subclassing-server-trust-policy-manager' class='heading'>Subclassing Server Trust Policy Manager</h5>
 
 <p>If you find yourself needing more flexible server trust policy matching behavior (i.e. wildcarded domains), then subclass the <code><a href="Classes/ServerTrustPolicyManager.html">ServerTrustPolicyManager</a></code> and override the <code>serverTrustPolicyForHost</code> method with your own custom implementation.</p>
-<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">CustomServerTrustPolicyManager</span><span class="p">:</span> <span class="kt">ServerTrustPolicyManager</span> <span class="p">{</span>
-    <span class="k">override</span> <span class="kd">func</span> <span class="nf">serverTrustPolicy</span><span class="p">(</span><span class="n">forHost</span> <span class="nv">host</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">ServerTrustPolicy</span><span class="p">?</span> <span class="p">{</span>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">CustomServerTrustPolicyManager</span><span class="p">:</span> <span class="nf">ServerTrustPolicyManager</span> <span class="p">{</span>
+    <span class="k">override</span> <span class="kd">func</span> <span class="nf">serverTrustPolicy</span><span class="p">(</span><span class="n">forHost</span> <span class="nv">host</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nf">ServerTrustPolicy</span><span class="p">?</span> <span class="p">{</span>
         <span class="k">var</span> <span class="nv">policy</span><span class="p">:</span> <span class="kt">ServerTrustPolicy</span><span class="p">?</span>
 
         <span class="c1">// Implement your custom domain matching behavior...</span>
@@ -1895,7 +1895,7 @@
 <h3 id='network-reachability' class='heading'>Network Reachability</h3>
 
 <p>The <code><a href="Classes/NetworkReachabilityManager.html">NetworkReachabilityManager</a></code> listens for reachability changes of hosts and addresses for both WWAN and WiFi network interfaces.</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">manager</span> <span class="o">=</span> <span class="kt">NetworkReachabilityManager</span><span class="p">(</span><span class="nv">host</span><span class="p">:</span> <span class="s">"www.apple.com"</span><span class="p">)</span>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">manager</span> <span class="o">=</span> <span class="nf">NetworkReachabilityManager</span><span class="p">(</span><span class="nv">host</span><span class="p">:</span> <span class="s">"www.apple.com"</span><span class="p">)</span>
 
 <span class="n">manager</span><span class="p">?</span><span class="o">.</span><span class="n">listener</span> <span class="o">=</span> <span class="p">{</span> <span class="n">status</span> <span class="k">in</span>
     <span class="nf">print</span><span class="p">(</span><span class="s">"Network Status Changed: </span><span class="se">\(</span><span class="n">status</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>

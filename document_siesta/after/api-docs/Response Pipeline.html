@@ -268,14 +268,14 @@ custom stages, and customize their order. Each stage has zero or more <code><a h
 <code><a href="Protocols/EntityCache.html">EntityCache</a></code>.</p>
 
 <p>The pipeline is a part of a <code><a href="Structs/Configuration.html">Configuration</a></code>, so you can thus customize the pipeline per API or per resource.</p>
-<pre class="highlight swift"><code><span class="n">service</span><span class="o">.</span><span class="n">configure</span> <span class="p">{</span>
+<pre class="highlight swift"><code><span class="n">service</span><span class="o">.</span><span class="nf">configure</span> <span class="p">{</span>
   <span class="nv">$0</span><span class="o">.</span><span class="n">pipeline</span><span class="p">[</span><span class="o">.</span><span class="n">parsing</span><span class="p">]</span><span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="kt">SwiftyJSONTransformer</span><span class="p">,</span> <span class="nv">contentTypes</span><span class="p">:</span> <span class="p">[</span><span class="s">"*​/json"</span><span class="p">])</span>
-  <span class="nv">$0</span><span class="o">.</span><span class="n">pipeline</span><span class="p">[</span><span class="o">.</span><span class="n">cleanup</span><span class="p">]</span><span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="kt">GithubErrorMessageExtractor</span><span class="p">())</span>
+  <span class="nv">$0</span><span class="o">.</span><span class="n">pipeline</span><span class="p">[</span><span class="o">.</span><span class="n">cleanup</span><span class="p">]</span><span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="nf">GithubErrorMessageExtractor</span><span class="p">())</span>
   <span class="nv">$0</span><span class="o">.</span><span class="n">pipeline</span><span class="p">[</span><span class="o">.</span><span class="n">model</span><span class="p">]</span><span class="o">.</span><span class="nf">cacheUsing</span><span class="p">(</span><span class="n">myRealmCache</span><span class="p">)</span>
 <span class="p">}</span>
 
 <span class="n">service</span><span class="o">.</span><span class="nf">configureTransformer</span><span class="p">(</span><span class="s">"/item/​*"</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// Replaces .model stage by default</span>
-  <span class="kt">Item</span><span class="p">(</span><span class="nv">json</span><span class="p">:</span> <span class="nv">$0</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+  <span class="nf">Item</span><span class="p">(</span><span class="nv">json</span><span class="p">:</span> <span class="nv">$0</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre>
 
@@ -359,15 +359,15 @@ comprehensibility, and Siesta does not enforce them in any way (e.g. it does not
 <code>rawData</code> stage to output something other than <code>Data</code>).</p>
 
 <p>Because this is not an enum, you can add custom stages:</p>
-<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">PipelineStageKey</span> <span class="p">{</span>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="nf">PipelineStageKey</span> <span class="p">{</span>
   <span class="kd">static</span> <span class="k">let</span>
-    <span class="nv">munging</span>   <span class="o">=</span> <span class="kt">PipelineStageKey</span><span class="p">(</span><span class="nv">description</span><span class="p">:</span> <span class="s">"munging"</span><span class="p">),</span>
-    <span class="n">twiddling</span> <span class="o">=</span> <span class="kt">PipelineStageKey</span><span class="p">(</span><span class="nv">description</span><span class="p">:</span> <span class="s">"twiddling"</span><span class="p">)</span>
+    <span class="nv">munging</span>   <span class="o">=</span> <span class="nf">PipelineStageKey</span><span class="p">(</span><span class="nv">description</span><span class="p">:</span> <span class="s">"munging"</span><span class="p">),</span>
+    <span class="n">twiddling</span> <span class="o">=</span> <span class="nf">PipelineStageKey</span><span class="p">(</span><span class="nv">description</span><span class="p">:</span> <span class="s">"twiddling"</span><span class="p">)</span>
 <span class="p">}</span>
 
 <span class="o">...</span>
 
-<span class="n">service</span><span class="o">.</span><span class="n">configure</span> <span class="p">{</span>
+<span class="n">service</span><span class="o">.</span><span class="nf">configure</span> <span class="p">{</span>
     <span class="nv">$0</span><span class="o">.</span><span class="n">pipeline</span><span class="o">.</span><span class="n">order</span> <span class="o">=</span> <span class="p">[</span><span class="o">.</span><span class="n">rawData</span><span class="p">,</span> <span class="o">.</span><span class="n">munging</span><span class="p">,</span> <span class="o">.</span><span class="n">twiddling</span><span class="p">,</span> <span class="o">.</span><span class="n">cleanup</span><span class="p">]</span>
 <span class="p">}</span>
 </code></pre>
@@ -538,7 +538,7 @@ surrounding metadata.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="kt">JSONResponseTransformer</span><span class="p">(</span><span class="n">_</span> <span class="nv">transformErrors</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="Protocols/ResponseTransformer.html">ResponseTransformer</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">JSONResponseTransformer</span><span class="p">(</span><span class="n">_</span> <span class="nv">transformErrors</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="Protocols/ResponseTransformer.html">ResponseTransformer</a></span></code></pre>
 
                         </div>
                       </div>
@@ -565,7 +565,7 @@ surrounding metadata.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="kt">TextResponseTransformer</span><span class="p">(</span><span class="n">_</span> <span class="nv">transformErrors</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="Protocols/ResponseTransformer.html">ResponseTransformer</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">TextResponseTransformer</span><span class="p">(</span><span class="n">_</span> <span class="nv">transformErrors</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="Protocols/ResponseTransformer.html">ResponseTransformer</a></span></code></pre>
 
                         </div>
                       </div>
@@ -592,7 +592,7 @@ surrounding metadata.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="kt">ImageResponseTransformer</span><span class="p">(</span><span class="n">_</span> <span class="nv">transformErrors</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="Protocols/ResponseTransformer.html">ResponseTransformer</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">ImageResponseTransformer</span><span class="p">(</span><span class="n">_</span> <span class="nv">transformErrors</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="Protocols/ResponseTransformer.html">ResponseTransformer</a></span></code></pre>
 
                         </div>
                       </div>

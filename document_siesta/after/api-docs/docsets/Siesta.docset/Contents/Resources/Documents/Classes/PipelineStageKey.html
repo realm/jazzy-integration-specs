@@ -253,15 +253,15 @@ comprehensibility, and Siesta does not enforce them in any way (e.g. it does not
 <code>rawData</code> stage to output something other than <code>Data</code>).</p>
 
 <p>Because this is not an enum, you can add custom stages:</p>
-<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">PipelineStageKey</span> <span class="p">{</span>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="nf">PipelineStageKey</span> <span class="p">{</span>
   <span class="kd">static</span> <span class="k">let</span>
-    <span class="nv">munging</span>   <span class="o">=</span> <span class="kt">PipelineStageKey</span><span class="p">(</span><span class="nv">description</span><span class="p">:</span> <span class="s">"munging"</span><span class="p">),</span>
-    <span class="n">twiddling</span> <span class="o">=</span> <span class="kt">PipelineStageKey</span><span class="p">(</span><span class="nv">description</span><span class="p">:</span> <span class="s">"twiddling"</span><span class="p">)</span>
+    <span class="nv">munging</span>   <span class="o">=</span> <span class="nf">PipelineStageKey</span><span class="p">(</span><span class="nv">description</span><span class="p">:</span> <span class="s">"munging"</span><span class="p">),</span>
+    <span class="n">twiddling</span> <span class="o">=</span> <span class="nf">PipelineStageKey</span><span class="p">(</span><span class="nv">description</span><span class="p">:</span> <span class="s">"twiddling"</span><span class="p">)</span>
 <span class="p">}</span>
 
 <span class="o">...</span>
 
-<span class="n">service</span><span class="o">.</span><span class="n">configure</span> <span class="p">{</span>
+<span class="n">service</span><span class="o">.</span><span class="nf">configure</span> <span class="p">{</span>
     <span class="nv">$0</span><span class="o">.</span><span class="n">pipeline</span><span class="o">.</span><span class="n">order</span> <span class="o">=</span> <span class="p">[</span><span class="o">.</span><span class="n">rawData</span><span class="p">,</span> <span class="o">.</span><span class="n">munging</span><span class="p">,</span> <span class="o">.</span><span class="n">twiddling</span><span class="p">,</span> <span class="o">.</span><span class="n">cleanup</span><span class="p">]</span>
 <span class="p">}</span>
 </code></pre>
@@ -351,7 +351,7 @@ comprehensibility, and Siesta does not enforce them in any way (e.g. it does not
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">rawData</span> <span class="o">=</span> <span class="kt">PipelineStageKey</span><span class="p">(</span><span class="nv">description</span><span class="p">:</span> <span class="s">"rawData"</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">rawData</span> <span class="o">=</span> <span class="nf">PipelineStageKey</span><span class="p">(</span><span class="nv">description</span><span class="p">:</span> <span class="s">"rawData"</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -378,7 +378,7 @@ comprehensibility, and Siesta does not enforce them in any way (e.g. it does not
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">decoding</span> <span class="o">=</span> <span class="kt">PipelineStageKey</span><span class="p">(</span><span class="nv">description</span><span class="p">:</span> <span class="s">"decoding"</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">decoding</span> <span class="o">=</span> <span class="nf">PipelineStageKey</span><span class="p">(</span><span class="nv">description</span><span class="p">:</span> <span class="s">"decoding"</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -405,7 +405,7 @@ comprehensibility, and Siesta does not enforce them in any way (e.g. it does not
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">parsing</span> <span class="o">=</span> <span class="kt">PipelineStageKey</span><span class="p">(</span><span class="nv">description</span><span class="p">:</span> <span class="s">"parsing"</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">parsing</span> <span class="o">=</span> <span class="nf">PipelineStageKey</span><span class="p">(</span><span class="nv">description</span><span class="p">:</span> <span class="s">"parsing"</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -432,7 +432,7 @@ comprehensibility, and Siesta does not enforce them in any way (e.g. it does not
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">model</span> <span class="o">=</span> <span class="kt">PipelineStageKey</span><span class="p">(</span><span class="nv">description</span><span class="p">:</span> <span class="s">"model"</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">model</span> <span class="o">=</span> <span class="nf">PipelineStageKey</span><span class="p">(</span><span class="nv">description</span><span class="p">:</span> <span class="s">"model"</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -459,7 +459,7 @@ comprehensibility, and Siesta does not enforce them in any way (e.g. it does not
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">cleanup</span> <span class="o">=</span> <span class="kt">PipelineStageKey</span><span class="p">(</span><span class="nv">description</span><span class="p">:</span> <span class="s">"cleanup"</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">cleanup</span> <span class="o">=</span> <span class="nf">PipelineStageKey</span><span class="p">(</span><span class="nv">description</span><span class="p">:</span> <span class="s">"cleanup"</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
