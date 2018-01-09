@@ -521,7 +521,7 @@
     <span class="nv">response</span><span class="p">:</span> <span class="kt">HTTPURLResponse</span><span class="p">?,</span>
     <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">?,</span>
     <span class="nv">result</span><span class="p">:</span> <span class="kt"><a href="../Enums/Result.html">Result</a></span><span class="o">&lt;</span><span class="kt">Value</span><span class="o">&gt;</span><span class="p">,</span>
-    <span class="nv">timeline</span><span class="p">:</span> <span class="kt"><a href="../Structs/Timeline.html">Timeline</a></span> <span class="o">=</span> <span class="kt"><a href="../Structs/Timeline.html">Timeline</a></span><span class="p">())</span></code></pre>
+    <span class="nv">timeline</span><span class="p">:</span> <span class="kt"><a href="../Structs/Timeline.html">Timeline</a></span> <span class="o">=</span> <span class="nf">Timeline</span><span class="p">())</span></code></pre>
 
                         </div>
                       </div>
@@ -690,7 +690,7 @@ result value as a parameter.</p>
 
 <p>Use the <code>map</code> method with a closure that does not throw. For example:</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">possibleData</span><span class="p">:</span> <span class="kt">DataResponse</span><span class="o">&lt;</span><span class="kt">Data</span><span class="o">&gt;</span> <span class="o">=</span> <span class="o">...</span>
-<span class="k">let</span> <span class="nv">possibleInt</span> <span class="o">=</span> <span class="n">possibleData</span><span class="o">.</span><span class="n">map</span> <span class="p">{</span> <span class="nv">$0</span><span class="o">.</span><span class="n">count</span> <span class="p">}</span>
+<span class="k">let</span> <span class="nv">possibleInt</span> <span class="o">=</span> <span class="n">possibleData</span><span class="o">.</span><span class="nf">map</span> <span class="p">{</span> <span class="nv">$0</span><span class="o">.</span><span class="n">count</span> <span class="p">}</span>
 </code></pre>
 
                       </div>
@@ -750,7 +750,7 @@ value as a parameter.</p>
 
 <p>Use the <code>flatMap</code> method with a closure that may throw an error. For example:</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">possibleData</span><span class="p">:</span> <span class="kt">DataResponse</span><span class="o">&lt;</span><span class="kt">Data</span><span class="o">&gt;</span> <span class="o">=</span> <span class="o">...</span>
-<span class="k">let</span> <span class="nv">possibleObject</span> <span class="o">=</span> <span class="n">possibleData</span><span class="o">.</span><span class="n">flatMap</span> <span class="p">{</span>
+<span class="k">let</span> <span class="nv">possibleObject</span> <span class="o">=</span> <span class="n">possibleData</span><span class="o">.</span><span class="nf">flatMap</span> <span class="p">{</span>
     <span class="k">try</span> <span class="kt">JSONSerialization</span><span class="o">.</span><span class="nf">jsonObject</span><span class="p">(</span><span class="nv">with</span><span class="p">:</span> <span class="nv">$0</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre>

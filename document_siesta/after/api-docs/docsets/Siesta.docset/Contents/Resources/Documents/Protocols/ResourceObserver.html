@@ -347,7 +347,7 @@ what caused it to stop observing. This is because there is no way for Siesta to 
 to be deallocated; it can only check whether the observer is already gone.</p>
 
 <p>For example:</p>
-<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">myObserver</span><span class="p">:</span> <span class="kt">MyObserver</span><span class="p">?</span> <span class="o">=</span> <span class="kt">MyObserver</span><span class="p">()</span>
+<pre class="highlight swift"><code><span class="k">var</span> <span class="nv">myObserver</span><span class="p">:</span> <span class="kt">MyObserver</span><span class="p">?</span> <span class="o">=</span> <span class="nf">MyObserver</span><span class="p">()</span>
 <span class="n">resource</span><span class="o">.</span><span class="nf">addObserver</span><span class="p">(</span><span class="n">myObserver</span><span class="o">!</span><span class="p">)</span>  <span class="c1">// myObserver is self-owned, so...</span>
 <span class="n">myObserver</span> <span class="o">=</span> <span class="kc">nil</span>                   <span class="c1">// this deallocates it, but...</span>
 <span class="c1">// ...myObserver never receives stoppedObserving(resource:).</span>

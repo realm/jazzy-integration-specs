@@ -1972,8 +1972,8 @@ there is no opportunity for the initial notification to be delivered first. As a
 will reflect the state of the Realm after the write transaction.</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">results</span> <span class="o">=</span> <span class="n">realm</span><span class="o">.</span><span class="nf">objects</span><span class="p">(</span><span class="kt">Dog</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
 <span class="nf">print</span><span class="p">(</span><span class="s">"dogs.count: </span><span class="se">\(</span><span class="n">dogs</span><span class="p">?</span><span class="o">.</span><span class="n">count</span><span class="se">)</span><span class="s">"</span><span class="p">)</span> <span class="c1">// =&gt; 0</span>
-<span class="k">let</span> <span class="nv">token</span> <span class="o">=</span> <span class="n">dogs</span><span class="o">.</span><span class="n">addNotificationBlock</span> <span class="p">{</span> <span class="n">changes</span> <span class="k">in</span>
-    <span class="k">switch</span> <span class="n">changes</span> <span class="p">{</span>
+<span class="k">let</span> <span class="nv">token</span> <span class="o">=</span> <span class="n">dogs</span><span class="o">.</span><span class="nf">addNotificationBlock</span> <span class="p">{</span> <span class="n">changes</span> <span class="k">in</span>
+    <span class="k">switch</span> <span class="nf">changes</span> <span class="p">{</span>
     <span class="k">case</span> <span class="o">.</span><span class="nf">initial</span><span class="p">(</span><span class="k">let</span> <span class="nv">dogs</span><span class="p">):</span>
         <span class="c1">// Will print "dogs.count: 1"</span>
         <span class="nf">print</span><span class="p">(</span><span class="s">"dogs.count: </span><span class="se">\(</span><span class="n">dogs</span><span class="o">.</span><span class="n">count</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
@@ -1985,8 +1985,8 @@ will reflect the state of the Realm after the write transaction.</p>
         <span class="k">break</span>
     <span class="p">}</span>
 <span class="p">}</span>
-<span class="k">try!</span> <span class="n">realm</span><span class="o">.</span><span class="n">write</span> <span class="p">{</span>
-    <span class="k">let</span> <span class="nv">dog</span> <span class="o">=</span> <span class="kt">Dog</span><span class="p">()</span>
+<span class="k">try!</span> <span class="n">realm</span><span class="o">.</span><span class="nf">write</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">dog</span> <span class="o">=</span> <span class="nf">Dog</span><span class="p">()</span>
     <span class="n">dog</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s">"Rex"</span>
     <span class="n">person</span><span class="o">.</span><span class="n">dogs</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="n">dog</span><span class="p">)</span>
 <span class="p">}</span>

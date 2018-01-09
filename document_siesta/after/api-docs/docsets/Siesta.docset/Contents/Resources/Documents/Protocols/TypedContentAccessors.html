@@ -248,7 +248,7 @@
             <p>Mixin that provides convenience accessors for the content of an optional contained entity.</p>
 
 <p>Allows you to replace the following:</p>
-<pre class="highlight swift"><code><span class="n">resource</span><span class="o">.</span><span class="n">latestData</span><span class="p">?</span><span class="o">.</span><span class="n">content</span> <span class="k">as?</span> <span class="kt">String</span>
+<pre class="highlight swift"><code><span class="n">resource</span><span class="o">.</span><span class="n">latestData</span><span class="p">?</span><span class="o">.</span><span class="n">content</span> <span class="k">as?</span> <span class="nf">String</span>
 <span class="p">(</span><span class="n">resource</span><span class="o">.</span><span class="n">latestError</span><span class="p">?</span><span class="o">.</span><span class="n">entity</span><span class="p">?</span><span class="o">.</span><span class="n">content</span> <span class="k">as?</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span><span class="kt">AnyObject</span><span class="p">])?[</span><span class="s">"error.detail"</span><span class="p">]</span>
 </code></pre>
 
@@ -258,8 +258,8 @@
 </code></pre>
 
 <p>You can extend this protocol to provide your own convenience accessors. For example:</p>
-<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">TypedContentAccessors</span> <span class="p">{</span>
-  <span class="k">var</span> <span class="nv">doorknob</span><span class="p">:</span> <span class="kt">UIDoorknob</span> <span class="p">{</span>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="nf">TypedContentAccessors</span> <span class="p">{</span>
+  <span class="k">var</span> <span class="nv">doorknob</span><span class="p">:</span> <span class="nf">UIDoorknob</span> <span class="p">{</span>
     <span class="k">return</span> <span class="nf">typedContent</span><span class="p">(</span><span class="nv">ifNone</span><span class="p">:</span> <span class="n">placeholderKnob</span><span class="p">)</span>
   <span class="p">}</span>
 <span class="p">}</span>
@@ -352,7 +352,7 @@ a custom <code><a href="../Protocols/ResponseTransformer.html">ResponseTransform
                       <div class="abstract">
                         <p>A convenience for retrieving the content in this container when you expect it to be of a specific type.
 For example, if you expect the content to be a UIImage:</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">image</span> <span class="o">=</span> <span class="n">resource</span><span class="o">.</span><span class="nf">typedContent</span><span class="p">(</span><span class="nv">ifNone</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="s">"placeholder.png"</span><span class="p">))</span>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">image</span> <span class="o">=</span> <span class="n">resource</span><span class="o">.</span><span class="nf">typedContent</span><span class="p">(</span><span class="nv">ifNone</span><span class="p">:</span> <span class="nf">UIImage</span><span class="p">(</span><span class="nv">named</span><span class="p">:</span> <span class="s">"placeholder.png"</span><span class="p">))</span>
 </code></pre>
 <div class="aside aside-see-also">
     <p class="aside-title">See also</p>
