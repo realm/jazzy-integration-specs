@@ -65,8 +65,18 @@ class ClassWithInitializers {
 
 /// SUPPORTED: documented enum
 enum DocumentedEnum {
+    // MARK: Cases
+
     /// SUPPORTED: documented enum element
     case documentedValue
+
+    /// Another element
+    case otherDocumentedValue
+
+    // MARK: Methods
+
+    /// Documented enum method
+    func evaluate() -> Void {}
 }
 
 // SUPPORTED: undocumented enum
