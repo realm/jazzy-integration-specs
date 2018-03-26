@@ -275,7 +275,8 @@
             <h1>SyncPermissionChange</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">SyncPermissionChange</span><span class="p">:</span> <span class="kt"><a href="../Classes/Object.html">Object</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">@available(*, deprecated, message: "Use `SyncUser.applyPermission(﹚` and `SyncUser.revokePermission(﹚`")</span>
+<span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">SyncPermissionChange</span> <span class="p">:</span> <span class="kt"><a href="../Classes/Object.html">Object</a></span></code></pre>
 
                 </div>
               </div>
@@ -310,7 +311,7 @@ documentation.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">id</span> <span class="o">=</span> <span class="nf">UUID</span><span class="p">()</span><span class="o">.</span><span class="n">uuidString</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">id</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -340,7 +341,7 @@ documentation.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">createdAt</span> <span class="o">=</span> <span class="nf">Date</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">createdAt</span><span class="p">:</span> <span class="kt">Date</span></code></pre>
 
                         </div>
                       </div>
@@ -370,7 +371,7 @@ documentation.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">updatedAt</span> <span class="o">=</span> <span class="nf">Date</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">updatedAt</span><span class="p">:</span> <span class="kt">Date</span></code></pre>
 
                         </div>
                       </div>
@@ -400,7 +401,7 @@ documentation.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">statusCode</span> <span class="o">=</span> <span class="kt"><a href="../Classes/RealmOptional.html">RealmOptional</a></span><span class="o">&lt;</span><span class="kt">Int</span><span class="o">&gt;</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">statusCode</span><span class="p">:</span> <span class="kt"><a href="../Classes/RealmOptional.html">RealmOptional</a></span><span class="o">&lt;</span><span class="kt">Int</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -460,7 +461,7 @@ documentation.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">status</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:10RealmSwift26SyncManagementObjectStatusa">SyncManagementObjectStatus</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">status</span><span class="p">:</span> <span class="nf">SyncManagementObjectStatus</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -490,7 +491,7 @@ documentation.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">realmUrl</span> <span class="o">=</span> <span class="s">"*"</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">realmUrl</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -520,7 +521,7 @@ documentation.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">userId</span> <span class="o">=</span> <span class="s">"*"</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">userId</span><span class="p">:</span> <span class="kt">String</span></code></pre>
 
                         </div>
                       </div>
@@ -551,7 +552,7 @@ to preserve the existing setting.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">mayRead</span> <span class="o">=</span> <span class="kt"><a href="../Classes/RealmOptional.html">RealmOptional</a></span><span class="o">&lt;</span><span class="kt">Bool</span><span class="o">&gt;</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">mayRead</span><span class="p">:</span> <span class="kt"><a href="../Classes/RealmOptional.html">RealmOptional</a></span><span class="o">&lt;</span><span class="kt">Bool</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -582,7 +583,7 @@ to preserve the existing setting.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">mayWrite</span> <span class="o">=</span> <span class="kt"><a href="../Classes/RealmOptional.html">RealmOptional</a></span><span class="o">&lt;</span><span class="kt">Bool</span><span class="o">&gt;</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">mayWrite</span><span class="p">:</span> <span class="kt"><a href="../Classes/RealmOptional.html">RealmOptional</a></span><span class="o">&lt;</span><span class="kt">Bool</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -613,7 +614,7 @@ unset to preserve the existing setting.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">mayManage</span> <span class="o">=</span> <span class="kt"><a href="../Classes/RealmOptional.html">RealmOptional</a></span><span class="o">&lt;</span><span class="kt">Bool</span><span class="o">&gt;</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">mayManage</span><span class="p">:</span> <span class="kt"><a href="../Classes/RealmOptional.html">RealmOptional</a></span><span class="o">&lt;</span><span class="kt">Bool</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>

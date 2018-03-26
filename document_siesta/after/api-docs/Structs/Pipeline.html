@@ -320,7 +320,7 @@ add or reorder stages if you have complex response processing needs.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">order</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/PipelineStageKey.html">PipelineStageKey</a></span><span class="p">]</span> <span class="o">=</span> <span class="p">[</span><span class="o">.</span><span class="n">rawData</span><span class="p">,</span> <span class="o">.</span><span class="n">decoding</span><span class="p">,</span> <span class="o">.</span><span class="n">parsing</span><span class="p">,</span> <span class="o">.</span><span class="n">model</span><span class="p">,</span> <span class="o">.</span><span class="n">cleanup</span><span class="p">]</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">order</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/PipelineStageKey.html">PipelineStageKey</a></span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -347,7 +347,7 @@ add or reorder stages if you have complex response processing needs.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">subscript</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt"><a href="../Classes/PipelineStageKey.html">PipelineStageKey</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/PipelineStage.html">PipelineStage</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">subscript</span><span class="p">(</span><span class="nv">key</span><span class="p">:</span> <span class="kt"><a href="../Classes/PipelineStageKey.html">PipelineStageKey</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nf">PipelineStage</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
