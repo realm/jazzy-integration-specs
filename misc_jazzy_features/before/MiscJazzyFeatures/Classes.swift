@@ -46,8 +46,12 @@ class TopLevelObjCSubclass: NSObject {}
 /// SUPPORTED: top-level Swift subclasses
 class TopLevelSwiftSubclass: ImplicitlyInternalTopLevelClass {}
 
+// FIXME: Document this class [this comment should not appear in the docs]
+
 // SUPPORTED: undocumented top-level class
 class UndocumentedTopLevelClass {}
+
+// TODO: Improve this class [this comment should not appear in the docs]
 
 /// Class with initializers
 class ClassWithInitializers {
