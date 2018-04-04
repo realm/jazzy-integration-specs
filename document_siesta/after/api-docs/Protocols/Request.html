@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           Siesta Docs
         </a>
-         (96% documented)
+         (95% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -189,7 +189,7 @@
                 <a class="nav-group-task-link" href="../Enums/LogCategory.html">LogCategory</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Logging.html#/s:6Siesta6loggeryAA11LogCategoryO_SStcv">logger</a>
+                <a class="nav-group-task-link" href="../Logging.html#/s:6Siesta6loggeryAA11LogCategoryO_SStcvp">logger</a>
               </li>
             </ul>
           </li>
@@ -229,6 +229,17 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/URLSessionProvider.html">URLSessionProvider</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Other Typealiases.html">Other Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Other Typealiases.html#/Image">Image</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Other Typealiases.html#/s:6Siesta5Imagea">Image</a>
               </li>
             </ul>
           </li>
@@ -358,9 +369,9 @@ will see the same behavior regardless of whether the request has not started yet
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6Siesta7RequestP13onNotModifiedxyycF"></a>
+                    <a name="/s:6Siesta7RequestP13onNotModifiedxyyt_tcF"></a>
                     <a name="//apple_ref/swift/Method/onNotModified(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6Siesta7RequestP13onNotModifiedxyycF">onNotModified(_:)</a>
+                    <a class="token" href="#/s:6Siesta7RequestP13onNotModifiedxyyt_tcF">onNotModified(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -458,9 +469,9 @@ time-delayed retries.</li>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6Siesta7RequestP11isCompletedSbv"></a>
+                    <a name="/s:6Siesta7RequestP11isCompletedSbvp"></a>
                     <a name="//apple_ref/swift/Property/isCompleted" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6Siesta7RequestP11isCompletedSbv">isCompleted</a>
+                    <a class="token" href="#/s:6Siesta7RequestP11isCompletedSbvp">isCompleted</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -486,9 +497,9 @@ or been cancelled.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6Siesta7RequestP8progressSdv"></a>
+                    <a name="/s:6Siesta7RequestP8progressSdvp"></a>
                     <a name="//apple_ref/swift/Property/progress" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6Siesta7RequestP8progressSdv">progress</a>
+                    <a class="token" href="#/s:6Siesta7RequestP8progressSdvp">progress</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -501,7 +512,7 @@ Result is either in [0&hellip;1], or is NAN if insufficient information is avail
 
 <p>The property will always be 1 if a request is completed. Note that the converse is not true: a value of 1 does
 not necessarily mean the request is completed; it means only that we estimate the request <em>should</em> be completed
-by now. Use the <code><a href="../Protocols/Request.html#/s:6Siesta7RequestP11isCompletedSbv">isCompleted</a></code> property to test for actual completion.</p>
+by now. Use the <code><a href="../Protocols/Request.html#/s:6Siesta7RequestP11isCompletedSbvp">isCompleted</a></code> property to test for actual completion.</p>
 
                       </div>
                       <div class="declaration">
@@ -609,7 +620,7 @@ that it is safe to repeat a request before calling this method.</strong>
 <p>This method picks up certain contextual changes:</p>
 
 <ul>
-<li>It <strong>will</strong> honor any changes to <code><a href="../Structs/Configuration.html#/s:6Siesta13ConfigurationV7headerss10DictionaryVyS2SGv">Configuration.headers</a></code> made since the original request.</li>
+<li>It <strong>will</strong> honor any changes to <code><a href="../Structs/Configuration.html#/s:6Siesta13ConfigurationV7headerss10DictionaryVyS2SGvp">Configuration.headers</a></code> made since the original request.</li>
 <li>It <strong>will</strong> rerun the <code>requestMutation</code> closure you passed to <code><a href="../Classes/Resource.html#/s:6Siesta8ResourceC7requestAA7Request_pAA0D6MethodO_y10Foundation10URLRequestVzc0C8MutationtF">Resource.request(...)</a></code> (if you passed one).</li>
 <li>It <strong>will not</strong> redecorate the request, and <strong>will not</strong> pick up any changes to
 <code><a href="../Structs/Configuration.html#/s:6Siesta13ConfigurationV16decorateRequestsyAA7Request_pAA8ResourceC_AaE_ptc4with_tF">Configuration.decorateRequests(...)</a></code> since the original call. This is so that a request wrapper can safely

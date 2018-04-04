@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           Siesta Docs
         </a>
-         (96% documented)
+         (95% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -189,7 +189,7 @@
                 <a class="nav-group-task-link" href="../Enums/LogCategory.html">LogCategory</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Logging.html#/s:6Siesta6loggeryAA11LogCategoryO_SStcv">logger</a>
+                <a class="nav-group-task-link" href="../Logging.html#/s:6Siesta6loggeryAA11LogCategoryO_SStcvp">logger</a>
               </li>
             </ul>
           </li>
@@ -229,6 +229,17 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/URLSessionProvider.html">URLSessionProvider</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Other Typealiases.html">Other Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Other Typealiases.html#/Image">Image</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Other Typealiases.html#/s:6Siesta5Imagea">Image</a>
               </li>
             </ul>
           </li>
@@ -698,7 +709,7 @@ for pattern-based matching, and for details about the parameters.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Transforms responses by passing their content through the given closure. This is a shortcut for adding a
-<code><a href="../Structs/ResponseContentTransformer.html">ResponseContentTransformer</a></code> to the <code><a href="../Structs/Configuration.html#/s:6Siesta13ConfigurationV8pipelineAA8PipelineVv">Configuration.pipeline</a></code>.</p>
+<code><a href="../Structs/ResponseContentTransformer.html">ResponseContentTransformer</a></code> to the <code><a href="../Structs/Configuration.html#/s:6Siesta13ConfigurationV8pipelineAA8PipelineVvp">Configuration.pipeline</a></code>.</p>
 
 <p>Useful for transformers that create model objects. For example:</p>
 <pre class="highlight swift"><code><span class="nf">configureTransformer</span><span class="p">(</span><span class="s">"/foo/​*"</span><span class="p">)</span> <span class="p">{</span>
@@ -706,7 +717,7 @@ for pattern-based matching, and for details about the parameters.</p>
 <span class="p">}</span>
 </code></pre>
 
-<p>Siesta checks that the incoming <code><a href="../Structs/Entity.html#/s:6Siesta6EntityV7contentxv">Entity.content</a></code> matches the type of the closure’s <code>content</code> parameter. In the
+<p>Siesta checks that the incoming <code><a href="../Structs/Entity.html#/s:6Siesta6EntityV7contentxvp">Entity.content</a></code> matches the type of the closure’s <code>content</code> parameter. In the
 example code above, if the <code>json</code> parameter of <code>FooModel.init</code> takes a <code>Dictionary</code>, but the transformer pipeline
 at that point has produced a <code>String</code>, then the transformer outputs a failure response.</p>
 
