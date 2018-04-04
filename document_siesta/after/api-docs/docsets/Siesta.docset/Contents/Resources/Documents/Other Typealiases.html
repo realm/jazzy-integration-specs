@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Resources  Reference</title>
+    <title>Other Type Aliases  Reference</title>
     <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Section/Resources" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Section/Other Type Aliases" class="dashAnchor"></a>
 
-    <a title="Resources  Reference"></a>
+    <a title="Other Type Aliases  Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -44,7 +44,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="index.html">Siesta Reference</a>
       <img class="carat" src="img/carat.png" />
-      Resources  Reference
+      Other Type Aliases  Reference
     </p>
 
     <div class="content-wrapper">
@@ -249,8 +249,9 @@
 
         <section class="section">
           <div class="section-content">
-            <h1>Resources</h1>
-            
+            <h1>Other Type Aliases</h1>
+            <p>The following type aliases are available globally.</p>
+
           </div>
         </section>
 
@@ -261,9 +262,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:@M@Siesta@objc(cs)BOSService"></a>
-                    <a name="//apple_ref/swift/Class/Service" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@Siesta@objc(cs)BOSService">Service</a>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Alias/Image" class="dashAnchor"></a>
+                    <a class="token" href="#/">Image</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -271,110 +272,9 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A set of logically connected RESTful resources. Resources within a service share caching, configuration, and a
-“same URL → same resource” uniqueness guarantee.</p>
+                        <p>A cross-platform alias for the output type of Siesta’s image content transformer.
+<code>UIImage</code> on iOS; <code>NSImage</code> on macOS.</p>
 
-<p>You will typically create a separate instance of <code>Service</code> for each REST API you use. You can either subclass
-<code>Service</code> or encapsulte it inside a wrapper. Regardless, to reap the benefits of Siesta, you’ll want to ensure that
-all the observers of an API share a single instance.</p>
-
-<p>You can optionally specify a <code>baseURL</code>, which allows you to get endpoints by path: <code>service.resource(&quot;/foo&quot;)</code>.
-Specifying a <code>baseURL</code> does <em>not</em> limit the service only to subpaths of that URL. Its one and only purpose is to be
-the starting point for <code>resource(_:)</code>.</p>
-
-<p>Note that <code>baseURL</code> is only a convenience, and is optional.
-If you want to group multiple base URLs in a single <code>Service</code> instance, use <code>resource(baseURL:path:)</code>.
-If you want to feed your service arbitrary URLs with no common root, use <code>resource(absoluteURL:)</code>.</p>
-
-                        <a href="Classes/Service.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc(BOSService)</span>
-<span class="kd">open</span> <span class="kd">class</span> <span class="kt">Service</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@M@Siesta@objc(cs)BOSResource"></a>
-                    <a name="//apple_ref/swift/Class/Resource" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@M@Siesta@objc(cs)BOSResource">Resource</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>An in-memory cache of a RESTful resource, plus information about the status of network requests related to it.</p>
-
-<p>This class answers three basic questions about a resource:</p>
-
-<ul>
-<li>What is the latest data for the resource this device has retrieved, if any?</li>
-<li>Did the last attempt to load it result in an error?</li>
-<li>Is there a request in progress?</li>
-</ul>
-
-<p>…and allows multiple observer to register to be notified whenever the answers to any of these
-questions changes.</p>
-
-                        <a href="Classes/Resource.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@objc(BOSResource)</span>
-<span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Resource</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:6Siesta6EntityV"></a>
-                    <a name="//apple_ref/swift/Struct/Entity" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6Siesta6EntityV">Entity</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>An <a href="http://www.w3.org/Protocols/rfc2616/rfc2616-sec7.html#">HTTP entity</a>. Consists of data content plus metadata about
-the content’s type and freshness.</p>
-
-<p>Typically extracted from an HTTP message body.</p>
-
-                        <a href="Structs/Entity.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Entity</span><span class="o">&lt;</span><span class="kt">ContentType</span><span class="o">&gt;</span></code></pre>
-
-                        </div>
                       </div>
                     </section>
                   </div>
@@ -382,9 +282,9 @@ the content’s type and freshness.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6Siesta21TypedContentAccessorsP"></a>
-                    <a name="//apple_ref/swift/Protocol/TypedContentAccessors" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6Siesta21TypedContentAccessorsP">TypedContentAccessors</a>
+                    <a name="/s:6Siesta5Imagea"></a>
+                    <a name="//apple_ref/swift/Alias/Image" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Siesta5Imagea">Image</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -392,124 +292,14 @@ the content’s type and freshness.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Mixin that provides convenience accessors for the content of an optional contained entity.</p>
+                        <p>Undocumented</p>
 
-<p>Allows you to replace the following:</p>
-<pre class="highlight swift"><code><span class="n">resource</span><span class="o">.</span><span class="n">latestData</span><span class="p">?</span><span class="o">.</span><span class="n">content</span> <span class="k">as?</span> <span class="nf">String</span>
-<span class="p">(</span><span class="n">resource</span><span class="o">.</span><span class="n">latestError</span><span class="p">?</span><span class="o">.</span><span class="n">entity</span><span class="p">?</span><span class="o">.</span><span class="n">content</span> <span class="k">as?</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span><span class="kt">AnyObject</span><span class="p">])?[</span><span class="s">"error.detail"</span><span class="p">]</span>
-</code></pre>
-
-<p>…with:</p>
-<pre class="highlight swift"><code><span class="n">resource</span><span class="o">.</span><span class="n">text</span>
-<span class="n">resource</span><span class="o">.</span><span class="n">latestError</span><span class="p">?</span><span class="o">.</span><span class="n">jsonDict</span><span class="p">[</span><span class="s">"error.detail"</span><span class="p">]</span>
-</code></pre>
-
-<p>You can extend this protocol to provide your own convenience accessors. For example:</p>
-<pre class="highlight swift"><code><span class="kd">extension</span> <span class="nf">TypedContentAccessors</span> <span class="p">{</span>
-  <span class="k">var</span> <span class="nv">doorknob</span><span class="p">:</span> <span class="nf">UIDoorknob</span> <span class="p">{</span>
-    <span class="k">return</span> <span class="nf">typedContent</span><span class="p">(</span><span class="nv">ifNone</span><span class="p">:</span> <span class="n">placeholderKnob</span><span class="p">)</span>
-  <span class="p">}</span>
-<span class="p">}</span>
-</code></pre>
-
-<p>Note that the sample code above is <em>only</em> a convenience accessor. It checks whether the entity already has a
-<code>UIDoorknob</code>, but does not do any parsing to put a <code>UIDoorknob</code> there in the first place. You’d need to pair this with
-a custom <code><a href="Protocols/ResponseTransformer.html">ResponseTransformer</a></code> that converts raw doorknob responses to <code>UIDoorknob</code>s.</p>
-
-                        <a href="Protocols/TypedContentAccessors.html" class="slightly-smaller">See more</a>
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">TypedContentAccessors</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:6Siesta13ConfigurationV"></a>
-                    <a name="//apple_ref/swift/Struct/Configuration" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6Siesta13ConfigurationV">Configuration</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Options which control the behavior of a <code><a href="Classes/Resource.html">Resource</a></code>.</p>
-<div class="aside aside-see-also">
-    <p class="aside-title">See also</p>
-    <code><a href="Classes/Service.html#/s:6Siesta7ServiceC9configureyAA31ConfigurationPatternConvertible_p_SayAA13RequestMethodOGSg14requestMethodsSSSg11descriptionyAA0D0Vzc10configurertF">Service.configure(...)</a></code>
-
-</div>
-
-                        <a href="Structs/Configuration.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Configuration</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:6Siesta31ConfigurationPatternConvertibleP"></a>
-                    <a name="//apple_ref/swift/Protocol/ConfigurationPatternConvertible" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6Siesta31ConfigurationPatternConvertibleP">ConfigurationPatternConvertible</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A type that can serve as a URL matcher for service configuration.</p>
-
-<p>Siesta provides implementations of this protocol for <code>String</code> (for glob-based matching) and <code><a href="Classes/Resource.html">Resource</a></code> (to configure
-one specific resource).</p>
-<div class="aside aside-see-also">
-    <p class="aside-title">See also</p>
-    <code><a href="Classes/Service.html#/s:6Siesta7ServiceC9configureyAA31ConfigurationPatternConvertible_p_SayAA13RequestMethodOGSg14requestMethodsSSSg11descriptionyAA0D0Vzc10configurertF">Service.configure(...)</a></code>
-
-</div>
-<div class="aside aside-see-also">
-    <p class="aside-title">See also</p>
-    <code><a href="Extensions/String.html#/s:SS6SiestaE20configurationPatternSb10Foundation3URLVcAA7ServiceC3for_tF">String.configurationPattern(for:)</a></code>
-
-</div>
-<div class="aside aside-see-also">
-    <p class="aside-title">See also</p>
-    <code><a href="Classes/Resource.html#/c:@CM@Siesta@objc(cs)BOSResource(im)configurationPatternFor:">Resource.configurationPattern(for:)</a></code>
-
-</div>
-
-                        <a href="Protocols/ConfigurationPatternConvertible.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">ConfigurationPatternConvertible</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt"><a href="Other Typealiases.html#/Image">Image</a></span> <span class="o">=</span> <span class="kt">UIImage</span></code></pre>
 
                         </div>
                       </div>
