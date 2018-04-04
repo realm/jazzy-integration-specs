@@ -308,7 +308,8 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">request</span><span class="p">(</span>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">request</span><span class="p">(</span>
     <span class="n">_</span> <span class="nv">url</span><span class="p">:</span> <span class="kt"><a href="Protocols/URLConvertible.html">URLConvertible</a></span><span class="p">,</span>
     <span class="nv">method</span><span class="p">:</span> <span class="kt"><a href="Enums.html#/s:9Alamofire10HTTPMethodO">HTTPMethod</a></span> <span class="o">=</span> <span class="o">.</span><span class="k">get</span><span class="p">,</span>
     <span class="nv">parameters</span><span class="p">:</span> <span class="kt"><a href="Typealiases.html#/s:9Alamofire10Parametersa">Parameters</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
@@ -416,7 +417,8 @@ specified <code>urlRequest</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">request</span><span class="p">(</span><span class="n">_</span> <span class="nv">urlRequest</span><span class="p">:</span> <span class="kt"><a href="Protocols/URLRequestConvertible.html">URLRequestConvertible</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="Classes/DataRequest.html">DataRequest</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">request</span><span class="p">(</span><span class="n">_</span> <span class="nv">urlRequest</span><span class="p">:</span> <span class="kt"><a href="Protocols/URLRequestConvertible.html">URLRequestConvertible</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="Classes/DataRequest.html">DataRequest</a></span></code></pre>
 
                         </div>
                       </div>
@@ -484,7 +486,8 @@ underlying URL session.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">download</span><span class="p">(</span>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">download</span><span class="p">(</span>
     <span class="n">_</span> <span class="nv">url</span><span class="p">:</span> <span class="kt"><a href="Protocols/URLConvertible.html">URLConvertible</a></span><span class="p">,</span>
     <span class="nv">method</span><span class="p">:</span> <span class="kt"><a href="Enums.html#/s:9Alamofire10HTTPMethodO">HTTPMethod</a></span> <span class="o">=</span> <span class="o">.</span><span class="k">get</span><span class="p">,</span>
     <span class="nv">parameters</span><span class="p">:</span> <span class="kt"><a href="Typealiases.html#/s:9Alamofire10Parametersa">Parameters</a></span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
@@ -608,7 +611,8 @@ underlying URL session.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">download</span><span class="p">(</span>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">download</span><span class="p">(</span>
     <span class="n">_</span> <span class="nv">urlRequest</span><span class="p">:</span> <span class="kt"><a href="Protocols/URLRequestConvertible.html">URLRequestConvertible</a></span><span class="p">,</span>
     <span class="n">to</span> <span class="nv">destination</span><span class="p">:</span> <span class="kt"><a href="Classes/DownloadRequest.html">DownloadRequest</a></span><span class="o">.</span><span class="kt">DownloadFileDestination</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span>
     <span class="o">-&gt;</span> <span class="kt"><a href="Classes/DownloadRequest.html">DownloadRequest</a></span></code></pre>
@@ -700,7 +704,8 @@ possible workarounds, please refer to the following Stack Overflow post:</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">download</span><span class="p">(</span>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">download</span><span class="p">(</span>
     <span class="n">resumingWith</span> <span class="nv">resumeData</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span>
     <span class="n">to</span> <span class="nv">destination</span><span class="p">:</span> <span class="kt"><a href="Classes/DownloadRequest.html">DownloadRequest</a></span><span class="o">.</span><span class="kt">DownloadFileDestination</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span>
     <span class="o">-&gt;</span> <span class="kt"><a href="Classes/DownloadRequest.html">DownloadRequest</a></span></code></pre>
@@ -782,7 +787,8 @@ for uploading the <code>file</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">upload</span><span class="p">(</span>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">upload</span><span class="p">(</span>
     <span class="n">_</span> <span class="nv">fileURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span>
     <span class="n">to</span> <span class="nv">url</span><span class="p">:</span> <span class="kt"><a href="Protocols/URLConvertible.html">URLConvertible</a></span><span class="p">,</span>
     <span class="nv">method</span><span class="p">:</span> <span class="kt"><a href="Enums.html#/s:9Alamofire10HTTPMethodO">HTTPMethod</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">post</span><span class="p">,</span>
@@ -877,7 +883,8 @@ uploading the <code>file</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">upload</span><span class="p">(</span><span class="n">_</span> <span class="nv">fileURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="n">with</span> <span class="nv">urlRequest</span><span class="p">:</span> <span class="kt"><a href="Protocols/URLRequestConvertible.html">URLRequestConvertible</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="Classes/UploadRequest.html">UploadRequest</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">upload</span><span class="p">(</span><span class="n">_</span> <span class="nv">fileURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="n">with</span> <span class="nv">urlRequest</span><span class="p">:</span> <span class="kt"><a href="Protocols/URLRequestConvertible.html">URLRequestConvertible</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="Classes/UploadRequest.html">UploadRequest</a></span></code></pre>
 
                         </div>
                       </div>
@@ -954,7 +961,8 @@ for uploading the <code>data</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">upload</span><span class="p">(</span>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">upload</span><span class="p">(</span>
     <span class="n">_</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span>
     <span class="n">to</span> <span class="nv">url</span><span class="p">:</span> <span class="kt"><a href="Protocols/URLConvertible.html">URLConvertible</a></span><span class="p">,</span>
     <span class="nv">method</span><span class="p">:</span> <span class="kt"><a href="Enums.html#/s:9Alamofire10HTTPMethodO">HTTPMethod</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">post</span><span class="p">,</span>
@@ -1049,7 +1057,8 @@ uploading the <code>data</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">upload</span><span class="p">(</span><span class="n">_</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="n">with</span> <span class="nv">urlRequest</span><span class="p">:</span> <span class="kt"><a href="Protocols/URLRequestConvertible.html">URLRequestConvertible</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="Classes/UploadRequest.html">UploadRequest</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">upload</span><span class="p">(</span><span class="n">_</span> <span class="nv">data</span><span class="p">:</span> <span class="kt">Data</span><span class="p">,</span> <span class="n">with</span> <span class="nv">urlRequest</span><span class="p">:</span> <span class="kt"><a href="Protocols/URLRequestConvertible.html">URLRequestConvertible</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="Classes/UploadRequest.html">UploadRequest</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1126,7 +1135,8 @@ for uploading the <code>stream</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">upload</span><span class="p">(</span>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">upload</span><span class="p">(</span>
     <span class="n">_</span> <span class="nv">stream</span><span class="p">:</span> <span class="kt">InputStream</span><span class="p">,</span>
     <span class="n">to</span> <span class="nv">url</span><span class="p">:</span> <span class="kt"><a href="Protocols/URLConvertible.html">URLConvertible</a></span><span class="p">,</span>
     <span class="nv">method</span><span class="p">:</span> <span class="kt"><a href="Enums.html#/s:9Alamofire10HTTPMethodO">HTTPMethod</a></span> <span class="o">=</span> <span class="o">.</span><span class="n">post</span><span class="p">,</span>
@@ -1221,7 +1231,8 @@ uploading the <code>stream</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">upload</span><span class="p">(</span><span class="n">_</span> <span class="nv">stream</span><span class="p">:</span> <span class="kt">InputStream</span><span class="p">,</span> <span class="n">with</span> <span class="nv">urlRequest</span><span class="p">:</span> <span class="kt"><a href="Protocols/URLRequestConvertible.html">URLRequestConvertible</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="Classes/UploadRequest.html">UploadRequest</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">upload</span><span class="p">(</span><span class="n">_</span> <span class="nv">stream</span><span class="p">:</span> <span class="kt">InputStream</span><span class="p">,</span> <span class="n">with</span> <span class="nv">urlRequest</span><span class="p">:</span> <span class="kt"><a href="Protocols/URLRequestConvertible.html">URLRequestConvertible</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="Classes/UploadRequest.html">UploadRequest</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1545,7 +1556,8 @@ and <code>port</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">stream</span><span class="p">(</span><span class="n">withHostName</span> <span class="nv">hostName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">port</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="Classes.html#/s:9Alamofire13StreamRequestC">StreamRequest</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">stream</span><span class="p">(</span><span class="n">withHostName</span> <span class="nv">hostName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">port</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="Classes.html#/s:9Alamofire13StreamRequestC">StreamRequest</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1623,7 +1635,8 @@ and <code>port</code>.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">stream</span><span class="p">(</span><span class="n">with</span> <span class="nv">netService</span><span class="p">:</span> <span class="kt">NetService</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="Classes.html#/s:9Alamofire13StreamRequestC">StreamRequest</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">stream</span><span class="p">(</span><span class="n">with</span> <span class="nv">netService</span><span class="p">:</span> <span class="kt">NetService</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="Classes.html#/s:9Alamofire13StreamRequestC">StreamRequest</a></span></code></pre>
 
                         </div>
                       </div>

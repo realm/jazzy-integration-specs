@@ -275,7 +275,7 @@
             <h1>ThreadSafeReference</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ThreadSafeReference</span><span class="o">&lt;</span><span class="kt">Confined</span><span class="p">:</span> <span class="kt"><a href="../Protocols/ThreadConfined.html">ThreadConfined</a></span><span class="o">&gt;</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ThreadSafeReference</span><span class="o">&lt;</span><span class="kt">Confined</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">Confined</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/ThreadConfined.html">ThreadConfined</a></span></code></pre>
 
                 </div>
               </div>
@@ -333,7 +333,7 @@ already occurred. References can only be resolved once.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isInvalidated</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isInvalidated</span><span class="p">:</span> <span class="nf">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
