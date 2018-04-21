@@ -1212,6 +1212,295 @@ Leaves the current values of <code><a href="../Classes/Resource.html#/s:6Siesta8
               </ul>
             </div>
             <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@CM@Siesta@objc(cs)BOSResource(im)configurationPatternFor:"></a>
+                    <a name="//apple_ref/swift/Method/configurationPattern(for:)" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@CM@Siesta@objc(cs)BOSResource(im)configurationPatternFor:">configurationPattern(for:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Matches this specific resource when passed as a pattern to <code><a href="../Classes/Service.html#/s:6Siesta7ServiceC9configureyAA31ConfigurationPatternConvertible_p_SayAA13RequestMethodOGSg14requestMethodsSSSg11descriptionyAA0D0Vzc10configurertF">Service.configure(...)</a></code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configurationPattern</span><span class="p">(</span><span class="k">for</span> <span class="nv">service</span><span class="p">:</span> <span class="kt"><a href="../Classes/Service.html">Service</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">URL</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Siesta8ResourceC30entityForTypedContentAccessorsAA6EntityVyypGSgvp"></a>
+                    <a name="//apple_ref/swift/Property/entityForTypedContentAccessors" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Siesta8ResourceC30entityForTypedContentAccessorsAA6EntityVyypGSgvp">entityForTypedContentAccessors</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Typed content accessors such as <code>.text</code> and <code>.jsonDict</code> apply to <code>latestData?.content</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">entityForTypedContentAccessors</span><span class="p">:</span> <span class="kt"><a href="../Structs/Entity.html">Entity</a></span><span class="o">&lt;</span><span class="kt">Any</span><span class="o">&gt;</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Request%20Creation%20Conveniences"></a>
+                <a name="//apple_ref/swift/Section/Request Creation Conveniences" class="dashAnchor"></a>
+                <a href="#/Request%20Creation%20Conveniences">
+                  <h3 class="section-name">Request Creation Conveniences</h3>
+                </a>
+              </div>
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Siesta8ResourceC7requestAA7Request_pAA0D6MethodO_10Foundation4DataV4dataSS11contentTypeyAH10URLRequestVzc0C8MutationtF"></a>
+                    <a name="//apple_ref/swift/Method/request(_:data:contentType:requestMutation:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Siesta8ResourceC7requestAA7Request_pAA0D6MethodO_10Foundation4DataV4dataSS11contentTypeyAH10URLRequestVzc0C8MutationtF">request(_:data:contentType:requestMutation:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Convenience method to initiate a request with a body containing arbitrary data.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">request</span><span class="p">(</span>
+        <span class="n">_</span> <span class="nv">method</span><span class="p">:</span>        <span class="kt"><a href="../Enums/RequestMethod.html">RequestMethod</a></span><span class="p">,</span>
+        <span class="nv">data</span><span class="p">:</span>            <span class="kt">Data</span><span class="p">,</span>
+        <span class="nv">contentType</span><span class="p">:</span>     <span class="kt">String</span><span class="p">,</span>
+        <span class="nv">requestMutation</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/Resource.html#/s:6Siesta8ResourceC15RequestMutationa">RequestMutation</a></span> <span class="o">=</span> <span class="p">{</span> <span class="n">_</span> <span class="k">in</span> <span class="p">})</span>
+    <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/Request.html">Request</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Siesta8ResourceC7requestAA7Request_pAA0D6MethodO_SS4textSS11contentTypeSS10FoundationE8EncodingV8encodingyAJ10URLRequestVzc0C8MutationtF"></a>
+                    <a name="//apple_ref/swift/Method/request(_:text:contentType:encoding:requestMutation:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Siesta8ResourceC7requestAA7Request_pAA0D6MethodO_SS4textSS11contentTypeSS10FoundationE8EncodingV8encodingyAJ10URLRequestVzc0C8MutationtF">request(_:text:contentType:encoding:requestMutation:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Convenience method to initiate a request with a text body.</p>
+
+<p>If the string cannot be encoded using the given encoding, this methods triggers the <code>onFailure(...)</code> request hook
+immediately, without touching the network.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">request</span><span class="p">(</span>
+        <span class="n">_</span> <span class="nv">method</span><span class="p">:</span>        <span class="kt"><a href="../Enums/RequestMethod.html">RequestMethod</a></span><span class="p">,</span>
+        <span class="nv">text</span><span class="p">:</span>            <span class="kt">String</span><span class="p">,</span>
+        <span class="nv">contentType</span><span class="p">:</span>     <span class="kt">String</span> <span class="o">=</span> <span class="s">"text/plain"</span><span class="p">,</span>
+        <span class="nv">encoding</span><span class="p">:</span>        <span class="kt">String</span><span class="o">.</span><span class="kt">Encoding</span> <span class="o">=</span> <span class="kt">String</span><span class="o">.</span><span class="kt">Encoding</span><span class="o">.</span><span class="n">utf8</span><span class="p">,</span>
+        <span class="nv">requestMutation</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/Resource.html#/s:6Siesta8ResourceC15RequestMutationa">RequestMutation</a></span> <span class="o">=</span> <span class="p">{</span> <span class="n">_</span> <span class="k">in</span> <span class="p">})</span>
+    <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/Request.html">Request</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>contentType</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>text/plain</code> by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>encoding</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>UTF-8 (<code>NSUTF8StringEncoding</code>) by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Siesta8ResourceC7requestAA7Request_pAA0D6MethodO_AA15JSONConvertible_p4jsonSS11contentTypey10Foundation10URLRequestVzc0C8MutationtF"></a>
+                    <a name="//apple_ref/swift/Method/request(_:json:contentType:requestMutation:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Siesta8ResourceC7requestAA7Request_pAA0D6MethodO_AA15JSONConvertible_p4jsonSS11contentTypey10Foundation10URLRequestVzc0C8MutationtF">request(_:json:contentType:requestMutation:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Convenience method to initiate a request with a JSON body.</p>
+
+<p>If the <code>json</code> cannot be encoded as JSON, e.g. if it is a dictionary with non-JSON-convertible data, this methods
+triggers the <code>onFailure(...)</code> request hook immediately, without touching the network.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">request</span><span class="p">(</span>
+        <span class="n">_</span> <span class="nv">method</span><span class="p">:</span>        <span class="kt"><a href="../Enums/RequestMethod.html">RequestMethod</a></span><span class="p">,</span>
+        <span class="nv">json</span><span class="p">:</span>            <span class="kt"><a href="../Other Protocols.html#/s:6Siesta15JSONConvertibleP">JSONConvertible</a></span><span class="p">,</span>
+        <span class="nv">contentType</span><span class="p">:</span>     <span class="kt">String</span> <span class="o">=</span> <span class="s">"application/json"</span><span class="p">,</span>
+        <span class="nv">requestMutation</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/Resource.html#/s:6Siesta8ResourceC15RequestMutationa">RequestMutation</a></span> <span class="o">=</span> <span class="p">{</span> <span class="n">_</span> <span class="k">in</span> <span class="p">})</span>
+    <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/Request.html">Request</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>contentType</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>application/json</code> by default.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Siesta8ResourceC7requestAA7Request_pAA0D6MethodO_s10DictionaryVyS2SG10urlEncodedy10Foundation10URLRequestVzc0C8MutationtF"></a>
+                    <a name="//apple_ref/swift/Method/request(_:urlEncoded:requestMutation:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Siesta8ResourceC7requestAA7Request_pAA0D6MethodO_s10DictionaryVyS2SG10urlEncodedy10Foundation10URLRequestVzc0C8MutationtF">request(_:urlEncoded:requestMutation:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Convenience method to initiate a request with URL-encoded parameters in the meesage body.</p>
+
+<p>This method performs all necessary escaping, and has full Unicode support in both keys and values.</p>
+
+<p>The content type is <code>application/x-www-form-urlencoded</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">request</span><span class="p">(</span>
+        <span class="n">_</span> <span class="nv">method</span><span class="p">:</span>          <span class="kt"><a href="../Enums/RequestMethod.html">RequestMethod</a></span><span class="p">,</span>
+        <span class="n">urlEncoded</span> <span class="nv">params</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span><span class="kt">String</span><span class="p">],</span>
+        <span class="nv">requestMutation</span><span class="p">:</span>   <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/Resource.html#/s:6Siesta8ResourceC15RequestMutationa">RequestMutation</a></span> <span class="o">=</span> <span class="p">{</span> <span class="n">_</span> <span class="k">in</span> <span class="p">})</span>
+    <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/Request.html">Request</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Siesta8ResourceC13failedRequestAA0D0_pAA0D5ErrorVFZ"></a>
+                    <a name="//apple_ref/swift/Method/failedRequest(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Siesta8ResourceC13failedRequestAA0D0_pAA0D5ErrorVFZ">failedRequest(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a request for this resource that immedately fails, without ever touching the network. Useful for creating
+your own custom requests that perform pre-request validation.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">failedRequest</span><span class="p">(</span><span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt"><a href="../Structs/RequestError.html">RequestError</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/Request.html">Request</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
               <div class="task-name-container">
                 <a name="/URL%20navigation"></a>
                 <a name="//apple_ref/swift/Section/URL navigation" class="dashAnchor"></a>
@@ -1541,295 +1830,6 @@ still exists.</p>
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@objc(removeObserversOwnedBy:)</span>
 <span class="kd">public</span> <span class="kd">func</span> <span class="nf">removeObservers</span><span class="p">(</span><span class="n">ownedBy</span> <span class="nv">owner</span><span class="p">:</span> <span class="kt">AnyObject</span><span class="p">?)</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Request%20Creation%20Conveniences"></a>
-                <a name="//apple_ref/swift/Section/Request Creation Conveniences" class="dashAnchor"></a>
-                <a href="#/Request%20Creation%20Conveniences">
-                  <h3 class="section-name">Request Creation Conveniences</h3>
-                </a>
-              </div>
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:6Siesta8ResourceC7requestAA7Request_pAA0D6MethodO_10Foundation4DataV4dataSS11contentTypeyAH10URLRequestVzc0C8MutationtF"></a>
-                    <a name="//apple_ref/swift/Method/request(_:data:contentType:requestMutation:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6Siesta8ResourceC7requestAA7Request_pAA0D6MethodO_10Foundation4DataV4dataSS11contentTypeyAH10URLRequestVzc0C8MutationtF">request(_:data:contentType:requestMutation:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Convenience method to initiate a request with a body containing arbitrary data.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">request</span><span class="p">(</span>
-        <span class="n">_</span> <span class="nv">method</span><span class="p">:</span>        <span class="kt"><a href="../Enums/RequestMethod.html">RequestMethod</a></span><span class="p">,</span>
-        <span class="nv">data</span><span class="p">:</span>            <span class="kt">Data</span><span class="p">,</span>
-        <span class="nv">contentType</span><span class="p">:</span>     <span class="kt">String</span><span class="p">,</span>
-        <span class="nv">requestMutation</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/Resource.html#/s:6Siesta8ResourceC15RequestMutationa">RequestMutation</a></span> <span class="o">=</span> <span class="p">{</span> <span class="n">_</span> <span class="k">in</span> <span class="p">})</span>
-    <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/Request.html">Request</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:6Siesta8ResourceC7requestAA7Request_pAA0D6MethodO_SS4textSS11contentTypeSS10FoundationE8EncodingV8encodingyAJ10URLRequestVzc0C8MutationtF"></a>
-                    <a name="//apple_ref/swift/Method/request(_:text:contentType:encoding:requestMutation:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6Siesta8ResourceC7requestAA7Request_pAA0D6MethodO_SS4textSS11contentTypeSS10FoundationE8EncodingV8encodingyAJ10URLRequestVzc0C8MutationtF">request(_:text:contentType:encoding:requestMutation:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Convenience method to initiate a request with a text body.</p>
-
-<p>If the string cannot be encoded using the given encoding, this methods triggers the <code>onFailure(...)</code> request hook
-immediately, without touching the network.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">request</span><span class="p">(</span>
-        <span class="n">_</span> <span class="nv">method</span><span class="p">:</span>        <span class="kt"><a href="../Enums/RequestMethod.html">RequestMethod</a></span><span class="p">,</span>
-        <span class="nv">text</span><span class="p">:</span>            <span class="kt">String</span><span class="p">,</span>
-        <span class="nv">contentType</span><span class="p">:</span>     <span class="kt">String</span> <span class="o">=</span> <span class="s">"text/plain"</span><span class="p">,</span>
-        <span class="nv">encoding</span><span class="p">:</span>        <span class="kt">String</span><span class="o">.</span><span class="kt">Encoding</span> <span class="o">=</span> <span class="kt">String</span><span class="o">.</span><span class="kt">Encoding</span><span class="o">.</span><span class="n">utf8</span><span class="p">,</span>
-        <span class="nv">requestMutation</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/Resource.html#/s:6Siesta8ResourceC15RequestMutationa">RequestMutation</a></span> <span class="o">=</span> <span class="p">{</span> <span class="n">_</span> <span class="k">in</span> <span class="p">})</span>
-    <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/Request.html">Request</a></span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>contentType</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p><code>text/plain</code> by default.</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>encoding</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>UTF-8 (<code>NSUTF8StringEncoding</code>) by default.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:6Siesta8ResourceC7requestAA7Request_pAA0D6MethodO_AA15JSONConvertible_p4jsonSS11contentTypey10Foundation10URLRequestVzc0C8MutationtF"></a>
-                    <a name="//apple_ref/swift/Method/request(_:json:contentType:requestMutation:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6Siesta8ResourceC7requestAA7Request_pAA0D6MethodO_AA15JSONConvertible_p4jsonSS11contentTypey10Foundation10URLRequestVzc0C8MutationtF">request(_:json:contentType:requestMutation:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Convenience method to initiate a request with a JSON body.</p>
-
-<p>If the <code>json</code> cannot be encoded as JSON, e.g. if it is a dictionary with non-JSON-convertible data, this methods
-triggers the <code>onFailure(...)</code> request hook immediately, without touching the network.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">request</span><span class="p">(</span>
-        <span class="n">_</span> <span class="nv">method</span><span class="p">:</span>        <span class="kt"><a href="../Enums/RequestMethod.html">RequestMethod</a></span><span class="p">,</span>
-        <span class="nv">json</span><span class="p">:</span>            <span class="kt"><a href="../Other Protocols.html#/s:6Siesta15JSONConvertibleP">JSONConvertible</a></span><span class="p">,</span>
-        <span class="nv">contentType</span><span class="p">:</span>     <span class="kt">String</span> <span class="o">=</span> <span class="s">"application/json"</span><span class="p">,</span>
-        <span class="nv">requestMutation</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/Resource.html#/s:6Siesta8ResourceC15RequestMutationa">RequestMutation</a></span> <span class="o">=</span> <span class="p">{</span> <span class="n">_</span> <span class="k">in</span> <span class="p">})</span>
-    <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/Request.html">Request</a></span></code></pre>
-
-                        </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>contentType</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p><code>application/json</code> by default.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:6Siesta8ResourceC7requestAA7Request_pAA0D6MethodO_s10DictionaryVyS2SG10urlEncodedy10Foundation10URLRequestVzc0C8MutationtF"></a>
-                    <a name="//apple_ref/swift/Method/request(_:urlEncoded:requestMutation:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6Siesta8ResourceC7requestAA7Request_pAA0D6MethodO_s10DictionaryVyS2SG10urlEncodedy10Foundation10URLRequestVzc0C8MutationtF">request(_:urlEncoded:requestMutation:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Convenience method to initiate a request with URL-encoded parameters in the meesage body.</p>
-
-<p>This method performs all necessary escaping, and has full Unicode support in both keys and values.</p>
-
-<p>The content type is <code>application/x-www-form-urlencoded</code>.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">request</span><span class="p">(</span>
-        <span class="n">_</span> <span class="nv">method</span><span class="p">:</span>          <span class="kt"><a href="../Enums/RequestMethod.html">RequestMethod</a></span><span class="p">,</span>
-        <span class="n">urlEncoded</span> <span class="nv">params</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span><span class="kt">String</span><span class="p">],</span>
-        <span class="nv">requestMutation</span><span class="p">:</span>   <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/Resource.html#/s:6Siesta8ResourceC15RequestMutationa">RequestMutation</a></span> <span class="o">=</span> <span class="p">{</span> <span class="n">_</span> <span class="k">in</span> <span class="p">})</span>
-    <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/Request.html">Request</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:6Siesta8ResourceC13failedRequestAA0D0_pAA0D5ErrorVFZ"></a>
-                    <a name="//apple_ref/swift/Method/failedRequest(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6Siesta8ResourceC13failedRequestAA0D0_pAA0D5ErrorVFZ">failedRequest(_:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns a request for this resource that immedately fails, without ever touching the network. Useful for creating
-your own custom requests that perform pre-request validation.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="nf">failedRequest</span><span class="p">(</span><span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt"><a href="../Structs/RequestError.html">RequestError</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Protocols/Request.html">Request</a></span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:@CM@Siesta@objc(cs)BOSResource(im)configurationPatternFor:"></a>
-                    <a name="//apple_ref/swift/Method/configurationPattern(for:)" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@CM@Siesta@objc(cs)BOSResource(im)configurationPatternFor:">configurationPattern(for:)</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Matches this specific resource when passed as a pattern to <code><a href="../Classes/Service.html#/s:6Siesta7ServiceC9configureyAA31ConfigurationPatternConvertible_p_SayAA13RequestMethodOGSg14requestMethodsSSSg11descriptionyAA0D0Vzc10configurertF">Service.configure(...)</a></code>.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">configurationPattern</span><span class="p">(</span><span class="k">for</span> <span class="nv">service</span><span class="p">:</span> <span class="kt"><a href="../Classes/Service.html">Service</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">URL</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:6Siesta8ResourceC30entityForTypedContentAccessorsAA6EntityVyypGSgvp"></a>
-                    <a name="//apple_ref/swift/Property/entityForTypedContentAccessors" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6Siesta8ResourceC30entityForTypedContentAccessorsAA6EntityVyypGSgvp">entityForTypedContentAccessors</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Typed content accessors such as <code>.text</code> and <code>.jsonDict</code> apply to <code>latestData?.content</code>.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">entityForTypedContentAccessors</span><span class="p">:</span> <span class="kt"><a href="../Structs/Entity.html">Entity</a></span><span class="o">&lt;</span><span class="kt">Any</span><span class="o">&gt;</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
