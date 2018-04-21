@@ -477,7 +477,7 @@ modifying the Realm during the migration.</p>
 
 <p>In Realm you define your model classes by subclassing <code>Object</code> and adding properties to be managed.
 You then instantiate and use your custom subclasses instead of using the <code>Object</code> class directly.</p>
-<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">Dog</span><span class="p">:</span> <span class="nf">Object</span> <span class="p">{</span>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">Dog</span><span class="p">:</span> <span class="kt">Object</span> <span class="p">{</span>
     <span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="o">=</span> <span class="s">""</span>
     <span class="kd">dynamic</span> <span class="k">var</span> <span class="nv">adopted</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span>
     <span class="k">let</span> <span class="nv">siblings</span> <span class="o">=</span> <span class="kt">List</span><span class="o">&lt;</span><span class="kt">Dog</span><span class="o">&gt;</span><span class="p">()</span>

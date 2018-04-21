@@ -428,7 +428,7 @@ git submodule update --init
 <h2 id='basic-usage' class='heading'>Basic Usage</h2>
 
 <p>Make a shared service instance for the REST API you want to use:</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">MyAPI</span> <span class="o">=</span> <span class="nf">Service</span><span class="p">(</span><span class="nv">baseURL</span><span class="p">:</span> <span class="s">"https://api.example.com"</span><span class="p">)</span>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">MyAPI</span> <span class="o">=</span> <span class="kt">Service</span><span class="p">(</span><span class="nv">baseURL</span><span class="p">:</span> <span class="s">"https://api.example.com"</span><span class="p">)</span>
 </code></pre>
 
 <p>Now register your view controller — or view, internal glue class, reactive signal/sequence, anything you like — to receive notifications whenever a particular resource’s state changes:</p>
@@ -463,7 +463,7 @@ git submodule update --init
 
 <p>Of course, you probably don’t want to work with raw JSON in all your controllers. You can configure Siesta to automatically turn raw responses into models:</p>
 <pre class="highlight swift"><code><span class="kt">MyAPI</span><span class="o">.</span><span class="nf">configureTransformer</span><span class="p">(</span><span class="s">"/profile"</span><span class="p">)</span> <span class="p">{</span>  <span class="c1">// Path supports wildcards</span>
-    <span class="nf">UserProfile</span><span class="p">(</span><span class="nv">json</span><span class="p">:</span> <span class="nv">$0</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>         <span class="c1">// Create models however you like</span>
+    <span class="kt">UserProfile</span><span class="p">(</span><span class="nv">json</span><span class="p">:</span> <span class="nv">$0</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>         <span class="c1">// Create models however you like</span>
 <span class="p">}</span>
 </code></pre>
 
@@ -495,7 +495,7 @@ git submodule update --init
 </code></pre>
 
 <p>…or better yet, use Siesta’s prebaked <code>ResourceStatusOverlay</code> view to get an activity indicator, a nicely formatted error message, and a retry button for free:</p>
-<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">ProfileViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="nf">ResourceObserver</span> <span class="p">{</span>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">ProfileViewController</span><span class="p">:</span> <span class="kt">UIViewController</span><span class="p">,</span> <span class="kt">ResourceObserver</span> <span class="p">{</span>
     <span class="kd">@IBOutlet</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">nameLabel</span><span class="p">,</span> <span class="nv">colorLabel</span><span class="p">:</span> <span class="kt">UILabel</span><span class="o">!</span>
 
     <span class="kd">@IBOutlet</span> <span class="k">weak</span> <span class="k">var</span> <span class="nv">statusOverlay</span><span class="p">:</span> <span class="kt">ResourceStatusOverlay</span><span class="o">!</span>
@@ -528,23 +528,23 @@ git submodule update --init
 <p>Got it? Good.</p>
 
 <p>Here’s how you implement the same functionality using Siesta:</p>
-<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">RemoteImageView</span><span class="p">:</span> <span class="nf">UIImageView</span> <span class="p">{</span>
-  <span class="kd">static</span> <span class="k">var</span> <span class="nv">imageCache</span><span class="p">:</span> <span class="kt">Service</span> <span class="o">=</span> <span class="nf">Service</span><span class="p">()</span>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">RemoteImageView</span><span class="p">:</span> <span class="kt">UIImageView</span> <span class="p">{</span>
+  <span class="kd">static</span> <span class="k">var</span> <span class="nv">imageCache</span><span class="p">:</span> <span class="kt">Service</span> <span class="o">=</span> <span class="kt">Service</span><span class="p">()</span>
 
   <span class="k">var</span> <span class="nv">placeholderImage</span><span class="p">:</span> <span class="kt">UIImage</span><span class="p">?</span>
 
-  <span class="k">var</span> <span class="nv">imageURL</span><span class="p">:</span> <span class="nf">URL</span><span class="p">?</span> <span class="p">{</span>
-    <span class="nf">get</span> <span class="p">{</span> <span class="k">return</span> <span class="n">imageResource</span><span class="p">?</span><span class="o">.</span><span class="n">url</span> <span class="p">}</span>
-    <span class="nf">set</span> <span class="p">{</span> <span class="n">imageResource</span> <span class="o">=</span> <span class="kt">RemoteImageView</span><span class="o">.</span><span class="n">imageCache</span><span class="o">.</span><span class="nf">resource</span><span class="p">(</span><span class="nv">absoluteURL</span><span class="p">:</span> <span class="n">newValue</span><span class="p">)</span> <span class="p">}</span>
+  <span class="k">var</span> <span class="nv">imageURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?</span> <span class="p">{</span>
+    <span class="k">get</span> <span class="p">{</span> <span class="k">return</span> <span class="n">imageResource</span><span class="p">?</span><span class="o">.</span><span class="n">url</span> <span class="p">}</span>
+    <span class="k">set</span> <span class="p">{</span> <span class="n">imageResource</span> <span class="o">=</span> <span class="kt">RemoteImageView</span><span class="o">.</span><span class="n">imageCache</span><span class="o">.</span><span class="nf">resource</span><span class="p">(</span><span class="nv">absoluteURL</span><span class="p">:</span> <span class="n">newValue</span><span class="p">)</span> <span class="p">}</span>
   <span class="p">}</span>
 
-  <span class="k">var</span> <span class="nv">imageResource</span><span class="p">:</span> <span class="nf">Resource</span><span class="p">?</span> <span class="p">{</span>
-    <span class="nf">willSet</span> <span class="p">{</span>
+  <span class="k">var</span> <span class="nv">imageResource</span><span class="p">:</span> <span class="kt">Resource</span><span class="p">?</span> <span class="p">{</span>
+    <span class="k">willSet</span> <span class="p">{</span>
       <span class="n">imageResource</span><span class="p">?</span><span class="o">.</span><span class="nf">removeObservers</span><span class="p">(</span><span class="nv">ownedBy</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span>
       <span class="n">imageResource</span><span class="p">?</span><span class="o">.</span><span class="nf">cancelLoadIfUnobserved</span><span class="p">(</span><span class="nv">afterDelay</span><span class="p">:</span> <span class="mf">0.05</span><span class="p">)</span>
     <span class="p">}</span>
 
-    <span class="nf">didSet</span> <span class="p">{</span>
+    <span class="k">didSet</span> <span class="p">{</span>
       <span class="n">imageResource</span><span class="p">?</span><span class="o">.</span><span class="nf">loadIfNeeded</span><span class="p">()</span>
       <span class="n">imageResource</span><span class="p">?</span><span class="o">.</span><span class="nf">addObserver</span><span class="p">(</span><span class="nv">owner</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="n">_</span> <span class="k">in</span>
         <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="n">imageResource</span><span class="p">?</span><span class="o">.</span><span class="nf">typedContent</span><span class="p">(</span>
