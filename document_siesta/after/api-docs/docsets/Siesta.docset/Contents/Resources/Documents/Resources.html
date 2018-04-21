@@ -395,7 +395,7 @@ the content’s type and freshness.</p>
                         <p>Mixin that provides convenience accessors for the content of an optional contained entity.</p>
 
 <p>Allows you to replace the following:</p>
-<pre class="highlight swift"><code><span class="n">resource</span><span class="o">.</span><span class="n">latestData</span><span class="p">?</span><span class="o">.</span><span class="n">content</span> <span class="k">as?</span> <span class="nf">String</span>
+<pre class="highlight swift"><code><span class="n">resource</span><span class="o">.</span><span class="n">latestData</span><span class="p">?</span><span class="o">.</span><span class="n">content</span> <span class="k">as?</span> <span class="kt">String</span>
 <span class="p">(</span><span class="n">resource</span><span class="o">.</span><span class="n">latestError</span><span class="p">?</span><span class="o">.</span><span class="n">entity</span><span class="p">?</span><span class="o">.</span><span class="n">content</span> <span class="k">as?</span> <span class="p">[</span><span class="kt">String</span><span class="p">:</span><span class="kt">AnyObject</span><span class="p">])?[</span><span class="s">"error.detail"</span><span class="p">]</span>
 </code></pre>
 
@@ -405,8 +405,8 @@ the content’s type and freshness.</p>
 </code></pre>
 
 <p>You can extend this protocol to provide your own convenience accessors. For example:</p>
-<pre class="highlight swift"><code><span class="kd">extension</span> <span class="nf">TypedContentAccessors</span> <span class="p">{</span>
-  <span class="k">var</span> <span class="nv">doorknob</span><span class="p">:</span> <span class="nf">UIDoorknob</span> <span class="p">{</span>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">TypedContentAccessors</span> <span class="p">{</span>
+  <span class="k">var</span> <span class="nv">doorknob</span><span class="p">:</span> <span class="kt">UIDoorknob</span> <span class="p">{</span>
     <span class="k">return</span> <span class="nf">typedContent</span><span class="p">(</span><span class="nv">ifNone</span><span class="p">:</span> <span class="n">placeholderKnob</span><span class="p">)</span>
   <span class="p">}</span>
 <span class="p">}</span>

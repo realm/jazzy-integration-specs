@@ -329,7 +329,7 @@ run all of its blocks on the same thread.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">schema</span><span class="p">:</span> <span class="nf">Schema</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">schema</span><span class="p">:</span> <span class="kt"><a href="../Classes/Schema.html">Schema</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -359,7 +359,7 @@ run all of its blocks on the same thread.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">configuration</span><span class="p">:</span> <span class="nf">Configuration</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">configuration</span><span class="p">:</span> <span class="kt"><a href="../Classes/Realm/Configuration.html">Configuration</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -389,7 +389,7 @@ run all of its blocks on the same thread.
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isEmpty</span><span class="p">:</span> <span class="nf">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isEmpty</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -873,7 +873,7 @@ invalidated rather than becoming unmanaged.</p>
 
 <p>Given the following code:</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">oldObject</span> <span class="o">=</span> <span class="nf">objects</span><span class="p">(</span><span class="kt">ObjectType</span><span class="p">)</span><span class="o">.</span><span class="n">first</span><span class="o">!</span>
-<span class="k">let</span> <span class="nv">newObject</span> <span class="o">=</span> <span class="nf">ObjectType</span><span class="p">()</span>
+<span class="k">let</span> <span class="nv">newObject</span> <span class="o">=</span> <span class="kt">ObjectType</span><span class="p">()</span>
 
 <span class="n">realm</span><span class="o">.</span><span class="nf">beginWrite</span><span class="p">()</span>
 <span class="n">realm</span><span class="o">.</span><span class="nf">add</span><span class="p">(</span><span class="n">newObject</span><span class="p">)</span>
@@ -936,7 +936,7 @@ other notifcations are produced by a cancelled write transaction.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isInWriteTransaction</span><span class="p">:</span> <span class="nf">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isInWriteTransaction</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1623,7 +1623,7 @@ means that there is nothing to refresh (as managed <code><a href="../Classes/Obj
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">autorefresh</span><span class="p">:</span> <span class="nf">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">autorefresh</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1829,9 +1829,9 @@ from the point when the previous write transaction was committed.</p>
 The values can be used to catch a variety of <em>recoverable</em> errors, especially those
 happening when initializing a Realm instance.</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">realm</span><span class="p">:</span> <span class="kt">Realm</span><span class="p">?</span>
-<span class="nf">do</span> <span class="p">{</span>
-    <span class="n">realm</span> <span class="o">=</span> <span class="k">try</span> <span class="nf">Realm</span><span class="p">()</span>
-<span class="p">}</span> <span class="k">catch</span> <span class="kt">Realm</span><span class="o">.</span><span class="kt">Error</span><span class="o">.</span><span class="nf">incompatibleLockFile</span> <span class="p">{</span>
+<span class="k">do</span> <span class="p">{</span>
+    <span class="n">realm</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">Realm</span><span class="p">()</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="kt">Realm</span><span class="o">.</span><span class="kt">Error</span><span class="o">.</span><span class="n">incompatibleLockFile</span> <span class="p">{</span>
     <span class="nf">print</span><span class="p">(</span><span class="s">"Realm Browser app may be attached to Realm on device?"</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre>

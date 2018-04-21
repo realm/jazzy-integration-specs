@@ -280,17 +280,17 @@ you should use for your Swift version.</p>
 <h3 id='swift-package-manager' class='heading'>Swift Package Manager</h3>
 
 <p>To integrate using Apple&rsquo;s Swift package manager, add the following as a dependency to your <code>Package.swift</code>:</p>
-<pre class="highlight swift"><code><span class="o">.</span><span class="nf">Package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/Moya/Moya.git"</span><span class="p">,</span> <span class="nv">majorVersion</span><span class="p">:</span> <span class="mi">8</span><span class="p">)</span>
+<pre class="highlight swift"><code><span class="o">.</span><span class="kt">Package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/Moya/Moya.git"</span><span class="p">,</span> <span class="nv">majorVersion</span><span class="p">:</span> <span class="mi">8</span><span class="p">)</span>
 </code></pre>
 
 <p>and then specify <code>.Target(name: &quot;Moya&quot;)</code> as a dependency of the Target in which you wish to use Moya.
 Here&rsquo;s an example <code>PackageDescription</code>:</p>
 <pre class="highlight swift"><code><span class="kd">import</span> <span class="kt">PackageDescription</span>
 
-<span class="k">let</span> <span class="nv">package</span> <span class="o">=</span> <span class="nf">Package</span><span class="p">(</span>
+<span class="k">let</span> <span class="nv">package</span> <span class="o">=</span> <span class="kt">Package</span><span class="p">(</span>
     <span class="nv">name</span><span class="p">:</span> <span class="s">"MyApp"</span><span class="p">,</span>
     <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
-        <span class="o">.</span><span class="nf">Package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/Moya/Moya.git"</span><span class="p">,</span> <span class="nv">majorVersion</span><span class="p">:</span> <span class="mi">8</span><span class="p">)</span>
+        <span class="o">.</span><span class="kt">Package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/Moya/Moya.git"</span><span class="p">,</span> <span class="nv">majorVersion</span><span class="p">:</span> <span class="mi">8</span><span class="p">)</span>
     <span class="p">]</span>
 <span class="p">)</span>
 </code></pre>
@@ -382,7 +382,7 @@ generated framework they&rsquo;d like, <code>Moya</code>, <code>RxMoya</code>, o
 <p>After <a href="docs/Examples/Basic.md">some setup</a>, using Moya is really simple. You can access an API like this:</p>
 <pre class="highlight swift"><code><span class="n">provider</span> <span class="o">=</span> <span class="kt">MoyaProvider</span><span class="o">&lt;</span><span class="kt">GitHub</span><span class="o">&gt;</span><span class="p">()</span>
 <span class="n">provider</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="n">zen</span><span class="p">)</span> <span class="p">{</span> <span class="n">result</span> <span class="k">in</span>
-    <span class="k">switch</span> <span class="nf">result</span> <span class="p">{</span>
+    <span class="k">switch</span> <span class="n">result</span> <span class="p">{</span>
     <span class="k">case</span> <span class="kd">let</span> <span class="o">.</span><span class="nf">success</span><span class="p">(</span><span class="n">moyaResponse</span><span class="p">):</span>
         <span class="k">let</span> <span class="nv">data</span> <span class="o">=</span> <span class="n">moyaResponse</span><span class="o">.</span><span class="n">data</span>
         <span class="k">let</span> <span class="nv">statusCode</span> <span class="o">=</span> <span class="n">moyaResponse</span><span class="o">.</span><span class="n">statusCode</span>
@@ -420,10 +420,10 @@ parameter encoding.</p>
 <code>SignalProducer</code>s that you can start, bind, map, or whatever you want to do. 
 To handle errors, for instance, we could do the following:</p>
 <pre class="highlight swift"><code><span class="n">provider</span> <span class="o">=</span> <span class="kt">MoyaProvider</span><span class="o">&lt;</span><span class="kt">GitHub</span><span class="o">&gt;</span><span class="p">()</span>
-<span class="n">provider</span><span class="o">.</span><span class="n">reactive</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="nf">userProfile</span><span class="p">(</span><span class="s">"ashfurrow"</span><span class="p">))</span><span class="o">.</span><span class="nf">start</span> <span class="p">{</span> <span class="n">event</span> <span class="k">in</span>
-    <span class="k">switch</span> <span class="nf">event</span> <span class="p">{</span>
+<span class="n">provider</span><span class="o">.</span><span class="n">reactive</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="nf">userProfile</span><span class="p">(</span><span class="s">"ashfurrow"</span><span class="p">))</span><span class="o">.</span><span class="n">start</span> <span class="p">{</span> <span class="n">event</span> <span class="k">in</span>
+    <span class="k">switch</span> <span class="n">event</span> <span class="p">{</span>
     <span class="k">case</span> <span class="kd">let</span> <span class="o">.</span><span class="nf">value</span><span class="p">(</span><span class="n">response</span><span class="p">):</span>
-        <span class="n">image</span> <span class="o">=</span> <span class="nf">UIImage</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="n">response</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+        <span class="n">image</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="n">response</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
     <span class="k">case</span> <span class="kd">let</span> <span class="o">.</span><span class="nf">failed</span><span class="p">(</span><span class="n">error</span><span class="p">):</span>
         <span class="nf">print</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
     <span class="k">default</span><span class="p">:</span>
@@ -443,10 +443,10 @@ from progress and one last event which is a response.</p>
 
 <p>To handle errors, for instance, we could do the following:</p>
 <pre class="highlight swift"><code><span class="n">provider</span> <span class="o">=</span> <span class="kt">MoyaProvider</span><span class="o">&lt;</span><span class="kt">GitHub</span><span class="o">&gt;</span><span class="p">()</span>
-<span class="n">provider</span><span class="o">.</span><span class="n">rx</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="nf">userProfile</span><span class="p">(</span><span class="s">"ashfurrow"</span><span class="p">))</span><span class="o">.</span><span class="nf">subscribe</span> <span class="p">{</span> <span class="n">event</span> <span class="k">in</span>
-    <span class="k">switch</span> <span class="nf">event</span> <span class="p">{</span>
+<span class="n">provider</span><span class="o">.</span><span class="n">rx</span><span class="o">.</span><span class="nf">request</span><span class="p">(</span><span class="o">.</span><span class="nf">userProfile</span><span class="p">(</span><span class="s">"ashfurrow"</span><span class="p">))</span><span class="o">.</span><span class="n">subscribe</span> <span class="p">{</span> <span class="n">event</span> <span class="k">in</span>
+    <span class="k">switch</span> <span class="n">event</span> <span class="p">{</span>
     <span class="k">case</span> <span class="kd">let</span> <span class="o">.</span><span class="nf">success</span><span class="p">(</span><span class="n">response</span><span class="p">):</span>
-        <span class="n">image</span> <span class="o">=</span> <span class="nf">UIImage</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="n">response</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
+        <span class="n">image</span> <span class="o">=</span> <span class="kt">UIImage</span><span class="p">(</span><span class="nv">data</span><span class="p">:</span> <span class="n">response</span><span class="o">.</span><span class="n">data</span><span class="p">)</span>
     <span class="k">case</span> <span class="kd">let</span> <span class="o">.</span><span class="nf">error</span><span class="p">(</span><span class="n">error</span><span class="p">):</span>
         <span class="nf">print</span><span class="p">(</span><span class="n">error</span><span class="p">)</span>
     <span class="p">}</span>

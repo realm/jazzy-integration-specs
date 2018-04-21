@@ -487,7 +487,7 @@ or been cancelled.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isCompleted</span><span class="p">:</span> <span class="nf">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isCompleted</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -519,7 +519,7 @@ by now. Use the <code><a href="../Protocols/Request.html#/s:6Siesta7RequestP11is
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">progress</span><span class="p">:</span> <span class="nf">Double</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">progress</span><span class="p">:</span> <span class="kt">Double</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -694,7 +694,7 @@ chaining behavior.
 </div>
 
 <p>In this pseudocode:</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">chainedRequest</span> <span class="o">=</span> <span class="n">underlyingRequest</span><span class="o">.</span><span class="nf">chained</span> <span class="p">{</span>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">chainedRequest</span> <span class="o">=</span> <span class="n">underlyingRequest</span><span class="o">.</span><span class="n">chained</span> <span class="p">{</span>
   <span class="n">response</span> <span class="k">in</span> <span class="err">…</span><span class="n">whenCompleted</span><span class="err">…</span>
 <span class="p">}</span>
 </code></pre>
@@ -721,10 +721,10 @@ does <em>not</em> stop the chain; instead, the cancellation error is passed to y
     <p class="aside-title">Warning</p>
     <p>This cancellation behavior means that your <code>whenCompleted</code> closure may never execute.
 If you want guaranteed execution of cleanup code, attach a handler to the chained request:</p>
-<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">foo</span> <span class="o">=</span> <span class="nf">ThingThatNeedsCleanup</span><span class="p">()</span>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">foo</span> <span class="o">=</span> <span class="kt">ThingThatNeedsCleanup</span><span class="p">()</span>
 <span class="n">request</span>
-  <span class="o">.</span><span class="nf">chained</span> <span class="p">{</span> <span class="err">…</span><span class="n">some</span> <span class="n">logic</span><span class="err">…</span> <span class="p">}</span>           <span class="c1">// May not be called if chain is cancelled</span>
-  <span class="o">.</span><span class="nf">onCompletion</span><span class="p">{</span> <span class="n">_</span> <span class="k">in</span> <span class="n">foo</span><span class="o">.</span><span class="nf">cleanUp</span><span class="p">()</span> <span class="p">}</span> <span class="c1">// Guaranteed to be called exactly once</span>
+  <span class="o">.</span><span class="n">chained</span> <span class="p">{</span> <span class="err">…</span><span class="n">some</span> <span class="n">logic</span><span class="err">…</span> <span class="p">}</span>           <span class="c1">// May not be called if chain is cancelled</span>
+  <span class="o">.</span><span class="n">onCompletion</span><span class="p">{</span> <span class="n">_</span> <span class="k">in</span> <span class="n">foo</span><span class="o">.</span><span class="nf">cleanUp</span><span class="p">()</span> <span class="p">}</span> <span class="c1">// Guaranteed to be called exactly once</span>
 </code></pre>
 
 </div>

@@ -283,9 +283,9 @@
 The values can be used to catch a variety of <em>recoverable</em> errors, especially those
 happening when initializing a Realm instance.</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">realm</span><span class="p">:</span> <span class="kt">Realm</span><span class="p">?</span>
-<span class="nf">do</span> <span class="p">{</span>
-    <span class="n">realm</span> <span class="o">=</span> <span class="k">try</span> <span class="nf">Realm</span><span class="p">()</span>
-<span class="p">}</span> <span class="k">catch</span> <span class="kt">Realm</span><span class="o">.</span><span class="kt">Error</span><span class="o">.</span><span class="nf">incompatibleLockFile</span> <span class="p">{</span>
+<span class="k">do</span> <span class="p">{</span>
+    <span class="n">realm</span> <span class="o">=</span> <span class="k">try</span> <span class="kt">Realm</span><span class="p">()</span>
+<span class="p">}</span> <span class="k">catch</span> <span class="kt">Realm</span><span class="o">.</span><span class="kt">Error</span><span class="o">.</span><span class="n">incompatibleLockFile</span> <span class="p">{</span>
     <span class="nf">print</span><span class="p">(</span><span class="s">"Realm Browser app may be attached to Realm on device?"</span><span class="p">)</span>
 <span class="p">}</span>
 </code></pre>
