@@ -141,6 +141,9 @@
                 <a class="nav-group-task-link" href="Enums/InputTypeMismatchAction.html">InputTypeMismatchAction</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/StandardTransformer.html">StandardTransformer</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Response Pipeline.html#/s:6Siesta23JSONResponseTransformerAA08ResponseC0_pSbF">JSONResponseTransformer(_:)</a>
               </li>
               <li class="nav-group-task">
@@ -294,7 +297,7 @@ custom stages, and customize their order. Each stage has zero or more <code><a h
 <p>By default, Siesta pipelines start with parsers for common data types (JSON, text, image) configured at the
 <code><a href="Classes/PipelineStageKey.html#/s:6Siesta16PipelineStageKeyC7parsingACvpZ">PipelineStageKey.parsing</a></code> stage. You can remove these default transformers for individual configurations using calls
 such as <code>clear()</code> and <code>PipelineStage.removeAllTransformers()</code>, or you can disable these default parsers entirely by
-passing <code>useDefaultTransformers: false</code> when creating a <code><a href="Classes/Service.html">Service</a></code>.</p>
+passing <code>standardTransformers: []</code> when creating a <code><a href="Classes/Service.html">Service</a></code>.</p>
 
 <p>Services do not have any persistent caching by default.</p>
 
@@ -522,6 +525,44 @@ surrounding metadata.</p>
               </ul>
             </div>
             <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Siesta19StandardTransformerV"></a>
+                    <a name="//apple_ref/swift/Struct/StandardTransformer" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Siesta19StandardTransformerV">StandardTransformer</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>A preconfigured combination of a transformer, content type, and pipeline stage.
+Use this to individually opt in to Siesta’s built-in response transformers.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="Classes/Service.html#/s:6Siesta7ServiceCAcA14URLConvertible_pSg7baseURL_SayAA19StandardTransformerVG20standardTransformersAA29NetworkingProviderConvertible_p10networkingtcfc">Service.init(...)</a></code>’s <code>standardTransformers:</code> parameter
+
+</div>
+
+                        <a href="Structs/StandardTransformer.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">StandardTransformer</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
               <div class="task-name-container">
                 <a name="/Transformers%20for%20standard%20types"></a>
                 <a name="//apple_ref/swift/Section/Transformers for standard types" class="dashAnchor"></a>
@@ -543,7 +584,7 @@ surrounding metadata.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Parses <code>Data</code> content as JSON, outputting either a dictionary or an array.</p>
+                        <p>Parses <code>Data</code> content as JSON using JSONSerialization, outputting either a dictionary or an array.</p>
 
                       </div>
                       <div class="declaration">

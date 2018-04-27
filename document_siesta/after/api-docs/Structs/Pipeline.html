@@ -141,6 +141,9 @@
                 <a class="nav-group-task-link" href="../Enums/InputTypeMismatchAction.html">InputTypeMismatchAction</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/StandardTransformer.html">StandardTransformer</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Response Pipeline.html#/s:6Siesta23JSONResponseTransformerAA08ResponseC0_pSbF">JSONResponseTransformer(_:)</a>
               </li>
               <li class="nav-group-task">
@@ -279,7 +282,7 @@ custom stages, and customize their order. Each stage has zero or more <code><a h
 <p>By default, Siesta pipelines start with parsers for common data types (JSON, text, image) configured at the
 <code><a href="../Classes/PipelineStageKey.html#/s:6Siesta16PipelineStageKeyC7parsingACvpZ">PipelineStageKey.parsing</a></code> stage. You can remove these default transformers for individual configurations using calls
 such as <code>clear()</code> and <code>PipelineStage.removeAllTransformers()</code>, or you can disable these default parsers entirely by
-passing <code>useDefaultTransformers: false</code> when creating a <code><a href="../Classes/Service.html">Service</a></code>.</p>
+passing <code>standardTransformers: []</code> when creating a <code><a href="../Classes/Service.html">Service</a></code>.</p>
 
 <p>Services do not have any persistent caching by default.</p>
 
@@ -446,6 +449,38 @@ add or reorder stages if you have complex response processing needs.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">clear</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul class="item-container">
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Siesta8PipelineV3addyAA19StandardTransformerVF"></a>
+                    <a name="//apple_ref/swift/Method/add(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Siesta8PipelineV3addyAA19StandardTransformerVF">add(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds one of Siesta’s standard tranformers to a pipeline. Useful if you omitted one of the standard transformers
+in <code><a href="../Classes/Service.html#/s:6Siesta7ServiceCAcA14URLConvertible_pSg7baseURL_SayAA19StandardTransformerVG20standardTransformersAA29NetworkingProviderConvertible_p10networkingtcfc">Service.init(...)</a></code>, but still want to configure it for certain resources.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">add</span><span class="p">(</span><span class="n">_</span> <span class="nv">transformer</span><span class="p">:</span> <span class="kt"><a href="../Structs/StandardTransformer.html">StandardTransformer</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>

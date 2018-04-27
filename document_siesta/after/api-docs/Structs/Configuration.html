@@ -141,6 +141,9 @@
                 <a class="nav-group-task-link" href="../Enums/InputTypeMismatchAction.html">InputTypeMismatchAction</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/StandardTransformer.html">StandardTransformer</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Response Pipeline.html#/s:6Siesta23JSONResponseTransformerAA08ResponseC0_pSbF">JSONResponseTransformer(_:)</a>
               </li>
               <li class="nav-group-task">
@@ -387,6 +390,49 @@ will depend on the <em>post-mutation</em> request method.
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">headers</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Siesta13ConfigurationV14mutateRequestsyy10Foundation10URLRequestVzc4with_tF"></a>
+                    <a name="//apple_ref/swift/Method/mutateRequests(with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Siesta13ConfigurationV14mutateRequestsyy10Foundation10URLRequestVzc4with_tF">mutateRequests(with:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Adds a closure that can modify HTTP headers, body, etc. before a <code><a href="../Protocols/Request.html">Request</a></code> is created. Use this to configure
+generic HTTP behavior not configurable via the <code><a href="../Structs/Configuration.html#/s:6Siesta13ConfigurationV7headerss10DictionaryVyS2SGvp">headers</a></code> property, such as a header that contains a nonce or a
+cryptographic digest of the request body.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>These mutations are applied <em>after</em> any ad hoc mutation provided via the <code>requestMutation:</code> parameter of
+<code><a href="../Classes/Resource.html#/s:6Siesta8ResourceC7requestAA7Request_pAA0D6MethodO_y10Foundation10URLRequestVzc0C8MutationtF">Resource.request(...)</a></code>. This is because Siesta requests get their body from <code>requestMutation:</code>, and
+configured mutations often want to inspect (or even alter) that body.</p>
+
+</div>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Configuration depends on HTTP request method, but configured mutations can also <em>alter</em> the request method.
+Siesta will use the HTTP method of the pre-mutation request to determine what configuration to use for <em>all</em>
+mutations, and then use the post-mutation HTTP method for any further configuration.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">mutating</span> <span class="kd">func</span> <span class="nf">mutateRequests</span><span class="p">(</span><span class="n">with</span> <span class="nv">mutation</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/Resource.html">Resource</a></span><span class="o">.</span><span class="kt">RequestMutation</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>

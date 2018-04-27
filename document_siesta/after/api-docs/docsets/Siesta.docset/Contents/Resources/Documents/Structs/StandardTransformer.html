@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>SessionTaskContainer Protocol Reference</title>
+    <title>StandardTransformer Structure Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/swift/Protocol/SessionTaskContainer" class="dashAnchor"></a>
+    <a name="//apple_ref/swift/Struct/StandardTransformer" class="dashAnchor"></a>
 
-    <a title="SessionTaskContainer Protocol Reference"></a>
+    <a title="StandardTransformer Structure Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -44,7 +44,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">Siesta Reference</a>
       <img class="carat" src="../img/carat.png" />
-      SessionTaskContainer Protocol Reference
+      StandardTransformer Structure Reference
     </p>
 
     <div class="content-wrapper">
@@ -252,14 +252,20 @@
 
         <section class="section">
           <div class="section-content">
-            <h1>SessionTaskContainer</h1>
+            <h1>StandardTransformer</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">protocol</span> <span class="kt">SessionTaskContainer</span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">StandardTransformer</span></code></pre>
 
                 </div>
               </div>
-            <p>Convenience for <code><a href="../Protocols/NetworkingProvider.html">NetworkingProvider</a></code> implementations that ultimate rely on an <code>URLSessionTask</code>.</p>
+            <p>A preconfigured combination of a transformer, content type, and pipeline stage.
+Use this to individually opt in to Siesta’s built-in response transformers.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code><a href="../Classes/Service.html#/s:6Siesta7ServiceCAcA14URLConvertible_pSg7baseURL_SayAA19StandardTransformerVG20standardTransformersAA29NetworkingProviderConvertible_p10networkingtcfc">Service.init(...)</a></code>’s <code>standardTransformers:</code> parameter
+
+</div>
 
           </div>
         </section>
@@ -271,9 +277,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6Siesta20SessionTaskContainerP4taskSo010URLSessionC0Cvp"></a>
-                    <a name="//apple_ref/swift/Property/task" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6Siesta20SessionTaskContainerP4taskSo010URLSessionC0Cvp">task</a>
+                    <a name="/s:6Siesta19StandardTransformerV4jsonACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/json" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Siesta19StandardTransformerV4jsonACvpZ">json</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -281,48 +287,101 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Underlying networking task that can report request progress.</p>
+                        <p>Uses Foundation’s <code>JSONSerialization</code> to transform responses</p>
+
+<ul>
+<li>with content type of <code>*​/json</code> or <code>*​/​*+json</code></li>
+<li>to a dictionary or array</li>
+<li>at the parsing stage.</li>
+</ul>
+
+<p>Disable this if you want to use a different parser, such as Swift 4’s <code>JSONDecoder</code>:</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">service</span> <span class="o">=</span> <span class="kt">Service</span><span class="p">(</span>
+  <span class="nv">baseURL</span><span class="p">:</span> <span class="s">"https://example.com"</span><span class="p">,</span>
+  <span class="nv">standardTransformers</span><span class="p">:</span> <span class="p">[</span><span class="o">.</span><span class="n">image</span><span class="p">,</span> <span class="o">.</span><span class="n">text</span><span class="p">])</span>  <span class="c1">// no .json</span>
+
+<span class="k">let</span> <span class="nv">jsonDecoder</span> <span class="o">=</span> <span class="kt">JSONDecoder</span><span class="p">()</span>
+<span class="n">service</span><span class="o">.</span><span class="nf">configureTransformer</span><span class="p">(</span><span class="s">"/foo"</span><span class="p">)</span> <span class="p">{</span>
+  <span class="k">try</span> <span class="n">jsonDecoder</span><span class="o">.</span><span class="nf">decode</span><span class="p">(</span><span class="kt">Foo</span><span class="o">.</span><span class="k">self</span><span class="p">,</span> <span class="nv">from</span><span class="p">:</span> <span class="nv">$0</span><span class="o">.</span><span class="n">content</span><span class="p">)</span>
+<span class="p">}</span>
+</code></pre>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code>JSONResponseTransformer</code> to configure a JSON parser with different options, at a different stage,
+or for different content types.
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">task</span><span class="p">:</span> <span class="kt">URLSessionTask</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">json</span><span class="p">:</span> <span class="kt">StandardTransformer</span></code></pre>
 
                         </div>
                       </div>
                     </section>
                   </div>
                 </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6Siesta20SessionTaskContainerPAAE15transferMetricsAA015RequestTransferF0Vvp"></a>
-                    <a name="//apple_ref/swift/Property/transferMetrics" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6Siesta20SessionTaskContainerPAAE15transferMetricsAA015RequestTransferF0Vvp">transferMetrics</a>
+                    <a name="/s:6Siesta19StandardTransformerV4textACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/text" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Siesta19StandardTransformerV4textACvpZ">text</a>
                     </code>
-                      <span class="declaration-note">
-                        Extension method
-                      </span>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Extracts transfer metrics using bytes counts from <code>URLSessionTask</code>.</p>
+                        <p>Parses responses with content type <code>text/​*</code> as a swift String.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code>TextResponseTransformer</code> for details
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">transferMetrics</span><span class="p">:</span> <span class="kt"><a href="../Structs/RequestTransferMetrics.html">RequestTransferMetrics</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">text</span><span class="p">:</span> <span class="kt">StandardTransformer</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:6Siesta19StandardTransformerV5imageACvpZ"></a>
+                    <a name="//apple_ref/swift/Variable/image" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Siesta19StandardTransformerV5imageACvpZ">image</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Parses responses with content type <code>image/​*</code> as a UIKit / Appkit image.</p>
+<div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <code>ImageResponseTransformer</code> for details
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="k">let</span> <span class="nv">image</span><span class="p">:</span> <span class="kt">StandardTransformer</span></code></pre>
 
                         </div>
                       </div>

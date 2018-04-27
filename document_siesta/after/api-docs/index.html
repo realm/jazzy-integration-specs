@@ -140,6 +140,9 @@
                 <a class="nav-group-task-link" href="Enums/InputTypeMismatchAction.html">InputTypeMismatchAction</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="Structs/StandardTransformer.html">StandardTransformer</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="Response Pipeline.html#/s:6Siesta23JSONResponseTransformerAA08ResponseC0_pSbF">JSONResponseTransformer(_:)</a>
               </li>
               <li class="nav-group-task">
@@ -265,9 +268,10 @@
 <ul>
 <li><strong>OS:</strong> iOS 8+, macOS 10.11+</li>
 <li><strong>Languages:</strong> Written in Swift, supports apps in both Swift and Objective-C</li>
-<li><strong>Tool requirements:</strong> Xcode 8, Swift 3  (See <code>swift-2.x</code> branches for legacy support)</li>
+<li><strong>Tool requirements:</strong> Xcode 9, Swift 4 (See <code>swift-2.x</code> and <code>swift-3</code> branches for legacy support)</li>
 <li><strong>License:</strong> MIT</li>
 </ul>
+<h2 id='table-of-contents' class='heading'>Table of Contents</h2>
 <h3 id='overview' class='heading'>Overview</h3>
 
 <ul>
@@ -279,7 +283,7 @@
 <li><a href="#basic-usage">Basic Usage</a></li>
 <li><a href="#comparison-with-other-frameworks">Comparison With Other Frameworks</a></li>
 <li><a href="#examples">Examples</a></li>
-<li><a href="#contributing-and-getting-help">Contributing and Getting Help</a></li>
+<li><a href="#support">Support</a></li>
 </ul>
 <h3 id='documentation' class='heading'>Documentation</h3>
 
@@ -373,7 +377,7 @@
 <hr>
 <h2 id='installation' class='heading'>Installation</h2>
 
-<p>Siesta requires Swift 3, so make sure you have <a href="https://developer.apple.com/xcode/downloads/">Xcode 8</a>. (Use the <code>swift-2.x</code> branches if you haven’t made the big migration yet.)</p>
+<p>Siesta requires Swift 4, so make sure you have <a href="https://developer.apple.com/xcode/downloads/">Xcode 9</a>. (Use the <code>swift-2.x</code> branches if you haven’t made the big migration yet.)</p>
 <h3 id='cocoapods' class='heading'>CocoaPods</h3>
 
 <p>In your <code>Podfile</code>:</p>
@@ -546,7 +550,7 @@ git submodule update --init
 
     <span class="k">didSet</span> <span class="p">{</span>
       <span class="n">imageResource</span><span class="p">?</span><span class="o">.</span><span class="nf">loadIfNeeded</span><span class="p">()</span>
-      <span class="n">imageResource</span><span class="p">?</span><span class="o">.</span><span class="nf">addObserver</span><span class="p">(</span><span class="nv">owner</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="n">_</span> <span class="k">in</span>
+      <span class="n">imageResource</span><span class="p">?</span><span class="o">.</span><span class="nf">addObserver</span><span class="p">(</span><span class="nv">owner</span><span class="p">:</span> <span class="k">self</span><span class="p">)</span> <span class="p">{</span> <span class="p">[</span><span class="k">weak</span> <span class="k">self</span><span class="p">]</span> <span class="n">_</span><span class="p">,</span><span class="n">_</span> <span class="k">in</span>
         <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="n">image</span> <span class="o">=</span> <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="n">imageResource</span><span class="p">?</span><span class="o">.</span><span class="nf">typedContent</span><span class="p">(</span>
             <span class="nv">ifNone</span><span class="p">:</span> <span class="k">self</span><span class="p">?</span><span class="o">.</span><span class="n">placeholderImage</span><span class="p">)</span>
       <span class="p">}</span>
@@ -579,7 +583,7 @@ git submodule update --init
 
 <p>Which one is right for your project? It depends on your needs and your tastes.</p>
 
-<p>Siesta has robust functionality, but does not attempt to solve everything. In particular, Moya and RestKit address complementary / alternative concerns, while Alamofire and AFNetworking provide more robust low-level HTTP support. Further complicating a comparison, some frameworks are built on top of others. When you use Moya, for example, you’re also signing up for Alamofire.</p>
+<p>Siesta has robust functionality, but does not attempt to solve everything. In particular, Moya and RestKit address complementary / alternative concerns, while Alamofire and AFNetworking provide more robust low-level HTTP support. Further complicating a comparison, some frameworks are built on top of others. When you use Moya, for example, you’re also signing up for Alamofire. Siesta uses URLSession by default, but can also stack on top of Alamofire if you want to use its SSL trust management features. Combinations abound.</p>
 
 <p>With all that in mind, here is a capabilities comparison¹:</p>
 
@@ -722,10 +726,10 @@ git submodule update --init
 </tr>
 <tr>
 <td style="text-align: left">Nontrivial lines of code²</td>
-<td style="text-align: center">2424</td>
-<td style="text-align: center">2455</td>
-<td style="text-align: center">13276</td>
-<td style="text-align: center">831</td>
+<td style="text-align: center">2500</td>
+<td style="text-align: center">3020</td>
+<td style="text-align: center">13291</td>
+<td style="text-align: center">965</td>
 <td style="text-align: center">4025</td>
 <td style="text-align: center">?</td>
 </tr>
@@ -744,7 +748,7 @@ git submodule update --init
 <br>
 <small>2. “Trivial” means lines containing only whitespace, comments, parens, semicolons, and braces.</small></p>
 
-<p>Despite this capabilities list, Siesta is a relatively lean codebase — about the same weight as Alamofire, and 5.5x lighter than RestKit.</p>
+<p>Despite this capabilities list, Siesta is a relatively lean codebase — smaller than Alamofire, and 5.5x lighter than RestKit.</p>
 <h3 id='what-sets-siesta-apart' class='heading'>What sets Siesta apart?</h3>
 
 <p>It’s not just the features. Siesta <strong>solves a different problem</strong> than other REST frameworks.</p>
@@ -771,27 +775,33 @@ git submodule update --init
 <li>Install CocoaPods ≥ 1.0 if you haven’t already.</li>
 <li><code>pod try Siesta</code> (Note that there’s no need to download/clone Siesta locally first; this command does that for you.)</li>
 </ol>
-<h2 id='contributing-and-getting-help' class='heading'>Contributing and Getting Help</h2>
+<h2 id='support' class='heading'>Support</h2>
 
-<p>To report a bug, <a href="https://github.com/bustoutsolutions/siesta/issues/new">file an issue</a>.</p>
+<p>To <strong>ask for help</strong>, please post a question on <a href="https://stackoverflow.com/questions/ask?tags=siesta-swift,swift">Stack Overflow</a> and tag it with <code>siesta-swift</code>. (Be sure to include that tag. It triggers a notification to the Siesta core team.) This is preferable to filing an issue because other people may have the same question as you, and Stack Overflow answers are more discoverable than closed issues.</p>
 
-<p>To point out anything incorrect or confusing in the documentation, <a href="https://github.com/bustoutsolutions/siesta/issues/new">file an issue</a>.</p>
-
-<p>To submit a feature request / cool idea, <a href="https://github.com/bustoutsolutions/siesta/issues/new">file an issue</a>.</p>
-
-<p>To get help, post your question to <a href="https://stackoverflow.com">Stack Overflow</a> and tag it with <strong>siesta-swift</strong>. (Be sure to include the tag. It triggers a notification.)</p>
-<h3 id='pull-requests' class='heading'>Pull Requests</h3>
-
-<p>Want to <em>do</em> something instead of just talking about it? Fantastic! Be bold.</p>
+<p>Things that belong on Stack Overflow:</p>
 
 <ul>
-<li>If you are proposing a design change or nontrivial new functionality, please float your idea as an issue first so you don’t end up doing wasted work.</li>
-<li>Please follow the formatting conventions of the existing code. Yes, including Paul’s idiosyncratic taste in brace placement. (Matching braces always go in either the same row or the same column, and always align with the code they enclose.)</li>
-<li>Please make sure the tests pass locally (cmd-U in Xcode).</li>
-<li>Expect a little back and forth on your PR before it’s accepted. Don’t be discouraged. Nit-picking is not a sign of bad work; it’s a sign of interest!</li>
-<li>If you have trouble building or testing the project, please submit an issue or PR about it — even if you resolve the problem. This will help improve the docs.</li>
-<li>If you want to update the user guide, note that the guide is generated from the <code>Docs</code> directory in <code>master</code>, so that’s where you should make your change. Do not submit pull requests against <code>gh-pages</code>.</li>
+<li>“How do I…?”</li>
+<li>“Is there a way to…?”</li>
+<li>“Is Siesta appropriate for…?”</li>
+<li>“I got this error…”</li>
 </ul>
+
+<p>For a <strong>bug, feature request, or cool idea</strong>, please <a href="https://github.com/bustoutsolutions/siesta/issues/new">file a Github issue</a>. Things that belong in Github issues:</p>
+
+<ul>
+<li>“When I do <em>x</em>, I expect <em>y</em> but get <em>z</em>”</li>
+<li>“There should be a way to…”</li>
+<li>“Documentation for <em>x</em> is missing / confusing”</li>
+</ul>
+
+<p>Unsure which to choose? If you’re <em>proposing a change</em> to Siesta, use Github issues. If you’re <em>asking a question</em> that doesn’t change the project, and thus will remain valid even after you get an answer, then use Stack Overflow.</p>
+<h3 id='two-big-little-things' class='heading'>Two big little things</h3>
+
+<p>Keep in mind that Siesta is maintained by volunteers. Please be patient if you don’t immediately get an answer to your question; we all have jobs, families, obligations, and lives beyond this project.</p>
+
+<p>Please be excellent to one another and follow our <a href="https://github.com/bustoutsolutions/siesta/blob/master/CODE_OF_CONDUCT.md">code of conduct</a>.</p>
 
           </div>
         </section>

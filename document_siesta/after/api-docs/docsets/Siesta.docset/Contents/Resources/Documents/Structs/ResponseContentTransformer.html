@@ -141,6 +141,9 @@
                 <a class="nav-group-task-link" href="../Enums/InputTypeMismatchAction.html">InputTypeMismatchAction</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/StandardTransformer.html">StandardTransformer</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Response Pipeline.html#/s:6Siesta23JSONResponseTransformerAA08ResponseC0_pSbF">JSONResponseTransformer(_:)</a>
               </li>
               <li class="nav-group-task">
@@ -285,8 +288,9 @@ surrounding metadata.</p>
                       <div class="abstract">
                         <p>A closure that both processes the content and describes the required input and output types.</p>
 
-<p>The first argument will be the <code><a href="../Structs/Entity.html#/s:6Siesta6EntityV7contentxvp">Entity.content</a></code> property of the second argument, safely cast
-to the type expected by the closure.</p>
+<p>The input will be an <code><a href="../Structs/Entity.html">Entity</a></code> whose <code>content</code> is safely cast to the type expected by the closure.
+If the response content is not castable to <code>InputContentType</code>, then the pipeline skips the closure
+and replaces the resopnse with a <code><a href="../Structs/RequestError.html">RequestError</a></code> describing the type mismatch.</p>
 
 <p>The closure can throw an error to indicate that parsing failed. If it throws a <code><a href="../Structs/RequestError.html">RequestError</a></code>, that
 error is passed on to the resource as is. Other failures are wrapped in a <code><a href="../Structs/RequestError.html">RequestError</a></code>.</p>
