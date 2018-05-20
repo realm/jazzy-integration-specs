@@ -151,3 +151,11 @@ extension TopLevelClass.NestedLevel1.NestedLevel2 {
 struct GenericStruct<T> {
     var t: T
 }
+
+// MARK: Raw enum cases
+
+enum StringEnum: String {
+    case a = "foo"
+    case b = "\u{001b}"
+    case c = "\u{1f61e}"
+}
