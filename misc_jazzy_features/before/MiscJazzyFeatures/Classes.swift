@@ -74,8 +74,11 @@ enum DocumentedEnum {
     /// SUPPORTED: documented enum element
     case documentedValue
 
-    /// Another element
-    case otherDocumentedValue
+    /// Another element with an associated value
+    case otherDocumentedValue(extra: Int)
+
+    /// Another element with an anon associated value
+    case furtherDocumentedValue(String)
 
     // MARK: Methods
 
