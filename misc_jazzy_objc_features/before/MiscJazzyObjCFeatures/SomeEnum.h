@@ -9,5 +9,5 @@
 typedef NS_ENUM(NSUInteger, SomeEnum) {
     SomeEnumFoo = 1,
     SomeEnumBar,
-    SomeEnumBaz
+    SomeEnumBaz  __attribute__((deprecated))
 };

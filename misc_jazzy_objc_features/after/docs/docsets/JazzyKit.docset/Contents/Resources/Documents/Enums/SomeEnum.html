@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           JazzyKit Docs
         </a>
-         (57% documented)
+         (60% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -67,6 +67,9 @@
             <a class="nav-group-name-link" href="../Other Classes.html">Other Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Classes/ObjCLowLevelClass.html">ObjCLowLevelClass</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Classes/ObjCMidLevelClass.html">ObjCMidLevelClass</a>
               </li>
             </ul>
@@ -102,7 +105,7 @@
                   <pre class="highlight objective_c"><code><span class="n">NS_ENUM</span><span class="p">(</span><span class="n">NSUInteger</span><span class="p">,</span> <span class="n">SomeEnum</span><span class="p">)</span> <span class="p">{</span>
     <span class="n">SomeEnumFoo</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span>
     <span class="n">SomeEnumBar</span><span class="p">,</span>
-    <span class="n">SomeEnumBaz</span>
+    <span class="n">SomeEnumBaz</span>  <span class="n">__attribute__</span><span class="p">((</span><span class="n">deprecated</span><span class="p">))</span>
 <span class="p">}</span></code></pre>
 
                 </div>
@@ -175,13 +178,17 @@
                     <code>
                     <a name="/c:@E@SomeEnum@SomeEnumBaz"></a>
                     <a name="//apple_ref/objc/Case/SomeEnumBaz" class="dashAnchor"></a>
-                    <a class="token" href="#/c:@E@SomeEnum@SomeEnumBaz">SomeEnumBaz</a>
+                    <a class="token discouraged" href="#/c:@E@SomeEnum@SomeEnumBaz">SomeEnumBaz</a>
                     </code>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        
+                      </div>
                       <div class="abstract">
                         <p>Undocumented</p>
 
