@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>NSValue(SomeAdditions) Category Reference</title>
+    <title>ObjCLowLevelClass Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset="utf-8">
@@ -14,9 +14,9 @@
   </head>
   <body>
 
-    <a name="//apple_ref/objc/Extension/NSValue(SomeAdditions)" class="dashAnchor"></a>
+    <a name="//apple_ref/objc/Class/ObjCLowLevelClass" class="dashAnchor"></a>
 
-    <a title="NSValue(SomeAdditions) Category Reference"></a>
+    <a title="ObjCLowLevelClass Class Reference"></a>
 
     <header class="header">
       <p class="header-col header-col--primary">
@@ -38,7 +38,7 @@
     <p class="breadcrumbs">
       <a class="breadcrumb" href="../index.html">JazzyKit Reference</a>
       <img class="carat" src="../img/carat.png" />
-      NSValue(SomeAdditions) Category Reference
+      ObjCLowLevelClass Class Reference
     </p>
 
     <div class="content-wrapper">
@@ -99,14 +99,20 @@
 
         <section class="section">
           <div class="section-content">
-            <h1>NSValue(SomeAdditions)</h1>
+            <h1>ObjCLowLevelClass</h1>
+            <div class="aside aside-deprecated">
+              <p class="aside-title">Deprecated</p>
+              <p>Deprecated: use <code><a href="../Classes/ObjCMidLevelClass.html">ObjCMidLevelClass</a></code>.</p>
+
+            </div>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">NSValue</span> <span class="p">(</span><span class="nl">SomeAdditions</span><span class="p">)</span></code></pre>
+                  <pre class="highlight objective_c"><code>
+<span class="k">@interface</span> <span class="nc">ObjCLowLevelClass</span> <span class="p">:</span> <span class="nc"><a href="../Classes/ObjCMidLevelClass.html">ObjCMidLevelClass</a></span></code></pre>
 
                 </div>
               </div>
-            <p>Some additions on <code>NSValue</code>.</p>
+            <p>A low-level class.</p>
 
           </div>
         </section>
@@ -118,9 +124,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/c:objc(cs)NSValue(cm)valueWithSomeEnum:"></a>
-                    <a name="//apple_ref/objc/Method/+valueWithSomeEnum:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)NSValue(cm)valueWithSomeEnum:">+valueWithSomeEnum:</a>
+                    <a name="/c:objc(cs)ObjCLowLevelClass(im)action"></a>
+                    <a name="//apple_ref/objc/Method/-action" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)ObjCLowLevelClass(im)action">-action</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -128,51 +134,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Creates and returns a value object containing the enumeration value.</p>
+                        <p>Undocumented</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">instancetype</span><span class="p">)</span><span class="nf">valueWithSomeEnum</span><span class="p">:(</span><span class="n"><a href="../Enums/SomeEnum.html">SomeEnum</a></span><span class="p">)</span><span class="nv">someEnum</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="n">action</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="n">convenience</span> <span class="nf">init</span><span class="o">!</span><span class="p">(</span><span class="nv">someEnum</span><span class="p">:</span> <span class="kt"><a href="../Enums/SomeEnum.html">SomeEnum</a></span><span class="p">)</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/c:objc(cs)NSValue(py)someEnumValue"></a>
-                    <a name="//apple_ref/objc/Property/someEnumValue" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)NSValue(py)someEnumValue">someEnumValue</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Returns the enumeration value contained in the receiver.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Enums/SomeEnum.html">SomeEnum</a></span> <span class="n">someEnumValue</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">someEnumValue</span><span class="p">:</span> <span class="kt"><a href="../Enums/SomeEnum.html">SomeEnum</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">action</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>

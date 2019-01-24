@@ -2245,13 +2245,18 @@ a different Realm.</p>
                     <code>
                     <a name="/c:objc(cs)RLMRealm(cm)migrateRealm:"></a>
                     <a name="//apple_ref/objc/Method/+migrateRealm:" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)RLMRealm(cm)migrateRealm:">+migrateRealm:</a>
+                    <a class="token discouraged" href="#/c:objc(cs)RLMRealm(cm)migrateRealm:">+migrateRealm:</a>
                     </code>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
+                      <div class="aside aside-deprecated">
+                        <p class="aside-title">Deprecated</p>
+                        <p>Use <code>performMigrationForConfiguration:error:</code></p>
+
+                      </div>
                       <div class="abstract">
                         <p>Performs the given Realm configuration&rsquo;s migration block on a Realm at the given path.</p>
 
@@ -2393,13 +2398,18 @@ exactly when and how migrations are performed.</p>
                     <code>
                     <a name="/c:objc(cs)RLMRealm(im)init"></a>
                     <a name="//apple_ref/objc/Method/-init" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)RLMRealm(im)init">-init</a>
+                    <a class="token discouraged" href="#/c:objc(cs)RLMRealm(im)init">-init</a>
                     </code>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
+                      <div class="aside aside-unavailable">
+                        <p class="aside-title">Unavailable</p>
+                        <p>Use +defaultRealm, +realmWithConfiguration: or +realmWithURL:.</p>
+
+                      </div>
                       <div class="abstract">
                         <p>RLMRealm instances are cached internally by Realm and cannot be created directly.</p>
 
@@ -2426,13 +2436,18 @@ exactly when and how migrations are performed.</p>
                     <code>
                     <a name="/c:objc(cs)RLMRealm(cm)new"></a>
                     <a name="//apple_ref/objc/Method/+new" class="dashAnchor"></a>
-                    <a class="token" href="#/c:objc(cs)RLMRealm(cm)new">+new</a>
+                    <a class="token discouraged" href="#/c:objc(cs)RLMRealm(cm)new">+new</a>
                     </code>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
                     <section class="section">
                       <div class="pointer"></div>
+                      <div class="aside aside-unavailable">
+                        <p class="aside-title">Unavailable</p>
+                        <p>Use +defaultRealm, +realmWithConfiguration: or +realmWithURL:.</p>
+
+                      </div>
                       <div class="abstract">
                         <p>RLMRealm instances are cached internally by Realm and cannot be created directly.</p>
 

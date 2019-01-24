@@ -41,6 +41,16 @@
 @interface ObjCMidLevelClass : ObjCTopLevelClass
 /// Prepare a mid-level manager.
 - (Manager *)prepareManager;
+/// Unprepare a manager.  No longer supported.
+- unprepare:(Manager *)manager  __attribute__((unavailable));
+/// Create a manager.
+- (Manager *)create __attribute__((deprecated("Use `-prepareManager`.")));
+@end
+
+/** A low-level class. */
+__deprecated_msg("Deprecated: use `ObjCMidLevelClass`.")
+@interface ObjCLowLevelClass: ObjCMidLevelClass
+- (void)action;
 @end
 
 /// Some additions on `NSValue`.
