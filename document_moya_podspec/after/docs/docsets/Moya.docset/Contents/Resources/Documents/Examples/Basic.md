@@ -114,6 +114,8 @@ provider.request(.updateUser(id: 123, firstName: "Harry", lastName: "Potter")) {
 // POST https://api.myservice.com/users/123?first_name=Harry&last_name=Potter
 ```
 
+Always remember to retain the provider somewhere: if you fail to do so, it will be released automatically, potentially before you receive any response.
+
 The `TargetType` specifies both a base URL for the API and the sample data for
 each enum value. The sample data are `Data` instances, and could represent
 JSON, images, text, whatever you're expecting from that endpoint.
@@ -121,8 +123,8 @@ JSON, images, text, whatever you're expecting from that endpoint.
 You can also set up custom endpoints to alter the default behavior to your needs. For example:
 
 ```swift
-let endpointClosure = { (target: MyService) -> Endpoint<MyService> in
-    return Endpoint<MyService>(url: URL(target: target), sampleResponseClosure: {.networkResponse(200, target.sampleData)}, method: target.method, task: target.task)
+let endpointClosure = { (target: MyService) -> Endpoint in
+    return Endpoint(url: URL(target: target), sampleResponseClosure: {.networkResponse(200, target.sampleData)}, method: target.method, task: target.task, httpHeaderFields: target.headers)
 }
 ```
 
@@ -135,7 +137,7 @@ closure, it'll be executed at each invocation of the API, so you could do
 whatever you want. Say you want to test network error conditions like timeouts, too.
 
 ```swift
-let failureEndpointClosure = { (target: MyService) -> Endpoint<MyService> in
+let failureEndpointClosure = { (target: MyService) -> Endpoint in
     let sampleResponseClosure = { () -> (EndpointSampleResponse) in
         if shouldTimeout {
             return .networkError(NSError())
@@ -143,7 +145,7 @@ let failureEndpointClosure = { (target: MyService) -> Endpoint<MyService> in
             return .networkResponse(200, target.sampleData)
         }
     }
-    return Endpoint<MyService>(url: url(target), sampleResponseClosure: sampleResponseClosure, method: target.method, task: target.task)
+    return Endpoint(url: url(target), sampleResponseClosure: sampleResponseClosure, method: target.method, task: target.task, httpHeaderFields: target.headers)
 }
 ```
 

@@ -14,7 +14,7 @@
     <a title="Reactive Extension Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Moya Docs</a> (67% documented)</p>
+        <p><a href="../index.html">Moya Docs</a> (87% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -49,9 +49,6 @@
                 <a href="../Classes/NetworkLoggerPlugin.html">NetworkLoggerPlugin</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/ReactiveSwiftMoyaProvider.html">ReactiveSwiftMoyaProvider</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Classes/Response.html">Response</a>
               </li>
             </ul>
@@ -80,6 +77,9 @@
               <li class="nav-group-task">
                 <a href="../Enums/Task.html">Task</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ValidationType.html">ValidationType</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -87,6 +87,15 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Extensions/Method.html">Method</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/ObservableType.html">ObservableType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/PrimitiveSequence.html">PrimitiveSequence</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Reactive.html">Reactive</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/Reactive.html">Reactive</a>
@@ -214,9 +223,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13ReactiveSwift0A0V4MoyaAD0C12ProviderTypeRzlE7request_13callbackQueueAA14SignalProducerVyAD8ResponseCAD0C5ErrorOG6TargetQz_So17OS_dispatch_queueCSgtF"></a>
+                    <a name="/s:7RxSwift8ReactiveV4MoyaAD0D12ProviderTypeRzlE7request_13callbackQueueAA17PrimitiveSequenceVyAA11SingleTraitOAD8ResponseCG6TargetQz_So17OS_dispatch_queueCSgtF"></a>
                     <a name="//apple_ref/swift/Method/request(_:callbackQueue:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13ReactiveSwift0A0V4MoyaAD0C12ProviderTypeRzlE7request_13callbackQueueAA14SignalProducerVyAD8ResponseCAD0C5ErrorOG6TargetQz_So17OS_dispatch_queueCSgtF">request(_:callbackQueue:)</a>
+                    <a class="token" href="#/s:7RxSwift8ReactiveV4MoyaAD0D12ProviderTypeRzlE7request_13callbackQueueAA17PrimitiveSequenceVyAA11SingleTraitOAD8ResponseCG6TargetQz_So17OS_dispatch_queueCSgtF">request(_:callbackQueue:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -231,9 +240,44 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">request</span><span class="p">(</span><span class="n">_</span> <span class="nv">token</span><span class="p">:</span> <span class="kt">Base</span><span class="o">.</span><span class="kt">Target</span><span class="p">,</span> <span class="nv">callbackQueue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SignalProducer</span><span class="o">&lt;</span><span class="kt"><a href="../Classes/Response.html">Response</a></span><span class="p">,</span> <span class="kt"><a href="../Enums/MoyaError.html">MoyaError</a></span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">request</span><span class="p">(</span><span class="n">_</span> <span class="nv">token</span><span class="p">:</span> <span class="kt">Base</span><span class="o">.</span><span class="kt">Target</span><span class="p">,</span> <span class="nv">callbackQueue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Single</span><span class="o">&lt;</span><span class="kt"><a href="../Classes/Response.html">Response</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>token</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Entity, which provides specifications necessary for a <code><a href="../Classes/MoyaProvider.html">MoyaProvider</a></code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callbackQueue</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Callback queue. If nil - queue from provider initializer will be used.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>Single response object.</p>
                       </div>
                     </section>
                   </div>
@@ -241,9 +285,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13ReactiveSwift0A0V4MoyaAD0C12ProviderTypeRzlE19requestWithProgress_13callbackQueueAA14SignalProducerVyAD0H8ResponseVAD0C5ErrorOG6TargetQz_So17OS_dispatch_queueCSgtF"></a>
+                    <a name="/s:7RxSwift8ReactiveV4MoyaAD0D12ProviderTypeRzlE19requestWithProgress_13callbackQueueAA10ObservableCyAD0I8ResponseVG6TargetQz_So17OS_dispatch_queueCSgtF"></a>
                     <a name="//apple_ref/swift/Method/requestWithProgress(_:callbackQueue:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13ReactiveSwift0A0V4MoyaAD0C12ProviderTypeRzlE19requestWithProgress_13callbackQueueAA14SignalProducerVyAD0H8ResponseVAD0C5ErrorOG6TargetQz_So17OS_dispatch_queueCSgtF">requestWithProgress(_:callbackQueue:)</a>
+                    <a class="token" href="#/s:7RxSwift8ReactiveV4MoyaAD0D12ProviderTypeRzlE19requestWithProgress_13callbackQueueAA10ObservableCyAD0I8ResponseVG6TargetQz_So17OS_dispatch_queueCSgtF">requestWithProgress(_:callbackQueue:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -258,7 +302,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">requestWithProgress</span><span class="p">(</span><span class="n">_</span> <span class="nv">token</span><span class="p">:</span> <span class="kt">Base</span><span class="o">.</span><span class="kt">Target</span><span class="p">,</span> <span class="nv">callbackQueue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SignalProducer</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/ProgressResponse.html">ProgressResponse</a></span><span class="p">,</span> <span class="kt"><a href="../Enums/MoyaError.html">MoyaError</a></span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">requestWithProgress</span><span class="p">(</span><span class="n">_</span> <span class="nv">token</span><span class="p">:</span> <span class="kt">Base</span><span class="o">.</span><span class="kt">Target</span><span class="p">,</span> <span class="nv">callbackQueue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Observable</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/ProgressResponse.html">ProgressResponse</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>

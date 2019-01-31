@@ -14,7 +14,7 @@
     <a title="TargetType Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Moya Docs</a> (67% documented)</p>
+        <p><a href="../index.html">Moya Docs</a> (87% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -49,9 +49,6 @@
                 <a href="../Classes/NetworkLoggerPlugin.html">NetworkLoggerPlugin</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/ReactiveSwiftMoyaProvider.html">ReactiveSwiftMoyaProvider</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Classes/Response.html">Response</a>
               </li>
             </ul>
@@ -80,6 +77,9 @@
               <li class="nav-group-task">
                 <a href="../Enums/Task.html">Task</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ValidationType.html">ValidationType</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -87,6 +87,15 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Extensions/Method.html">Method</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/ObservableType.html">ObservableType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/PrimitiveSequence.html">PrimitiveSequence</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Reactive.html">Reactive</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/Reactive.html">Reactive</a>
@@ -350,9 +359,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Moya10TargetTypeP8validateSbvp"></a>
-                    <a name="//apple_ref/swift/Property/validate" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Moya10TargetTypeP8validateSbvp">validate</a>
+                    <a name="/s:4Moya10TargetTypeP010validationC0AA010ValidationC0Ovp"></a>
+                    <a name="//apple_ref/swift/Property/validationType" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Moya10TargetTypeP010validationC0AA010ValidationC0Ovp">validationType</a>
                     </code>
                       <span class="declaration-note">
                         Default implementation
@@ -363,18 +372,19 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Whether or not to perform Alamofire validation. Defaults to <code>false</code>.</p>
+                        <p>The type of validation to perform on the request. Default is <code>.none</code>.</p>
 
                       </div>
                       <h4>Default Implementation</h4>
                       <div class="default_impl abstract">
-                        
+                        <p>The type of validation to perform on the request. Default is <code>.none</code>.</p>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">validate</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">validationType</span><span class="p">:</span> <span class="kt"><a href="../Enums/ValidationType.html">ValidationType</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -394,7 +404,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The headers to be used in the request.</p>
 
                       </div>
                       <div class="declaration">

@@ -14,7 +14,7 @@
     <a title="SignalProducerProtocol Extension Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Moya Docs</a> (67% documented)</p>
+        <p><a href="../index.html">Moya Docs</a> (87% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -49,9 +49,6 @@
                 <a href="../Classes/NetworkLoggerPlugin.html">NetworkLoggerPlugin</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/ReactiveSwiftMoyaProvider.html">ReactiveSwiftMoyaProvider</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Classes/Response.html">Response</a>
               </li>
             </ul>
@@ -80,6 +77,9 @@
               <li class="nav-group-task">
                 <a href="../Enums/Task.html">Task</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ValidationType.html">ValidationType</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -87,6 +87,15 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Extensions/Method.html">Method</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/ObservableType.html">ObservableType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/PrimitiveSequence.html">PrimitiveSequence</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Reactive.html">Reactive</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/Reactive.html">Reactive</a>
@@ -215,9 +224,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:13ReactiveSwift22SignalProducerProtocolP4MoyaAD0F5ErrorO0G0RtzAD8ResponseC5ValueRtzrlE6filter11statusCodesAA0cD0VyAjFGSNySiG_tF"></a>
+                    <a name="/s:13ReactiveSwift22SignalProducerProtocolP4MoyaAD0F5ErrorO0G0RtzAD8ResponseC5ValueRtzrlE6filter11statusCodesAA0cD0VyAjFGqd___tSXRd__Si5BoundRtd__lF"></a>
                     <a name="//apple_ref/swift/Method/filter(statusCodes:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:13ReactiveSwift22SignalProducerProtocolP4MoyaAD0F5ErrorO0G0RtzAD8ResponseC5ValueRtzrlE6filter11statusCodesAA0cD0VyAjFGSNySiG_tF">filter(statusCodes:)</a>
+                    <a class="token" href="#/s:13ReactiveSwift22SignalProducerProtocolP4MoyaAD0F5ErrorO0G0RtzAD8ResponseC5ValueRtzrlE6filter11statusCodesAA0cD0VyAjFGqd___tSXRd__Si5BoundRtd__lF">filter(statusCodes:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -232,7 +241,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">filter</span><span class="p">(</span><span class="nv">statusCodes</span><span class="p">:</span> <span class="kt">ClosedRange</span><span class="o">&lt;</span><span class="kt">Int</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SignalProducer</span><span class="o">&lt;</span><span class="kt">Value</span><span class="p">,</span> <span class="kt"><a href="../Enums/MoyaError.html">MoyaError</a></span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">filter</span><span class="o">&lt;</span><span class="kt">R</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">statusCodes</span><span class="p">:</span> <span class="kt">R</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SignalProducer</span><span class="o">&lt;</span><span class="kt">Value</span><span class="p">,</span> <span class="kt"><a href="../Enums/MoyaError.html">MoyaError</a></span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">R</span> <span class="p">:</span> <span class="kt">RangeExpression</span><span class="p">,</span> <span class="kt">R</span><span class="o">.</span><span class="kt">Bound</span> <span class="o">==</span> <span class="kt">Int</span></code></pre>
 
                         </div>
                       </div>
@@ -252,7 +261,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Filters out responses that have the specified <code>statusCode</code>.</p>
 
                       </div>
                       <div class="declaration">
@@ -279,7 +288,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Filters out responses where <code>statusCode</code> falls within the range 200 - 299.</p>
 
                       </div>
                       <div class="declaration">
@@ -306,7 +315,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Filters out responses where <code>statusCode</code> falls within the range 200 - 399</p>
 
                       </div>
                       <div class="declaration">
@@ -395,6 +404,33 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">mapString</span><span class="p">(</span><span class="n">atKeyPath</span> <span class="nv">keyPath</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SignalProducer</span><span class="o">&lt;</span><span class="kt">String</span><span class="p">,</span> <span class="kt"><a href="../Enums/MoyaError.html">MoyaError</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:13ReactiveSwift22SignalProducerProtocolP4MoyaAD0F5ErrorO0G0RtzAD8ResponseC5ValueRtzrlE3map_9atKeyPath5using16failsOnEmptyDataAA0cD0Vyqd__AFGqd__m_SSSg10Foundation11JSONDecoderCSbtSeRd__lF"></a>
+                    <a name="//apple_ref/swift/Method/map(_:atKeyPath:using:failsOnEmptyData:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:13ReactiveSwift22SignalProducerProtocolP4MoyaAD0F5ErrorO0G0RtzAD8ResponseC5ValueRtzrlE3map_9atKeyPath5using16failsOnEmptyDataAA0cD0Vyqd__AFGqd__m_SSSg10Foundation11JSONDecoderCSbtSeRd__lF">map(_:atKeyPath:using:failsOnEmptyData:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Maps received data at key path into a Decodable object. If the conversion fails, the signal errors.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">map</span><span class="o">&lt;</span><span class="kt">D</span><span class="p">:</span> <span class="kt">Decodable</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">D</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="n">atKeyPath</span> <span class="nv">keyPath</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="n">using</span> <span class="nv">decoder</span><span class="p">:</span> <span class="kt">JSONDecoder</span> <span class="o">=</span> <span class="kt">JSONDecoder</span><span class="p">(),</span> <span class="nv">failsOnEmptyData</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SignalProducer</span><span class="o">&lt;</span><span class="kt">D</span><span class="p">,</span> <span class="kt"><a href="../Enums/MoyaError.html">MoyaError</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
