@@ -4,275 +4,309 @@
     <title>DataRequest Class Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <script src="../js/jquery.min.js" defer></script>
     <script src="../js/jazzy.js" defer></script>
     
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
   </head>
   <body>
+
     <a name="//apple_ref/swift/Class/DataRequest" class="dashAnchor"></a>
+
     <a title="DataRequest Class Reference"></a>
-    <header>
-      <div class="content-wrapper">
-        <p><a href="../index.html">Alamofire Docs</a> (86% documented)</p>
-        <p class="header-right"><a href="https://github.com/Alamofire/Alamofire"><img src="../img/gh.png"/>View on GitHub</a></p>
-        <p class="header-right"><a href="dash-feed://https%3A%2F%2Fstatic%2Erealm%2Eio%2Fjazzy_demo%2FAlamofire%2Fdocsets%2FAlamofire%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
-      </div>
-    </header>
-    <div class="content-wrapper">
-      <p id="breadcrumbs">
-        <a href="../index.html">Alamofire Reference</a>
-        <img id="carat" src="../img/carat.png" />
-        DataRequest Class Reference
+
+    <header class="header">
+      <p class="header-col header-col--primary">
+        <a class="header-link" href="../index.html">
+          Alamofire Docs
+        </a>
+         (86% documented)
       </p>
-    </div>
+    
+      <p class="header-col--secondary">
+        <form role="search" action="../search.json">
+          <input type="text" placeholder="Search documentation" data-typeahead>
+        </form>
+      </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="https://github.com/Alamofire/Alamofire">
+            <img class="header-icon" src="../img/gh.png"/>
+            View on GitHub
+          </a>
+        </p>
+    
+        <p class="header-col header-col--secondary">
+          <a class="header-link" href="dash-feed://https%3A%2F%2Falamofire%2Egithub%2Eio%2FAlamofire%2Fdocsets%2FAlamofire%2Exml">
+            <img class="header-icon" src="../img/dash.png"/>
+            Install in Dash
+          </a>
+        </p>
+    </header>
+
+    <p class="breadcrumbs">
+      <a class="breadcrumb" href="../index.html">Alamofire Reference</a>
+      <img class="carat" src="../img/carat.png" />
+      DataRequest Class Reference
+    </p>
+
     <div class="content-wrapper">
-      <nav class="sidebar">
+      <nav class="navigation">
         <ul class="nav-groups">
           <li class="nav-group-name">
-            <a href="../Classes.html">Classes</a>
+            <a class="nav-group-name-link" href="../Classes.html">Classes</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Classes/DataRequest.html">DataRequest</a>
+                <a class="nav-group-task-link" href="../Classes/DataRequest.html">DataRequest</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/DownloadRequest.html">DownloadRequest</a>
+                <a class="nav-group-task-link" href="../Classes/DownloadRequest.html">DownloadRequest</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/DownloadRequest/DownloadOptions.html">– DownloadOptions</a>
+                <a class="nav-group-task-link" href="../Classes/DownloadRequest/DownloadOptions.html">– DownloadOptions</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/MultipartFormData.html">MultipartFormData</a>
+                <a class="nav-group-task-link" href="../Classes/MultipartFormData.html">MultipartFormData</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/NetworkReachabilityManager.html">NetworkReachabilityManager</a>
+                <a class="nav-group-task-link" href="../Classes/NetworkReachabilityManager.html">NetworkReachabilityManager</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/NetworkReachabilityManager.html#/s:9Alamofire26NetworkReachabilityManagerC0bC6StatusO">– NetworkReachabilityStatus</a>
+                <a class="nav-group-task-link" href="../Classes/NetworkReachabilityManager.html#/s:9Alamofire26NetworkReachabilityManagerC0bC6StatusO">– NetworkReachabilityStatus</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/NetworkReachabilityManager.html#/s:9Alamofire26NetworkReachabilityManagerC14ConnectionTypeO">– ConnectionType</a>
+                <a class="nav-group-task-link" href="../Classes/NetworkReachabilityManager.html#/s:9Alamofire26NetworkReachabilityManagerC14ConnectionTypeO">– ConnectionType</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/Request.html">Request</a>
+                <a class="nav-group-task-link" href="../Classes/Request.html">Request</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/Request.html#/s:9Alamofire7RequestC16ValidationResultO">– ValidationResult</a>
+                <a class="nav-group-task-link" href="../Classes/Request.html#/s:9Alamofire7RequestC16ValidationResultO">– ValidationResult</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/ServerTrustPolicyManager.html">ServerTrustPolicyManager</a>
+                <a class="nav-group-task-link" href="../Classes/ServerTrustPolicyManager.html">ServerTrustPolicyManager</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/SessionDelegate.html">SessionDelegate</a>
+                <a class="nav-group-task-link" href="../Classes/SessionDelegate.html">SessionDelegate</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/SessionManager.html">SessionManager</a>
+                <a class="nav-group-task-link" href="../Classes/SessionManager.html">SessionManager</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/SessionManager.html#/s:9Alamofire14SessionManagerC31MultipartFormDataEncodingResultO">– MultipartFormDataEncodingResult</a>
+                <a class="nav-group-task-link" href="../Classes/SessionManager.html#/s:9Alamofire14SessionManagerC31MultipartFormDataEncodingResultO">– MultipartFormDataEncodingResult</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes.html#/s:9Alamofire13StreamRequestC">StreamRequest</a>
+                <a class="nav-group-task-link" href="../Classes.html#/s:9Alamofire13StreamRequestC">StreamRequest</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/TaskDelegate.html">TaskDelegate</a>
+                <a class="nav-group-task-link" href="../Classes/TaskDelegate.html">TaskDelegate</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/UploadRequest.html">UploadRequest</a>
+                <a class="nav-group-task-link" href="../Classes/UploadRequest.html">UploadRequest</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Enums.html">Enumerations</a>
+            <a class="nav-group-name-link" href="../Enums.html">Enumerations</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Enums/AFError.html">AFError</a>
+                <a class="nav-group-task-link" href="../Enums/AFError.html">AFError</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/AFError.html#/s:9Alamofire7AFErrorO30ParameterEncodingFailureReasonO">– ParameterEncodingFailureReason</a>
+                <a class="nav-group-task-link" href="../Enums/AFError.html#/s:9Alamofire7AFErrorO30ParameterEncodingFailureReasonO">– ParameterEncodingFailureReason</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/AFError.html#/s:9Alamofire7AFErrorO30MultipartEncodingFailureReasonO">– MultipartEncodingFailureReason</a>
+                <a class="nav-group-task-link" href="../Enums/AFError.html#/s:9Alamofire7AFErrorO30MultipartEncodingFailureReasonO">– MultipartEncodingFailureReason</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/AFError.html#/s:9Alamofire7AFErrorO31ResponseValidationFailureReasonO">– ResponseValidationFailureReason</a>
+                <a class="nav-group-task-link" href="../Enums/AFError.html#/s:9Alamofire7AFErrorO31ResponseValidationFailureReasonO">– ResponseValidationFailureReason</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/AFError.html#/s:9Alamofire7AFErrorO34ResponseSerializationFailureReasonO">– ResponseSerializationFailureReason</a>
+                <a class="nav-group-task-link" href="../Enums/AFError.html#/s:9Alamofire7AFErrorO34ResponseSerializationFailureReasonO">– ResponseSerializationFailureReason</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums.html#/s:9Alamofire10HTTPMethodO">HTTPMethod</a>
+                <a class="nav-group-task-link" href="../Enums.html#/s:9Alamofire10HTTPMethodO">HTTPMethod</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/Result.html">Result</a>
+                <a class="nav-group-task-link" href="../Enums/Result.html">Result</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Enums/ServerTrustPolicy.html">ServerTrustPolicy</a>
+                <a class="nav-group-task-link" href="../Enums/ServerTrustPolicy.html">ServerTrustPolicy</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Extensions.html">Extensions</a>
+            <a class="nav-group-name-link" href="../Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Extensions/Notification.html">Notification</a>
+                <a class="nav-group-task-link" href="../Extensions/Notification.html">Notification</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/Notification/Name.html">– Name</a>
+                <a class="nav-group-task-link" href="../Extensions/Notification/Name.html">– Name</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/Notification/Key.html">– Key</a>
+                <a class="nav-group-task-link" href="../Extensions/Notification/Key.html">– Key</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/String.html">String</a>
+                <a class="nav-group-task-link" href="../Extensions/String.html">String</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/URL.html">URL</a>
+                <a class="nav-group-task-link" href="../Extensions/URL.html">URL</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/URLComponents.html">URLComponents</a>
+                <a class="nav-group-task-link" href="../Extensions/URLComponents.html">URLComponents</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Extensions/URLRequest.html">URLRequest</a>
+                <a class="nav-group-task-link" href="../Extensions/URLRequest.html">URLRequest</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Functions.html">Functions</a>
+            <a class="nav-group-name-link" href="../Functions.html">Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:9Alamofire2eeoiySbAA26NetworkReachabilityManagerC0cD6StatusO_AFtF">==(_:_:)</a>
+                <a class="nav-group-task-link" href="../Functions.html#/s:9Alamofire2eeoiySbAA26NetworkReachabilityManagerC0cD6StatusO_AFtF">==(_:_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:9Alamofire8download_6method10parameters8encoding7headers2toAA15DownloadRequestCAA14URLConvertible_p_AA10HTTPMethodOSDySSypGSgAA17ParameterEncoding_pSDyS2SGSg10Foundation3URLV011destinationO0_AI0H7OptionsV7optionstAT_So17NSHTTPURLResponseCtcSgtF">download(_:method:parameters:encoding:headers:to:)</a>
+                <a class="nav-group-task-link" href="../Functions.html#/s:9Alamofire8download_6method10parameters8encoding7headers2toAA15DownloadRequestCAA14URLConvertible_p_AA10HTTPMethodOSDySSypGSgAA17ParameterEncoding_pSDyS2SGSg10Foundation3URLV011destinationO0_AI0H7OptionsV7optionstAT_So17NSHTTPURLResponseCtcSgtF">download(_:method:parameters:encoding:headers:to:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:9Alamofire8download_2toAA15DownloadRequestCAA21URLRequestConvertible_p_10Foundation3URLV011destinationI0_AE0D7OptionsV7optionstAI_So17NSHTTPURLResponseCtcSgtF">download(_:to:)</a>
+                <a class="nav-group-task-link" href="../Functions.html#/s:9Alamofire8download_2toAA15DownloadRequestCAA21URLRequestConvertible_p_10Foundation3URLV011destinationI0_AE0D7OptionsV7optionstAI_So17NSHTTPURLResponseCtcSgtF">download(_:to:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:9Alamofire8download12resumingWith2toAA15DownloadRequestC10Foundation4DataV_AG3URLV011destinationJ0_AF0F7OptionsV7optionstAK_So17NSHTTPURLResponseCtcSgtF">download(resumingWith:to:)</a>
+                <a class="nav-group-task-link" href="../Functions.html#/s:9Alamofire8download12resumingWith2toAA15DownloadRequestC10Foundation4DataV_AG3URLV011destinationJ0_AF0F7OptionsV7optionstAK_So17NSHTTPURLResponseCtcSgtF">download(resumingWith:to:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:9Alamofire7requestyAA11DataRequestCAA21URLRequestConvertible_pF">request(_:)</a>
+                <a class="nav-group-task-link" href="../Functions.html#/s:9Alamofire7requestyAA11DataRequestCAA21URLRequestConvertible_pF">request(_:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:9Alamofire7request_6method10parameters8encoding7headersAA11DataRequestCAA14URLConvertible_p_AA10HTTPMethodOSDySSypGSgAA17ParameterEncoding_pSDyS2SGSgtF">request(_:method:parameters:encoding:headers:)</a>
+                <a class="nav-group-task-link" href="../Functions.html#/s:9Alamofire7request_6method10parameters8encoding7headersAA11DataRequestCAA14URLConvertible_p_AA10HTTPMethodOSDySSypGSgAA17ParameterEncoding_pSDyS2SGSgtF">request(_:method:parameters:encoding:headers:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:9Alamofire6stream4withAA13StreamRequestCSo12NSNetServiceC_tF">stream(with:)</a>
+                <a class="nav-group-task-link" href="../Functions.html#/s:9Alamofire6stream4withAA13StreamRequestCSo12NSNetServiceC_tF">stream(with:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:9Alamofire6stream12withHostName4portAA13StreamRequestCSS_SitF">stream(withHostName:port:)</a>
+                <a class="nav-group-task-link" href="../Functions.html#/s:9Alamofire6stream12withHostName4portAA13StreamRequestCSS_SitF">stream(withHostName:port:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:9Alamofire6upload_2to6method7headersAA13UploadRequestC10Foundation3URLV_AA14URLConvertible_pAA10HTTPMethodOSDyS2SGSgtF">upload(_:to:method:headers:)</a>
+                <a class="nav-group-task-link" href="../Functions.html#/s:9Alamofire6upload_2to6method7headersAA13UploadRequestC10Foundation3URLV_AA14URLConvertible_pAA10HTTPMethodOSDyS2SGSgtF">upload(_:to:method:headers:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:9Alamofire6upload_2to6method7headersAA13UploadRequestC10Foundation4DataV_AA14URLConvertible_pAA10HTTPMethodOSDyS2SGSgtF">upload(_:to:method:headers:)</a>
+                <a class="nav-group-task-link" href="../Functions.html#/s:9Alamofire6upload_2to6method7headersAA13UploadRequestC10Foundation4DataV_AA14URLConvertible_pAA10HTTPMethodOSDyS2SGSgtF">upload(_:to:method:headers:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:9Alamofire6upload_2to6method7headersAA13UploadRequestCSo13NSInputStreamC_AA14URLConvertible_pAA10HTTPMethodOSDyS2SGSgtF">upload(_:to:method:headers:)</a>
+                <a class="nav-group-task-link" href="../Functions.html#/s:9Alamofire6upload_2to6method7headersAA13UploadRequestCSo13NSInputStreamC_AA14URLConvertible_pAA10HTTPMethodOSDyS2SGSgtF">upload(_:to:method:headers:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:9Alamofire6upload_4withAA13UploadRequestC10Foundation3URLV_AA21URLRequestConvertible_ptF">upload(_:with:)</a>
+                <a class="nav-group-task-link" href="../Functions.html#/s:9Alamofire6upload_4withAA13UploadRequestC10Foundation3URLV_AA21URLRequestConvertible_ptF">upload(_:with:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:9Alamofire6upload_4withAA13UploadRequestC10Foundation4DataV_AA21URLRequestConvertible_ptF">upload(_:with:)</a>
+                <a class="nav-group-task-link" href="../Functions.html#/s:9Alamofire6upload_4withAA13UploadRequestC10Foundation4DataV_AA21URLRequestConvertible_ptF">upload(_:with:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:9Alamofire6upload_4withAA13UploadRequestCSo13NSInputStreamC_AA21URLRequestConvertible_ptF">upload(_:with:)</a>
+                <a class="nav-group-task-link" href="../Functions.html#/s:9Alamofire6upload_4withAA13UploadRequestCSo13NSInputStreamC_AA21URLRequestConvertible_ptF">upload(_:with:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:9Alamofire6upload17multipartFormData14usingThreshold2to6method7headers18encodingCompletionyyAA09MultipartdE0Cc_s6UInt64VAA14URLConvertible_pAA10HTTPMethodOSDyS2SGSgyAA14SessionManagerC0mdE14EncodingResultOcSgtF">upload(multipartFormData:usingThreshold:to:method:headers:encodingCompletion:)</a>
+                <a class="nav-group-task-link" href="../Functions.html#/s:9Alamofire6upload17multipartFormData14usingThreshold2to6method7headers18encodingCompletionyyAA09MultipartdE0Cc_s6UInt64VAA14URLConvertible_pAA10HTTPMethodOSDyS2SGSgyAA14SessionManagerC0mdE14EncodingResultOcSgtF">upload(multipartFormData:usingThreshold:to:method:headers:encodingCompletion:)</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:9Alamofire6upload17multipartFormData14usingThreshold4with18encodingCompletionyyAA09MultipartdE0Cc_s6UInt64VAA21URLRequestConvertible_pyAA14SessionManagerC0kdE14EncodingResultOcSgtF">upload(multipartFormData:usingThreshold:with:encodingCompletion:)</a>
+                <a class="nav-group-task-link" href="../Functions.html#/s:9Alamofire6upload17multipartFormData14usingThreshold4with18encodingCompletionyyAA09MultipartdE0Cc_s6UInt64VAA21URLRequestConvertible_pyAA14SessionManagerC0kdE14EncodingResultOcSgtF">upload(multipartFormData:usingThreshold:with:encodingCompletion:)</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Protocols.html">Protocols</a>
+            <a class="nav-group-name-link" href="../Protocols.html">Protocols</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Protocols/DataResponseSerializerProtocol.html">DataResponseSerializerProtocol</a>
+                <a class="nav-group-task-link" href="../Protocols/DataResponseSerializerProtocol.html">DataResponseSerializerProtocol</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/DownloadResponseSerializerProtocol.html">DownloadResponseSerializerProtocol</a>
+                <a class="nav-group-task-link" href="../Protocols/DownloadResponseSerializerProtocol.html">DownloadResponseSerializerProtocol</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/ParameterEncoding.html">ParameterEncoding</a>
+                <a class="nav-group-task-link" href="../Protocols/ParameterEncoding.html">ParameterEncoding</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/RequestAdapter.html">RequestAdapter</a>
+                <a class="nav-group-task-link" href="../Protocols/RequestAdapter.html">RequestAdapter</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/RequestRetrier.html">RequestRetrier</a>
+                <a class="nav-group-task-link" href="../Protocols/RequestRetrier.html">RequestRetrier</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/URLConvertible.html">URLConvertible</a>
+                <a class="nav-group-task-link" href="../Protocols/URLConvertible.html">URLConvertible</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Protocols/URLRequestConvertible.html">URLRequestConvertible</a>
+                <a class="nav-group-task-link" href="../Protocols/URLRequestConvertible.html">URLRequestConvertible</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Structs.html">Structures</a>
+            <a class="nav-group-name-link" href="../Structs.html">Structures</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Structs/DataResponse.html">DataResponse</a>
+                <a class="nav-group-task-link" href="../Structs/DataResponse.html">DataResponse</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/DataResponseSerializer.html">DataResponseSerializer</a>
+                <a class="nav-group-task-link" href="../Structs/DataResponseSerializer.html">DataResponseSerializer</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/DefaultDataResponse.html">DefaultDataResponse</a>
+                <a class="nav-group-task-link" href="../Structs/DefaultDataResponse.html">DefaultDataResponse</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/DefaultDownloadResponse.html">DefaultDownloadResponse</a>
+                <a class="nav-group-task-link" href="../Structs/DefaultDownloadResponse.html">DefaultDownloadResponse</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/DownloadResponse.html">DownloadResponse</a>
+                <a class="nav-group-task-link" href="../Structs/DownloadResponse.html">DownloadResponse</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/DownloadResponseSerializer.html">DownloadResponseSerializer</a>
+                <a class="nav-group-task-link" href="../Structs/DownloadResponseSerializer.html">DownloadResponseSerializer</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/JSONEncoding.html">JSONEncoding</a>
+                <a class="nav-group-task-link" href="../Structs/JSONEncoding.html">JSONEncoding</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/PropertyListEncoding.html">PropertyListEncoding</a>
+                <a class="nav-group-task-link" href="../Structs/PropertyListEncoding.html">PropertyListEncoding</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/Timeline.html">Timeline</a>
+                <a class="nav-group-task-link" href="../Structs/Timeline.html">Timeline</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/URLEncoding.html">URLEncoding</a>
+                <a class="nav-group-task-link" href="../Structs/URLEncoding.html">URLEncoding</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Structs/URLEncoding.html#/s:9Alamofire11URLEncodingV11DestinationO">– Destination</a>
+                <a class="nav-group-task-link" href="../Structs/URLEncoding.html#/s:9Alamofire11URLEncodingV11DestinationO">– Destination</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/URLEncoding.html#/s:9Alamofire11URLEncodingV13ArrayEncodingO">– ArrayEncoding</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/URLEncoding.html#/s:9Alamofire11URLEncodingV12BoolEncodingO">– BoolEncoding</a>
               </li>
             </ul>
           </li>
           <li class="nav-group-name">
-            <a href="../Typealiases.html">Type Aliases</a>
+            <a class="nav-group-name-link" href="../Typealiases.html">Type Aliases</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Typealiases.html#/s:9Alamofire11HTTPHeadersa">HTTPHeaders</a>
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:9Alamofire11HTTPHeadersa">HTTPHeaders</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Typealiases.html#/s:9Alamofire10Parametersa">Parameters</a>
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:9Alamofire10Parametersa">Parameters</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Typealiases.html#/s:9Alamofire22RequestRetryCompletiona">RequestRetryCompletion</a>
+                <a class="nav-group-task-link" href="../Typealiases.html#/s:9Alamofire22RequestRetryCompletiona">RequestRetryCompletion</a>
               </li>
             </ul>
           </li>
         </ul>
       </nav>
       <article class="main-content">
-        <section>
-          <section class="section">
+
+        <section class="section">
+          <div class="section-content">
             <h1>DataRequest</h1>
               <div class="declaration">
                 <div class="language">
@@ -282,8 +316,11 @@
               </div>
             <p>Specific type of <code><a href="../Classes/Request.html">Request</a></code> that manages an underlying <code>URLSessionDataTask</code>.</p>
 
-          </section>
-          <section class="section task-group-section">
+          </div>
+        </section>
+
+        <section class="section">
+          <div class="section-content">
             <div class="task-group">
               <div class="task-name-container">
                 <a name="/Properties"></a>
@@ -292,7 +329,7 @@
                   <h3 class="section-name">Properties</h3>
                 </a>
               </div>
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -316,9 +353,6 @@
                           <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">override</span> <span class="k">var</span> <span class="nv">request</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/Request.swift#L369-L374">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -347,9 +381,6 @@
 
                         </div>
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/Request.swift#L377">Show on GitHub</a>
-                      </div>
                     </section>
                   </div>
                 </li>
@@ -363,7 +394,7 @@
                   <h3 class="section-name">Stream</h3>
                 </a>
               </div>
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -416,9 +447,6 @@ also important to note that the server data in any <code>Response</code> object 
                         <h4>Return Value</h4>
                         <p>The request.</p>
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/Request.swift#L393-L396">Show on GitHub</a>
-                      </div>
                     </section>
                   </div>
                 </li>
@@ -432,7 +460,7 @@ also important to note that the server data in any <code>Response</code> object 
                   <h3 class="section-name">Progress</h3>
                 </a>
               </div>
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -493,9 +521,6 @@ also important to note that the server data in any <code>Response</code> object 
                         <h4>Return Value</h4>
                         <p>The request.</p>
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/Request.swift#L407-L410">Show on GitHub</a>
-                      </div>
                     </section>
                   </div>
                 </li>
@@ -509,7 +534,7 @@ also important to note that the server data in any <code>Response</code> object 
                   <h3 class="section-name">Default</h3>
                 </a>
               </div>
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -569,9 +594,6 @@ also important to note that the server data in any <code>Response</code> object 
                       <div>
                         <h4>Return Value</h4>
                         <p>The request.</p>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/ResponseSerialization.swift#L113-L131">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -653,9 +675,6 @@ also important to note that the server data in any <code>Response</code> object 
                         <h4>Return Value</h4>
                         <p>The request.</p>
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/ResponseSerialization.swift#L142-L170">Show on GitHub</a>
-                      </div>
                     </section>
                   </div>
                 </li>
@@ -669,7 +688,7 @@ also important to note that the server data in any <code>Response</code> object 
                   <h3 class="section-name">Data</h3>
                 </a>
               </div>
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -697,9 +716,6 @@ also important to note that the server data in any <code>Response</code> object 
                       <div>
                         <h4>Return Value</h4>
                         <p>A data response serializer.</p>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/ResponseSerialization.swift#L276-L280">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -755,9 +771,6 @@ also important to note that the server data in any <code>Response</code> object 
                         <h4>Return Value</h4>
                         <p>The request.</p>
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/ResponseSerialization.swift#L288-L298">Show on GitHub</a>
-                      </div>
                     </section>
                   </div>
                 </li>
@@ -771,7 +784,7 @@ also important to note that the server data in any <code>Response</code> object 
                   <h3 class="section-name">String</h3>
                 </a>
               </div>
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -820,9 +833,6 @@ the specified string encoding.</p>
                       <div>
                         <h4>Return Value</h4>
                         <p>A string response serializer.</p>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/ResponseSerialization.swift#L394-L398">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -893,9 +903,6 @@ the specified string encoding.</p>
                         <h4>Return Value</h4>
                         <p>The request.</p>
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/ResponseSerialization.swift#L409-L420">Show on GitHub</a>
-                      </div>
                     </section>
                   </div>
                 </li>
@@ -909,7 +916,7 @@ the specified string encoding.</p>
                   <h3 class="section-name">JSON</h3>
                 </a>
               </div>
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -959,9 +966,6 @@ the specified string encoding.</p>
                       <div>
                         <h4>Return Value</h4>
                         <p>A JSON object response serializer.</p>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/ResponseSerialization.swift#L514-L521">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1030,9 +1034,6 @@ the specified string encoding.</p>
                         <h4>Return Value</h4>
                         <p>The request.</p>
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/ResponseSerialization.swift#L530-L541">Show on GitHub</a>
-                      </div>
                     </section>
                   </div>
                 </li>
@@ -1046,7 +1047,7 @@ the specified string encoding.</p>
                   <h3 class="section-name">Property List</h3>
                 </a>
               </div>
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -1096,9 +1097,6 @@ the specified string encoding.</p>
                       <div>
                         <h4>Return Value</h4>
                         <p>A property list object response serializer.</p>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/ResponseSerialization.swift#L635-L642">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1167,16 +1165,13 @@ the specified string encoding.</p>
                         <h4>Return Value</h4>
                         <p>The request.</p>
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/ResponseSerialization.swift#L651-L662">Show on GitHub</a>
-                      </div>
                     </section>
                   </div>
                 </li>
               </ul>
             </div>
             <div class="task-group">
-              <ul>
+              <ul class="item-container">
                 <li class="item">
                   <div>
                     <code>
@@ -1201,9 +1196,6 @@ request was valid.</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Validation</span> <span class="o">=</span> <span class="p">(</span><span class="kt">URLRequest</span><span class="p">?,</span> <span class="kt">HTTPURLResponse</span><span class="p">,</span> <span class="kt">Data</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">ValidationResult</span></code></pre>
 
                         </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/Validation.swift#L154">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1258,9 +1250,6 @@ request was valid.</p>
                         <h4>Return Value</h4>
                         <p>The request.</p>
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/Validation.swift#L164-L178">Show on GitHub</a>
-                      </div>
                     </section>
                   </div>
                 </li>
@@ -1313,9 +1302,6 @@ request was valid.</p>
                       <div>
                         <h4>Return Value</h4>
                         <p>The request.</p>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/Validation.swift#L188-L192">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -1370,9 +1356,6 @@ request was valid.</p>
                         <h4>Return Value</h4>
                         <p>The request.</p>
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/Validation.swift#L202-L206">Show on GitHub</a>
-                      </div>
                     </section>
                   </div>
                 </li>
@@ -1408,22 +1391,20 @@ type matches any specified in the Accept HTTP header field.</p>
                         <h4>Return Value</h4>
                         <p>The request.</p>
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/Alamofire/Alamofire/blob/4.3.0/Source/Validation.swift#L215-L217">Show on GitHub</a>
-                      </div>
                     </section>
                   </div>
                 </li>
               </ul>
             </div>
-          </section>
+          </div>
         </section>
-        <section id="footer">
-          <p>&copy; YYYY <a class="link" href="https://nshipster.com/alamofire" target="_blank" rel="external">Alamofire</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
-          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
-        </section>
+
       </article>
     </div>
+    <section class="footer">
+      <p>&copy; YYYY <a class="link" href="http://alamofire.org/" target="_blank" rel="external">Alamofire Software Foundation</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
+      <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+    </section>
   </body>
 </div>
 </html>
