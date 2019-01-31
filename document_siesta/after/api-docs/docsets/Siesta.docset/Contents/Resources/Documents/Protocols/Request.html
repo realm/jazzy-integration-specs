@@ -23,7 +23,7 @@
         <a class="header-link" href="../index.html">
           Siesta Docs
         </a>
-         (95% documented)
+         (96% documented)
       </p>
     
       <p class="header-col--secondary">
@@ -100,6 +100,9 @@
                 <a class="nav-group-task-link" href="../Enums/RequestMethod.html">RequestMethod</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/RequestState.html">RequestState</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/RequestError.html">RequestError</a>
               </li>
               <li class="nav-group-task">
@@ -111,8 +114,19 @@
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/ResponseInfo.html">ResponseInfo</a>
               </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Request Customization.html">Request Customization</a>
+            <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Enums/RequestChainAction.html">RequestChainAction</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/RequestDelegate.html">RequestDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Protocols/RequestCompletionHandler.html">RequestCompletionHandler</a>
               </li>
             </ul>
           </li>
@@ -138,7 +152,7 @@
                 <a class="nav-group-task-link" href="../Structs/ResponseContentTransformer.html">ResponseContentTransformer</a>
               </li>
               <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Enums/InputTypeMismatchAction.html">InputTypeMismatchAction</a>
+                <a class="nav-group-task-link" href="../Structs/ResponseContentTransformer/InputTypeMismatchAction.html">– InputTypeMismatchAction</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Structs/StandardTransformer.html">StandardTransformer</a>
@@ -151,6 +165,17 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Response Pipeline.html#/s:6Siesta24ImageResponseTransformeryAA0cD0_pSbF">ImageResponseTransformer(_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a class="nav-group-name-link" href="../Logging.html">Logging</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SiestaLog.html">SiestaLog</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Enums/SiestaLog/Category.html">– Category</a>
               </li>
             </ul>
           </li>
@@ -181,18 +206,10 @@
                 <a class="nav-group-task-link" href="../Structs/RequestTransferMetrics.html">RequestTransferMetrics</a>
               </li>
               <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Structs/URLSessionProvider.html">URLSessionProvider</a>
+              </li>
+              <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/SessionTaskContainer.html">SessionTaskContainer</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Logging.html">Logging</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Enums/LogCategory.html">LogCategory</a>
-              </li>
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Logging.html#/s:6Siesta6loggeryyAA11LogCategoryO_SStcvp">logger</a>
               </li>
             </ul>
           </li>
@@ -201,6 +218,9 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/NSRegularExpression.html">NSRegularExpression</a>
+              </li>
+              <li class="nav-group-task">
+                <a class="nav-group-task-link" href="../Extensions/Set.html">Set</a>
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Extensions/String.html">String</a>
@@ -224,14 +244,6 @@
               </li>
               <li class="nav-group-task">
                 <a class="nav-group-task-link" href="../Protocols/URLConvertible.html">URLConvertible</a>
-              </li>
-            </ul>
-          </li>
-          <li class="nav-group-name">
-            <a class="nav-group-name-link" href="../Other Structs.html">Other Structures</a>
-            <ul class="nav-group-tasks">
-              <li class="nav-group-task">
-                <a class="nav-group-task-link" href="../Structs/URLSessionProvider.html">URLSessionProvider</a>
               </li>
             </ul>
           </li>
@@ -288,9 +300,9 @@ will see the same behavior regardless of whether the request has not started yet
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6Siesta7RequestP12onCompletionyxyAA12ResponseInfoVcF"></a>
+                    <a name="/s:6Siesta7RequestP12onCompletionyAaB_pyAA12ResponseInfoVcF"></a>
                     <a name="//apple_ref/swift/Method/onCompletion(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6Siesta7RequestP12onCompletionyxyAA12ResponseInfoVcF">onCompletion(_:)</a>
+                    <a class="token" href="#/s:6Siesta7RequestP12onCompletionyAaB_pyAA12ResponseInfoVcF">onCompletion(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -306,7 +318,7 @@ will see the same behavior regardless of whether the request has not started yet
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
-<span class="kd">func</span> <span class="nf">onCompletion</span><span class="p">(</span><span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Structs/ResponseInfo.html">ResponseInfo</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+<span class="kd">func</span> <span class="nf">onCompletion</span><span class="p">(</span><span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Structs/ResponseInfo.html">ResponseInfo</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Request</span></code></pre>
 
                         </div>
                       </div>
@@ -316,9 +328,9 @@ will see the same behavior regardless of whether the request has not started yet
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6Siesta7RequestP9onSuccessyxyAA6EntityVyypGcF"></a>
+                    <a name="/s:6Siesta7RequestP9onSuccessyAaB_pyAA6EntityVyypGcF"></a>
                     <a name="//apple_ref/swift/Method/onSuccess(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6Siesta7RequestP9onSuccessyxyAA6EntityVyypGcF">onSuccess(_:)</a>
+                    <a class="token" href="#/s:6Siesta7RequestP9onSuccessyAaB_pyAA6EntityVyypGcF">onSuccess(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -334,7 +346,7 @@ will see the same behavior regardless of whether the request has not started yet
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
-<span class="kd">func</span> <span class="nf">onSuccess</span><span class="p">(</span><span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Structs/Entity.html">Entity</a></span><span class="o">&lt;</span><span class="kt">Any</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+<span class="kd">func</span> <span class="nf">onSuccess</span><span class="p">(</span><span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Structs/Entity.html">Entity</a></span><span class="o">&lt;</span><span class="kt">Any</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Request</span></code></pre>
 
                         </div>
                       </div>
@@ -344,9 +356,9 @@ will see the same behavior regardless of whether the request has not started yet
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6Siesta7RequestP9onNewDatayxyAA6EntityVyypGcF"></a>
+                    <a name="/s:6Siesta7RequestP9onNewDatayAaB_pyAA6EntityVyypGcF"></a>
                     <a name="//apple_ref/swift/Method/onNewData(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6Siesta7RequestP9onNewDatayxyAA6EntityVyypGcF">onNewData(_:)</a>
+                    <a class="token" href="#/s:6Siesta7RequestP9onNewDatayAaB_pyAA6EntityVyypGcF">onNewData(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -362,7 +374,7 @@ will see the same behavior regardless of whether the request has not started yet
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
-<span class="kd">func</span> <span class="nf">onNewData</span><span class="p">(</span><span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Structs/Entity.html">Entity</a></span><span class="o">&lt;</span><span class="kt">Any</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+<span class="kd">func</span> <span class="nf">onNewData</span><span class="p">(</span><span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Structs/Entity.html">Entity</a></span><span class="o">&lt;</span><span class="kt">Any</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Request</span></code></pre>
 
                         </div>
                       </div>
@@ -372,9 +384,9 @@ will see the same behavior regardless of whether the request has not started yet
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6Siesta7RequestP13onNotModifiedyxyycF"></a>
+                    <a name="/s:6Siesta7RequestP13onNotModifiedyAaB_pyycF"></a>
                     <a name="//apple_ref/swift/Method/onNotModified(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6Siesta7RequestP13onNotModifiedyxyycF">onNotModified(_:)</a>
+                    <a class="token" href="#/s:6Siesta7RequestP13onNotModifiedyAaB_pyycF">onNotModified(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -390,7 +402,7 @@ will see the same behavior regardless of whether the request has not started yet
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
-<span class="kd">func</span> <span class="nf">onNotModified</span><span class="p">(</span><span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+<span class="kd">func</span> <span class="nf">onNotModified</span><span class="p">(</span><span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Request</span></code></pre>
 
                         </div>
                       </div>
@@ -400,9 +412,9 @@ will see the same behavior regardless of whether the request has not started yet
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6Siesta7RequestP9onFailureyxyAA0B5ErrorVcF"></a>
+                    <a name="/s:6Siesta7RequestP9onFailureyAaB_pyAA0B5ErrorVcF"></a>
                     <a name="//apple_ref/swift/Method/onFailure(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6Siesta7RequestP9onFailureyxyAA0B5ErrorVcF">onFailure(_:)</a>
+                    <a class="token" href="#/s:6Siesta7RequestP9onFailureyAaB_pyAA0B5ErrorVcF">onFailure(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -418,7 +430,7 @@ will see the same behavior regardless of whether the request has not started yet
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
-<span class="kd">func</span> <span class="nf">onFailure</span><span class="p">(</span><span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Structs/RequestError.html">RequestError</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+<span class="kd">func</span> <span class="nf">onFailure</span><span class="p">(</span><span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Structs/RequestError.html">RequestError</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Request</span></code></pre>
 
                         </div>
                       </div>
@@ -428,9 +440,9 @@ will see the same behavior regardless of whether the request has not started yet
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6Siesta7RequestP5startxyF"></a>
+                    <a name="/s:6Siesta7RequestP5startAaB_pyF"></a>
                     <a name="//apple_ref/swift/Method/start()" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6Siesta7RequestP5startxyF">start()</a>
+                    <a class="token" href="#/s:6Siesta7RequestP5startAaB_pyF">start()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -462,7 +474,7 @@ time-delayed retries.</li>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
-<span class="kd">func</span> <span class="nf">start</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+<span class="kd">func</span> <span class="nf">start</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">Request</span></code></pre>
 
                         </div>
                       </div>
@@ -472,9 +484,9 @@ time-delayed retries.</li>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6Siesta7RequestP11isCompletedSbvp"></a>
-                    <a name="//apple_ref/swift/Property/isCompleted" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6Siesta7RequestP11isCompletedSbvp">isCompleted</a>
+                    <a name="/s:6Siesta7RequestP5stateAA0B5StateOvp"></a>
+                    <a name="//apple_ref/swift/Property/state" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Siesta7RequestP5stateAA0B5StateOvp">state</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -482,15 +494,22 @@ time-delayed retries.</li>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>True if the request has received and handled a server response, encountered a pre-request client-side side error,
-or been cancelled.</p>
+                        <p>Indicates whether this request is waiting to be started, in progress, or completed and has a response already.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    It is <em>always</em> valid to call any of <code>Request</code>’s methods, including hooks (<code><a href="../Protocols/Request.html#/s:6Siesta7RequestP12onCompletionyAaB_pyAA12ResponseInfoVcF">onCompletion(...)</a></code> and friends),
+no matter what state the request is in. You do not need to defensively check this property before working with
+a request; in fact, if you find yourself wanting it at all, you are probably doing something awkward and
+unnecessarily complicated.
+
+</div>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">isCompleted</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">state</span><span class="p">:</span> <span class="kt"><a href="../Enums/RequestState.html">RequestState</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -515,7 +534,7 @@ Result is either in [0&hellip;1], or is NAN if insufficient information is avail
 
 <p>The property will always be 1 if a request is completed. Note that the converse is not true: a value of 1 does
 not necessarily mean the request is completed; it means only that we estimate the request <em>should</em> be completed
-by now. Use the <code><a href="../Protocols/Request.html#/s:6Siesta7RequestP11isCompletedSbvp">isCompleted</a></code> property to test for actual completion.</p>
+by now. Use the <code>isCompleted</code> property to test for actual completion.</p>
 
                       </div>
                       <div class="declaration">
@@ -532,9 +551,9 @@ by now. Use the <code><a href="../Protocols/Request.html#/s:6Siesta7RequestP11is
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:6Siesta7RequestP10onProgressyxySdcF"></a>
+                    <a name="/s:6Siesta7RequestP10onProgressyAaB_pySdcF"></a>
                     <a name="//apple_ref/swift/Method/onProgress(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6Siesta7RequestP10onProgressyxySdcF">onProgress(_:)</a>
+                    <a class="token" href="#/s:6Siesta7RequestP10onProgressyAaB_pySdcF">onProgress(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -551,7 +570,7 @@ Will <em>always</em> receive a call with a value of 1 when the request completes
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
-<span class="kd">func</span> <span class="nf">onProgress</span><span class="p">(</span><span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+<span class="kd">func</span> <span class="nf">onProgress</span><span class="p">(</span><span class="n">_</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">Double</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Request</span></code></pre>
 
                         </div>
                       </div>
@@ -609,9 +628,10 @@ ignored and not trigger any callbacks.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Send the same request again, returning a new <code>Request</code> instance for the new attempt.</p>
+                        <p>Send the same request again, returning a new <code>Request</code> instance for the new attempt. You can combine this with
+<code><a href="../Protocols/Request.html#/s:6Siesta7RequestPAAE7chained13whenCompletedAaB_pAA0B11ChainActionOAA12ResponseInfoVc_tF">Request.chained(...)</a></code> to retry failed requests with updated headers.</p>
 
-<p>The return request is not already started. You must call <code><a href="../Protocols/Request.html#/s:6Siesta7RequestP5startxyF">start()</a></code> when you are ready for it to begin.</p>
+<p>The returned request is <strong>not</strong> already started. You must call <code><a href="../Protocols/Request.html#/s:6Siesta7RequestP5startAaB_pyF">start()</a></code> when you are ready for it to begin.</p>
 <div class="aside aside-warning">
     <p class="aside-title">Warning</p>
     Use with caution! Repeating a failed request for any HTTP method other than GET is potentially unsafe,
@@ -641,12 +661,12 @@ that you do not hold on to and repeat a request after a user logs out. Put those
 </div>
 <div class="aside aside-note">
     <p class="aside-title">Note</p>
-    <p>The new <code>Request</code> does <strong>not</strong> attach all the callbacks (e.g. <code><a href="../Protocols/Request.html#/s:6Siesta7RequestP12onCompletionyxyAA12ResponseInfoVcF">onCompletion(_:)</a></code>) from the old one.
+    <p>The new <code>Request</code> does <strong>not</strong> attach all the callbacks (e.g. <code><a href="../Protocols/Request.html#/s:6Siesta7RequestP12onCompletionyAaB_pyAA12ResponseInfoVcF">onCompletion(_:)</a></code>) from the old one.
 Doing so would violate the API contract of <code>Request</code> that any callback will be called at most once.</p>
 
 <p>After calling <code>repeated()</code>, you will need to attach new callbacks to the new request. Otherwise nobody will
 hear about the response when it arrives. (Q: If a request completes and nobody’s around to hear it, does it
-make a response? A: Yes, because it still uses bandwidth.)</p>
+make a response? A: Yes, because it still uses bandwidth, and potentially changes state on the server.)</p>
 
 <p>By the same principle, repeating a <code>load()</code> request will trigger a second network call, but will not cause the
 resource’s state to be updated again with the result.</p>
@@ -760,7 +780,7 @@ file an issue on Github!</p>
       </article>
     </div>
     <section class="footer">
-      <p>© 2016 <a class="link" href="http://bustoutsolutions.com" target="_blank" rel="external">Bust Out Solutions</a> under <a class="link" href="https://github.com/bustoutsolutions/siesta/blob/master/LICENSE" target="_blank" rel="external">open source license</a>.</p>
+      <p>© 2018 <a class="link" href="http://bustoutsolutions.com" target="_blank" rel="external">Bust Out Solutions</a> under <a class="link" href="https://github.com/bustoutsolutions/siesta/blob/master/LICENSE" target="_blank" rel="external">open source license</a>.</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

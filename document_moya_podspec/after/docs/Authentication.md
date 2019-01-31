@@ -35,6 +35,7 @@ let provider = MoyaProvider<YourAPI>(plugins: [CredentialsPlugin { target -> URL
 Another common method of authentication is by using an access token.
 Moya provides an `AccessTokenPlugin` that supports both `Bearer` authentication
 using a [JWT](https://jwt.io/introduction/) and `Basic` authentication for API keys.
+Also there is support for custom authorization types.
 
 There are two steps required to start using an `AccessTokenPlugin`.
 
@@ -53,16 +54,21 @@ for returning the token to be applied to the header of the request.
 extension YourAPI: TargetType, AccessTokenAuthorizable {
     case targetThatNeedsBearerAuth
     case targetThatNeedsBasicAuth
+    case targetThatNeedsCustomAuth
     case targetDoesNotNeedAuth
 
     var authorizationType: AuthorizationType {
-    case targetThatNeedsBearerAuth:
-        return .bearer
-    case targetThatNeedsBasicAuth:
-        return .basic
-    case targetDoesNotNeedAuth:
-        return .none   
-    }
+        switch self {
+            case .targetThatNeedsBearerAuth:
+                return .bearer
+            case .targetThatNeedsBasicAuth:
+                return .basic
+            case .targetThatNeedsCustomAuth:
+                return .custom("CustomAuthorizationType")
+            case .targetDoesNotNeedAuth:
+                return .none
+            }
+        }
 }
 ```
 
@@ -84,6 +90,13 @@ Basic requests are authorized by adding a HTTP header of the following form:
 Authorization: Basic <token>
 ```
 
+**Custom API Key Auth**
+Custom requests are authorized by adding a HTTP header of the following form:
+
+```
+Authorization: <Custom> <token>
+```
+
 ## OAuth
 
 OAuth is quite a bit trickier. It involves a multi step process that is often
@@ -97,8 +110,9 @@ itself sometimes require network requests be performed _first_, so signing
 a request for Moya is an asynchronous process. Let's see an example.
 
 ```swift
-let requestClosure = { (endpoint: Endpoint<YourAPI>, done: MoyaProvider.RequestResultClosure) in
-    let request = endpoint.urlRequest // This is the request Moya generates
+let requestClosure = { (endpoint: Endpoint, done: URLRequest -> Void) in
+    let request = try! endpoint.urlRequest() // This is the request Moya generates
+
     YourAwesomeOAuthProvider.signRequest(request, completion: { signedRequest in
         // The OAuth provider can make its own network calls to sign your request.
         // However, you *must* call `done()` with the signed so that Moya can

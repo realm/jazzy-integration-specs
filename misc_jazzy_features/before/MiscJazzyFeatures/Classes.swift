@@ -38,7 +38,7 @@ private class PrivateTopLevelClass {}
 open class PublicTopLevelClass {}
 
 /// SUPPORTED: @objc top-level class
-@objc class ObjCTopLevelClass {}
+@objc class ObjCTopLevelClass : NSObject {}
 
 /// SUPPORTED: top-level Objective-C subclasses
 class TopLevelObjCSubclass: NSObject {}

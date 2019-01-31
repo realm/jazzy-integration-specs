@@ -12,7 +12,7 @@ public func /<T>(lhs: T, rhs: T) {}
 /// Class with character that is HTML-escaped.
 class Operators_Namespace {
     /// Function with characters unsafe for html.
-    public static func <(lhs: DocumentedEnum, rhs: DocumentedEnum) : Bool {
+    public static func <(lhs: Operators_Namespace, rhs: DocumentedEnum) -> Bool {
         return false
     }
 }

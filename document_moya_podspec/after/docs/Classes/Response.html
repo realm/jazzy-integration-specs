@@ -14,7 +14,7 @@
     <a title="Response Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Moya Docs</a> (67% documented)</p>
+        <p><a href="../index.html">Moya Docs</a> (87% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -49,9 +49,6 @@
                 <a href="../Classes/NetworkLoggerPlugin.html">NetworkLoggerPlugin</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/ReactiveSwiftMoyaProvider.html">ReactiveSwiftMoyaProvider</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Classes/Response.html">Response</a>
               </li>
             </ul>
@@ -80,6 +77,9 @@
               <li class="nav-group-task">
                 <a href="../Enums/Task.html">Task</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ValidationType.html">ValidationType</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -87,6 +87,15 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Extensions/Method.html">Method</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/ObservableType.html">ObservableType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/PrimitiveSequence.html">PrimitiveSequence</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Reactive.html">Reactive</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/Reactive.html">Reactive</a>
@@ -225,7 +234,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The status code of the response.</p>
 
                       </div>
                       <div class="declaration">
@@ -252,7 +261,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The response data.</p>
 
                       </div>
                       <div class="declaration">
@@ -279,7 +288,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The original URLRequest for the response.</p>
 
                       </div>
                       <div class="declaration">
@@ -306,7 +315,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The HTTPURLResponse object.</p>
 
                       </div>
                       <div class="declaration">
@@ -333,7 +342,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Initialize a new <code>Response</code>.</p>
+                        <p>Undocumented</p>
 
                       </div>
                       <div class="declaration">
@@ -434,9 +443,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Moya8ResponseC6filter11statusCodesACSNySiG_tKF"></a>
+                    <a name="/s:4Moya8ResponseC6filter11statusCodesACx_tKSXRzSi5BoundRtzlF"></a>
                     <a name="//apple_ref/swift/Method/filter(statusCodes:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Moya8ResponseC6filter11statusCodesACSNySiG_tKF">filter(statusCodes:)</a>
+                    <a class="token" href="#/s:4Moya8ResponseC6filter11statusCodesACx_tKSXRzSi5BoundRtzlF">filter(statusCodes:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -456,7 +465,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">filter</span><span class="p">(</span><span class="nv">statusCodes</span><span class="p">:</span> <span class="kt">ClosedRange</span><span class="o">&lt;</span><span class="kt">Int</span><span class="o">&gt;</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Response</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">filter</span><span class="o">&lt;</span><span class="kt">R</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">statusCodes</span><span class="p">:</span> <span class="kt">R</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Response</span> <span class="k">where</span> <span class="kt">R</span> <span class="p">:</span> <span class="kt">RangeExpression</span><span class="p">,</span> <span class="kt">R</span><span class="o">.</span><span class="kt">Bound</span> <span class="o">==</span> <span class="kt">Int</span></code></pre>
 
                         </div>
                       </div>
@@ -610,7 +619,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Maps data received from the signal into a UIImage.</p>
+                        <p>Maps data received from the signal into an Image.</p>
 
                       </div>
                       <div class="declaration">
@@ -647,6 +656,26 @@
                           <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">mapJSON</span><span class="p">(</span><span class="nv">failsOnEmptyData</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">Any</span></code></pre>
 
                         </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>failsOnEmptyData</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A Boolean value determining
+whether the mapping should fail if the data is empty.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
                       </div>
                     </section>
                   </div>
@@ -688,6 +717,64 @@
                               <td>
                                 <div>
                                   <p>Optional key path at which to parse string.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Moya8ResponseC3map_9atKeyPath5using16failsOnEmptyDataxxm_SSSg10Foundation11JSONDecoderCSbtKSeRzlF"></a>
+                    <a name="//apple_ref/swift/Method/map(_:atKeyPath:using:failsOnEmptyData:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Moya8ResponseC3map_9atKeyPath5using16failsOnEmptyDataxxm_SSSg10Foundation11JSONDecoderCSbtKSeRzlF">map(_:atKeyPath:using:failsOnEmptyData:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Maps data received from the signal into a Decodable object.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">map</span><span class="o">&lt;</span><span class="kt">D</span><span class="p">:</span> <span class="kt">Decodable</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">D</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="n">atKeyPath</span> <span class="nv">keyPath</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="n">using</span> <span class="nv">decoder</span><span class="p">:</span> <span class="kt">JSONDecoder</span> <span class="o">=</span> <span class="kt">JSONDecoder</span><span class="p">(),</span> <span class="nv">failsOnEmptyData</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt">D</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>atKeyPath</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Optional key path at which to parse object.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>using</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code>JSONDecoder</code> instance which is used to decode data to an object.</p>
                                 </div>
                               </td>
                             </tr>

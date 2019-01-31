@@ -14,7 +14,7 @@
     <a title="MoyaError Enumeration Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Moya Docs</a> (67% documented)</p>
+        <p><a href="../index.html">Moya Docs</a> (87% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -49,9 +49,6 @@
                 <a href="../Classes/NetworkLoggerPlugin.html">NetworkLoggerPlugin</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/ReactiveSwiftMoyaProvider.html">ReactiveSwiftMoyaProvider</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Classes/Response.html">Response</a>
               </li>
             </ul>
@@ -80,6 +77,9 @@
               <li class="nav-group-task">
                 <a href="../Enums/Task.html">Task</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ValidationType.html">ValidationType</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -87,6 +87,15 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Extensions/Method.html">Method</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/ObservableType.html">ObservableType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/PrimitiveSequence.html">PrimitiveSequence</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Reactive.html">Reactive</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/Reactive.html">Reactive</a>
@@ -206,7 +215,7 @@
 
                 </div>
               </div>
-            <p>Undocumented</p>
+            <p>A type representing possible errors Moya can throw.</p>
 
           </section>
           <section class="section task-group-section">
@@ -296,6 +305,60 @@
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:4Moya0A5ErrorO13objectMappingyACs0B0_p_AA8ResponseCtcACmF"></a>
+                    <a name="//apple_ref/swift/Element/objectMapping(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Moya0A5ErrorO13objectMappingyACs0B0_p_AA8ResponseCtcACmF">objectMapping(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Indicates a response failed to map to a Decodable object.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">objectMapping</span><span class="p">(</span><span class="kt">Swift</span><span class="o">.</span><span class="kt">Error</span><span class="p">,</span> <span class="kt"><a href="../Classes/Response.html">Response</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Moya0A5ErrorO16encodableMappingyACs0B0_pcACmF"></a>
+                    <a name="//apple_ref/swift/Element/encodableMapping(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Moya0A5ErrorO16encodableMappingyACs0B0_pcACmF">encodableMapping(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Indicates that Encodable couldn&rsquo;t be encoded into Data</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">encodableMapping</span><span class="p">(</span><span class="kt">Swift</span><span class="o">.</span><span class="kt">Error</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:4Moya0A5ErrorO10statusCodeyAcA8ResponseCcACmF"></a>
                     <a name="//apple_ref/swift/Element/statusCode(_:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:4Moya0A5ErrorO10statusCodeyAcA8ResponseCcACmF">statusCode(_:)</a>
@@ -368,6 +431,33 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">requestMapping</span><span class="p">(</span><span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Moya0A5ErrorO17parameterEncodingyACs0B0_pcACmF"></a>
+                    <a name="//apple_ref/swift/Element/parameterEncoding(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Moya0A5ErrorO17parameterEncodingyACs0B0_pcACmF">parameterEncoding(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Indicates that an <code><a href="../Classes/Endpoint.html">Endpoint</a></code> failed to encode the parameters for the <code>URLRequest</code>.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">case</span> <span class="nf">parameterEncoding</span><span class="p">(</span><span class="kt">Swift</span><span class="o">.</span><span class="kt">Error</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>

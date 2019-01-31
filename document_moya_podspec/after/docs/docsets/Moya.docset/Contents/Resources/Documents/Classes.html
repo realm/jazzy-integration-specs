@@ -14,7 +14,7 @@
     <a title="Classes  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">Moya Docs</a> (67% documented)</p>
+        <p><a href="index.html">Moya Docs</a> (87% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -49,9 +49,6 @@
                 <a href="Classes/NetworkLoggerPlugin.html">NetworkLoggerPlugin</a>
               </li>
               <li class="nav-group-task">
-                <a href="Classes/ReactiveSwiftMoyaProvider.html">ReactiveSwiftMoyaProvider</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Classes/Response.html">Response</a>
               </li>
             </ul>
@@ -80,6 +77,9 @@
               <li class="nav-group-task">
                 <a href="Enums/Task.html">Task</a>
               </li>
+              <li class="nav-group-task">
+                <a href="Enums/ValidationType.html">ValidationType</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -87,6 +87,15 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="Extensions/Method.html">Method</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/ObservableType.html">ObservableType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/PrimitiveSequence.html">PrimitiveSequence</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Extensions/Reactive.html">Reactive</a>
               </li>
               <li class="nav-group-task">
                 <a href="Extensions/Reactive.html">Reactive</a>
@@ -220,6 +229,13 @@
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Class for reifying a target of the <code>Target</code> enum unto a concrete <code>Endpoint</code>.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    As of Moya 11.0.0 Endpoint is no longer generic.
+Existing code should work as is after removing the generic.
+See #1529 and #1524 for the discussion.
+
+</div>
 
                         <a href="Classes/Endpoint.html" class="slightly-smaller">See more</a>
                       </div>
@@ -227,7 +243,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">Endpoint</span><span class="o">&lt;</span><span class="kt">Target</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">Endpoint</span></code></pre>
 
                         </div>
                       </div>
@@ -420,39 +436,6 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">Response</span> <span class="p">:</span> <span class="kt">CustomDebugStringConvertible</span><span class="p">,</span> <span class="kt">Equatable</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:4Moya013ReactiveSwiftA8ProviderC"></a>
-                    <a name="//apple_ref/swift/Class/ReactiveSwiftMoyaProvider" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Moya013ReactiveSwiftA8ProviderC">ReactiveSwiftMoyaProvider</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Subclass of MoyaProvider that returns SignalProducer instances when requests are made. Much better than using completion closures.</p>
-
-                        <a href="Classes/ReactiveSwiftMoyaProvider.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@available(*, deprecated: 9.0.0, message: "Please use MoyaProvider with reactive property: provider.reactive.request(_:﹚.")</span>
-<span class="kd">open</span> <span class="kd">class</span> <span class="kt">ReactiveSwiftMoyaProvider</span><span class="o">&lt;</span><span class="kt">Target</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="Classes/MoyaProvider.html">MoyaProvider</a></span><span class="o">&lt;</span><span class="kt">Target</span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">Target</span> <span class="p">:</span> <span class="kt"><a href="Protocols/TargetType.html">TargetType</a></span></code></pre>
 
                         </div>
                       </div>

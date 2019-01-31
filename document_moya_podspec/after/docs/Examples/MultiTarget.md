@@ -30,10 +30,8 @@ provider.request(MultiTarget(GitHub.zen)) { result in
 and that's it! Really simple to introduce it in your app and if you have many
 endpoints that you want to split - this is the perfect solution for you. If you
 want to see this API in action, check out our
-[Demo](https://github.com/Moya/Moya/tree/master/Demo) project, which has 2
-targets: one of them is `Demo`, which uses the basic form of Moya, and the
-second one is `DemoMultiTarget`, which uses the modified version with usage of
-`MultiTarget`.
+[Multi-Target sample projects](https://github.com/Moya/Moya#sample-project), 
+which uses the modified version with usage of `MultiTarget`.
 
 ## Multiple targets when using `associatedtype`
 
@@ -63,7 +61,22 @@ enum UserApi: DecodableTargetType {
 
 Because of `associatedtype`, `MultiTarget` cannot be used with `DecodableTargetType`.
 Instead, we can use the `MultiMoyaProvider` variant. It does not require a
-generic argument. Thus, requests can be invoked with any instance that
+generic argument. 
+
+```swift
+final class MultiMoyaProvider: MoyaProvider<MultiTarget> {
+
+    typealias Target = MultiTarget
+
+    override init(endpointClosure: @escaping MoyaProvider<Target>.EndpointClosure, requestClosure: @escaping MoyaProvider<Target>.RequestClosure, stubClosure: @escaping MoyaProvider<Target>.StubClosure, callbackQueue: DispatchQueue?, manager: Manager, plugins: [PluginType], trackInflights: Bool) {
+
+        super.init(endpointClosure: endpointClosure, requestClosure: requestClosure, stubClosure: stubClosure, manager: manager, plugins: plugins, trackInflights: trackInflights)
+
+    }
+}
+```
+
+Thus, requests can be invoked with any instance that
 conforms to `TargetType`. Using `MultiMoyaProvider` allows you to write
 request wrappers which can make use of your `associatedtype`s.
 
@@ -122,7 +135,7 @@ instance
 provider.requestDecoded(SessionApi.get) { result in
     switch result {
     case .success(let session):
-        // type of `user` is implicitly `SessionModel` here
+        // type of `session` is implicitly `SessionModel` here
     }
 }
 ```

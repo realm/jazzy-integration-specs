@@ -14,7 +14,7 @@
     <a title="MoyaProvider Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Moya Docs</a> (67% documented)</p>
+        <p><a href="../index.html">Moya Docs</a> (87% documented)</p>
       </div>
     </header>
     <div class="content-wrapper">
@@ -49,9 +49,6 @@
                 <a href="../Classes/NetworkLoggerPlugin.html">NetworkLoggerPlugin</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Classes/ReactiveSwiftMoyaProvider.html">ReactiveSwiftMoyaProvider</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Classes/Response.html">Response</a>
               </li>
             </ul>
@@ -80,6 +77,9 @@
               <li class="nav-group-task">
                 <a href="../Enums/Task.html">Task</a>
               </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ValidationType.html">ValidationType</a>
+              </li>
             </ul>
           </li>
           <li class="nav-group-name">
@@ -87,6 +87,15 @@
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
                 <a href="../Extensions/Method.html">Method</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/ObservableType.html">ObservableType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/PrimitiveSequence.html">PrimitiveSequence</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/Reactive.html">Reactive</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Extensions/Reactive.html">Reactive</a>
@@ -232,7 +241,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">EndpointClosure</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Target</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Endpoint.html">Endpoint</a></span><span class="o">&lt;</span><span class="kt">Target</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">EndpointClosure</span> <span class="o">=</span> <span class="p">(</span><span class="kt">Target</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Endpoint.html">Endpoint</a></span></code></pre>
 
                         </div>
                       </div>
@@ -252,7 +261,7 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Closure that decides if and what request should be performed</p>
+                        <p>Closure that decides if and what request should be performed.</p>
 
                       </div>
                       <div class="declaration">
@@ -286,7 +295,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">RequestClosure</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="../Classes/Endpoint.html">Endpoint</a></span><span class="o">&lt;</span><span class="kt">Target</span><span class="o">&gt;</span><span class="p">,</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/MoyaProvider.html#/s:4Moya0A8ProviderC20RequestResultClosurea">RequestResultClosure</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">RequestClosure</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="../Classes/Endpoint.html">Endpoint</a></span><span class="p">,</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Classes/MoyaProvider.html#/s:4Moya0A8ProviderC20RequestResultClosurea">RequestResultClosure</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
 
                         </div>
                       </div>
@@ -323,9 +332,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Moya0A8ProviderC15endpointClosureyAA8EndpointCyxGxcvp"></a>
+                    <a name="/s:4Moya0A8ProviderC15endpointClosureyAA8EndpointCxcvp"></a>
                     <a name="//apple_ref/swift/Property/endpointClosure" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Moya0A8ProviderC15endpointClosureyAA8EndpointCyxGxcvp">endpointClosure</a>
+                    <a class="token" href="#/s:4Moya0A8ProviderC15endpointClosureyAA8EndpointCxcvp">endpointClosure</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -333,14 +342,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A closure responsible for mapping a <code><a href="../Protocols/TargetType.html">TargetType</a></code> to an <code>EndPoint</code>.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">let</span> <span class="nv">endpointClosure</span><span class="p">:</span> <span class="kt"><a href="../Classes/MoyaProvider.html#/s:4Moya0A8ProviderC15EndpointClosurea">EndpointClosure</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">endpointClosure</span><span class="p">:</span> <span class="kt"><a href="../Classes/MoyaProvider.html#/s:4Moya0A8ProviderC15EndpointClosurea">EndpointClosure</a></span></code></pre>
 
                         </div>
                       </div>
@@ -350,9 +359,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Moya0A8ProviderC14requestClosureyyAA8EndpointCyxG_y6ResultAHOy10Foundation10URLRequestVAA0A5ErrorOGctcvp"></a>
+                    <a name="/s:4Moya0A8ProviderC14requestClosureyyAA8EndpointC_y6ResultAGOy10Foundation10URLRequestVAA0A5ErrorOGctcvp"></a>
                     <a name="//apple_ref/swift/Property/requestClosure" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Moya0A8ProviderC14requestClosureyyAA8EndpointCyxG_y6ResultAHOy10Foundation10URLRequestVAA0A5ErrorOGctcvp">requestClosure</a>
+                    <a class="token" href="#/s:4Moya0A8ProviderC14requestClosureyyAA8EndpointC_y6ResultAGOy10Foundation10URLRequestVAA0A5ErrorOGctcvp">requestClosure</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -360,14 +369,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A closure deciding if and what request should be performed.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">let</span> <span class="nv">requestClosure</span><span class="p">:</span> <span class="kt"><a href="../Classes/MoyaProvider.html#/s:4Moya0A8ProviderC14RequestClosurea">RequestClosure</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">requestClosure</span><span class="p">:</span> <span class="kt"><a href="../Classes/MoyaProvider.html#/s:4Moya0A8ProviderC14RequestClosurea">RequestClosure</a></span></code></pre>
 
                         </div>
                       </div>
@@ -387,14 +396,15 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>A closure responsible for determining the stubbing behavior
+of a request for a given <code><a href="../Protocols/TargetType.html">TargetType</a></code>.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">let</span> <span class="nv">stubClosure</span><span class="p">:</span> <span class="kt"><a href="../Classes/MoyaProvider.html#/s:4Moya0A8ProviderC11StubClosurea">StubClosure</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">stubClosure</span><span class="p">:</span> <span class="kt"><a href="../Classes/MoyaProvider.html#/s:4Moya0A8ProviderC11StubClosurea">StubClosure</a></span></code></pre>
 
                         </div>
                       </div>
@@ -414,14 +424,14 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>The manager for the session.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">let</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:4Moya7Managera">Manager</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">manager</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:4Moya7Managera">Manager</a></span></code></pre>
 
                         </div>
                       </div>
@@ -441,15 +451,15 @@
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>A list of plugins
-e.g. for logging, network activity indicator or credentials</p>
+                        <p>A list of plugins.
+e.g. for logging, network activity indicator or credentials.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">let</span> <span class="nv">plugins</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/PluginType.html">PluginType</a></span><span class="p">]</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">plugins</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/PluginType.html">PluginType</a></span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
@@ -476,7 +486,7 @@ e.g. for logging, network activity indicator or credentials</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">let</span> <span class="nv">trackInflights</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">trackInflights</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
 
                         </div>
                       </div>
@@ -486,9 +496,9 @@ e.g. for logging, network activity indicator or credentials</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Moya0A8ProviderC16inflightRequestsSDyAA8EndpointCyxGSayy6ResultAHOyAA8ResponseCAA0A5ErrorOGcGGvp"></a>
+                    <a name="/s:4Moya0A8ProviderC16inflightRequestsSDyAA8EndpointCSayy6ResultAGOyAA8ResponseCAA0A5ErrorOGcGGvp"></a>
                     <a name="//apple_ref/swift/Property/inflightRequests" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Moya0A8ProviderC16inflightRequestsSDyAA8EndpointCyxGSayy6ResultAHOyAA8ResponseCAA0A5ErrorOGcGGvp">inflightRequests</a>
+                    <a class="token" href="#/s:4Moya0A8ProviderC16inflightRequestsSDyAA8EndpointCSayy6ResultAGOyAA8ResponseCAA0A5ErrorOGcGGvp">inflightRequests</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -503,7 +513,7 @@ e.g. for logging, network activity indicator or credentials</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">internal(set)</span> <span class="k">var</span> <span class="nv">inflightRequests</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/Endpoint.html">Endpoint</a></span><span class="o">&lt;</span><span class="kt">Target</span><span class="o">&gt;</span> <span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Typealiases.html#/s:4Moya10Completiona">Completion</a></span><span class="p">]]</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">internal(set)</span> <span class="k">var</span> <span class="nv">inflightRequests</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/Endpoint.html">Endpoint</a></span> <span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Typealiases.html#/s:4Moya10Completiona">Completion</a></span><span class="p">]]</span></code></pre>
 
                         </div>
                       </div>
@@ -513,9 +523,9 @@ e.g. for logging, network activity indicator or credentials</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Moya0A8ProviderC15endpointClosure07requestD004stubD013callbackQueue7manager7plugins14trackInflightsACyxGAA8EndpointCyxGxc_yAN_y6ResultAOOy10Foundation10URLRequestVAA0A5ErrorOGctcAA12StubBehaviorOxcSo17OS_dispatch_queueCSg9Alamofire14SessionManagerCSayAA10PluginType_pGSbtcfc"></a>
+                    <a name="/s:4Moya0A8ProviderC15endpointClosure07requestD004stubD013callbackQueue7manager7plugins14trackInflightsACyxGAA8EndpointCxc_yAM_y6ResultANOy10Foundation10URLRequestVAA0A5ErrorOGctcAA12StubBehaviorOxcSo17OS_dispatch_queueCSg9Alamofire14SessionManagerCSayAA10PluginType_pGSbtcfc"></a>
                     <a name="//apple_ref/swift/Method/init(endpointClosure:requestClosure:stubClosure:callbackQueue:manager:plugins:trackInflights:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Moya0A8ProviderC15endpointClosure07requestD004stubD013callbackQueue7manager7plugins14trackInflightsACyxGAA8EndpointCyxGxc_yAN_y6ResultAOOy10Foundation10URLRequestVAA0A5ErrorOGctcAA12StubBehaviorOxcSo17OS_dispatch_queueCSg9Alamofire14SessionManagerCSayAA10PluginType_pGSbtcfc">init(endpointClosure:requestClosure:stubClosure:callbackQueue:manager:plugins:trackInflights:)</a>
+                    <a class="token" href="#/s:4Moya0A8ProviderC15endpointClosure07requestD004stubD013callbackQueue7manager7plugins14trackInflightsACyxGAA8EndpointCxc_yAM_y6ResultANOy10Foundation10URLRequestVAA0A5ErrorOGctcAA12StubBehaviorOxcSo17OS_dispatch_queueCSg9Alamofire14SessionManagerCSayAA10PluginType_pGSbtcfc">init(endpointClosure:requestClosure:stubClosure:callbackQueue:manager:plugins:trackInflights:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -546,9 +556,9 @@ e.g. for logging, network activity indicator or credentials</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Moya0A8ProviderC8endpointyAA8EndpointCyxGxF"></a>
+                    <a name="/s:4Moya0A8ProviderC8endpointyAA8EndpointCxF"></a>
                     <a name="//apple_ref/swift/Method/endpoint(_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Moya0A8ProviderC8endpointyAA8EndpointCyxGxF">endpoint(_:)</a>
+                    <a class="token" href="#/s:4Moya0A8ProviderC8endpointyAA8EndpointCxF">endpoint(_:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -556,14 +566,14 @@ e.g. for logging, network activity indicator or credentials</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns an <code><a href="../Classes/Endpoint.html">Endpoint</a></code> based on the token, method, and parameters by invoking the <code><a href="../Classes/MoyaProvider.html#/s:4Moya0A8ProviderC15endpointClosureyAA8EndpointCyxGxcvp">endpointClosure</a></code>.</p>
+                        <p>Returns an <code><a href="../Classes/Endpoint.html">Endpoint</a></code> based on the token, method, and parameters by invoking the <code><a href="../Classes/MoyaProvider.html#/s:4Moya0A8ProviderC15endpointClosureyAA8EndpointCxcvp">endpointClosure</a></code>.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">endpoint</span><span class="p">(</span><span class="n">_</span> <span class="nv">token</span><span class="p">:</span> <span class="kt">Target</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Endpoint.html">Endpoint</a></span><span class="o">&lt;</span><span class="kt">Target</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">func</span> <span class="nf">endpoint</span><span class="p">(</span><span class="n">_</span> <span class="nv">token</span><span class="p">:</span> <span class="kt">Target</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Endpoint.html">Endpoint</a></span></code></pre>
 
                         </div>
                       </div>
@@ -604,9 +614,9 @@ e.g. for logging, network activity indicator or credentials</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Moya0A8ProviderC11stubRequest_7request13callbackQueue10completion8endpoint0C8BehaviorAA16CancellableTokenCx_10Foundation10URLRequestVSo17OS_dispatch_queueCSgy6ResultAROyAA8ResponseCAA0A5ErrorOGcAA8EndpointCyxGAA04StubJ0OtF"></a>
+                    <a name="/s:4Moya0A8ProviderC11stubRequest_7request13callbackQueue10completion8endpoint0C8BehaviorAA16CancellableTokenCx_10Foundation10URLRequestVSo17OS_dispatch_queueCSgy6ResultAROyAA8ResponseCAA0A5ErrorOGcAA8EndpointCAA04StubJ0OtF"></a>
                     <a name="//apple_ref/swift/Method/stubRequest(_:request:callbackQueue:completion:endpoint:stubBehavior:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Moya0A8ProviderC11stubRequest_7request13callbackQueue10completion8endpoint0C8BehaviorAA16CancellableTokenCx_10Foundation10URLRequestVSo17OS_dispatch_queueCSgy6ResultAROyAA8ResponseCAA0A5ErrorOGcAA8EndpointCyxGAA04StubJ0OtF">stubRequest(_:request:callbackQueue:completion:endpoint:stubBehavior:)</a>
+                    <a class="token" href="#/s:4Moya0A8ProviderC11stubRequest_7request13callbackQueue10completion8endpoint0C8BehaviorAA16CancellableTokenCx_10Foundation10URLRequestVSo17OS_dispatch_queueCSgy6ResultAROyAA8ResponseCAA0A5ErrorOGcAA8EndpointCAA04StubJ0OtF">stubRequest(_:request:callbackQueue:completion:endpoint:stubBehavior:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -623,7 +633,7 @@ Note: this was previously in an extension, however it must be in the original cl
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@discardableResult</span>
-<span class="kd">open</span> <span class="kd">func</span> <span class="nf">stubRequest</span><span class="p">(</span><span class="n">_</span> <span class="nv">target</span><span class="p">:</span> <span class="kt">Target</span><span class="p">,</span> <span class="nv">request</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">,</span> <span class="nv">callbackQueue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">?,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">Moya</span><span class="o">.</span><span class="kt"><a href="../Typealiases.html#/s:4Moya10Completiona">Completion</a></span><span class="p">,</span> <span class="nv">endpoint</span><span class="p">:</span> <span class="kt"><a href="../Classes/Endpoint.html">Endpoint</a></span><span class="o">&lt;</span><span class="kt">Target</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">stubBehavior</span><span class="p">:</span> <span class="kt">Moya</span><span class="o">.</span><span class="kt"><a href="../Enums/StubBehavior.html">StubBehavior</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/CancellableToken.html">CancellableToken</a></span></code></pre>
+<span class="kd">open</span> <span class="kd">func</span> <span class="nf">stubRequest</span><span class="p">(</span><span class="n">_</span> <span class="nv">target</span><span class="p">:</span> <span class="kt">Target</span><span class="p">,</span> <span class="nv">request</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">,</span> <span class="nv">callbackQueue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">?,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">Moya</span><span class="o">.</span><span class="kt"><a href="../Typealiases.html#/s:4Moya10Completiona">Completion</a></span><span class="p">,</span> <span class="nv">endpoint</span><span class="p">:</span> <span class="kt"><a href="../Classes/Endpoint.html">Endpoint</a></span><span class="p">,</span> <span class="nv">stubBehavior</span><span class="p">:</span> <span class="kt">Moya</span><span class="o">.</span><span class="kt"><a href="../Enums/StubBehavior.html">StubBehavior</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/CancellableToken.html">CancellableToken</a></span></code></pre>
 
                         </div>
                       </div>
@@ -637,9 +647,9 @@ Note: this was previously in an extension, however it must be in the original cl
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Moya0A8ProviderC22defaultEndpointMapping3forAA0D0CyxGx_tFZ"></a>
+                    <a name="/s:4Moya0A8ProviderC22defaultEndpointMapping3forAA0D0Cx_tFZ"></a>
                     <a name="//apple_ref/swift/Method/defaultEndpointMapping(for:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Moya0A8ProviderC22defaultEndpointMapping3forAA0D0CyxGx_tFZ">defaultEndpointMapping(for:)</a>
+                    <a class="token" href="#/s:4Moya0A8ProviderC22defaultEndpointMapping3forAA0D0Cx_tFZ">defaultEndpointMapping(for:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -654,7 +664,7 @@ Note: this was previously in an extension, however it must be in the original cl
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">defaultEndpointMapping</span><span class="p">(</span><span class="k">for</span> <span class="nv">target</span><span class="p">:</span> <span class="kt">Target</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Endpoint.html">Endpoint</a></span><span class="o">&lt;</span><span class="kt">Target</span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">defaultEndpointMapping</span><span class="p">(</span><span class="k">for</span> <span class="nv">target</span><span class="p">:</span> <span class="kt">Target</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/Endpoint.html">Endpoint</a></span></code></pre>
 
                         </div>
                       </div>
@@ -664,9 +674,9 @@ Note: this was previously in an extension, however it must be in the original cl
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Moya0A8ProviderC21defaultRequestMapping3for7closureyAA8EndpointCyxG_y6ResultAJOy10Foundation10URLRequestVAA0A5ErrorOGXEtFZ"></a>
+                    <a name="/s:4Moya0A8ProviderC21defaultRequestMapping3for7closureyAA8EndpointC_y6ResultAIOy10Foundation10URLRequestVAA0A5ErrorOGXEtFZ"></a>
                     <a name="//apple_ref/swift/Method/defaultRequestMapping(for:closure:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Moya0A8ProviderC21defaultRequestMapping3for7closureyAA8EndpointCyxG_y6ResultAJOy10Foundation10URLRequestVAA0A5ErrorOGXEtFZ">defaultRequestMapping(for:closure:)</a>
+                    <a class="token" href="#/s:4Moya0A8ProviderC21defaultRequestMapping3for7closureyAA8EndpointC_y6ResultAIOy10Foundation10URLRequestVAA0A5ErrorOGXEtFZ">defaultRequestMapping(for:closure:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -681,7 +691,7 @@ Note: this was previously in an extension, however it must be in the original cl
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">defaultRequestMapping</span><span class="p">(</span><span class="k">for</span> <span class="nv">endpoint</span><span class="p">:</span> <span class="kt"><a href="../Classes/Endpoint.html">Endpoint</a></span><span class="o">&lt;</span><span class="kt">Target</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">closure</span><span class="p">:</span> <span class="kt"><a href="../Classes/MoyaProvider.html#/s:4Moya0A8ProviderC20RequestResultClosurea">RequestResultClosure</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">defaultRequestMapping</span><span class="p">(</span><span class="k">for</span> <span class="nv">endpoint</span><span class="p">:</span> <span class="kt"><a href="../Classes/Endpoint.html">Endpoint</a></span><span class="p">,</span> <span class="nv">closure</span><span class="p">:</span> <span class="kt"><a href="../Classes/MoyaProvider.html#/s:4Moya0A8ProviderC20RequestResultClosurea">RequestResultClosure</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -783,9 +793,9 @@ Note: this was previously in an extension, however it must be in the original cl
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Moya0A8ProviderC18createStubFunction_9forTarget14withCompletion8endpoint7plugins7requestyycAA16CancellableTokenC_xy6ResultALOyAA8ResponseCAA0A5ErrorOGcAA8EndpointCyxGSayAA10PluginType_pG10Foundation10URLRequestVtF"></a>
+                    <a name="/s:4Moya0A8ProviderC18createStubFunction_9forTarget14withCompletion8endpoint7plugins7requestyycAA16CancellableTokenC_xy6ResultALOyAA8ResponseCAA0A5ErrorOGcAA8EndpointCSayAA10PluginType_pG10Foundation10URLRequestVtF"></a>
                     <a name="//apple_ref/swift/Method/createStubFunction(_:forTarget:withCompletion:endpoint:plugins:request:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Moya0A8ProviderC18createStubFunction_9forTarget14withCompletion8endpoint7plugins7requestyycAA16CancellableTokenC_xy6ResultALOyAA8ResponseCAA0A5ErrorOGcAA8EndpointCyxGSayAA10PluginType_pG10Foundation10URLRequestVtF">createStubFunction(_:forTarget:withCompletion:endpoint:plugins:request:)</a>
+                    <a class="token" href="#/s:4Moya0A8ProviderC18createStubFunction_9forTarget14withCompletion8endpoint7plugins7requestyycAA16CancellableTokenC_xy6ResultALOyAA8ResponseCAA0A5ErrorOGcAA8EndpointCSayAA10PluginType_pG10Foundation10URLRequestVtF">createStubFunction(_:forTarget:withCompletion:endpoint:plugins:request:)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -800,7 +810,7 @@ Note: this was previously in an extension, however it must be in the original cl
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">func</span> <span class="nf">createStubFunction</span><span class="p">(</span><span class="n">_</span> <span class="nv">token</span><span class="p">:</span> <span class="kt"><a href="../Classes/CancellableToken.html">CancellableToken</a></span><span class="p">,</span> <span class="n">forTarget</span> <span class="nv">target</span><span class="p">:</span> <span class="kt">Target</span><span class="p">,</span> <span class="n">withCompletion</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">Moya</span><span class="o">.</span><span class="kt"><a href="../Typealiases.html#/s:4Moya10Completiona">Completion</a></span><span class="p">,</span> <span class="nv">endpoint</span><span class="p">:</span> <span class="kt"><a href="../Classes/Endpoint.html">Endpoint</a></span><span class="o">&lt;</span><span class="kt">Target</span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">plugins</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/PluginType.html">PluginType</a></span><span class="p">],</span> <span class="nv">request</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">func</span> <span class="nf">createStubFunction</span><span class="p">(</span><span class="n">_</span> <span class="nv">token</span><span class="p">:</span> <span class="kt"><a href="../Classes/CancellableToken.html">CancellableToken</a></span><span class="p">,</span> <span class="n">forTarget</span> <span class="nv">target</span><span class="p">:</span> <span class="kt">Target</span><span class="p">,</span> <span class="n">withCompletion</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt">Moya</span><span class="o">.</span><span class="kt"><a href="../Typealiases.html#/s:4Moya10Completiona">Completion</a></span><span class="p">,</span> <span class="nv">endpoint</span><span class="p">:</span> <span class="kt"><a href="../Classes/Endpoint.html">Endpoint</a></span><span class="p">,</span> <span class="nv">plugins</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Protocols/PluginType.html">PluginType</a></span><span class="p">],</span> <span class="nv">request</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(()</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -851,7 +861,7 @@ Note: this was previously in an extension, however it must be in the original cl
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Do not stub.</p>
 
                       </div>
                       <div class="declaration">
@@ -878,7 +888,7 @@ Note: this was previously in an extension, however it must be in the original cl
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Return a response immediately.</p>
 
                       </div>
                       <div class="declaration">
@@ -905,7 +915,7 @@ Note: this was previously in an extension, however it must be in the original cl
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Undocumented</p>
+                        <p>Return a response after a delay.</p>
 
                       </div>
                       <div class="declaration">

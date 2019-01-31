@@ -1,0 +1,560 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>SyncSubscription Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    <link rel="icon" href="https://realm.io/img/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://realm.io/img/favicon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://realm.io/img/favicon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://realm.io/img/favicon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://realm.io/img/favicon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://realm.io/img/favicon-120x120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://realm.io/img/favicon-152x152.png" />
+<link rel="icon" type="image/png" href="https://realm.io/img/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="https://realm.io/img/favicon-16x16.png" sizes="16x16" />
+<script defer>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-50247013-1', 'realm.io');
+  ga('send', 'pageview');
+</script>
+
+  </head>
+  <body>
+    <a name="//apple_ref/swift/Class/SyncSubscription" class="dashAnchor"></a>
+    <a title="SyncSubscription Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">RealmSwift Docs</a> (100% documented)</p>
+        <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm%2Eio%2Fdocs%2Fswift%2F3%2E13%2E1%2Fapi%2Fdocsets%2FRealmSwift%2Exml"><img src="../img/dash.png"/>Install in Dash</a></p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">RealmSwift Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        SyncSubscription Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/AnyRealmCollection.html">AnyRealmCollection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ClassPermission.html">ClassPermission</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/LinkingObjects.html">LinkingObjects</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/List.html">List</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Object.html">Object</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Permission.html">Permission</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PermissionRole.html">PermissionRole</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/PermissionUser.html">PermissionUser</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Realm.html">Realm</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Realm/Error.html">– Error</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Realm/Notification.html">– Notification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Realm/Configuration.html">– Configuration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RealmOptional.html">RealmOptional</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RealmPermission.html">RealmPermission</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/Results.html">Results</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/SyncSubscription.html">SyncSubscription</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/ThreadSafeReference.html">ThreadSafeReference</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/ObjectChange.html">ObjectChange</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RealmCollectionChange.html">RealmCollectionChange</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/ServerValidationPolicy.html">ServerValidationPolicy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/SyncSubscriptionState.html">SyncSubscriptionState</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Extensions.html">Extensions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Extensions/List.html">List</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/SyncError.html">SyncError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/SyncManager.html">SyncManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/SyncSession.html">SyncSession</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/SyncSession/ProgressDirection.html">– ProgressDirection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/SyncSession/ProgressMode.html">– ProgressMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/SyncSession/Progress.html">– Progress</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/SyncUser.html">SyncUser</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:10RealmSwift2eeoiySbs5Error_p_sAC_ptF">==(_:_:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:10RealmSwift18schemaVersionAtURL_13encryptionKeys6UInt64V10Foundation0F0V_AF4DataVSgtKF">schemaVersionAtURL(_:encryptionKey:)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/s:10RealmSwift2teoiySbAA0A0C5ErrorV_sAE_ptF">~=(_:_:)</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Instance Methods.html">Instance Methods</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Instance Methods.html#/s:10RealmSwift4ListC10removeLastyyF">removeLast()</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:10RealmSwift11AddableTypeP">AddableType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:10RealmSwift10MinMaxTypeP">MinMaxType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/RealmCollection.html">RealmCollection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:10RealmSwift0A15CollectionValueP">RealmCollectionValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/s:10RealmSwift0A12OptionalTypeP">RealmOptionalType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/ThreadConfined.html">ThreadConfined</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Structs.html">Structures</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Structs/ClassPrivileges.html">ClassPrivileges</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Migration.html">Migration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ObjectPrivileges.html">ObjectPrivileges</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/ObjectSchema.html">ObjectSchema</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Property.html">Property</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/PropertyChange.html">PropertyChange</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/RLMIterator.html">RLMIterator</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/RealmPrivileges.html">RealmPrivileges</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/Schema.html">Schema</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SortDescriptor.html">SortDescriptor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SyncConfiguration.html">SyncConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Structs/SyncCredentials.html">SyncCredentials</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Typealiases.html">Type Aliases</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift19ErrorReportingBlocka">ErrorReportingBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift14MigrationBlocka">MigrationBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift15MigrationObjecta">MigrationObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift29MigrationObjectEnumerateBlocka">MigrationObjectEnumerateBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift17NotificationBlocka">NotificationBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift17NotificationTokena">NotificationToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift12PropertyTypea">PropertyType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift8Providera">Provider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift15SyncAccessLevela">SyncAccessLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift13SyncAuthErrora">SyncAuthError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift9SyncErrora">SyncError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift12SyncLogLevela">SyncLogLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift11SyncManagera">SyncManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift14SyncPermissiona">SyncPermission</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift19SyncPermissionErrora">SyncPermissionError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift21SyncPermissionResultsa">SyncPermissionResults</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift26SyncPermissionSortPropertya">SyncPermissionSortProperty</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift11SyncSessiona">SyncSession</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift8SyncUsera">SyncUser</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift19SyncUserAccountInfoa">SyncUserAccountInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift12SyncUserInfoa">SyncUserInfo</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:10RealmSwift19UserCompletionBlocka">UserCompletionBlock</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>SyncSubscription</h1>
+              <div class="declaration">
+                <div class="language">
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">SyncSubscription</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt"><a href="../Protocols.html#/s:10RealmSwift0A15CollectionValueP">RealmCollectionValue</a></span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Protocols.html#/s:10RealmSwift0A15CollectionValueP">RealmCollectionValue</a></span></code></pre>
+
+                </div>
+              </div>
+            <p><code>SyncSubscription</code> represents a subscription to a set of objects in a synced Realm.</p>
+
+<p>When partial sync is enabled for a synced Realm, the only objects that the server synchronizes to the
+client are those that match a sync subscription registered by that client. A subscription consists of
+of a query (represented by a <code><a href="../Classes/Results.html">Results</a></code>) and an optional name.</p>
+
+<p>Changes to the state of the subscription can be observed using <code><a href="../Classes/SyncSubscription.html#/s:10RealmSwift16SyncSubscriptionC7observe_7options_So20RLMNotificationTokenCs7KeyPathCyACyxGAA0cD5StateOG_So26NSKeyValueObservingOptionsVyALctF">SyncSubscription.observe(_:options:_:)</a></code>.</p>
+
+<p>Subscriptions are created using <code>Results.subscribe()</code> or <code>Results.subscribe(named:)</code>.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RealmSwift16SyncSubscriptionC4nameSSSgvp"></a>
+                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RealmSwift16SyncSubscriptionC4nameSSSgvp">name</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of the subscription.</p>
+
+<p>This will be <code>nil</code> if a name was not provided when the subscription was created.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v3.13.1/RealmSwift/Sync.swift#L907">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RealmSwift16SyncSubscriptionC5stateAA0cD5StateOvp"></a>
+                    <a name="//apple_ref/swift/Property/state" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RealmSwift16SyncSubscriptionC5stateAA0cD5StateOvp">state</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The state of the subscription.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">state</span><span class="p">:</span> <span class="kt"><a href="../Enums/SyncSubscriptionState.html">SyncSubscriptionState</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v3.13.1/RealmSwift/Sync.swift#L910">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:SQ2eeoiySbx_xtFZ"></a>
+                    <a name="//apple_ref/swift/Method/==(_:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:SQ2eeoiySbx_xtFZ">==(_:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">==</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">SyncSubscription</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">SyncSubscription</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v3.13.1/RealmSwift/Sync.swift#L916-L918">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RealmSwift16SyncSubscriptionC7observe_7options_So20RLMNotificationTokenCs7KeyPathCyACyxGAA0cD5StateOG_So26NSKeyValueObservingOptionsVyALctF"></a>
+                    <a name="//apple_ref/swift/Method/observe(_:options:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RealmSwift16SyncSubscriptionC7observe_7options_So20RLMNotificationTokenCs7KeyPathCyACyxGAA0cD5StateOG_So26NSKeyValueObservingOptionsVyALctF">observe(_:options:_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Observe the subscription for state changes.</p>
+
+<p>When the state of the subscription changes, <code>block</code> will be invoked and
+passed the new state.</p>
+
+<p>The token returned from this function does not hold a strong reference to
+this subscription object. This means that you must hold a reference to
+the subscription object itself along with the returned token in order to
+actually receive updates about the state.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">observe</span><span class="p">(</span><span class="n">_</span> <span class="nv">keyPath</span><span class="p">:</span> <span class="kt">KeyPath</span><span class="o">&lt;</span><span class="kt">SyncSubscription</span><span class="p">,</span> <span class="kt"><a href="../Enums/SyncSubscriptionState.html">SyncSubscriptionState</a></span><span class="o">&gt;</span><span class="p">,</span>
+                    <span class="nv">options</span><span class="p">:</span> <span class="kt">NSKeyValueObservingOptions</span> <span class="o">=</span> <span class="p">[],</span>
+                    <span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Enums/SyncSubscriptionState.html">SyncSubscriptionState</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:10RealmSwift17NotificationTokena">NotificationToken</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>keyPath</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The path to observe. Must be <code>\.state</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>options</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Options for the observation. Only <code>NSKeyValueObservingOptions.initial</code> option is
+                 is supported at this time.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>block</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The block to be called whenever a change occurs.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A token which must be held for as long as you want updates to be delivered.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v3.13.1/RealmSwift/Sync.swift#L938-L945">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RealmSwift16SyncSubscriptionC11unsubscribeyyF"></a>
+                    <a name="//apple_ref/swift/Method/unsubscribe()" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RealmSwift16SyncSubscriptionC11unsubscribeyyF">unsubscribe()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Remove this subscription</p>
+
+<p>Removing a subscription will delete all objects from the local Realm that were matched
+only by that subscription and not any remaining subscriptions. The deletion is performed
+by the server, and so has no immediate impact on the contents of the local Realm. If the
+device is currently offline, the removal will not be processed until the device returns online.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">unsubscribe</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v3.13.1/RealmSwift/Sync.swift#L955-L957">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; YYYY <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
