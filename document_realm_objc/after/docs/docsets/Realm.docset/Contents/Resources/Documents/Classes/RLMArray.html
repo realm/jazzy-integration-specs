@@ -386,7 +386,7 @@
             <h1>RLMArray</h1>
               <div class="declaration">
                 <div class="language">
-                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">RLMArray</span> <span class="o">&lt;</span><span class="n">RLMObjectType</span><span class="o">&gt;</span> <span class="o">:</span> <span class="n">NSObject</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/RLMCollection.html">RLMCollection</a></span><span class="p">,</span><span class="n">NSFastEnumeration</span><span class="o">&gt;</span> </code></pre>
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">RLMArray</span><span class="o">&lt;</span><span class="n">RLMObjectType</span><span class="o">&gt;</span> <span class="o">:</span> <span class="n">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="../Protocols/RLMCollection.html">RLMCollection</a></span><span class="p">,</span> <span class="n">NSFastEnumeration</span><span class="o">&gt;</span></code></pre>
 
                 </div>
               </div>
@@ -1669,8 +1669,8 @@ object. Instead, you can call the mutation methods on the <code>RLMArray</code> 
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/RLMResults.html">RLMResults</a></span><span class="o">&lt;</span><span class="n">RLMObjectType</span><span class="o">&gt;</span> <span class="o">*</span><span class="p">)</span>
-<span class="nf">sortedResultsUsingKeyPath</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">keyPath</span>
-                <span class="nf">ascending</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">ascending</span><span class="p">;</span></code></pre>
+    <span class="nf">sortedResultsUsingKeyPath</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">keyPath</span>
+                    <span class="nf">ascending</span><span class="p">:(</span><span class="n">BOOL</span><span class="p">)</span><span class="nv">ascending</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -2253,7 +2253,7 @@ to be sent to the block. To stop receiving updates, call <code>-invalidate</code
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
-                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span> <span class="n">new</span><span class="p">;</span></code></pre>
+                          <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">instancetype</span><span class="p">)</span><span class="n">new</span><span class="p">;</span></code></pre>
 
                         </div>
                       </div>
