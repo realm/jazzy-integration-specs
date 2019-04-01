@@ -123,6 +123,12 @@
             <a href="../Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Extensions/List.html">List</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Extensions/RealmCollection.html">RealmCollection</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Extensions/SyncError.html">SyncError</a>
               </li>
               <li class="nav-group-task">
@@ -170,6 +176,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols/RealmCollection.html">RealmCollection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols.html#/RealmCollectionValue">RealmCollectionValue</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Protocols.html#/s:10RealmSwift0A15CollectionValueP">RealmCollectionValue</a>
@@ -2199,6 +2208,25 @@ updates, call <code>invalidate()</code> on the token.</p>
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/replaceSubrange(_:with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">replaceSubrange(_:with:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Replace the given <code>subRange</code> of elements with <code>newElements</code>.</p>
+
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:10RealmSwift4ListC10startIndexSivp"></a>
                     <a name="//apple_ref/swift/Property/startIndex" class="dashAnchor"></a>
                     <a class="token" href="#/s:10RealmSwift4ListC10startIndexSivp">startIndex</a>
@@ -2353,6 +2381,24 @@ zero or more applications of successor().</p>
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/realm/realm-cocoa/tree/v3.13.1/RealmSwift/List.swift#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Alias/SubSequence" class="dashAnchor"></a>
+                    <a class="token" href="#/">SubSequence</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        
                       </div>
                     </section>
                   </div>
@@ -2544,12 +2590,36 @@ are not removed from the Realm that manages them.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">removeSubrange</span><span class="o">&lt;</span><span class="kt">R</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">boundsExpression</span><span class="p">:</span> <span class="kt">R</span><span class="p">)</span> <span class="k">where</span> <span class="kt">R</span> <span class="p">:</span> <span class="kt">RangeExpression</span><span class="p">,</span> <span class="kt">R</span><span class="o">.</span><span class="kt">Bound</span> <span class="o">==</span> <span class="kt">List</span><span class="o">&lt;</span><span class="kt">List</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;.</span><span class="kt">Element</span><span class="o">&gt;.</span><span class="kt">Index</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">removeSubrange</span><span class="o">&lt;</span><span class="kt">R</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">boundsExpression</span><span class="p">:</span> <span class="kt">R</span><span class="p">)</span> <span class="k">where</span> <span class="kt">R</span> <span class="p">:</span> <span class="kt">RangeExpression</span><span class="p">,</span> <span class="kt">R</span><span class="o">.</span><span class="kt">Bound</span> <span class="o">==</span> <span class="kt">List</span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;.</span><span class="kt">Index</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/realm/realm-cocoa/tree/v3.13.1/RealmSwift/List.swift#L622-L627">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/removeSubrange(_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">removeSubrange(_:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Removes objects from the list at the given range.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    This method may only be called during a write transaction.
+
+</div>
+
                       </div>
                     </section>
                   </div>

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Property Structure Reference</title>
+    <title>RealmCollection Extension Reference</title>
     <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
     <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
     <meta charset='utf-8'>
@@ -27,8 +27,8 @@
 
   </head>
   <body>
-    <a name="//apple_ref/swift/Struct/Property" class="dashAnchor"></a>
-    <a title="Property Structure Reference"></a>
+    <a name="//apple_ref/swift/Extension/RealmCollection" class="dashAnchor"></a>
+    <a title="RealmCollection Extension Reference"></a>
     <header>
       <div class="content-wrapper">
         <p><a href="../index.html">RealmSwift Docs</a> (100% documented)</p>
@@ -40,7 +40,7 @@
       <p id="breadcrumbs">
         <a href="../index.html">RealmSwift Reference</a>
         <img id="carat" src="../img/carat.png" />
-        Property Structure Reference
+        RealmCollection Extension Reference
       </p>
     </div>
     <div class="content-wrapper">
@@ -308,37 +308,18 @@
       <article class="main-content">
         <section>
           <section class="section">
-            <h1>Property</h1>
-              <div class="declaration">
-                <div class="language">
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">Property</span> <span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
-
-                </div>
-              </div>
-            <p><code>Property</code> instances represent properties managed by a Realm in the context of an object schema. Such properties may be
-persisted to a Realm file or computed from other data in the Realm.</p>
-
-<p>When using Realm, property instances allow performing migrations and introspecting the database&rsquo;s schema.</p>
-
-<p>Property instances map to columns in the core database.</p>
-
+            <h1>RealmCollection</h1>
+            
           </section>
           <section class="section task-group-section">
             <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Properties"></a>
-                <a name="//apple_ref/swift/Section/Properties" class="dashAnchor"></a>
-                <a href="#/Properties">
-                  <h3 class="section-name">Properties</h3>
-                </a>
-              </div>
               <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10RealmSwift8PropertyV4nameSSvp"></a>
-                    <a name="//apple_ref/swift/Property/name" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10RealmSwift8PropertyV4nameSSvp">name</a>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/min()" class="dashAnchor"></a>
+                    <a class="token" href="#/">min()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -346,19 +327,8 @@ persisted to a Realm file or computed from other data in the Realm.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The name of the property.</p>
+                        <p>Returns the minimum (lowest) value of the collection, or <code>nil</code> if the collection is empty.</p>
 
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v3.13.1/RealmSwift/Property.swift#L36">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -366,9 +336,9 @@ persisted to a Realm file or computed from other data in the Realm.</p>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10RealmSwift8PropertyV4typeSo15RLMPropertyTypeVvp"></a>
-                    <a name="//apple_ref/swift/Property/type" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10RealmSwift8PropertyV4typeSo15RLMPropertyTypeVvp">type</a>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/max()" class="dashAnchor"></a>
+                    <a class="token" href="#/">max()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -376,170 +346,8 @@ persisted to a Realm file or computed from other data in the Realm.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>The type of the property.</p>
+                        <p>Returns the maximum (highest) value of the collection, or <code>nil</code> if the collection is empty.</p>
 
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:10RealmSwift12PropertyTypea">PropertyType</a></span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v3.13.1/RealmSwift/Property.swift#L39">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10RealmSwift8PropertyV7isArraySbvp"></a>
-                    <a name="//apple_ref/swift/Property/isArray" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10RealmSwift8PropertyV7isArraySbvp">isArray</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Indicates whether this property is an array of the property type.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isArray</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v3.13.1/RealmSwift/Property.swift#L42">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10RealmSwift8PropertyV9isIndexedSbvp"></a>
-                    <a name="//apple_ref/swift/Property/isIndexed" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10RealmSwift8PropertyV9isIndexedSbvp">isIndexed</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Indicates whether this property is indexed.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isIndexed</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v3.13.1/RealmSwift/Property.swift#L45">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10RealmSwift8PropertyV10isOptionalSbvp"></a>
-                    <a name="//apple_ref/swift/Property/isOptional" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10RealmSwift8PropertyV10isOptionalSbvp">isOptional</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Indicates whether this property is optional. (Note that certain numeric types must be wrapped in a
-<code><a href="../Classes/RealmOptional.html">RealmOptional</a></code> instance in order to be declared as optional.)</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">isOptional</span><span class="p">:</span> <span class="kt">Bool</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v3.13.1/RealmSwift/Property.swift#L49">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10RealmSwift8PropertyV15objectClassNameSSSgvp"></a>
-                    <a name="//apple_ref/swift/Property/objectClassName" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10RealmSwift8PropertyV15objectClassNameSSSgvp">objectClassName</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>For <code><a href="../Classes/Object.html">Object</a></code> and <code><a href="../Classes/List.html">List</a></code> properties, the name of the class of object stored in the property.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">objectClassName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v3.13.1/RealmSwift/Property.swift#L52">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:10RealmSwift8PropertyV11descriptionSSvp"></a>
-                    <a name="//apple_ref/swift/Property/description" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10RealmSwift8PropertyV11descriptionSSvp">description</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A human-readable description of the property object.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">description</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
-
-                        </div>
-                      </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v3.13.1/RealmSwift/Property.swift#L55">Show on GitHub</a>
                       </div>
                     </section>
                   </div>
@@ -547,20 +355,13 @@ persisted to a Realm file or computed from other data in the Realm.</p>
               </ul>
             </div>
             <div class="task-group">
-              <div class="task-name-container">
-                <a name="/Equatable"></a>
-                <a name="//apple_ref/swift/Section/Equatable" class="dashAnchor"></a>
-                <a href="#/Equatable">
-                  <h3 class="section-name">Equatable</h3>
-                </a>
-              </div>
               <ul>
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:10RealmSwift8PropertyV2eeoiySbAC_ACtFZ"></a>
-                    <a name="//apple_ref/swift/Method/==(_:_:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:10RealmSwift8PropertyV2eeoiySbAC_ACtFZ">==(_:_:)</a>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/sum()" class="dashAnchor"></a>
+                    <a class="token" href="#/">sum()</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -568,19 +369,53 @@ persisted to a Realm file or computed from other data in the Realm.</p>
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        <p>Returns whether the two properties are equal.</p>
+                        <p>Returns the sum of the values in the collection, or <code>nil</code> if the collection is empty.</p>
 
                       </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">static</span> <span class="kd">func</span> <span class="o">==</span> <span class="p">(</span><span class="nv">lhs</span><span class="p">:</span> <span class="kt">Property</span><span class="p">,</span> <span class="nv">rhs</span><span class="p">:</span> <span class="kt">Property</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/average()" class="dashAnchor"></a>
+                    <a class="token" href="#/">average()</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the average of all of the values in the collection.</p>
 
-                        </div>
                       </div>
-                      <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v3.13.1/RealmSwift/Property.swift#L68-L70">Show on GitHub</a>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Method/sorted(ascending:)" class="dashAnchor"></a>
+                    <a class="token" href="#/">sorted(ascending:)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns a <code><a href="../Classes/Results.html">Results</a></code> containing the objects in the collection, but sorted.</p>
+
+<p>Objects are sorted based on their values. For example, to sort a collection of <code>Date</code>s from
+neweset to oldest based, you might call <code>dates.sorted(ascending: true)</code>.</p>
+
                       </div>
                     </section>
                   </div>
