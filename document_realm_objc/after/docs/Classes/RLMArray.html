@@ -1837,7 +1837,7 @@ the write transaction.</p>
                                                <span class="n">NSError</span> <span class="o">*</span><span class="n">error</span><span class="p">)</span> <span class="p">{</span>
     <span class="c1">// Only fired once for the example</span>
     <span class="n">NSLog</span><span class="p">(</span><span class="s">@"dogs.count: %zu"</span><span class="p">,</span> <span class="n">dogs</span><span class="p">.</span><span class="n">count</span><span class="p">)</span> <span class="c1">// =&gt; 1</span>
-<span class="p">}];</span>
+<span class="err">}</span><span class="p">];</span>
 <span class="p">[</span><span class="n">realm</span> <span class="nf">transactionWithBlock</span><span class="p">:</span><span class="o">^</span><span class="p">{</span>
     <span class="n">Dog</span> <span class="o">*</span><span class="n">dog</span> <span class="o">=</span> <span class="p">[[</span><span class="n">Dog</span> <span class="nf">alloc</span><span class="p">]</span> <span class="nf">init</span><span class="p">];</span>
     <span class="n">dog</span><span class="p">.</span><span class="n">name</span> <span class="o">=</span> <span class="s">@"Rex"</span><span class="p">;</span>
