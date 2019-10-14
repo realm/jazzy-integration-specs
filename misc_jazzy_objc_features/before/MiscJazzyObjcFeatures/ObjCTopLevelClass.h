@@ -8,7 +8,7 @@
 
 #import <Foundation/Foundation.h>
 
-#import "SomeEnum.h"
+#import <MiscJazzyObjCFeatures/SomeEnum.h>
 
 @class Manager;
 
@@ -72,5 +72,23 @@ __deprecated_msg("Deprecated: use `ObjCMidLevelClass`.")
 
 /// Returns the enumeration value contained in the receiver.
 @property (nonatomic, readonly) SomeEnum someMoreEnumValue;
+
+@end
+
+/** A class with a different name in Swift */
+NS_SWIFT_NAME(DifferentlyNamed)
+@interface ObjCDifferentlyNamed : NSObject
+
+/// An Objective-C property
+@property NSString *objcName;
+
+@end
+
+/** A class with a different name and namespace in Swift */
+NS_SWIFT_NAME(DifferentlyNamed.Settings)
+@interface ObjCDifferentlyNamedSettings : NSObject
+
+/// An Objective-C property
+@property int objcSetting;
 
 @end

@@ -7,9 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		028453202354680F00A31BDB /* SomeEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = C75DC86F1CB54202007C35EB /* SomeEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C7E0819F1C6D1A6000F4E70A /* MiscJazzyObjCFeatures.h in Headers */ = {isa = PBXBuildFile; fileRef = C7E0819E1C6D1A6000F4E70A /* MiscJazzyObjCFeatures.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C7E081B71C6D1AC900F4E70A /* ObjCTopLevelClass.h in Headers */ = {isa = PBXBuildFile; fileRef = C7E081B51C6D1AC900F4E70A /* ObjCTopLevelClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C7E081B81C6D1AC900F4E70A /* ObjCTopLevelClass.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E081B61C6D1AC900F4E70A /* ObjCTopLevelClass.m */; };
+		F49063B8234D983200823236 /* SwiftTopLevelClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49063B7234D983200823236 /* SwiftTopLevelClass.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -19,6 +21,7 @@
 		C7E0819E1C6D1A6000F4E70A /* MiscJazzyObjCFeatures.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MiscJazzyObjCFeatures.h; sourceTree = "<group>"; wrapsLines = 1; };
 		C7E081B51C6D1AC900F4E70A /* ObjCTopLevelClass.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ObjCTopLevelClass.h; sourceTree = "<group>"; };
 		C7E081B61C6D1AC900F4E70A /* ObjCTopLevelClass.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ObjCTopLevelClass.m; sourceTree = "<group>"; };
+		F49063B7234D983200823236 /* SwiftTopLevelClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftTopLevelClass.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -55,6 +58,7 @@
 				C7E081B61C6D1AC900F4E70A /* ObjCTopLevelClass.m */,
 				C75DC86F1CB54202007C35EB /* SomeEnum.h */,
 				C7E0819E1C6D1A6000F4E70A /* MiscJazzyObjCFeatures.h */,
+				F49063B7234D983200823236 /* SwiftTopLevelClass.swift */,
 				C7E0819C1C6D1A6000F4E70A /* Supporting Files */,
 			);
 			path = MiscJazzyObjCFeatures;
@@ -77,6 +81,7 @@
 			files = (
 				C7E081B71C6D1AC900F4E70A /* ObjCTopLevelClass.h in Headers */,
 				C7E0819F1C6D1A6000F4E70A /* MiscJazzyObjCFeatures.h in Headers */,
+				028453202354680F00A31BDB /* SomeEnum.h in Headers */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -120,6 +125,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 			);
 			mainGroup = C7E0818F1C6D1A6000F4E70A;
@@ -148,6 +154,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7E081B81C6D1AC900F4E70A /* ObjCTopLevelClass.m in Sources */,
+				F49063B8234D983200823236 /* SwiftTopLevelClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,6 +261,8 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
@@ -269,6 +278,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
