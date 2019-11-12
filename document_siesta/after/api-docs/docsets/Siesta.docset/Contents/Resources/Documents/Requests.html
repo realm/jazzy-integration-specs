@@ -263,7 +263,7 @@
       <article class="main-content">
 
         <section class="section">
-          <div class="section-content">
+          <div class="section-content top-matter">
             <h1>Requests</h1>
             
           </div>
@@ -384,6 +384,51 @@ will see the same behavior regardless of whether the request has not started yet
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:6Siesta12RequestErrorV"></a>
+                    <a name="//apple_ref/swift/Struct/RequestError" class="dashAnchor"></a>
+                    <a class="token" href="#/s:6Siesta12RequestErrorV">RequestError</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Information about a failed resource request.</p>
+
+<p>Siesta can encounter errors from many possible sources, including:</p>
+
+<ul>
+<li>client-side encoding / request creation issues,</li>
+<li>network connectivity problems,</li>
+<li>protocol issues (e.g. certificate problems),</li>
+<li>server errors (404, 500, etc.), and</li>
+<li>client-side parsing and entity validation failures.</li>
+</ul>
+
+<p><code>RequestError</code> presents all these errors in a uniform structure. Several properties preserve diagnostic information,
+which you can use to intercept specific known errors, but these diagnostic properties are all optional. They are not
+even mutually exclusive: Siesta errors do not break cleanly into HTTP-based vs. Error / NSError-based, for example,
+because network implementations may sometimes provide <em>both</em> an underlying <code>Error</code> <em>and</em> an HTTP diagnostic.</p>
+
+<p>The one ironclad guarantee that <code>RequestError</code> makes is the presence of a <code>userMessage</code>.</p>
+
+                        <a href="Structs/RequestError.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RequestError</span> <span class="p">:</span> <span class="kt">Error</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:6Siesta8ResponseO"></a>
                     <a name="//apple_ref/swift/Enum/Response" class="dashAnchor"></a>
                     <a class="token" href="#/s:6Siesta8ResponseO">Response</a>
@@ -432,55 +477,6 @@ failure (with an error).</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ResponseInfo</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-              </ul>
-            </div>
-            <div class="task-group">
-              <ul class="item-container">
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:6Siesta12RequestErrorV"></a>
-                    <a name="//apple_ref/swift/Struct/RequestError" class="dashAnchor"></a>
-                    <a class="token" href="#/s:6Siesta12RequestErrorV">RequestError</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Information about a failed resource request.</p>
-
-<p>Siesta can encounter errors from many possible sources, including:</p>
-
-<ul>
-<li>client-side encoding / request creation issues,</li>
-<li>network connectivity problems,</li>
-<li>protocol issues (e.g. certificate problems),</li>
-<li>server errors (404, 500, etc.), and</li>
-<li>client-side parsing and entity validation failures.</li>
-</ul>
-
-<p><code>RequestError</code> presents all these errors in a uniform structure. Several properties preserve diagnostic information,
-which you can use to intercept specific known errors, but these diagnostic properties are all optional. They are not
-even mutually exclusive: Siesta errors do not break cleanly into HTTP-based vs. Error / NSError-based, for example,
-because network implementations may sometimes provide <em>both</em> an underlying <code>Error</code> <em>and</em> an HTTP diagnostic.</p>
-
-<p>The one ironclad guarantee that <code>RequestError</code> makes is the presence of a <code>userMessage</code>.</p>
-
-                        <a href="Structs/RequestError.html" class="slightly-smaller">See more</a>
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">struct</span> <span class="kt">RequestError</span> <span class="p">:</span> <span class="kt">Error</span></code></pre>
 
                         </div>
                       </div>

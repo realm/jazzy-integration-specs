@@ -103,7 +103,7 @@ header {
   background-color: #2C2C2C;
   position: fixed;
   width: 100%;
-  z-index: 2; }
+  z-index: 3; }
   header img {
     padding-right: 6px;
     vertical-align: -4px;
@@ -120,7 +120,7 @@ header {
 #breadcrumbs-container {
   background-color: #2C2C2C;
   position: fixed;
-  z-index: 1;
+  z-index: 2;
   width: 100%; }
 
 #breadcrumbs {
@@ -192,6 +192,11 @@ header {
       display: block;
       padding-top: 87px;
       margin: -87px 0 0; }
+  .main-content .section-name p {
+    margin-bottom: inherit;
+    line-height: inherit; }
+  .main-content .section-name code {
+    color: inherit; }
 
 .highlight {
   background-color: #eee;
@@ -225,6 +230,23 @@ header {
   display: block;
   padding-top: 87px;
   margin: -87px 0 0; }
+
+.section-name-container {
+  position: relative;
+  display: inline-block; }
+  .section-name-container .section-name-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    margin-bottom: 0; }
+  .section-name-container .section-name {
+    position: relative;
+    pointer-events: none;
+    z-index: 1; }
+    .section-name-container .section-name a {
+      pointer-events: auto; }
 
 .item {
   padding-top: 8px;
