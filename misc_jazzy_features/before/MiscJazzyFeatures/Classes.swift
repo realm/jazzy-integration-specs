@@ -31,7 +31,7 @@ open class ExplicitlyNoDocClass {}
 /// SUPPORTED: explicitly internal top-level class
 internal class ExplicitlyInternalTopLevelClass {}
 
-/// SUPPORTED: private top-level class
+/// SUPPORTED: private top-level class, should not be documented
 private class PrivateTopLevelClass {}
 
 /// SUPPORTED: public top-level class
@@ -161,4 +161,53 @@ enum StringEnum: String {
     case a = "foo"
     case b = "\u{001b}"
     case c = "\u{1f61e}"
+}
+
+// MARK: Protocol conformances
+
+/// An internal protocol with no members
+protocol InternalProtocol {}
+
+/// A private protocol with no members
+private protocol PrivateProtocol {}
+
+/// Conformance to an internal protocol that should appear in the docs
+extension PublicTopLevelClass : InternalProtocol {}
+/// Conformance to a private protocol that should not appear in docs
+extension PublicTopLevelClass : PrivateProtocol {}
+
+/// Conformance to a private type: should not appear in docs, even
+/// though the protocol itself is internal.
+extension PrivateTopLevelClass : InternalProtocol {}
+/// Private type and protocol, conformance should not be documented.
+extension PrivateTopLevelClass : PrivateProtocol {}
+
+/// Conformance for an _external_ type to an internal protocol: document.
+extension Float : InternalProtocol {}
+/// Private protocol, should not be in docs
+extension Float : PrivateProtocol {}
+
+/// Renamed module type
+typealias RenamedDocumentedClass = TopLevelSwiftSubclass
+
+/// Conformance to an internal protocol: document it, even though there
+/// is a typealias between the extension and the module type.
+extension RenamedDocumentedClass : InternalProtocol {}
+/// Private conformance, do not document.
+extension RenamedDocumentedClass : PrivateProtocol {}
+
+/// Document this conformance because it includes an internal protocol, even
+/// though it also includes a private protocol.
+extension TopLevelClass : InternalProtocol, PrivateProtocol {}
+
+/// Conformance to an imported type, should appear in docs
+extension PublicTopLevelClass : Encodable {}
+/// Conformance to an imported type, should not appear in docs
+extension PrivateTopLevelClass : Encodable {}
+/// Conformance to an imported type, should appear in docs
+extension RenamedDocumentedClass : Encodable {}
+
+/// Bad-practice conformance of an imported type to an imported protocol, should appear in docs
+extension Mirror : CustomDebugStringConvertible {
+    public var debugDescription: String { "" }
 }

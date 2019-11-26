@@ -414,6 +414,8 @@ managing its underlying <code>URLSessionTask</code>.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">Request</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">Request</span><span class="p">:</span> <span class="kt">CustomStringConvertible</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">Request</span><span class="p">:</span> <span class="kt">CustomDebugStringConvertible</span></code></pre>
 
                         </div>
                       </div>
@@ -582,6 +584,11 @@ managing its underlying <code>URLSessionTask</code>.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">class</span> <span class="kt">SessionDelegate</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">SessionDelegate</span><span class="p">:</span> <span class="kt">URLSessionDelegate</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">SessionDelegate</span><span class="p">:</span> <span class="kt">URLSessionTaskDelegate</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">SessionDelegate</span><span class="p">:</span> <span class="kt">URLSessionDataDelegate</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">SessionDelegate</span><span class="p">:</span> <span class="kt">URLSessionDownloadDelegate</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">SessionDelegate</span><span class="p">:</span> <span class="kt">URLSessionStreamDelegate</span></code></pre>
 
                         </div>
                       </div>
