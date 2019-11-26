@@ -48,4 +48,12 @@ public class MiscMarkdown {
     ///     Simple.
     public func linespacing() {
     }
+
+    /// - bullet
+    /// - list
+    /// - note: Callout
+    /// - continued
+    /// - list
+    public func bulletsAndCallouts() {
+    }
 }

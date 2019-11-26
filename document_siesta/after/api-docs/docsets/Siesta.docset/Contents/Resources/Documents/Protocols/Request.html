@@ -670,8 +670,7 @@ again with different auth credentials. This is intentional: one of the primary u
 method is automatically retrying a request with an updated auth token. However, the onus is on you to ensure
 that you do not hold on to and repeat a request after a user logs out. Put those safety goggles on.</p>
 
-</div>
-<div class="aside aside-note">
+</div><div class="aside aside-note">
     <p class="aside-title">Note</p>
     <p>The new <code>Request</code> does <strong>not</strong> attach all the callbacks (e.g. <code><a href="../Protocols/Request.html#/s:6Siesta7RequestP12onCompletionyAaB_pyAA12ResponseInfoVcF">onCompletion(_:)</a></code>) from the old one.
 Doing so would violate the API contract of <code>Request</code> that any callback will be called at most once.</p>
