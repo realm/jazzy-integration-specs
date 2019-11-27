@@ -286,11 +286,13 @@
             <p>A logical grouping of transformers and a cache.</p>
 
 <p>Why create separate stages?</p>
+
+<ul>
 <li>To be able to append, replace, or remove some transformations independently of others, e.g. override the model
 transform without disabling JSON parsing.</li>
 <li>To cache entities at any intermediate stage of processing.</li>
 <li><p>To maintain multiple caches.</p></li>
-<div class="aside aside-see">
+</ul><div class="aside aside-see">
     <p class="aside-title">See</p>
     <p><code><a href="../Structs/Pipeline.html">Pipeline</a></code></p>
 
