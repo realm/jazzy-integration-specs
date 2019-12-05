@@ -56,4 +56,10 @@ public class MiscMarkdown {
     /// - list
     public func bulletsAndCallouts() {
     }
+
+    /// Some "quoted text".
+    ///
+    /// Some "quoted text with *emphasis* inside the quotes"
+    public func quotesVsStyle() {
+    }
 }
