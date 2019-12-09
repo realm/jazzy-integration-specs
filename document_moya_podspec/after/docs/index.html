@@ -224,16 +224,16 @@
 <p>You&rsquo;re a smart developer. You probably use <a href="https://github.com/Alamofire/Alamofire">Alamofire</a> to abstract away access to
 <code>URLSession</code> and all those nasty details you don&rsquo;t really care about. But then,
 like lots of smart developers, you write ad hoc network abstraction layers. They
-are probably called <q>APIManager</q> or <q>NetworkModel</q>, and they always end in tears.</p>
+are probably called &ldquo;APIManager&rdquo; or &ldquo;NetworkModel&rdquo;, and they always end in tears.</p>
 
 <p><img src="web/diagram.png" alt="Moya Overview"></p>
 
 <p>Ad hoc network layers are common in iOS apps. They&rsquo;re bad for a few reasons:</p>
 
 <ul>
-<li>Makes it hard to write new apps (<q>where do I begin?</q>)</li>
-<li>Makes it hard to maintain existing apps (<q>oh my god, this mess&hellip;</q>)</li>
-<li>Makes it hard to write unit tests (<q>how do I do this again?</q>)</li>
+<li>Makes it hard to write new apps (&ldquo;where do I begin?&rdquo;)</li>
+<li>Makes it hard to maintain existing apps (&ldquo;oh my god, this mess&hellip;&rdquo;)</li>
+<li>Makes it hard to write unit tests (&ldquo;how do I do this again?&rdquo;)</li>
 </ul>
 
 <p>So the basic idea of Moya is that we want some network abstraction layer that
@@ -395,9 +395,9 @@ generated framework they&rsquo;d like, <code>Moya</code>, <code>RxMoya</code>, o
 
 <ul>
 <li>Verify that the deployment targets of the <code>xcodeproj</code>s match that of your application target in the Project Navigator.</li>
-<li>Next, select your application project in the Project Navigator (blue project icon) to navigate to the target configuration window and select the application target under the <q>Targets</q> heading in the sidebar.</li>
-<li>In the tab bar at the top of that window, open the <q>General</q> panel.</li>
-<li>Click on the <code>+</code> button under the <q>Embedded Binaries</q> section.</li>
+<li>Next, select your application project in the Project Navigator (blue project icon) to navigate to the target configuration window and select the application target under the &ldquo;Targets&rdquo; heading in the sidebar.</li>
+<li>In the tab bar at the top of that window, open the &ldquo;General&rdquo; panel.</li>
+<li>Click on the <code>+</code> button under the &ldquo;Embedded Binaries&rdquo; section.</li>
 <li>You will see two different <code>Alamofire.xcodeproj</code> folders each with two different versions of the <code>Alamofire.framework</code> nested inside a <code>Products</code> folder.</li>
 </ul>
 
@@ -414,7 +414,7 @@ generated framework they&rsquo;d like, <code>Moya</code>, <code>RxMoya</code>, o
 </blockquote>
 
 <ul>
-<li>Click on the <code>+</code> button under <q>Embedded Binaries</q> again and add the build target you need for <code>Result</code>.</li>
+<li>Click on the <code>+</code> button under &ldquo;Embedded Binaries&rdquo; again and add the build target you need for <code>Result</code>.</li>
 <li><p>Click on the <code>+</code> button again and add the correct build target for <code>Moya</code>.</p></li>
 <li><p>And that&rsquo;s it!</p></li>
 </ul>
