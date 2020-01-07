@@ -140,6 +140,10 @@ class TopLevelClass {
     // Undocumented method that is not compiled
     func noDeclarationToo() {}
 #endif
+
+    /// Typealias with multiple lines and @escaping
+    public typealias Middleware<State> = (@escaping () -> Void, @escaping () -> State?)
+    -> (@escaping () -> Void) -> () -> Void
 }
 
 /// Extension of doubly-nested class
