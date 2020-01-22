@@ -384,7 +384,10 @@ the options defining how the file should be moved.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">DownloadFileDestination</span> <span class="o">=</span> <span class="p">(</span><span class="n">_</span> <span class="nv">temporaryURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="n">_</span> <span class="nv">response</span><span class="p">:</span> <span class="kt">HTTPURLResponse</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="nv">destinationURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="../Classes/DownloadRequest/DownloadOptions.html">DownloadOptions</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">DownloadFileDestination</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">_</span> <span class="nv">temporaryURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">response</span><span class="p">:</span> <span class="kt">HTTPURLResponse</span><span class="p">)</span>
+    <span class="o">-&gt;</span> <span class="p">(</span><span class="nv">destinationURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="nv">options</span><span class="p">:</span> <span class="kt"><a href="../Classes/DownloadRequest/DownloadOptions.html">DownloadOptions</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
@@ -1408,7 +1411,12 @@ destination URL, and returns whether the request was valid.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Validation</span> <span class="o">=</span> <span class="p">(</span><span class="n">_</span> <span class="nv">request</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">response</span><span class="p">:</span> <span class="kt">HTTPURLResponse</span><span class="p">,</span> <span class="n">_</span> <span class="nv">temporaryURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">destinationURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">ValidationResult</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">Validation</span> <span class="o">=</span> <span class="p">(</span>
+    <span class="n">_</span> <span class="nv">request</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">?,</span>
+    <span class="n">_</span> <span class="nv">response</span><span class="p">:</span> <span class="kt">HTTPURLResponse</span><span class="p">,</span>
+    <span class="n">_</span> <span class="nv">temporaryURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?,</span>
+    <span class="n">_</span> <span class="nv">destinationURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?)</span>
+    <span class="o">-&gt;</span> <span class="kt">ValidationResult</span></code></pre>
 
                         </div>
                       </div>
