@@ -144,6 +144,16 @@ class TopLevelClass {
     /// Typealias with multiple lines and @escaping
     public typealias Middleware<State> = (@escaping () -> Void, @escaping () -> State?)
     -> (@escaping () -> Void) -> () -> Void
+
+    /// Extremely long method name
+    open class func authAcquireTokenPost(
+        acceptLanguage: String,
+        xAppVersion: String,
+        xDeliveryChannel: String,
+        acquireTokenRequestModel: TopLevelClass? = nil,
+        xGeoLocation: String? = nil,
+        xApiVersion: String? = nil,
+        completion: @escaping ((_ data: TopLevelClass?,_ error: Error?) -> Void)) {}
 }
 
 /// Extension of doubly-nested class
