@@ -57,3 +57,9 @@ $("a:not('.token')").on('click', function() {
     openCurrentItemIfClosed();
   }
 });
+
+// KaTeX rendering
+document.querySelectorAll('.math').forEach((block) => {
+  const content = block.innerHTML
+  katex.render(content, block)
+});

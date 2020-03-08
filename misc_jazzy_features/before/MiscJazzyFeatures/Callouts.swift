@@ -62,3 +62,11 @@ public func functionD(_ aParameter: Bool) -> Bool {
 public func functionE(_ aParameter: Bool) -> Bool {
     return true
 }
+/// Function (math tests)
+///
+/// Inline: `$ax^2+bx+c=0$`
+/// 
+/// Code block: `$$ x={\frac {-b\pm {\sqrt {b^{2}-4ac}}}{2a}} $$`
+public func functionF(_ aParameter: Bool) -> Bool {
+    return true
+}
