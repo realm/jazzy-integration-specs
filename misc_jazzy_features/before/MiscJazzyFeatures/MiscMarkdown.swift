@@ -62,4 +62,11 @@ public class MiscMarkdown {
     /// Some "quoted text with *emphasis* inside the quotes"
     public func quotesVsStyle() {
     }
+
+    /// Inline math: `$ax^2+bx+c=0$`
+    ///
+    /// Block/display math: `$$x={\frac {-b\pm {\sqrt {b^{2}-4ac}}}{2a}}$$`
+    ///
+    public func latexMath() {
+    }
 }
