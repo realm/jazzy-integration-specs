@@ -427,7 +427,7 @@ include <code><a href="../Classes/RLMArray.html">RLMArray</a></code>, <code><a h
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="err">@required</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">NSUInteger</span> <span class="n">count</span><span class="p">;</span></code></pre>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">unsafe_unretained</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSUInteger</span> <span class="n">count</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -463,7 +463,7 @@ include <code><a href="../Classes/RLMArray.html">RLMArray</a></code>, <code><a h
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="err">@required</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Enums/RLMPropertyType.html">RLMPropertyType</a></span> <span class="n">type</span><span class="p">;</span></code></pre>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">assign</span><span class="p">,</span> <span class="n">unsafe_unretained</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="../Enums/RLMPropertyType.html">RLMPropertyType</a></span> <span class="n">type</span><span class="p">;</span></code></pre>
 
                         </div>
                       </div>
@@ -494,7 +494,7 @@ include <code><a href="../Classes/RLMArray.html">RLMArray</a></code>, <code><a h
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="err">@required</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">getter</span><span class="o">=</span><span class="n">isOptional</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">optional</span><span class="p">;</span></code></pre>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">getter</span><span class="o">=</span><span class="n">isOptional</span><span class="p">)</span> <span class="n">BOOL</span> <span class="n">optional</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -532,7 +532,7 @@ include <code><a href="../Classes/RLMArray.html">RLMArray</a></code>, <code><a h
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="err">@required</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">objectClassName</span><span class="p">;</span></code></pre>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">copy</span><span class="p">,</span> <span class="n">readonly</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">objectClassName</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
@@ -568,7 +568,7 @@ include <code><a href="../Classes/RLMArray.html">RLMArray</a></code>, <code><a h
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="err">@required</span>
-<span class="k">@property</span> <span class="p">(</span><span class="n">readonly</span><span class="p">,</span> <span class="n">nonatomic</span><span class="p">)</span> <span class="n"><a href="../Classes/RLMRealm.html">RLMRealm</a></span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">realm</span><span class="p">;</span></code></pre>
+<span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n"><a href="../Classes/RLMRealm.html">RLMRealm</a></span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">realm</span><span class="p">;</span></code></pre>
 
                         </div>
                         <div class="language">
