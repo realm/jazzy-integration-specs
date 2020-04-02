@@ -753,7 +753,7 @@ does <em>not</em> stop the chain; instead, the cancellation error is passed to y
 If you want guaranteed execution of cleanup code, attach a handler to the chained request:</p>
 <pre class="highlight swift"><code><span class="k">let</span> <span class="nv">foo</span> <span class="o">=</span> <span class="kt">ThingThatNeedsCleanup</span><span class="p">()</span>
 <span class="n">request</span>
-  <span class="o">.</span><span class="n">chained</span> <span class="p">{</span> <span class="err">…</span><span class="n">some</span> <span class="n">logic</span><span class="err">…</span> <span class="p">}</span>           <span class="c1">// May not be called if chain is cancelled</span>
+  <span class="o">.</span><span class="n">chained</span> <span class="p">{</span> <span class="err">…</span><span class="kd">some</span> <span class="n">logic</span><span class="err">…</span> <span class="p">}</span>           <span class="c1">// May not be called if chain is cancelled</span>
   <span class="o">.</span><span class="n">onCompletion</span><span class="p">{</span> <span class="n">_</span> <span class="k">in</span> <span class="n">foo</span><span class="o">.</span><span class="nf">cleanUp</span><span class="p">()</span> <span class="p">}</span> <span class="c1">// Guaranteed to be called exactly once</span>
 </code></pre>
 
