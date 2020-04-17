@@ -225,3 +225,20 @@ extension RenamedDocumentedClass : Encodable {}
 extension Mirror : CustomDebugStringConvertible {
     public var debugDescription: String { "" }
 }
+
+// MARK: Property wrapper
+
+@propertyWrapper
+struct Nop {
+    var wrappedValue: String
+
+    init(wrappedValue: String) {
+        self.wrappedValue = wrappedValue
+    }
+}
+
+/// See `@Nop`.
+struct PropertyWrapperClient {
+    @Nop
+    var v: String
+}
