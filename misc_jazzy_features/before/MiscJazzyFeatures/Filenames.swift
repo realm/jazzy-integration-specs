@@ -9,6 +9,12 @@
 /// Function with characters unsafe for filenames.
 public func /<T>(lhs: T, rhs: T) {}
 
+/// First function with same signature
+public func sameSignature(value: String) {}
+
+/// Second function with same signature
+public func sameSignature(value: Int) {}
+
 /// Class with character that is HTML-escaped.
 class Operators_Namespace {
     /// Function with characters unsafe for html.
