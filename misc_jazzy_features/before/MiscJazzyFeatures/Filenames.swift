@@ -15,6 +15,16 @@ public func sameSignature(value: String) {}
 /// Second function with same signature
 public func sameSignature(value: Int) {}
 
+/// Function that deprecated
+///
+/// Test relative links:
+///   - `sameSignature`
+///   - `sameSignature(value:)`
+///   - `sameSignature(value: String)`
+///
+@available(*, deprecated, message: "Use `sameSignature(value:)` instead.")
+public func deprecatedFunction() {}
+
 /// Class with character that is HTML-escaped.
 class Operators_Namespace {
     /// Function with characters unsafe for html.

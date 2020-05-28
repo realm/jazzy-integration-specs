@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		028453202354680F00A31BDB /* SomeEnum.h in Headers */ = {isa = PBXBuildFile; fileRef = C75DC86F1CB54202007C35EB /* SomeEnum.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		411A6FD5247EC67000AD766A /* ExternalFunctions.h in Headers */ = {isa = PBXBuildFile; fileRef = 411A6FD3247EC67000AD766A /* ExternalFunctions.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		411A6FD6247EC67000AD766A /* ExternalFunctions.m in Sources */ = {isa = PBXBuildFile; fileRef = 411A6FD4247EC67000AD766A /* ExternalFunctions.m */; };
+		411A6FD8247FC98100AD766A /* SomeEnum.m in Sources */ = {isa = PBXBuildFile; fileRef = 411A6FD7247FC98100AD766A /* SomeEnum.m */; };
 		C7E0819F1C6D1A6000F4E70A /* MiscJazzyObjCFeatures.h in Headers */ = {isa = PBXBuildFile; fileRef = C7E0819E1C6D1A6000F4E70A /* MiscJazzyObjCFeatures.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C7E081B71C6D1AC900F4E70A /* ObjCTopLevelClass.h in Headers */ = {isa = PBXBuildFile; fileRef = C7E081B51C6D1AC900F4E70A /* ObjCTopLevelClass.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		C7E081B81C6D1AC900F4E70A /* ObjCTopLevelClass.m in Sources */ = {isa = PBXBuildFile; fileRef = C7E081B61C6D1AC900F4E70A /* ObjCTopLevelClass.m */; };
@@ -15,6 +18,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		411A6FD3247EC67000AD766A /* ExternalFunctions.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ExternalFunctions.h; sourceTree = "<group>"; };
+		411A6FD4247EC67000AD766A /* ExternalFunctions.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ExternalFunctions.m; sourceTree = "<group>"; };
+		411A6FD7247FC98100AD766A /* SomeEnum.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SomeEnum.m; sourceTree = "<group>"; };
 		C75DC86F1CB54202007C35EB /* SomeEnum.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SomeEnum.h; sourceTree = "<group>"; };
 		C7E081991C6D1A6000F4E70A /* MiscJazzyObjCFeatures.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = MiscJazzyObjCFeatures.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C7E0819D1C6D1A6000F4E70A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -54,9 +60,12 @@
 		C7E0819B1C6D1A6000F4E70A /* MiscJazzyObjCFeatures */ = {
 			isa = PBXGroup;
 			children = (
+				411A6FD3247EC67000AD766A /* ExternalFunctions.h */,
+				411A6FD4247EC67000AD766A /* ExternalFunctions.m */,
 				C7E081B51C6D1AC900F4E70A /* ObjCTopLevelClass.h */,
 				C7E081B61C6D1AC900F4E70A /* ObjCTopLevelClass.m */,
 				C75DC86F1CB54202007C35EB /* SomeEnum.h */,
+				411A6FD7247FC98100AD766A /* SomeEnum.m */,
 				C7E0819E1C6D1A6000F4E70A /* MiscJazzyObjCFeatures.h */,
 				F49063B7234D983200823236 /* SwiftTopLevelClass.swift */,
 				C7E0819C1C6D1A6000F4E70A /* Supporting Files */,
@@ -80,6 +89,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				C7E081B71C6D1AC900F4E70A /* ObjCTopLevelClass.h in Headers */,
+				411A6FD5247EC67000AD766A /* ExternalFunctions.h in Headers */,
 				C7E0819F1C6D1A6000F4E70A /* MiscJazzyObjCFeatures.h in Headers */,
 				028453202354680F00A31BDB /* SomeEnum.h in Headers */,
 			);
@@ -153,7 +163,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				411A6FD6247EC67000AD766A /* ExternalFunctions.m in Sources */,
 				C7E081B81C6D1AC900F4E70A /* ObjCTopLevelClass.m in Sources */,
+				411A6FD8247FC98100AD766A /* SomeEnum.m in Sources */,
 				F49063B8234D983200823236 /* SwiftTopLevelClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

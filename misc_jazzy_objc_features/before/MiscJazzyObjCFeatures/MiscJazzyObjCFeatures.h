@@ -17,4 +17,5 @@ FOUNDATION_EXPORT const unsigned char MiscJazzyObjCFeaturesVersionString[];
 // In this header, you should import all the public headers of your framework using statements like #import <MiscJazzyObjCFeatures/PublicHeader.h>
 
 #import <MiscJazzyObjCFeatures/ObjCTopLevelClass.h>
+#import <MiscJazzyObjCFeatures/ExternalFunctions.h>
 

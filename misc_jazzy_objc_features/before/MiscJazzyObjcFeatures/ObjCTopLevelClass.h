@@ -92,3 +92,26 @@ NS_SWIFT_NAME(DifferentlyNamed.Settings)
 @property int objcSetting;
 
 @end
+
+/** A protocol with a single property */
+@protocol ObjCTopLevelProtocol <NSObject>
+
+/// Single string property
+@property (nonatomic, copy, readonly) NSString *stringProperty;
+
+@end
+
+/** A class that implements a protocol */
+@interface ObjCClassWithProtocol : NSObject <ObjCTopLevelProtocol>
+
+@end
+
+/** An empty protocol */
+@protocol ObjCEmptyProtocol <NSObject>
+
+@end
+
+/** An empty class */
+@interface ObjCEmptyClass : NSObject
+
+@end
