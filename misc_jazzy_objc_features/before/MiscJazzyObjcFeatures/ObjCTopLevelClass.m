@@ -55,3 +55,16 @@
 }
 
 @end
+
+@implementation ObjCClassWithProtocol
+
+- (NSString *)stringProperty {
+    return @"";
+}
+
+@end
+
+@implementation ObjCEmptyClass
+
+@end
+

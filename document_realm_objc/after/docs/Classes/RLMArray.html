@@ -394,7 +394,13 @@
             <h1>RLMArray</h1>
               <div class="declaration">
                 <div class="language">
+                  <p class="aside-title">Objective-C</p>
                   <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">RLMArray</span><span class="o">&lt;</span><span class="n">RLMObjectType</span><span class="o">&gt;</span> <span class="o">:</span> <span class="n">NSObject</span> <span class="o">&lt;</span><span class="n"><a href="../Protocols/RLMCollection.html">RLMCollection</a></span><span class="p">,</span> <span class="n">NSFastEnumeration</span><span class="o">&gt;</span></code></pre>
+
+                </div>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">RLMArray</span><span class="o">&lt;</span><span class="kt">RLMObjectType</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">NSObject</span><span class="p">,</span> <span class="kt"><a href="../Protocols/RLMCollection.html">RLMCollection</a></span><span class="p">,</span> <span class="kt">NSFastEnumeration</span> <span class="k">where</span> <span class="kt">RLMObjectType</span> <span class="p">:</span> <span class="kt">AnyObject</span></code></pre>
 
                 </div>
               </div>
@@ -428,6 +434,9 @@ do not require using the mutable collection proxy objects from
 <code>-mutableArrayValueForKey:</code> or KVC-compatible mutation methods on the containing
 object. Instead, you can call the mutation methods on the <code>RLMArray</code> directly.</p>
 
+              <div class="slightly-smaller">
+                <a href="https://github.com/realm/realm-cocoa/tree/v3.13.1/Realm/RLMArray.h#L58-L432">Show on GitHub</a>
+              </div>
           </section>
           <section class="section task-group-section">
             <div class="task-group">

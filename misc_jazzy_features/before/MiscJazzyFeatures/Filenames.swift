@@ -16,3 +16,19 @@ class Operators_Namespace {
         return false
     }
 }
+
+/// First function with the same signature
+public func sameSignature(value: String) {}
+
+/// Second function with the same signature
+public func sameSignature(value: Int) {}
+
+/// Function that is deprecated
+///
+/// Test relative links:
+///   - `sameSignature`
+///   - `sameSignature(value:)`
+///   - `sameSignature(value: String)`
+///
+@available(*, deprecated, message: "Use `sameSignature(value:)` instead.")
+public func deprecatedFunction() {}
