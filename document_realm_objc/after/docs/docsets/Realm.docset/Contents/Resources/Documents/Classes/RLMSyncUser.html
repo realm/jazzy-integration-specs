@@ -443,11 +443,6 @@ initialized. User objects can be accessed from any thread.</p>
                           <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">RLMSyncUser</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="n">allUsers</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">__allUsers</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">RLMSyncUser</span><span class="p">]</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/realm/realm-cocoa/tree/v3.13.1/Realm/RLMSyncUser.h#L85">Show on GitHub</a>
@@ -481,11 +476,6 @@ initialized. User objects can be accessed from any thread.</p>
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">+</span> <span class="p">(</span><span class="n">nullable</span> <span class="n">RLMSyncUser</span> <span class="o">*</span><span class="p">)</span><span class="n">currentUser</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">__current</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">RLMSyncUser</span><span class="p">?</span></code></pre>
 
                         </div>
                       </div>
@@ -717,11 +707,6 @@ the completion block, at which point it is ready for use.</p>
                 <span class="nf">onCompletion</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:RLMSyncUser.h@T@RLMUserCompletionBlock">RLMUserCompletionBlock</a></span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">__logIn</span><span class="p">(</span><span class="n">with</span> <span class="nv">credentials</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMSyncCredentials.html">RLMSyncCredentials</a></span><span class="p">,</span> <span class="nv">authServerURL</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="nv">timeout</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">,</span> <span class="nv">callbackQueue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">,</span> <span class="n">onCompletion</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Type%20Definitions.html#/c:RLMSyncUser.h@T@RLMUserCompletionBlock">RLMUserCompletionBlock</a></span><span class="p">)</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/realm/realm-cocoa/tree/v3.13.1/Realm/RLMSyncUser.h#L131-L135">Show on GitHub</a>
@@ -836,11 +821,6 @@ points to the default query-based Realm on the server the user authenticated aga
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/RLMRealmConfiguration.html">RLMRealmConfiguration</a></span> <span class="o">*</span><span class="p">)</span><span class="n">configuration</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">__configuration</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RLMRealmConfiguration.html">RLMRealmConfiguration</a></span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/realm/realm-cocoa/tree/v3.13.1/Realm/RLMSyncUser.h#L162">Show on GitHub</a>
@@ -869,11 +849,6 @@ points to the default query-based Realm on the server the user authenticated aga
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/RLMRealmConfiguration.html">RLMRealmConfiguration</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">configurationWithURL</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">__configuration</span><span class="p">(</span><span class="n">with</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RLMRealmConfiguration.html">RLMRealmConfiguration</a></span></code></pre>
 
                         </div>
                       </div>
@@ -932,11 +907,6 @@ points to the default query-based Realm on the server the user authenticated aga
                           <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/RLMRealmConfiguration.html">RLMRealmConfiguration</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">configurationWithURL</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSURL</span> <span class="o">*</span><span class="p">)</span><span class="nv">url</span>
                                     <span class="nf">fullSynchronization</span><span class="p">:</span>
                                         <span class="p">(</span><span class="kt">_Bool</span><span class="p">)</span><span class="nv">fullSynchronization</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">__configuration</span><span class="p">(</span><span class="n">with</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?,</span> <span class="nv">fullSynchronization</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RLMRealmConfiguration.html">RLMRealmConfiguration</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1012,11 +982,6 @@ points to the default query-based Realm on the server the user authenticated aga
      <span class="nf">fullSynchronization</span><span class="p">:(</span><span class="kt">_Bool</span><span class="p">)</span><span class="nv">fullSynchronization</span>
      <span class="nf">enableSSLValidation</span><span class="p">:(</span><span class="kt">_Bool</span><span class="p">)</span><span class="nv">enableSSLValidation</span>
                <span class="nf">urlPrefix</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSString</span> <span class="o">*</span><span class="p">)</span><span class="nv">urlPrefix</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">__configuration</span><span class="p">(</span><span class="n">with</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">?,</span> <span class="nv">fullSynchronization</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">enableSSLValidation</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">,</span> <span class="nv">urlPrefix</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RLMRealmConfiguration.html">RLMRealmConfiguration</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1174,11 +1139,6 @@ the user encounters an error. Errors reported by this error handler are always
                         <div class="language">
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">nullable</span><span class="p">)</span> <span class="n"><a href="../Type%20Definitions.html#/c:RLMSyncUser.h@T@RLMUserErrorReportingBlock">RLMUserErrorReportingBlock</a></span> <span class="n">errorHandler</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">__errorHandler</span><span class="p">:</span> <span class="kt"><a href="../Type%20Definitions.html#/c:RLMSyncUser.h@T@RLMUserErrorReportingBlock">RLMUserErrorReportingBlock</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -1976,11 +1936,6 @@ The callback block will be run on the same thread the method was called on.</p>
     <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:RLMSyncUser.h@T@RLMPermissionResultsBlock">RLMPermissionResultsBlock</a></span><span class="p">)</span><span class="nv">callback</span><span class="p">;</span></code></pre>
 
                         </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">__retrievePermissions</span><span class="p">(</span><span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Type%20Definitions.html#/c:RLMSyncUser.h@T@RLMPermissionResultsBlock">RLMPermissionResultsBlock</a></span><span class="p">)</span></code></pre>
-
-                        </div>
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/realm/realm-cocoa/tree/v3.13.1/Realm/RLMSyncUser.h#L400">Show on GitHub</a>
@@ -2115,11 +2070,6 @@ using the <code><a href="../Classes/RLMSyncUser.html#/c:objc(cs)RLMSyncUser(im)a
                       <span class="nf">expiration</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">NSDate</span> <span class="o">*</span><span class="p">)</span><span class="nv">expirationDate</span>
                         <span class="nf">callback</span><span class="p">:</span>
                             <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:RLMSyncUser.h@T@RLMPermissionOfferStatusBlock">RLMPermissionOfferStatusBlock</a></span><span class="p">)</span><span class="nv">callback</span><span class="p">;</span></code></pre>
-
-                        </div>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">__createOfferForRealm</span><span class="p">(</span><span class="n">at</span> <span class="nv">url</span><span class="p">:</span> <span class="kt">URL</span><span class="p">,</span> <span class="nv">accessLevel</span><span class="p">:</span> <span class="kt"><a href="../Enums/RLMSyncAccessLevel.html">RLMSyncAccessLevel</a></span><span class="p">,</span> <span class="n">expiration</span> <span class="nv">expirationDate</span><span class="p">:</span> <span class="kt">Date</span><span class="p">?,</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Type%20Definitions.html#/c:RLMSyncUser.h@T@RLMPermissionOfferStatusBlock">RLMPermissionOfferStatusBlock</a></span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
