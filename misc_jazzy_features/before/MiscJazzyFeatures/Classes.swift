@@ -113,7 +113,7 @@ extension NSObject {
 }
 
 /// Extension of a nested external class
-extension String.CharacterView {
+extension String.Encoding {
     /// Method from an extension
     func ee() {}
 }
