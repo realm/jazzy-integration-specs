@@ -17,7 +17,7 @@
     <a title="SignalProducerProtocol Extension Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Moya Y.Y.Y Docs</a> (87% documented)</p>
+        <p><a href="../index.html">Moya Y.Y.Y Docs</a> (83% documented)</p>
         <p class="header-right">
           <form role="search" action="../search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -55,6 +55,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NetworkLoggerPlugin.html">NetworkLoggerPlugin</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NetworkLoggerPlugin/Configuration.html">– Configuration</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/Response.html">Response</a>
@@ -120,7 +123,7 @@
             <a href="../Functions.html">Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:4Moya23convertResponseToResult_7request4data5error0E0AFOyAA0C0CAA0A5ErrorOGSo17NSHTTPURLResponseCSg_10Foundation10URLRequestVSgAP4DataVSgs0I0_pSgtF">convertResponseToResult(_:request:data:error:)</a>
+                <a href="../Functions.html#/s:4Moya23convertResponseToResult_7request4data5errors0E0OyAA0C0CAA0A5ErrorOGSo17NSHTTPURLResponseCSg_10Foundation10URLRequestVSgAP4DataVSgs0I0_pSgtF">convertResponseToResult(_:request:data:error:)</a>
               </li>
             </ul>
           </li>
@@ -186,13 +189,7 @@
                 <a href="../Typealiases.html#/s:4Moya12JSONEncodinga">JSONEncoding</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Typealiases.html#/s:4Moya7Managera">Manager</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:4Moya6Methoda">Method</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Typealiases.html#/s:4Moya31MultipartFormDataEncodingResulta">MultipartFormDataEncodingResult</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:4Moya17ParameterEncodinga">ParameterEncoding</a>
@@ -201,10 +198,13 @@
                 <a href="../Typealiases.html#/s:4Moya13ProgressBlocka">ProgressBlock</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Typealiases.html#/s:4Moya20PropertyListEncodinga">PropertyListEncoding</a>
+                <a href="../Typealiases.html#/s:4Moya18RequestInterceptora">RequestInterceptor</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:4Moya24RequestMultipartFormDataa">RequestMultipartFormData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:4Moya7Sessiona">Session</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:4Moya11URLEncodinga">URLEncoding</a>
@@ -220,7 +220,7 @@
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">SignalProducerProtocol</span> <span class="k">where</span> <span class="kt">Value</span> <span class="o">==</span> <span class="kt"><a href="../Classes/Response.html">Response</a></span><span class="p">,</span> <span class="kt">Error</span> <span class="o">==</span> <span class="kt"><a href="../Enums/MoyaError.html">MoyaError</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">extension</span> <span class="kt">SignalProducerProtocol</span> <span class="k">where</span> <span class="kt">Value</span> <span class="o">==</span> <span class="kt"><a href="../Classes/Response.html">Response</a></span><span class="p">,</span> <span class="kt">Error</span> <span class="o">==</span> <span class="kt"><a href="../Enums/MoyaError.html">MoyaError</a></span></code></pre>
 
                 </div>
               </div>
@@ -259,7 +259,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">filter</span><span class="o">&lt;</span><span class="kt">R</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">statusCodes</span><span class="p">:</span> <span class="kt">R</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SignalProducer</span><span class="o">&lt;</span><span class="kt">Value</span><span class="p">,</span> <span class="kt"><a href="../Enums/MoyaError.html">MoyaError</a></span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">R</span> <span class="p">:</span> <span class="kt">RangeExpression</span><span class="p">,</span> <span class="kt">R</span><span class="o">.</span><span class="kt">Bound</span> <span class="o">==</span> <span class="kt">Int</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">filter</span><span class="o">&lt;</span><span class="kt">R</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">statusCodes</span><span class="p">:</span> <span class="kt">R</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SignalProducer</span><span class="o">&lt;</span><span class="kt">Value</span><span class="p">,</span> <span class="kt"><a href="../Enums/MoyaError.html">MoyaError</a></span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">R</span> <span class="p">:</span> <span class="kt">RangeExpression</span><span class="p">,</span> <span class="kt">R</span><span class="o">.</span><span class="kt">Bound</span> <span class="o">==</span> <span class="kt">Int</span></code></pre>
 
                         </div>
                       </div>
@@ -286,7 +286,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">filter</span><span class="p">(</span><span class="nv">statusCode</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SignalProducer</span><span class="o">&lt;</span><span class="kt">Value</span><span class="p">,</span> <span class="kt"><a href="../Enums/MoyaError.html">MoyaError</a></span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">filter</span><span class="p">(</span><span class="nv">statusCode</span><span class="p">:</span> <span class="kt">Int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SignalProducer</span><span class="o">&lt;</span><span class="kt">Value</span><span class="p">,</span> <span class="kt"><a href="../Enums/MoyaError.html">MoyaError</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -313,7 +313,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">filterSuccessfulStatusCodes</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">SignalProducer</span><span class="o">&lt;</span><span class="kt">Value</span><span class="p">,</span> <span class="kt"><a href="../Enums/MoyaError.html">MoyaError</a></span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">filterSuccessfulStatusCodes</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">SignalProducer</span><span class="o">&lt;</span><span class="kt">Value</span><span class="p">,</span> <span class="kt"><a href="../Enums/MoyaError.html">MoyaError</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -340,7 +340,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">filterSuccessfulStatusAndRedirectCodes</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">SignalProducer</span><span class="o">&lt;</span><span class="kt">Value</span><span class="p">,</span> <span class="kt"><a href="../Enums/MoyaError.html">MoyaError</a></span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">filterSuccessfulStatusAndRedirectCodes</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">SignalProducer</span><span class="o">&lt;</span><span class="kt">Value</span><span class="p">,</span> <span class="kt"><a href="../Enums/MoyaError.html">MoyaError</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -367,7 +367,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">mapImage</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">SignalProducer</span><span class="o">&lt;</span><span class="kt"><a href="../Typealiases.html#/s:4Moya5Imagea">Image</a></span><span class="p">,</span> <span class="kt"><a href="../Enums/MoyaError.html">MoyaError</a></span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">mapImage</span><span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">SignalProducer</span><span class="o">&lt;</span><span class="kt"><a href="../Typealiases.html#/s:4Moya5Imagea">Image</a></span><span class="p">,</span> <span class="kt"><a href="../Enums/MoyaError.html">MoyaError</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -394,7 +394,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">mapJSON</span><span class="p">(</span><span class="nv">failsOnEmptyData</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SignalProducer</span><span class="o">&lt;</span><span class="kt">Any</span><span class="p">,</span> <span class="kt"><a href="../Enums/MoyaError.html">MoyaError</a></span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">mapJSON</span><span class="p">(</span><span class="nv">failsOnEmptyData</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SignalProducer</span><span class="o">&lt;</span><span class="kt">Any</span><span class="p">,</span> <span class="kt"><a href="../Enums/MoyaError.html">MoyaError</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -421,7 +421,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">mapString</span><span class="p">(</span><span class="n">atKeyPath</span> <span class="nv">keyPath</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SignalProducer</span><span class="o">&lt;</span><span class="kt">String</span><span class="p">,</span> <span class="kt"><a href="../Enums/MoyaError.html">MoyaError</a></span><span class="o">&gt;</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">mapString</span><span class="p">(</span><span class="n">atKeyPath</span> <span class="nv">keyPath</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SignalProducer</span><span class="o">&lt;</span><span class="kt">String</span><span class="p">,</span> <span class="kt"><a href="../Enums/MoyaError.html">MoyaError</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -448,7 +448,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="n">map</span><span class="o">&lt;</span><span class="kt">D</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">D</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="n">atKeyPath</span> <span class="nv">keyPath</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="n">using</span> <span class="nv">decoder</span><span class="p">:</span> <span class="kt">JSONDecoder</span> <span class="o">=</span> <span class="kt">JSONDecoder</span><span class="p">(),</span> <span class="nv">failsOnEmptyData</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SignalProducer</span><span class="o">&lt;</span><span class="kt">D</span><span class="p">,</span> <span class="kt"><a href="../Enums/MoyaError.html">MoyaError</a></span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">D</span> <span class="p">:</span> <span class="kt">Decodable</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">map</span><span class="o">&lt;</span><span class="kt">D</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">D</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span> <span class="n">atKeyPath</span> <span class="nv">keyPath</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="n">using</span> <span class="nv">decoder</span><span class="p">:</span> <span class="kt">JSONDecoder</span> <span class="o">=</span> <span class="kt">JSONDecoder</span><span class="p">(),</span> <span class="nv">failsOnEmptyData</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">true</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">SignalProducer</span><span class="o">&lt;</span><span class="kt">D</span><span class="p">,</span> <span class="kt"><a href="../Enums/MoyaError.html">MoyaError</a></span><span class="o">&gt;</span> <span class="k">where</span> <span class="kt">D</span> <span class="p">:</span> <span class="kt">Decodable</span></code></pre>
 
                         </div>
                       </div>

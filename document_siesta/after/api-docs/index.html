@@ -290,9 +290,9 @@
 <p>Drastically simplifies app code by providing a client-side cache of observable models for RESTful resources.</p>
 
 <ul>
-<li><strong>OS:</strong> iOS 8+, macOS 10.11+</li>
+<li><strong>OS:</strong> iOS 10+, macOS 10.11+, tvOS 9.0+</li>
 <li><strong>Languages:</strong> Written in Swift, supports apps in both Swift and Objective-C</li>
-<li><strong>Tool requirements:</strong> Xcode 9, Swift 4 (See <code>swift-2.x</code> and <code>swift-3</code> branches for legacy support)</li>
+<li><strong>Tool requirements:</strong> Xcode 11.3+, Swift 5.1+ (See <a href="https://github.com/bustoutsolutions/siesta/branches/all?query=swift-"><code>swift-*</code> branches</a> for legacy support)</li>
 <li><strong>License:</strong> MIT</li>
 </ul>
 <h2 id='table-of-contents' class='heading'>Table of Contents</h2>
@@ -370,7 +370,7 @@
 <ul>
 <li>It <strong>doesn’t reinvent networking.</strong> Siesta delegates network operations to your library of choice (<code>URLSession</code> by default, or <a href="https://github.com/Alamofire/Alamofire">Alamofire</a>, or inject your own <a href="https://bustoutsolutions.github.io/siesta/api/Protocols/NetworkingProvider.html">custom adapter</a>).</li>
 <li>It <strong>doesn’t hide HTTP</strong>. On the contrary, Siesta strives to expose the full richness of HTTP while providing conveniences to simplify common usage patterns. You can devise an abstraction layer to suit your own particular needs, or work directly with Siesta’s nice APIs for requests and response entities.</li>
-<li>It <strong>doesn’t do automatic response ↔ model mapping.</strong> This means that Siesta doesn’t constrain your response models, or force you to have any at all. Add a response transformer to output models of whatever flavor you prefer, or work directly with parsed JSON.</li>
+<li>It <strong>doesn’t do automatic response ↔ model mapping.</strong> This means that Siesta doesn’t constrain your response models, or force you to have any at all. Add a response transformer to output models of whatever flavor your app prefers, or work directly with parsed JSON.</li>
 </ul>
 <h2 id='origin' class='heading'>Origin</h2>
 
@@ -401,7 +401,36 @@
 <hr>
 <h2 id='installation' class='heading'>Installation</h2>
 
-<p>Siesta requires Swift 4, so make sure you have <a href="https://developer.apple.com/xcode/downloads/">Xcode 9</a>. (Use the <code>swift-2.x</code> branches if you haven’t made the big migration yet.)</p>
+<p>Siesta requires Swift 5 and Xcode 11. (Use the <a href="https://github.com/bustoutsolutions/siesta/branches/all?query=swift-"><code>swift-*</code> branches</a> branches if you are still on an older version.)</p>
+<h3 id='swift-package-manager' class='heading'>Swift Package Manager</h3>
+
+<p>In Xcode:</p>
+
+<ul>
+<li>File → Swift Packages → Add Package Dependency…</li>
+<li>Enter <code>https://github.com/bustoutsolutions/siesta</code> in the URL field and click Next.</li>
+<li>The defaults for the version settings are good for most projects. Click Next.</li>
+<li>Check the checkbox next to “Siesta.”
+
+<ul>
+<li>Also check “SiestaUI” if you want to use any of the <a href="https://github.com/bustoutsolutions/siesta/tree/master/Source/SiestaUI">UI helpers</a>.</li>
+<li>Also check “Siesta_Alamofire” if you want to use the Alamofire extension for Siesta.</li>
+</ul></li>
+<li>Click “Finish.”</li>
+<li><p>Siesta does not yet support resources supplied by dependencies. This means that if:</p>
+
+<ul>
+<li>you included <code>SiestaUI</code> above</li>
+<li>and you plan to use <code>ResourceStatusOverlay</code></li>
+<li>and you are using its default initializer instead of providing your own custom UI layout,</li>
+</ul>
+
+<p>…then you’ll need to copy <a href="https://github.com/bustoutsolutions/siesta/raw/master/Source/SiestaUI/ResourceStatusOverlay.xib"><code>ResourceStatusOverlay.xib</code></a> into your own project.</p>
+
+<p>SwiftPM just recently added support for this, and Siesta will add it in the next release.</p></li>
+</ul>
+
+<p>Please note that Xcode will show <em>all</em> of Siesta’s optional and test-only dependencies, including Quick, Nimble, and Alamofire. Don’t worry: these won’t actually be bundled into your app (except Alamofire, if you use it).</p>
 <h3 id='cocoapods' class='heading'>CocoaPods</h3>
 
 <p>In your <code>Podfile</code>:</p>
@@ -750,11 +779,11 @@ git submodule update --init
 </tr>
 <tr>
 <td style="text-align: left">Nontrivial lines of code²</td>
-<td style="text-align: center">2500</td>
-<td style="text-align: center">3020</td>
-<td style="text-align: center">13291</td>
-<td style="text-align: center">965</td>
-<td style="text-align: center">4025</td>
+<td style="text-align: center">2609</td>
+<td style="text-align: center">3980</td>
+<td style="text-align: center">13220</td>
+<td style="text-align: center">1178</td>
+<td style="text-align: center">3936</td>
 <td style="text-align: center">?</td>
 </tr>
 <tr>
@@ -834,7 +863,7 @@ git submodule update --init
       </article>
     </div>
     <section class="footer">
-      <p>© 2018 <a class="link" href="http://bustoutsolutions.com" target="_blank" rel="external">Bust Out Solutions</a> under <a class="link" href="https://github.com/bustoutsolutions/siesta/blob/master/LICENSE" target="_blank" rel="external">open source license</a>.</p>
+      <p>© 2020 <a class="link" href="http://bustoutsolutions.com" target="_blank" rel="external">Bust Out Solutions</a> under <a class="link" href="https://github.com/bustoutsolutions/siesta/blob/master/LICENSE" target="_blank" rel="external">open source license</a>.</p>
       <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
     </section>
   </body>

@@ -1,4 +1,4 @@
-COCOAPODS_SKIP_UPDATE_MESSAGE=TRUE JAZZY_FAKE_DATE=YYYY-MM-DD JAZZY_FAKE_MODULE_VERSION=Y.Y.Y JAZZY_FAKE_VERSION=X.X.X JAZZY_INTEGRATION_SPECS=TRUE ruby ROOT/bin/jazzy --author Realm --author_url "https://realm.io" --github_url https://github.com/realm/realm-cocoa --github-file-prefix https://github.com/realm/realm-cocoa/tree/v3.13.1 --module RealmSwift --module-version 3.13.1 --root-url https://realm.io/docs/swift/3.13.1/api/ --xcodebuild-arguments -scheme,RealmSwift,SWIFT_VERSION=4.2 --head \<link\ rel\=\"icon\"\ href\=\"https://realm.io/img/favicon.ico\"\>'
+COCOAPODS_SKIP_UPDATE_MESSAGE=TRUE JAZZY_FAKE_DATE=YYYY-MM-DD JAZZY_FAKE_MODULE_VERSION=Y.Y.Y JAZZY_FAKE_VERSION=X.X.X JAZZY_INTEGRATION_SPECS=TRUE ruby ROOT/bin/jazzy --author Realm --author_url "https://realm.io" --github_url https://github.com/realm/realm-cocoa --github-file-prefix https://github.com/realm/realm-cocoa/tree/v10.7.4 --module RealmSwift --module-version 10.7.4 --root-url https://realm.io/docs/swift/10.7.4/api/ --xcodebuild-arguments -scheme,RealmSwift,SWIFT_VERSION=4.2 --head \<link\ rel\=\"icon\"\ href\=\"https://realm.io/img/favicon.ico\"\>'
 '\<link\ rel\=\"apple-touch-icon-precomposed\"\ sizes\=\"57x57\"\ href\=\"https://realm.io/img/favicon-57x57.png\"\ /\>'
 '\<link\ rel\=\"apple-touch-icon-precomposed\"\ sizes\=\"114x114\"\ href\=\"https://realm.io/img/favicon-114x114.png\"\ /\>'
 '\<link\ rel\=\"apple-touch-icon-precomposed\"\ sizes\=\"72x72\"\ href\=\"https://realm.io/img/favicon-72x72.png\"\ /\>'
@@ -17,45 +17,39 @@ COCOAPODS_SKIP_UPDATE_MESSAGE=TRUE JAZZY_FAKE_DATE=YYYY-MM-DD JAZZY_FAKE_MODULE_
 '\</script\>'
 ' 2>&1
 Running xcodebuild
-Parsing Aliases.swift (1/20)
-Parsing Error.swift (2/20)
-Parsing LinkingObjects.swift (3/20)
-Parsing List.swift (4/20)
-Parsing Migration.swift (5/20)
-Parsing Object.swift (6/20)
-Parsing ObjectSchema.swift (7/20)
-Parsing ObjectiveCSupport.swift (8/20)
-Parsing Optional.swift (9/20)
-Parsing Property.swift (10/20)
-Parsing Realm.swift (11/20)
-Parsing RealmCollection.swift (12/20)
-Parsing RealmConfiguration.swift (13/20)
-Parsing Results.swift (14/20)
-Parsing Schema.swift (15/20)
-Parsing SortDescriptor.swift (16/20)
-Parsing SwiftVersion.swift (17/20)
-Parsing Sync.swift (18/20)
-Parsing ThreadSafeReference.swift (19/20)
-Parsing Util.swift (20/20)
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method min(), instance method min()
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method max(), instance method max()
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method sum(), instance method sum()
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method average(), instance method average()
-Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: instance method sorted(ascending:), instance method sorted(ascending:)
-`replaceSubrange(_:with:)` has no USR. First make sure all modules used in your project have been imported. If all used modules are imported, please report this problem by filing an issue at https://github.com/realm/jazzy/issues along with your Xcode project. If this token is declared in an `#if` block, please ignore this message.
-`SubSequence` has no USR. First make sure all modules used in your project have been imported. If all used modules are imported, please report this problem by filing an issue at https://github.com/realm/jazzy/issues along with your Xcode project. If this token is declared in an `#if` block, please ignore this message.
-`removeSubrange(_:)` has no USR. First make sure all modules used in your project have been imported. If all used modules are imported, please report this problem by filing an issue at https://github.com/realm/jazzy/issues along with your Xcode project. If this token is declared in an `#if` block, please ignore this message.
-`removeLast()` has no USR. First make sure all modules used in your project have been imported. If all used modules are imported, please report this problem by filing an issue at https://github.com/realm/jazzy/issues along with your Xcode project. If this token is declared in an `#if` block, please ignore this message.
-`Optional` has no USR. First make sure all modules used in your project have been imported. If all used modules are imported, please report this problem by filing an issue at https://github.com/realm/jazzy/issues along with your Xcode project. If this token is declared in an `#if` block, please ignore this message.
-`min()` has no USR. First make sure all modules used in your project have been imported. If all used modules are imported, please report this problem by filing an issue at https://github.com/realm/jazzy/issues along with your Xcode project. If this token is declared in an `#if` block, please ignore this message.
-`max()` has no USR. First make sure all modules used in your project have been imported. If all used modules are imported, please report this problem by filing an issue at https://github.com/realm/jazzy/issues along with your Xcode project. If this token is declared in an `#if` block, please ignore this message.
-`sum()` has no USR. First make sure all modules used in your project have been imported. If all used modules are imported, please report this problem by filing an issue at https://github.com/realm/jazzy/issues along with your Xcode project. If this token is declared in an `#if` block, please ignore this message.
-`average()` has no USR. First make sure all modules used in your project have been imported. If all used modules are imported, please report this problem by filing an issue at https://github.com/realm/jazzy/issues along with your Xcode project. If this token is declared in an `#if` block, please ignore this message.
-`sorted(ascending:)` has no USR. First make sure all modules used in your project have been imported. If all used modules are imported, please report this problem by filing an issue at https://github.com/realm/jazzy/issues along with your Xcode project. If this token is declared in an `#if` block, please ignore this message.
-`RealmCollectionValue` has no USR. First make sure all modules used in your project have been imported. If all used modules are imported, please report this problem by filing an issue at https://github.com/realm/jazzy/issues along with your Xcode project. If this token is declared in an `#if` block, please ignore this message.
+Parsing RLMSupport.swift (1/30)
+Parsing Aliases.swift (2/30)
+Parsing App.swift (3/30)
+Parsing BSON.swift (4/30)
+Parsing Combine.swift (5/30)
+Parsing Decimal128.swift (6/30)
+Parsing EmbeddedObject.swift (7/30)
+Parsing Error.swift (8/30)
+Parsing LinkingObjects.swift (9/30)
+Parsing List.swift (10/30)
+Parsing Migration.swift (11/30)
+Parsing MongoClient.swift (12/30)
+Parsing Object.swift (13/30)
+Parsing ObjectId.swift (14/30)
+Parsing ObjectSchema.swift (15/30)
+Parsing ObjectiveCSupport+BSON.swift (16/30)
+Parsing ObjectiveCSupport+Sync.swift (17/30)
+Parsing ObjectiveCSupport.swift (18/30)
+Parsing Optional.swift (19/30)
+Parsing Property.swift (20/30)
+Parsing Realm.swift (21/30)
+Parsing RealmCollection.swift (22/30)
+Parsing RealmConfiguration.swift (23/30)
+Parsing Results.swift (24/30)
+Parsing Schema.swift (25/30)
+Parsing SortDescriptor.swift (26/30)
+Parsing SwiftUI.swift (27/30)
+Parsing Sync.swift (28/30)
+Parsing ThreadSafeReference.swift (29/30)
+Parsing Util.swift (30/30)
 building site
 building search index
 100% documentation coverage with 0 undocumented symbols
-included 538 public or open symbols
-skipped 89 private, fileprivate, or internal symbols (use `--min-acl` to specify a different minimum ACL)
+included 900 public or open symbols
+skipped 187 private, fileprivate, or internal symbols (use `--min-acl` to specify a different minimum ACL)
 jam out ♪♫ to your fresh new docs in `docs`

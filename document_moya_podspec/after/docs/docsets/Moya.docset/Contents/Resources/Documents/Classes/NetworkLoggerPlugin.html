@@ -17,7 +17,7 @@
     <a title="NetworkLoggerPlugin Class Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Moya Y.Y.Y Docs</a> (87% documented)</p>
+        <p><a href="../index.html">Moya Y.Y.Y Docs</a> (83% documented)</p>
         <p class="header-right">
           <form role="search" action="../search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -55,6 +55,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NetworkLoggerPlugin.html">NetworkLoggerPlugin</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NetworkLoggerPlugin/Configuration.html">– Configuration</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/Response.html">Response</a>
@@ -120,7 +123,7 @@
             <a href="../Functions.html">Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:4Moya23convertResponseToResult_7request4data5error0E0AFOyAA0C0CAA0A5ErrorOGSo17NSHTTPURLResponseCSg_10Foundation10URLRequestVSgAP4DataVSgs0I0_pSgtF">convertResponseToResult(_:request:data:error:)</a>
+                <a href="../Functions.html#/s:4Moya23convertResponseToResult_7request4data5errors0E0OyAA0C0CAA0A5ErrorOGSo17NSHTTPURLResponseCSg_10Foundation10URLRequestVSgAP4DataVSgs0I0_pSgtF">convertResponseToResult(_:request:data:error:)</a>
               </li>
             </ul>
           </li>
@@ -186,13 +189,7 @@
                 <a href="../Typealiases.html#/s:4Moya12JSONEncodinga">JSONEncoding</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Typealiases.html#/s:4Moya7Managera">Manager</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:4Moya6Methoda">Method</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Typealiases.html#/s:4Moya31MultipartFormDataEncodingResulta">MultipartFormDataEncodingResult</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:4Moya17ParameterEncodinga">ParameterEncoding</a>
@@ -201,10 +198,13 @@
                 <a href="../Typealiases.html#/s:4Moya13ProgressBlocka">ProgressBlock</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Typealiases.html#/s:4Moya20PropertyListEncodinga">PropertyListEncoding</a>
+                <a href="../Typealiases.html#/s:4Moya18RequestInterceptora">RequestInterceptor</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:4Moya24RequestMultipartFormDataa">RequestMultipartFormData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:4Moya7Sessiona">Session</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:4Moya11URLEncodinga">URLEncoding</a>
@@ -220,7 +220,8 @@
               <div class="declaration">
                 <div class="language">
                   
-                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">NetworkLoggerPlugin</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/PluginType.html">PluginType</a></span></code></pre>
+                  <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">final</span> <span class="kd">class</span> <span class="kt">NetworkLoggerPlugin</span></code></pre>
+<pre class="highlight swift"><code><span class="kd">extension</span> <span class="kt">NetworkLoggerPlugin</span><span class="p">:</span> <span class="kt"><a href="../Protocols/PluginType.html">PluginType</a></span></code></pre>
 
                 </div>
               </div>
@@ -233,36 +234,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Moya19NetworkLoggerPluginC9isVerboseSbvp"></a>
-                    <a name="//apple_ref/swift/Property/isVerbose" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Moya19NetworkLoggerPluginC9isVerboseSbvp">isVerbose</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>A Boolean value determing whether response body data should be logged.</p>
-
-                      </div>
-                      <div class="declaration">
-                        <h4>Declaration</h4>
-                        <div class="language">
-                          <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">isVerbose</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
-
-                        </div>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/s:4Moya19NetworkLoggerPluginC4cURLSbvp"></a>
-                    <a name="//apple_ref/swift/Property/cURL" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Moya19NetworkLoggerPluginC4cURLSbvp">cURL</a>
+                    <a name="/s:4Moya19NetworkLoggerPluginC13configurationAC13ConfigurationVvp"></a>
+                    <a name="//apple_ref/swift/Property/configuration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Moya19NetworkLoggerPluginC13configurationAC13ConfigurationVvp">configuration</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -277,7 +251,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">cURL</span><span class="p">:</span> <span class="kt">Bool</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">configuration</span><span class="p">:</span> <span class="kt"><a href="../Classes/NetworkLoggerPlugin/Configuration.html">Configuration</a></span></code></pre>
 
                         </div>
                       </div>
@@ -287,9 +261,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Moya19NetworkLoggerPluginC7verbose4cURL6output20requestDataFormatter08responseiJ0ACSb_SbySS_SSypdtcSgSS10Foundation0I0VcSgA2LcSgtcfc"></a>
-                    <a name="//apple_ref/swift/Method/init(verbose:cURL:output:requestDataFormatter:responseDataFormatter:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Moya19NetworkLoggerPluginC7verbose4cURL6output20requestDataFormatter08responseiJ0ACSb_SbySS_SSypdtcSgSS10Foundation0I0VcSgA2LcSgtcfc">init(verbose:<wbr>cURL:<wbr>output:<wbr>requestDataFormatter:<wbr>responseDataFormatter:<wbr>)</a>
+                    <a name="/s:4Moya19NetworkLoggerPluginC13configurationA2C13ConfigurationV_tcfc"></a>
+                    <a name="//apple_ref/swift/Method/init(configuration:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Moya19NetworkLoggerPluginC13configurationA2C13ConfigurationV_tcfc">init(configuration:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -304,13 +278,26 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">verbose</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">cURL</span><span class="p">:</span> <span class="kt">Bool</span> <span class="o">=</span> <span class="kc">false</span><span class="p">,</span> <span class="nv">output</span><span class="p">:</span> <span class="p">((</span><span class="n">_</span> <span class="nv">separator</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">terminator</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">items</span><span class="p">:</span> <span class="kt">Any</span><span class="o">...</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">requestDataFormatter</span><span class="p">:</span> <span class="p">((</span><span class="kt">Data</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">String</span><span class="p">))?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span> <span class="nv">responseDataFormatter</span><span class="p">:</span> <span class="p">((</span><span class="kt">Data</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">Data</span><span class="p">))?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="kt"><a href="../Classes/NetworkLoggerPlugin/Configuration.html">Configuration</a></span> <span class="o">=</span> <span class="kt"><a href="../Classes/NetworkLoggerPlugin/Configuration.html">Configuration</a></span><span class="p">())</span></code></pre>
 
                         </div>
                       </div>
                     </section>
                   </div>
                 </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/PluginType"></a>
+                <a name="//apple_ref/swift/Section/PluginType" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/PluginType"></a>
+                  <h3 class="section-name"><p>PluginType</p>
+</h3>
+                </div>
+              </div>
+              <ul>
                 <li class="item">
                   <div>
                     <code>
@@ -340,9 +327,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Moya10PluginTypeP10didReceive_6targety6ResultAFOyAA8ResponseCAA0A5ErrorOG_AA06TargetC0_ptF"></a>
+                    <a name="/s:4Moya10PluginTypeP10didReceive_6targetys6ResultOyAA8ResponseCAA0A5ErrorOG_AA06TargetC0_ptF"></a>
                     <a name="//apple_ref/swift/Method/didReceive(_:target:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Moya10PluginTypeP10didReceive_6targety6ResultAFOyAA8ResponseCAA0A5ErrorOG_AA06TargetC0_ptF">didReceive(_:<wbr>target:<wbr>)</a>
+                    <a class="token" href="#/s:4Moya10PluginTypeP10didReceive_6targetys6ResultOyAA8ResponseCAA0A5ErrorOG_AA06TargetC0_ptF">didReceive(_:<wbr>target:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -357,6 +344,47 @@
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">didReceive</span><span class="p">(</span><span class="n">_</span> <span class="nv">result</span><span class="p">:</span> <span class="kt">Result</span><span class="o">&lt;</span><span class="kt">Moya</span><span class="o">.</span><span class="kt"><a href="../Classes/Response.html">Response</a></span><span class="p">,</span> <span class="kt"><a href="../Enums/MoyaError.html">MoyaError</a></span><span class="o">&gt;</span><span class="p">,</span> <span class="nv">target</span><span class="p">:</span> <span class="kt"><a href="../Protocols/TargetType.html">TargetType</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+            <div class="task-group">
+              <div class="task-name-container">
+                <a name="/Configuration"></a>
+                <a name="//apple_ref/swift/Section/Configuration" class="dashAnchor"></a>
+                <div class="section-name-container">
+                  <a class="section-name-link" href="#/Configuration"></a>
+                  <h3 class="section-name"><p>Configuration</p>
+</h3>
+                </div>
+              </div>
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Moya19NetworkLoggerPluginC13ConfigurationV"></a>
+                    <a name="//apple_ref/swift/Struct/Configuration" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Moya19NetworkLoggerPluginC13ConfigurationV">Configuration</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                        <a href="../Classes/NetworkLoggerPlugin/Configuration.html" class="slightly-smaller">See more</a>
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">struct</span> <span class="kt">Configuration</span></code></pre>
 
                         </div>
                       </div>

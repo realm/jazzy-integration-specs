@@ -1,0 +1,2585 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>RLMMongoCollection Class Reference</title>
+    <link rel="stylesheet" type="text/css" href="../css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="../css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="../js/jquery.min.js" defer></script>
+    <script src="../js/jazzy.js" defer></script>
+    <link rel="icon" href="https://realm.io/img/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://realm.io/img/favicon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://realm.io/img/favicon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://realm.io/img/favicon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://realm.io/img/favicon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://realm.io/img/favicon-120x120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://realm.io/img/favicon-152x152.png" />
+<link rel="icon" type="image/png" href="https://realm.io/img/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="https://realm.io/img/favicon-16x16.png" sizes="16x16" />
+<script defer>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-50247013-1', 'realm.io');
+  ga('send', 'pageview');
+</script>
+
+    <script src="../js/lunr.min.js" defer></script>
+    <script src="../js/typeahead.jquery.js" defer></script>
+    <script src="../js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Class/RLMMongoCollection" class="dashAnchor"></a>
+    <a title="RLMMongoCollection Class Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="../index.html">Realm Y.Y.Y Docs</a> (79% documented)</p>
+        <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="../img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm.io%2Fdocs%2Fobjc%2F10.7.4%2Fapi%2Fdocsets%2FRealm.xml"><img src="../img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right">
+          <form role="search" action="../search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="../index.html">Realm Reference</a>
+        <img id="carat" src="../img/carat.png" />
+        RLMMongoCollection Class Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="../Categories.html">Categories</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Categories/NSError%28RLMSync%29.html">NSError(RLMSync)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Categories/RLMObjectBase%28%29.html">RLMObjectBase()</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Categories/RLMObjectBase%28%29.html">RLMObjectBase()</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Classes/RLMAPIKeyAuth.html">RLMAPIKeyAuth</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMApp.html">RLMApp</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMAppConfiguration.html">RLMAppConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMAppSubscriptionToken.html">RLMAppSubscriptionToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMArray.html">RLMArray</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMAsyncOpenTask.html">RLMAsyncOpenTask</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMChangeStream.html">RLMChangeStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMCollectionChange.html">RLMCollectionChange</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMCredentials.html">RLMCredentials</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMDecimal128.html">RLMDecimal128</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)RLMDynamicObject">RLMDynamicObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMEmailPasswordAuth.html">RLMEmailPasswordAuth</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMEmbeddedObject.html">RLMEmbeddedObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMFindOneAndModifyOptions.html">RLMFindOneAndModifyOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMFindOptions.html">RLMFindOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)RLMLinkingObjects">RLMLinkingObjects</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMLinkingObjectsHandle.html">RLMLinkingObjectsHandle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMListBase.html">RLMListBase</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMManagedPropertyAccessor.html">RLMManagedPropertyAccessor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)RLMMaxKey">RLMMaxKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMMigration.html">RLMMigration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)RLMMinKey">RLMMinKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMMongoClient.html">RLMMongoClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMMongoCollection.html">RLMMongoCollection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMMongoDatabase.html">RLMMongoDatabase</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMNetworkTransport.html">RLMNetworkTransport</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMNotificationToken.html">RLMNotificationToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMObject.html">RLMObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMObjectId.html">RLMObjectId</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMObjectSchema.html">RLMObjectSchema</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMOptionalBase.html">RLMOptionalBase</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)RLMProgressNotificationToken">RLMProgressNotificationToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMProperty.html">RLMProperty</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMPropertyChange.html">RLMPropertyChange</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMPropertyDescriptor.html">RLMPropertyDescriptor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMProviderClient.html">RLMProviderClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMPushClient.html">RLMPushClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMRealm.html">RLMRealm</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMRealmConfiguration.html">RLMRealmConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMRequest.html">RLMRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMResponse.html">RLMResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMResults.html">RLMResults</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMSchema.html">RLMSchema</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMSortDescriptor.html">RLMSortDescriptor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMSyncConfiguration.html">RLMSyncConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)RLMSyncErrorActionToken">RLMSyncErrorActionToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMSyncManager.html">RLMSyncManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMSyncSession.html">RLMSyncSession</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMSyncTimeoutOptions.html">RLMSyncTimeoutOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMThreadSafeReference.html">RLMThreadSafeReference</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMUpdateResult.html">RLMUpdateResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMUser.html">RLMUser</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMUserAPIKey.html">RLMUserAPIKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMUserIdentity.html">RLMUserIdentity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/RLMUserSubscriptionToken.html">RLMUserSubscriptionToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)RealmSwiftEmbeddedObject">RealmSwiftEmbeddedObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes.html#/c:objc(cs)RealmSwiftObject">RealmSwiftObject</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RLMAppErrorDomain">RLMAppErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RLMBackupRealmConfigurationErrorKey">RLMBackupRealmConfigurationErrorKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RLMDescriptionMaxDepth">RLMDescriptionMaxDepth</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RLMErrorDomain">RLMErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RLMExceptionName">RLMExceptionName</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RLMIdentityProviderAnonymous">RLMIdentityProviderAnonymous</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RLMIdentityProviderApple">RLMIdentityProviderApple</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RLMIdentityProviderFacebook">RLMIdentityProviderFacebook</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RLMIdentityProviderFunction">RLMIdentityProviderFunction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RLMIdentityProviderGoogle">RLMIdentityProviderGoogle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RLMIdentityProviderJWT">RLMIdentityProviderJWT</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RLMIdentityProviderServerAPIKey">RLMIdentityProviderServerAPIKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RLMIdentityProviderUserAPIKey">RLMIdentityProviderUserAPIKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RLMIdentityProviderUsernamePassword">RLMIdentityProviderUsernamePassword</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RLMInvalidatedKey">RLMInvalidatedKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RLMNotVersioned">RLMNotVersioned</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RLMRealmCoreVersionKey">RLMRealmCoreVersionKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RLMRealmDidChangeNotification">RLMRealmDidChangeNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RLMRealmRefreshRequiredNotification">RLMRealmRefreshRequiredNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RLMRealmVersionKey">RLMRealmVersionKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RLMSwiftAsFastEnumeration">RLMSwiftAsFastEnumeration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RLMSyncAuthErrorDomain">RLMSyncAuthErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RLMSyncErrorDomain">RLMSyncErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@RLMUnknownSystemErrorDomain">RLMUnknownSystemErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@kRLMSyncErrorActionTokenKey">kRLMSyncErrorActionTokenKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@kRLMSyncErrorStatusCodeKey">kRLMSyncErrorStatusCodeKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@kRLMSyncPathOfRealmBackupCopyKey">kRLMSyncPathOfRealmBackupCopyKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Constants.html#/c:@kRLMSyncUnderlyingErrorKey">kRLMSyncUnderlyingErrorKey</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Enums/RLMAppError.html">RLMAppError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RLMBSONType.html">RLMBSONType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RLMError.html">RLMError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RLMHTTPMethod.html">RLMHTTPMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RLMPropertyType.html">RLMPropertyType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RLMSyncAuthError.html">RLMSyncAuthError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RLMSyncConnectionState.html">RLMSyncConnectionState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RLMSyncError.html">RLMSyncError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RLMSyncLogLevel.html">RLMSyncLogLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RLMSyncProgressDirection.html">RLMSyncProgressDirection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RLMSyncProgressMode.html">RLMSyncProgressMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RLMSyncSessionState.html">RLMSyncSessionState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RLMSyncStopPolicy.html">RLMSyncStopPolicy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RLMSyncSystemErrorKind.html">RLMSyncSystemErrorKind</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RLMUpdatePolicy.html">RLMUpdatePolicy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Enums/RLMUserState.html">RLMUserState</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Protocols/RLMASLoginDelegate.html">RLMASLoginDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/RLMBSON.html">RLMBSON</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/RLMChangeEventDelegate.html">RLMChangeEventDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/RLMCollection.html">RLMCollection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/RLMEventDelegate.html">RLMEventDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/RLMNetworkTransport.html">RLMNetworkTransport</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Protocols/RLMThreadConfined.html">RLMThreadConfined</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Type%20Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:RLMAPIKeyAuth.h@T@RLMAPIKeyAuthOptionalErrorBlock">RLMAPIKeyAuthOptionalErrorBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:RLMApp_Private.h@T@RLMAppNotificationBlock">RLMAppNotificationBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:RLMRealm.h@T@RLMAsyncOpenRealmCallback">RLMAsyncOpenRealmCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:RLMUser.h@T@RLMCallFunctionCompletionBlock">RLMCallFunctionCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:RLMCredentials.h@T@RLMCredentialsToken">RLMCredentialsToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:RLMEmailPasswordAuth.h@T@RLMEmailPasswordAuthOptionalErrorBlock">RLMEmailPasswordAuthOptionalErrorBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:RLMCredentials.h@T@RLMIdentityProvider">RLMIdentityProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:RLMRealm.h@T@RLMMigrationBlock">RLMMigrationBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:RLMMongoCollection.h@T@RLMMongoCountBlock">RLMMongoCountBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:RLMMongoCollection.h@T@RLMMongoDeleteBlock">RLMMongoDeleteBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:RLMMongoCollection.h@T@RLMMongoFindBlock">RLMMongoFindBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:RLMMongoCollection.h@T@RLMMongoFindOneBlock">RLMMongoFindOneBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:RLMMongoCollection.h@T@RLMMongoInsertBlock">RLMMongoInsertBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:RLMMongoCollection.h@T@RLMMongoInsertManyBlock">RLMMongoInsertManyBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:RLMMongoCollection.h@T@RLMMongoUpdateBlock">RLMMongoUpdateBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:RLMNetworkTransport.h@T@RLMNetworkTransportCompletionBlock">RLMNetworkTransportCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:RLMConstants.h@T@RLMNotification">RLMNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:RLMRealm.h@T@RLMNotificationBlock">RLMNotificationBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:RLMEmbeddedObject.h@T@RLMObjectChangeBlock">RLMObjectChangeBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:RLMMigration.h@T@RLMObjectMigrationBlock">RLMObjectMigrationBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:RLMObject_Private.h@T@RLMObjectNotificationCallback">RLMObjectNotificationCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:RLMApp.h@T@RLMOptionalErrorBlock">RLMOptionalErrorBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:RLMAPIKeyAuth.h@T@RLMOptionalUserAPIKeyBlock">RLMOptionalUserAPIKeyBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:RLMUser.h@T@RLMOptionalUserBlock">RLMOptionalUserBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:RLMSyncSession.h@T@RLMProgressNotificationBlock">RLMProgressNotificationBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:RLMSyncUtil_Private.h@T@RLMServerPath">RLMServerPath</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:RLMSyncUtil.h@T@RLMServerToken">RLMServerToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:RLMRealmConfiguration.h@T@RLMShouldCompactOnLaunchBlock">RLMShouldCompactOnLaunchBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:RLMSyncUtil_Private.h@T@RLMSyncBasicErrorReportingBlock">RLMSyncBasicErrorReportingBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:RLMSyncUtil_Private.h@T@RLMSyncCompletionBlock">RLMSyncCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:RLMSyncManager.h@T@RLMSyncErrorReportingBlock">RLMSyncErrorReportingBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:RLMSyncManager.h@T@RLMSyncLogFunction">RLMSyncLogFunction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:RLMAPIKeyAuth.h@T@RLMUserAPIKeysBlock">RLMUserAPIKeysBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:RLMApp.h@T@RLMUserCompletionBlock">RLMUserCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:RLMUser.h@T@RLMUserCustomDataBlock">RLMUserCustomDataBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:RLMUser_Private.h@T@RLMUserNotificationBlock">RLMUserNotificationBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Type%20Definitions.html#/c:RLMUser.h@T@RLMUserOptionalErrorBlock">RLMUserOptionalErrorBlock</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="../Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMAddObjectToRealm">RLMAddObjectToRealm</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMArrayValidateMatchingObjectType">RLMArrayValidateMatchingObjectType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMCastToSyncSubscription">RLMCastToSyncSubscription</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMCollectionSetValueForKey">RLMCollectionSetValueForKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMCreateObjectInRealmWithValue">RLMCreateObjectInRealmWithValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMDeleteAllObjectsFromRealm">RLMDeleteAllObjectsFromRealm</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMDeleteObjectFromRealm">RLMDeleteObjectFromRealm</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMDescriptionWithMaxDepth">RLMDescriptionWithMaxDepth</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMDisableSyncToDisk">RLMDisableSyncToDisk</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMDynamicGet">RLMDynamicGet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMDynamicGetByName">RLMDynamicGetByName</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMDynamicSet">RLMDynamicSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMDynamicValidatedSet">RLMDynamicValidatedSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMGetObject">RLMGetObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMGetObjects">RLMGetObjects</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMGetOptional">RLMGetOptional</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMInitializeManagedOptional">RLMInitializeManagedOptional</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMInitializeSwiftAccessorGenerics">RLMInitializeSwiftAccessorGenerics</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMInitializeUnmanagedOptional">RLMInitializeUnmanagedOptional</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMInitializeWithValue">RLMInitializeWithValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMIsObjectOrSubclass">RLMIsObjectOrSubclass</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMIsObjectSubclass">RLMIsObjectSubclass</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMManagedAccessorClassForObjectClass">RLMManagedAccessorClassForObjectClass</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMObjectAddNotificationBlock">RLMObjectAddNotificationBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMObjectBaseAddNotificationBlock">RLMObjectBaseAddNotificationBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMObjectBaseAreEqual">RLMObjectBaseAreEqual</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMObjectBaseGetCombineId">RLMObjectBaseGetCombineId</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMObjectBaseObjectForKeyedSubscript">RLMObjectBaseObjectForKeyedSubscript</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMObjectBaseObjectSchema">RLMObjectBaseObjectSchema</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMObjectBaseRealm">RLMObjectBaseRealm</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMObjectBaseSetObjectForKeyedSubscript">RLMObjectBaseSetObjectForKeyedSubscript</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMObjectFreeze">RLMObjectFreeze</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMObjectThaw">RLMObjectThaw</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMPropertyTypeIsComputed">RLMPropertyTypeIsComputed</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMRealmCreateAccessors">RLMRealmCreateAccessors</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMRealmPathForFile">RLMRealmPathForFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMRealmPathForFileAndBundleIdentifier">RLMRealmPathForFileAndBundleIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMRealmTranslateException">RLMRealmTranslateException</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMRealmValidatedEncryptionKey">RLMRealmValidatedEncryptionKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMReplaceClassNameMethod">RLMReplaceClassNameMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMReplaceSharedSchemaMethod">RLMReplaceSharedSchemaMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMSetAsyncOpenQueue">RLMSetAsyncOpenQueue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMSetOptional">RLMSetOptional</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMSetSkipBackupAttribute">RLMSetSkipBackupAttribute</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:RLMProperty_Private.h@F@RLMTypeToString">RLMTypeToString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMUnmanagedAccessorClassForObjectClass">RLMUnmanagedAccessorClassForObjectClass</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMValidateSwiftPropertyName">RLMValidateSwiftPropertyName</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMValidatedValueForProperty">RLMValidatedValueForProperty</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Functions.html#/c:@F@RLMVerifyHasPrimaryKey">RLMVerifyHasPrimaryKey</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>RLMMongoCollection</h1>
+              <div class="declaration">
+                <div class="language">
+                  <p class="aside-title">Objective-C</p>
+                  <pre class="highlight objective_c"><code><span class="k">@interface</span> <span class="nc">RLMMongoCollection</span> <span class="p">:</span> <span class="nc">NSObject</span></code></pre>
+
+                </div>
+                <div class="language">
+                  <p class="aside-title">Swift</p>
+                  <pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">RLMMongoCollection</span> <span class="p">:</span> <span class="kt">NSObject</span></code></pre>
+
+                </div>
+              </div>
+            <p>The <code>RLMMongoCollection</code> represents a MongoDB collection.</p>
+
+<p>You can get an instance from a <code><a href="../Classes/RLMMongoDatabase.html">RLMMongoDatabase</a></code>.</p>
+
+<p>Create, read, update, and delete methods are available.</p>
+
+<p>Operations against the Realm Cloud server are performed asynchronously.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    Before you can read or write data, a user must log in.
+
+</div><ul>
+<li><p>Usage:
+RLMMongoClient *client = [self.app mongoClient:@&ldquo;mongodb1&rdquo;];
+RLMMongoDatabase *database = [client databaseWithName:@&ldquo;test_data&rdquo;];
+RLMMongoCollection *collection = [database collectionWithName:@&ldquo;Dog&rdquo;];
+[collection insertOneDocument:@{@&ldquo;name&rdquo;: @&ldquo;fido&rdquo;, @&ldquo;breed&rdquo;: @&ldquo;cane corso&rdquo;} completion:&hellip;];</p></li>
+</ul><div class="aside aside-see-also">
+    <p class="aside-title">See also</p>
+    <p><code><a href="../Classes/RLMMongoClient.html">RLMMongoClient</a></code>, <code><a href="../Classes/RLMMongoDatabase.html">RLMMongoDatabase</a></code></p>
+
+</div>
+
+              <div class="slightly-smaller">
+                <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMMongoCollection.h#L68-L316">Show on GitHub</a>
+              </div>
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RLMMongoCollection(py)name"></a>
+                    <a name="//apple_ref/objc/Property/name" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMMongoCollection(py)name">name</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>The name of this mongodb collection.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">@property</span> <span class="p">(</span><span class="n">nonatomic</span><span class="p">,</span> <span class="n">readonly</span><span class="p">)</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">name</span><span class="p">;</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMMongoCollection.h#L85">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RLMMongoCollection(im)insertOneDocument:completion:"></a>
+                    <a name="//apple_ref/objc/Method/-insertOneDocument:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMMongoCollection(im)insertOneDocument:completion:">-insertOneDocument:<wbr>completion:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Encodes the provided value to BSON and inserts it. If the value is missing an identifier, one will be
+generated for it.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">insertOneDocument</span><span class="p">:</span>
+            <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/RLMBSON.html">RLMBSON</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">document</span>
+               <span class="nf">completion</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:RLMMongoCollection.h@T@RLMMongoInsertBlock">RLMMongoInsertBlock</a></span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>document</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code>Document</code> value to insert.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The result of attempting to perform the insert. An Id will be returned for the inserted object on sucess</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMMongoCollection.h#L91-L92">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RLMMongoCollection(im)insertManyDocuments:completion:"></a>
+                    <a name="//apple_ref/objc/Method/-insertManyDocuments:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMMongoCollection(im)insertManyDocuments:completion:">-insertManyDocuments:<wbr>completion:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Encodes the provided values to BSON and inserts them. If any values are missing identifiers,
+they will be generated.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">insertManyDocuments</span><span class="p">:</span>
+            <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/RLMBSON.html">RLMBSON</a></span><span class="o">&gt;&gt;</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span>
+                <span class="n">documents</span>
+                 <span class="n">completion</span><span class="o">:</span><span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:RLMMongoCollection.h@T@RLMMongoInsertManyBlock">RLMMongoInsertManyBlock</a></span><span class="p">)</span><span class="n">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>documents</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The <code>Document</code> values in a bson array to insert.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The result of the insert, returns an array inserted document ids in order</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMMongoCollection.h#L98-L99">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RLMMongoCollection(im)findWhere:options:completion:"></a>
+                    <a name="//apple_ref/objc/Method/-findWhere:options:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMMongoCollection(im)findWhere:options:completion:">-findWhere:<wbr>options:<wbr>completion:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Finds the documents in this collection which match the provided filter.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">findWhere</span><span class="p">:</span>
+            <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/RLMBSON.html">RLMBSON</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">filterDocument</span>
+          <span class="nf">options</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/RLMFindOptions.html">RLMFindOptions</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span>
+       <span class="nf">completion</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:RLMMongoCollection.h@T@RLMMongoFindBlock">RLMMongoFindBlock</a></span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>filterDocument</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code>Document</code> as bson that should match the query.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>options</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code><a href="../Classes/RLMFindOptions.html">RLMFindOptions</a></code> to use when executing the command.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The resulting bson array of documents or error if one occurs</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMMongoCollection.h#L105-L107">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RLMMongoCollection(im)findWhere:completion:"></a>
+                    <a name="//apple_ref/objc/Method/-findWhere:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMMongoCollection(im)findWhere:completion:">-findWhere:<wbr>completion:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Finds the documents in this collection which match the provided filter.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">findWhere</span><span class="p">:</span>
+            <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/RLMBSON.html">RLMBSON</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">filterDocument</span>
+       <span class="nf">completion</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:RLMMongoCollection.h@T@RLMMongoFindBlock">RLMMongoFindBlock</a></span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>filterDocument</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code>Document</code> as bson that should match the query.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The resulting bson array as a string or error if one occurs</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMMongoCollection.h#L112-L113">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RLMMongoCollection(im)findOneDocumentWhere:options:completion:"></a>
+                    <a name="//apple_ref/objc/Method/-findOneDocumentWhere:options:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMMongoCollection(im)findOneDocumentWhere:options:completion:">-findOneDocumentWhere:<wbr>options:<wbr>completion:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns one document from a collection or view which matches the
+provided filter. If multiple documents satisfy the query, this method
+returns the first document according to the query&rsquo;s sort order or natural
+order.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">findOneDocumentWhere</span><span class="p">:</span>
+            <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/RLMBSON.html">RLMBSON</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">filterDocument</span>
+                     <span class="nf">options</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/RLMFindOptions.html">RLMFindOptions</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span>
+                  <span class="nf">completion</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:RLMMongoCollection.h@T@RLMMongoFindOneBlock">RLMMongoFindOneBlock</a></span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>filterDocument</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code>Document</code> as bson that should match the query.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>options</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code><a href="../Classes/RLMFindOptions.html">RLMFindOptions</a></code> to use when executing the command.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The resulting bson or error if one occurs</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMMongoCollection.h#L122-L124">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RLMMongoCollection(im)findOneDocumentWhere:completion:"></a>
+                    <a name="//apple_ref/objc/Method/-findOneDocumentWhere:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMMongoCollection(im)findOneDocumentWhere:completion:">-findOneDocumentWhere:<wbr>completion:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns one document from a collection or view which matches the
+provided filter. If multiple documents satisfy the query, this method
+returns the first document according to the query&rsquo;s sort order or natural
+order.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">findOneDocumentWhere</span><span class="p">:</span>
+            <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/RLMBSON.html">RLMBSON</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">filterDocument</span>
+                  <span class="nf">completion</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:RLMMongoCollection.h@T@RLMMongoFindOneBlock">RLMMongoFindOneBlock</a></span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>filterDocument</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code>Document</code> as bson that should match the query.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The resulting bson or error if one occurs</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMMongoCollection.h#L132-L133">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RLMMongoCollection(im)aggregateWithPipeline:completion:"></a>
+                    <a name="//apple_ref/objc/Method/-aggregateWithPipeline:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMMongoCollection(im)aggregateWithPipeline:completion:">-aggregateWithPipeline:<wbr>completion:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Runs an aggregation framework pipeline against this collection.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">aggregateWithPipeline</span><span class="p">:</span>
+            <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/RLMBSON.html">RLMBSON</a></span><span class="o">&gt;&gt;</span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">pipeline</span>
+                   <span class="nf">completion</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:RLMMongoCollection.h@T@RLMMongoFindBlock">RLMMongoFindBlock</a></span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>pipeline</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A bson array made up of <code>Documents</code> containing the pipeline of aggregation operations to perform.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The resulting bson array of documents or error if one occurs</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMMongoCollection.h#L138-L139">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RLMMongoCollection(im)countWhere:limit:completion:"></a>
+                    <a name="//apple_ref/objc/Method/-countWhere:limit:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMMongoCollection(im)countWhere:limit:completion:">-countWhere:<wbr>limit:<wbr>completion:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Counts the number of documents in this collection matching the provided filter.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">countWhere</span><span class="p">:</span>
+            <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/RLMBSON.html">RLMBSON</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">filterDocument</span>
+             <span class="nf">limit</span><span class="p">:(</span><span class="n">NSInteger</span><span class="p">)</span><span class="nv">limit</span>
+        <span class="nf">completion</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:RLMMongoCollection.h@T@RLMMongoCountBlock">RLMMongoCountBlock</a></span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>filterDocument</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code>Document</code> as bson that should match the query.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>limit</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The max amount of documents to count</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Returns the count of the documents that matched the filter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMMongoCollection.h#L145-L147">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RLMMongoCollection(im)countWhere:completion:"></a>
+                    <a name="//apple_ref/objc/Method/-countWhere:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMMongoCollection(im)countWhere:completion:">-countWhere:<wbr>completion:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Counts the number of documents in this collection matching the provided filter.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">countWhere</span><span class="p">:</span>
+            <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/RLMBSON.html">RLMBSON</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">filterDocument</span>
+        <span class="nf">completion</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:RLMMongoCollection.h@T@RLMMongoCountBlock">RLMMongoCountBlock</a></span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>filterDocument</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code>Document</code> as bson that should match the query.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Returns the count of the documents that matched the filter.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMMongoCollection.h#L152-L153">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RLMMongoCollection(im)deleteOneDocumentWhere:completion:"></a>
+                    <a name="//apple_ref/objc/Method/-deleteOneDocumentWhere:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMMongoCollection(im)deleteOneDocumentWhere:completion:">-deleteOneDocumentWhere:<wbr>completion:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Deletes a single matching document from the collection.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">deleteOneDocumentWhere</span><span class="p">:</span>
+            <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/RLMBSON.html">RLMBSON</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">filterDocument</span>
+                    <span class="nf">completion</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:RLMMongoCollection.h@T@RLMMongoCountBlock">RLMMongoCountBlock</a></span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>filterDocument</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code>Document</code> as bson that should match the query.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The result of performing the deletion. Returns the count of deleted objects</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMMongoCollection.h#L158-L159">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RLMMongoCollection(im)deleteManyDocumentsWhere:completion:"></a>
+                    <a name="//apple_ref/objc/Method/-deleteManyDocumentsWhere:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMMongoCollection(im)deleteManyDocumentsWhere:completion:">-deleteManyDocumentsWhere:<wbr>completion:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Deletes multiple documents</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">deleteManyDocumentsWhere</span><span class="p">:</span>
+            <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/RLMBSON.html">RLMBSON</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">filterDocument</span>
+                      <span class="nf">completion</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:RLMMongoCollection.h@T@RLMMongoCountBlock">RLMMongoCountBlock</a></span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>filterDocument</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Document representing the match criteria</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The result of performing the deletion. Returns the count of the deletion</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMMongoCollection.h#L164-L165">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RLMMongoCollection(im)updateOneDocumentWhere:updateDocument:upsert:completion:"></a>
+                    <a name="//apple_ref/objc/Method/-updateOneDocumentWhere:updateDocument:upsert:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMMongoCollection(im)updateOneDocumentWhere:updateDocument:upsert:completion:">-updateOneDocumentWhere:<wbr>updateDocument:<wbr>upsert:<wbr>completion:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Updates a single document matching the provided filter in this collection.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">updateOneDocumentWhere</span><span class="p">:</span>
+            <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/RLMBSON.html">RLMBSON</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">filterDocument</span>
+                <span class="nf">updateDocument</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/RLMBSON.html">RLMBSON</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="p">)</span>
+                                   <span class="n">updateDocument</span>
+                        <span class="n">upsert</span><span class="o">:</span><span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">upsert</span>
+                    <span class="n">completion</span><span class="o">:</span><span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:RLMMongoCollection.h@T@RLMMongoUpdateBlock">RLMMongoUpdateBlock</a></span><span class="p">)</span><span class="n">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>filterDocument</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A bson <code>Document</code> representing the match criteria.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>updateDocument</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A bson <code>Document</code> representing the update to be applied to a matching document.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>upsert</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>When true, creates a new document if no document matches the query.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The result of the attempt to update a document.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMMongoCollection.h#L172-L175">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RLMMongoCollection(im)updateOneDocumentWhere:updateDocument:completion:"></a>
+                    <a name="//apple_ref/objc/Method/-updateOneDocumentWhere:updateDocument:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMMongoCollection(im)updateOneDocumentWhere:updateDocument:completion:">-updateOneDocumentWhere:<wbr>updateDocument:<wbr>completion:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Updates a single document matching the provided filter in this collection.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">updateOneDocumentWhere</span><span class="p">:</span>
+            <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/RLMBSON.html">RLMBSON</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">filterDocument</span>
+                <span class="nf">updateDocument</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/RLMBSON.html">RLMBSON</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="p">)</span>
+                                   <span class="n">updateDocument</span>
+                    <span class="n">completion</span><span class="o">:</span><span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:RLMMongoCollection.h@T@RLMMongoUpdateBlock">RLMMongoUpdateBlock</a></span><span class="p">)</span><span class="n">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>filterDocument</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A bson <code>Document</code> representing the match criteria.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>updateDocument</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A bson <code>Document</code> representing the update to be applied to a matching document.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The result of the attempt to update a document.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMMongoCollection.h#L181-L183">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RLMMongoCollection(im)updateManyDocumentsWhere:updateDocument:upsert:completion:"></a>
+                    <a name="//apple_ref/objc/Method/-updateManyDocumentsWhere:updateDocument:upsert:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMMongoCollection(im)updateManyDocumentsWhere:updateDocument:upsert:completion:">-updateManyDocumentsWhere:<wbr>updateDocument:<wbr>upsert:<wbr>completion:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Updates multiple documents matching the provided filter in this collection.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">updateManyDocumentsWhere</span><span class="p">:</span>
+            <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/RLMBSON.html">RLMBSON</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">filterDocument</span>
+                  <span class="nf">updateDocument</span><span class="p">:</span>
+                      <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/RLMBSON.html">RLMBSON</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="p">)</span>
+                          <span class="n">updateDocument</span>
+                          <span class="n">upsert</span><span class="o">:</span><span class="p">(</span><span class="n">BOOL</span><span class="p">)</span><span class="n">upsert</span>
+                      <span class="n">completion</span><span class="o">:</span><span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:RLMMongoCollection.h@T@RLMMongoUpdateBlock">RLMMongoUpdateBlock</a></span><span class="p">)</span><span class="n">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>filterDocument</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A bson <code>Document</code> representing the match criteria.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>updateDocument</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A bson <code>Document</code> representing the update to be applied to a matching document.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>upsert</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>When true, creates a new document if no document matches the query.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The result of the attempt to update a document.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMMongoCollection.h#L190-L193">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RLMMongoCollection(im)updateManyDocumentsWhere:updateDocument:completion:"></a>
+                    <a name="//apple_ref/objc/Method/-updateManyDocumentsWhere:updateDocument:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMMongoCollection(im)updateManyDocumentsWhere:updateDocument:completion:">-updateManyDocumentsWhere:<wbr>updateDocument:<wbr>completion:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Updates multiple documents matching the provided filter in this collection.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">updateManyDocumentsWhere</span><span class="p">:</span>
+            <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/RLMBSON.html">RLMBSON</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">filterDocument</span>
+                  <span class="nf">updateDocument</span><span class="p">:</span>
+                      <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/RLMBSON.html">RLMBSON</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="p">)</span>
+                          <span class="n">updateDocument</span>
+                      <span class="n">completion</span><span class="o">:</span><span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:RLMMongoCollection.h@T@RLMMongoUpdateBlock">RLMMongoUpdateBlock</a></span><span class="p">)</span><span class="n">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>filterDocument</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A bson <code>Document</code> representing the match criteria.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>updateDocument</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A bson <code>Document</code> representing the update to be applied to a matching document.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The result of the attempt to update a document.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMMongoCollection.h#L199-L201">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RLMMongoCollection(im)findOneAndUpdateWhere:updateDocument:options:completion:"></a>
+                    <a name="//apple_ref/objc/Method/-findOneAndUpdateWhere:updateDocument:options:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMMongoCollection(im)findOneAndUpdateWhere:updateDocument:options:completion:">-findOneAndUpdateWhere:<wbr>updateDocument:<wbr>options:<wbr>completion:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Updates a single document in a collection based on a query filter and
+returns the document in either its pre-update or post-update form. Unlike
+<code>updateOneDocument</code>, this action allows you to atomically find, update, and
+return a document with the same command. This avoids the risk of other
+update operations changing the document between separate find and update
+operations.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">findOneAndUpdateWhere</span><span class="p">:</span>
+            <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/RLMBSON.html">RLMBSON</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">filterDocument</span>
+               <span class="nf">updateDocument</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/RLMBSON.html">RLMBSON</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="p">)</span>
+                                  <span class="n">updateDocument</span>
+                      <span class="n">options</span><span class="o">:</span><span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/RLMFindOneAndModifyOptions.html">RLMFindOneAndModifyOptions</a></span> <span class="o">*</span><span class="p">)</span><span class="n">options</span>
+                   <span class="n">completion</span><span class="o">:</span><span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:RLMMongoCollection.h@T@RLMMongoFindOneBlock">RLMMongoFindOneBlock</a></span><span class="p">)</span><span class="n">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>filterDocument</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A bson <code>Document</code> representing the match criteria.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>updateDocument</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A bson <code>Document</code> representing the update to be applied to a matching document.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>options</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code>RemoteFindOneAndModifyOptions</code> to use when executing the command.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The result of the attempt to update a document.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMMongoCollection.h#L213-L216">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RLMMongoCollection(im)findOneAndUpdateWhere:updateDocument:completion:"></a>
+                    <a name="//apple_ref/objc/Method/-findOneAndUpdateWhere:updateDocument:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMMongoCollection(im)findOneAndUpdateWhere:updateDocument:completion:">-findOneAndUpdateWhere:<wbr>updateDocument:<wbr>completion:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Updates a single document in a collection based on a query filter and
+returns the document in either its pre-update or post-update form. Unlike
+<code>updateOneDocument</code>, this action allows you to atomically find, update, and
+return a document with the same command. This avoids the risk of other
+update operations changing the document between separate find and update
+operations.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">findOneAndUpdateWhere</span><span class="p">:</span>
+            <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/RLMBSON.html">RLMBSON</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">filterDocument</span>
+               <span class="nf">updateDocument</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/RLMBSON.html">RLMBSON</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="p">)</span>
+                                  <span class="n">updateDocument</span>
+                   <span class="n">completion</span><span class="o">:</span><span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:RLMMongoCollection.h@T@RLMMongoFindOneBlock">RLMMongoFindOneBlock</a></span><span class="p">)</span><span class="n">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>filterDocument</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A bson <code>Document</code> representing the match criteria.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>updateDocument</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A bson <code>Document</code> representing the update to be applied to a matching document.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The result of the attempt to update a document.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMMongoCollection.h#L227-L229">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RLMMongoCollection(im)findOneAndReplaceWhere:replacementDocument:options:completion:"></a>
+                    <a name="//apple_ref/objc/Method/-findOneAndReplaceWhere:replacementDocument:options:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMMongoCollection(im)findOneAndReplaceWhere:replacementDocument:options:completion:">-findOneAndReplaceWhere:<wbr>replacementDocument:<wbr>options:<wbr>completion:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Overwrites a single document in a collection based on a query filter and
+returns the document in either its pre-replacement or post-replacement
+form. Unlike <code>updateOneDocument</code>, this action allows you to atomically find,
+replace, and return a document with the same command. This avoids the
+risk of other update operations changing the document between separate
+find and update operations.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">findOneAndReplaceWhere</span><span class="p">:</span>
+            <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/RLMBSON.html">RLMBSON</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">filterDocument</span>
+           <span class="nf">replacementDocument</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/RLMBSON.html">RLMBSON</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="p">)</span>
+                                   <span class="n">replacementDocument</span>
+                       <span class="n">options</span><span class="o">:</span><span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/RLMFindOneAndModifyOptions.html">RLMFindOneAndModifyOptions</a></span> <span class="o">*</span><span class="p">)</span><span class="n">options</span>
+                    <span class="n">completion</span><span class="o">:</span><span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:RLMMongoCollection.h@T@RLMMongoFindOneBlock">RLMMongoFindOneBlock</a></span><span class="p">)</span><span class="n">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>filterDocument</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code>Document</code> that should match the query.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>replacementDocument</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code>Document</code> describing the replacement.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>options</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code><a href="../Classes/RLMFindOneAndModifyOptions.html">RLMFindOneAndModifyOptions</a></code> to use when executing the command.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The result of the attempt to replace a document.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMMongoCollection.h#L241-L244">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RLMMongoCollection(im)findOneAndReplaceWhere:replacementDocument:completion:"></a>
+                    <a name="//apple_ref/objc/Method/-findOneAndReplaceWhere:replacementDocument:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMMongoCollection(im)findOneAndReplaceWhere:replacementDocument:completion:">-findOneAndReplaceWhere:<wbr>replacementDocument:<wbr>completion:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Overwrites a single document in a collection based on a query filter and
+returns the document in either its pre-replacement or post-replacement
+form. Unlike <code>updateOneDocument</code>, this action allows you to atomically find,
+replace, and return a document with the same command. This avoids the
+risk of other update operations changing the document between separate
+find and update operations.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">findOneAndReplaceWhere</span><span class="p">:</span>
+            <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/RLMBSON.html">RLMBSON</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">filterDocument</span>
+           <span class="nf">replacementDocument</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/RLMBSON.html">RLMBSON</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="p">)</span>
+                                   <span class="n">replacementDocument</span>
+                    <span class="n">completion</span><span class="o">:</span><span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:RLMMongoCollection.h@T@RLMMongoFindOneBlock">RLMMongoFindOneBlock</a></span><span class="p">)</span><span class="n">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>filterDocument</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code>Document</code> that should match the query.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>replacementDocument</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code>Document</code> describing the update.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The result of the attempt to replace a document.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMMongoCollection.h#L255-L257">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RLMMongoCollection(im)findOneAndDeleteWhere:options:completion:"></a>
+                    <a name="//apple_ref/objc/Method/-findOneAndDeleteWhere:options:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMMongoCollection(im)findOneAndDeleteWhere:options:completion:">-findOneAndDeleteWhere:<wbr>options:<wbr>completion:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Removes a single document from a collection based on a query filter and
+returns a document with the same form as the document immediately before
+it was deleted. Unlike <code>deleteOneDocument</code>, this action allows you to atomically
+find and delete a document with the same command. This avoids the risk of
+other update operations changing the document between separate find and
+delete operations.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">findOneAndDeleteWhere</span><span class="p">:</span>
+            <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/RLMBSON.html">RLMBSON</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">filterDocument</span>
+                      <span class="nf">options</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/RLMFindOneAndModifyOptions.html">RLMFindOneAndModifyOptions</a></span> <span class="o">*</span><span class="p">)</span><span class="nv">options</span>
+                   <span class="nf">completion</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:RLMMongoCollection.h@T@RLMMongoDeleteBlock">RLMMongoDeleteBlock</a></span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>filterDocument</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code>Document</code> that should match the query.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>options</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p><code><a href="../Classes/RLMFindOneAndModifyOptions.html">RLMFindOneAndModifyOptions</a></code> to use when executing the command.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The result of the attempt to delete a document.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMMongoCollection.h#L268-L270">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RLMMongoCollection(im)findOneAndDeleteWhere:completion:"></a>
+                    <a name="//apple_ref/objc/Method/-findOneAndDeleteWhere:completion:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMMongoCollection(im)findOneAndDeleteWhere:completion:">-findOneAndDeleteWhere:<wbr>completion:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Removes a single document from a collection based on a query filter and
+returns a document with the same form as the document immediately before
+it was deleted. Unlike <code>deleteOneDocument</code>, this action allows you to atomically
+find and delete a document with the same command. This avoids the risk of
+other update operations changing the document between separate find and
+delete operations.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="kt">void</span><span class="p">)</span><span class="nf">findOneAndDeleteWhere</span><span class="p">:</span>
+            <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/RLMBSON.html">RLMBSON</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">filterDocument</span>
+                   <span class="nf">completion</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n"><a href="../Type%20Definitions.html#/c:RLMMongoCollection.h@T@RLMMongoDeleteBlock">RLMMongoDeleteBlock</a></span><span class="p">)</span><span class="nv">completion</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>filterDocument</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>A <code>Document</code> that should match the query.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>completion</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The result of the attempt to delete a document.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMMongoCollection.h#L280-L281">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RLMMongoCollection(im)watchWithDelegate:delegateQueue:"></a>
+                    <a name="//apple_ref/objc/Method/-watchWithDelegate:delegateQueue:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMMongoCollection(im)watchWithDelegate:delegateQueue:">-watchWithDelegate:<wbr>delegateQueue:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Opens a MongoDB change stream against the collection to watch for changes. The resulting stream will be notified
+of all events on this collection that the active user is authorized to see based on the configured MongoDB
+rules.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/RLMChangeStream.html">RLMChangeStream</a></span> <span class="o">*</span><span class="p">)</span><span class="nf">watchWithDelegate</span><span class="p">:</span>
+                                 <span class="p">(</span><span class="n">nonnull</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/RLMChangeEventDelegate.html">RLMChangeEventDelegate</a></span><span class="o">&gt;</span><span class="p">)</span><span class="nv">delegate</span>
+                                 <span class="nf">delegateQueue</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">dispatch_queue_t</span><span class="p">)</span><span class="nv">queue</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>delegate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The delegate that will react to events and errors from the resulting change stream.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>queue</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Dispatches streaming events to an optional queue, if no queue is provided the main queue is used</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMMongoCollection.h#L288-L289">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RLMMongoCollection(im)watchWithFilterIds:delegate:delegateQueue:"></a>
+                    <a name="//apple_ref/objc/Method/-watchWithFilterIds:delegate:delegateQueue:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMMongoCollection(im)watchWithFilterIds:delegate:delegateQueue:">-watchWithFilterIds:<wbr>delegate:<wbr>delegateQueue:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Opens a MongoDB change stream against the collection to watch for changes
+made to specific documents. The documents to watch must be explicitly
+specified by their _id.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/RLMChangeStream.html">RLMChangeStream</a></span> <span class="o">*</span><span class="p">)</span>
+    <span class="nf">watchWithFilterIds</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">NSArray</span><span class="o">&lt;</span><span class="n"><a href="../Classes/RLMObjectId.html">RLMObjectId</a></span> <span class="o">*&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">filterIds</span>
+              <span class="nf">delegate</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/RLMChangeEventDelegate.html">RLMChangeEventDelegate</a></span><span class="o">&gt;</span><span class="p">)</span><span class="nv">delegate</span>
+         <span class="nf">delegateQueue</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">dispatch_queue_t</span><span class="p">)</span><span class="nv">queue</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>filterIds</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The list of _ids in the collection to watch.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>delegate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The delegate that will react to events and errors from the resulting change stream.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>queue</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Dispatches streaming events to an optional queue, if no queue is provided the main queue is used</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMMongoCollection.h#L297-L299">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:objc(cs)RLMMongoCollection(im)watchWithMatchFilter:delegate:delegateQueue:"></a>
+                    <a name="//apple_ref/objc/Method/-watchWithMatchFilter:delegate:delegateQueue:" class="dashAnchor"></a>
+                    <a class="token" href="#/c:objc(cs)RLMMongoCollection(im)watchWithMatchFilter:delegate:delegateQueue:">-watchWithMatchFilter:<wbr>delegate:<wbr>delegateQueue:<wbr></a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Opens a MongoDB change stream against the collection to watch for changes. The provided BSON document will be
+used as a match expression filter on the change events coming from the stream.</p>
+
+<p>See <a href="https://docs.mongodb.com/manual/reference/operator/aggregation/match/">https://docs.mongodb.com/manual/reference/operator/aggregation/match/</a> for documentation around how to define
+a match filter.</p>
+
+<p>Defining the match expression to filter ChangeEvents is similar to defining the match expression for triggers:
+<a href="https://docs.mongodb.com/realm/triggers/database-triggers/">https://docs.mongodb.com/realm/triggers/database-triggers/</a></p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">-</span> <span class="p">(</span><span class="n">nonnull</span> <span class="n"><a href="../Classes/RLMChangeStream.html">RLMChangeStream</a></span> <span class="o">*</span><span class="p">)</span>
+    <span class="nf">watchWithMatchFilter</span><span class="p">:</span>
+        <span class="p">(</span><span class="n">nonnull</span> <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/RLMBSON.html">RLMBSON</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="p">)</span><span class="nv">matchFilter</span>
+                <span class="nf">delegate</span><span class="p">:(</span><span class="n">nonnull</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="../Protocols/RLMChangeEventDelegate.html">RLMChangeEventDelegate</a></span><span class="o">&gt;</span><span class="p">)</span><span class="nv">delegate</span>
+           <span class="nf">delegateQueue</span><span class="p">:(</span><span class="n">nullable</span> <span class="n">dispatch_queue_t</span><span class="p">)</span><span class="nv">queue</span><span class="p">;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>matchFilter</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The $match filter to apply to incoming change events</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>delegate</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The delegate that will react to events and errors from the resulting change stream.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>queue</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Dispatches streaming events to an optional queue, if no queue is provided the main queue is used</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMMongoCollection.h#L312-L314">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; YYYY <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>

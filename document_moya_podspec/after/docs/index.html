@@ -16,7 +16,7 @@
     <a title="Moya  Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="index.html">Moya Y.Y.Y Docs</a> (87% documented)</p>
+        <p><a href="index.html">Moya Y.Y.Y Docs</a> (83% documented)</p>
         <p class="header-right">
           <form role="search" action="search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -54,6 +54,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="Classes/NetworkLoggerPlugin.html">NetworkLoggerPlugin</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/NetworkLoggerPlugin/Configuration.html">– Configuration</a>
               </li>
               <li class="nav-group-task">
                 <a href="Classes/Response.html">Response</a>
@@ -119,7 +122,7 @@
             <a href="Functions.html">Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="Functions.html#/s:4Moya23convertResponseToResult_7request4data5error0E0AFOyAA0C0CAA0A5ErrorOGSo17NSHTTPURLResponseCSg_10Foundation10URLRequestVSgAP4DataVSgs0I0_pSgtF">convertResponseToResult(_:request:data:error:)</a>
+                <a href="Functions.html#/s:4Moya23convertResponseToResult_7request4data5errors0E0OyAA0C0CAA0A5ErrorOGSo17NSHTTPURLResponseCSg_10Foundation10URLRequestVSgAP4DataVSgs0I0_pSgtF">convertResponseToResult(_:request:data:error:)</a>
               </li>
             </ul>
           </li>
@@ -185,13 +188,7 @@
                 <a href="Typealiases.html#/s:4Moya12JSONEncodinga">JSONEncoding</a>
               </li>
               <li class="nav-group-task">
-                <a href="Typealiases.html#/s:4Moya7Managera">Manager</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="Typealiases.html#/s:4Moya6Methoda">Method</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="Typealiases.html#/s:4Moya31MultipartFormDataEncodingResulta">MultipartFormDataEncodingResult</a>
               </li>
               <li class="nav-group-task">
                 <a href="Typealiases.html#/s:4Moya17ParameterEncodinga">ParameterEncoding</a>
@@ -200,10 +197,13 @@
                 <a href="Typealiases.html#/s:4Moya13ProgressBlocka">ProgressBlock</a>
               </li>
               <li class="nav-group-task">
-                <a href="Typealiases.html#/s:4Moya20PropertyListEncodinga">PropertyListEncoding</a>
+                <a href="Typealiases.html#/s:4Moya18RequestInterceptora">RequestInterceptor</a>
               </li>
               <li class="nav-group-task">
                 <a href="Typealiases.html#/s:4Moya24RequestMultipartFormDataa">RequestMultipartFormData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Typealiases.html#/s:4Moya7Sessiona">Session</a>
               </li>
               <li class="nav-group-task">
                 <a href="Typealiases.html#/s:4Moya11URLEncodinga">URLEncoding</a>
@@ -219,11 +219,12 @@
             <p align="center">
   <img height="160" src="web/logo_github.png" />
 </p>
-<h1 id='moya' class='heading'>Moya</h1>
+<h1 id='moya-14-0-0' class='heading'>Moya 14.0.0</h1>
 
 <p><a href="https://circleci.com/gh/Moya/Moya/tree/master"><img src="https://img.shields.io/circleci/project/github/Moya/Moya/master.svg" alt="CircleCI"></a>
 <a href="https://codecov.io/github/Moya/Moya?branch=master"><img src="https://codecov.io/github/Moya/Moya/coverage.svg?branch=master" alt="codecov.io"></a>
 <a href="https://github.com/Carthage/Carthage"><img src="https://img.shields.io/badge/Carthage-compatible-4BC51D.svg?style=flat" alt="Carthage compatible"></a>
+<a href="https://github.com/JamitLabs/Accio"><img src="https://img.shields.io/badge/Accio-supported-0A7CF5.svg?style=flat" alt="Accio supported"></a>
 <a href="https://cocoapods.org/pods/Moya"><img src="https://img.shields.io/cocoapods/v/Moya.svg" alt="CocoaPods compatible"></a>
 <a href="https://github.com/apple/swift-package-manager"><img src="https://img.shields.io/badge/Swift%20Package%20Manager-compatible-brightgreen.svg" alt="Swift Package Manager compatible"></a></p>
 
@@ -286,10 +287,16 @@ your Swift version.</p>
 </tr>
 </thead><tbody>
 <tr>
+<td>5.X</td>
+<td>&gt;= 13.0.0</td>
+<td>&gt;= 13.0.0</td>
+<td>&gt;= 13.0.0</td>
+</tr>
+<tr>
 <td>4.X</td>
-<td>&gt;= 9.0</td>
-<td>&gt;= 10.0</td>
-<td>&gt;= 9.0</td>
+<td>9.0.0 - 12.0.1</td>
+<td>10.0.0 - 12.0.1</td>
+<td>9.0.0 - 12.0.1</td>
 </tr>
 <tr>
 <td>3.X</td>
@@ -311,17 +318,21 @@ your Swift version.</p>
 </tr>
 </tbody></table>
 
+<p><em>Note: If you are using Swift 4.2 in your project, but you are using Xcode 10.2, Moya 13 should work correctly even though we use Swift 5.0.</em></p>
+
 <p><strong>Upgrading to a new major version of Moya? Check out our <a href="https://github.com/Moya/Moya/blob/master/docs/MigrationGuides">migration guides</a>.</strong></p>
 <h3 id='swift-package-manager' class='heading'>Swift Package Manager</h3>
 
-<p>To integrate using Apple&rsquo;s Swift package manager, add the following as a dependency to your <code>Package.swift</code>:</p>
-<pre class="highlight swift"><code><span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/Moya/Moya.git"</span><span class="p">,</span> <span class="o">.</span><span class="nf">upToNextMajor</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="s">"11.0.0"</span><span class="p">))</span>
+<p><em>Note: Instructions below are for using <strong>SwiftPM</strong> without the Xcode UI. It&rsquo;s the easiest to go to your Project Settings -&gt; Swift Packages and add Moya from there.</em></p>
+
+<p>To integrate using Apple&rsquo;s Swift package manager, without Xcode integration, add the following as a dependency to your <code>Package.swift</code>:</p>
+<pre class="highlight swift"><code><span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/Moya/Moya.git"</span><span class="p">,</span> <span class="o">.</span><span class="nf">upToNextMajor</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="s">"14.0.0"</span><span class="p">))</span>
 </code></pre>
 
 <p>and then specify <code>&quot;Moya&quot;</code> as a dependency of the Target in which you wish to use Moya.
 If you want to use reactive extensions, add also <code>&quot;ReactiveMoya&quot;</code> or <code>&quot;RxMoya&quot;</code> as your Target dependency respectively.
 Here&rsquo;s an example <code>PackageDescription</code>:</p>
-<pre class="highlight swift"><code><span class="c1">// swift-tools-version:4.0</span>
+<pre class="highlight swift"><code><span class="c1">// swift-tools-version:5.0</span>
 <span class="kd">import</span> <span class="kt">PackageDescription</span>
 
 <span class="k">let</span> <span class="nv">package</span> <span class="o">=</span> <span class="kt">Package</span><span class="p">(</span>
@@ -332,7 +343,7 @@ Here&rsquo;s an example <code>PackageDescription</code>:</p>
             <span class="nv">targets</span><span class="p">:</span> <span class="p">[</span><span class="s">"MyPackage"</span><span class="p">]),</span>
     <span class="p">],</span>
     <span class="nv">dependencies</span><span class="p">:</span> <span class="p">[</span>
-        <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/Moya/Moya.git"</span><span class="p">,</span> <span class="o">.</span><span class="nf">upToNextMajor</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="s">"12.0.0"</span><span class="p">))</span>
+        <span class="o">.</span><span class="nf">package</span><span class="p">(</span><span class="nv">url</span><span class="p">:</span> <span class="s">"https://github.com/Moya/Moya.git"</span><span class="p">,</span> <span class="o">.</span><span class="nf">upToNextMajor</span><span class="p">(</span><span class="nv">from</span><span class="p">:</span> <span class="s">"14.0.0"</span><span class="p">))</span>
     <span class="p">],</span>
     <span class="nv">targets</span><span class="p">:</span> <span class="p">[</span>
         <span class="o">.</span><span class="nf">target</span><span class="p">(</span>
@@ -342,19 +353,22 @@ Here&rsquo;s an example <code>PackageDescription</code>:</p>
 <span class="p">)</span>
 </code></pre>
 
-<p>Note that as of Moya 10, SPM only works with Swift 4 toolchain and greater.</p>
+<p>Note: If you are using <strong>ReactiveMoya</strong>, we are using <a href="https://github.com/Moya/ReactiveSwift">our own fork of ReactiveSwift</a>. This fork adds 2 commits to remove testing dependencies on releases (starting 6.1.0). This is to prevent Xcode Previews on Xcode 11/11.1 to build testing dependencies (FB7316430). If you don&rsquo;t want to use our fork, you can just add another dependency to your SPM package list: <code>git@github.com:ReactiveCocoa/ReactiveSwift.git</code> and it should fetch the original repository.</p>
+<h3 id='accio' class='heading'>Accio</h3>
+
+<p><a href="https://github.com/JamitLabs/Accio">Accio</a> is a dependency manager based on SwiftPM which can build frameworks for iOS/macOS/tvOS/watchOS. Therefore the integration steps of Moya are exactly the same as described above. Once your <code>Package.swift</code> file is configured, run <code>accio update</code> instead of <code>swift package update</code>.</p>
 <h3 id='cocoapods' class='heading'>CocoaPods</h3>
 
 <p>For Moya, use the following entry in your Podfile:</p>
-<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'Moya'</span><span class="p">,</span> <span class="s1">'~&gt; 12.0'</span>
+<pre class="highlight ruby"><code><span class="n">pod</span> <span class="s1">'Moya'</span><span class="p">,</span> <span class="s1">'~&gt; 14.0'</span>
 
 <span class="c1"># or </span>
 
-<span class="n">pod</span> <span class="s1">'Moya/RxSwift'</span><span class="p">,</span> <span class="s1">'~&gt; 12.0'</span>
+<span class="n">pod</span> <span class="s1">'Moya/RxSwift'</span><span class="p">,</span> <span class="s1">'~&gt; 14.0'</span>
 
 <span class="c1"># or</span>
 
-<span class="n">pod</span> <span class="s1">'Moya/ReactiveSwift'</span><span class="p">,</span> <span class="s1">'~&gt; 12.0'</span>
+<span class="n">pod</span> <span class="s1">'Moya/ReactiveSwift'</span><span class="p">,</span> <span class="s1">'~&gt; 14.0'</span>
 </code></pre>
 
 <p>Then run <code>pod install</code>.</p>
@@ -367,7 +381,7 @@ import the framework with <code>import Moya</code>.</p>
 generated framework they&rsquo;d like, <code>Moya</code>, <code>RxMoya</code>, or <code>ReactiveMoya</code>.</p>
 
 <p>Make the following entry in your Cartfile:</p>
-<pre class="highlight plaintext"><code>github "Moya/Moya"
+<pre class="highlight plaintext"><code>github "Moya/Moya" ~&gt; 14.0
 </code></pre>
 
 <p>Then run <code>carthage update</code>.</p>
@@ -386,15 +400,14 @@ generated framework they&rsquo;d like, <code>Moya</code>, <code>RxMoya</code>, o
 </code></pre>
 
 <ul>
-<li>Add Alamofire, Result &amp; Moya as a git <a href="http://git-scm.com/docs/git-submodule">submodule</a> by running the following commands:</li>
+<li>Add Alamofire &amp; Moya as a git <a href="http://git-scm.com/docs/git-submodule">submodule</a> by running the following commands:</li>
 </ul>
 <pre class="highlight shell"><code><span class="nv">$ </span>git submodule add https://github.com/Alamofire/Alamofire.git
-<span class="nv">$ </span>git submodule add https://github.com/antitypical/Result.git
 <span class="nv">$ </span>git submodule add https://github.com/Moya/Moya.git
 </code></pre>
 
 <ul>
-<li>Open the new <code>Alamofire</code> folder, and drag the <code>Alamofire.xcodeproj</code> into the Project Navigator of your application&rsquo;s Xcode project. Do the same with the <code>Result.xcodeproj</code> in the <code>Result</code> folder and <code>Moya.xcodeproj</code> in the <code>Moya</code> folder.</li>
+<li>Open the new <code>Alamofire</code> folder, and drag the <code>Alamofire.xcodeproj</code> into the Project Navigator of your application&rsquo;s Xcode project. Do the same with the <code>Moya.xcodeproj</code> in the <code>Moya</code> folder.</li>
 </ul>
 
 <blockquote>
@@ -422,8 +435,7 @@ generated framework they&rsquo;d like, <code>Moya</code>, <code>RxMoya</code>, o
 </blockquote>
 
 <ul>
-<li>Click on the <code>+</code> button under &ldquo;Embedded Binaries&rdquo; again and add the build target you need for <code>Result</code>.</li>
-<li><p>Click on the <code>+</code> button again and add the correct build target for <code>Moya</code>.</p></li>
+<li><p>Click on the <code>+</code> button under &ldquo;Embedded Binaries&rdquo; again and add the correct build target for <code>Moya</code>.</p></li>
 <li><p>And that&rsquo;s it!</p></li>
 </ul>
 
