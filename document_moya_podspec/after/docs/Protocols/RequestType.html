@@ -17,7 +17,7 @@
     <a title="RequestType Protocol Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Moya Y.Y.Y Docs</a> (87% documented)</p>
+        <p><a href="../index.html">Moya Y.Y.Y Docs</a> (83% documented)</p>
         <p class="header-right">
           <form role="search" action="../search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -55,6 +55,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NetworkLoggerPlugin.html">NetworkLoggerPlugin</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NetworkLoggerPlugin/Configuration.html">– Configuration</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/Response.html">Response</a>
@@ -120,7 +123,7 @@
             <a href="../Functions.html">Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:4Moya23convertResponseToResult_7request4data5error0E0AFOyAA0C0CAA0A5ErrorOGSo17NSHTTPURLResponseCSg_10Foundation10URLRequestVSgAP4DataVSgs0I0_pSgtF">convertResponseToResult(_:request:data:error:)</a>
+                <a href="../Functions.html#/s:4Moya23convertResponseToResult_7request4data5errors0E0OyAA0C0CAA0A5ErrorOGSo17NSHTTPURLResponseCSg_10Foundation10URLRequestVSgAP4DataVSgs0I0_pSgtF">convertResponseToResult(_:request:data:error:)</a>
               </li>
             </ul>
           </li>
@@ -186,13 +189,7 @@
                 <a href="../Typealiases.html#/s:4Moya12JSONEncodinga">JSONEncoding</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Typealiases.html#/s:4Moya7Managera">Manager</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:4Moya6Methoda">Method</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Typealiases.html#/s:4Moya31MultipartFormDataEncodingResulta">MultipartFormDataEncodingResult</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:4Moya17ParameterEncodinga">ParameterEncoding</a>
@@ -201,10 +198,13 @@
                 <a href="../Typealiases.html#/s:4Moya13ProgressBlocka">ProgressBlock</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Typealiases.html#/s:4Moya20PropertyListEncodinga">PropertyListEncoding</a>
+                <a href="../Typealiases.html#/s:4Moya18RequestInterceptora">RequestInterceptor</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:4Moya24RequestMultipartFormDataa">RequestMultipartFormData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:4Moya7Sessiona">Session</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:4Moya11URLEncodinga">URLEncoding</a>
@@ -260,9 +260,36 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Moya11RequestTypeP12authenticate4user8password11persistencexSS_SSSo26NSURLCredentialPersistenceVtF"></a>
-                    <a name="//apple_ref/swift/Method/authenticate(user:password:persistence:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Moya11RequestTypeP12authenticate4user8password11persistencexSS_SSSo26NSURLCredentialPersistenceVtF">authenticate(user:<wbr>password:<wbr>persistence:<wbr>)</a>
+                    <a name="/s:4Moya11RequestTypeP14sessionHeadersSDyS2SGvp"></a>
+                    <a name="//apple_ref/swift/Property/sessionHeaders" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Moya11RequestTypeP14sessionHeadersSDyS2SGvp">sessionHeaders</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Additional headers appended to the request when added to the session.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">sessionHeaders</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt">String</span><span class="p">]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Moya11RequestTypeP12authenticate8username8password11persistencexSS_SSSo26NSURLCredentialPersistenceVtF"></a>
+                    <a name="//apple_ref/swift/Method/authenticate(username:password:persistence:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Moya11RequestTypeP12authenticate8username8password11persistencexSS_SSSo26NSURLCredentialPersistenceVtF">authenticate(username:<wbr>password:<wbr>persistence:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -277,7 +304,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">authenticate</span><span class="p">(</span><span class="nv">user</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">persistence</span><span class="p">:</span> <span class="kt">URLCredential</span><span class="o">.</span><span class="kt">Persistence</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">authenticate</span><span class="p">(</span><span class="nv">username</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">password</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">persistence</span><span class="p">:</span> <span class="kt">URLCredential</span><span class="o">.</span><span class="kt">Persistence</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -287,9 +314,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Moya11RequestTypeP12authenticate15usingCredentialxSo15NSURLCredentialC_tF"></a>
-                    <a name="//apple_ref/swift/Method/authenticate(usingCredential:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Moya11RequestTypeP12authenticate15usingCredentialxSo15NSURLCredentialC_tF">authenticate(usingCredential:<wbr>)</a>
+                    <a name="/s:4Moya11RequestTypeP12authenticate4withxSo15NSURLCredentialC_tF"></a>
+                    <a name="//apple_ref/swift/Method/authenticate(with:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Moya11RequestTypeP12authenticate4withxSo15NSURLCredentialC_tF">authenticate(with:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -304,9 +331,40 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">authenticate</span><span class="p">(</span><span class="n">usingCredential</span> <span class="nv">credential</span><span class="p">:</span> <span class="kt">URLCredential</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">authenticate</span><span class="p">(</span><span class="n">with</span> <span class="nv">credential</span><span class="p">:</span> <span class="kt">URLCredential</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Moya11RequestTypeP15cURLDescription7callingxySSc_tF"></a>
+                    <a name="//apple_ref/swift/Method/cURLDescription(calling:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Moya11RequestTypeP15cURLDescription7callingxySSc_tF">cURLDescription(calling:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>cURL representation of the instance.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">cURLDescription</span><span class="p">(</span><span class="n">calling</span> <span class="nv">handler</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The cURL equivalent of the instance.</p>
                       </div>
                     </section>
                   </div>

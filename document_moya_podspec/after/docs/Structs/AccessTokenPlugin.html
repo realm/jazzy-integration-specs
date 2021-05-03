@@ -17,7 +17,7 @@
     <a title="AccessTokenPlugin Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">Moya Y.Y.Y Docs</a> (87% documented)</p>
+        <p><a href="../index.html">Moya Y.Y.Y Docs</a> (83% documented)</p>
         <p class="header-right">
           <form role="search" action="../search.json">
             <input type="text" placeholder="Search documentation" data-typeahead>
@@ -55,6 +55,9 @@
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/NetworkLoggerPlugin.html">NetworkLoggerPlugin</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Classes/NetworkLoggerPlugin/Configuration.html">– Configuration</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Classes/Response.html">Response</a>
@@ -120,7 +123,7 @@
             <a href="../Functions.html">Functions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
-                <a href="../Functions.html#/s:4Moya23convertResponseToResult_7request4data5error0E0AFOyAA0C0CAA0A5ErrorOGSo17NSHTTPURLResponseCSg_10Foundation10URLRequestVSgAP4DataVSgs0I0_pSgtF">convertResponseToResult(_:request:data:error:)</a>
+                <a href="../Functions.html#/s:4Moya23convertResponseToResult_7request4data5errors0E0OyAA0C0CAA0A5ErrorOGSo17NSHTTPURLResponseCSg_10Foundation10URLRequestVSgAP4DataVSgs0I0_pSgtF">convertResponseToResult(_:request:data:error:)</a>
               </li>
             </ul>
           </li>
@@ -186,13 +189,7 @@
                 <a href="../Typealiases.html#/s:4Moya12JSONEncodinga">JSONEncoding</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Typealiases.html#/s:4Moya7Managera">Manager</a>
-              </li>
-              <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:4Moya6Methoda">Method</a>
-              </li>
-              <li class="nav-group-task">
-                <a href="../Typealiases.html#/s:4Moya31MultipartFormDataEncodingResulta">MultipartFormDataEncodingResult</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:4Moya17ParameterEncodinga">ParameterEncoding</a>
@@ -201,10 +198,13 @@
                 <a href="../Typealiases.html#/s:4Moya13ProgressBlocka">ProgressBlock</a>
               </li>
               <li class="nav-group-task">
-                <a href="../Typealiases.html#/s:4Moya20PropertyListEncodinga">PropertyListEncoding</a>
+                <a href="../Typealiases.html#/s:4Moya18RequestInterceptora">RequestInterceptor</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:4Moya24RequestMultipartFormDataa">RequestMultipartFormData</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="../Typealiases.html#/s:4Moya7Sessiona">Session</a>
               </li>
               <li class="nav-group-task">
                 <a href="../Typealiases.html#/s:4Moya11URLEncodinga">URLEncoding</a>
@@ -237,9 +237,36 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Moya17AccessTokenPluginV12tokenClosureSSycvp"></a>
+                    <a name="/s:4Moya17AccessTokenPluginV0C7Closurea"></a>
+                    <a name="//apple_ref/swift/Alias/TokenClosure" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Moya17AccessTokenPluginV0C7Closurea">TokenClosure</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">typealias</span> <span class="kt">TokenClosure</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="../Enums/AuthorizationType.html">AuthorizationType</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Moya17AccessTokenPluginV12tokenClosureySSAA17AuthorizationTypeOcvp"></a>
                     <a name="//apple_ref/swift/Property/tokenClosure" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Moya17AccessTokenPluginV12tokenClosureSSycvp">tokenClosure</a>
+                    <a class="token" href="#/s:4Moya17AccessTokenPluginV12tokenClosureySSAA17AuthorizationTypeOcvp">tokenClosure</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -254,7 +281,7 @@
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">tokenClosure</span><span class="p">:</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">let</span> <span class="nv">tokenClosure</span><span class="p">:</span> <span class="kt"><a href="../Structs/AccessTokenPlugin.html#/s:4Moya17AccessTokenPluginV0C7Closurea">TokenClosure</a></span></code></pre>
 
                         </div>
                       </div>
@@ -264,9 +291,9 @@
                 <li class="item">
                   <div>
                     <code>
-                    <a name="/s:4Moya17AccessTokenPluginV12tokenClosureACSSyc_tcfc"></a>
+                    <a name="/s:4Moya17AccessTokenPluginV12tokenClosureACSSAA17AuthorizationTypeOc_tcfc"></a>
                     <a name="//apple_ref/swift/Method/init(tokenClosure:)" class="dashAnchor"></a>
-                    <a class="token" href="#/s:4Moya17AccessTokenPluginV12tokenClosureACSSyc_tcfc">init(tokenClosure:<wbr>)</a>
+                    <a class="token" href="#/s:4Moya17AccessTokenPluginV12tokenClosureACSSAA17AuthorizationTypeOc_tcfc">init(tokenClosure:<wbr>)</a>
                     </code>
                   </div>
                   <div class="height-container">
@@ -276,33 +303,18 @@
                       <div class="abstract">
                         <p>Initialize a new <code>AccessTokenPlugin</code>.</p>
 
+<ul>
+<li>tokenClosure: A closure returning the token to be applied in the pattern <code>Authorization: &lt;AuthorizationType&gt; &lt;token&gt;</code></li>
+</ul>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">tokenClosure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">()</span> <span class="o">-&gt;</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">tokenClosure</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Structs/AccessTokenPlugin.html#/s:4Moya17AccessTokenPluginV0C7Closurea">TokenClosure</a></span><span class="p">)</span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>tokenClosure</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>A closure returning the token to be applied in the pattern <code>Authorization: &lt;AuthorizationType&gt; &lt;token&gt;</code></p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                     </section>
                   </div>
@@ -322,6 +334,11 @@
                       <div class="abstract">
                         <p>Prepare a request by adding an authorization header if necessary.</p>
 
+<ul>
+<li>request: The request to modify.</li>
+<li>target: The target of the request.</li>
+</ul>
+
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
@@ -330,37 +347,6 @@
                           <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">prepare</span><span class="p">(</span><span class="n">_</span> <span class="nv">request</span><span class="p">:</span> <span class="kt">URLRequest</span><span class="p">,</span> <span class="nv">target</span><span class="p">:</span> <span class="kt"><a href="../Protocols/TargetType.html">TargetType</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">URLRequest</span></code></pre>
 
                         </div>
-                      </div>
-                      <div>
-                        <h4>Parameters</h4>
-                        <table class="graybox">
-                          <tbody>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>request</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The request to modify.</p>
-                                </div>
-                              </td>
-                            </tr>
-                            <tr>
-                              <td>
-                                <code>
-                                <em>target</em>
-                                </code>
-                              </td>
-                              <td>
-                                <div>
-                                  <p>The target of the request.</p>
-                                </div>
-                              </td>
-                            </tr>
-                          </tbody>
-                        </table>
                       </div>
                       <div>
                         <h4>Return Value</h4>
