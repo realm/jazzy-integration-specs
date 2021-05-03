@@ -1,0 +1,2614 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Functions  Reference</title>
+    <link rel="stylesheet" type="text/css" href="css/jazzy.css" />
+    <link rel="stylesheet" type="text/css" href="css/highlight.css" />
+    <meta charset='utf-8'>
+    <script src="js/jquery.min.js" defer></script>
+    <script src="js/jazzy.js" defer></script>
+    <link rel="icon" href="https://realm.io/img/favicon.ico">
+<link rel="apple-touch-icon-precomposed" sizes="57x57" href="https://realm.io/img/favicon-57x57.png" />
+<link rel="apple-touch-icon-precomposed" sizes="114x114" href="https://realm.io/img/favicon-114x114.png" />
+<link rel="apple-touch-icon-precomposed" sizes="72x72" href="https://realm.io/img/favicon-72x72.png" />
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="https://realm.io/img/favicon-144x144.png" />
+<link rel="apple-touch-icon-precomposed" sizes="120x120" href="https://realm.io/img/favicon-120x120.png" />
+<link rel="apple-touch-icon-precomposed" sizes="152x152" href="https://realm.io/img/favicon-152x152.png" />
+<link rel="icon" type="image/png" href="https://realm.io/img/favicon-32x32.png" sizes="32x32" />
+<link rel="icon" type="image/png" href="https://realm.io/img/favicon-16x16.png" sizes="16x16" />
+<script defer>
+  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+    (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+    m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+  })(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+  ga('create', 'UA-50247013-1', 'realm.io');
+  ga('send', 'pageview');
+</script>
+
+    <script src="js/lunr.min.js" defer></script>
+    <script src="js/typeahead.jquery.js" defer></script>
+    <script src="js/jazzy.search.js" defer></script>
+  </head>
+  <body>
+    <a name="//apple_ref/objc/Section/Functions" class="dashAnchor"></a>
+    <a title="Functions  Reference"></a>
+    <header>
+      <div class="content-wrapper">
+        <p><a href="index.html">Realm Y.Y.Y Docs</a> (79% documented)</p>
+        <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="img/gh.png"/>View on GitHub</a></p>
+        <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm.io%2Fdocs%2Fobjc%2F10.7.4%2Fapi%2Fdocsets%2FRealm.xml"><img src="img/dash.png"/>Install in Dash</a></p>
+        <p class="header-right">
+          <form role="search" action="search.json">
+            <input type="text" placeholder="Search documentation" data-typeahead>
+          </form>
+        </p>
+      </div>
+    </header>
+    <div class="content-wrapper">
+      <p id="breadcrumbs">
+        <a href="index.html">Realm Reference</a>
+        <img id="carat" src="img/carat.png" />
+        Functions  Reference
+      </p>
+    </div>
+    <div class="content-wrapper">
+      <nav class="sidebar">
+        <ul class="nav-groups">
+          <li class="nav-group-name">
+            <a href="Categories.html">Categories</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Categories/NSError%28RLMSync%29.html">NSError(RLMSync)</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Categories/RLMObjectBase%28%29.html">RLMObjectBase()</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Categories/RLMObjectBase%28%29.html">RLMObjectBase()</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Classes.html">Classes</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Classes/RLMAPIKeyAuth.html">RLMAPIKeyAuth</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMApp.html">RLMApp</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMAppConfiguration.html">RLMAppConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMAppSubscriptionToken.html">RLMAppSubscriptionToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMArray.html">RLMArray</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMAsyncOpenTask.html">RLMAsyncOpenTask</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMChangeStream.html">RLMChangeStream</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMCollectionChange.html">RLMCollectionChange</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMCredentials.html">RLMCredentials</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMDecimal128.html">RLMDecimal128</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes.html#/c:objc(cs)RLMDynamicObject">RLMDynamicObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMEmailPasswordAuth.html">RLMEmailPasswordAuth</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMEmbeddedObject.html">RLMEmbeddedObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMFindOneAndModifyOptions.html">RLMFindOneAndModifyOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMFindOptions.html">RLMFindOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes.html#/c:objc(cs)RLMLinkingObjects">RLMLinkingObjects</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMLinkingObjectsHandle.html">RLMLinkingObjectsHandle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMListBase.html">RLMListBase</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMManagedPropertyAccessor.html">RLMManagedPropertyAccessor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes.html#/c:objc(cs)RLMMaxKey">RLMMaxKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMMigration.html">RLMMigration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes.html#/c:objc(cs)RLMMinKey">RLMMinKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMMongoClient.html">RLMMongoClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMMongoCollection.html">RLMMongoCollection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMMongoDatabase.html">RLMMongoDatabase</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMNetworkTransport.html">RLMNetworkTransport</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMNotificationToken.html">RLMNotificationToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMObject.html">RLMObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMObjectId.html">RLMObjectId</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMObjectSchema.html">RLMObjectSchema</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMOptionalBase.html">RLMOptionalBase</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes.html#/c:objc(cs)RLMProgressNotificationToken">RLMProgressNotificationToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMProperty.html">RLMProperty</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMPropertyChange.html">RLMPropertyChange</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMPropertyDescriptor.html">RLMPropertyDescriptor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMProviderClient.html">RLMProviderClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMPushClient.html">RLMPushClient</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMRealm.html">RLMRealm</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMRealmConfiguration.html">RLMRealmConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMRequest.html">RLMRequest</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMResponse.html">RLMResponse</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMResults.html">RLMResults</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMSchema.html">RLMSchema</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMSortDescriptor.html">RLMSortDescriptor</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMSyncConfiguration.html">RLMSyncConfiguration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes.html#/c:objc(cs)RLMSyncErrorActionToken">RLMSyncErrorActionToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMSyncManager.html">RLMSyncManager</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMSyncSession.html">RLMSyncSession</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMSyncTimeoutOptions.html">RLMSyncTimeoutOptions</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMThreadSafeReference.html">RLMThreadSafeReference</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMUpdateResult.html">RLMUpdateResult</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMUser.html">RLMUser</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMUserAPIKey.html">RLMUserAPIKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMUserIdentity.html">RLMUserIdentity</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes/RLMUserSubscriptionToken.html">RLMUserSubscriptionToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes.html#/c:objc(cs)RealmSwiftEmbeddedObject">RealmSwiftEmbeddedObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Classes.html#/c:objc(cs)RealmSwiftObject">RealmSwiftObject</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Constants.html">Constants</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@RLMAppErrorDomain">RLMAppErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@RLMBackupRealmConfigurationErrorKey">RLMBackupRealmConfigurationErrorKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@RLMDescriptionMaxDepth">RLMDescriptionMaxDepth</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@RLMErrorDomain">RLMErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@RLMExceptionName">RLMExceptionName</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@RLMIdentityProviderAnonymous">RLMIdentityProviderAnonymous</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@RLMIdentityProviderApple">RLMIdentityProviderApple</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@RLMIdentityProviderFacebook">RLMIdentityProviderFacebook</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@RLMIdentityProviderFunction">RLMIdentityProviderFunction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@RLMIdentityProviderGoogle">RLMIdentityProviderGoogle</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@RLMIdentityProviderJWT">RLMIdentityProviderJWT</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@RLMIdentityProviderServerAPIKey">RLMIdentityProviderServerAPIKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@RLMIdentityProviderUserAPIKey">RLMIdentityProviderUserAPIKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@RLMIdentityProviderUsernamePassword">RLMIdentityProviderUsernamePassword</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@RLMInvalidatedKey">RLMInvalidatedKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@RLMNotVersioned">RLMNotVersioned</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@RLMRealmCoreVersionKey">RLMRealmCoreVersionKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@RLMRealmDidChangeNotification">RLMRealmDidChangeNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@RLMRealmRefreshRequiredNotification">RLMRealmRefreshRequiredNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@RLMRealmVersionKey">RLMRealmVersionKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@RLMSwiftAsFastEnumeration">RLMSwiftAsFastEnumeration</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@RLMSyncAuthErrorDomain">RLMSyncAuthErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@RLMSyncErrorDomain">RLMSyncErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@RLMUnknownSystemErrorDomain">RLMUnknownSystemErrorDomain</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@kRLMSyncErrorActionTokenKey">kRLMSyncErrorActionTokenKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@kRLMSyncErrorStatusCodeKey">kRLMSyncErrorStatusCodeKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@kRLMSyncPathOfRealmBackupCopyKey">kRLMSyncPathOfRealmBackupCopyKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Constants.html#/c:@kRLMSyncUnderlyingErrorKey">kRLMSyncUnderlyingErrorKey</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Enums.html">Enumerations</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Enums/RLMAppError.html">RLMAppError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/RLMBSONType.html">RLMBSONType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/RLMError.html">RLMError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/RLMHTTPMethod.html">RLMHTTPMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/RLMPropertyType.html">RLMPropertyType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/RLMSyncAuthError.html">RLMSyncAuthError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/RLMSyncConnectionState.html">RLMSyncConnectionState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/RLMSyncError.html">RLMSyncError</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/RLMSyncLogLevel.html">RLMSyncLogLevel</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/RLMSyncProgressDirection.html">RLMSyncProgressDirection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/RLMSyncProgressMode.html">RLMSyncProgressMode</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/RLMSyncSessionState.html">RLMSyncSessionState</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/RLMSyncStopPolicy.html">RLMSyncStopPolicy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/RLMSyncSystemErrorKind.html">RLMSyncSystemErrorKind</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/RLMUpdatePolicy.html">RLMUpdatePolicy</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Enums/RLMUserState.html">RLMUserState</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Protocols.html">Protocols</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Protocols/RLMASLoginDelegate.html">RLMASLoginDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/RLMBSON.html">RLMBSON</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/RLMChangeEventDelegate.html">RLMChangeEventDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/RLMCollection.html">RLMCollection</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/RLMEventDelegate.html">RLMEventDelegate</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/RLMNetworkTransport.html">RLMNetworkTransport</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Protocols/RLMThreadConfined.html">RLMThreadConfined</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Type%20Definitions.html">Type Definitions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:RLMAPIKeyAuth.h@T@RLMAPIKeyAuthOptionalErrorBlock">RLMAPIKeyAuthOptionalErrorBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:RLMApp_Private.h@T@RLMAppNotificationBlock">RLMAppNotificationBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:RLMRealm.h@T@RLMAsyncOpenRealmCallback">RLMAsyncOpenRealmCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:RLMUser.h@T@RLMCallFunctionCompletionBlock">RLMCallFunctionCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:RLMCredentials.h@T@RLMCredentialsToken">RLMCredentialsToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:RLMEmailPasswordAuth.h@T@RLMEmailPasswordAuthOptionalErrorBlock">RLMEmailPasswordAuthOptionalErrorBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:RLMCredentials.h@T@RLMIdentityProvider">RLMIdentityProvider</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:RLMRealm.h@T@RLMMigrationBlock">RLMMigrationBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:RLMMongoCollection.h@T@RLMMongoCountBlock">RLMMongoCountBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:RLMMongoCollection.h@T@RLMMongoDeleteBlock">RLMMongoDeleteBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:RLMMongoCollection.h@T@RLMMongoFindBlock">RLMMongoFindBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:RLMMongoCollection.h@T@RLMMongoFindOneBlock">RLMMongoFindOneBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:RLMMongoCollection.h@T@RLMMongoInsertBlock">RLMMongoInsertBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:RLMMongoCollection.h@T@RLMMongoInsertManyBlock">RLMMongoInsertManyBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:RLMMongoCollection.h@T@RLMMongoUpdateBlock">RLMMongoUpdateBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:RLMNetworkTransport.h@T@RLMNetworkTransportCompletionBlock">RLMNetworkTransportCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:RLMConstants.h@T@RLMNotification">RLMNotification</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:RLMRealm.h@T@RLMNotificationBlock">RLMNotificationBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:RLMEmbeddedObject.h@T@RLMObjectChangeBlock">RLMObjectChangeBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:RLMMigration.h@T@RLMObjectMigrationBlock">RLMObjectMigrationBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:RLMObject_Private.h@T@RLMObjectNotificationCallback">RLMObjectNotificationCallback</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:RLMApp.h@T@RLMOptionalErrorBlock">RLMOptionalErrorBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:RLMAPIKeyAuth.h@T@RLMOptionalUserAPIKeyBlock">RLMOptionalUserAPIKeyBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:RLMUser.h@T@RLMOptionalUserBlock">RLMOptionalUserBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:RLMSyncSession.h@T@RLMProgressNotificationBlock">RLMProgressNotificationBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:RLMSyncUtil_Private.h@T@RLMServerPath">RLMServerPath</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:RLMSyncUtil.h@T@RLMServerToken">RLMServerToken</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:RLMRealmConfiguration.h@T@RLMShouldCompactOnLaunchBlock">RLMShouldCompactOnLaunchBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:RLMSyncUtil_Private.h@T@RLMSyncBasicErrorReportingBlock">RLMSyncBasicErrorReportingBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:RLMSyncUtil_Private.h@T@RLMSyncCompletionBlock">RLMSyncCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:RLMSyncManager.h@T@RLMSyncErrorReportingBlock">RLMSyncErrorReportingBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:RLMSyncManager.h@T@RLMSyncLogFunction">RLMSyncLogFunction</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:RLMAPIKeyAuth.h@T@RLMUserAPIKeysBlock">RLMUserAPIKeysBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:RLMApp.h@T@RLMUserCompletionBlock">RLMUserCompletionBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:RLMUser.h@T@RLMUserCustomDataBlock">RLMUserCustomDataBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:RLMUser_Private.h@T@RLMUserNotificationBlock">RLMUserNotificationBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Type%20Definitions.html#/c:RLMUser.h@T@RLMUserOptionalErrorBlock">RLMUserOptionalErrorBlock</a>
+              </li>
+            </ul>
+          </li>
+          <li class="nav-group-name">
+            <a href="Functions.html">Functions</a>
+            <ul class="nav-group-tasks">
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMAddObjectToRealm">RLMAddObjectToRealm</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMArrayValidateMatchingObjectType">RLMArrayValidateMatchingObjectType</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMCastToSyncSubscription">RLMCastToSyncSubscription</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMCollectionSetValueForKey">RLMCollectionSetValueForKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMCreateObjectInRealmWithValue">RLMCreateObjectInRealmWithValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMDeleteAllObjectsFromRealm">RLMDeleteAllObjectsFromRealm</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMDeleteObjectFromRealm">RLMDeleteObjectFromRealm</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMDescriptionWithMaxDepth">RLMDescriptionWithMaxDepth</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMDisableSyncToDisk">RLMDisableSyncToDisk</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMDynamicGet">RLMDynamicGet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMDynamicGetByName">RLMDynamicGetByName</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMDynamicSet">RLMDynamicSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMDynamicValidatedSet">RLMDynamicValidatedSet</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMGetObject">RLMGetObject</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMGetObjects">RLMGetObjects</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMGetOptional">RLMGetOptional</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMInitializeManagedOptional">RLMInitializeManagedOptional</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMInitializeSwiftAccessorGenerics">RLMInitializeSwiftAccessorGenerics</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMInitializeUnmanagedOptional">RLMInitializeUnmanagedOptional</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMInitializeWithValue">RLMInitializeWithValue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMIsObjectOrSubclass">RLMIsObjectOrSubclass</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMIsObjectSubclass">RLMIsObjectSubclass</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMManagedAccessorClassForObjectClass">RLMManagedAccessorClassForObjectClass</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMObjectAddNotificationBlock">RLMObjectAddNotificationBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMObjectBaseAddNotificationBlock">RLMObjectBaseAddNotificationBlock</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMObjectBaseAreEqual">RLMObjectBaseAreEqual</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMObjectBaseGetCombineId">RLMObjectBaseGetCombineId</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMObjectBaseObjectForKeyedSubscript">RLMObjectBaseObjectForKeyedSubscript</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMObjectBaseObjectSchema">RLMObjectBaseObjectSchema</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMObjectBaseRealm">RLMObjectBaseRealm</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMObjectBaseSetObjectForKeyedSubscript">RLMObjectBaseSetObjectForKeyedSubscript</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMObjectFreeze">RLMObjectFreeze</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMObjectThaw">RLMObjectThaw</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMPropertyTypeIsComputed">RLMPropertyTypeIsComputed</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMRealmCreateAccessors">RLMRealmCreateAccessors</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMRealmPathForFile">RLMRealmPathForFile</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMRealmPathForFileAndBundleIdentifier">RLMRealmPathForFileAndBundleIdentifier</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMRealmTranslateException">RLMRealmTranslateException</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMRealmValidatedEncryptionKey">RLMRealmValidatedEncryptionKey</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMReplaceClassNameMethod">RLMReplaceClassNameMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMReplaceSharedSchemaMethod">RLMReplaceSharedSchemaMethod</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMSetAsyncOpenQueue">RLMSetAsyncOpenQueue</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMSetOptional">RLMSetOptional</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMSetSkipBackupAttribute">RLMSetSkipBackupAttribute</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:RLMProperty_Private.h@F@RLMTypeToString">RLMTypeToString</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMUnmanagedAccessorClassForObjectClass">RLMUnmanagedAccessorClassForObjectClass</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMValidateSwiftPropertyName">RLMValidateSwiftPropertyName</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMValidatedValueForProperty">RLMValidatedValueForProperty</a>
+              </li>
+              <li class="nav-group-task">
+                <a href="Functions.html#/c:@F@RLMVerifyHasPrimaryKey">RLMVerifyHasPrimaryKey</a>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </nav>
+      <article class="main-content">
+        <section>
+          <section class="section">
+            <h1>Functions</h1>
+            <p>The following functions are available globally.</p>
+
+          </section>
+          <section class="section task-group-section">
+            <div class="task-group">
+              <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMManagedAccessorClassForObjectClass"></a>
+                    <a name="//apple_ref/objc/Function/RLMManagedAccessorClassForObjectClass" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMManagedAccessorClassForObjectClass">RLMManagedAccessorClassForObjectClass</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">Class</span> <span class="n">RLMManagedAccessorClassForObjectClass</span><span class="p">(</span><span class="n">Class</span> <span class="n">objectClass</span><span class="p">,</span> <span class="n"><a href="Classes/RLMObjectSchema.html">RLMObjectSchema</a></span> <span class="o">*</span><span class="n">schema</span><span class="p">,</span> <span class="k">const</span> <span class="kt">char</span> <span class="o">*</span><span class="n">name</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMManagedAccessorClassForObjectClass</span><span class="p">(</span><span class="n">_</span> <span class="nv">objectClass</span><span class="p">:</span> <span class="kt">AnyClass</span><span class="p">,</span> <span class="n">_</span> <span class="nv">schema</span><span class="p">:</span> <span class="kt"><a href="Classes/RLMObjectSchema.html">RLMObjectSchema</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">UnsafePointer</span><span class="o">&lt;</span><span class="kt">CChar</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AnyClass</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMAccessor.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMUnmanagedAccessorClassForObjectClass"></a>
+                    <a name="//apple_ref/objc/Function/RLMUnmanagedAccessorClassForObjectClass" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMUnmanagedAccessorClassForObjectClass">RLMUnmanagedAccessorClassForObjectClass</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">Class</span> <span class="n">RLMUnmanagedAccessorClassForObjectClass</span><span class="p">(</span><span class="n">Class</span> <span class="n">objectClass</span><span class="p">,</span> <span class="n"><a href="Classes/RLMObjectSchema.html">RLMObjectSchema</a></span> <span class="o">*</span><span class="n">schema</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMUnmanagedAccessorClassForObjectClass</span><span class="p">(</span><span class="n">_</span> <span class="nv">objectClass</span><span class="p">:</span> <span class="kt">AnyClass</span><span class="p">,</span> <span class="n">_</span> <span class="nv">schema</span><span class="p">:</span> <span class="kt"><a href="Classes/RLMObjectSchema.html">RLMObjectSchema</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AnyClass</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMAccessor.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMDynamicValidatedSet"></a>
+                    <a name="//apple_ref/objc/Function/RLMDynamicValidatedSet" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMDynamicValidatedSet">RLMDynamicValidatedSet</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">FOUNDATION_EXTERN</span> <span class="kt">void</span> <span class="n">RLMDynamicValidatedSet</span><span class="p">(</span><span class="n">RLMObjectBase</span> <span class="o">*</span><span class="n">obj</span><span class="p">,</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">propName</span><span class="p">,</span> <span class="n">id</span> <span class="n">__nullable</span> <span class="n">val</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMDynamicValidatedSet</span><span class="p">(</span><span class="n">_</span> <span class="nv">obj</span><span class="p">:</span> <span class="kt">RLMObjectBase</span><span class="p">,</span> <span class="n">_</span> <span class="nv">propName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">val</span><span class="p">:</span> <span class="kt">Any</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMAccessor.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMDynamicGet"></a>
+                    <a name="//apple_ref/objc/Function/RLMDynamicGet" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMDynamicGet">RLMDynamicGet</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">FOUNDATION_EXTERN</span> <span class="n">id</span> <span class="n">__nullable</span> <span class="n">RLMDynamicGet</span><span class="p">(</span><span class="n">RLMObjectBase</span> <span class="o">*</span><span class="n">obj</span><span class="p">,</span> <span class="n"><a href="Classes/RLMProperty.html">RLMProperty</a></span> <span class="o">*</span><span class="n">prop</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMDynamicGet</span><span class="p">(</span><span class="n">_</span> <span class="nv">obj</span><span class="p">:</span> <span class="kt">RLMObjectBase</span><span class="p">,</span> <span class="n">_</span> <span class="nv">prop</span><span class="p">:</span> <span class="kt"><a href="Classes/RLMProperty.html">RLMProperty</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMAccessor.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMDynamicGetByName"></a>
+                    <a name="//apple_ref/objc/Function/RLMDynamicGetByName" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMDynamicGetByName">RLMDynamicGetByName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">FOUNDATION_EXTERN</span> <span class="n">id</span> <span class="n">__nullable</span> <span class="n">RLMDynamicGetByName</span><span class="p">(</span><span class="n">RLMObjectBase</span> <span class="o">*</span><span class="n">obj</span><span class="p">,</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">propName</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMDynamicGetByName</span><span class="p">(</span><span class="n">_</span> <span class="nv">obj</span><span class="p">:</span> <span class="kt">RLMObjectBase</span><span class="p">,</span> <span class="n">_</span> <span class="nv">propName</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMAccessor.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMDynamicSet"></a>
+                    <a name="//apple_ref/objc/Function/RLMDynamicSet" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMDynamicSet">RLMDynamicSet</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="kt">void</span> <span class="n">RLMDynamicSet</span><span class="p">(</span><span class="n">RLMObjectBase</span> <span class="o">*</span><span class="n">obj</span><span class="p">,</span> <span class="n"><a href="Classes/RLMProperty.html">RLMProperty</a></span> <span class="o">*</span><span class="n">prop</span><span class="p">,</span> <span class="n">id</span> <span class="n">val</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMDynamicSet</span><span class="p">(</span><span class="n">_</span> <span class="nv">obj</span><span class="p">:</span> <span class="kt">RLMObjectBase</span><span class="p">,</span> <span class="n">_</span> <span class="nv">prop</span><span class="p">:</span> <span class="kt"><a href="Classes/RLMProperty.html">RLMProperty</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">val</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMAccessor.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMReplaceClassNameMethod"></a>
+                    <a name="//apple_ref/objc/Function/RLMReplaceClassNameMethod" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMReplaceClassNameMethod">RLMReplaceClassNameMethod</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="kt">void</span> <span class="n">RLMReplaceClassNameMethod</span><span class="p">(</span><span class="n">Class</span> <span class="n">accessorClass</span><span class="p">,</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">className</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMReplaceClassNameMethod</span><span class="p">(</span><span class="n">_</span> <span class="nv">accessorClass</span><span class="p">:</span> <span class="kt">AnyClass</span><span class="p">,</span> <span class="n">_</span> <span class="nv">className</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMAccessor.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMReplaceSharedSchemaMethod"></a>
+                    <a name="//apple_ref/objc/Function/RLMReplaceSharedSchemaMethod" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMReplaceSharedSchemaMethod">RLMReplaceSharedSchemaMethod</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="kt">void</span> <span class="n">RLMReplaceSharedSchemaMethod</span><span class="p">(</span><span class="n">Class</span> <span class="n">accessorClass</span><span class="p">,</span> <span class="n"><a href="Classes/RLMObjectSchema.html">RLMObjectSchema</a></span> <span class="o">*</span> <span class="n">__nullable</span> <span class="n">schema</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMReplaceSharedSchemaMethod</span><span class="p">(</span><span class="n">_</span> <span class="nv">accessorClass</span><span class="p">:</span> <span class="kt">AnyClass</span><span class="p">,</span> <span class="n">_</span> <span class="nv">schema</span><span class="p">:</span> <span class="kt"><a href="Classes/RLMObjectSchema.html">RLMObjectSchema</a></span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMAccessor.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMArrayValidateMatchingObjectType"></a>
+                    <a name="//apple_ref/objc/Function/RLMArrayValidateMatchingObjectType" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMArrayValidateMatchingObjectType">RLMArrayValidateMatchingObjectType</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="kt">void</span> <span class="n">RLMArrayValidateMatchingObjectType</span><span class="p">(</span><span class="n"><a href="Classes/RLMArray.html">RLMArray</a></span> <span class="o">*</span><span class="n">array</span><span class="p">,</span> <span class="n">id</span> <span class="n">value</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMArrayValidateMatchingObjectType</span><span class="p">(</span><span class="n">_</span> <span class="nv">array</span><span class="p">:</span> <span class="kt"><a href="Classes/RLMArray.html">RLMArray</a></span><span class="o">&lt;</span><span class="kt">AnyObject</span><span class="o">&gt;</span><span class="p">,</span> <span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMArray_Private.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMCollectionSetValueForKey"></a>
+                    <a name="//apple_ref/objc/Function/RLMCollectionSetValueForKey" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMCollectionSetValueForKey">RLMCollectionSetValueForKey</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="kt">void</span> <span class="n">RLMCollectionSetValueForKey</span><span class="p">(</span><span class="n">id</span><span class="o">&lt;</span><span class="n">RLMFastEnumerable</span><span class="o">&gt;</span> <span class="n">collection</span><span class="p">,</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">key</span><span class="p">,</span> <span class="n">id</span> <span class="n">_Nullable</span> <span class="n">value</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMCollection_Private.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMDescriptionWithMaxDepth"></a>
+                    <a name="//apple_ref/objc/Function/RLMDescriptionWithMaxDepth" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMDescriptionWithMaxDepth">RLMDescriptionWithMaxDepth</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">FOUNDATION_EXTERN</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">RLMDescriptionWithMaxDepth</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">name</span><span class="p">,</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/RLMCollection.html">RLMCollection</a></span><span class="o">&gt;</span> <span class="n">collection</span><span class="p">,</span> <span class="n">NSUInteger</span> <span class="n">depth</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMDescriptionWithMaxDepth</span><span class="p">(</span><span class="n">_</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">collection</span><span class="p">:</span> <span class="kt"><a href="Protocols/RLMCollection.html">RLMCollection</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">depth</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMCollection_Private.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMObjectBaseRealm"></a>
+                    <a name="//apple_ref/objc/Function/RLMObjectBaseRealm" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMObjectBaseRealm">RLMObjectBaseRealm</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the Realm that manages the object, if one exists.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>This function is useful only in specialized circumstances, for example, when building components
+      that integrate with Realm. If you are simply building an app on Realm, it is
+      recommended to retrieve the Realm that manages the object via <code><a href="Classes/RLMObject.html">RLMObject</a></code>.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">extern</span> <span class="n"><a href="Classes/RLMRealm.html">RLMRealm</a></span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">RLMObjectBaseRealm</span><span class="p">(</span><span class="n">RLMObjectBase</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">object</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMObjectBaseRealm</span><span class="p">(</span><span class="n">_</span> <span class="nv">object</span><span class="p">:</span> <span class="kt">RLMObjectBase</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt"><a href="Classes/RLMRealm.html">RLMRealm</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>object</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An <code>RLMObjectBase</code> obtained via a Swift <code>Object</code> or <code><a href="Classes/RLMObject.html">RLMObject</a></code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The Realm which manages this object. Returns <code>nil</code>for unmanaged objects.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMObjectBase_Dynamic.h#L36">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMObjectBaseObjectSchema"></a>
+                    <a name="//apple_ref/objc/Function/RLMObjectBaseObjectSchema" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMObjectBaseObjectSchema">RLMObjectBaseObjectSchema</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns an <code><a href="Classes/RLMObjectSchema.html">RLMObjectSchema</a></code> which describes the managed properties of the object.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>This function is useful only in specialized circumstances, for example, when building components
+      that integrate with Realm. If you are simply building an app on Realm, it is
+      recommended to retrieve <code>objectSchema</code> via <code><a href="Classes/RLMObject.html">RLMObject</a></code>.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">extern</span> <span class="n"><a href="Classes/RLMObjectSchema.html">RLMObjectSchema</a></span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">RLMObjectBaseObjectSchema</span><span class="p">(</span>
+    <span class="n">RLMObjectBase</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">object</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMObjectBaseObjectSchema</span><span class="p">(</span><span class="n">_</span> <span class="nv">object</span><span class="p">:</span> <span class="kt">RLMObjectBase</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt"><a href="Classes/RLMObjectSchema.html">RLMObjectSchema</a></span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>object</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An <code>RLMObjectBase</code> obtained via a Swift <code>Object</code> or <code><a href="Classes/RLMObject.html">RLMObject</a></code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The object schema which lists the managed properties for the object.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMObjectBase_Dynamic.h#L49">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMObjectBaseObjectForKeyedSubscript"></a>
+                    <a name="//apple_ref/objc/Function/RLMObjectBaseObjectForKeyedSubscript" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMObjectBaseObjectForKeyedSubscript">RLMObjectBaseObjectForKeyedSubscript</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the object corresponding to a key value.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>This function is useful only in specialized circumstances, for example, when building components
+      that integrate with Realm. If you are simply building an app on Realm, it is
+      recommended to retrieve key values via <code><a href="Classes/RLMObject.html">RLMObject</a></code>.</p>
+
+</div><div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>Will throw an <code>NSUndefinedKeyException</code> if <code>key</code> is not present on the object.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">extern</span> <span class="n">id</span> <span class="n">_Nullable</span> <span class="n">RLMObjectBaseObjectForKeyedSubscript</span><span class="p">(</span>
+    <span class="n">RLMObjectBase</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">object</span><span class="p">,</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">key</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMObjectBaseObjectForKeyedSubscript</span><span class="p">(</span><span class="n">_</span> <span class="nv">object</span><span class="p">:</span> <span class="kt">RLMObjectBase</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>object</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An <code>RLMObjectBase</code> obtained via a Swift <code>Object</code> or <code><a href="Classes/RLMObject.html">RLMObject</a></code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of the property.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>The object for the property requested.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMObjectBase_Dynamic.h#L65">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMObjectBaseSetObjectForKeyedSubscript"></a>
+                    <a name="//apple_ref/objc/Function/RLMObjectBaseSetObjectForKeyedSubscript" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMObjectBaseSetObjectForKeyedSubscript">RLMObjectBaseSetObjectForKeyedSubscript</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Sets a value for a key on the object.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>This function is useful only in specialized circumstances, for example, when building components
+      that integrate with Realm. If you are simply building an app on Realm, it is
+      recommended to set key values via <code><a href="Classes/RLMObject.html">RLMObject</a></code>.</p>
+
+</div><div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>Will throw an <code>NSUndefinedKeyException</code> if <code>key</code> is not present on the object.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">extern</span> <span class="kt">void</span> <span class="n">RLMObjectBaseSetObjectForKeyedSubscript</span><span class="p">(</span>
+    <span class="n">RLMObjectBase</span> <span class="o">*</span><span class="n">_Nullable</span> <span class="n">object</span><span class="p">,</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">_Nonnull</span> <span class="n">key</span><span class="p">,</span> <span class="n">id</span> <span class="n">_Nullable</span> <span class="n">obj</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMObjectBaseSetObjectForKeyedSubscript</span><span class="p">(</span><span class="n">_</span> <span class="nv">object</span><span class="p">:</span> <span class="kt">RLMObjectBase</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">obj</span><span class="p">:</span> <span class="kt">Any</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>object</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>An <code>RLMObjectBase</code> obtained via a Swift <code>Object</code> or <code><a href="Classes/RLMObject.html">RLMObject</a></code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>key</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The name of the property.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>obj</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The object to set as the value of the key.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMObjectBase_Dynamic.h#L80">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMVerifyHasPrimaryKey"></a>
+                    <a name="//apple_ref/objc/Function/RLMVerifyHasPrimaryKey" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMVerifyHasPrimaryKey">RLMVerifyHasPrimaryKey</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="kt">void</span> <span class="n">RLMVerifyHasPrimaryKey</span><span class="p">(</span><span class="n">Class</span> <span class="n">cls</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMVerifyHasPrimaryKey</span><span class="p">(</span><span class="n">_</span> <span class="nv">cls</span><span class="p">:</span> <span class="kt">AnyClass</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMObjectStore.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMRealmCreateAccessors"></a>
+                    <a name="//apple_ref/objc/Function/RLMRealmCreateAccessors" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMRealmCreateAccessors">RLMRealmCreateAccessors</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="kt">void</span> <span class="n">RLMRealmCreateAccessors</span><span class="p">(</span><span class="n"><a href="Classes/RLMSchema.html">RLMSchema</a></span> <span class="o">*</span><span class="n">schema</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMRealmCreateAccessors</span><span class="p">(</span><span class="n">_</span> <span class="nv">schema</span><span class="p">:</span> <span class="kt"><a href="Classes/RLMSchema.html">RLMSchema</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMObjectStore.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMAddObjectToRealm"></a>
+                    <a name="//apple_ref/objc/Function/RLMAddObjectToRealm" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMAddObjectToRealm">RLMAddObjectToRealm</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="kt">void</span> <span class="n">RLMAddObjectToRealm</span><span class="p">(</span><span class="n">RLMObjectBase</span> <span class="o">*</span><span class="n">object</span><span class="p">,</span> <span class="n"><a href="Classes/RLMRealm.html">RLMRealm</a></span> <span class="o">*</span><span class="n">realm</span><span class="p">,</span> <span class="n"><a href="Enums/RLMUpdatePolicy.html">RLMUpdatePolicy</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMAddObjectToRealm</span><span class="p">(</span><span class="n">_</span> <span class="nv">object</span><span class="p">:</span> <span class="kt">RLMObjectBase</span><span class="p">,</span> <span class="n">_</span> <span class="nv">realm</span><span class="p">:</span> <span class="kt"><a href="Classes/RLMRealm.html">RLMRealm</a></span><span class="p">,</span> <span class="nv">_</span><span class="p">:</span> <span class="kt"><a href="Enums/RLMUpdatePolicy.html">RLMUpdatePolicy</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMObjectStore.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMDeleteObjectFromRealm"></a>
+                    <a name="//apple_ref/objc/Function/RLMDeleteObjectFromRealm" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMDeleteObjectFromRealm">RLMDeleteObjectFromRealm</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="kt">void</span> <span class="n">RLMDeleteObjectFromRealm</span><span class="p">(</span><span class="n">RLMObjectBase</span> <span class="o">*</span><span class="n">object</span><span class="p">,</span> <span class="n"><a href="Classes/RLMRealm.html">RLMRealm</a></span> <span class="o">*</span><span class="n">realm</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMDeleteObjectFromRealm</span><span class="p">(</span><span class="n">_</span> <span class="nv">object</span><span class="p">:</span> <span class="kt">RLMObjectBase</span><span class="p">,</span> <span class="n">_</span> <span class="nv">realm</span><span class="p">:</span> <span class="kt"><a href="Classes/RLMRealm.html">RLMRealm</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMObjectStore.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMDeleteAllObjectsFromRealm"></a>
+                    <a name="//apple_ref/objc/Function/RLMDeleteAllObjectsFromRealm" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMDeleteAllObjectsFromRealm">RLMDeleteAllObjectsFromRealm</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="kt">void</span> <span class="n">RLMDeleteAllObjectsFromRealm</span><span class="p">(</span><span class="n"><a href="Classes/RLMRealm.html">RLMRealm</a></span> <span class="o">*</span><span class="n">realm</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMDeleteAllObjectsFromRealm</span><span class="p">(</span><span class="n">_</span> <span class="nv">realm</span><span class="p">:</span> <span class="kt"><a href="Classes/RLMRealm.html">RLMRealm</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMObjectStore.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMGetObjects"></a>
+                    <a name="//apple_ref/objc/Function/RLMGetObjects" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMGetObjects">RLMGetObjects</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n"><a href="Classes/RLMResults.html">RLMResults</a></span> <span class="o">*</span><span class="n">RLMGetObjects</span><span class="p">(</span><span class="n"><a href="Classes/RLMRealm.html">RLMRealm</a></span> <span class="o">*</span><span class="n">realm</span><span class="p">,</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">objectClassName</span><span class="p">,</span> <span class="n">NSPredicate</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">predicate</span><span class="p">)</span>
+<span class="n">NS_RETURNS_RETAINED</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMGetObjects</span><span class="p">(</span><span class="n">_</span> <span class="nv">realm</span><span class="p">:</span> <span class="kt"><a href="Classes/RLMRealm.html">RLMRealm</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">objectClassName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">predicate</span><span class="p">:</span> <span class="kt">NSPredicate</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt"><a href="Classes/RLMResults.html">RLMResults</a></span><span class="o">&lt;</span><span class="kt">AnyObject</span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMObjectStore.h#L59-L60">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMGetObject"></a>
+                    <a name="//apple_ref/objc/Function/RLMGetObject" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMGetObject">RLMGetObject</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">id</span> <span class="n">_Nullable</span> <span class="n">RLMGetObject</span><span class="p">(</span><span class="n"><a href="Classes/RLMRealm.html">RLMRealm</a></span> <span class="o">*</span><span class="n">realm</span><span class="p">,</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">objectClassName</span><span class="p">,</span> <span class="n">id</span> <span class="n">_Nullable</span> <span class="n">key</span><span class="p">)</span> <span class="n">NS_RETURNS_RETAINED</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMGetObject</span><span class="p">(</span><span class="n">_</span> <span class="nv">realm</span><span class="p">:</span> <span class="kt"><a href="Classes/RLMRealm.html">RLMRealm</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">objectClassName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">Any</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMObjectStore.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMCreateObjectInRealmWithValue"></a>
+                    <a name="//apple_ref/objc/Function/RLMCreateObjectInRealmWithValue" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMCreateObjectInRealmWithValue">RLMCreateObjectInRealmWithValue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">RLMObjectBase</span> <span class="o">*</span><span class="n">RLMCreateObjectInRealmWithValue</span><span class="p">(</span><span class="n"><a href="Classes/RLMRealm.html">RLMRealm</a></span> <span class="o">*</span><span class="n">realm</span><span class="p">,</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">className</span><span class="p">,</span>
+                                               <span class="n">id</span> <span class="n">_Nullable</span> <span class="n">value</span><span class="p">,</span> <span class="n"><a href="Enums/RLMUpdatePolicy.html">RLMUpdatePolicy</a></span> <span class="n">updatePolicy</span><span class="p">)</span>
+<span class="n">NS_RETURNS_RETAINED</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMCreateObjectInRealmWithValue</span><span class="p">(</span><span class="n">_</span> <span class="nv">realm</span><span class="p">:</span> <span class="kt"><a href="Classes/RLMRealm.html">RLMRealm</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">className</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Any</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">updatePolicy</span><span class="p">:</span> <span class="kt"><a href="Enums/RLMUpdatePolicy.html">RLMUpdatePolicy</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">RLMObjectBase</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMObjectStore.h#L66-L68">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMInitializeSwiftAccessorGenerics"></a>
+                    <a name="//apple_ref/objc/Function/RLMInitializeSwiftAccessorGenerics" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMInitializeSwiftAccessorGenerics">RLMInitializeSwiftAccessorGenerics</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="kt">void</span> <span class="n">RLMInitializeSwiftAccessorGenerics</span><span class="p">(</span><span class="n">RLMObjectBase</span> <span class="o">*</span><span class="n">object</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMInitializeSwiftAccessorGenerics</span><span class="p">(</span><span class="n">_</span> <span class="nv">object</span><span class="p">:</span> <span class="kt">RLMObjectBase</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMObjectStore.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMInitializeWithValue"></a>
+                    <a name="//apple_ref/objc/Function/RLMInitializeWithValue" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMInitializeWithValue">RLMInitializeWithValue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">FOUNDATION_EXTERN</span> <span class="kt">void</span> <span class="n">RLMInitializeWithValue</span><span class="p">(</span><span class="n">RLMObjectBase</span> <span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="p">,</span> <span class="n"><a href="Classes/RLMSchema.html">RLMSchema</a></span> <span class="o">*</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMInitializeWithValue</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">RLMObjectBase</span><span class="p">,</span> <span class="nv">_</span><span class="p">:</span> <span class="kt">Any</span><span class="p">,</span> <span class="nv">_</span><span class="p">:</span> <span class="kt"><a href="Classes/RLMSchema.html">RLMSchema</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMObject_Private.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMValidatedValueForProperty"></a>
+                    <a name="//apple_ref/objc/Function/RLMValidatedValueForProperty" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMValidatedValueForProperty">RLMValidatedValueForProperty</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">FOUNDATION_EXTERN</span> <span class="n">id</span> <span class="n">_Nullable</span> <span class="n">RLMValidatedValueForProperty</span><span class="p">(</span><span class="n">id</span> <span class="n">object</span><span class="p">,</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">key</span><span class="p">,</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">className</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMValidatedValueForProperty</span><span class="p">(</span><span class="n">_</span> <span class="nv">object</span><span class="p">:</span> <span class="kt">Any</span><span class="p">,</span> <span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">className</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMObject_Private.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMObjectBaseAreEqual"></a>
+                    <a name="//apple_ref/objc/Function/RLMObjectBaseAreEqual" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMObjectBaseAreEqual">RLMObjectBaseAreEqual</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">FOUNDATION_EXTERN</span> <span class="n">BOOL</span> <span class="n">RLMObjectBaseAreEqual</span><span class="p">(</span><span class="n">RLMObjectBase</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">o1</span><span class="p">,</span> <span class="n">RLMObjectBase</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">o2</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMObjectBaseAreEqual</span><span class="p">(</span><span class="n">_</span> <span class="nv">o1</span><span class="p">:</span> <span class="kt">RLMObjectBase</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">o2</span><span class="p">:</span> <span class="kt">RLMObjectBase</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMObject_Private.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMObjectBaseAddNotificationBlock"></a>
+                    <a name="//apple_ref/objc/Function/RLMObjectBaseAddNotificationBlock" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMObjectBaseAddNotificationBlock">RLMObjectBaseAddNotificationBlock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">FOUNDATION_EXTERN</span> <span class="n"><a href="Classes/RLMNotificationToken.html">RLMNotificationToken</a></span> <span class="o">*</span><span class="n">RLMObjectBaseAddNotificationBlock</span><span class="p">(</span><span class="n">RLMObjectBase</span> <span class="o">*</span><span class="n">obj</span><span class="p">,</span>
+                                                                          <span class="n">dispatch_queue_t</span> <span class="n">_Nullable</span> <span class="n">queue</span><span class="p">,</span>
+                                                                          <span class="n"><a href="Type%20Definitions.html#/c:RLMObject_Private.h@T@RLMObjectNotificationCallback">RLMObjectNotificationCallback</a></span> <span class="n">block</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMObjectBaseAddNotificationBlock</span><span class="p">(</span><span class="n">_</span> <span class="nv">obj</span><span class="p">:</span> <span class="kt">RLMObjectBase</span><span class="p">,</span> <span class="n">_</span> <span class="nv">queue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">?,</span> <span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="Type%20Definitions.html#/c:RLMObject_Private.h@T@RLMObjectNotificationCallback">RLMObjectNotificationCallback</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="Classes/RLMNotificationToken.html">RLMNotificationToken</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMObject_Private.h#L59-L61">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMObjectAddNotificationBlock"></a>
+                    <a name="//apple_ref/objc/Function/RLMObjectAddNotificationBlock" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMObjectAddNotificationBlock">RLMObjectAddNotificationBlock</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n"><a href="Classes/RLMNotificationToken.html">RLMNotificationToken</a></span> <span class="o">*</span><span class="n">RLMObjectAddNotificationBlock</span><span class="p">(</span><span class="n">RLMObjectBase</span> <span class="o">*</span><span class="n">obj</span><span class="p">,</span> <span class="n"><a href="Type%20Definitions.html#/c:RLMEmbeddedObject.h@T@RLMObjectChangeBlock">RLMObjectChangeBlock</a></span> <span class="n">block</span><span class="p">,</span>
+                                                    <span class="n">dispatch_queue_t</span> <span class="n">_Nullable</span> <span class="n">queue</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMObjectAddNotificationBlock</span><span class="p">(</span><span class="n">_</span> <span class="nv">obj</span><span class="p">:</span> <span class="kt">RLMObjectBase</span><span class="p">,</span> <span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="Type%20Definitions.html#/c:RLMEmbeddedObject.h@T@RLMObjectChangeBlock">RLMObjectChangeBlock</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">queue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt"><a href="Classes/RLMNotificationToken.html">RLMNotificationToken</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMObject_Private.h#L62-L63">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMIsObjectOrSubclass"></a>
+                    <a name="//apple_ref/objc/Function/RLMIsObjectOrSubclass" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMIsObjectOrSubclass">RLMIsObjectOrSubclass</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">FOUNDATION_EXTERN</span> <span class="n">BOOL</span> <span class="n">RLMIsObjectOrSubclass</span><span class="p">(</span><span class="n">Class</span> <span class="n">klass</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMIsObjectOrSubclass</span><span class="p">(</span><span class="n">_</span> <span class="nv">klass</span><span class="p">:</span> <span class="kt">AnyClass</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMObject_Private.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMIsObjectSubclass"></a>
+                    <a name="//apple_ref/objc/Function/RLMIsObjectSubclass" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMIsObjectSubclass">RLMIsObjectSubclass</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">FOUNDATION_EXTERN</span> <span class="n">BOOL</span> <span class="n">RLMIsObjectSubclass</span><span class="p">(</span><span class="n">Class</span> <span class="n">klass</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMIsObjectSubclass</span><span class="p">(</span><span class="n">_</span> <span class="nv">klass</span><span class="p">:</span> <span class="kt">AnyClass</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMObject_Private.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMObjectFreeze"></a>
+                    <a name="//apple_ref/objc/Function/RLMObjectFreeze" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMObjectFreeze">RLMObjectFreeze</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">FOUNDATION_EXTERN</span> <span class="n">id</span> <span class="n">RLMObjectFreeze</span><span class="p">(</span><span class="n">RLMObjectBase</span> <span class="o">*</span><span class="n">obj</span><span class="p">)</span> <span class="n">NS_RETURNS_RETAINED</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMObjectFreeze</span><span class="p">(</span><span class="n">_</span> <span class="nv">obj</span><span class="p">:</span> <span class="kt">RLMObjectBase</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMObject_Private.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMObjectThaw"></a>
+                    <a name="//apple_ref/objc/Function/RLMObjectThaw" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMObjectThaw">RLMObjectThaw</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">FOUNDATION_EXTERN</span> <span class="n">id</span> <span class="n">RLMObjectThaw</span><span class="p">(</span><span class="n">RLMObjectBase</span> <span class="o">*</span><span class="n">obj</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMObjectThaw</span><span class="p">(</span><span class="n">_</span> <span class="nv">obj</span><span class="p">:</span> <span class="kt">RLMObjectBase</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMObject_Private.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMObjectBaseGetCombineId"></a>
+                    <a name="//apple_ref/objc/Function/RLMObjectBaseGetCombineId" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMObjectBaseGetCombineId">RLMObjectBaseGetCombineId</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">FOUNDATION_EXTERN</span> <span class="kt">uint64_t</span> <span class="n">RLMObjectBaseGetCombineId</span><span class="p">(</span><span class="n">RLMObjectBase</span> <span class="o">*</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMObjectBaseGetCombineId</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt">RLMObjectBase</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">UInt64</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMObject_Private.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMGetOptional"></a>
+                    <a name="//apple_ref/objc/Function/RLMGetOptional" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMGetOptional">RLMGetOptional</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">FOUNDATION_EXTERN</span> <span class="n">id</span> <span class="n">_Nullable</span> <span class="n">RLMGetOptional</span><span class="p">(</span><span class="n"><a href="Classes/RLMOptionalBase.html">RLMOptionalBase</a></span> <span class="o">*</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMGetOptional</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt"><a href="Classes/RLMOptionalBase.html">RLMOptionalBase</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Any</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMOptionalBase.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMSetOptional"></a>
+                    <a name="//apple_ref/objc/Function/RLMSetOptional" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMSetOptional">RLMSetOptional</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">FOUNDATION_EXTERN</span> <span class="kt">void</span> <span class="n">RLMSetOptional</span><span class="p">(</span><span class="n"><a href="Classes/RLMOptionalBase.html">RLMOptionalBase</a></span> <span class="o">*</span><span class="p">,</span> <span class="n">id</span> <span class="n">_Nullable</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMSetOptional</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt"><a href="Classes/RLMOptionalBase.html">RLMOptionalBase</a></span><span class="p">,</span> <span class="nv">_</span><span class="p">:</span> <span class="kt">Any</span><span class="p">?)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMOptionalBase.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMInitializeManagedOptional"></a>
+                    <a name="//apple_ref/objc/Function/RLMInitializeManagedOptional" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMInitializeManagedOptional">RLMInitializeManagedOptional</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="kt">void</span> <span class="n">RLMInitializeManagedOptional</span><span class="p">(</span><span class="n"><a href="Classes/RLMOptionalBase.html">RLMOptionalBase</a></span> <span class="o">*</span><span class="p">,</span> <span class="n">RLMObjectBase</span> <span class="o">*</span><span class="n">parent</span><span class="p">,</span> <span class="n"><a href="Classes/RLMProperty.html">RLMProperty</a></span> <span class="o">*</span><span class="n">prop</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMInitializeManagedOptional</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt"><a href="Classes/RLMOptionalBase.html">RLMOptionalBase</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">parent</span><span class="p">:</span> <span class="kt">RLMObjectBase</span><span class="p">,</span> <span class="n">_</span> <span class="nv">prop</span><span class="p">:</span> <span class="kt"><a href="Classes/RLMProperty.html">RLMProperty</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMOptionalBase.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMInitializeUnmanagedOptional"></a>
+                    <a name="//apple_ref/objc/Function/RLMInitializeUnmanagedOptional" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMInitializeUnmanagedOptional">RLMInitializeUnmanagedOptional</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="kt">void</span> <span class="n">RLMInitializeUnmanagedOptional</span><span class="p">(</span><span class="n"><a href="Classes/RLMOptionalBase.html">RLMOptionalBase</a></span> <span class="o">*</span><span class="p">,</span> <span class="n">RLMObjectBase</span> <span class="o">*</span><span class="n">parent</span><span class="p">,</span> <span class="n"><a href="Classes/RLMProperty.html">RLMProperty</a></span> <span class="o">*</span><span class="n">prop</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMInitializeUnmanagedOptional</span><span class="p">(</span><span class="nv">_</span><span class="p">:</span> <span class="kt"><a href="Classes/RLMOptionalBase.html">RLMOptionalBase</a></span><span class="p">,</span> <span class="n">_</span> <span class="nv">parent</span><span class="p">:</span> <span class="kt">RLMObjectBase</span><span class="p">,</span> <span class="n">_</span> <span class="nv">prop</span><span class="p">:</span> <span class="kt"><a href="Classes/RLMProperty.html">RLMProperty</a></span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMOptionalBase.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMPropertyTypeIsComputed"></a>
+                    <a name="//apple_ref/objc/Function/RLMPropertyTypeIsComputed" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMPropertyTypeIsComputed">RLMPropertyTypeIsComputed</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">BOOL</span> <span class="n">RLMPropertyTypeIsComputed</span><span class="p">(</span><span class="n"><a href="Enums/RLMPropertyType.html">RLMPropertyType</a></span> <span class="n">propertyType</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMPropertyTypeIsComputed</span><span class="p">(</span><span class="n">_</span> <span class="nv">propertyType</span><span class="p">:</span> <span class="kt"><a href="Enums/RLMPropertyType.html">RLMPropertyType</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Bool</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMProperty_Private.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMValidateSwiftPropertyName"></a>
+                    <a name="//apple_ref/objc/Function/RLMValidateSwiftPropertyName" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMValidateSwiftPropertyName">RLMValidateSwiftPropertyName</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">FOUNDATION_EXTERN</span> <span class="kt">void</span> <span class="n">RLMValidateSwiftPropertyName</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">name</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMValidateSwiftPropertyName</span><span class="p">(</span><span class="n">_</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMProperty_Private.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:RLMProperty_Private.h@F@RLMTypeToString"></a>
+                    <a name="//apple_ref/objc/Function/RLMTypeToString" class="dashAnchor"></a>
+                    <a class="token" href="#/c:RLMProperty_Private.h@F@RLMTypeToString">RLMTypeToString</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="k">static</span> <span class="kr">inline</span> <span class="n">NSString</span> <span class="o">*</span><span class="nf">RLMTypeToString</span><span class="p">(</span><span class="n"><a href="Enums/RLMPropertyType.html">RLMPropertyType</a></span> <span class="n">type</span><span class="p">)</span> <span class="p">{</span>
+    <span class="k">switch</span> <span class="p">(</span><span class="n">type</span><span class="p">)</span> <span class="p">{</span>
+        <span class="k">case</span> <span class="n">RLMPropertyTypeString</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s">@"string"</span><span class="p">;</span>
+        <span class="k">case</span> <span class="n">RLMPropertyTypeInt</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s">@"int"</span><span class="p">;</span>
+        <span class="k">case</span> <span class="n">RLMPropertyTypeBool</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s">@"bool"</span><span class="p">;</span>
+        <span class="k">case</span> <span class="n">RLMPropertyTypeDate</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s">@"date"</span><span class="p">;</span>
+        <span class="k">case</span> <span class="n">RLMPropertyTypeData</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s">@"data"</span><span class="p">;</span>
+        <span class="k">case</span> <span class="n">RLMPropertyTypeDouble</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s">@"double"</span><span class="p">;</span>
+        <span class="k">case</span> <span class="n">RLMPropertyTypeFloat</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s">@"float"</span><span class="p">;</span>
+        <span class="k">case</span> <span class="n">RLMPropertyTypeAny</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s">@"any"</span><span class="p">;</span>
+        <span class="k">case</span> <span class="n">RLMPropertyTypeObject</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s">@"object"</span><span class="p">;</span>
+        <span class="k">case</span> <span class="n">RLMPropertyTypeLinkingObjects</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s">@"linking objects"</span><span class="p">;</span>
+        <span class="k">case</span> <span class="n">RLMPropertyTypeDecimal128</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s">@"decimal128"</span><span class="p">;</span>
+        <span class="k">case</span> <span class="n">RLMPropertyTypeObjectId</span><span class="p">:</span>
+            <span class="k">return</span> <span class="s">@"object id"</span><span class="p">;</span>
+    <span class="p">}</span>
+    <span class="k">return</span> <span class="s">@"Unknown"</span><span class="p">;</span>
+<span class="p">}</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMTypeToString</span><span class="p">(</span><span class="n">_</span> <span class="nv">type</span><span class="p">:</span> <span class="kt"><a href="Enums/RLMPropertyType.html">RLMPropertyType</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMProperty_Private.h#L31-L59">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMRealmPathForFile"></a>
+                    <a name="//apple_ref/objc/Function/RLMRealmPathForFile" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMRealmPathForFile">RLMRealmPathForFile</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">FOUNDATION_EXTERN</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">RLMRealmPathForFile</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">fileName</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMRealmPathForFile</span><span class="p">(</span><span class="n">_</span> <span class="nv">fileName</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMRealmConfiguration_Private.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMRealmPathForFileAndBundleIdentifier"></a>
+                    <a name="//apple_ref/objc/Function/RLMRealmPathForFileAndBundleIdentifier" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMRealmPathForFileAndBundleIdentifier">RLMRealmPathForFileAndBundleIdentifier</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">FOUNDATION_EXTERN</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">RLMRealmPathForFileAndBundleIdentifier</span><span class="p">(</span><span class="n">NSString</span> <span class="o">*</span><span class="n">fileName</span><span class="p">,</span> <span class="n">NSString</span> <span class="o">*</span><span class="n">mainBundleIdentifier</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMRealmPathForFileAndBundleIdentifier</span><span class="p">(</span><span class="n">_</span> <span class="nv">fileName</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="n">_</span> <span class="nv">mainBundleIdentifier</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">String</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMRealmConfiguration_Private.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMDisableSyncToDisk"></a>
+                    <a name="//apple_ref/objc/Function/RLMDisableSyncToDisk" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMDisableSyncToDisk">RLMDisableSyncToDisk</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">FOUNDATION_EXTERN</span> <span class="kt">void</span> <span class="n">RLMDisableSyncToDisk</span><span class="p">(</span><span class="kt">void</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMDisableSyncToDisk</span><span class="p">()</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMRealm_Private.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMSetSkipBackupAttribute"></a>
+                    <a name="//apple_ref/objc/Function/RLMSetSkipBackupAttribute" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMSetSkipBackupAttribute">RLMSetSkipBackupAttribute</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">FOUNDATION_EXTERN</span> <span class="kt">void</span> <span class="n">RLMSetSkipBackupAttribute</span><span class="p">(</span><span class="n">bool</span> <span class="n">value</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMSetSkipBackupAttribute</span><span class="p">(</span><span class="n">_</span> <span class="nv">value</span><span class="p">:</span> <span class="kt">Bool</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMRealm_Private.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMRealmValidatedEncryptionKey"></a>
+                    <a name="//apple_ref/objc/Function/RLMRealmValidatedEncryptionKey" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMRealmValidatedEncryptionKey">RLMRealmValidatedEncryptionKey</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">FOUNDATION_EXTERN</span> <span class="n">NSData</span> <span class="o">*</span> <span class="n">_Nullable</span> <span class="n">RLMRealmValidatedEncryptionKey</span><span class="p">(</span><span class="n">NSData</span> <span class="o">*</span><span class="n">key</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMRealmValidatedEncryptionKey</span><span class="p">(</span><span class="n">_</span> <span class="nv">key</span><span class="p">:</span> <span class="kt">Data</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Data</span><span class="p">?</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMRealm_Private.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMCastToSyncSubscription"></a>
+                    <a name="//apple_ref/objc/Function/RLMCastToSyncSubscription" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMCastToSyncSubscription">RLMCastToSyncSubscription</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">FOUNDATION_EXTERN</span> <span class="n">RLMSyncSubscription</span> <span class="o">*</span><span class="n">RLMCastToSyncSubscription</span><span class="p">(</span><span class="n">id</span> <span class="n">obj</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMCastToSyncSubscription</span><span class="p">(</span><span class="n">_</span> <span class="nv">obj</span><span class="p">:</span> <span class="kt">Any</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">RLMSyncSubscription</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMRealm_Private.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMSetAsyncOpenQueue"></a>
+                    <a name="//apple_ref/objc/Function/RLMSetAsyncOpenQueue" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMSetAsyncOpenQueue">RLMSetAsyncOpenQueue</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="n">FOUNDATION_EXTERN</span> <span class="kt">void</span> <span class="n">RLMSetAsyncOpenQueue</span><span class="p">(</span><span class="n">dispatch_queue_t</span> <span class="n">queue</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMSetAsyncOpenQueue</span><span class="p">(</span><span class="n">_</span> <span class="nv">queue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMRealm_Private.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/c:@F@RLMRealmTranslateException"></a>
+                    <a name="//apple_ref/objc/Function/RLMRealmTranslateException" class="dashAnchor"></a>
+                    <a class="token" href="#/c:@F@RLMRealmTranslateException">RLMRealmTranslateException</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Undocumented</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Objective-C</p>
+                          <pre class="highlight objective_c"><code><span class="kt">void</span> <span class="n">RLMRealmTranslateException</span><span class="p">(</span><span class="n">NSError</span> <span class="o">**</span><span class="n">error</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="kt">RLMRealmTranslateException</span><span class="p">(</span><span class="n">_</span> <span class="nv">error</span><span class="p">:</span> <span class="kt">NSErrorPointer</span><span class="p">)</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMRealm_Private.h#L">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </section>
+        </section>
+        <section id="footer">
+          <p>&copy; YYYY <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a>. All rights reserved. (Last updated: YYYY-MM-DD)</p>
+          <p>Generated by <a class="link" href="https://github.com/realm/jazzy" target="_blank" rel="external">jazzy ♪♫ vX.X.X</a>, a <a class="link" href="https://realm.io" target="_blank" rel="external">Realm</a> project.</p>
+        </section>
+      </article>
+    </div>
+  </body>
+</div>
+</html>
