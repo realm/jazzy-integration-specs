@@ -69,4 +69,22 @@ public class MiscMarkdown {
     ///
     public func latexMath() {
     }
+
+    /// Footnotes (1)
+    ///
+    /// Footnote numbering restarts [^1]
+    ///
+    /// [^1]: for each markdown unit.
+    public func footnote1() {
+    }
+
+    /// Footnotes (2)
+    ///
+    /// The actual numbering [^2] is done by redcarpet.
+    ///
+    /// [^2]: The backlink here:
+    ///
+    ///       ...stays within `footnote2()`.
+    public func footnote2() {
+    }
 }
