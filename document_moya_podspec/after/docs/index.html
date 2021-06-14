@@ -387,10 +387,11 @@ generated framework they&rsquo;d like, <code>Moya</code>, <code>RxMoya</code>, o
 <p>Then run <code>carthage update</code>.</p>
 
 <p>If this is your first time using Carthage in the project, you&rsquo;ll need to go through some additional steps as explained <a href="https://github.com/Carthage/Carthage#adding-frameworks-to-an-application">over at Carthage</a>.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>At this time, Carthage does not provide a way to build only specific repository submodules. All submodules and their dependencies will be built with the above command. However, you don&rsquo;t need to copy frameworks you aren&rsquo;t using into your project. For instance, if you aren&rsquo;t using <code>ReactiveSwift</code>, feel free to delete that framework along with <code>ReactiveMoya</code> from the Carthage Build directory after <code>carthage update</code> completes. Or if you are using <code>ReactiveSwift</code> but not <code>RxSwift</code>, then <code>RxMoya</code>, <code>RxTest</code>, <code>RxCocoa</code>, etc. can safely be deleted.</p>
 
-<blockquote>
-<p>NOTE: At this time, Carthage does not provide a way to build only specific repository submodules. All submodules and their dependencies will be built with the above command. However, you don&rsquo;t need to copy frameworks you aren&rsquo;t using into your project. For instance, if you aren&rsquo;t using <code>ReactiveSwift</code>, feel free to delete that framework along with <code>ReactiveMoya</code> from the Carthage Build directory after <code>carthage update</code> completes. Or if you are using <code>ReactiveSwift</code> but not <code>RxSwift</code>, then <code>RxMoya</code>, <code>RxTest</code>, <code>RxCocoa</code>, etc. can safely be deleted.</p>
-</blockquote>
+</div>
 <h3 id='manually' class='heading'>Manually</h3>
 
 <ul>
