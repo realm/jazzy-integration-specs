@@ -87,4 +87,45 @@ public class MiscMarkdown {
     ///       ...stays within `footnote2()`.
     public func footnote2() {
     }
+
+    /// DocC link format
+    ///
+    /// You can use any number of backticks as long as they balance.
+    ///
+    /// Formats:
+    /// * ``PublicTopLevelClass``
+    /// * ``ClassWithInitializers/init(a:)``
+    /// * ``<doc:ClassWithInitializers/init(a:)>``
+    /// * `PublicTopLevelClass-swift.class`
+    /// * ````ImplicitlyInternalTopLevelClass/NestedClass/ee()-j8nf````
+    public func docCLinks() {
+    }
+
+    /// DocC callouts
+    ///
+    /// > important: Do not run
+    ///
+    /// Here comes a tip:
+    ///
+    /// > Tip: Always walk
+    /// >
+    /// > Another paragraph in the tip.
+    ///
+    /// Warnings have a color.
+    /// > Warning: Be alert
+    ///
+    /// Non-callout lines are required between callouts.
+    ///
+    /// > experiment: Nested callouts...
+    /// > > experiment: ...work.
+    /// > >
+    /// > > They work in DocC too though this might not be intentional.
+    ///
+    /// Finally:
+    ///
+    /// > Malformed or untitled callouts appear as *Note*s in DocC but jazzy
+    /// > shows them as traditional block-quotes for compatibility with GFM
+    /// > and existing docs.
+    public func docCCallouts() {
+    }
 }
