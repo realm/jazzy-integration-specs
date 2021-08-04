@@ -8,6 +8,8 @@ Autolink to `Operators_Namespace.<(...)`.
 
 Autolink to `GenericStruct<Anything>` links to `GenericStruct`.
 
+Space in backticks ` `.
+
 Lorem ipsum dolor sit amet, consectetur[^2] adipiscing elit. Nunc eget urna
 ligula. Nunc id augue consequat, pulvinar leo et, porttitor nunc. In venenatis
 ipsum[^1] in turpis volutpat gravida. Nulla facilisi.
