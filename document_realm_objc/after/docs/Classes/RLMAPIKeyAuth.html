@@ -733,7 +733,7 @@
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">createAPIKey</span><span class="p">(</span><span class="n">named</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Type%20Definitions.html#/c:RLMAPIKeyAuth.h@T@RLMOptionalUserAPIKeyBlock">RLMOptionalUserAPIKeyBlock</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">createAPIKey</span><span class="p">(</span><span class="n">named</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span><span class="p">)</span> <span class="n">async</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RLMUserAPIKey.html">RLMUserAPIKey</a></span></code></pre>
 
                         </div>
                       </div>
@@ -800,7 +800,7 @@
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">fetchAPIKey</span><span class="p">(</span><span class="n">_</span> <span class="nv">objectId</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMObjectId.html">RLMObjectId</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Type%20Definitions.html#/c:RLMAPIKeyAuth.h@T@RLMOptionalUserAPIKeyBlock">RLMOptionalUserAPIKeyBlock</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">fetchAPIKey</span><span class="p">(</span><span class="n">_</span> <span class="nv">objectId</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMObjectId.html">RLMObjectId</a></span><span class="p">)</span> <span class="n">async</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RLMUserAPIKey.html">RLMUserAPIKey</a></span></code></pre>
 
                         </div>
                       </div>
@@ -866,7 +866,7 @@
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">fetchAPIKeys</span><span class="p">(</span><span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Type%20Definitions.html#/c:RLMAPIKeyAuth.h@T@RLMUserAPIKeysBlock">RLMUserAPIKeysBlock</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">fetchAPIKeys</span><span class="p">()</span> <span class="n">async</span> <span class="k">throws</span> <span class="o">-&gt;</span> <span class="p">[</span><span class="kt"><a href="../Classes/RLMUserAPIKey.html">RLMUserAPIKey</a></span><span class="p">]</span></code></pre>
 
                         </div>
                       </div>
@@ -921,7 +921,7 @@
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">deleteAPIKey</span><span class="p">(</span><span class="n">_</span> <span class="nv">objectId</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMObjectId.html">RLMObjectId</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Type%20Definitions.html#/c:RLMAPIKeyAuth.h@T@RLMAPIKeyAuthOptionalErrorBlock">RLMAPIKeyAuthOptionalErrorBlock</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">deleteAPIKey</span><span class="p">(</span><span class="n">_</span> <span class="nv">objectId</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMObjectId.html">RLMObjectId</a></span><span class="p">)</span> <span class="n">async</span> <span class="k">throws</span></code></pre>
 
                         </div>
                       </div>
@@ -988,7 +988,7 @@
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">enableAPIKey</span><span class="p">(</span><span class="n">_</span> <span class="nv">objectId</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMObjectId.html">RLMObjectId</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Type%20Definitions.html#/c:RLMAPIKeyAuth.h@T@RLMAPIKeyAuthOptionalErrorBlock">RLMAPIKeyAuthOptionalErrorBlock</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">enableAPIKey</span><span class="p">(</span><span class="n">_</span> <span class="nv">objectId</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMObjectId.html">RLMObjectId</a></span><span class="p">)</span> <span class="n">async</span> <span class="k">throws</span></code></pre>
 
                         </div>
                       </div>
@@ -1055,7 +1055,7 @@
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">disableAPIKey</span><span class="p">(</span><span class="n">_</span> <span class="nv">objectId</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMObjectId.html">RLMObjectId</a></span><span class="p">,</span> <span class="nv">completion</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Type%20Definitions.html#/c:RLMAPIKeyAuth.h@T@RLMAPIKeyAuthOptionalErrorBlock">RLMAPIKeyAuthOptionalErrorBlock</a></span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">disableAPIKey</span><span class="p">(</span><span class="n">_</span> <span class="nv">objectId</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMObjectId.html">RLMObjectId</a></span><span class="p">)</span> <span class="n">async</span> <span class="k">throws</span></code></pre>
 
                         </div>
                       </div>

@@ -895,7 +895,7 @@ should always be the first operation in the pipeline.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@frozen</span>
-<span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ObjectChangeset</span><span class="o">&lt;</span><span class="kt">O</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">Publisher</span> <span class="k">where</span> <span class="kt">O</span> <span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:10RealmSwift6Objecta">Object</a></span></code></pre>
+<span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ObjectChangeset</span><span class="o">&lt;</span><span class="kt">O</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">Publisher</span> <span class="k">where</span> <span class="kt">O</span> <span class="p">:</span> <span class="kt">RealmSwiftObject</span></code></pre>
 
                         </div>
                       </div>
@@ -933,7 +933,7 @@ should always be the first operation in the pipeline.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ObjectChangesetWithToken</span><span class="o">&lt;</span><span class="kt">O</span><span class="p">,</span> <span class="kt">T</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">Publisher</span> <span class="k">where</span> <span class="kt">O</span> <span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:10RealmSwift6Objecta">Object</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">class</span> <span class="kt">ObjectChangesetWithToken</span><span class="o">&lt;</span><span class="kt">O</span><span class="p">,</span> <span class="kt">T</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">Publisher</span> <span class="k">where</span> <span class="kt">O</span> <span class="p">:</span> <span class="kt">RealmSwiftObject</span></code></pre>
 
                         </div>
                       </div>
@@ -965,7 +965,7 @@ should always be the first operation in the pipeline.</p>
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@frozen</span>
-<span class="kd">public</span> <span class="kd">struct</span> <span class="kt">MakeThreadSafeObjectChangeset</span><span class="o">&lt;</span><span class="kt">Upstream</span><span class="p">,</span> <span class="kt">T</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">Publisher</span> <span class="k">where</span> <span class="kt">Upstream</span> <span class="p">:</span> <span class="kt">Publisher</span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:10RealmSwift6Objecta">Object</a></span><span class="p">,</span> <span class="kt">Upstream</span><span class="o">.</span><span class="kt">Output</span> <span class="o">==</span> <span class="kt"><a href="../Enums/ObjectChange.html">ObjectChange</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
+<span class="kd">public</span> <span class="kd">struct</span> <span class="kt">MakeThreadSafeObjectChangeset</span><span class="o">&lt;</span><span class="kt">Upstream</span><span class="p">,</span> <span class="kt">T</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">Publisher</span> <span class="k">where</span> <span class="kt">Upstream</span> <span class="p">:</span> <span class="kt">Publisher</span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">RealmSwiftObject</span><span class="p">,</span> <span class="kt">Upstream</span><span class="o">.</span><span class="kt">Output</span> <span class="o">==</span> <span class="kt"><a href="../Enums/ObjectChange.html">ObjectChange</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
@@ -999,7 +999,7 @@ that emits <code><a href="../Enums/ObjectChange.html">ObjectChange</a></code>.</
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@frozen</span>
-<span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeferredHandoverObjectChangeset</span><span class="o">&lt;</span><span class="kt">Upstream</span><span class="p">,</span> <span class="kt">T</span><span class="p">,</span> <span class="kt">S</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">Publisher</span> <span class="k">where</span> <span class="kt">Upstream</span> <span class="p">:</span> <span class="kt">Publisher</span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="../Typealiases.html#/s:10RealmSwift6Objecta">Object</a></span><span class="p">,</span> <span class="kt">S</span> <span class="p">:</span> <span class="kt">Scheduler</span><span class="p">,</span> <span class="kt">Upstream</span><span class="o">.</span><span class="kt">Output</span> <span class="o">==</span> <span class="kt"><a href="../Enums/ObjectChange.html">ObjectChange</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
+<span class="kd">public</span> <span class="kd">struct</span> <span class="kt">DeferredHandoverObjectChangeset</span><span class="o">&lt;</span><span class="kt">Upstream</span><span class="p">,</span> <span class="kt">T</span><span class="p">,</span> <span class="kt">S</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">Publisher</span> <span class="k">where</span> <span class="kt">Upstream</span> <span class="p">:</span> <span class="kt">Publisher</span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">RealmSwiftObject</span><span class="p">,</span> <span class="kt">S</span> <span class="p">:</span> <span class="kt">Scheduler</span><span class="p">,</span> <span class="kt">Upstream</span><span class="o">.</span><span class="kt">Output</span> <span class="o">==</span> <span class="kt"><a href="../Enums/ObjectChange.html">ObjectChange</a></span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>

@@ -1,4 +1,4 @@
-COCOAPODS_SKIP_UPDATE_MESSAGE=TRUE JAZZY_FAKE_DATE=YYYY-MM-DD JAZZY_FAKE_MODULE_VERSION=Y.Y.Y JAZZY_FAKE_VERSION=X.X.X JAZZY_INTEGRATION_SPECS=TRUE ruby ROOT/bin/jazzy --skip-undocumented --clean 2>&1
+COCOAPODS_SKIP_UPDATE_MESSAGE=TRUE JAZZY_FAKE_DATE=YYYY-MM-DD JAZZY_FAKE_MODULE_VERSION=Y.Y.Y JAZZY_FAKE_VERSION=X.X.X JAZZY_INTEGRATION_SPECS=TRUE ruby ROOT/bin/jazzy --skip-undocumented --clean --xcodebuild-arguments -destination,'platform=OS X' 2>&1
 Using config file ROOT/tmp/document_alamofire/.jazzy.yaml
 Running xcodebuild
 Parsing AFError.swift (1/35)
