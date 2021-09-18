@@ -242,3 +242,25 @@ struct PropertyWrapperClient {
     @Nop
     var v: String
 }
+
+// MARK: SPI
+
+/// A type available in a SPI group
+@_spi(JazzySPI)
+public class PublicSPIClass {
+    /// Implicitly in the class's SPI group
+    public func implicitSPIMethod() {}
+
+    /// Explicitly in a SPI group
+    @_spi(JazzySPI)
+    public func explicitSPIMethod() {}
+}
+
+// Add a SPI method to an existing class.
+// Demonstrates the limitation that doing it
+// this way loses the `@spi` marker.
+@_spi(JazzySPI)
+extension PublicTopLevelClass {
+    /// Method added via a `@spi` extension.
+    public func extensionSPIMethod() {}
+}
