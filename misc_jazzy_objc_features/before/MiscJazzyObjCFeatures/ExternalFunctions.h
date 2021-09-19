@@ -28,3 +28,14 @@ FOUNDATION_EXPORT void *functionB(double paramC) __attribute__((deprecated("Use 
 
 /// A function without description for return value.
 FOUNDATION_EXPORT int functionC();
+
+/**
+ A union
+ */
+union Data {
+  int i;
+  float f;
+};
+
+/// A typedef of a union
+typedef union Data Data;
