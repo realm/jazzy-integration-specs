@@ -264,3 +264,34 @@ extension PublicTopLevelClass {
     /// Method added via a `@spi` extension.
     public func extensionSPIMethod() {}
 }
+
+// MARK: Concurrency
+
+/// An actor
+@available(macOS 12.0.0, *)
+public actor PublicActor {
+    /// Regular method - sync version
+    public func normalMethod() {}
+
+    /// Regular method - async version
+    public func normalMethod() async {}
+
+    /// Method with attributes
+    public nonisolated func nonisolatedMethod(other: isolated PublicActor) async {}
+}
+
+/// A protocol to demonstrate interaction of async and default implementation annotations
+@available(macOS 12.0.0, *)
+protocol AsyncProtocol {
+    /// A sync version of method
+    func method()
+
+    /// An async version of the method
+    func method() async
+}
+
+@available(macOS 12.0.0, *)
+extension AsyncProtocol {
+    /// Default implementation of the async version
+    func method() async {}
+}
