@@ -727,7 +727,7 @@
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">RLMBSONType</span> <span class="p">:</span> <span class="kt">UInt</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">RLMBSONType</span> <span class="p">:</span> <span class="kt">UInt</span><span class="p">,</span> <span class="kd">@unchecked</span> <span class="kt">Sendable</span></code></pre>
 
                         </div>
                       </div>
@@ -778,7 +778,7 @@
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@frozen</span> <span class="kd">enum</span> <span class="kt">RLMPropertyType</span> <span class="p">:</span> <span class="kt">Int32</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@frozen</span> <span class="kd">enum</span> <span class="kt">RLMPropertyType</span> <span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="kd">@unchecked</span> <span class="kt">Sendable</span></code></pre>
 
                         </div>
                       </div>
@@ -851,7 +851,7 @@ Realm error domain specified in <code><a href="Constants.html#/c:@RLMErrorDomain
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@frozen</span> <span class="kd">enum</span> <span class="kt">RLMHTTPMethod</span> <span class="p">:</span> <span class="kt">Int32</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@frozen</span> <span class="kd">enum</span> <span class="kt">RLMHTTPMethod</span> <span class="p">:</span> <span class="kt">Int32</span><span class="p">,</span> <span class="kd">@unchecked</span> <span class="kt">Sendable</span></code></pre>
 
                         </div>
                       </div>
@@ -891,7 +891,7 @@ Realm error domain specified in <code><a href="Constants.html#/c:@RLMErrorDomain
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">RLMUpdatePolicy</span> <span class="p">:</span> <span class="kt">UInt</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">RLMUpdatePolicy</span> <span class="p">:</span> <span class="kt">UInt</span><span class="p">,</span> <span class="kd">@unchecked</span> <span class="kt">Sendable</span></code></pre>
 
                         </div>
                       </div>
@@ -931,7 +931,7 @@ Realm error domain specified in <code><a href="Constants.html#/c:@RLMErrorDomain
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@frozen</span> <span class="kd">enum</span> <span class="kt">RLMSyncStopPolicy</span> <span class="p">:</span> <span class="kt">UInt</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@frozen</span> <span class="kd">enum</span> <span class="kt">RLMSyncStopPolicy</span> <span class="p">:</span> <span class="kt">UInt</span><span class="p">,</span> <span class="kd">@unchecked</span> <span class="kt">Sendable</span></code></pre>
 
                         </div>
                       </div>
@@ -967,7 +967,7 @@ Realm error domain specified in <code><a href="Constants.html#/c:@RLMErrorDomain
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@frozen</span> <span class="kd">enum</span> <span class="kt">RLMSyncLogLevel</span> <span class="p">:</span> <span class="kt">UInt</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@frozen</span> <span class="kd">enum</span> <span class="kt">RLMSyncLogLevel</span> <span class="p">:</span> <span class="kt">UInt</span><span class="p">,</span> <span class="kd">@unchecked</span> <span class="kt">Sendable</span></code></pre>
 
                         </div>
                       </div>
@@ -1003,7 +1003,7 @@ Realm error domain specified in <code><a href="Constants.html#/c:@RLMErrorDomain
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">RLMSyncSessionState</span> <span class="p">:</span> <span class="kt">UInt</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">RLMSyncSessionState</span> <span class="p">:</span> <span class="kt">UInt</span><span class="p">,</span> <span class="kd">@unchecked</span> <span class="kt">Sendable</span></code></pre>
 
                         </div>
                       </div>
@@ -1040,7 +1040,7 @@ the Active state will always be Disconnected.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">RLMSyncConnectionState</span> <span class="p">:</span> <span class="kt">UInt</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">RLMSyncConnectionState</span> <span class="p">:</span> <span class="kt">UInt</span><span class="p">,</span> <span class="kd">@unchecked</span> <span class="kt">Sendable</span></code></pre>
 
                         </div>
                       </div>
@@ -1079,7 +1079,7 @@ how many bytes have been uploaded or downloaded, for example to show progress in
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@frozen</span> <span class="kd">enum</span> <span class="kt">RLMSyncProgressDirection</span> <span class="p">:</span> <span class="kt">UInt</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@frozen</span> <span class="kd">enum</span> <span class="kt">RLMSyncProgressDirection</span> <span class="p">:</span> <span class="kt">UInt</span><span class="p">,</span> <span class="kd">@unchecked</span> <span class="kt">Sendable</span></code></pre>
 
                         </div>
                       </div>
@@ -1118,7 +1118,7 @@ how many bytes have been uploaded or downloaded, for example to show progress in
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">RLMSyncProgressMode</span> <span class="p">:</span> <span class="kt">UInt</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">RLMSyncProgressMode</span> <span class="p">:</span> <span class="kt">UInt</span><span class="p">,</span> <span class="kd">@unchecked</span> <span class="kt">Sendable</span></code></pre>
 
                         </div>
                       </div>
@@ -1273,7 +1273,7 @@ error handler, or a callback on a sync-related API that performs asynchronous wo
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">RLMSyncSystemErrorKind</span> <span class="p">:</span> <span class="kt">UInt</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">RLMSyncSystemErrorKind</span> <span class="p">:</span> <span class="kt">UInt</span><span class="p">,</span> <span class="kd">@unchecked</span> <span class="kt">Sendable</span></code></pre>
 
                         </div>
                       </div>
@@ -1309,7 +1309,7 @@ error handler, or a callback on a sync-related API that performs asynchronous wo
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">RLMUserState</span> <span class="p">:</span> <span class="kt">UInt</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">enum</span> <span class="kt">RLMUserState</span> <span class="p">:</span> <span class="kt">UInt</span><span class="p">,</span> <span class="kd">@unchecked</span> <span class="kt">Sendable</span></code></pre>
 
                         </div>
                       </div>
