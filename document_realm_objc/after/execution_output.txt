@@ -16,6 +16,12 @@ COCOAPODS_SKIP_UPDATE_MESSAGE=TRUE JAZZY_FAKE_DATE=YYYY-MM-DD JAZZY_FAKE_MODULE_
 '\ \ ga\(\'send\',\ \'pageview\'\)\;'
 '\</script\>'
 ' 2>&1
+<module-includes>:1:9: note: in file included from <module-includes>:1:
+#import "Realm/Realm.h"
+        ^
+ROOT/tmp/document_realm_objc/include/Realm/Realm.h:60:1: warning: umbrella header for module 'Realm' does not include header 'RLMPlatform.h'
+
+^
 Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: type definition RLMOptionalErrorBlock, type definition RLMOptionalErrorBlock
 Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: type definition RLMPropertyType, type definition RLMPropertyType, type definition RLMPropertyType
 Found conflicting type declarations with the same name, which may indicate a build issue or a bug in Jazzy: type definition RLMObjectChangeBlock, type definition RLMObjectChangeBlock
