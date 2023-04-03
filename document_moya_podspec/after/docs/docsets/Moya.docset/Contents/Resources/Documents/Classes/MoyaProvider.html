@@ -97,6 +97,9 @@
             <a href="../Extensions.html">Extensions</a>
             <ul class="nav-group-tasks">
               <li class="nav-group-task">
+                <a href="../Extensions/AnyPublisher.html">AnyPublisher</a>
+              </li>
+              <li class="nav-group-task">
                 <a href="../Extensions/Method.html">Method</a>
               </li>
               <li class="nav-group-task">
@@ -524,7 +527,7 @@ e.g. for logging, network activity indicator or credentials.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="kd">internal(set)</span> <span class="k">var</span> <span class="nv">inflightRequests</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/Endpoint.html">Endpoint</a></span> <span class="p">:</span> <span class="p">[</span><span class="kt">Moya</span><span class="o">.</span><span class="kt"><a href="../Typealiases.html#/s:4Moya10Completiona">Completion</a></span><span class="p">]]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">open</span> <span class="k">var</span> <span class="nv">inflightRequests</span><span class="p">:</span> <span class="p">[</span><span class="kt"><a href="../Classes/Endpoint.html">Endpoint</a></span> <span class="p">:</span> <span class="p">[</span><span class="kt">Moya</span><span class="o">.</span><span class="kt"><a href="../Typealiases.html#/s:4Moya10Completiona">Completion</a></span><span class="p">]]</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -942,6 +945,95 @@ Note: this was previously in an extension, however it must be in the original cl
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">final</span> <span class="kd">class</span> <span class="kd">func</span> <span class="nf">delayedStub</span><span class="p">(</span><span class="n">_</span> <span class="nv">seconds</span><span class="p">:</span> <span class="kt">TimeInterval</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="p">(</span><span class="kt">Target</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Moya</span><span class="o">.</span><span class="kt"><a href="../Enums/StubBehavior.html">StubBehavior</a></span></code></pre>
+
+                        </div>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Moya0A8ProviderC16requestPublisher_13callbackQueue7Combine03AnyD0VyAA8ResponseCAA0A5ErrorOGx_So17OS_dispatch_queueCSgtF"></a>
+                    <a name="//apple_ref/swift/Method/requestPublisher(_:callbackQueue:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Moya0A8ProviderC16requestPublisher_13callbackQueue7Combine03AnyD0VyAA8ResponseCAA0A5ErrorOGx_So17OS_dispatch_queueCSgtF">requestPublisher(_:<wbr>callbackQueue:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Designated request-making method.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">requestPublisher</span><span class="p">(</span><span class="n">_</span> <span class="nv">target</span><span class="p">:</span> <span class="kt">Target</span><span class="p">,</span> <span class="nv">callbackQueue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AnyPublisher</span><span class="o">&lt;</span><span class="kt"><a href="../Classes/Response.html">Response</a></span><span class="p">,</span> <span class="kt"><a href="../Enums/MoyaError.html">MoyaError</a></span><span class="o">&gt;</span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>target</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Entity, which provides specifications necessary for a <code>MoyaProvider</code>.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>callbackQueue</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Callback queue. If nil - queue from provider initializer will be used.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p><code>AnyPublisher&lt;Response, MoyaError</code></p>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:4Moya0A8ProviderC28requestWithProgressPublisher_13callbackQueue7Combine03AnyF0VyAA0E8ResponseVAA0A5ErrorOGx_So17OS_dispatch_queueCSgtF"></a>
+                    <a name="//apple_ref/swift/Method/requestWithProgressPublisher(_:callbackQueue:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:4Moya0A8ProviderC28requestWithProgressPublisher_13callbackQueue7Combine03AnyF0VyAA0E8ResponseVAA0A5ErrorOGx_So17OS_dispatch_queueCSgtF">requestWithProgressPublisher(_:<wbr>callbackQueue:<wbr>)</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Designated request-making method with progress.</p>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">requestWithProgressPublisher</span><span class="p">(</span><span class="n">_</span> <span class="nv">target</span><span class="p">:</span> <span class="kt">Target</span><span class="p">,</span> <span class="nv">callbackQueue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">AnyPublisher</span><span class="o">&lt;</span><span class="kt"><a href="../Structs/ProgressResponse.html">ProgressResponse</a></span><span class="p">,</span> <span class="kt"><a href="../Enums/MoyaError.html">MoyaError</a></span><span class="o">&gt;</span></code></pre>
 
                         </div>
                       </div>
