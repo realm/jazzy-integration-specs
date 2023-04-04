@@ -1,4 +1,4 @@
-COCOAPODS_SKIP_UPDATE_MESSAGE=TRUE JAZZY_FAKE_DATE=YYYY-MM-DD JAZZY_FAKE_MODULE_VERSION=Y.Y.Y JAZZY_FAKE_VERSION=X.X.X JAZZY_INTEGRATION_SPECS=TRUE ruby ROOT/bin/jazzy --author Realm --author_url "https://realm.io" --source-host-url https://github.com/realm/realm-cocoa --source-host-files-url https://github.com/realm/realm-cocoa/tree/v10.7.4 --module RealmSwift --module-version 10.7.4 --root-url https://realm.io/docs/swift/10.7.4/api/ --xcodebuild-arguments -scheme,RealmSwift,SWIFT_VERSION=4.2,-destination,'platform=OS X' --head \<link\ rel\=\"icon\"\ href\=\"https://realm.io/img/favicon.ico\"\>'
+COCOAPODS_SKIP_UPDATE_MESSAGE=TRUE JAZZY_FAKE_DATE=YYYY-MM-DD JAZZY_FAKE_MODULE_VERSION=Y.Y.Y JAZZY_FAKE_VERSION=X.X.X JAZZY_INTEGRATION_SPECS=TRUE ruby ROOT/bin/jazzy --author Realm --author_url "https://realm.io" --source-host-url https://github.com/realm/realm-cocoa --source-host-files-url https://github.com/realm/realm-cocoa/tree/v10.38.0 --module RealmSwift --module-version 10.38.0 --root-url https://realm.io/docs/swift/10.38.0/api/ --xcodebuild-arguments -scheme,RealmSwift,SWIFT_VERSION=4.2,-destination,'platform=OS X' --head \<link\ rel\=\"icon\"\ href\=\"https://realm.io/img/favicon.ico\"\>'
 '\<link\ rel\=\"apple-touch-icon-precomposed\"\ sizes\=\"57x57\"\ href\=\"https://realm.io/img/favicon-57x57.png\"\ /\>'
 '\<link\ rel\=\"apple-touch-icon-precomposed\"\ sizes\=\"114x114\"\ href\=\"https://realm.io/img/favicon-114x114.png\"\ /\>'
 '\<link\ rel\=\"apple-touch-icon-precomposed\"\ sizes\=\"72x72\"\ href\=\"https://realm.io/img/favicon-72x72.png\"\ /\>'
@@ -17,39 +17,67 @@ COCOAPODS_SKIP_UPDATE_MESSAGE=TRUE JAZZY_FAKE_DATE=YYYY-MM-DD JAZZY_FAKE_MODULE_
 '\</script\>'
 ' 2>&1
 Running xcodebuild
-Parsing RLMSupport.swift (1/30)
-Parsing Aliases.swift (2/30)
-Parsing App.swift (3/30)
-Parsing BSON.swift (4/30)
-Parsing Combine.swift (5/30)
-Parsing Decimal128.swift (6/30)
-Parsing EmbeddedObject.swift (7/30)
-Parsing Error.swift (8/30)
-Parsing LinkingObjects.swift (9/30)
-Parsing List.swift (10/30)
-Parsing Migration.swift (11/30)
-Parsing MongoClient.swift (12/30)
-Parsing Object.swift (13/30)
-Parsing ObjectId.swift (14/30)
-Parsing ObjectSchema.swift (15/30)
-Parsing ObjectiveCSupport+BSON.swift (16/30)
-Parsing ObjectiveCSupport+Sync.swift (17/30)
-Parsing ObjectiveCSupport.swift (18/30)
-Parsing Optional.swift (19/30)
-Parsing Property.swift (20/30)
-Parsing Realm.swift (21/30)
-Parsing RealmCollection.swift (22/30)
-Parsing RealmConfiguration.swift (23/30)
-Parsing Results.swift (24/30)
-Parsing Schema.swift (25/30)
-Parsing SortDescriptor.swift (26/30)
-Parsing SwiftUI.swift (27/30)
-Parsing Sync.swift (28/30)
-Parsing ThreadSafeReference.swift (29/30)
-Parsing Util.swift (30/30)
+Parsing RLMSupport.swift (1/53)
+Parsing Aliases.swift (2/53)
+Parsing AnyRealmValue.swift (3/53)
+Parsing App.swift (4/53)
+Parsing AsymmetricObject.swift (5/53)
+Parsing BSON.swift (6/53)
+Parsing Combine.swift (7/53)
+Parsing CustomPersistable.swift (8/53)
+Parsing Decimal128.swift (9/53)
+Parsing EmbeddedObject.swift (10/53)
+Parsing Error.swift (11/53)
+Parsing Events.swift (12/53)
+Parsing BasicTypes.swift (13/53)
+Parsing CollectionAccess.swift (14/53)
+Parsing ComplexTypes.swift (15/53)
+Parsing KeyPathStrings.swift (16/53)
+Parsing ObjcBridgeable.swift (17/53)
+Parsing Persistable.swift (18/53)
+Parsing PropertyAccessors.swift (19/53)
+Parsing RealmCollectionImpl.swift (20/53)
+Parsing SchemaDiscovery.swift (21/53)
+Parsing LinkingObjects.swift (22/53)
+Parsing List.swift (23/53)
+Parsing Map.swift (24/53)
+Parsing Migration.swift (25/53)
+Parsing MongoClient.swift (26/53)
+Parsing MutableSet.swift (27/53)
+Parsing Object.swift (28/53)
+Parsing ObjectId.swift (29/53)
+Parsing ObjectSchema.swift (30/53)
+Parsing ObjectiveCSupport+AnyRealmValue.swift (31/53)
+Parsing ObjectiveCSupport+BSON.swift (32/53)
+Parsing ObjectiveCSupport+Sync.swift (33/53)
+Parsing ObjectiveCSupport.swift (34/53)
+Parsing Optional.swift (35/53)
+Parsing PersistedProperty.swift (36/53)
+Parsing Projection.swift (37/53)
+Parsing Property.swift (38/53)
+Parsing Query.swift (39/53)
+Parsing Realm.swift (40/53)
+Parsing RealmCollection.swift (41/53)
+Parsing RealmConfiguration.swift (42/53)
+Parsing RealmKeyedCollection.swift (43/53)
+Parsing RealmProperty.swift (44/53)
+Parsing Results.swift (45/53)
+Parsing Schema.swift (46/53)
+Parsing SectionedResults.swift (47/53)
+Parsing SortDescriptor.swift (48/53)
+Parsing SwiftUI.swift (49/53)
+Parsing Sync.swift (50/53)
+Parsing SyncSubscription.swift (51/53)
+Parsing ThreadSafeReference.swift (52/53)
+Parsing Util.swift (53/53)
+`find(filter:options:)` has no USR. First make sure all modules used in your project have been imported. If all used modules are imported, please report this problem by filing an issue at https://github.com/realm/jazzy/issues along with your Xcode project. If this token is declared in an `#if` block, please ignore this message.
+`findOneDocument(filter:options:)` has no USR. First make sure all modules used in your project have been imported. If all used modules are imported, please report this problem by filing an issue at https://github.com/realm/jazzy/issues along with your Xcode project. If this token is declared in an `#if` block, please ignore this message.
+`findOneAndUpdate(filter:update:options:)` has no USR. First make sure all modules used in your project have been imported. If all used modules are imported, please report this problem by filing an issue at https://github.com/realm/jazzy/issues along with your Xcode project. If this token is declared in an `#if` block, please ignore this message.
+`findOneAndReplace(filter:replacement:options:)` has no USR. First make sure all modules used in your project have been imported. If all used modules are imported, please report this problem by filing an issue at https://github.com/realm/jazzy/issues along with your Xcode project. If this token is declared in an `#if` block, please ignore this message.
+`findOneAndDelete(filter:options:)` has no USR. First make sure all modules used in your project have been imported. If all used modules are imported, please report this problem by filing an issue at https://github.com/realm/jazzy/issues along with your Xcode project. If this token is declared in an `#if` block, please ignore this message.
 building site
 building search index
-100% documentation coverage with 0 undocumented symbols
-included 900 public or open symbols
-skipped 187 private, fileprivate, or internal symbols (use `--min-acl` to specify a different minimum ACL)
+87% documentation coverage with 220 undocumented symbols
+included 1816 public or open symbols
+skipped 389 private, fileprivate, or internal symbols (use `--min-acl` to specify a different minimum ACL)
 jam out ♪♫ to your fresh new docs in `docs`

@@ -17,11 +17,11 @@ echo "machine api.github.com login ashfurrow password dc14e6ac2b871e7630f56df3d5
 ```
 This lets the automated release script access the GitHub API authorized as you.
 1. Then run `chmod 600 ~/.netrc`.
-1. Make sure you have a registered CocoaPods session. To do that you can run command:
+1. Make sure you have a registered CocoaPods session. To do that you can run the following command:
 ```ruby
 pod trunk me
 ```
-If you see an error command that you do not have registered session, run command below:
+If you see an error command that you do not have registered session, run the command below:
 ```ruby
 pod trunk register you@youremailaddress.com
 ```
@@ -35,7 +35,7 @@ To make a release:
 
 1. Pull latest from master and make sure your git is clean (the script will fail if it's not).
 1. Run `bundle install`.
-1. Run `swift run X.Y.Z`.
+1. Run `swift run rocket X.Y.Z`.
 1. Grab a :tea: or :coffee:.
 1. Make sure everything went smoothly.
 
