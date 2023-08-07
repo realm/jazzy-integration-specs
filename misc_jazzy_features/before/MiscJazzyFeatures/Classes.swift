@@ -301,3 +301,17 @@ extension AsyncProtocol {
 /// - returns: some stuff
 @freestanding(expression)
 public macro m<T>(_ value: T) -> (T, String) = #externalMacro(module: "M", type: "T")
+
+// MARK: @_documentation()
+
+/// A public class marked to be treated as private - should not appear
+@_documentation(visibility: private)
+public class PrivateToDocsClass {
+    public func privateToDocsMethod() {
+    }
+}
+
+/// A private class marked to be treated as public - should appear
+@_documentation(visibility: public)
+private class PublicToDocsClass {
+}
