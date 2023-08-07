@@ -827,7 +827,7 @@ can be changed via <code><a href="../Classes/RLMRealmConfiguration.html#/c:objc(
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">defaultRealm</span><span class="p">(</span><span class="k">for</span> <span class="nv">queue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">defaultRealm</span><span class="p">(</span><span class="k">for</span> <span class="nv">queue</span><span class="p">:</span> <span class="n">dispatch_queue_t</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="k">Self</span></code></pre>
 
                         </div>
                       </div>
@@ -972,7 +972,7 @@ an incorrect thread exception.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMRealmConfiguration.html">RLMRealmConfiguration</a></span><span class="p">,</span> <span class="nv">queue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">?)</span> <span class="k">throws</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">convenience</span> <span class="nf">init</span><span class="p">(</span><span class="nv">configuration</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMRealmConfiguration.html">RLMRealmConfiguration</a></span><span class="p">,</span> <span class="nv">queue</span><span class="p">:</span> <span class="n">dispatch_queue_t</span><span class="p">?)</span> <span class="k">throws</span></code></pre>
 
                         </div>
                       </div>
@@ -1126,7 +1126,7 @@ if <code>-[RLMRealm realmWithConfiguration:queue:error]</code> was used.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">asyncOpen</span><span class="p">(</span><span class="n">with</span> <span class="nv">configuration</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMRealmConfiguration.html">RLMRealmConfiguration</a></span><span class="p">,</span> <span class="nv">callbackQueue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">,</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Type%20Definitions.html#/c:RLMRealm.h@T@RLMAsyncOpenRealmCallback">RLMAsyncOpenRealmCallback</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RLMAsyncOpenTask.html">RLMAsyncOpenTask</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">class</span> <span class="kd">func</span> <span class="nf">asyncOpen</span><span class="p">(</span><span class="n">with</span> <span class="nv">configuration</span><span class="p">:</span> <span class="kt"><a href="../Classes/RLMRealmConfiguration.html">RLMRealmConfiguration</a></span><span class="p">,</span> <span class="nv">callbackQueue</span><span class="p">:</span> <span class="n">dispatch_queue_t</span><span class="p">,</span> <span class="nv">callback</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="kt"><a href="../Type%20Definitions.html#/c:RLMRealm.h@T@RLMAsyncOpenRealmCallback">RLMAsyncOpenRealmCallback</a></span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Classes/RLMAsyncOpenTask.html">RLMAsyncOpenTask</a></span></code></pre>
 
                         </div>
                       </div>
