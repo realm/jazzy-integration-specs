@@ -295,3 +295,9 @@ extension AsyncProtocol {
     /// Default implementation of the async version
     func method() async {}
 }
+
+/// A macro declaration
+/// - parameter value: The macro parameter
+/// - returns: some stuff
+@freestanding(expression)
+public macro m<T>(_ value: T) -> (T, String) = #externalMacro(module: "M", type: "T")
