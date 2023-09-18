@@ -1202,6 +1202,11 @@ properties can only be accessed using keyed subscripting.</p>
                           <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">RLMMongoInsertBlock</span><span class="p">)(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/RLMBSON.html">RLMBSON</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">RLMMongoInsertBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="Protocols/RLMBSON.html">RLMBSON</a></span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMMongoCollection.h#L70">Show on GitHub</a>
@@ -1231,6 +1236,11 @@ properties can only be accessed using keyed subscripting.</p>
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">RLMMongoInsertManyBlock</span><span class="p">)(</span><span class="n">NSArray</span><span class="o">&lt;</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/RLMBSON.html">RLMBSON</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">,</span>
                                         <span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">RLMMongoInsertManyBlock</span> <span class="o">=</span> <span class="p">([</span><span class="kt"><a href="Protocols/RLMBSON.html">RLMBSON</a></span><span class="p">]?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
 
                         </div>
                       </div>
@@ -1265,6 +1275,11 @@ properties can only be accessed using keyed subscripting.</p>
     <span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span></code></pre>
 
                         </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">RLMMongoFindBlock</span> <span class="o">=</span> <span class="p">([[</span><span class="kt">String</span> <span class="p">:</span> <span class="kt"><a href="Protocols/RLMBSON.html">RLMBSON</a></span><span class="p">]]?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
+
+                        </div>
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/realm/realm-cocoa/tree/v10.7.4/Realm/RLMMongoCollection.h#L74">Show on GitHub</a>
@@ -1294,6 +1309,11 @@ properties can only be accessed using keyed subscripting.</p>
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">RLMMongoFindOneBlock</span><span class="p">)(</span>
     <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/RLMBSON.html">RLMBSON</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">RLMMongoFindOneBlock</span> <span class="o">=</span> <span class="p">([</span><span class="kt">String</span> <span class="p">:</span> <span class="kt"><a href="Protocols/RLMBSON.html">RLMBSON</a></span><span class="p">]?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
 
                         </div>
                       </div>
@@ -1396,6 +1416,11 @@ properties can only be accessed using keyed subscripting.</p>
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">RLMMongoDeleteBlock</span><span class="p">)(</span>
     <span class="n">NSDictionary</span><span class="o">&lt;</span><span class="n">NSString</span> <span class="o">*</span><span class="p">,</span> <span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/RLMBSON.html">RLMBSON</a></span><span class="o">&gt;&gt;</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">,</span> <span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">RLMMongoDeleteBlock</span> <span class="o">=</span> <span class="p">([</span><span class="kt">String</span> <span class="p">:</span> <span class="kt"><a href="Protocols/RLMBSON.html">RLMBSON</a></span><span class="p">]?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
 
                         </div>
                       </div>
@@ -2049,6 +2074,11 @@ activity to the user.</p>
                           <p class="aside-title">Objective-C</p>
                           <pre class="highlight objective_c"><code><span class="k">typedef</span> <span class="kt">void</span> <span class="p">(</span><span class="o">^</span><span class="n">RLMCallFunctionCompletionBlock</span><span class="p">)(</span><span class="n">id</span><span class="o">&lt;</span><span class="n"><a href="Protocols/RLMBSON.html">RLMBSON</a></span><span class="o">&gt;</span> <span class="n">_Nullable</span><span class="p">,</span>
                                                <span class="n">NSError</span> <span class="o">*</span><span class="n">_Nullable</span><span class="p">)</span></code></pre>
+
+                        </div>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">typealias</span> <span class="kt">RLMCallFunctionCompletionBlock</span> <span class="o">=</span> <span class="p">(</span><span class="kt"><a href="Protocols/RLMBSON.html">RLMBSON</a></span><span class="p">?,</span> <span class="kt">Error</span><span class="p">?)</span> <span class="o">-&gt;</span> <span class="kt">Void</span></code></pre>
 
                         </div>
                       </div>
