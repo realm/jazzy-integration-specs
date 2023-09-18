@@ -2308,7 +2308,7 @@ the view asynchronously:</p>
 one of the object&rsquo;s properties. For example, you can let a
 <code>SwiftUI/Toggle</code> control a Boolean value called <code>isEnabled</code> stored in the
 model:</p>
-<pre class="highlight swift"><code><span class="kt">Toggle</span><span class="p">(</span><span class="s">"Enabled"</span><span class="p">,</span> <span class="nv">isOn</span><span class="p">:</span> <span class="err">$</span><span class="n">model</span><span class="o">.</span><span class="n">isEnabled</span><span class="p">)</span>
+<pre class="highlight swift"><code><span class="kt">Toggle</span><span class="p">(</span><span class="s">"Enabled"</span><span class="p">,</span> <span class="nv">isOn</span><span class="p">:</span> <span class="n">$model</span><span class="o">.</span><span class="n">isEnabled</span><span class="p">)</span>
 </code></pre>
 
 <p>This will write the modified <code>isEnabled</code> property to the <code>model</code> object&rsquo;s Realm.</p>

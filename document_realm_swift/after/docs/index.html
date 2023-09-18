@@ -954,11 +954,11 @@ This repository holds the source code for the iOS, macOS, tvOS &amp; watchOS ver
             <span class="kt">ForEach</span><span class="p">(</span><span class="n">persons</span><span class="p">)</span> <span class="p">{</span> <span class="n">person</span> <span class="k">in</span>
                 <span class="kt">Text</span><span class="p">(</span><span class="n">person</span><span class="o">.</span><span class="n">name</span><span class="p">)</span>
             <span class="p">}</span>
-            <span class="o">.</span><span class="nf">onMove</span><span class="p">(</span><span class="nv">perform</span><span class="p">:</span> <span class="err">$</span><span class="n">persons</span><span class="o">.</span><span class="n">move</span><span class="p">)</span>
-            <span class="o">.</span><span class="nf">onDelete</span><span class="p">(</span><span class="nv">perform</span><span class="p">:</span> <span class="err">$</span><span class="n">persons</span><span class="o">.</span><span class="n">remove</span><span class="p">)</span>
+            <span class="o">.</span><span class="nf">onMove</span><span class="p">(</span><span class="nv">perform</span><span class="p">:</span> <span class="n">$persons</span><span class="o">.</span><span class="n">move</span><span class="p">)</span>
+            <span class="o">.</span><span class="nf">onDelete</span><span class="p">(</span><span class="nv">perform</span><span class="p">:</span> <span class="n">$persons</span><span class="o">.</span><span class="n">remove</span><span class="p">)</span>
         <span class="p">}</span><span class="o">.</span><span class="nf">navigationBarItems</span><span class="p">(</span><span class="nv">trailing</span><span class="p">:</span>
             <span class="kt">Button</span><span class="p">(</span><span class="s">"Add"</span><span class="p">)</span> <span class="p">{</span>
-                <span class="err">$</span><span class="n">persons</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="kt">Person</span><span class="p">())</span>
+                <span class="n">$persons</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="kt">Person</span><span class="p">())</span>
             <span class="p">}</span>
         <span class="p">)</span>
     <span class="p">}</span>
