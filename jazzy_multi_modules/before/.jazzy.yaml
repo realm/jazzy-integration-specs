@@ -1,0 +1,28 @@
+clean: true
+title: 'Jazzy Multiple Modules'
+readme_title: 'Multiple Modules'
+docset_title: 'Jazzy ♪♫ MultiKit'
+root_url: 'https://example.com/JazzyMultiKit'
+merge_modules: extensions
+modules:
+  - module: MultiKitDelta
+  - module: MultiKitAlpha
+  - module: MultiKitBeta
+    build_tool_arguments:
+      - -Xswiftc
+      - -DBUILD_BETA_ONLY
+  - module: MultiKitGamma
+    objc: true
+    umbrella_header: MultiKitGamma/Gamma.h
+    framework_root: MultiKitGamma
+documentation: Guide.md
+custom_categories:
+  - name: 'Start Here'
+    children:
+      - AlphaClass
+      - BetaProtocol
+      - MultiKitBeta.Manager
+      - MultiKitAlpha.Manager
+      - /MultiKitAlpha.Manager
+      - NSURL(MyCategory)
+custom_categories_unlisted_prefix: ''
