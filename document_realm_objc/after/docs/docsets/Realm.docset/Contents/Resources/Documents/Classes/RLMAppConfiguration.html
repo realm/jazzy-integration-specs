@@ -770,7 +770,7 @@ that communicate with a particular Realm application.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">transport</span><span class="p">:</span> <span class="kt"><a href="../Protocols/RLMNetworkTransport.html">RLMNetworkTransport</a></span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="k">var</span> <span class="nv">transport</span><span class="p">:</span> <span class="p">(</span><span class="kd">any</span> <span class="kt"><a href="../Protocols/RLMNetworkTransport.html">RLMNetworkTransport</a></span><span class="p">)?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -914,7 +914,7 @@ that communicate with a particular Realm application.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">baseURL</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">transport</span><span class="p">:</span> <span class="kt"><a href="../Protocols/RLMNetworkTransport.html">RLMNetworkTransport</a></span><span class="p">?,</span> <span class="nv">localAppName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">localAppVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">baseURL</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">transport</span><span class="p">:</span> <span class="p">(</span><span class="kd">any</span> <span class="kt"><a href="../Protocols/RLMNetworkTransport.html">RLMNetworkTransport</a></span><span class="p">)?,</span> <span class="nv">localAppName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">localAppVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">?)</span></code></pre>
 
                         </div>
                       </div>
@@ -1009,7 +1009,7 @@ that communicate with a particular Realm application.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">baseURL</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">transport</span><span class="p">:</span> <span class="kt"><a href="../Protocols/RLMNetworkTransport.html">RLMNetworkTransport</a></span><span class="p">?,</span> <span class="nv">localAppName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">localAppVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="n"><a href="../Classes/RLMAppConfiguration.html#/c:objc(cs)RLMAppConfiguration(py)defaultRequestTimeoutMS">defaultRequestTimeoutMS</a></span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span></code></pre>
+                          <pre class="highlight swift"><code><span class="nf">init</span><span class="p">(</span><span class="nv">baseURL</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">transport</span><span class="p">:</span> <span class="p">(</span><span class="kd">any</span> <span class="kt"><a href="../Protocols/RLMNetworkTransport.html">RLMNetworkTransport</a></span><span class="p">)?,</span> <span class="nv">localAppName</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="nv">localAppVersion</span><span class="p">:</span> <span class="kt">String</span><span class="p">?,</span> <span class="n"><a href="../Classes/RLMAppConfiguration.html#/c:objc(cs)RLMAppConfiguration(py)defaultRequestTimeoutMS">defaultRequestTimeoutMS</a></span><span class="p">:</span> <span class="kt">UInt</span><span class="p">)</span></code></pre>
 
                         </div>
                       </div>
