@@ -876,6 +876,7 @@
                   
                   <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="n">iOS</span> <span class="mf">13.0</span><span class="p">,</span> <span class="n">macOS</span> <span class="mf">10.15</span><span class="p">,</span> <span class="n">tvOS</span> <span class="mf">13.0</span><span class="p">,</span> <span class="n">watchOS</span> <span class="mf">6.0</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
 <span class="kd">@propertyWrapper</span>
+<span class="kd">@MainActor</span>
 <span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ObservedRealmObject</span><span class="o">&lt;</span><span class="kt">ObjectType</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">DynamicProperty</span> <span class="k">where</span> <span class="kt">ObjectType</span> <span class="p">:</span> <span class="kt">ObservableObject</span><span class="p">,</span> <span class="kt">ObjectType</span> <span class="p">:</span> <span class="kt"><a href="../Protocols.html#/s:10RealmSwift0A12SubscribableP">RealmSubscribable</a></span><span class="p">,</span> <span class="kt">ObjectType</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/ThreadConfined.html">ThreadConfined</a></span><span class="p">,</span> <span class="kt">ObjectType</span> <span class="p">:</span> <span class="kt">Equatable</span></code></pre>
 
                 </div>
@@ -944,7 +945,8 @@ its properties using dynamic member lookup.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">wrappedValue</span><span class="p">:</span> <span class="kt">ObjectType</span><span class="p">)</span> <span class="k">where</span> <span class="kt">ObjectType</span> <span class="p">:</span> <span class="kt">RLMObjectBase</span><span class="p">,</span> <span class="kt">ObjectType</span> <span class="p">:</span> <span class="kt">Identifiable</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@MainActor</span>
+<span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">wrappedValue</span><span class="p">:</span> <span class="kt">ObjectType</span><span class="p">)</span> <span class="k">where</span> <span class="kt">ObjectType</span> <span class="p">:</span> <span class="kt">RLMObjectBase</span><span class="p">,</span> <span class="kt">ObjectType</span> <span class="p">:</span> <span class="kt">Identifiable</span></code></pre>
 
                         </div>
                       </div>
@@ -974,7 +976,8 @@ its properties using dynamic member lookup.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">init</span><span class="o">&lt;</span><span class="kt">V</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">wrappedValue</span><span class="p">:</span> <span class="kt">ObjectType</span><span class="p">)</span> <span class="k">where</span> <span class="kt">ObjectType</span> <span class="o">==</span> <span class="kt"><a href="../Classes/List.html">List</a></span><span class="o">&lt;</span><span class="kt">V</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">V</span> <span class="p">:</span> <span class="kt"><a href="../Protocols.html#/s:10RealmSwift0A15CollectionValueP">RealmCollectionValue</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@MainActor</span>
+<span class="kd">public</span> <span class="kd">init</span><span class="o">&lt;</span><span class="kt">V</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">wrappedValue</span><span class="p">:</span> <span class="kt">ObjectType</span><span class="p">)</span> <span class="k">where</span> <span class="kt">ObjectType</span> <span class="o">==</span> <span class="kt"><a href="../Classes/List.html">List</a></span><span class="o">&lt;</span><span class="kt">V</span><span class="o">&gt;</span><span class="p">,</span> <span class="kt">V</span> <span class="p">:</span> <span class="kt"><a href="../Protocols.html#/s:10RealmSwift0A15CollectionValueP">RealmCollectionValue</a></span></code></pre>
 
                         </div>
                       </div>
@@ -1004,7 +1007,8 @@ its properties using dynamic member lookup.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">wrappedValue</span><span class="p">:</span> <span class="kt">ObjectType</span><span class="p">)</span> <span class="k">where</span> <span class="kt">ObjectType</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/ProjectionObservable.html">ProjectionObservable</a></span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@MainActor</span>
+<span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">wrappedValue</span><span class="p">:</span> <span class="kt">ObjectType</span><span class="p">)</span> <span class="k">where</span> <span class="kt">ObjectType</span> <span class="p">:</span> <span class="kt"><a href="../Protocols/ProjectionObservable.html">ProjectionObservable</a></span></code></pre>
 
                         </div>
                       </div>
