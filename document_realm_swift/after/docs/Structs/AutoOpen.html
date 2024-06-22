@@ -876,6 +876,7 @@
                   
                   <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="n">iOS</span> <span class="mf">14.0</span><span class="p">,</span> <span class="n">macOS</span> <span class="mf">11.0</span><span class="p">,</span> <span class="n">tvOS</span> <span class="mf">14.0</span><span class="p">,</span> <span class="n">watchOS</span> <span class="mf">7.0</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
 <span class="kd">@propertyWrapper</span>
+<span class="kd">@MainActor</span>
 <span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AutoOpen</span> <span class="p">:</span> <span class="kt">DynamicProperty</span></code></pre>
 
                 </div>
@@ -947,7 +948,8 @@ but with the difference of a offline-first approach.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="k">var</span> <span class="nv">projectedValue</span><span class="p">:</span> <span class="kt">Published</span><span class="o">&lt;</span><span class="kt"><a href="../Enums/AsyncOpenState.html">AsyncOpenState</a></span><span class="o">&gt;.</span><span class="kt">Publisher</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@MainActor</span>
+<span class="kd">public</span> <span class="k">var</span> <span class="nv">projectedValue</span><span class="p">:</span> <span class="kt">Published</span><span class="o">&lt;</span><span class="kt"><a href="../Enums/AsyncOpenState.html">AsyncOpenState</a></span><span class="o">&gt;.</span><span class="kt">Publisher</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -977,7 +979,8 @@ but with the difference of a offline-first approach.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">func</span> <span class="nf">cancel</span><span class="p">()</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">@MainActor</span>
+<span class="kd">public</span> <span class="kd">func</span> <span class="nf">cancel</span><span class="p">()</span></code></pre>
 
                         </div>
                       </div>
@@ -1007,7 +1010,8 @@ but with the difference of a offline-first approach.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">init</span><span class="o">&lt;</span><span class="kt">Partition</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">appId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                          <pre class="highlight swift"><code><span class="kd">@MainActor</span>
+<span class="kd">public</span> <span class="kd">init</span><span class="o">&lt;</span><span class="kt">Partition</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">appId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
                        <span class="nv">partitionValue</span><span class="p">:</span> <span class="kt">Partition</span><span class="p">,</span>
                        <span class="nv">configuration</span><span class="p">:</span> <span class="kt"><a href="../Structs/Realm.html">Realm</a></span><span class="o">.</span><span class="kt">Configuration</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
                        <span class="nv">timeout</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span> <span class="k">where</span> <span class="kt">Partition</span><span class="p">:</span> <span class="kt"><a href="../Protocols.html#/s:10RealmSwift4BSONP">BSON</a></span></code></pre>
@@ -1098,7 +1102,8 @@ but with the difference of a offline-first approach.</p>
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">appId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                          <pre class="highlight swift"><code><span class="kd">@MainActor</span>
+<span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="nv">appId</span><span class="p">:</span> <span class="kt">String</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
             <span class="nv">configuration</span><span class="p">:</span> <span class="kt"><a href="../Structs/Realm.html">Realm</a></span><span class="o">.</span><span class="kt">Configuration</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
             <span class="nv">timeout</span><span class="p">:</span> <span class="kt">UInt</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">)</span></code></pre>
 

@@ -2321,6 +2321,7 @@ model:</p>
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="n">iOS</span> <span class="mf">14.0</span><span class="p">,</span> <span class="n">macOS</span> <span class="mf">11.0</span><span class="p">,</span> <span class="n">tvOS</span> <span class="mf">14.0</span><span class="p">,</span> <span class="n">watchOS</span> <span class="mf">7.0</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
 <span class="kd">@propertyWrapper</span>
+<span class="kd">@MainActor</span>
 <span class="kd">public</span> <span class="kd">struct</span> <span class="kt">StateRealmObject</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">DynamicProperty</span> <span class="k">where</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="Protocols.html#/s:10RealmSwift0A12SubscribableP">RealmSubscribable</a></span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt"><a href="Protocols/ThreadConfined.html">ThreadConfined</a></span><span class="p">,</span> <span class="kt">T</span> <span class="p">:</span> <span class="kt">Equatable</span></code></pre>
 
                         </div>
@@ -2376,6 +2377,7 @@ is added to the realm but not included in the ObservedResults.</p>
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="n">iOS</span> <span class="mf">13.0</span><span class="p">,</span> <span class="n">macOS</span> <span class="mf">10.15</span><span class="p">,</span> <span class="n">tvOS</span> <span class="mf">13.0</span><span class="p">,</span> <span class="n">watchOS</span> <span class="mf">6.0</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
 <span class="kd">@propertyWrapper</span>
+<span class="kd">@MainActor</span>
 <span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ObservedResults</span><span class="o">&lt;</span><span class="kt">ResultType</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">DynamicProperty</span><span class="p">,</span> <span class="kt">BoundCollection</span> <span class="k">where</span> <span class="kt">ResultType</span> <span class="p">:</span> <span class="kt"><a href="Protocols.html#/s:10RealmSwift15KeypathSortableP">KeypathSortable</a></span><span class="p">,</span> <span class="kt">ResultType</span> <span class="p">:</span> <span class="kt"><a href="Protocols.html#/s:10RealmSwift0A9FetchableP">RealmFetchable</a></span><span class="p">,</span> <span class="kt">ResultType</span> <span class="p">:</span> <span class="n"><a href="Protocols.html#/s:10RealmSwift21_ObservedResultsValueP">_ObservedResultsValue</a></span><span class="p">,</span> <span class="kt">ResultType</span> <span class="p">:</span> <span class="kt">Identifiable</span></code></pre>
 
                         </div>
@@ -2415,6 +2417,7 @@ if <code>configuration</code> is not set in the initializer.</p>
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="n">iOS</span> <span class="mf">13.0</span><span class="p">,</span> <span class="n">macOS</span> <span class="mf">10.15</span><span class="p">,</span> <span class="n">tvOS</span> <span class="mf">13.0</span><span class="p">,</span> <span class="n">watchOS</span> <span class="mf">6.0</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
 <span class="kd">@propertyWrapper</span>
+<span class="kd">@MainActor</span>
 <span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ObservedSectionedResults</span><span class="o">&lt;</span><span class="kt">Key</span><span class="p">,</span> <span class="kt">ResultType</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">DynamicProperty</span><span class="p">,</span> <span class="kt">BoundCollection</span> <span class="k">where</span> <span class="kt">Key</span> <span class="p">:</span> <span class="n"><a href="Protocols/_Persistable.html">_Persistable</a></span><span class="p">,</span> <span class="kt">Key</span> <span class="p">:</span> <span class="kt">Hashable</span><span class="p">,</span> <span class="kt">ResultType</span> <span class="p">:</span> <span class="kt"><a href="Protocols.html#/s:10RealmSwift15KeypathSortableP">KeypathSortable</a></span><span class="p">,</span> <span class="kt">ResultType</span> <span class="p">:</span> <span class="kt"><a href="Protocols.html#/s:10RealmSwift0A9FetchableP">RealmFetchable</a></span><span class="p">,</span> <span class="kt">ResultType</span> <span class="p">:</span> <span class="n"><a href="Protocols.html#/s:10RealmSwift21_ObservedResultsValueP">_ObservedResultsValue</a></span><span class="p">,</span> <span class="kt">ResultType</span> <span class="p">:</span> <span class="kt">Identifiable</span></code></pre>
 
                         </div>
@@ -2462,6 +2465,7 @@ invalidates a view whenever the observable object changes.</p>
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="n">iOS</span> <span class="mf">13.0</span><span class="p">,</span> <span class="n">macOS</span> <span class="mf">10.15</span><span class="p">,</span> <span class="n">tvOS</span> <span class="mf">13.0</span><span class="p">,</span> <span class="n">watchOS</span> <span class="mf">6.0</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
 <span class="kd">@propertyWrapper</span>
+<span class="kd">@MainActor</span>
 <span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ObservedRealmObject</span><span class="o">&lt;</span><span class="kt">ObjectType</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">DynamicProperty</span> <span class="k">where</span> <span class="kt">ObjectType</span> <span class="p">:</span> <span class="kt">ObservableObject</span><span class="p">,</span> <span class="kt">ObjectType</span> <span class="p">:</span> <span class="kt"><a href="Protocols.html#/s:10RealmSwift0A12SubscribableP">RealmSubscribable</a></span><span class="p">,</span> <span class="kt">ObjectType</span> <span class="p">:</span> <span class="kt"><a href="Protocols/ThreadConfined.html">ThreadConfined</a></span><span class="p">,</span> <span class="kt">ObjectType</span> <span class="p">:</span> <span class="kt">Equatable</span></code></pre>
 
                         </div>
@@ -2544,6 +2548,7 @@ to populate the view with data from the opened realm</p>
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="n">iOS</span> <span class="mf">14.0</span><span class="p">,</span> <span class="n">macOS</span> <span class="mf">11.0</span><span class="p">,</span> <span class="n">tvOS</span> <span class="mf">14.0</span><span class="p">,</span> <span class="n">watchOS</span> <span class="mf">7.0</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
 <span class="kd">@propertyWrapper</span>
+<span class="kd">@MainActor</span>
 <span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AsyncOpen</span> <span class="p">:</span> <span class="kt">DynamicProperty</span></code></pre>
 
                         </div>
@@ -2628,6 +2633,7 @@ but with the difference of a offline-first approach.</p>
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="n">iOS</span> <span class="mf">14.0</span><span class="p">,</span> <span class="n">macOS</span> <span class="mf">11.0</span><span class="p">,</span> <span class="n">tvOS</span> <span class="mf">14.0</span><span class="p">,</span> <span class="n">watchOS</span> <span class="mf">7.0</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
 <span class="kd">@propertyWrapper</span>
+<span class="kd">@MainActor</span>
 <span class="kd">public</span> <span class="kd">struct</span> <span class="kt">AutoOpen</span> <span class="p">:</span> <span class="kt">DynamicProperty</span></code></pre>
 
                         </div>

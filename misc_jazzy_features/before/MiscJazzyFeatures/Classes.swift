@@ -222,7 +222,7 @@ extension PrivateTopLevelClass : Encodable {}
 extension RenamedDocumentedClass : Encodable {}
 
 /// Bad-practice conformance of an imported type to an imported protocol, should appear in docs
-extension Mirror : CustomDebugStringConvertible {
+extension Mirror : @retroactive CustomDebugStringConvertible {
     public var debugDescription: String { "" }
 }
 
@@ -268,6 +268,7 @@ extension PublicTopLevelClass {
 // MARK: Concurrency
 
 /// An actor
+@available(iOS 13.0.0, *)
 @available(macOS 12.0.0, *)
 public actor PublicActor {
     /// Regular method - sync version
@@ -277,7 +278,7 @@ public actor PublicActor {
     public func normalMethod() async {}
 
     /// Method with attributes
-    public nonisolated func nonisolatedMethod(other: isolated PublicActor) async {}
+    public func nonisolatedMethod(other: isolated PublicActor) async {}
 }
 
 /// A protocol to demonstrate interaction of async and default implementation annotations
