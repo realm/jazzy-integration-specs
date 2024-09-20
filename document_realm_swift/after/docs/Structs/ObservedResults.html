@@ -876,6 +876,7 @@
                   
                   <pre class="highlight swift"><code><span class="kd">@available</span><span class="p">(</span><span class="n">iOS</span> <span class="mf">13.0</span><span class="p">,</span> <span class="n">macOS</span> <span class="mf">10.15</span><span class="p">,</span> <span class="n">tvOS</span> <span class="mf">13.0</span><span class="p">,</span> <span class="n">watchOS</span> <span class="mf">6.0</span><span class="p">,</span> <span class="o">*</span><span class="p">)</span>
 <span class="kd">@propertyWrapper</span>
+<span class="kd">@MainActor</span>
 <span class="kd">public</span> <span class="kd">struct</span> <span class="kt">ObservedResults</span><span class="o">&lt;</span><span class="kt">ResultType</span><span class="o">&gt;</span> <span class="p">:</span> <span class="kt">DynamicProperty</span><span class="p">,</span> <span class="kt">BoundCollection</span> <span class="k">where</span> <span class="kt">ResultType</span> <span class="p">:</span> <span class="kt"><a href="../Protocols.html#/s:10RealmSwift15KeypathSortableP">KeypathSortable</a></span><span class="p">,</span> <span class="kt">ResultType</span> <span class="p">:</span> <span class="kt"><a href="../Protocols.html#/s:10RealmSwift0A9FetchableP">RealmFetchable</a></span><span class="p">,</span> <span class="kt">ResultType</span> <span class="p">:</span> <span class="n"><a href="../Protocols.html#/s:10RealmSwift21_ObservedResultsValueP">_ObservedResultsValue</a></span><span class="p">,</span> <span class="kt">ResultType</span> <span class="p">:</span> <span class="kt">Identifiable</span></code></pre>
 
                 </div>
@@ -949,6 +950,7 @@ to the <code><a href="../Structs/ObservedResults.html#/s:10RealmSwift15ObservedR
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@State</span>
+<span class="kd">@MainActor</span>
 <span class="kd">public</span> <span class="k">var</span> <span class="nv">filter</span><span class="p">:</span> <span class="kt">NSPredicate</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">nonmutating</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
@@ -981,6 +983,7 @@ to the <code><a href="../Structs/ObservedResults.html#/s:10RealmSwift15ObservedR
                         <div class="language">
                           <p class="aside-title">Swift</p>
                           <pre class="highlight swift"><code><span class="kd">@State</span>
+<span class="kd">@MainActor</span>
 <span class="kd">public</span> <span class="kd">var</span> <span class="p">`</span><span class="nv">where</span><span class="p">`:</span> <span class="p">((</span><span class="kt"><a href="../Structs/Query.html">Query</a></span><span class="o">&lt;</span><span class="kt">ResultType</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Query.html">Query</a></span><span class="o">&lt;</span><span class="kt">Bool</span><span class="o">&gt;</span><span class="p">)?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">nonmutating</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
@@ -1011,7 +1014,8 @@ to the <code><a href="../Structs/ObservedResults.html#/s:10RealmSwift15ObservedR
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="kd">init</span><span class="o">&lt;</span><span class="kt">ObjectType</span><span class="p">:</span> <span class="kt">ObjectBase</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">ResultType</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span>
+                          <pre class="highlight swift"><code><span class="kd">@MainActor</span>
+<span class="kd">public</span> <span class="kd">init</span><span class="o">&lt;</span><span class="kt">ObjectType</span><span class="p">:</span> <span class="kt">ObjectBase</span><span class="o">&gt;</span><span class="p">(</span><span class="n">_</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">ResultType</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span>
                                     <span class="nv">configuration</span><span class="p">:</span> <span class="kt"><a href="../Structs/Realm.html">Realm</a></span><span class="o">.</span><span class="kt">Configuration</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
                                     <span class="nv">filter</span><span class="p">:</span> <span class="kt">NSPredicate</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
                                     <span class="nv">keyPaths</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
@@ -1117,7 +1121,8 @@ String key paths which do not correspond to a valid a property will throw an exc
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">ResultType</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span>
+                          <pre class="highlight swift"><code><span class="kd">@MainActor</span>
+<span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">ResultType</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span>
             <span class="nv">configuration</span><span class="p">:</span> <span class="kt"><a href="../Structs/Realm.html">Realm</a></span><span class="o">.</span><span class="kt">Configuration</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
             <span class="nv">filter</span><span class="p">:</span> <span class="kt">NSPredicate</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
             <span class="nv">keyPaths</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
@@ -1223,7 +1228,8 @@ String key paths which do not correspond to a valid a property will throw an exc
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">ResultType</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span>
+                          <pre class="highlight swift"><code><span class="kd">@MainActor</span>
+<span class="kd">public</span> <span class="nf">init</span><span class="p">(</span><span class="n">_</span> <span class="nv">type</span><span class="p">:</span> <span class="kt">ResultType</span><span class="o">.</span><span class="k">Type</span><span class="p">,</span>
             <span class="nv">configuration</span><span class="p">:</span> <span class="kt"><a href="../Structs/Realm.html">Realm</a></span><span class="o">.</span><span class="kt">Configuration</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
             <span class="nv">where</span><span class="p">:</span> <span class="p">((</span><span class="kt"><a href="../Structs/Query.html">Query</a></span><span class="o">&lt;</span><span class="kt">ResultType</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Query.html">Query</a></span><span class="o">&lt;</span><span class="kt">Bool</span><span class="o">&gt;</span><span class="p">)?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
             <span class="nv">keyPaths</span><span class="p">:</span> <span class="p">[</span><span class="kt">String</span><span class="p">]?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
