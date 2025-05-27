@@ -517,7 +517,7 @@ Realm error domain specified in <code><a href="../Constants.html#/c:@RLMErrorDom
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">fail</span> <span class="o">=</span> <span class="mi">1</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">fail</span><span class="p">:</span> <span class="kt">RLMError</span><span class="o">.</span><span class="kt">Code</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -552,7 +552,7 @@ Realm error domain specified in <code><a href="../Constants.html#/c:@RLMErrorDom
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">fileAccess</span> <span class="o">=</span> <span class="mi">2</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">fileAccess</span><span class="p">:</span> <span class="kt">RLMError</span><span class="o">.</span><span class="kt">Code</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -590,7 +590,7 @@ the specified file in the specified access mode when opening a Realm.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">filePermissionDenied</span> <span class="o">=</span> <span class="mi">3</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">filePermissionDenied</span><span class="p">:</span> <span class="kt">RLMError</span><span class="o">.</span><span class="kt">Code</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -625,7 +625,7 @@ the specified file in the specified access mode when opening a Realm.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">fileExists</span> <span class="o">=</span> <span class="mi">4</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">fileExists</span><span class="p">:</span> <span class="kt">RLMError</span><span class="o">.</span><span class="kt">Code</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -664,7 +664,7 @@ trying to write a copy.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">fileNotFound</span> <span class="o">=</span> <span class="mi">5</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">fileNotFound</span><span class="p">:</span> <span class="kt">RLMError</span><span class="o">.</span><span class="kt">Code</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -700,7 +700,7 @@ but upgrades were explicitly disabled.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">fileFormatUpgradeRequired</span> <span class="o">=</span> <span class="mi">6</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">fileFormatUpgradeRequired</span><span class="p">:</span> <span class="kt">RLMError</span><span class="o">.</span><span class="kt">Code</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -741,7 +741,7 @@ version of the iOS Simulator.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">incompatibleLockFile</span> <span class="o">=</span> <span class="mi">8</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">incompatibleLockFile</span><span class="p">:</span> <span class="kt">RLMError</span><span class="o">.</span><span class="kt">Code</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -776,7 +776,7 @@ version of the iOS Simulator.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">addressSpaceExhausted</span> <span class="o">=</span> <span class="mi">9</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">addressSpaceExhausted</span><span class="p">:</span> <span class="kt">RLMError</span><span class="o">.</span><span class="kt">Code</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -811,7 +811,7 @@ version of the iOS Simulator.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">schemaMismatch</span> <span class="o">=</span> <span class="mi">10</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">schemaMismatch</span><span class="p">:</span> <span class="kt">RLMError</span><span class="o">.</span><span class="kt">Code</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -846,7 +846,7 @@ version of the iOS Simulator.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">alreadyOpen</span> <span class="o">=</span> <span class="mi">12</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">alreadyOpen</span><span class="p">:</span> <span class="kt">RLMError</span><span class="o">.</span><span class="kt">Code</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
@@ -881,7 +881,7 @@ version of the iOS Simulator.</p>
                         </div>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="k">case</span> <span class="n">invalidInput</span> <span class="o">=</span> <span class="mi">13</span></code></pre>
+                          <pre class="highlight swift"><code><span class="kd">static</span> <span class="k">var</span> <span class="nv">invalidInput</span><span class="p">:</span> <span class="kt">RLMError</span><span class="o">.</span><span class="kt">Code</span> <span class="p">{</span> <span class="k">get</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
