@@ -1160,9 +1160,6 @@
                     <a name="//apple_ref/swift/Method/index(matching:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:10RealmSwift0A10CollectionP5index8matchingSiSgSo11NSPredicateC_tF">index(matching:<wbr>)</a>
                     </code>
-                      <span class="declaration-note">
-                        Default implementation
-                      </span>
                   </div>
                   <div class="height-container">
                     <div class="pointer-container"></div>
@@ -1172,26 +1169,6 @@
                         <p>Returns the index of the first object matching the predicate, or <code>nil</code> if no objects match.</p>
 
 <p>This is only applicable to ordered collections, and will abort if the collection is unordered.</p>
-
-                      </div>
-                      <h4>Default Implementation</h4>
-                      <div class="default_impl abstract">
-                        <p>Returns the index of the first object matching the query, or <code>nil</code> if no objects match.</p>
-
-<p>This is only applicable to ordered collections, and will abort if the collection is unordered.</p>
-<div class="aside aside-note">
-    <p class="aside-title">Note</p>
-    <p>This should only be used with classes using the <code>@Persistable</code> property declaration.</p>
-
-</div><ul>
-<li><p>Usage:</p>
-<pre class="highlight swift"><code><span class="n">obj</span><span class="o">.</span><span class="nf">index</span><span class="p">(</span><span class="nv">matching</span><span class="p">:</span> <span class="p">{</span> <span class="nv">$0</span><span class="o">.</span><span class="n">fooCol</span> <span class="o">&lt;</span> <span class="mi">456</span> <span class="p">})</span>
-</code></pre></li>
-</ul><div class="aside aside-note">
-    <p class="aside-title">Note</p>
-    <p>See <code>Query</code> for more information on what query operations are available.</p>
-
-</div>
 
                       </div>
                       <div class="declaration">
@@ -2539,6 +2516,73 @@ user defined callback, returning the result as an instance of <code><a href="../
                 <li class="item">
                   <div>
                     <code>
+                    <a name="/s:10RealmSwift0A10CollectionPAAE5index8matchingSiSgAA5QueryVySbGAHy7ElementQzGXE_tAA01_A18SchemaDiscoverableAKRQrlF"></a>
+                    <a name="//apple_ref/swift/Method/index(matching:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RealmSwift0A10CollectionPAAE5index8matchingSiSgAA5QueryVySbGAHy7ElementQzGXE_tAA01_A18SchemaDiscoverableAKRQrlF">index(matching:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Returns the index of the first object matching the query, or <code>nil</code> if no objects match.</p>
+
+<p>This is only applicable to ordered collections, and will abort if the collection is unordered.</p>
+<div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>This should only be used with classes using the <code>@Persistable</code> property declaration.</p>
+
+</div><ul>
+<li><p>Usage:</p>
+<pre class="highlight swift"><code><span class="n">obj</span><span class="o">.</span><span class="nf">index</span><span class="p">(</span><span class="nv">matching</span><span class="p">:</span> <span class="p">{</span> <span class="nv">$0</span><span class="o">.</span><span class="n">fooCol</span> <span class="o">&lt;</span> <span class="mi">456</span> <span class="p">})</span>
+</code></pre></li>
+</ul><div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>See <code><a href="../Structs/Query.html">Query</a></code> for more information on what query operations are available.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="nf">index</span><span class="p">(</span><span class="n">matching</span> <span class="nv">isIncluded</span><span class="p">:</span> <span class="p">((</span><span class="kt"><a href="../Structs/Query.html">Query</a></span><span class="o">&lt;</span><span class="kt">Element</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Query.html">Query</a></span><span class="o">&lt;</span><span class="kt">Bool</span><span class="o">&gt;</span><span class="p">))</span> <span class="o">-&gt;</span> <span class="kt">Int</span><span class="p">?</span> <span class="k">where</span> <span class="k">Self</span><span class="o">.</span><span class="kt">Element</span> <span class="p">:</span> <span class="n"><a href="../Protocols/_RealmSchemaDiscoverable.html">_RealmSchemaDiscoverable</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>isIncluded</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The query closure to use to filter the objects.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.38.0/RealmSwift/RealmCollection.swift#L602-L605">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
                     <a name="/s:10RealmSwift0A10CollectionPAAE5whereyAA7ResultsVy7ElementQzGAA5QueryVySbGAKyAHGXEF"></a>
                     <a name="//apple_ref/swift/Method/where(_:)" class="dashAnchor"></a>
                     <a class="token" href="#/s:10RealmSwift0A10CollectionPAAE5whereyAA7ResultsVy7ElementQzGAA5QueryVySbGAKyAHGXEF">where(_:<wbr>)</a>
@@ -2886,6 +2930,199 @@ via a user defined callback function.</p>
                 </div>
               </div>
               <ul>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/s:10RealmSwift0A10CollectionPAAE7observe8keyPaths2on_So20RLMNotificationTokenCSays14PartialKeyPathCyqd__GG_So17OS_dispatch_queueCSgyAA0aC6ChangeOyxGctSo13RLMObjectBaseCRbd__lF"></a>
+                    <a name="//apple_ref/swift/Method/observe(keyPaths:on:_:)" class="dashAnchor"></a>
+                    <a class="token" href="#/s:10RealmSwift0A10CollectionPAAE7observe8keyPaths2on_So20RLMNotificationTokenCSays14PartialKeyPathCyqd__GG_So17OS_dispatch_queueCSgyAA0aC6ChangeOyxGctSo13RLMObjectBaseCRbd__lF">observe(keyPaths:<wbr>on:<wbr>_:<wbr>)</a>
+                    </code>
+                      <span class="declaration-note">
+                        Extension method
+                      </span>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Registers a block to be called each time the collection changes.</p>
+
+<p>The block will be asynchronously called with the initial results, and then called again after each write
+transaction which changes either any of the objects in the collection, or which objects are in the collection.</p>
+
+<p>The <code>change</code> parameter that is passed to the block reports, in the form of indices within the collection, which of
+the objects were added, removed, or modified during each write transaction. See the <code><a href="../Enums/RealmCollectionChange.html">RealmCollectionChange</a></code>
+documentation for more information on the change information supplied and an example of how to use it to update a
+<code>UITableView</code>.</p>
+
+<p>At the time when the block is called, the collection will be fully evaluated and up-to-date, and as long as you do
+not perform a write transaction on the same thread or explicitly call <code>realm.refresh()</code>, accessing it will never
+perform blocking work.</p>
+
+<p>If no queue is given, notifications are delivered via the standard run loop, and so can&rsquo;t be delivered while the
+run loop is blocked by other activity. If a queue is given, notifications are delivered to that queue instead. When
+notifications can&rsquo;t be delivered instantly, multiple notifications may be coalesced into a single notification.
+This can include the notification with the initial collection.</p>
+
+<p>For example, the following code performs a write transaction immediately after adding the notification block, so
+there is no opportunity for the initial notification to be delivered first. As a result, the initial notification
+will reflect the state of the Realm after the write transaction.</p>
+<pre class="highlight swift"><code><span class="k">let</span> <span class="nv">dogs</span> <span class="o">=</span> <span class="n">realm</span><span class="o">.</span><span class="nf">objects</span><span class="p">(</span><span class="kt">Dog</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
+<span class="nf">print</span><span class="p">(</span><span class="s">"dogs.count: </span><span class="se">\(</span><span class="n">dogs</span><span class="p">?</span><span class="o">.</span><span class="n">count</span><span class="se">)</span><span class="s">"</span><span class="p">)</span> <span class="c1">// =&gt; 0</span>
+<span class="k">let</span> <span class="nv">token</span> <span class="o">=</span> <span class="n">dogs</span><span class="o">.</span><span class="n">observe</span> <span class="p">{</span> <span class="n">changes</span> <span class="k">in</span>
+    <span class="k">switch</span> <span class="n">changes</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="o">.</span><span class="nf">initial</span><span class="p">(</span><span class="k">let</span> <span class="nv">dogs</span><span class="p">):</span>
+        <span class="c1">// Will print "dogs.count: 1"</span>
+        <span class="nf">print</span><span class="p">(</span><span class="s">"dogs.count: </span><span class="se">\(</span><span class="n">dogs</span><span class="o">.</span><span class="n">count</span><span class="se">)</span><span class="s">"</span><span class="p">)</span>
+        <span class="k">break</span>
+    <span class="k">case</span> <span class="o">.</span><span class="nv">update</span><span class="p">:</span>
+        <span class="c1">// Will not be hit in this example</span>
+        <span class="k">break</span>
+    <span class="k">case</span> <span class="o">.</span><span class="nv">error</span><span class="p">:</span>
+        <span class="k">break</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="k">try!</span> <span class="n">realm</span><span class="o">.</span><span class="n">write</span> <span class="p">{</span>
+    <span class="k">let</span> <span class="nv">dog</span> <span class="o">=</span> <span class="kt">Dog</span><span class="p">()</span>
+    <span class="n">dog</span><span class="o">.</span><span class="n">name</span> <span class="o">=</span> <span class="s">"Rex"</span>
+    <span class="n">person</span><span class="o">.</span><span class="n">dogs</span><span class="o">.</span><span class="nf">append</span><span class="p">(</span><span class="n">dog</span><span class="p">)</span>
+<span class="p">}</span>
+<span class="c1">// end of run loop execution context</span>
+</code></pre>
+
+<p>If no key paths are given, the block will be executed on any insertion,
+modification, or deletion for all object properties and the properties of
+any nested, linked objects. If a key path or key paths are provided,
+then the block will be called for changes which occur only on the
+provided key paths. For example, if:</p>
+<pre class="highlight swift"><code><span class="kd">class</span> <span class="kt">Dog</span><span class="p">:</span> <span class="kt">Object</span> <span class="p">{</span>
+    <span class="kd">@Persisted</span> <span class="k">var</span> <span class="nv">name</span><span class="p">:</span> <span class="kt">String</span>
+    <span class="kd">@Persisted</span> <span class="k">var</span> <span class="nv">age</span><span class="p">:</span> <span class="kt">Int</span>
+    <span class="kd">@Persisted</span> <span class="k">var</span> <span class="nv">toys</span><span class="p">:</span> <span class="kt">List</span><span class="o">&lt;</span><span class="kt">Toy</span><span class="o">&gt;</span>
+<span class="p">}</span>
+<span class="c1">// ...</span>
+<span class="k">let</span> <span class="nv">dogs</span> <span class="o">=</span> <span class="n">realm</span><span class="o">.</span><span class="nf">objects</span><span class="p">(</span><span class="kt">Dog</span><span class="o">.</span><span class="k">self</span><span class="p">)</span>
+
+<span class="k">let</span> <span class="nv">token</span> <span class="o">=</span> <span class="n">dogs</span><span class="o">.</span><span class="nf">observe</span><span class="p">(</span><span class="nv">keyPaths</span><span class="p">:</span> <span class="p">[\</span><span class="kt">Dog</span><span class="o">.</span><span class="n">name</span><span class="p">])</span> <span class="p">{</span> <span class="n">changes</span> <span class="k">in</span>
+    <span class="k">switch</span> <span class="n">changes</span> <span class="p">{</span>
+    <span class="k">case</span> <span class="o">.</span><span class="nf">initial</span><span class="p">(</span><span class="k">let</span> <span class="nv">dogs</span><span class="p">):</span>
+       <span class="c1">// ...</span>
+    <span class="k">case</span> <span class="o">.</span><span class="nv">update</span><span class="p">:</span>
+       <span class="c1">// This case is hit:</span>
+       <span class="c1">// - after the token is initialized</span>
+       <span class="c1">// - when the name property of an object in the</span>
+       <span class="c1">// collection is modified</span>
+       <span class="c1">// - when an element is inserted or removed</span>
+       <span class="c1">//   from the collection.</span>
+       <span class="c1">// This block is not triggered:</span>
+       <span class="c1">// - when a value other than name is modified on</span>
+       <span class="c1">//   one of the elements.</span>
+    <span class="k">case</span> <span class="o">.</span><span class="nv">error</span><span class="p">:</span>
+        <span class="c1">// ...</span>
+    <span class="p">}</span>
+<span class="p">}</span>
+<span class="c1">// end of run loop execution context</span>
+</code></pre>
+
+<ul>
+<li>If the observed key path were <code>[\Dog.toys.brand]</code>, then any insertion or
+deletion to the <code>toys</code> list on any of the collection&rsquo;s elements would trigger the block.
+Changes to the <code>brand</code> value on any <code>Toy</code> that is linked to a <code>Dog</code> in this
+collection will trigger the block. Changes to a value other than <code>brand</code> on any <code>Toy</code> that
+is linked to a <code>Dog</code> in this collection would not trigger the block.
+Any insertion or removal to the <code>Dog</code> type collection being observed
+would also trigger a notification.</li>
+<li><p>If the above example observed the <code>[\Dog.toys]</code> key path, then any insertion,
+deletion, or modification to the <code>toys</code> list for any element in the collection
+would trigger the block.
+Changes to any value on any <code>Toy</code> that is linked to a <code>Dog</code> in this collection
+would <em>not</em> trigger the block.
+Any insertion or removal to the <code>Dog</code> type collection being observed
+would still trigger a notification.</p></li>
+</ul><div class="aside aside-note">
+    <p class="aside-title">Note</p>
+    <p>Multiple notification tokens on the same object which filter for
+separate key paths <em>do not</em> filter exclusively. If one key path
+change is satisfied for one notification token, then all notification
+token blocks for that object will execute.</p>
+
+</div>
+
+<p>You must retain the returned token for as long as you want updates to be sent to the block. To stop receiving
+updates, call <code>invalidate()</code> on the token.</p>
+<div class="aside aside-warning">
+    <p class="aside-title">Warning</p>
+    <p>This method cannot be called during a write transaction, or when the containing Realm is read-only.</p>
+
+</div>
+
+                      </div>
+                      <div class="declaration">
+                        <h4>Declaration</h4>
+                        <div class="language">
+                          <p class="aside-title">Swift</p>
+                          <pre class="highlight swift"><code><span class="kd">func</span> <span class="n">observe</span><span class="o">&lt;</span><span class="kt">T</span><span class="p">:</span> <span class="kt">ObjectBase</span><span class="o">&gt;</span><span class="p">(</span><span class="nv">keyPaths</span><span class="p">:</span> <span class="p">[</span><span class="kt">PartialKeyPath</span><span class="o">&lt;</span><span class="kt">T</span><span class="o">&gt;</span><span class="p">],</span>
+                            <span class="n">on</span> <span class="nv">queue</span><span class="p">:</span> <span class="kt">DispatchQueue</span><span class="p">?</span> <span class="o">=</span> <span class="kc">nil</span><span class="p">,</span>
+                            <span class="n">_</span> <span class="nv">block</span><span class="p">:</span> <span class="kd">@escaping</span> <span class="p">(</span><span class="kt"><a href="../Enums/RealmCollectionChange.html">RealmCollectionChange</a></span><span class="o">&lt;</span><span class="k">Self</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt">Void</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Typealiases.html#/s:10RealmSwift17NotificationTokena">NotificationToken</a></span></code></pre>
+
+                        </div>
+                      </div>
+                      <div>
+                        <h4>Parameters</h4>
+                        <table class="graybox">
+                          <tbody>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>keyPaths</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>Only properties contained in the key paths array will trigger
+                  the block when they are modified. See description above for more detail on linked properties.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>queue</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The serial dispatch queue to receive notification on. If
+               <code>nil</code>, notifications are delivered to the current thread.</p>
+                                </div>
+                              </td>
+                            </tr>
+                            <tr>
+                              <td>
+                                <code>
+                                <em>block</em>
+                                </code>
+                              </td>
+                              <td>
+                                <div>
+                                  <p>The block to be called whenever a change occurs.</p>
+                                </div>
+                              </td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </div>
+                      <div>
+                        <h4>Return Value</h4>
+                        <p>A token which must be held for as long as you want updates to be delivered.</p>
+                      </div>
+                      <div class="slightly-smaller">
+                        <a href="https://github.com/realm/realm-cocoa/tree/v10.38.0/RealmSwift/RealmCollection.swift#L1023-L1027">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
                 <li class="item">
                   <div>
                     <code>
@@ -4129,7 +4366,7 @@ youngest to oldest based on their <code>age</code> property, you might call
                     <a class="token" href="#/s:10RealmSwift0A10CollectionPA2A15KeypathSortable7ElementRpzrlE8distinct2byAA7ResultsVyAFGqd___tSTRd__So13RLMObjectBaseCAFRBs14PartialKeyPathCyAFGAERtd__lF">distinct(by:<wbr>)</a>
                     </code>
                       <span class="declaration-note">
-                        Default implementation
+                        Extension method
                       </span>
                   </div>
                   <div class="height-container">
@@ -4137,11 +4374,7 @@ youngest to oldest based on their <code>age</code> property, you might call
                     <section class="section">
                       <div class="pointer"></div>
                       <div class="abstract">
-                        
-                      </div>
-                      <h4>Default Implementation</h4>
-                      <div class="default_impl abstract">
-                        <p>Returns a <code>Results</code> containing distinct objects based on the specified key paths</p>
+                        <p>Returns a <code><a href="../Structs/Results.html">Results</a></code> containing distinct objects based on the specified key paths</p>
 
                       </div>
                       <div class="declaration">
