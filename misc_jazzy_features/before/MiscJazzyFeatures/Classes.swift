@@ -316,3 +316,10 @@ public class PrivateToDocsClass {
 @_documentation(visibility: public)
 private class PublicToDocsClass {
 }
+
+/// An extension to demo workaround for swift issue, #1396
+@available(macOS 12.0.0, *)
+extension AsyncProtocol where Self: CustomStringConvertible {
+    // no doc comment on this default implementation
+    func method() {}
+}
