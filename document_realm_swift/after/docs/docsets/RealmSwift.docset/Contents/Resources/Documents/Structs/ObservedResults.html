@@ -34,7 +34,7 @@
     <a title="ObservedResults Structure Reference"></a>
     <header>
       <div class="content-wrapper">
-        <p><a href="../index.html">RealmSwift Y.Y.Y Docs</a> (85% documented)</p>
+        <p><a href="../index.html">RealmSwift Y.Y.Y Docs</a> (86% documented)</p>
         <p class="header-right"><a href="https://github.com/realm/realm-cocoa"><img src="../img/gh.png" alt="GitHub"/>View on GitHub</a></p>
         <p class="header-right"><a href="dash-feed://https%3A%2F%2Frealm.io%2Fdocs%2Fswift%2F20.0.5%2Fapi%2Fdocsets%2FRealmSwift.xml"><img src="../img/dash.png" alt="Dash"/>Install in Dash</a></p>
         <div class="header-right">
@@ -729,41 +729,20 @@ is added to the realm but not included in the ObservedResults.</p>
                       <div class="pointer"></div>
                       <div class="abstract">
                         <p>Stores an NSPredicate used for filtering the Results. This is mutually exclusive
-to the <code><a href="../Structs/ObservedResults.html#/where">where</a></code> parameter.</p>
+to the <code><a href="../Structs/ObservedResults.html#/s:10RealmSwift15ObservedResultsV5whereAA5QueryVySbGAFyxGcSgvp">where</a></code> parameter.</p>
 
                       </div>
                       <div class="declaration">
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@State</span>
-<span class="kd">@MainActor</span>
+                          <pre class="highlight swift"><code><span class="kd">@MainActor</span>
 <span class="kd">public</span> <span class="k">var</span> <span class="nv">filter</span><span class="p">:</span> <span class="kt">NSPredicate</span><span class="p">?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">nonmutating</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
                         <a href="https://github.com/realm/realm-cocoa/tree/v20.0.5/RealmSwift/SwiftUI.swift#L519-L523">Show on GitHub</a>
-                      </div>
-                    </section>
-                  </div>
-                </li>
-                <li class="item">
-                  <div>
-                    <code>
-                    <a name="/"></a>
-                    <a name="//apple_ref/swift/Property/where" class="dashAnchor"></a>
-                    <a class="token" href="#/">where</a>
-                    </code>
-                  </div>
-                  <div class="height-container">
-                    <div class="pointer-container"></div>
-                    <section class="section">
-                      <div class="pointer"></div>
-                      <div class="abstract">
-                        <p>Stores a type safe query used for filtering the Results. This is mutually exclusive
-to the <code><a href="../Structs/ObservedResults.html#/s:10RealmSwift15ObservedResultsV6filterSo11NSPredicateCSgvp">filter</a></code> parameter.</p>
-
                       </div>
                     </section>
                   </div>
@@ -789,14 +768,33 @@ to the <code><a href="../Structs/ObservedResults.html#/s:10RealmSwift15ObservedR
                         <h4>Declaration</h4>
                         <div class="language">
                           <p class="aside-title">Swift</p>
-                          <pre class="highlight swift"><code><span class="kd">@State</span>
-<span class="kd">@MainActor</span>
+                          <pre class="highlight swift"><code><span class="kd">@MainActor</span>
 <span class="kd">public</span> <span class="kd">var</span> <span class="p">`</span><span class="nv">where</span><span class="p">`:</span> <span class="p">((</span><span class="kt"><a href="../Structs/Query.html">Query</a></span><span class="o">&lt;</span><span class="kt">ResultType</span><span class="o">&gt;</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="kt"><a href="../Structs/Query.html">Query</a></span><span class="o">&lt;</span><span class="kt">Bool</span><span class="o">&gt;</span><span class="p">)?</span> <span class="p">{</span> <span class="k">get</span> <span class="k">nonmutating</span> <span class="k">set</span> <span class="p">}</span></code></pre>
 
                         </div>
                       </div>
                       <div class="slightly-smaller">
-                        <a href="https://github.com/realm/realm-cocoa/tree/v20.0.5/RealmSwift/SwiftUI.swift#L545-L549">Show on GitHub</a>
+                        <a href="https://github.com/realm/realm-cocoa/tree/v20.0.5/RealmSwift/SwiftUI.swift#L528-L535">Show on GitHub</a>
+                      </div>
+                    </section>
+                  </div>
+                </li>
+                <li class="item">
+                  <div>
+                    <code>
+                    <a name="/"></a>
+                    <a name="//apple_ref/swift/Property/where" class="dashAnchor"></a>
+                    <a class="token" href="#/">where</a>
+                    </code>
+                  </div>
+                  <div class="height-container">
+                    <div class="pointer-container"></div>
+                    <section class="section">
+                      <div class="pointer"></div>
+                      <div class="abstract">
+                        <p>Stores a type safe query used for filtering the Results. This is mutually exclusive
+to the <code><a href="../Structs/ObservedResults.html#/s:10RealmSwift15ObservedResultsV6filterSo11NSPredicateCSgvp">filter</a></code> parameter.</p>
+
                       </div>
                     </section>
                   </div>

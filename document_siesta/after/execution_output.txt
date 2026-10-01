@@ -1,4 +1,4 @@
-COCOAPODS_SKIP_UPDATE_MESSAGE=TRUE JAZZY_FAKE_DATE=YYYY-MM-DD JAZZY_FAKE_MODULE_VERSION=Y.Y.Y JAZZY_FAKE_VERSION=X.X.X JAZZY_INTEGRATION_SPECS=TRUE ruby ROOT/bin/jazzy --output api-docs --swift-version=  2>&1
+COCOAPODS_SKIP_UPDATE_MESSAGE=TRUE JAZZY_FAKE_DATE=YYYY-MM-DD JAZZY_FAKE_MODULE_VERSION=Y.Y.Y JAZZY_FAKE_VERSION=X.X.X JAZZY_INTEGRATION_SPECS=TRUE ruby ROOT/bin/jazzy --output api-docs --swift-version= --xcodebuild-arguments __DIAGNOSE_INVALID_DEPLOYMENT_TARGET_AS_ERROR=NO 2>&1
 Using config file ROOT/tmp/document_siesta/.jazzy.yaml
 Running xcodebuild
 Parsing Configuration.swift (1/37)
@@ -48,6 +48,6 @@ WARNING: No documented top-level declarations match name "AlamofireProvider" spe
 building site
 building search index
 96% documentation coverage with 12 undocumented symbols
-included 330 public or open symbols
+included 333 public or open symbols
 skipped 144 private, fileprivate, internal, or package symbols (use `--min-acl` to specify a different minimum ACL)
 jam out ♪♫ to your fresh new docs in `api-docs`
